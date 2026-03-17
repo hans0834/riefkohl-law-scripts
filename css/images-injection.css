@@ -1,0 +1,166 @@
+/* Riefkohl Law — Strategic Image Placement */
+/* DEPLOY: Squarespace → Settings → Advanced → Code Injection → Header */
+/* Must load AFTER homepage-services-redesign.html */
+
+/* style id="rl-images-css" */
+/* ===== HERO BACKGROUND IMAGE ===== */
+.rl-rd-hero.rl-has-bg {
+  position: relative;
+  background: url('https://images.squarespace-cdn.com/content/6341e033d606ac41fb5ed5de/96b8219f-64c2-40a6-b10e-f6a58f631cbf/1.+The+Fountain+Pen+actively+signing+vellum+paper+.png') center/cover no-repeat;
+  border-radius: var(--rl-r, 10px);
+  margin-left: -28px;
+  margin-right: -28px;
+  padding: 72px 48px 64px;
+  overflow: hidden;
+}
+.rl-rd-hero.rl-has-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 32, 51, 0.52);
+  z-index: 0;
+}
+.rl-rd-hero.rl-has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+body .rl-rd-hero.rl-has-bg h1,
+body.homepage .page-section .rl-rd-hero.rl-has-bg h1 {
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+body .rl-rd-hero.rl-has-bg p,
+body.homepage .page-section .rl-rd-hero.rl-has-bg p {
+  color: rgba(255,255,255,.88) !important;
+}
+.rl-rd-hero.rl-has-bg .rl-rd-cta-btn {
+  background: var(--rl-gold, #bfa35d);
+  box-shadow: 0 4px 16px rgba(0,0,0,.2);
+}
+
+/* ===== PRACTICE AREA CARD IMAGES ===== */
+.rl-rd-card .rl-card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--rl-r-sm, 6px);
+  margin-bottom: 16px;
+  display: block;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.rl-rd-card .rl-card-img.rl-loaded {
+  opacity: 1;
+}
+
+/* ===== DIFFERENTIATORS SECTION IMAGE ===== */
+.rl-diff-accent-img {
+  display: block;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto 8px;
+  padding: 0 28px;
+  border-radius: var(--rl-r, 10px);
+  overflow: hidden;
+}
+.rl-diff-accent-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--rl-r, 10px);
+  display: block;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+.rl-diff-accent-img img.rl-loaded {
+  opacity: 1;
+}
+
+/* ===== SERVICES PAGE: HERO BG ===== */
+.rl-rd-page-hero.rl-has-bg {
+  position: relative;
+  background: url('https://images.squarespace-cdn.com/content/6341e033d606ac41fb5ed5de/5781e023-563d-46f8-8187-a4ad595af34a/4.Antique+Brass+Compass+on+Nautical+Chart.jpg') center/cover no-repeat;
+  border-radius: var(--rl-r, 10px);
+  margin: 0 auto;
+  max-width: 760px;
+  padding: 56px 36px 48px;
+  overflow: hidden;
+}
+.rl-rd-page-hero.rl-has-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 32, 51, 0.62);
+  z-index: 0;
+}
+.rl-rd-page-hero.rl-has-bg > * {
+  position: relative;
+  z-index: 1;
+}
+.rl-rd-page-hero.rl-has-bg h2 {
+  color: #fff !important;
+}
+.rl-rd-page-hero.rl-has-bg p {
+  color: rgba(255,255,255,.82) !important;
+}
+
+/* ===== SERVICES PAGE: INLINE SERVICE IMAGES ===== */
+.rl-svc-accent-img {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--rl-r, 10px);
+  margin-bottom: 20px;
+}
+.rl-svc-accent-img img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.rl-svc-accent-img img.rl-loaded {
+  opacity: 1;
+}
+
+/* ===== ESTATE PRICING ACCENT IMAGE ===== */
+.rl-tier-accent-img {
+  display: block;
+  max-width: 520px;
+  margin: 0 auto 24px;
+  padding: 0 20px;
+}
+.rl-tier-accent-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--rl-r, 10px);
+  display: block;
+  opacity: 0;
+  transition: opacity .5s ease;
+}
+.rl-tier-accent-img img.rl-loaded {
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767px) {
+  .rl-rd-hero.rl-has-bg {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 48px 24px 40px;
+    border-radius: 0;
+  }
+  .rl-rd-card .rl-card-img { height: 120px; }
+  .rl-diff-accent-img { padding: 0 16px; }
+  .rl-diff-accent-img img { height: 140px; }
+  .rl-rd-page-hero.rl-has-bg { padding: 40px 20px 36px; border-radius: 0; margin: 0 auto; }
+  .rl-svc-accent-img img { height: 120px; }
+  .rl-tier-accent-img img { height: 140px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rl-rd-card .rl-card-img,
+  .rl-diff-accent-img img,
+  .rl-svc-accent-img img,
+  .rl-tier-accent-img img { transition: none; opacity: 1; }
+}

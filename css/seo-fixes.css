@@ -1,0 +1,54 @@
+/* Riefkohl Law SEO Fixes — Deployed via Squarespace Code Injection (Header) */
+/* PURPOSE: Fix duplicate H1, duplicate meta descriptions, add FAQ schema, add canonical tags */
+/* DEPLOY: Squarespace → Settings → Advanced → Code Injection → Header */
+/* Mobile menu overlay fix: white text on transparent bg was unreadable */
+
+/* style id="rl-mobile-menu-fix" */
+/* Fix mobile menu overlay: add solid dark background so white links are readable */
+.header-menu-nav-wrapper {
+  background-color: #1a2033 !important;
+}
+.header-menu-nav-wrapper a,
+.header-menu-nav-item a,
+.header-menu-nav-folder-title {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+/* Social icons in mobile menu */
+.header-menu .header-actions .icon,
+.header-menu .header-actions svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+/* Close button (X) in mobile menu */
+.header-burger-btn .burger-line,
+.header-menu .header-burger-btn .burger-line {
+  background-color: #ffffff !important;
+}
+
+/* style id="rl-blog-article-fix" */
+/* Blog individual post pages — center the article content */
+.blog-item-wrapper .blog-item-content-wrapper,
+.blog-item-wrapper .blog-item-content.e-content {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Keep the title/header area centered too */
+.blog-item-wrapper .blog-item-top-wrapper {
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+/* Ensure the outer article container allows centering */
+article.h-entry {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+/* Responsive: tighter padding on mobile */
+@media (max-width: 767px) {
+  article.h-entry {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}

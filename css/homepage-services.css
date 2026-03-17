@@ -1,0 +1,465 @@
+/* Riefkohl Law — Homepage & Services Visual Redesign */
+/* DEPLOY: Squarespace → Settings → Advanced → Code Injection → Header */
+/* Must load AFTER seo-fixes.html */
+
+/* style id="rl-redesign-css" */
+/* ===== CUSTOM PROPERTIES ===== */
+:root {
+  --rl-navy: #1a2033;
+  --rl-navy-mid: #243047;
+  --rl-gold: #bfa35d;
+  --rl-gold-dark: #a68c42;
+  --rl-gold-pale: rgba(191,163,93,.08);
+  --rl-cream: #f9f9fb;
+  --rl-white: #fff;
+  --rl-warm-100: #f5f5f8;
+  --rl-warm-200: #e8e9ee;
+  --rl-warm-600: #706b62;
+  --rl-warm-800: #3d3a35;
+  --rl-r: 10px;
+  --rl-r-sm: 6px;
+  --rl-shadow: 0 4px 12px rgba(0,0,0,.08);
+  --rl-shadow-lg: 0 12px 32px rgba(0,0,0,.12);
+  --rl-ease: cubic-bezier(.4,0,.2,1);
+  --rl-max-w: 1140px;
+}
+
+/* ===== HERO SECTION ===== */
+.rl-rd-hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 40px;
+}
+.rl-rd-hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--rl-navy);
+}
+.rl-rd-hero p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--rl-warm-600);
+  margin-bottom: 0;
+}
+
+/* ===== CTA BUTTON ===== */
+.rl-rd-cta-btn {
+  display: inline-block;
+  background: var(--rl-gold);
+  color: var(--rl-white) !important;
+  font-family: var(--heading-font-font-family, Georgia, serif);
+  font-size: .95rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  padding: 16px 36px;
+  border-radius: var(--rl-r);
+  transition: background .3s var(--rl-ease), transform .2s var(--rl-ease), box-shadow .3s var(--rl-ease);
+  margin-top: 28px;
+}
+.rl-rd-cta-btn:hover {
+  background: var(--rl-gold-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--rl-shadow);
+}
+
+/* ===== SECTION HEADINGS ===== */
+.rl-rd-section-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--rl-navy);
+  margin: 56px auto 12px;
+  padding: 0 24px;
+  max-width: var(--rl-max-w);
+  position: relative;
+}
+.rl-rd-section-heading::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--rl-gold);
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== PRACTICE AREA CARDS ===== */
+.rl-rd-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: var(--rl-max-w);
+  margin: 32px auto 48px;
+  padding: 0 28px;
+}
+.rl-rd-card {
+  background: var(--rl-white);
+  border: 1.5px solid var(--rl-warm-200);
+  border-radius: var(--rl-r);
+  padding: 28px 24px 24px;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .3s var(--rl-ease), box-shadow .3s var(--rl-ease), transform .3s var(--rl-ease);
+  cursor: pointer;
+  position: relative;
+}
+.rl-rd-card:hover {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow);
+  transform: translateY(-3px);
+}
+.rl-rd-card-cat {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rl-gold-dark);
+  margin-bottom: 10px;
+}
+.rl-rd-card h3 {
+  font-size: 1.1rem;
+  color: var(--rl-navy);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.rl-rd-card p {
+  font-size: .9rem;
+  color: var(--rl-warm-600);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+.rl-rd-card-arrow {
+  color: var(--rl-gold);
+  font-size: 1.2rem;
+  margin-top: 14px;
+  transition: transform .3s var(--rl-ease);
+  align-self: flex-end;
+}
+.rl-rd-card:hover .rl-rd-card-arrow {
+  transform: translateX(4px);
+}
+
+/* ===== DIFFERENTIATORS GRID ===== */
+.rl-rd-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: var(--rl-max-w);
+  margin: 32px auto 48px;
+  padding: 0 28px;
+}
+.rl-rd-diff-item {
+  text-align: center;
+  padding: 28px 16px;
+  background: var(--rl-cream);
+  border-radius: var(--rl-r);
+  border: 1px solid transparent;
+  transition: border-color .3s var(--rl-ease);
+}
+.rl-rd-diff-item:hover {
+  border-color: var(--rl-warm-200);
+}
+.rl-rd-diff-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+  color: var(--rl-gold);
+}
+.rl-rd-diff-item h4 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--rl-navy);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.rl-rd-diff-item p {
+  font-size: .85rem;
+  color: var(--rl-warm-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== CTA SECTION ===== */
+.rl-rd-cta-section {
+  text-align: center;
+  max-width: 640px;
+  margin: 40px auto 48px;
+  padding: 48px 24px;
+  background: var(--rl-navy);
+  border-radius: var(--rl-r);
+  color: var(--rl-white);
+}
+body .rl-rd-cta-section h2,
+body.homepage .page-section .rl-rd-cta-section h2 {
+  font-size: 1.6rem;
+  color: #fff !important;
+  margin: 0 0 12px;
+}
+body .rl-rd-cta-section p,
+body.homepage .page-section .rl-rd-cta-section p,
+body .sqs-html-content .rl-rd-cta-section p,
+body .sqs-block-content .rl-rd-cta-section p {
+  font-size: 1rem;
+  color: rgba(255,255,255,.75) !important;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.rl-rd-cta-section .rl-rd-cta-btn {
+  margin-top: 0;
+}
+
+/* ===== SERVICES PAGE: PRICING TIERS ===== */
+.rl-rd-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: var(--rl-max-w);
+  margin: 32px auto 40px;
+  padding: 0 20px;
+}
+.rl-rd-tier-card {
+  background: var(--rl-white);
+  border: 1.5px solid var(--rl-warm-200);
+  border-radius: var(--rl-r);
+  padding: 28px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color .3s var(--rl-ease), box-shadow .3s var(--rl-ease);
+}
+.rl-rd-tier-card:hover {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow);
+}
+.rl-rd-tier-card.rl-rd-popular {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow);
+}
+.rl-rd-popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rl-gold);
+  color: var(--rl-white);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.rl-rd-tier-label {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--rl-gold-dark);
+  margin-bottom: 6px;
+}
+.rl-rd-tier-card h3 {
+  font-size: 1rem;
+  color: var(--rl-navy);
+  margin: 0 0 12px;
+  line-height: 1.3;
+  min-height: 2.6em;
+}
+.rl-rd-price {
+  font-family: var(--heading-font-font-family, Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rl-gold-dark);
+  margin: 0 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rl-warm-200);
+}
+.rl-rd-tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  flex: 1;
+}
+.rl-rd-tier-card li {
+  font-size: .8rem;
+  color: var(--rl-warm-600);
+  line-height: 1.4;
+  padding: 4px 0 4px 18px;
+  position: relative;
+}
+.rl-rd-tier-card li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--rl-gold);
+  font-weight: 700;
+  font-size: .75rem;
+}
+.rl-rd-tier-cta {
+  display: block;
+  text-align: center;
+  background: var(--rl-gold-pale);
+  color: var(--rl-gold-dark) !important;
+  text-decoration: none !important;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: var(--rl-r-sm, 6px);
+  transition: background .3s var(--rl-ease);
+  margin-top: auto;
+}
+.rl-rd-tier-cta:hover {
+  background: var(--rl-gold);
+  color: var(--rl-white) !important;
+}
+
+/* ===== SERVICES PAGE: SERVICE CATEGORY CARDS ===== */
+.rl-rd-svc-section {
+  max-width: var(--rl-max-w);
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.rl-rd-svc-section-title {
+  font-size: 1.4rem;
+  color: var(--rl-navy);
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--rl-gold);
+}
+.rl-rd-svc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.rl-rd-svc-card {
+  background: var(--rl-white);
+  border: 1.5px solid var(--rl-warm-200);
+  border-radius: var(--rl-r);
+  padding: 24px 20px;
+  transition: border-color .3s var(--rl-ease);
+}
+.rl-rd-svc-card:hover {
+  border-color: var(--rl-gold);
+}
+.rl-rd-svc-card h4 {
+  font-size: 1rem;
+  color: var(--rl-navy);
+  margin: 0 0 6px;
+}
+.rl-rd-svc-price-badge {
+  display: inline-block;
+  background: var(--rl-gold-pale);
+  color: var(--rl-gold-dark);
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.rl-rd-svc-card p {
+  font-size: .85rem;
+  color: var(--rl-warm-600);
+  line-height: 1.5;
+  margin: 0;
+}
+.rl-rd-svc-note {
+  text-align: center;
+  font-size: .95rem;
+  color: var(--rl-warm-600);
+  max-width: var(--rl-max-w);
+  margin: 20px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+.rl-rd-svc-note a {
+  color: var(--rl-gold-dark);
+  font-weight: 600;
+}
+
+/* ===== SERVICES PAGE: HEADING STYLING ===== */
+.rl-rd-services-page .rl-rd-page-hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+}
+.rl-rd-services-page .rl-rd-page-hero h2 {
+  font-size: 2rem;
+  color: var(--rl-navy);
+  margin: 0 0 16px;
+}
+.rl-rd-services-page .rl-rd-page-hero p {
+  font-size: 1.05rem;
+  color: var(--rl-warm-600);
+  line-height: 1.7;
+}
+
+/* ===== SERVICES PAGE: DISCLAIMER ===== */
+.rl-rd-disclaimer {
+  text-align: center;
+  font-size: .75rem;
+  color: var(--rl-warm-600);
+  max-width: var(--rl-max-w);
+  margin: 40px auto 20px;
+  padding: 20px 20px 0;
+  border-top: 1px solid var(--rl-warm-200);
+  line-height: 1.5;
+}
+
+/* ===== PRACTICE AREA SUBPAGES: CENTERED WIDE LAYOUT ===== */
+.rl-rd-practice-page .fluid-engine > .fe-block {
+  grid-column: 3 / -3 !important;
+}
+.rl-rd-practice-page .fluid-engine .sqs-html-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.rl-rd-practice-page .fluid-engine .sqs-html-content h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--rl-navy);
+  margin-bottom: 24px;
+}
+.rl-rd-practice-page .fluid-engine .sqs-html-content h2,
+.rl-rd-practice-page .fluid-engine .sqs-html-content h3 {
+  color: var(--rl-navy);
+}
+.rl-rd-practice-page .fluid-engine .sqs-html-content p {
+  line-height: 1.8;
+  color: var(--rl-warm-800);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1023px) {
+  .rl-rd-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .rl-rd-diff-grid { grid-template-columns: repeat(2, 1fr); }
+  .rl-rd-tier-grid { grid-template-columns: repeat(2, 1fr); }
+  .rl-rd-svc-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .rl-rd-hero h1 { font-size: 1.7rem; }
+  .rl-rd-hero p { font-size: 1rem; }
+  .rl-rd-hero { padding: 32px 16px 28px; }
+  .rl-rd-section-heading { font-size: 1.4rem; margin-top: 40px; }
+  .rl-rd-cards-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
+  .rl-rd-diff-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
+  .rl-rd-tier-grid { grid-template-columns: 1fr; padding: 0 16px; }
+  .rl-rd-cta-section { margin: 32px 16px 40px; padding: 36px 20px; }
+  .rl-rd-cta-section h2 { font-size: 1.3rem; }
+  .rl-rd-cta-btn { padding: 14px 28px; font-size: .85rem; }
+  .rl-rd-svc-section { padding: 0 16px; }
+  .rl-rd-services-page .rl-rd-page-hero h2 { font-size: 1.5rem; }
+  .rl-rd-practice-page .fluid-engine > .fe-block { grid-column: 1 / -1 !important; }
+  .rl-rd-practice-page .fluid-engine .sqs-html-content { padding: 0 16px; }
+  .rl-rd-practice-page .fluid-engine .sqs-html-content h1 { font-size: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rl-rd-card, .rl-rd-tier-card, .rl-rd-svc-card, .rl-rd-diff-item, .rl-rd-cta-btn, .rl-rd-card-arrow {
+    transition: none !important;
+  }
+}

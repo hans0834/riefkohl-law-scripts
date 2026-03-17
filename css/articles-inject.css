@@ -1,0 +1,66 @@
+/* Riefkohl Law — Trust Law Article Series (15 articles) */
+/* Deployed via Squarespace Code Injection (Header), alongside resources-fix.html */
+
+/* style id="rl-articles-extra" */
+/* Callout box for articles */
+.rl-sub .rl-callout {
+  background: #f8f6f0;
+  border-left: 4px solid #bfa35d;
+  padding: 20px 24px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: .9rem;
+}
+.rl-sub .rl-callout strong { color: #1a2033; }
+
+/* Series navigation at bottom of articles */
+.rl-series-nav {
+  background: #f5f5f8;
+  border: 1px solid #e8e9ee;
+  border-radius: 10px;
+  padding: 24px;
+  margin: 32px 0 0;
+}
+.rl-series-nav h3 {
+  font-family: var(--heading-font-font-family, Georgia, serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a2033;
+  margin: 0 0 12px;
+}
+.rl-series-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 600px) { .rl-series-nav ul { grid-template-columns: 1fr; } }
+.rl-series-nav li a {
+  display: block;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #e8e9ee;
+  border-radius: 6px;
+  color: #1a2033;
+  font-size: .85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.rl-series-nav li a:hover {
+  border-color: #bfa35d;
+  background: rgba(191,163,93,.06);
+}
+.rl-series-nav li a .part-num {
+  color: #a68c42;
+  font-size: .78rem;
+  display: block;
+  margin-bottom: 2px;
+}
+.rl-series-nav li a[aria-current="page"] {
+  border-color: #bfa35d;
+  background: rgba(191,163,93,.1);
+  pointer-events: none;
+}

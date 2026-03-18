@@ -1,5 +1,5 @@
 // Riefkohl Law — Blog Post Formatter
-// Enhances imported case law posts with proper heading structure, styling, and CTAs
+// Enhances blog posts with proper heading structure, styling, CTAs, and related posts
 // Runs on individual blog post pages only
 (function(){
   'use strict';
@@ -66,10 +66,10 @@
     '</div>';
 
   var CTA_ES = '<div class="rl-post-cta">' +
-    '<h3>¿Necesita Asesoría Legal?</h3>' +
-    '<p>Si tiene preguntas sobre esta área del derecho, nuestros abogados pueden ayudarle. Ofrecemos consultas personalizadas para discutir su situación específica.</p>' +
+    '<h3>\u00bfNecesita Asesor\u00eda Legal?</h3>' +
+    '<p>Si tiene preguntas sobre esta \u00e1rea del derecho, nuestros abogados pueden ayudarle. Ofrecemos consultas personalizadas para discutir su situaci\u00f3n espec\u00edfica.</p>' +
     '<a href="/book-an-appointment" class="rl-cta-btn">Agende una Consulta</a>' +
-    '<p class="rl-cta-sub">O llámenos al <a href="tel:+17877221277">(787) 722-1277</a></p>' +
+    '<p class="rl-cta-sub">O ll\u00e1menos al <a href="tel:+17877221277">(787) 722-1277</a></p>' +
     '</div>';
 
   // Back to blog link
@@ -81,10 +81,163 @@
     '<a href="/blog">&larr; Volver al Blog</a>' +
     '</div>';
 
+  /* ================================================
+     RELATED POSTS — Cross-linking map
+     ================================================
+     Each category maps to a list of {url, title} objects.
+     Posts link to others in the same category for SEO internal linking. */
+  var RELATED_POSTS = {
+    'trusts': [
+      {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012'},
+      {url: '/blog/puerto-rico-asset-protection-how-irrevocable-trusts-shield-your-wealth', title: 'How Irrevocable Trusts Shield Your Wealth'},
+      {url: '/blog/puerto-rico-trust-vs-will-which-do-you-need', title: 'Puerto Rico Trust vs. Will: Which Do You Need?'},
+      {url: '/blog/banking-insurance-trust-disputes-puerto-rico', title: 'Banking & Insurance Trust Disputes in Puerto Rico'},
+      {url: '/blog/breach-fiduciary-duty-trust-cases-puerto-rico', title: 'Breach of Fiduciary Duty Cases in Puerto Rico'},
+      {url: '/blog/trust-validity-challenges-puerto-rico', title: 'Trust Validity Challenges in Puerto Rico'},
+      {url: '/blog/trust-property-disputes-puerto-rico', title: 'Trust Property Disputes in Puerto Rico'},
+      {url: '/blog/family-law-trusts-trustee-removal-puerto-rico', title: 'Family Law Trusts & Trustee Removal'},
+      {url: '/resources/what-is-a-puerto-rico-trust', title: 'What Is a Puerto Rico Trust? (Article Series)'}
+    ],
+    'estate-planning': [
+      {url: '/blog/how-forced-heirship-affects-your-estate-plan-in-puerto-rico', title: 'How Forced Heirship Affects Your Estate Plan'},
+      {url: '/blog/puerto-rico-trust-vs-will-which-do-you-need', title: 'Puerto Rico Trust vs. Will: Which Do You Need?'},
+      {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'Complete Guide to Puerto Rico Trusts'},
+      {url: '/blog/testamentary-trust-succession-disputes-puerto-rico', title: 'Testamentary & Succession Disputes'},
+      {url: '/blog/trust-beneficiary-rights-liquidation-puerto-rico', title: 'Trust Beneficiary Rights & Liquidation'},
+      {url: '/resources/avoiding-probate-forced-heirship', title: 'Avoiding Probate & Forced Heirship (Article Series)'}
+    ],
+    'act-60': [
+      {url: '/blog/5-critical-mistakes-act-60-decree-holders-make-with-estate-planning', title: '5 Critical Mistakes Act 60 Decree Holders Make'},
+      {url: '/blog/irs-scrutiny-of-act-60-decree-holders-what-you-need-to-know-2026', title: 'IRS Scrutiny of Act 60 Decree Holders in 2026'},
+      {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'Complete Guide to Puerto Rico Trusts'},
+      {url: '/act-60-resource-center', title: 'Act 60 Resource Center'},
+      {url: '/resources/trust-planning-act-60-investors', title: 'Trust Planning for Act 60 Investors (Article Series)'}
+    ],
+    'business-law': [
+      {url: '/blog/buslaw-01-llc-fiduciary-duties-deadlock-dissolution', title: 'LLC Fiduciary Duties & Deadlock Dissolution'},
+      {url: '/blog/buslaw-02-fiduciary-duty-pleading-standards', title: 'Fiduciary Duty Pleading Standards'},
+      {url: '/blog/buslaw-05-restrictive-covenant-blue-penciling', title: 'Restrictive Covenant Blue-Penciling'},
+      {url: '/blog/buslaw-07-trust-beneficiary-standing', title: 'Trust Beneficiary Standing'},
+      {url: '/blog/buslaw-03-post-closing-fraud-claims-mipa', title: 'Post-Closing Fraud Claims'},
+      {url: '/blog/buslaw-04-private-equity-fraud-allegations', title: 'Private Equity Fraud Allegations'}
+    ],
+    'pr-law': [
+      {url: '/blog/prlaw-01-private-operator-exemption', title: 'Private Operator Exemption from Procurement Law'},
+      {url: '/blog/prlaw-02-bankruptcy-related-to-jurisdiction', title: 'Bankruptcy Related-To Jurisdiction'},
+      {url: '/blog/prlaw-05-dual-tracking-protections', title: 'Dual-Tracking Protections'},
+      {url: '/blog/prlaw-08-federal-district-court-jurisdiction', title: 'Federal District Court Jurisdiction'},
+      {url: '/blog/public-government-trust-governance-puerto-rico', title: 'Public & Government Trust Governance'}
+    ],
+    'wills-estates': [
+      {url: '/blog/how-forced-heirship-affects-your-estate-plan-in-puerto-rico', title: 'How Forced Heirship Affects Your Estate Plan'},
+      {url: '/blog/puerto-rico-trust-vs-will-which-do-you-need', title: 'Puerto Rico Trust vs. Will: Which Do You Need?'},
+      {url: '/blog/willsanalysis-01-percapitawithoutrepresentation', title: 'Per Capita Without Representation Distribution'},
+      {url: '/blog/willsanalysis-03-unduinfluencecaretaker', title: 'Undue Influence by Caretaker'},
+      {url: '/blog/willsanalysis-04-executorsdeedsvoid', title: "Executor's Deeds Void Ab Initio"},
+      {url: '/blog/testamentary-trust-succession-disputes-puerto-rico', title: 'Testamentary & Succession Disputes'}
+    ],
+    'fideicomisos': [
+      {url: '/blog/fideicomiso-irrevocable-en-puerto-rico-guia-completa-bajo-la-ley-219-2012', title: 'Fideicomiso Irrevocable en Puerto Rico'},
+      {url: '/blog/planificacion-sucesoral-en-puerto-rico-lo-que-todo-residente-debe-saber', title: 'Planificaci\u00f3n Sucesoral en Puerto Rico'},
+      {url: '/blog/proceso-de-declaratoria-de-herederos-en-puerto-rico', title: 'Declaratoria de Herederos en Puerto Rico'},
+      {url: '/blog/ley-60-guia-para-inversionistas-individuales-que-se-mudan-a-puerto-rico', title: 'Ley 60: Gu\u00eda para Inversionistas'},
+      {url: '/blog/banking-insurance-trust-disputes-puerto-rico-es', title: 'Disputas Bancarias y de Seguros'},
+      {url: '/blog/trust-validity-challenges-puerto-rico-es', title: 'Impugnaciones de Validez de Fideicomisos'}
+    ]
+  };
+
+  /* Determine which category a post belongs to based on its slug */
+  function getPostCategory(slug) {
+    // Spanish posts
+    if (/fideicomiso|planificacion-sucesoral|declaratoria-de-herederos|ley-60-guia/.test(slug) ||
+        /-es$/.test(slug)) return 'fideicomisos';
+    // Trust law
+    if (/trustlaw-|trust.*dispute|trust.*valid|trust.*property|fiduciar.*trust|breach.*fiduciar|banking.*insurance|family.*trust|trustee|beneficiary.*right|liquidation|no-contest|cy-pres|adr-provision|elder-abuse|statute-of-limitations|arbitration.*award|statutory-accounting|settlor|irrevocabl|complete-guide.*trust|trust-vs-will|asset-protection/.test(slug)) return 'trusts';
+    // Wills & estates
+    if (/willsanalysis|willssummary|forced-heirship|testamentary|succession/.test(slug)) return 'wills-estates';
+    // Act 60
+    if (/act-60|act60|irs-scrutiny/.test(slug)) return 'act-60';
+    // Business law
+    if (/buslaw-|llc|corporate|merger|covenant|private-equity|polar-star/.test(slug)) return 'business-law';
+    // PR law
+    if (/prlaw-|municipality|government.*trust.*governance|private-operator|dual-tracking|motor-vehicle|public-information|federal-district/.test(slug)) return 'pr-law';
+    // Case law posts with v. patterns
+    if (/\bv\b-|et-al/.test(slug)) return 'trusts';
+    // Estate planning
+    if (/estate|probate/.test(slug)) return 'estate-planning';
+    return 'trusts'; // default
+  }
+
   function isSpanish() {
     var title = document.title || '';
     var body = document.body.innerText.substring(0, 500);
     return /ñ|ó|é|á|ú|í|decisión|tribunal|fideicomiso|sucesoral|planificación/i.test(title + body);
+  }
+
+  /* Build related posts HTML for the current post */
+  function buildRelatedPosts(slug) {
+    var category = getPostCategory(slug);
+    var pool = RELATED_POSTS[category];
+    if (!pool) return '';
+
+    // Filter out the current post
+    var currentPath = '/blog/' + slug;
+    var candidates = pool.filter(function(p) { return p.url !== currentPath; });
+
+    // Pick up to 3 related posts
+    var selected = candidates.slice(0, 3);
+    if (selected.length === 0) return '';
+
+    var spanish = isSpanish();
+    var heading = spanish ? 'Art\u00edculos Relacionados' : 'Related Articles';
+
+    var html = '<div class="rl-related-posts">' +
+      '<h3>' + heading + '</h3>' +
+      '<ul>';
+    selected.forEach(function(p) {
+      html += '<li><a href="' + p.url + '">' + p.title + '</a></li>';
+    });
+    html += '</ul></div>';
+    return html;
+  }
+
+  /* Build series navigation for sequential posts (trustlaw, buslaw, prlaw, wills) */
+  function buildSeriesNav(slug) {
+    var series = null, prefix = '', label = '', count = 0;
+
+    if (/^trustlaw-(\d+)/.test(slug)) {
+      prefix = 'trustlaw'; label = 'Trust Law Case Analysis'; count = 8;
+    } else if (/^buslaw-(\d+)/.test(slug)) {
+      prefix = 'buslaw'; label = 'Business Law Case Analysis'; count = 7;
+    } else if (/^prlaw-(\d+)/.test(slug)) {
+      prefix = 'prlaw'; label = 'Puerto Rico Law Case Analysis'; count = 8;
+    } else if (/^willsanalysis-(\d+)/.test(slug)) {
+      prefix = 'willsanalysis'; label = 'Wills & Estates Case Analysis'; count = 5;
+    } else if (/^willssummary-(\d+)/.test(slug)) {
+      prefix = 'willssummary'; label = 'Wills & Estates Case Summaries'; count = 5;
+    }
+
+    if (!prefix) return '';
+
+    var match = slug.match(/(\d+)/);
+    if (!match) return '';
+    var num = parseInt(match[1], 10);
+
+    var html = '<nav class="rl-series-nav" aria-label="' + label + ' series navigation">';
+    html += '<span class="rl-series-label">' + label + ' \u2014 Post ' + num + ' of ' + count + '</span>';
+    html += '<div class="rl-series-links">';
+
+    if (num > 1) {
+      var prevSlug = slug.replace(/\d+/, ('0' + (num - 1)).slice(-2));
+      html += '<a href="/blog/' + prevSlug + '" class="rl-series-prev">&larr; Previous</a>';
+    }
+    if (num < count) {
+      var nextSlug = slug.replace(/\d+/, ('0' + (num + 1)).slice(-2));
+      html += '<a href="/blog/' + nextSlug + '" class="rl-series-next">Next &rarr;</a>';
+    }
+
+    html += '</div></nav>';
+    return html;
   }
 
   function formatPost() {
@@ -190,6 +343,26 @@
           p.innerHTML = p.innerHTML.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
         }
       });
+    }
+
+    // Get slug for related posts
+    var slug = path.replace(/^\/blog\//, '').replace(/\/$/, '');
+
+    // Add series navigation (for numbered series posts)
+    var seriesNav = buildSeriesNav(slug);
+    if (seriesNav && !contentArea.querySelector('.rl-series-nav')) {
+      var seriesDiv = document.createElement('div');
+      seriesDiv.innerHTML = seriesNav;
+      // Insert series nav at top of content
+      contentArea.insertBefore(seriesDiv.firstChild, contentArea.firstChild);
+    }
+
+    // Add related posts before CTA
+    var relatedHtml = buildRelatedPosts(slug);
+    if (relatedHtml && !contentArea.querySelector('.rl-related-posts')) {
+      var relDiv = document.createElement('div');
+      relDiv.innerHTML = relatedHtml;
+      contentArea.appendChild(relDiv.firstChild);
     }
 
     // Add CTA block if not already present

@@ -141,10 +141,12 @@ var Data={
     var ts=(title+' '+slug).toLowerCase(),s=(ts+' '+ex).toLowerCase();
     /* Pass 1: title+slug only (high confidence) */
     if(/trust|fideicomis|fiduciar|settlor|trustee|revocabl|irrevocabl|no.contest|cy.pres|spendthrift/.test(ts))return['Trusts'];
-    if(/estate|probate|wills? |inheritance|heir|intestat|decedent|sucesoral|executor|testat|bequest|per.capita|undue.influence/.test(ts))return['Estate Planning'];
+    if(/estate|probate|wills? |inheritance|heir|intestat|decedent|sucesoral|executor|testat|bequest|per.capita|undue.influence|declaratoria.*herederos/.test(ts))return['Estate Planning'];
+    if(/act.60|ley.60|decreto|irs.*scrutiny.*act|incentivo.*contributiv/i.test(ts))return['Act 60 Tax Incentives'];
     if(/bankrupt|chapter.11|insolvenc/i.test(ts))return['Bankruptcy'];
-    if(/corporate|shareholder|\bllc\b|partnership|business.*law|deadlock|dissolution|merger|earnout|restrictive.covenant/.test(ts))return['Corporate Law'];
+    if(/corporate|shareholder|\bllc\b|partnership|business.*law|deadlock|dissolution|merger|earnout|restrictive.covenant|private.equity/i.test(ts))return['Corporate Law'];
     if(/government.*contract|procurement|bid.protest|contract.*award|offeror|subcontract|a&e.service/i.test(ts))return['Government Contracts'];
+    if(/prlaw-|private.operator|dual.tracking|motor.vehicle.warranty|public.information.access/i.test(ts))return['Government Contracts'];
     if(/contract.*law|breach.*contract|contract.*dispute/i.test(ts))return['Contract Law'];
     if(/constitutional|due.process|equal.protection|first.amendment/i.test(ts))return['Constitutional Law'];
     if(/municipio|bayam/i.test(ts))return['Corporate Law'];

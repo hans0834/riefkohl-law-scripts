@@ -71,6 +71,81 @@ h3.rl-auto-heading {
   text-decoration: underline;
 }
 
+/* Related posts section */
+.rl-related-posts {
+  margin-top: 2.5em;
+  padding: 1.5em 2em;
+  background: #f4f3ef;
+  border-radius: 10px;
+  border-left: 4px solid #bfa35d;
+}
+.rl-related-posts h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  color: #1a2033;
+  font-size: 1.15em;
+  margin: 0 0 0.75em 0;
+}
+.rl-related-posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.rl-related-posts li {
+  margin-bottom: 0.5em;
+  padding-left: 1.2em;
+  position: relative;
+}
+.rl-related-posts li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: #bfa35d;
+}
+.rl-related-posts a {
+  color: #243047;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+.rl-related-posts a:hover {
+  color: #bfa35d;
+  text-decoration: underline;
+}
+
+/* Series navigation (for numbered case law posts) */
+.rl-series-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 2em;
+  padding: 0.75em 1.25em;
+  background: #f9f8f5;
+  border: 1px solid #e8e5dc;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+.rl-series-label {
+  color: #706b62;
+  font-weight: 500;
+}
+.rl-series-links {
+  display: flex;
+  gap: 1em;
+}
+.rl-series-links a {
+  color: #bfa35d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.rl-series-links a:hover {
+  color: #a68c42;
+  text-decoration: underline;
+}
+
 /* Back to blog link */
 .rl-post-back {
   margin-top: 2em;

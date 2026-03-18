@@ -1691,3 +1691,152 @@ h3.rl-auto-heading {
   .rl-signup-inline .rl-signup-form { flex-direction: column; }
   .rl-signup-inline .rl-signup-btn { width: 100%; }
 }
+
+/* ========================================
+   post-formatter
+   ======================================== */
+
+/* Auto-promoted headings */
+.rl-auto-heading {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  color: #1a2033;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.3;
+}
+h2.rl-auto-heading {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid rgba(191, 163, 93, 0.3);
+}
+h3.rl-auto-heading {
+  font-size: 1.2em;
+  color: #243047;
+}
+
+/* CTA block at bottom of posts */
+.rl-post-cta {
+  margin-top: 3em;
+  padding: 2em;
+  background: linear-gradient(135deg, #1a2033 0%, #243047 100%);
+  border-radius: 12px;
+  text-align: center;
+  color: #f9f9fb;
+}
+.rl-post-cta h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  color: #bfa35d;
+  font-size: 1.4em;
+  margin: 0 0 0.5em 0;
+}
+.rl-post-cta p {
+  color: #c8c9ce;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rl-cta-btn {
+  display: inline-block;
+  background: #bfa35d;
+  color: #1a2033 !important;
+  padding: 0.75em 2em;
+  border-radius: 100px;
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 1em;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.rl-cta-btn:hover {
+  background: #a68c42;
+  transform: translateY(-1px);
+  color: #1a2033 !important;
+}
+.rl-cta-sub {
+  font-size: 0.9em !important;
+  margin-top: 0.75em !important;
+  color: #a8a298 !important;
+}
+.rl-cta-sub a { color: #bfa35d !important; text-decoration: none; }
+.rl-cta-sub a:hover { text-decoration: underline; }
+
+/* Related posts section */
+.rl-related-posts {
+  margin-top: 2.5em;
+  padding: 1.5em 2em;
+  background: #f4f3ef;
+  border-radius: 10px;
+  border-left: 4px solid #bfa35d;
+}
+.rl-related-posts h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  color: #1a2033;
+  font-size: 1.15em;
+  margin: 0 0 0.75em 0;
+}
+.rl-related-posts ul { list-style: none; padding: 0; margin: 0; }
+.rl-related-posts li {
+  margin-bottom: 0.5em;
+  padding-left: 1.2em;
+  position: relative;
+}
+.rl-related-posts li::before {
+  content: '\2192';
+  position: absolute;
+  left: 0;
+  color: #bfa35d;
+}
+.rl-related-posts a {
+  color: #243047;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+.rl-related-posts a:hover { color: #bfa35d; text-decoration: underline; }
+
+/* Series navigation (for numbered case law posts) */
+.rl-series-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 2em;
+  padding: 0.75em 1.25em;
+  background: #f9f8f5;
+  border: 1px solid #e8e5dc;
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+.rl-series-label { color: #706b62; font-weight: 500; }
+.rl-series-links { display: flex; gap: 1em; }
+.rl-series-links a {
+  color: #bfa35d;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.rl-series-links a:hover { color: #a68c42; text-decoration: underline; }
+
+/* Back to blog link */
+.rl-post-back {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 1px solid #e8e9ee;
+}
+.rl-post-back a {
+  color: #bfa35d;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: color 0.2s ease;
+}
+.rl-post-back a:hover { color: #a68c42; text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .rl-series-nav { flex-direction: column; text-align: center; }
+  .rl-related-posts { padding: 1.25em 1.5em; }
+}

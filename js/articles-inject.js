@@ -5,6 +5,9 @@
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
 
+/* Early exit: only run on /resources pages to avoid wasting CPU on other pages */
+if (path.indexOf('/resources') !== 0) return;
+
 var ARTICLES = {
 '/resources/what-is-puerto-rico-trust': {
   title: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',
@@ -3216,12 +3219,33 @@ function injectArticleHub() {
 function injectArticleSchema() {
   var page = ARTICLES[path];
   if (!page) return;
-  
+
+  /* Per-article publication dates */
+  var articleDates = {
+    '/resources/what-is-puerto-rico-trust': ['2026-03-10', '2026-03-10'],
+    '/resources/types-of-trusts': ['2026-03-10', '2026-03-15'],
+    '/resources/act-60-trust-planning': ['2026-03-11', '2026-03-11'],
+    '/resources/modifying-irrevocable-trusts': ['2026-03-11', '2026-03-11'],
+    '/resources/avoiding-probate-legitima': ['2026-03-12', '2026-03-12'],
+    '/resources/asset-protection-trusts-pr': ['2026-03-12', '2026-03-12'],
+    '/resources/special-needs-trusts-medicaid': ['2026-03-13', '2026-03-13'],
+    '/resources/ilits-and-slats': ['2026-03-13', '2026-03-13'],
+    '/resources/trust-taxation-act-60': ['2026-03-14', '2026-03-14'],
+    '/resources/landmark-trust-cases': ['2026-03-14', '2026-03-14'],
+    '/resources/trust-costs-puerto-rico': ['2026-03-14', '2026-03-14'],
+    '/resources/fiduciary-duties-trustees': ['2026-03-15', '2026-03-15'],
+    '/resources/family-trust-pitfalls': ['2026-03-15', '2026-03-15'],
+    '/resources/foreign-trust-trap': ['2026-03-15', '2026-03-15'],
+    '/resources/mainland-trust-to-puerto-rico': ['2026-03-15', '2026-03-15']
+  };
+  var dates = articleDates[path] || ['2026-03-15', '2026-03-15'];
+
   var schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": page.title,
     "description": page.subtitle,
+    "image": "https://www.riefkohllaw.com/s/gold-scales-trust-law.png",
     "author": {
       "@type": "Person",
       "name": "Hans Riefkohl",
@@ -3229,16 +3253,20 @@ function injectArticleSchema() {
       "url": "https://www.riefkohllaw.com/about"
     },
     "publisher": {
-      "@type": "LegalService",
+      "@type": "Organization",
       "name": "Riefkohl Law",
-      "url": "https://www.riefkohllaw.com"
+      "url": "https://www.riefkohllaw.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.riefkohllaw.com/s/riefkohl-law-logo.png"
+      }
     },
-    "datePublished": "2026-03-15",
-    "dateModified": "2026-03-15",
+    "datePublished": dates[0],
+    "dateModified": dates[1],
     "mainEntityOfPage": "https://www.riefkohllaw.com" + path,
     "inLanguage": "en"
   };
-  
+
   var script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(schema);

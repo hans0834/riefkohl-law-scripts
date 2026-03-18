@@ -163,11 +163,84 @@ var SEO = {
   '/business-formation': {
     h1: 'Puerto Rico Business Formation — LLC, Corp & Startup Services',
     meta: 'Puerto Rico business formation attorney. LLC, corporation, and startup legal services. Flat-fee pricing. Bilingual counsel. Free strategy call.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What types of business entities can I form in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico offers several business entity types: Limited Liability Companies (LLCs), corporations (C-Corp and S-Corp equivalents), partnerships (general and limited), and sole proprietorships. LLCs are the most popular choice for small businesses due to their flexibility, liability protection, and pass-through taxation. The right entity depends on your business goals, tax situation, and whether you hold an Act 60 decree.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long does it take to form an LLC in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'An LLC can typically be formed in Puerto Rico within 5-10 business days after filing the Certificate of Organization with the Puerto Rico Department of State. The process includes drafting an operating agreement, obtaining an EIN from the IRS, and registering with the Puerto Rico Treasury Department (Hacienda). Riefkohl Law offers flat-fee LLC formation services that handle all filings.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I need a local agent to form a business in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Puerto Rico requires every business entity to maintain a registered agent with a physical address in Puerto Rico for service of process. A registered agent receives legal documents and official correspondence on behalf of the business. Your attorney can serve as your registered agent or help you designate one.'
+          }
+        }
+      ]
+    }
   },
   '/government-contracts': {
     h1: 'Government Contracts Attorney — Federal & PR Procurement',
     meta: 'Puerto Rico government contracts attorney. Bid protests, contract disputes, procurement compliance, and federal/state contracting. Free consultation.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is a bid protest in Puerto Rico government contracting?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A bid protest is a legal challenge to the award or proposed award of a government contract. In Puerto Rico, protests can be filed before the contracting agency, the General Services Administration (ASG), or through the courts under Law 73-2019. Federal contract protests go to the GAO or the Court of Federal Claims. Strict deadlines apply — typically 10-15 days from the adverse action.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What laws govern government procurement in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico government procurement is primarily governed by Law 73-2019 (the Uniform Procurement Act), which establishes bidding requirements, evaluation criteria, and protest procedures for Commonwealth agencies and municipalities. Federal contracts in Puerto Rico follow the Federal Acquisition Regulation (FAR). Municipalities may also have their own procurement ordinances.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a small business compete for government contracts in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Both Puerto Rico and federal procurement systems include set-aside programs for small businesses, including HUBZone, 8(a), and woman-owned small business preferences. Puerto Rico also has local preference provisions under Law 73-2019. An attorney experienced in government contracts can help you navigate registration, certification, and the proposal process.'
+          }
+        }
+      ]
+    }
+  },
+  '/corporate': {
+    h1: 'Corporate & Transactional Law — Puerto Rico Business Attorney',
+    meta: 'Puerto Rico corporate attorney for mergers, acquisitions, joint ventures, and commercial transactions. Strategic counsel for businesses operating in PR.',
+    schema: null
+  },
+  '/espanol-quiebras': {
+    h1: 'Abogado de Quiebras en Puerto Rico — Servicios de Insolvencia',
+    meta: 'Abogado de quiebras en Puerto Rico. Cap\u00edtulo 7, Cap\u00edtulo 13, reestructuraci\u00f3n de deuda y defensa de acreedores. Consulta gratuita. (787) 236-1657.',
+    schema: null
+  },
+  '/puerto-rico-estate-planning-nrnc-classification': {
+    h1: 'Estate Planning for Non-Residents with Puerto Rico Assets',
+    meta: 'Estate planning guide for non-residents with Puerto Rico assets. NRNC classification, tax implications, and trust strategies for mainland investors.',
     schema: null
   },
   /* Spanish pages */
@@ -191,11 +264,6 @@ var SEO = {
     meta: 'Contacte a Riefkohl Law en San Juan, PR. Llame al (787) 236-1657 o agende una consulta gratuita. Fideicomisos, sucesiones y derecho empresarial.',
     schema: null
   },
-  '/espanol-fideicomisos': {
-    h1: 'Abogado de Fideicomisos en Puerto Rico — Ley 219-2012',
-    meta: 'Abogado de fideicomisos en Puerto Rico. Fideicomisos irrevocables bajo Ley 219-2012, proteccion de activos y planificacion sucesoral. Consulta gratis.',
-    schema: null
-  },
   '/espanol-cita': {
     h1: 'Agende su Consulta Legal Gratuita',
     meta: 'Agende una consulta gratuita con Riefkohl Law. Hable con un abogado sobre fideicomisos, sucesiones o asuntos empresariales en Puerto Rico.',
@@ -206,14 +274,216 @@ var SEO = {
     meta: 'Blog legal de Riefkohl Law. Analisis de casos, comentarios juridicos y guias practicas sobre fideicomisos, sucesiones y derecho empresarial en PR.',
     schema: null
   },
-  '/espanol-ley-60': {
-    h1: 'Incentivos Contributivos Ley 60 — Asesoria Legal en Puerto Rico',
-    meta: 'Abogado de Ley 60 en Puerto Rico. Servicios de exportacion, inversionistas individuales, cumplimiento y planificacion para relocalizados.',
-    schema: null
-  },
   '/espanol-corporativo': {
     h1: 'Formacion de Empresas en Puerto Rico — LLC, Corp y Startups',
     meta: 'Abogado de formacion de empresas en Puerto Rico. LLC, corporaciones y servicios legales para startups. Tarifa fija. Consulta gratuita.',
+    schema: null
+  },
+  '/espanol-fideicomisos': {
+    h1: 'Abogado de Fideicomisos en Puerto Rico — Ley 219-2012',
+    meta: 'Abogado de fideicomisos en Puerto Rico. Fideicomisos irrevocables bajo Ley 219-2012, proteccion de activos y planificacion sucesoral. Consulta gratis.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es un fideicomiso irrevocable bajo la Ley 219-2012 de Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Un fideicomiso irrevocable bajo la Ley 219-2012 (Ley de Fideicomisos de Puerto Rico) es un arreglo legal donde un fideicomitente transfiere permanentemente activos a un fiduciario para beneficio de beneficiarios designados. Una vez establecido, el fideicomitente generalmente no puede modificar ni revocar el fideicomiso sin el consentimiento de los beneficiarios, ofreciendo fuerte protecci\u00f3n de activos y beneficios sucesorales.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfC\u00f3mo se diferencian los fideicomisos de Puerto Rico de los del continente?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Los fideicomisos de Puerto Rico operan bajo un marco de derecho civil (Ley 219-2012) en lugar del derecho com\u00fan. Las diferencias clave incluyen: los fideicomisos son irrevocables por defecto, las reglas de leg\u00edtima pueden afectar la planificaci\u00f3n del fideicomiso, y los fideicomisos de PR pueden ofrecer ventajas \u00fanicas de protecci\u00f3n de activos y planificaci\u00f3n contributiva.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1les son los beneficios contributivos de un fideicomiso en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Los fideicomisos de Puerto Rico pueden proporcionar varias ventajas contributivas, incluyendo posibles ahorros en contribuciones sobre caudal relicto, diferimiento o reducci\u00f3n de impuestos sobre ingresos de activos del fideicomiso, y protecci\u00f3n de activos contra acreedores. Para tenedores de decretos bajo Ley 60, los fideicomisos estructurados adecuadamente pueden preservar los incentivos contributivos mientras logran objetivos sucesorales.'
+          }
+        }
+      ]
+    }
+  },
+  '/espanol-ley-60': {
+    h1: 'Incentivos Contributivos Ley 60 — Asesoria Legal en Puerto Rico',
+    meta: 'Abogado de Ley 60 en Puerto Rico. Servicios de exportacion, inversionistas individuales, cumplimiento y planificacion para relocalizados.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es la Ley 60 en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La Ley 60 (C\u00f3digo de Incentivos de Puerto Rico de 2019) consolida las antiguas Leyes 20 y 22, proporcionando incentivos contributivos para empresas e individuos que se mudan a Puerto Rico. Los beneficios dependen de los t\u00e9rminos del decreto, el momento de la solicitud y la ley aplicable. Consulte a un abogado para verificar los requisitos actuales de elegibilidad.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfC\u00f3mo califico para los beneficios de inversionista individual bajo Ley 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Para calificar, generalmente debe convertirse en residente bona fide de Puerto Rico, lo que requiere presencia f\u00edsica (al menos 183 d\u00edas al a\u00f1o), domicilio contributivo en Puerto Rico y una conexi\u00f3n m\u00e1s cercana a Puerto Rico que a cualquier otra jurisdicci\u00f3n. Se aplican obligaciones adicionales del decreto, incluyendo donaciones caritativas y compra de propiedad.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfUn abogado de Ley 60 puede ayudar con auditor\u00edas del IRS?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'S\u00ed. El IRS examina activamente a los tenedores de decretos bajo Ley 60, particularmente en cuanto a la fuente de ingresos y el cumplimiento de residencia. Un abogado experimentado puede asegurar que su documentaci\u00f3n respalde su posici\u00f3n de residencia, estructurar sus asuntos para cumplimiento y representarlo si el IRS cuestiona sus beneficios.'
+          }
+        }
+      ]
+    }
+  },
+
+  /* ---- Act 60 Resource Center Subpages (10 pages) ---- */
+  '/act-60-resource-center': {
+    h1: 'Act 60 Resource Center — Puerto Rico Tax Incentives Guide',
+    meta: 'Comprehensive Act 60 resource center. Residency tests, income sourcing, compliance, audit triggers, and planning guides for Puerto Rico relocators.',
+    schema: null
+  },
+  '/act-60-federal-residency-test-puerto-rico': {
+    h1: 'Act 60 Federal Residency Test — Bona Fide PR Resident Requirements',
+    meta: 'Federal residency test for Act 60 decree holders. Presence test, tax home test, closer connection test, and safe harbor rules for Puerto Rico.',
+    schema: null
+  },
+  '/act-60-income-sourcing-rules-puerto-rico': {
+    h1: 'Act 60 Income Sourcing Rules — Puerto Rico vs. U.S. Source Income',
+    meta: 'Income sourcing rules for Act 60 investors. How the IRS classifies Puerto Rico vs. U.S. source income and why it matters for your decree benefits.',
+    schema: null
+  },
+  '/act-60-compliance-requirements-audit-triggers': {
+    h1: 'Act 60 Compliance Requirements & Audit Triggers',
+    meta: 'Act 60 compliance checklist and common IRS audit triggers. Annual reporting, charitable donations, property requirements, and red flags to avoid.',
+    schema: null
+  },
+  '/act-60-working-days-allocation-services-income-sourcing': {
+    h1: 'Act 60 Working Days Allocation — Services Income Sourcing',
+    meta: 'Working days allocation method for Act 60 services income sourcing. How the IRS calculates PR vs. non-PR source income from personal services.',
+    schema: null
+  },
+  '/act-60-software-technology-income-classification-sourcing': {
+    h1: 'Act 60 Software & Technology Income Classification',
+    meta: 'Income classification and sourcing for Act 60 software and technology companies. SaaS, licensing, digital products, and export services rules.',
+    schema: null
+  },
+  '/act-60-state-departure-audit-domicile-change': {
+    h1: 'Act 60 State Departure Audit & Domicile Change',
+    meta: 'State departure audit risks when moving to Puerto Rico for Act 60. How states like California, New York, and others challenge your domicile change.',
+    schema: null
+  },
+  '/act-60-year-of-move-safe-harbor-transition-year': {
+    h1: 'Act 60 Year of Move — Safe Harbor & Transition Year Rules',
+    meta: 'Safe harbor and transition year rules for the year you move to Puerto Rico under Act 60. Split-year filing, income allocation, and planning tips.',
+    schema: null
+  },
+  '/act-60-export-services-chapter-3-compliance': {
+    h1: 'Act 60 Export Services — Chapter 3 Compliance Requirements',
+    meta: 'Export services compliance under Act 60 Chapter 3. Qualifying activities, client location rules, nexus considerations, and annual reporting.',
+    schema: null
+  },
+  '/act-60-residency-compliance-checklist-reference-tables': {
+    h1: 'Act 60 Residency Compliance Checklist & Reference Tables',
+    meta: 'Comprehensive Act 60 compliance checklist with reference tables. Presence days tracking, documentation requirements, and deadline calendar.',
+    schema: null
+  },
+
+  /* ---- Resource Subpages (9 EN + 9 ES) ---- */
+  '/resources-faq': {
+    h1: 'Frequently Asked Questions — Puerto Rico Estate Planning & Trusts',
+    meta: 'Answers to common questions about Puerto Rico estate planning, trusts under Law 219-2012, probate, and forced heirship. Free consultation available.',
+    schema: null
+  },
+  '/resources-wills-vs-trusts': {
+    h1: 'Wills vs. Trusts in Puerto Rico — Which Is Right for You?',
+    meta: 'Compare wills and trusts under Puerto Rico law. Probate avoidance, asset protection, cost differences, and which estate planning tool fits your needs.',
+    schema: null
+  },
+  '/resources-forced-heirship': {
+    h1: 'Forced Heirship (Leg\u00edtima) in Puerto Rico — What You Need to Know',
+    meta: 'Puerto Rico forced heirship rules under the 2020 Civil Code. How the leg\u00edtima affects your estate plan, who qualifies, and planning strategies.',
+    schema: null
+  },
+  '/resources-fiduciary-duties': {
+    h1: 'Fiduciary Duties of Trustees in Puerto Rico',
+    meta: 'Understanding fiduciary duties under Puerto Rico trust law. Trustee obligations, liability standards, and beneficiary protections under Law 219-2012.',
+    schema: null
+  },
+  '/resources-act60': {
+    h1: 'Act 60 Overview — Tax Incentives for Puerto Rico Relocators',
+    meta: 'Act 60 overview for individuals and businesses relocating to Puerto Rico. Tax incentive benefits, eligibility requirements, and application process.',
+    schema: null
+  },
+  '/resources-cases': {
+    h1: 'Key Trust Law Cases in Puerto Rico',
+    meta: 'Collection of key Puerto Rico trust law cases. Court decisions on fiduciary duties, trust validity, beneficiary rights, and property disputes.',
+    schema: null
+  },
+  '/resources-glossary': {
+    h1: 'Legal Glossary — Puerto Rico Trust & Estate Planning Terms',
+    meta: 'Bilingual glossary of Puerto Rico trust and estate planning terms. Fideicomiso, leg\u00edtima, fiduciario, and more legal terms defined in English and Spanish.',
+    schema: null
+  },
+  '/resources-process': {
+    h1: 'What to Expect — The Estate Planning Process at Riefkohl Law',
+    meta: 'Step-by-step guide to the estate planning process at Riefkohl Law. Initial consultation through trust creation and ongoing administration.',
+    schema: null
+  },
+  '/recursos-es': {
+    h1: 'Recursos Legales — Gu\u00edas, Preguntas Frecuentes y Herramientas',
+    meta: 'Recursos legales gratuitos para planificaci\u00f3n sucesoral, fideicomisos y derecho empresarial en Puerto Rico. Gu\u00edas, preguntas frecuentes y glosario.',
+    schema: null
+  },
+  '/recursos-preguntas-frecuentes': {
+    h1: 'Preguntas Frecuentes — Planificaci\u00f3n Sucesoral y Fideicomisos en PR',
+    meta: 'Respuestas a preguntas comunes sobre planificaci\u00f3n sucesoral, fideicomisos bajo Ley 219-2012, sucesiones y leg\u00edtima en Puerto Rico.',
+    schema: null
+  },
+  '/recursos-testamentos-fideicomisos': {
+    h1: 'Testamentos vs. Fideicomisos en Puerto Rico — \u00bfCu\u00e1l Necesita?',
+    meta: 'Compare testamentos y fideicomisos bajo la ley de Puerto Rico. Evitar sucesiones, protecci\u00f3n de activos y cu\u00e1l instrumento sucesoral le conviene.',
+    schema: null
+  },
+  '/recursos-legitima': {
+    h1: 'La Leg\u00edtima en Puerto Rico — Lo Que Debe Saber',
+    meta: 'Reglas de leg\u00edtima hereditaria bajo el C\u00f3digo Civil de 2020. C\u00f3mo afecta su planificaci\u00f3n sucesoral, qui\u00e9n califica y estrategias de planificaci\u00f3n.',
+    schema: null
+  },
+  '/recursos-deberes-fiduciarios': {
+    h1: 'Deberes Fiduciarios del Fiduciario en Puerto Rico',
+    meta: 'Obligaciones fiduciarias bajo la ley de fideicomisos de Puerto Rico. Deberes del fiduciario, est\u00e1ndares de responsabilidad y protecciones para beneficiarios.',
+    schema: null
+  },
+  '/recursos-act60-es': {
+    h1: 'Ley 60 — Incentivos Contributivos para Relocalizados a Puerto Rico',
+    meta: 'Resumen de Ley 60 para individuos y empresas que se mudan a Puerto Rico. Beneficios contributivos, requisitos de elegibilidad y proceso de solicitud.',
+    schema: null
+  },
+  '/recursos-casos-es': {
+    h1: 'Casos Clave de Derecho de Fideicomisos en Puerto Rico',
+    meta: 'Colecci\u00f3n de casos clave de derecho de fideicomisos en Puerto Rico. Decisiones judiciales sobre deberes fiduciarios, validez y derechos de beneficiarios.',
+    schema: null
+  },
+  '/recursos-glosario': {
+    h1: 'Glosario Legal — T\u00e9rminos de Fideicomisos y Sucesiones en PR',
+    meta: 'Glosario biling\u00fce de t\u00e9rminos de fideicomisos y planificaci\u00f3n sucesoral en Puerto Rico. Fideicomiso, leg\u00edtima, fiduciario y m\u00e1s t\u00e9rminos legales.',
+    schema: null
+  },
+  '/recursos-que-esperar': {
+    h1: 'Qu\u00e9 Esperar — El Proceso de Planificaci\u00f3n Sucesoral en Riefkohl Law',
+    meta: 'Gu\u00eda paso a paso del proceso de planificaci\u00f3n sucesoral en Riefkohl Law. Desde la consulta inicial hasta la creaci\u00f3n del fideicomiso.',
     schema: null
   },
 
@@ -795,7 +1065,7 @@ function injectDisclaimer() {
 
   var disc = document.createElement('div');
   disc.id = 'rl-legal-disclaimer';
-  disc.style.cssText = 'max-width:1140px;margin:0 auto;padding:20px 28px 24px;border-top:1px solid #e8e9ee;text-align:center;font-size:.72rem;color:#706b62;line-height:1.5;';
+  disc.style.cssText = 'max-width:1140px;margin:0 auto;padding:20px 28px 24px;border-top:1px solid #e8e9ee;text-align:center;font-size:.75rem;color:#706b62;line-height:1.5;';
   disc.innerHTML = '<p style="margin:0 0 6px;"><strong>Legal Disclaimer</strong></p>'
     + '<p style="margin:0 0 4px;">The information on this website is for general informational purposes only and does not constitute legal or tax advice. No attorney-client relationship is created by accessing this site, submitting a contact form, or scheduling a consultation. Confidential or time-sensitive information should not be sent through this website.</p>'
     + '<p style="margin:0 0 4px;">Tax results depend on individual circumstances including residency, income sourcing, and applicable law. Past results do not guarantee future outcomes.</p>'
@@ -811,12 +1081,185 @@ function injectDisclaimer() {
 }
 
 /* ================================================
+   8. INJECT ATTORNEY/LOCALBUSINESS SCHEMA (SITEWIDE)
+   ================================================ */
+function injectAttorneySchema() {
+  /* Only inject once, on every page */
+  var existing = document.querySelectorAll('script[type="application/ld+json"]');
+  for (var i = 0; i < existing.length; i++) {
+    try {
+      var data = JSON.parse(existing[i].textContent);
+      if (data['@type'] === 'Attorney' || data['@type'] === 'LegalService') return;
+    } catch(e) {}
+  }
+
+  var schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Attorney',
+    'name': 'Riefkohl Law',
+    'description': 'Puerto Rico law firm specializing in trusts, estate planning, Act 60 tax incentives, and business law.',
+    'url': 'https://www.riefkohllaw.com',
+    'telephone': '+1-787-236-1657',
+    'email': 'info@riefkohllaw.com',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '273 Ponce de Le\u00f3n Ave.',
+      'addressLocality': 'San Juan',
+      'addressRegion': 'PR',
+      'postalCode': '00917',
+      'addressCountry': 'US'
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 18.4505,
+      'longitude': -66.0667
+    },
+    'priceRange': '$$',
+    'openingHours': 'Mo-Fr 09:00-17:00',
+    'areaServed': {
+      '@type': 'State',
+      'name': 'Puerto Rico'
+    },
+    'knowsLanguage': ['en', 'es'],
+    'founder': {
+      '@type': 'Person',
+      'name': 'Hans E. Riefkohl',
+      'jobTitle': 'Founder & Managing Attorney'
+    },
+    'makesOffer': [
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Trust & Estate Planning'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Act 60 Tax Advisory'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Business Formation'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Government Contracts'}},
+      {'@type': 'Offer', 'itemOffered': {'@type': 'Service', 'name': 'Bankruptcy Services'}}
+    ]
+  };
+
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+/* ================================================
+   9. PERSON SCHEMA FOR /about PAGE
+   ================================================ */
+function injectPersonSchema() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  if (path !== '/about' && path !== '/about-us') return;
+
+  var schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    'name': 'Hans E. Riefkohl',
+    'jobTitle': 'Founder & Managing Attorney',
+    'worksFor': {
+      '@type': 'LegalService',
+      'name': 'Riefkohl Law',
+      'url': 'https://www.riefkohllaw.com'
+    },
+    'url': 'https://www.riefkohllaw.com/about',
+    'sameAs': ['https://www.linkedin.com/in/riefkohl'],
+    'knowsLanguage': ['en', 'es'],
+    'alumniOf': [
+      {'@type': 'EducationalOrganization', 'name': 'University of Puerto Rico School of Law'},
+      {'@type': 'EducationalOrganization', 'name': 'Villanova University'}
+    ]
+  };
+
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+/* ================================================
+   10. OG:TITLE, OG:TYPE, AND TWITTER CARD META TAGS
+   ================================================ */
+function fixOpenGraphAndTwitter() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var config = SEO[path];
+  var pageTitle = config ? config.h1 : document.title.split('—')[0].split('|')[0].trim();
+  var pageDesc = config ? config.meta : '';
+  var isBlogPost = path.indexOf('/blog/') === 0;
+  var pageType = isBlogPost ? 'article' : 'website';
+  var pageUrl = 'https://www.riefkohllaw.com' + (path === '/' ? '' : path);
+
+  /* OG:title */
+  var ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) {
+    ogTitle.setAttribute('content', pageTitle);
+  } else {
+    ogTitle = document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', pageTitle);
+    document.head.appendChild(ogTitle);
+  }
+
+  /* OG:type */
+  var ogType = document.querySelector('meta[property="og:type"]');
+  if (ogType) {
+    ogType.setAttribute('content', pageType);
+  } else {
+    ogType = document.createElement('meta');
+    ogType.setAttribute('property', 'og:type');
+    ogType.setAttribute('content', pageType);
+    document.head.appendChild(ogType);
+  }
+
+  /* OG:url */
+  var ogUrl = document.querySelector('meta[property="og:url"]');
+  if (ogUrl) {
+    ogUrl.setAttribute('content', pageUrl);
+  } else {
+    ogUrl = document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', pageUrl);
+    document.head.appendChild(ogUrl);
+  }
+
+  /* Twitter Card meta tags */
+  function setMeta(name, content) {
+    var el = document.querySelector('meta[name="' + name + '"]');
+    if (el) {
+      el.setAttribute('content', content);
+    } else {
+      el = document.createElement('meta');
+      el.setAttribute('name', name);
+      el.setAttribute('content', content);
+      document.head.appendChild(el);
+    }
+  }
+
+  setMeta('twitter:card', 'summary_large_image');
+  setMeta('twitter:title', pageTitle);
+  if (pageDesc) setMeta('twitter:description', pageDesc);
+}
+
+/* ================================================
+   11. SET lang="es" FOR SPANISH PAGES
+   ================================================ */
+function fixLangAttribute() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var isSpanish = path.indexOf('/espanol') === 0 ||
+                  path.indexOf('/recursos') === 0 ||
+                  path.match(/-es$/);
+  if (isSpanish) {
+    document.documentElement.lang = 'es';
+  }
+}
+
+/* ================================================
    EXECUTE ALL FIXES
    ================================================ */
 function runFixes() {
   fixMeta();
   fixCanonical();
   injectFAQSchema();
+  injectAttorneySchema();
+  injectPersonSchema();
+  fixOpenGraphAndTwitter();
+  fixLangAttribute();
 
   /* H1, staging URLs, and images need the DOM to be more fully loaded */
   fixH1();
@@ -840,8 +1283,10 @@ if (document.readyState === 'loading') {
 }
 
 /* ================================================
-   7. HREFLANG TAGS FOR EN/ES BLOG POSTS
+   12. HREFLANG TAGS FOR EN/ES PAGES
    ================================================ */
+
+/* Blog post pairs */
 var HREFLANG_PAIRS = [
   ['banking-insurance-trust-disputes-puerto-rico', 'banking-insurance-trust-disputes-puerto-rico-es'],
   ['breach-fiduciary-duty-trust-cases-puerto-rico', 'breach-fiduciary-duty-trust-cases-puerto-rico-es'],
@@ -854,28 +1299,60 @@ var HREFLANG_PAIRS = [
   ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es']
 ];
 
+/* Core page pairs (non-blog) */
+var CORE_HREFLANG_PAIRS = [
+  ['/', '/espanol'],
+  ['/services', '/espanol-servicios'],
+  ['/about', '/espanol-sobre-nosotros'],
+  ['/contact', '/espanol-contacto'],
+  ['/puerto-rico-trusts', '/espanol-fideicomisos'],
+  ['/calendly', '/espanol-cita'],
+  ['/blog', '/espanol-blog'],
+  ['/act-60-tax-incentives', '/espanol-ley-60'],
+  ['/resources', '/recursos-es']
+];
+
 function injectHreflang() {
-  var slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
-  var base = 'https://www.riefkohllaw.com/blog/';
-  for (var i = 0; i < HREFLANG_PAIRS.length; i++) {
-    var en = HREFLANG_PAIRS[i][0], es = HREFLANG_PAIRS[i][1];
-    if (slug === en || slug === es) {
-      var linkEn = document.createElement('link');
-      linkEn.rel = 'alternate'; linkEn.hreflang = 'en';
-      linkEn.href = base + en;
-      var linkEs = document.createElement('link');
-      linkEs.rel = 'alternate'; linkEs.hreflang = 'es';
-      linkEs.href = base + es;
-      var linkDefault = document.createElement('link');
-      linkDefault.rel = 'alternate'; linkDefault.hreflang = 'x-default';
-      linkDefault.href = base + en;
-      document.head.appendChild(linkEn);
-      document.head.appendChild(linkEs);
-      document.head.appendChild(linkDefault);
-      break;
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var base = 'https://www.riefkohllaw.com';
+
+  /* Check blog post pairs */
+  var slug = path.replace(/^\/blog\//, '');
+  if (path.indexOf('/blog/') === 0) {
+    for (var i = 0; i < HREFLANG_PAIRS.length; i++) {
+      var en = HREFLANG_PAIRS[i][0], es = HREFLANG_PAIRS[i][1];
+      if (slug === en || slug === es) {
+        addHreflangLinks(base + '/blog/' + en, base + '/blog/' + es);
+        return;
+      }
+    }
+  }
+
+  /* Check core page pairs */
+  for (var j = 0; j < CORE_HREFLANG_PAIRS.length; j++) {
+    var enPage = CORE_HREFLANG_PAIRS[j][0], esPage = CORE_HREFLANG_PAIRS[j][1];
+    if (path === enPage || path === esPage) {
+      addHreflangLinks(base + enPage, base + esPage);
+      return;
     }
   }
 }
+
+function addHreflangLinks(enUrl, esUrl) {
+  var linkEn = document.createElement('link');
+  linkEn.rel = 'alternate'; linkEn.hreflang = 'en';
+  linkEn.href = enUrl;
+  var linkEs = document.createElement('link');
+  linkEs.rel = 'alternate'; linkEs.hreflang = 'es';
+  linkEs.href = esUrl;
+  var linkDefault = document.createElement('link');
+  linkDefault.rel = 'alternate'; linkDefault.hreflang = 'x-default';
+  linkDefault.href = enUrl;
+  document.head.appendChild(linkEn);
+  document.head.appendChild(linkEs);
+  document.head.appendChild(linkDefault);
+}
+
 injectHreflang();
 
 })();

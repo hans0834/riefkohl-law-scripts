@@ -1364,3 +1364,330 @@ h3.rl-auto-heading {
   color: #a68c42;
   text-decoration: underline;
 }
+
+/* ========================================
+   conversion-booster
+   ======================================== */
+
+/* ===== CLICK-TO-CALL BANNER (all pages, all devices) ===== */
+.rl-call-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1a2033;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  font-size: .88rem;
+  letter-spacing: .01em;
+  position: relative;
+  z-index: 999;
+}
+.rl-call-banner a {
+  color: #bfa35d !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color .2s;
+}
+.rl-call-banner a:hover {
+  color: #d4b96a !important;
+}
+.rl-call-banner .rl-call-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+.rl-call-banner .rl-call-sep {
+  color: rgba(255,255,255,.25);
+  margin: 0 4px;
+}
+.rl-call-banner .rl-call-text {
+  color: rgba(255,255,255,.7);
+}
+
+@media (max-width: 767px) {
+  .rl-call-banner {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    padding: 8px 16px;
+    font-size: .82rem;
+  }
+  .rl-call-banner .rl-call-text {
+    display: none;
+  }
+}
+
+/* ===== STICKY MOBILE CTA BAR ===== */
+.rl-sticky-cta {
+  display: none;
+}
+@media (max-width: 767px) {
+  .rl-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1a2033;
+    border-top: 2px solid #bfa35d;
+    padding: 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.25);
+    font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  }
+  .rl-sticky-cta a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 12px;
+    text-decoration: none !important;
+    font-size: .82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    transition: background .2s;
+  }
+  .rl-sticky-cta .rl-sticky-call {
+    background: #1a2033;
+    color: #fff !important;
+  }
+  .rl-sticky-cta .rl-sticky-call:hover,
+  .rl-sticky-cta .rl-sticky-call:active {
+    background: #243047;
+  }
+  .rl-sticky-cta .rl-sticky-book {
+    background: #bfa35d;
+    color: #1a2033 !important;
+  }
+  .rl-sticky-cta .rl-sticky-book:hover,
+  .rl-sticky-cta .rl-sticky-book:active {
+    background: #d4b96a;
+  }
+  .rl-sticky-cta .rl-sticky-icon {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+  }
+  .rl-sticky-cta .rl-sticky-divider {
+    width: 1px;
+    background: rgba(255,255,255,.15);
+    align-self: stretch;
+  }
+  body {
+    padding-bottom: 56px !important;
+  }
+}
+
+/* ========================================
+   email-signup
+   ======================================== */
+
+/* === SITE-WIDE FOOTER NEWSLETTER BAR === */
+.rl-footer-signup {
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%);
+  padding: 40px 28px;
+  text-align: center;
+  border-top: 2px solid rgba(191,163,93,.2);
+}
+.rl-footer-signup * { box-sizing: border-box; }
+.rl-footer-signup-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.rl-footer-signup-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(191,163,93,.15);
+  color: #bfa35d;
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.rl-footer-signup h4 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+}
+.rl-footer-signup p {
+  color: rgba(255,255,255,.55);
+  font-size: .85rem;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.rl-footer-signup .rl-signup-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.rl-footer-signup .rl-signup-input {
+  flex: 1;
+  height: 46px;
+  padding: 0 16px;
+  font-size: .88rem;
+  font-family: inherit;
+  border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 6px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  outline: none;
+  transition: border-color .25s, background .25s;
+}
+.rl-footer-signup .rl-signup-input::placeholder { color: rgba(255,255,255,.35); }
+.rl-footer-signup .rl-signup-input:focus {
+  border-color: #bfa35d;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 0 0 2px rgba(191,163,93,.2);
+}
+.rl-footer-signup .rl-signup-btn {
+  height: 46px;
+  padding: 0 22px;
+  font-size: .82rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: #bfa35d;
+  color: #1a2033;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .25s, transform .15s;
+}
+.rl-footer-signup .rl-signup-btn:hover { background: #d4b96a; transform: translateY(-1px); }
+.rl-footer-signup .rl-signup-btn:active { transform: translateY(0); }
+.rl-footer-signup .rl-signup-privacy {
+  color: rgba(255,255,255,.3);
+  font-size: .7rem;
+  margin-top: 12px;
+}
+.rl-footer-signup .rl-signup-privacy a { color: rgba(255,255,255,.45); text-decoration: underline; }
+.rl-footer-signup .rl-signup-success {
+  display: none;
+  color: #bfa35d;
+  font-size: .95rem;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+@media (max-width: 540px) {
+  .rl-footer-signup { padding: 32px 20px; }
+  .rl-footer-signup h4 { font-size: 1.05rem; }
+  .rl-footer-signup .rl-signup-form { flex-direction: column; }
+  .rl-footer-signup .rl-signup-btn { width: 100%; }
+}
+
+/* === INLINE SIGNUP (Blog Post / Article Embed) === */
+.rl-signup-inline {
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  max-width: 680px;
+  margin: 48px auto;
+  padding: 40px 36px;
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%);
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.rl-signup-inline * { box-sizing: border-box; }
+.rl-signup-inline .rl-signup-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(191,163,93,.15);
+  color: #bfa35d;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.rl-signup-inline h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.rl-signup-inline p {
+  color: rgba(255,255,255,.6);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rl-signup-inline .rl-signup-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.rl-signup-inline .rl-signup-input {
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+  font-size: .9rem;
+  font-family: inherit;
+  border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 6px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  outline: none;
+  transition: border-color .25s, background .25s;
+}
+.rl-signup-inline .rl-signup-input::placeholder { color: rgba(255,255,255,.35); }
+.rl-signup-inline .rl-signup-input:focus {
+  border-color: #bfa35d;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 0 0 2px rgba(191,163,93,.2);
+}
+.rl-signup-inline .rl-signup-btn {
+  height: 48px;
+  padding: 0 24px;
+  font-size: .85rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: #bfa35d;
+  color: #1a2033;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .25s, transform .15s;
+}
+.rl-signup-inline .rl-signup-btn:hover { background: #d4b96a; transform: translateY(-1px); }
+.rl-signup-inline .rl-signup-privacy {
+  color: rgba(255,255,255,.35);
+  font-size: .72rem;
+  margin-top: 12px;
+}
+.rl-signup-inline .rl-signup-privacy a { color: rgba(255,255,255,.5); text-decoration: underline; }
+.rl-signup-inline .rl-signup-success {
+  display: none;
+  color: #bfa35d;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 0;
+}
+@media (max-width: 540px) {
+  .rl-signup-inline { padding: 32px 20px; margin: 32px 16px; }
+  .rl-signup-inline h3 { font-size: 1.25rem; }
+  .rl-signup-inline .rl-signup-form { flex-direction: column; }
+  .rl-signup-inline .rl-signup-btn { width: 100%; }
+}

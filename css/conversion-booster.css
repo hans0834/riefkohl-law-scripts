@@ -1,0 +1,122 @@
+/* ========================================
+   conversion-booster
+   ======================================== */
+
+/* ===== CLICK-TO-CALL BANNER (all pages, all devices) ===== */
+.rl-call-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #1a2033;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  font-size: .88rem;
+  letter-spacing: .01em;
+  position: relative;
+  z-index: 999;
+}
+.rl-call-banner a {
+  color: #bfa35d !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color .2s;
+}
+.rl-call-banner a:hover {
+  color: #d4b96a !important;
+}
+.rl-call-banner .rl-call-icon {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+}
+.rl-call-banner .rl-call-sep {
+  color: rgba(255,255,255,.25);
+  margin: 0 4px;
+}
+.rl-call-banner .rl-call-text {
+  color: rgba(255,255,255,.7);
+}
+
+@media (max-width: 767px) {
+  .rl-call-banner {
+    flex-wrap: wrap;
+    gap: 4px 8px;
+    padding: 8px 16px;
+    font-size: .82rem;
+  }
+  .rl-call-banner .rl-call-text {
+    display: none; /* Hide "Free Strategy Call" text on mobile — sticky bar handles CTA */
+  }
+}
+
+/* ===== STICKY MOBILE CTA BAR ===== */
+.rl-sticky-cta {
+  display: none; /* Hidden on desktop */
+}
+@media (max-width: 767px) {
+  .rl-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1a2033;
+    border-top: 2px solid #bfa35d;
+    padding: 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.25);
+    font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  }
+  .rl-sticky-cta a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 12px;
+    text-decoration: none !important;
+    font-size: .82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    transition: background .2s;
+  }
+  .rl-sticky-cta .rl-sticky-call {
+    background: #1a2033;
+    color: #fff !important;
+  }
+  .rl-sticky-cta .rl-sticky-call:hover,
+  .rl-sticky-cta .rl-sticky-call:active {
+    background: #243047;
+  }
+  .rl-sticky-cta .rl-sticky-book {
+    background: #bfa35d;
+    color: #1a2033 !important;
+  }
+  .rl-sticky-cta .rl-sticky-book:hover,
+  .rl-sticky-cta .rl-sticky-book:active {
+    background: #d4b96a;
+  }
+  .rl-sticky-cta .rl-sticky-icon {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+  }
+  .rl-sticky-cta .rl-sticky-divider {
+    width: 1px;
+    background: rgba(255,255,255,.15);
+    align-self: stretch;
+  }
+
+  /* Add bottom padding to body so sticky bar doesn't cover content */
+  body {
+    padding-bottom: 56px !important;
+  }
+}

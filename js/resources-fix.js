@@ -1,6 +1,3 @@
-// Riefkohl Law Resources Page Fix - Styling + Subpage Content
-// Deployed via site-wide Code Injection (Header)
-
 (function(){
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
@@ -53,9 +50,9 @@ var PAGES = {
   +'<p>Both wills and trusts are essential estate planning tools in Puerto Rico, but they serve different purposes and operate under distinct legal frameworks. Understanding their differences is key to building an effective estate plan.</p>'
 
   +'<h2>Wills (Testamento)</h2>'
-  +'<p>A will is a legal document in which you declare how your assets should be distributed after death. In Puerto Rico, wills must comply with the Civil Code\u2019s formalities, including being executed before a notary public and witnesses.</p>'
+  +'<p>A will is a legal document in which you declare how your assets should be distributed after death. In Puerto Rico, wills must comply with the Civil Code\u2019s formalities, including being executed before a notary public. Under the 2020 Civil Code (Art. 1644), witnesses are no longer mandatory for open wills unless requested by the testator or the notary.</p>'
   +'<h3>Types of Wills in Puerto Rico</h3>'
-  +'<ul><li><strong>Open will (<em>testamento abierto</em>):</strong> Executed before a notary and witnesses; the most common and standard form under the current Civil Code.</li>'
+  +'<ul><li><strong>Open will (<em>testamento abierto</em>):</strong> Executed before a notary public; the most common and standard form under the current Civil Code. Under Art. 1644 of Ley 55-2020, witnesses are no longer mandatory unless requested by the testator or notary.</li>'
   +'<li><strong>Holographic will (<em>testamento ol\u00f3grafo</em>):</strong> Written entirely in the testator\u2019s handwriting; requires judicial validation after death.</li></ul>'
   +'<p><em>Note: Under the prior Civil Code, Puerto Rico also recognized closed wills (<em>testamento cerrado</em>). The 2020 Civil Code (Ley 55-2020) eliminated this form. Legacy closed wills executed before November 28, 2020 may still be valid under transitional rules.</em></p>'
   +'<h3>Advantages of a Will</h3>'
@@ -291,7 +288,7 @@ var PAGES = {
 
   +'<div class="rl-step"><div class="rl-step-title">Step 5: Document Drafting</div><div class="rl-step-desc">Our team drafts all estate planning documents, which may include wills, trusts, powers of attorney, healthcare directives, and trust funding instructions. Each document is reviewed for accuracy and compliance with Puerto Rico law.</div><div class="rl-step-time">Duration: 1\u20132 weeks</div></div>'
 
-  +'<div class="rl-step"><div class="rl-step-title">Step 6: Execution and Signing</div><div class="rl-step-desc">We schedule a signing session, typically at our office in San Juan or via a convenient arrangement. For wills, a Puerto Rico notary public officiates the execution with the required witnesses. Trust documents and powers of attorney are also formally executed.</div><div class="rl-step-time">Duration: 1\u20132 hours</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Step 6: Execution and Signing</div><div class="rl-step-desc">We schedule a signing session, typically at our office in San Juan or via a convenient arrangement. For wills, a Puerto Rico notary public officiates the execution (witnesses are no longer mandatory under Art. 1644 of the 2020 Civil Code unless requested). Trust documents and powers of attorney are also formally executed.</div><div class="rl-step-time">Duration: 1\u20132 hours</div></div>'
 
   +'<div class="rl-step"><div class="rl-step-title">Step 7: Trust Funding and Implementation</div><div class="rl-step-desc">After signing, we assist with funding your trust\u2014transferring titles, updating beneficiary designations, and retitling accounts. We provide a detailed checklist and can coordinate directly with your financial institutions.</div><div class="rl-step-time">Duration: 2\u20134 weeks</div></div>'
 
@@ -429,7 +426,7 @@ var PAGES = {
   +'<ul><li>Federal income tax: grantor trusts (taxed to settlor) vs. non-grantor trusts (taxed to trust)</li>'
   +'<li>Puerto Rico income tax depends on trust situs, residency, and income source</li>'
   +'<li>Irrevocable trust assets generally removed from federal taxable estate</li>'
-  +'<li>Federal estate tax exemption scheduled to sunset to ~$7M in 2026</li></ul>'
+  +'<li>Federal estate tax exemption of $15M per individual (made permanent by the One Big Beautiful Bill Act with inflation indexing)</li></ul>'
   +'<h2>Common Mistakes</h2>'
   +'<ul><li>Failing to fund the trust after creation</li><li>Choosing the wrong trustee</li><li>Ignoring forced heirship</li><li>Retaining too much control (undermines asset protection)</li><li>Not updating the trust after life changes</li><li>Using a mainland trust without Puerto Rico review</li></ul>'
   +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Go deeper with our Trust Law Series:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/what-is-puerto-rico-trust" style="color:#a68c42;">What Is a Puerto Rico Trust?</a> \u2014 The autonomous estate concept</li><li><a href="/resources/act-60-trust-planning" style="color:#a68c42;">Trust Planning for Act 60 Investors</a> \u2014 Mainland vs. PR trust decision</li><li><a href="/resources/trust-costs-puerto-rico" style="color:#a68c42;">Trust Costs</a> \u2014 Transparent pricing breakdown</li><li><a href="/resources/modifying-irrevocable-trusts" style="color:#a68c42;">Modifying &amp; Decanting Irrevocable Trusts</a> \u2014 When and how changes are possible</li><li><a href="/resources/special-needs-trusts-medicaid" style="color:#a68c42;">Special Needs Trusts &amp; Medicaid</a> \u2014 Protecting beneficiaries with disabilities</li><li><a href="/resources/ilits-and-slats" style="color:#a68c42;">ILITs and SLATs</a> \u2014 Advanced insurance and spousal trust strategies</li></ul></div>'

@@ -1,8 +1,3 @@
-// Riefkohl Law SEO Fixes — Deployed via Squarespace Code Injection (Header)
-// PURPOSE: Fix duplicate H1, duplicate meta descriptions, add FAQ schema, add canonical tags
-// DEPLOY: Squarespace → Settings → Advanced → Code Injection → Header
-// Mobile menu overlay fix: white text on transparent bg was unreadable
-
 (function(){
 'use strict';
 
@@ -22,12 +17,12 @@ var SEO = {
   },
   '/about': {
     h1: 'About Hans E. Riefkohl — Founder & Managing Attorney',
-    meta: 'Attorney Hans Riefkohl brings 8+ years of experience from DLA Piper and LUMA Energy. Puerto Rico trusts, estate planning, and corporate law.',
+    meta: 'Attorney Hans Riefkohl brings over a decade of experience from DLA Piper, LUMA Energy, and the federal courts. Puerto Rico trusts, estate planning, and corporate law.',
     schema: null
   },
   '/about-us': {
     h1: 'About Hans E. Riefkohl — Founder & Managing Attorney',
-    meta: 'Attorney Hans Riefkohl brings 8+ years of experience from DLA Piper and LUMA Energy. Puerto Rico trusts, estate planning, and corporate law.',
+    meta: 'Attorney Hans Riefkohl brings over a decade of experience from DLA Piper, LUMA Energy, and the federal courts. Puerto Rico trusts, estate planning, and corporate law.',
     schema: null
   },
   '/contact': {
@@ -561,58 +556,6 @@ var SEO = {
   '/resources/mainland-trust-to-puerto-rico': {
     h1: 'Bringing Your Mainland Trust to Puerto Rico: A Guide for Act 60 Holders',
     meta: 'What Section 45147 protects (and doesn\u2019t) when you bring a mainland trust to PR. Governing law risks, civil law gaps, and practical steps.',
-    schema: null
-  },
-
-  /* ---- Original Blog Posts (10 posts: 6 EN + 4 ES) ---- */
-  '/blog/5-critical-mistakes-act-60-decree-holders-make-with-estate-planning': {
-    h1: '5 Critical Mistakes Act 60 Decree Holders Make with Estate Planning',
-    meta: 'Act 60 decree holders in Puerto Rico often overlook estate planning. Learn the 5 critical mistakes that could cost your heirs millions in taxes and delays.',
-    schema: null
-  },
-  '/blog/puerto-rico-trust-vs-will-which-do-you-need': {
-    h1: 'Puerto Rico Trust vs. Will: Which Do You Need?',
-    meta: 'Compare Puerto Rico trusts and wills \u2014 how they work, what they cost, and when you need both. Learn how Law 219-2012 changed trust planning in PR.',
-    schema: null
-  },
-  '/blog/irs-scrutiny-of-act-60-decree-holders-what-you-need-to-know-2026': {
-    h1: 'IRS Scrutiny of Act 60 Decree Holders: What You Need to Know in 2026',
-    meta: 'The IRS is ramping up Act 60 audits in 2026. Learn what\u2019s changed, the new $15M estate tax exemption, and what to do if you receive an IRS inquiry.',
-    schema: null
-  },
-  '/blog/how-forced-heirship-affects-your-estate-plan-in-puerto-rico': {
-    h1: 'How Forced Heirship Affects Your Estate Plan in Puerto Rico',
-    meta: 'Puerto Rico forced heirship reserves one-half of your estate for your children and surviving spouse. Learn how the leg\u00edtima works and strategies to plan around it.',
-    schema: null
-  },
-  '/blog/puerto-rico-asset-protection-how-irrevocable-trusts-shield-your-wealth': {
-    h1: 'Puerto Rico Asset Protection: How Irrevocable Trusts Shield Your Wealth',
-    meta: 'Learn how irrevocable trusts under Puerto Rico Law 219-2012 protect your assets from creditors, lawsuits, and divorce. Strategies for business owners.',
-    schema: null
-  },
-  '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012': {
-    h1: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012',
-    meta: 'Comprehensive guide to Puerto Rico trusts under Law 219-2012. Types, creation, tax planning, asset protection, trustee duties, and common mistakes.',
-    schema: null
-  },
-  '/blog/fideicomiso-irrevocable-en-puerto-rico-guia-completa-bajo-la-ley-219-2012': {
-    h1: 'Fideicomiso Irrevocable en Puerto Rico: Gu\u00eda Completa bajo la Ley 219-2012',
-    meta: 'Gu\u00eda completa sobre fideicomisos irrevocables en Puerto Rico bajo la Ley 219-2012. Protecci\u00f3n de activos, beneficios contributivos y planificaci\u00f3n sucesoral.',
-    schema: null
-  },
-  '/blog/planificacion-sucesoral-en-puerto-rico-lo-que-todo-residente-debe-saber': {
-    h1: 'Planificaci\u00f3n Sucesoral en Puerto Rico: Lo Que Todo Residente Debe Saber',
-    meta: 'Todo lo que necesita saber sobre planificaci\u00f3n sucesoral en Puerto Rico. Leg\u00edtima, testamentos, fideicomisos, poderes y directivas de salud bajo la ley actual.',
-    schema: null
-  },
-  '/blog/ley-60-guia-para-inversionistas-individuales-que-se-mudan-a-puerto-rico': {
-    h1: 'Ley 60: Gu\u00eda para Inversionistas Individuales que se Mudan a Puerto Rico',
-    meta: 'Gu\u00eda completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos, proceso de solicitud y errores comunes.',
-    schema: null
-  },
-  '/blog/proceso-de-declaratoria-de-herederos-en-puerto-rico': {
-    h1: 'Proceso de Declaratoria de Herederos en Puerto Rico',
-    meta: 'Gu\u00eda del proceso de declaratoria de herederos en Puerto Rico. Requisitos, plazos, costos y c\u00f3mo evitarlo mediante planificaci\u00f3n sucesoral adecuada.',
     schema: null
   },
 
@@ -1226,94 +1169,6 @@ function injectPersonSchema() {
 }
 
 /* ================================================
-   9b. BLOGPOSTING SCHEMA FOR ALL BLOG POSTS
-   ================================================ */
-function injectBlogPostSchema() {
-  var path = window.location.pathname.replace(/\/$/, '') || '/';
-  if (path.indexOf('/blog/') !== 0) return;
-  if (path === '/blog') return;
-
-  /* Don't inject if BlogPosting/Article schema already exists */
-  var existing = document.querySelectorAll('script[type="application/ld+json"]');
-  for (var i = 0; i < existing.length; i++) {
-    try {
-      var data = JSON.parse(existing[i].textContent);
-      if (data['@type'] === 'BlogPosting' || data['@type'] === 'Article') return;
-    } catch(e) {}
-  }
-
-  var config = SEO[path];
-  var title = config ? config.h1 : (document.querySelector('h1') || {}).textContent || document.title;
-  var description = config ? config.meta : '';
-  var url = 'https://www.riefkohllaw.com' + path;
-
-  /* Get published date from Squarespace metadata */
-  var dateEl = document.querySelector('time.blog-date, time[datetime], .dt-published');
-  var datePublished = dateEl ? (dateEl.getAttribute('datetime') || dateEl.textContent) : '';
-  if (!datePublished) {
-    var metaDate = document.querySelector('meta[property="article:published_time"]');
-    if (metaDate) datePublished = metaDate.getAttribute('content');
-  }
-
-  /* Determine language */
-  var SPANISH_SLUGS = [
-    'fideicomiso-irrevocable-en-puerto-rico',
-    'planificacion-sucesoral-en-puerto-rico',
-    'ley-60-guia-para-inversionistas',
-    'proceso-de-declaratoria-de-herederos'
-  ];
-  var isSpanish = path.match(/-es$/) ||
-                  SPANISH_SLUGS.some(function(s) { return path.indexOf(s) >= 0; });
-  var lang = isSpanish ? 'es' : 'en';
-
-  /* Determine category from slug patterns */
-  var category = 'Legal Analysis';
-  if (/trust|fideicomis|fiduciar|irrevocabl|revocabl|no-contest|cy-pres|settlor/.test(path)) category = 'Trust Law';
-  else if (/estate|probate|will|heir|sucesoral|declaratoria|legitima|forced-heirship/.test(path)) category = 'Estate Planning';
-  else if (/act-60|act60|ley-60|irs-scrutiny|decreto/.test(path)) category = 'Act 60 Tax Incentives';
-  else if (/bankrupt/.test(path)) category = 'Bankruptcy';
-  else if (/buslaw|llc|corporate|business|merger|covenant/.test(path)) category = 'Business Law';
-  else if (/prlaw|puerto-rico-law|municipality|procurement|government/.test(path)) category = 'Puerto Rico Law';
-  else if (/willsanalysis|willssummary/.test(path)) category = 'Wills & Estates';
-
-  var schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    'headline': title,
-    'description': description,
-    'url': url,
-    'inLanguage': lang,
-    'articleSection': category,
-    'author': {
-      '@type': 'Person',
-      'name': 'Hans E. Riefkohl',
-      'jobTitle': 'Attorney',
-      'url': 'https://www.riefkohllaw.com/about'
-    },
-    'publisher': {
-      '@type': 'LegalService',
-      'name': 'Riefkohl Law',
-      'url': 'https://www.riefkohllaw.com',
-      'logo': {
-        '@type': 'ImageObject',
-        'url': 'https://www.riefkohllaw.com/assets/logo.png'
-      }
-    },
-    'mainEntityOfPage': {
-      '@type': 'WebPage',
-      '@id': url
-    }
-  };
-
-  if (datePublished) schema.datePublished = datePublished;
-
-  var script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(schema);
-  document.head.appendChild(script);
-}
-
-/* ================================================
    10. OG:TITLE, OG:TYPE, AND TWITTER CARD META TAGS
    ================================================ */
 function fixOpenGraphAndTwitter() {
@@ -1381,16 +1236,9 @@ function fixOpenGraphAndTwitter() {
    ================================================ */
 function fixLangAttribute() {
   var path = window.location.pathname.replace(/\/$/, '') || '/';
-  var SPANISH_BLOG_SLUGS = [
-    'fideicomiso-irrevocable-en-puerto-rico',
-    'planificacion-sucesoral-en-puerto-rico',
-    'ley-60-guia-para-inversionistas',
-    'proceso-de-declaratoria-de-herederos'
-  ];
   var isSpanish = path.indexOf('/espanol') === 0 ||
                   path.indexOf('/recursos') === 0 ||
-                  path.match(/-es$/) ||
-                  SPANISH_BLOG_SLUGS.some(function(s) { return path.indexOf(s) >= 0; });
+                  path.match(/-es$/);
   if (isSpanish) {
     document.documentElement.lang = 'es';
   }
@@ -1403,7 +1251,6 @@ function runFixes() {
   fixMeta();
   fixCanonical();
   injectFAQSchema();
-  injectBlogPostSchema();
   injectAttorneySchema();
   injectPersonSchema();
   fixOpenGraphAndTwitter();

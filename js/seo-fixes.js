@@ -911,6 +911,13 @@ var SEO = {
     h1: 'Will Contest Dismissed on Summary Judgment \u2014 New York Estate Case Summary',
     meta: 'Summary of New York court dismissal of will contest. No confidential relationship or undue influence found where decedent independently disinherited daughter.',
     schema: null
+  },
+
+  /* ---- Session 12: LinkedIn Post — Builders v. PRFA ---- */
+  '/blog/mapfre-v-oriental-fondos-publicos-construccion': {
+    h1: 'MAPFRE v. Oriental: Fondos P\u00fablicos de Construcci\u00f3n y Compensaci\u00f3n Bancaria',
+    meta: 'Tribunal de quiebras ordena a Oriental devolver $464,757 en fondos p\u00fablicos de construcci\u00f3n. An\u00e1lisis de compensaci\u00f3n bancaria, subrogaci\u00f3n equitativa y Ley 388-1951.',
+    schema: null
   }
 };
 

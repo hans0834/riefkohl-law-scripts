@@ -1528,6 +1528,14 @@ injectHreflang();
         break;
       }
     }
+    // Fix "waysX" typo introduced by accidental editor keystroke
+    var allP = document.querySelectorAll('.entry-content p, .blog-item-content p, article p');
+    for (var k = 0; k < allP.length; k++) {
+      if (allP[k].textContent.indexOf('waysX') !== -1) {
+        allP[k].innerHTML = allP[k].innerHTML.replace('waysX', 'ways.');
+        break;
+      }
+    }
   }
 
   if (document.readyState === 'loading') {

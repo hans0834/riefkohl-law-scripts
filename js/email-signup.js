@@ -17,18 +17,18 @@ function injectFooterSignup() {
   if (PATH === '/calendly' || PATH === '/espanol-cita') return;
 
   var heading = IS_ES
-    ? 'Manténgase Informado sobre la Ley de Puerto Rico'
-    : 'Stay Updated on Puerto Rico Law';
+    ? '¿Su negocio cualifica para la tasa contributiva del 4%?'
+    : 'Does Your Business Qualify for the 4% Tax Rate?';
   var desc = IS_ES
-    ? 'Reciba análisis legal sobre fideicomisos, planificación patrimonial y Ley 60 directamente en su bandeja de entrada.'
-    : 'Get legal insights on trusts, estate planning, and Act 60 delivered to your inbox.';
+    ? 'Obtenga nuestra lista de elegibilidad para la Ley 60 y reciba estrategias tributarias mensuales para negocios en Puerto Rico.'
+    : 'Get our Act 60 Eligibility Checklist plus monthly tax strategy insights for Puerto Rico businesses.';
   var placeholder = IS_ES ? 'Su correo electrónico' : 'Your email address';
-  var btnText = IS_ES ? 'Suscribirse' : 'Subscribe';
+  var btnText = IS_ES ? 'Obtener la Guía' : 'Get the Checklist';
   var successText = IS_ES ? '¡Gracias! Revise su correo.' : 'Thank you! Check your inbox.';
   var privacyText = IS_ES
     ? 'Respetamos su privacidad. Cancele cuando quiera. <a href="/privacy-policy">Política de Privacidad</a>'
     : 'We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a>';
-  var badge = IS_ES ? 'Boletín Legal' : 'Legal Newsletter';
+  var badge = IS_ES ? 'Guía Gratuita Ley 60' : 'Free Act 60 Guide';
 
   var bar = document.createElement('div');
   bar.className = 'rl-footer-signup';

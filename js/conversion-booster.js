@@ -159,12 +159,63 @@ function injectLocalBusinessSchema() {
   document.head.appendChild(script);
 }
 
+/* ===== 4. PAGE-SPECIFIC CTA BLOCKS ===== */
+function injectPageCTAs() {
+  if (document.querySelector('.rl-page-cta')) return;
+
+  var ctaConfig = {
+    '/act-60-tax-incentives': {
+      heading: IS_ES ? '¿Listo para ahorrar con la Ley 60?' : 'Ready to Save on Taxes with Act 60?',
+      body: IS_ES
+        ? 'Obtenga una evaluación personalizada de su elegibilidad para el programa de incentivos contributivos más poderoso de Puerto Rico.'
+        : 'Get a personalized assessment of your eligibility for Puerto Rico\'s most powerful tax incentive program.',
+      btn: IS_ES ? 'Reserve Su Consulta Gratuita' : 'Book Your Free Strategy Call',
+      secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    },
+    '/puerto-rico-trusts': {
+      heading: IS_ES ? 'Proteja sus activos con un fideicomiso en Puerto Rico' : 'Protect Your Assets with a Puerto Rico Trust',
+      body: IS_ES
+        ? 'Descubra cómo un fideicomiso puede proteger el patrimonio de su familia, evitar la sucesión testamentaria y aprovechar las leyes favorables de Puerto Rico.'
+        : 'Learn how a fideicomiso can protect your family\'s wealth, avoid probate, and take advantage of Puerto Rico\'s favorable trust laws.',
+      btn: IS_ES ? 'Reserve una Consulta Gratuita' : 'Book a Free Trust Consultation',
+      secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    }
+  };
+
+  var config = ctaConfig[PATH];
+  if (!config) return;
+
+  var bookUrl = IS_ES ? '/espanol-cita' : BOOK_URL;
+
+  var cta = document.createElement('div');
+  cta.className = 'rl-page-cta';
+  cta.style.cssText = 'max-width:680px;margin:48px auto;padding:40px 36px;background:linear-gradient(160deg,#1a2033 0%,#243047 100%);border-radius:10px;text-align:center;box-sizing:border-box;';
+  cta.innerHTML =
+    '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">' + config.heading + '</h2>' +
+    '<p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0 0 24px;max-width:500px;margin-left:auto;margin-right:auto;">' + config.body + '</p>' +
+    '<a href="' + bookUrl + '" style="display:inline-block;padding:14px 28px;background:#bfa35d;color:#1a2033;font-size:.85rem;font-weight:700;text-decoration:none;border-radius:6px;transition:background .25s;">' + config.btn + '</a>' +
+    '<p style="color:rgba(255,255,255,.4);font-size:.8rem;margin-top:14px;">' + config.secondary + '</p>';
+
+  // Insert before the footer signup or at end of main content
+  var footerSignup = document.querySelector('.rl-footer-signup');
+  var footer = document.querySelector('footer') || document.querySelector('.footer-inside');
+
+  if (footerSignup) {
+    footerSignup.parentNode.insertBefore(cta, footerSignup);
+  } else if (footer) {
+    footer.parentNode.insertBefore(cta, footer);
+  } else {
+    document.body.appendChild(cta);
+  }
+}
+
 /* ===== BOOT ===== */
 function run() {
   try {
     createCallBanner();
     createStickyBar();
     injectLocalBusinessSchema();
+    injectPageCTAs();
   } catch(e) {
     console.error('[rl-conversion]', e);
   }

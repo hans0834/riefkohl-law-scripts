@@ -516,6 +516,40 @@ function updateAct60Disclaimer() {
 }
 
 /* ================================================
+   13. FIX ACT 60 MUNICIPAL/PROPERTY TAX EXEMPTION PERCENTAGES
+   Reality: Municipal license tax exemption = 50% (not 75%).
+   Property tax exemption = 70% (not 60%).
+   These were swapped/incorrect across multiple pages.
+   ================================================ */
+function fixAct60ExemptionPercentages() {
+  var targets = ['/act-60-tax-incentives', '/business-formation'];
+  var isTarget = false;
+  for (var t = 0; t < targets.length; t++) {
+    if (path === targets[t]) { isTarget = true; break; }
+  }
+  /* Also fix on blog posts about Act 60 */
+  if (path.indexOf('/blog/') === 0) isTarget = true;
+  if (!isTarget) return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Fix "75% exemption on municipal" -> "50% exemption on municipal" */
+    if (text.indexOf('75%') >= 0 && (text.indexOf('municipal') >= 0 || text.indexOf('patente') >= 0)) {
+      node.nodeValue = text.replace(/75%/g, '50%');
+    }
+
+    /* Fix "60% exemption on...property" -> "70% exemption on...property" */
+    text = node.nodeValue; /* re-read after possible change */
+    if (text.indexOf('60%') >= 0 && text.indexOf('property') >= 0) {
+      node.nodeValue = text.replace(/60%/g, '70%');
+    }
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -532,6 +566,7 @@ function runLegalFixes() {
   fixNRNCArticle();
   fixComplianceCharitableDonation();
   fixJudgeGelpiReference();
+  fixAct60ExemptionPercentages();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

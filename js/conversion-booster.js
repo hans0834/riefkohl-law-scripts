@@ -209,12 +209,77 @@ function injectPageCTAs() {
   }
 }
 
+/* ===== 5. ACT 60 ABOVE-THE-FOLD HERO ===== */
+function injectAct60Hero() {
+  if (PATH !== '/act-60-tax-incentives') return;
+  if (document.querySelector('.rl-act60-hero')) return;
+
+  var bookUrl = IS_ES ? '/espanol-cita' : BOOK_URL;
+
+  var hero = document.createElement('div');
+  hero.className = 'rl-act60-hero';
+  hero.innerHTML =
+    '<div class="rl-act60-hero-inner">' +
+      '<div class="rl-act60-hero-badge">Puerto Rico Act 60 Attorney</div>' +
+      '<h2>4% Corporate Tax Rate for Export Services.<br>Reduced Rates on Capital Gains for Investors.</h2>' +
+      '<p class="rl-act60-hero-subtitle">Riefkohl Law helps businesses and individuals secure Act 60 tax decrees, structure operations for compliance, and defend benefits under IRS scrutiny.</p>' +
+      '<div class="rl-act60-hero-benefits">' +
+        '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> 4% Corporate Tax on Export Income</div>' +
+        '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> 100% Exemption on Distributions</div>' +
+        '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Capital Gains Benefits for Investors</div>' +
+      '</div>' +
+      '<a href="' + bookUrl + '" class="rl-act60-hero-cta">Book Your Free Act 60 Strategy Call</a>' +
+      '<p class="rl-act60-hero-secondary">Or call <a href="' + PHONE_TEL + '">' + PHONE + '</a></p>' +
+      '<div class="rl-act60-hero-urgency">\u23F1 0% IRI capital gains rate ends Dec 31, 2026 \u2014 4% rate applies to new decrees from 2027. Act now.</div>' +
+    '</div>';
+
+  var callBanner = document.querySelector('.rl-call-banner');
+  var header = document.querySelector('header') || document.querySelector('.header');
+  var insertAfter = callBanner || header;
+
+  if (insertAfter && insertAfter.nextSibling) {
+    insertAfter.parentNode.insertBefore(hero, insertAfter.nextSibling);
+  }
+}
+
+/* ===== 6. ACT 60 MID-PAGE CTA ===== */
+function injectAct60MidCTA() {
+  if (PATH !== '/act-60-tax-incentives') return;
+  if (document.querySelector('.rl-mid-cta')) return;
+
+  var bookUrl = IS_ES ? '/espanol-cita' : BOOK_URL;
+
+  var allHeadings = document.querySelectorAll('h2, h3, [class*="heading"]');
+  var chapter2Heading = null;
+  for (var i = 0; i < allHeadings.length; i++) {
+    var text = allHeadings[i].textContent || '';
+    if (text.indexOf('Chapter 2') > -1 && text.indexOf('Individual') > -1) {
+      chapter2Heading = allHeadings[i];
+      break;
+    }
+  }
+
+  if (chapter2Heading) {
+    var midCta = document.createElement('div');
+    midCta.className = 'rl-mid-cta';
+    midCta.innerHTML =
+      '<h3>Does Your Business Qualify for the 4% Rate?</h3>' +
+      '<p>Find out if your export services, consulting, technology, or professional services business is eligible for Act 60 Chapter 3 benefits.</p>' +
+      '<a href="' + bookUrl + '">Get Your Free Eligibility Assessment</a>';
+
+    var target = chapter2Heading.closest('.sqs-block') || chapter2Heading.parentElement || chapter2Heading;
+    target.parentNode.insertBefore(midCta, target);
+  }
+}
+
 /* ===== BOOT ===== */
 function run() {
   try {
     createCallBanner();
     createStickyBar();
     injectLocalBusinessSchema();
+    injectAct60Hero();
+    injectAct60MidCTA();
     injectPageCTAs();
   } catch(e) {
     console.error('[rl-conversion]', e);

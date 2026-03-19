@@ -123,8 +123,8 @@ var SEO = {
     }
   },
   '/act-60-tax-incentives': {
-    h1: 'Act 60 Tax Incentives — Puerto Rico Tax Advisory',
-    meta: 'Act 60 tax incentive attorney in Puerto Rico. Export services, individual investor decrees, compliance, and planning for relocators. Free call.',
+    h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
+    meta: 'Puerto Rico Act 60 attorney: 4% corporate tax for export services, individual investor decrees (0% capital gains through 2026 — new 4% rate from 2027). Application guidance, compliance, IRS audit defense. Free strategy call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -134,7 +134,7 @@ var SEO = {
           'name': 'What is Act 60 in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Act 60 (the Puerto Rico Incentives Code of 2019) consolidates former Acts 20 and 22, providing tax incentives for businesses and individuals who relocate to Puerto Rico. Benefits depend on decree terms, application timing, and applicable law. Historically, qualifying individual investors have received significant exemptions on capital gains and investment income, but benefit levels are subject to legislative change. Consult an attorney to verify current eligibility and terms.'
+            'text': 'Act 60 (the Puerto Rico Incentives Code of 2019) consolidates former Acts 20 and 22, providing tax incentives for businesses and individuals who relocate to Puerto Rico. Export service businesses can receive a 4% fixed corporate income tax rate under Chapter 3. For individual investors under Chapter 2, applications filed by December 31, 2026 may still qualify for 0% on capital gains; starting January 1, 2027, new decrees will carry a 4% preferential tax rate on passive income. The program has been extended through 2055. Consult an attorney to verify current eligibility and terms.'
           }
         },
         {

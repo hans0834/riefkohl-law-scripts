@@ -52,6 +52,35 @@ function injectFooterSignup() {
   } else {
     document.body.appendChild(bar);
   }
+
+  // Handle form submission — redirect to booking page until email provider is configured
+  var form = bar.querySelector('.rl-signup-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      var action = form.getAttribute('action') || '';
+      // If the form action is still the placeholder, handle gracefully
+      if (action === 'YOUR_FORM_ACTION_URL' || action === '' || action === '#') {
+        e.preventDefault();
+        var emailInput = form.querySelector('.rl-signup-input');
+        var email = emailInput ? emailInput.value : '';
+        // Show success message
+        var successEl = bar.querySelector('.rl-signup-success');
+        if (successEl) {
+          successEl.style.display = 'block';
+          successEl.textContent = IS_ES
+            ? '\u00A1Gracias por su inter\u00E9s! Agende una consulta gratuita para recibir su gu\u00EDa personalizada.'
+            : 'Thanks for your interest! Book a free strategy call to get your personalized Act 60 guide.';
+        }
+        form.style.display = 'none';
+        // After a brief pause, redirect to booking
+        var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
+        setTimeout(function() {
+          window.location.href = bookUrl + (email ? '?email=' + encodeURIComponent(email) : '');
+        }, 2500);
+      }
+      // If a real action URL is configured, let the form submit normally
+    });
+  }
 }
 
 /* ===== BOOT ===== */

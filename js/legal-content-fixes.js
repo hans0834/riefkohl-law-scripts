@@ -288,6 +288,34 @@ function fixThreePortionSystem() {
       break;
     }
   }
+
+  /* Blog post uses list items instead of paragraphs */
+  if (path.indexOf('/blog/') === 0) {
+    var allEls = document.querySelectorAll('.sqs-html-content p, .sqs-html-content li, .blog-item-content p, .blog-item-content li');
+    for (var k = 0; k < allEls.length; k++) {
+      var el = allEls[k];
+      var txt = el.textContent;
+      /* Replace "The legitima (one-third)" pattern */
+      if (txt.indexOf('legitima') >= 0 && txt.indexOf('one-third') >= 0) {
+        el.innerHTML = el.innerHTML.replace(/The leg[ií]tima \(one-third\)\.?\s*Must be divided equally[^.]*\.?/,
+          'The <em>leg\u00edtima</em> (one-half). Must be divided equally among your forced heirs\u2014your children and surviving spouse.');
+        el.innerHTML = el.innerHTML.replace(/The leg[ií]tima \(one-third\)\./,
+          'The <em>leg\u00edtima</em> (one-half reserved equally for your children and surviving spouse).');
+      }
+      if (txt.indexOf('mejora') >= 0 && txt.indexOf('one-third') >= 0) {
+        el.innerHTML = el.innerHTML.replace(/The mejora \(one-third\)\.?\s*Must go to children[^.]*\.?/,
+          '<em>Note: The mejora was eliminated by Ley 55-2020. The estate is now divided into two halves: leg\u00edtima and libre disposici\u00f3n.</em>');
+        el.innerHTML = el.innerHTML.replace(/The mejora \(one-third\)\./,
+          '<em>(The mejora was eliminated by Ley 55-2020.)</em>');
+      }
+      if (txt.indexOf('free disposal') >= 0 && txt.indexOf('one-third') >= 0) {
+        el.innerHTML = el.innerHTML.replace(/The free disposal portion \(one-third\)\.?\s*The only portion[^.]*\.?/,
+          'The <em>libre disposici\u00f3n</em> (one-half). The portion you can freely distribute to anyone you choose.');
+        el.innerHTML = el.innerHTML.replace(/The free disposal portion \(one-third\)\./,
+          'The <em>libre disposici\u00f3n</em> (one-half that you can freely distribute to anyone).');
+      }
+    }
+  }
 }
 
 /* ================================================

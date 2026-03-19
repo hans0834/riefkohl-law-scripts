@@ -1,3 +1,4 @@
+
 (function(){
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
@@ -47,7 +48,7 @@ var ARTICLES = {
 
   +'<p><strong>Trust property is completely separated from all parties.</strong> Because the trust is an autonomous estate, trust assets are not the property of the trustor (who transferred them), the trustee (who administers them), or the beneficiary (who benefits from them). This three-way separation creates structural asset protection that has no equivalent in mainland trust law. That said, recent cases out of the Puerto Rico Court of Appeals illustrate that courts have struggled at times with these separations in practice, particularly in cases involving community property (<em>sociedad de gananciales</em>). When marital community property is transferred to a trust during marriage, the intersection of spousal ownership rights and trust autonomy can produce complex disputes\u2014as in <em>Gil Ense\u00f1at v. Marini Rom\u00e1n</em> (2009), where the court had to untangle a divorcing spouse\u2019s beneficial interest in a trust funded with community assets. Practitioners should be aware that the theoretical clarity of the autonomous estate does not always translate into clean outcomes when matrimonial property regimes are involved. (See <a href="/resources/asset-protection-trusts-pr">Article 6: Asset Protection Trusts Under the PR Trust Act</a> and <a href="/resources/family-trust-pitfalls">Article 13: Family Trust Planning Pitfalls</a>.)</p>'
 
-  +'<p><strong>Trusts must be executed before a notary and registered.</strong> An inter vivos Puerto Rico trust must be created through a public deed (<em>escritura p\u00fablica</em>) before a notary and registered in the Special Trust Registry (<em>Oficina de Inspecci\u00f3n de Notar\u00edas</em>, or ODIN) within 30 days. (PR Trust Act \u00a7\u00a73352\u20133352a, \u00a73351d.) Registration is constitutive\u2014it is what gives the trust its juridical personality. This is more formal than mainland practice, where many trusts are created by simple written agreement.</p>'
+  +'<p><strong>Trusts must be executed before a notary and registered.</strong> An inter vivos Puerto Rico trust must be created through a public deed (<em>escritura p\u00fablica</em>) before a notary and registered in the Special Trust Registry (<em>Oficina de Inspecci\u00f3n de Notar\u00edas</em>, or ODIN). The notary must file the required notification no later than the first ten days of the month following execution of the trust deed (per Law 219-2012, Article 5). (PR Trust Act \u00a7\u00a73352\u20133352a, \u00a73351d.) Registration is constitutive\u2014it is what gives the trust its juridical personality. This is more formal than mainland practice, where many trusts are created by simple written agreement.</p>'
 
   +'<p><strong>The leg\u00edtima constrains testamentary planning.</strong> Puerto Rico\u2019s civil law system includes forced heirship (<em>leg\u00edtima</em>), which reserves a mandatory portion of the estate for certain heirs (descendants, ascendants if no descendants, and the surviving spouse). No trust, will, or other instrument can override these protections. (<em>Clavell Rodr\u00edguez v. Registrador</em>, 95 DPR 348 (1967); Civil Code of Puerto Rico, Art. 1621.) This is one of the most significant differences for mainland transplants, and we address it fully in <a href="/resources/avoiding-probate-legitima">Article 5: Avoiding Probate in Puerto Rico\u2014Trusts and the Leg\u00edtima</a>.</p>'
 
@@ -110,7 +111,7 @@ var ARTICLES = {
 
   +'<h2>The Statutory Framework: What the Trust Act Authorizes</h2>'
 
-  +'<p>Ley 219-2012 does not enumerate trust types by name the way some mainland statutes do. Instead, it establishes a flexible framework: any lawful purpose can be accomplished through a <em>fideicomiso</em>, provided the trust is irrevocable, executed before a notary, and registered with ODIN within 30 days. The \u201ctypes\u201d of trusts available under Puerto Rico law are therefore defined not by separate statutory categories but by how practitioners structure the trust\u2019s terms to achieve specific objectives.</p>'
+  +'<p>Ley 219-2012 does not enumerate trust types by name the way some mainland statutes do. Instead, it establishes a flexible framework: any lawful purpose can be accomplished through a <em>fideicomiso</em>, provided the trust is irrevocable, executed before a notary, and registered with ODIN (the notary must file notification no later than the first ten days of the month following execution). The \u201ctypes\u201d of trusts available under Puerto Rico law are therefore defined not by separate statutory categories but by how practitioners structure the trust\u2019s terms to achieve specific objectives.</p>'
 
   +'<p>That said, the Act does distinguish between three broad categories based on how the trust is created and for whose benefit:</p>'
 
@@ -635,7 +636,7 @@ var ARTICLES = {
 
   +'<p>Ensure that every fiduciary role (trustee, protector, advisor) has a succession plan should the current appointee resign, become incapacitated, or die. A trust with no trustee is a trust in crisis. Plan for this contingency well in advance.</p>'
 
-  +'<p>Register every trust in the Special Trust Registry (Registro Especial de Fideicomisos) under ODIN. Following <em>Allio v. Santiago Chard\u00f3n</em>, 2026 TSPR 13, the Supreme Court confirmed that unregistered trusts are null ab initio\u2014they never had legal existence. No amount of subsequent modification can cure a trust that was never valid. Ensure the notary files the required notification within 10 days of execution.</p>'
+  +'<p>Register every trust in the Special Trust Registry (Registro Especial de Fideicomisos) under ODIN. Following <em>Allio v. Santiago Chard\u00f3n</em>, 2026 TSPR 13, the Supreme Court confirmed that unregistered trusts are null ab initio\u2014they never had legal existence. No amount of subsequent modification can cure a trust that was never valid. Ensure the notary files the required notification no later than the first ten days of the month following execution (per Law 219-2012, Article 5).</p>'
 
   +'<h3>4. Include Express Decanting Authority</h3>'
 
@@ -1299,7 +1300,7 @@ var ARTICLES = {
   +'<h2>Puerto Rico-Specific Integration Points</h2>'
 
   +'<h3>Irrevocability as Structural Advantage</h3>'
-  +'<p>The Puerto Rico Trust Act (32 L.P.R.A. \u00a7 3352a) makes trusts irrevocable by default unless the trust document explicitly provides otherwise. This aligns with federal estate tax requirements and removes any risk that a court might find the grantor retained power to modify, thereby invalidating estate tax benefits. The default irrevocability is a feature, not a limitation.</p>'
+  +'<p>The Puerto Rico Trust Act (32 L.P.R.A. \u00a7 3352a) provides that trusts cannot be modified by the grantor unless the trust document explicitly provides otherwise. This aligns with federal estate tax requirements and removes any risk that a court might find the grantor retained power to modify, thereby invalidating estate tax benefits. The default irrevocability is a feature, not a limitation.</p>'
 
   +'<h3>\u00a73352h Modification Rights and Tax Flexibility</h3>'
   +'<p>The ability to modify a PR trust (without grantor consent) under \u00a73352h does not automatically trigger adverse tax consequences if beneficiaries and trustees exercise modification powers independently and without grantor influence. In practice:</p>'
@@ -3016,7 +3017,7 @@ var ARTICLES = {
 
   +'<p>Third, consider whether creating a new trust under Puerto Rico law pursuant to Section 45147(b) makes sense for some or all of your planning goals, particularly for PR-situs assets. A new PR trust created under Act 60 avoids the governing law question entirely for assets it holds.</p>'
 
-  +'<p>Fourth, if you create or constitute a trust in Puerto Rico, ensure it is registered in the Special Trust Registry (Registro Especial de Fideicomisos) maintained by ODIN. In <em>Allio v. Santiago Chard\u00f3n</em>, 2026 TSPR 13 (February 3, 2026), the Puerto Rico Supreme Court confirmed that unregistered trusts under Law 219-2012 are null <em>ab initio</em>\u2014they never had any legal effect and never existed in law. There are no exceptions, no cure provisions, and no judicial discretion. The notary who executes the trust instrument has a statutory obligation to notify ODIN within 10 days. The court also left unresolved whether trusts created in other U.S. jurisdictions by PR domiciliaries require PR registration, creating an open question for mainland trusts administered from Puerto Rico.</p>'
+  +'<p>Fourth, if you create or constitute a trust in Puerto Rico, ensure it is registered in the Special Trust Registry (Registro Especial de Fideicomisos) maintained by ODIN. In <em>Allio v. Santiago Chard\u00f3n</em>, 2026 TSPR 13 (February 3, 2026), the Puerto Rico Supreme Court confirmed that unregistered trusts under Law 219-2012 are null <em>ab initio</em>\u2014they never had any legal effect and never existed in law. There are no exceptions, no cure provisions, and no judicial discretion. The notary who executes the trust instrument has a statutory obligation to notify ODIN no later than the first ten days of the month following execution (per Law 219-2012, Article 5). The court also left unresolved whether trusts created in other U.S. jurisdictions by PR domiciliaries require PR registration, creating an open question for mainland trusts administered from Puerto Rico.</p>'
 
   +'<p>Fifth, be aware that the enforcement landscape around Act 60 has intensified significantly. The GAO documented substantial declines in federal taxable income among Act 60 recipients after relocation (GAO Report GAO-26-107225, December 2025), the Office of Business Incentives (OIN) audited nearly 1,800 decree holders in 2025 and has confirmed collaboration with the U.S. Treasury and IRS, and pending legislation (House Bill 505) would impose a 4% passive income rate for new IRI applicants while grandfathering existing holders at 0%. These developments increase the importance of rigorous compliance with both Act 60 decree requirements and trust formalities.</p>'
 
@@ -3307,3 +3308,4 @@ if (document.readyState === 'loading') {
 window.addEventListener('load', tryRun);
 
 })();
+

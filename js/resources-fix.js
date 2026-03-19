@@ -1,3 +1,4 @@
+
 (function(){
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
@@ -85,17 +86,18 @@ var PAGES = {
   content: function(){return ''
   +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
   +'<h2>What Is Forced Heirship?</h2>'
-  +'<p>Forced heirship is a legal principle in civil law jurisdictions, including Puerto Rico, that reserves a mandatory portion of a deceased person\u2019s estate for certain close relatives\u2014typically descendants. This means you cannot freely dispose of your entire estate; a portion must pass to your forced heirs (<em>herederos forzosos</em> or <em>legitimarios</em>).</p>'
+  +'<p>Forced heirship is a legal principle in civil law jurisdictions, including Puerto Rico, that reserves a mandatory portion of a deceased person\u2019s estate for certain close relatives\u2014descendants and, under the 2020 Civil Code, the surviving spouse. This means you cannot freely dispose of your entire estate; a portion must pass to your forced heirs (<em>herederos forzosos</em> or <em>legitimarios</em>).</p>'
 
   +'<h2>The 2020 Civil Code (Ley 55-2020)</h2>'
   +'<p>Puerto Rico\u2019s new Civil Code, enacted as Ley 55-2020 and effective November 28, 2020, significantly reformed the forced heirship system. Under the previous code, the estate was divided into thirds: one-third as the <em>leg\u00edtima estricta</em>, one-third as the <em>mejora</em> (improvement third), and one-third as free disposition. The new code simplifies this to a two-part system.</p>'
 
   +'<h3>Current Structure</h3>'
-  +'<ul><li><strong>Leg\u00edtima (one-half):</strong> Reserved for forced heirs (descendants). This half must be distributed equally among all children or their descendants by representation.</li>'
+  +'<ul><li><strong>Leg\u00edtima (one-half):</strong> Reserved for forced heirs (children, their descendants by representation, and the surviving spouse). This half must be distributed equally among all forced heirs.</li>'
   +'<li><strong>Free disposition (one-half):</strong> The testator may distribute this portion to anyone, including a favored child, a spouse, a charity, or any third party.</li></ul>'
 
   +'<h3>Who Are Forced Heirs?</h3>'
   +'<ul><li><strong>Descendants:</strong> Children are the primary forced heirs. If a child predeceases the testator, that child\u2019s descendants inherit by right of representation.</li>'
+  +'<li><strong>Surviving spouse:</strong> Under the 2020 Civil Code, the surviving spouse is a forced heir in the first order of succession, sharing the leg\u00edtima equally with the children.</li>'
   +'<li><strong>Ascending heirs:</strong> If there are no descendants, parents may have limited forced heirship rights depending on the circumstances.</li></ul>'
 
   +'<h2>Key Changes from the Prior Code</h2>'
@@ -251,8 +253,8 @@ var PAGES = {
   +'<tr><td>Will / Testament</td><td>Testamento</td><td>A legal document declaring how a person\u2019s assets should be distributed after death.</td></tr>'
   +'<tr><td>Testator</td><td>Testador(a)</td><td>The person who makes a will.</td></tr>'
   +'<tr><td>Executor</td><td>Albacea</td><td>The person appointed to carry out the terms of a will and administer the estate.</td></tr>'
-  +'<tr><td>Forced Heirship</td><td>Leg\u00edtima</td><td>The portion of an estate reserved by law for certain heirs (descendants).</td></tr>'
-  +'<tr><td>Forced Heir</td><td>Heredero Forzoso / Legitimario</td><td>A person entitled by law to a share of the estate, typically descendants.</td></tr>'
+  +'<tr><td>Forced Heirship</td><td>Leg\u00edtima</td><td>The portion of an estate reserved by law for certain heirs (descendants and surviving spouse under the 2020 Civil Code).</td></tr>'
+  +'<tr><td>Forced Heir</td><td>Heredero Forzoso / Legitimario</td><td>A person entitled by law to a share of the estate: descendants, and the surviving spouse under the 2020 Civil Code.</td></tr>'
   +'<tr><td>Declaratoria de Herederos</td><td>Declaratoria de Herederos</td><td>A judicial proceeding to identify legal heirs, establish inheritance shares, and authorize the transfer of assets. Required whether or not a will exists; additional steps follow for asset collection, administration, and partition.</td></tr>'
   +'<tr><td>Power of Attorney</td><td>Poder</td><td>A legal document authorizing someone to act on your behalf in legal or financial matters.</td></tr>'
   +'<tr><td>Intestate</td><td>Intestado(a) / Ab Intestato</td><td>Dying without a valid will; the estate is distributed according to statutory rules.</td></tr>'
@@ -770,3 +772,4 @@ if (typeof MutationObserver !== 'undefined') {
 }
 
 })();
+

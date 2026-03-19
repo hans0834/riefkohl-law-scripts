@@ -1,3 +1,4 @@
+
 (function(){
 'use strict';
 
@@ -251,7 +252,7 @@ var SEO = {
   },
   '/espanol-sobre-nosotros': {
     h1: 'Sobre el Lcdo. Hans E. Riefkohl — Fundador',
-    meta: 'Lcdo. Hans Riefkohl, fundador de Riefkohl Law. 8+ anos de experiencia en DLA Piper y LUMA Energy. Fideicomisos y derecho corporativo en PR.',
+    meta: 'Lcdo. Hans Riefkohl, fundador de Riefkohl Law. M\u00e1s de una d\u00e9cada de experiencia en DLA Piper y LUMA Energy. Fideicomisos y derecho corporativo en PR.',
     schema: null
   },
   '/espanol-contacto': {
@@ -1393,3 +1394,4 @@ injectHreflang();
 })();
 
 })();
+

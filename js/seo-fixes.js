@@ -1503,4 +1503,38 @@ function addHreflangLinks(enUrl, esUrl) {
 
 injectHreflang();
 
+// ── Remove incorrect S Corporation Election section from business formation blog post ──
+(function removeSCorpContent() {
+  if (window.location.pathname !== '/blog/how-to-form-a-company-in-puerto-rico-llc-corporation-amp-act-60-structures') return;
+
+  function removeElements() {
+    var h3s = document.querySelectorAll('h3');
+    for (var i = 0; i < h3s.length; i++) {
+      if (h3s[i].textContent.trim() === 'S Corporation Election') {
+        var next = h3s[i].nextElementSibling;
+        if (next && next.tagName === 'P' && next.textContent.indexOf('pass-through taxation') !== -1) {
+          next.remove();
+        }
+        h3s[i].remove();
+        break;
+      }
+    }
+    // Remove "S Corp: Pass-through to shareholders..." line from tax summary
+    var paragraphs = document.querySelectorAll('p');
+    for (var j = 0; j < paragraphs.length; j++) {
+      var txt = paragraphs[j].textContent.trim();
+      if (txt.indexOf('S Corp') !== -1 && txt.indexOf('Pass-through to shareholders') !== -1) {
+        paragraphs[j].remove();
+        break;
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', removeElements);
+  } else {
+    removeElements();
+  }
+})();
+
 })();

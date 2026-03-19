@@ -1,6 +1,3 @@
-// Riefkohl Law — Trust Law Article Series (15 articles)
-// Deployed via Squarespace Code Injection (Header), alongside resources-fix.html
-
 (function(){
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
@@ -1575,7 +1572,7 @@ var ARTICLES = {
   +'<ul>'
   +'<li><strong>Juridical Personality:</strong> Post-2012 trusts are separate legal entities, not mere aggregates of property</li>'
   +'<li><strong>Fiduciary Duties:</strong> The statute imposed comprehensive fiduciary duties (loyalty, prudence, impartiality, information rights)</li>'
-  +'<li><strong>Decanting:</strong> Trustees gained the power to modify trusts (decanting)</li>'
+  +'<li><strong>Trust Modification:</strong> The statute provides mechanisms to modify irrevocable trusts through reserved rights under Article 10 (consent-based, judicial, cy pres, and trust protector mechanisms)\u2014though notably without a decanting statute</li>'
   +'<li><strong>Investment Standards:</strong> Prudent investor standard replaces older rules</li>'
   +'<li><strong>Beneficiary Rights:</strong> Statutory rights to information, accounting, and challenge</li>'
   +'</ul>'

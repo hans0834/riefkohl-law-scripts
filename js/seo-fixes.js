@@ -141,7 +141,7 @@ var SEO = {
           'name': 'How do I qualify for Act 60 individual investor benefits?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'To qualify, you generally must become a bona fide resident of Puerto Rico, which typically requires physical presence (at least 183 days per year), a tax home in Puerto Rico, and a closer connection to Puerto Rico than any other jurisdiction. Additional decree obligations — such as charitable donations and property purchase — apply and may vary based on application timing and current law. Consult an attorney to confirm current eligibility requirements.'
+            'text': 'To qualify, you must become a bona fide resident of Puerto Rico by satisfying all three tests under IRC §937: (1) physical presence of at least 183 days per year, (2) a tax home in Puerto Rico, and (3) a closer connection to Puerto Rico than to any other jurisdiction. All three tests must be met — 183 days alone is not sufficient. Additional decree obligations such as charitable donations and property purchase also apply. Consult an attorney to confirm current eligibility requirements.'
           }
         },
         {
@@ -328,7 +328,7 @@ var SEO = {
           'name': '\u00bfC\u00f3mo califico para los beneficios de inversionista individual bajo Ley 60?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Para calificar, generalmente debe convertirse en residente bona fide de Puerto Rico, lo que requiere presencia f\u00edsica (al menos 183 d\u00edas al a\u00f1o), domicilio contributivo en Puerto Rico y una conexi\u00f3n m\u00e1s cercana a Puerto Rico que a cualquier otra jurisdicci\u00f3n. Se aplican obligaciones adicionales del decreto, incluyendo donaciones caritativas y compra de propiedad.'
+            'text': 'Para calificar, debe convertirse en residente bona fide de Puerto Rico cumpliendo las tres pruebas del IRC \u00a7937: (1) presencia f\u00edsica de al menos 183 d\u00edas al a\u00f1o, (2) domicilio contributivo en Puerto Rico, y (3) conexi\u00f3n m\u00e1s estrecha con Puerto Rico que con cualquier otra jurisdicci\u00f3n. Las tres pruebas deben cumplirse — 183 d\u00edas por s\u00ed solos no son suficientes. Se aplican obligaciones adicionales del decreto, incluyendo donaciones caritativas y compra de propiedad.'
           }
         },
         {

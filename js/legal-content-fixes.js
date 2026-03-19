@@ -16,6 +16,8 @@
   10. Act 60 compliance: charitable donation child poverty specificity
   11. About page: Judge Gelpí First Circuit elevation
   12. Act 60 disclaimer: 6-year prior residency restriction
+  13. Act 60 municipal/property tax exemption percentages (75%→50%, 60%→70%)
+  14. 183-day presence test: clarify all three IRC §937 tests required
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -550,6 +552,51 @@ function fixAct60ExemptionPercentages() {
 }
 
 /* ================================================
+   14. CLARIFY 183-DAY PRESENCE TEST
+   Reality: Bona fide residency under IRC §937 requires
+   THREE tests: (1) 183-day presence, (2) tax home,
+   (3) closer connection. 183 days alone is NOT sufficient.
+   This fix adds a clarification note after any paragraph
+   on Act 60 pages that mentions "183 days" without also
+   mentioning "tax home" or "three tests."
+   ================================================ */
+function clarify183DayPresenceTest() {
+  var act60Pages = ['/act-60-tax-incentives', '/resources/act-60-guide', '/resources/ley-60-guia-inversionistas'];
+  var isAct60 = false;
+  for (var t = 0; t < act60Pages.length; t++) {
+    if (path === act60Pages[t]) { isAct60 = true; break; }
+  }
+  if (!isAct60) return;
+
+  /* Find paragraphs and list items that mention 183 days without full context */
+  var elements = document.querySelectorAll('p, li');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var text = el.textContent || '';
+    if (text.indexOf('183') < 0) continue;
+    /* Skip if already clarified (mentions all three tests or tax home) */
+    if (text.indexOf('tax home') >= 0 || text.indexOf('hogar contributivo') >= 0 ||
+        text.indexOf('three test') >= 0 || text.indexOf('tres prueba') >= 0 ||
+        text.indexOf('IRC') >= 0 || text.indexOf('\u00a7937') >= 0) continue;
+    /* Skip if already has our clarification marker */
+    if (el.getAttribute('data-183-clarified')) continue;
+    el.setAttribute('data-183-clarified', 'true');
+
+    /* Add inline clarification */
+    var note = document.createElement('em');
+    note.style.display = 'block';
+    note.style.fontSize = '0.9em';
+    note.style.marginTop = '4px';
+    note.style.color = '#555';
+    note.textContent = 'Note: 183 days of physical presence is only one of three IRC \u00a7937 bona fide residency tests. You must also satisfy the Tax Home Test and the Closer Connection Test.';
+    if (document.documentElement.lang === 'es' || path.indexOf('ley-60') >= 0 || path.indexOf('guia-inversionistas') >= 0) {
+      note.textContent = 'Nota: 183 d\u00edas de presencia f\u00edsica es solo una de las tres pruebas de residencia bona fide del IRC \u00a7937. Tambi\u00e9n debe cumplir la Prueba de Hogar Contributivo y la Prueba de Conexi\u00f3n M\u00e1s Estrecha.';
+    }
+    el.parentNode.insertBefore(note, el.nextSibling);
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -567,6 +614,7 @@ function runLegalFixes() {
   fixComplianceCharitableDonation();
   fixJudgeGelpiReference();
   fixAct60ExemptionPercentages();
+  clarify183DayPresenceTest();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

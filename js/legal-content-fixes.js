@@ -278,7 +278,7 @@ function fixForcedHeirship() {
 
 /* Replace the three-portion paragraph with the correct two-part system */
 function fixThreePortionSystem() {
-  if (path !== '/estate-planning') return;
+  if (path !== '/estate-planning' && path.indexOf('/blog/living-trust-vs-irrevocable-trust') === -1) return;
 
   var allP = document.querySelectorAll('.sqs-html-content p');
   for (var i = 0; i < allP.length; i++) {

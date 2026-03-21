@@ -64,6 +64,7 @@ function transformHomepage() {
 
   transformHero(htmlDiv, sec);
   transformPracticeAreas(htmlDiv);
+  transformHowItWorks(htmlDiv);
   transformDifferentiators(htmlDiv);
   transformCtaSection(htmlDiv);
 }
@@ -104,8 +105,25 @@ function transformHero(htmlDiv, sec) {
   // Add CTA button
   var ctaLink = el('a', 'rl-rd-cta-btn');
   ctaLink.href = '/calendly';
-  ctaLink.textContent = 'Book Your Free Strategy Call';
+  ctaLink.textContent = 'Get Your Free 15-Minute Case Review';
   hero.appendChild(ctaLink);
+
+  // Add phone number below CTA
+  var phoneP = el('p', 'rl-rd-hero-phone');
+  phoneP.innerHTML = 'Or call now: <a href="tel:+17872361657">(787) 236-1657</a>';
+  hero.appendChild(phoneP);
+
+  // Add credentials bar below hero
+  var credBar = el('div', 'rl-rd-credentials-bar');
+  credBar.innerHTML =
+    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Admitted: PR | DC | Federal Courts</span>' +
+    '<span class="rl-cred-sep">&middot;</span>' +
+    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg> DLA Piper Alumnus</span>' +
+    '<span class="rl-cred-sep">&middot;</span>' +
+    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3 21h18M3 7l9-4 9 4M5 7v8M19 7v8M9 11v4M15 11v4M12 11v4"/></svg> Supreme Court of PR Clerk</span>' +
+    '<span class="rl-cred-sep">&middot;</span>' +
+    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Notary Public</span>';
+  hero.appendChild(credBar);
 
   // Hide original elements
   h1.style.display = 'none';
@@ -178,6 +196,16 @@ function transformPracticeAreas(htmlDiv) {
 
   if (practiceAreas.length === 0) return;
 
+  // Reorder: Trusts & Estate Planning first, then Business, then others
+  var categoryOrder = ['Trusts & Estate Planning', 'For Your Business'];
+  practiceAreas.sort(function(a, b) {
+    var aIdx = categoryOrder.indexOf(a.category);
+    var bIdx = categoryOrder.indexOf(b.category);
+    if (aIdx === -1) aIdx = 99;
+    if (bIdx === -1) bIdx = 99;
+    return aIdx - bIdx;
+  });
+
   // Build the section heading
   var sectionHeading = el('h2', 'rl-rd-section-heading', 'Practice Areas');
 
@@ -203,6 +231,52 @@ function transformPracticeAreas(htmlDiv) {
   // Insert after hidden practice H2
   practiceH2.parentNode.insertBefore(grid, practiceH2.nextSibling);
   practiceH2.parentNode.insertBefore(sectionHeading, grid);
+}
+
+/* ----- How It Works ----- */
+function transformHowItWorks(htmlDiv) {
+  if (qs('.rl-rd-how-it-works')) return;
+
+  var steps = [
+    {
+      num: '1',
+      title: 'Book Your Free Call',
+      desc: 'Schedule a 15-minute consultation. Tell us what you need \u2014 we\u2019ll listen and assess your options.'
+    },
+    {
+      num: '2',
+      title: 'Get Your Custom Plan',
+      desc: 'We\u2019ll outline your options, timeline, and exact flat-fee cost. No surprises, no hourly billing.'
+    },
+    {
+      num: '3',
+      title: 'We Handle Everything',
+      desc: 'From drafting to filing, we execute your plan efficiently using modern legal technology.'
+    }
+  ];
+
+  var heading = el('h2', 'rl-rd-section-heading', 'How It Works');
+  var grid = el('div', 'rl-rd-how-it-works');
+
+  steps.forEach(function(step) {
+    var item = el('div', 'rl-rd-step-item');
+    item.innerHTML =
+      '<div class="rl-rd-step-num">' + step.num + '</div>' +
+      '<h4>' + escHtml(step.title) + '</h4>' +
+      '<p>' + escHtml(step.desc) + '</p>';
+    grid.appendChild(item);
+  });
+
+  // Insert after the practice areas card grid
+  var cardsGrid = qs('.rl-rd-cards-grid', htmlDiv);
+  if (cardsGrid && cardsGrid.nextSibling) {
+    htmlDiv.insertBefore(heading, cardsGrid.nextSibling);
+    htmlDiv.insertBefore(grid, heading.nextSibling);
+  } else {
+    // Fallback: append
+    htmlDiv.appendChild(heading);
+    htmlDiv.appendChild(grid);
+  }
 }
 
 /* ----- Differentiators Grid ----- */
@@ -297,9 +371,10 @@ function transformCtaSection(htmlDiv) {
   // Build CTA section
   var cta = el('div', 'rl-rd-cta-section');
   cta.innerHTML =
-    '<h2 style="color:#fff !important">Ready to Move Forward?</h2>' +
-    '<p style="color:rgba(255,255,255,.75) !important">' + escHtml(descText) + '</p>' +
-    '<a class="rl-rd-cta-btn" href="/calendly">Book Your Free Strategy Call</a>';
+    '<h2 style="color:#fff !important">Ready to Protect What You\u2019ve Built?</h2>' +
+    '<p style="color:rgba(255,255,255,.75) !important">Whether you\u2019re planning your estate, forming a business, or relocating to Puerto Rico, we\u2019re here to help \u2014 with clear pricing and no surprises.</p>' +
+    '<a class="rl-rd-cta-btn" href="/calendly">Get Your Free Case Review</a>' +
+    '<p style="color:rgba(255,255,255,.45);font-size:.85rem;margin-top:14px;">Or call: <a href="tel:+17872361657" style="color:rgba(255,255,255,.6);">(787) 236-1657</a></p>';
 
   // Hide originals from readyH2 onward
   for (var k = startIdx; k < kids.length; k++) {

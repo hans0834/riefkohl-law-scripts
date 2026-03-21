@@ -15,27 +15,25 @@ var PHONE_SVG = '<svg class="rl-call-icon" viewBox="0 0 24 24" fill="none" strok
 var PHONE_SVG_STICKY = '<svg class="rl-sticky-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>';
 var CALENDAR_SVG = '<svg class="rl-sticky-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
 
-/* ===== 1. CLICK-TO-CALL BANNER ===== */
+/* ===== 1. TOP BANNER — VALUE-DRIVEN CTA ===== */
 function createCallBanner() {
   if (document.querySelector('.rl-call-banner')) return;
 
   var banner = document.createElement('div');
   banner.className = 'rl-call-banner';
   banner.setAttribute('role', 'banner');
-  banner.setAttribute('aria-label', IS_ES ? 'Información de contacto' : 'Contact information');
+  banner.setAttribute('aria-label', IS_ES ? 'Contenido destacado' : 'Featured content');
 
-  var callText = IS_ES ? 'Llame ahora' : 'Call now';
-  var ctaText = IS_ES ? 'Consulta gratuita' : 'Free Strategy Call';
-  var bookUrl = IS_ES ? '/espanol-cita' : BOOK_URL;
+  var promoText = IS_ES
+    ? 'Nuevo: Serie de 15 art\u00edculos sobre fideicomisos en Puerto Rico'
+    : 'New: 15-Part Trust Law Series \u2014 Free Estate Planning Resources';
+  var linkText = IS_ES ? 'Leer ahora' : 'Read now';
+  var linkUrl = '/resources';
 
   banner.innerHTML =
-    '<a href="' + PHONE_TEL + '" aria-label="' + callText + ': ' + PHONE + '">' +
-      PHONE_SVG + PHONE +
-    '</a>' +
+    '<span class="rl-call-text">' + promoText + '</span>' +
     '<span class="rl-call-sep">|</span>' +
-    '<span class="rl-call-text">' +
-      '<a href="' + bookUrl + '">' + ctaText + ' &rarr;</a>' +
-    '</span>';
+    '<a href="' + linkUrl + '">' + linkText + ' &rarr;</a>';
 
   // Insert at very top of body, before the header
   var header = document.querySelector('header') || document.querySelector('.header');

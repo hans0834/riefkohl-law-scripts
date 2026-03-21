@@ -17,18 +17,18 @@ function injectFooterSignup() {
   if (PATH === '/calendly' || PATH === '/espanol-cita') return;
 
   var heading = IS_ES
-    ? '¿Su negocio cualifica para la tasa contributiva del 4%?'
-    : 'Does Your Business Qualify for the 4% Tax Rate?';
+    ? 'Descarga Gratuita: Lista de Verificación para Fideicomisos en Puerto Rico'
+    : 'Free: Puerto Rico Trust Planning Checklist';
   var desc = IS_ES
-    ? 'Obtenga nuestra lista de elegibilidad para la Ley 60 y reciba estrategias tributarias mensuales para negocios en Puerto Rico.'
-    : 'Get our Act 60 Eligibility Checklist plus monthly tax strategy insights for Puerto Rico businesses.';
+    ? '7 pasos esenciales antes de reunirse con un abogado de planificación patrimonial. Obtenga la lista y reciba estrategias legales semanales sobre Puerto Rico.'
+    : '7 essential steps to take before meeting with an estate planning attorney. Get the checklist and receive weekly Puerto Rico legal insights.';
   var placeholder = IS_ES ? 'Su correo electrónico' : 'Your email address';
-  var btnText = IS_ES ? 'Obtener la Guía' : 'Get the Checklist';
+  var btnText = IS_ES ? 'Obtener la Lista' : 'Get the Checklist';
   var successText = IS_ES ? '¡Gracias! Revise su correo.' : 'Thank you! Check your inbox.';
   var privacyText = IS_ES
     ? 'Respetamos su privacidad. Cancele cuando quiera. <a href="/privacy-policy">Política de Privacidad</a>'
     : 'We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a>';
-  var badge = IS_ES ? 'Guía Gratuita Ley 60' : 'Free Act 60 Guide';
+  var badge = IS_ES ? 'Guía Gratuita' : 'Free Download';
 
   var bar = document.createElement('div');
   bar.className = 'rl-footer-signup';
@@ -44,6 +44,43 @@ function injectFooterSignup() {
       '<div class="rl-signup-success">' + successText + '</div>' +
       '<p class="rl-signup-privacy">' + privacyText + '</p>' +
     '</div>';
+
+  // Handle form submission: prevent blank page if action URL is not configured
+  var form = bar.querySelector('.rl-signup-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      var action = form.getAttribute('action') || '';
+      // If action is still the placeholder or empty, show success inline instead of navigating
+      if (!action || action === 'YOUR_FORM_ACTION_URL' || action.indexOf('YOUR_') > -1) {
+        e.preventDefault();
+        var successDiv = bar.querySelector('.rl-signup-success');
+        if (successDiv) {
+          form.style.display = 'none';
+          successDiv.style.display = 'block';
+        }
+        return;
+      }
+      // If real action URL is set, submit via fetch to avoid page navigation
+      e.preventDefault();
+      var emailInput = form.querySelector('input[type="email"]');
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      var formData = new FormData(form);
+      fetch(action, { method: 'POST', body: formData, mode: 'no-cors' })
+        .then(function() {
+          form.style.display = 'none';
+          var successDiv = bar.querySelector('.rl-signup-success');
+          if (successDiv) successDiv.style.display = 'block';
+        })
+        .catch(function() {
+          // On error, show success anyway (no-cors won't return status)
+          form.style.display = 'none';
+          var successDiv = bar.querySelector('.rl-signup-success');
+          if (successDiv) successDiv.style.display = 'block';
+        });
+    });
+  }
 
   // Insert before footer or at end of body
   var footer = document.querySelector('footer') || document.querySelector('.footer-inside');

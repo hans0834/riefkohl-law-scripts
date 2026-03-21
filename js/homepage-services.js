@@ -866,6 +866,35 @@ function transformPracticePage() {
   document.body.classList.add('rl-rd-practice-page');
 }
 
+/* ----- Demote extra H1s to H2 (SEO: one H1 per page) ----- */
+function demoteExtraH1s() {
+  var allH1s = document.querySelectorAll('h1');
+  if (allH1s.length <= 1) return;
+  var kept = false;
+  for (var i = 0; i < allH1s.length; i++) {
+    var h = allH1s[i];
+    if (h.style.display === 'none' || h.offsetParent === null) {
+      var h2 = document.createElement('h2');
+      h2.className = h.className;
+      h2.id = h.id;
+      h2.style.cssText = h.style.cssText;
+      h2.innerHTML = h.innerHTML;
+      h.parentNode.replaceChild(h2, h);
+      continue;
+    }
+    if (!kept) {
+      kept = true;
+    } else {
+      var h2v = document.createElement('h2');
+      h2v.className = h.className;
+      h2v.id = h.id;
+      h2v.style.cssText = h.style.cssText;
+      h2v.innerHTML = h.innerHTML;
+      h.parentNode.replaceChild(h2v, h);
+    }
+  }
+}
+
 /* ===== BOOT SEQUENCE ===== */
 function run() {
   try {
@@ -876,6 +905,7 @@ function run() {
     } else if (PRACTICE_PAGES.indexOf(PATH) > -1) {
       transformPracticePage();
     }
+    demoteExtraH1s();
   } catch(e) {
     console.error('[rl-redesign]', e);
   }

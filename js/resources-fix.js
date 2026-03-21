@@ -565,7 +565,7 @@ function injectResourceCards() {
       heading: 'Trusts & Asset Protection',
       icon: '\uD83D\uDEE1\uFE0F',
       cards: [
-        { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts' },
+        { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts', featured: true },
         { title: 'Trust vs. Will in Puerto Rico', desc: 'A side-by-side comparison of wills and trusts under Puerto Rico law, including costs, probate, privacy, and which is right for your situation.', url: '/resources/trust-vs-will-puerto-rico' },
         { title: 'Asset Protection with Irrevocable Trusts', desc: 'How irrevocable trusts under Ley 219-2012 protect your assets from creditors, lawsuits, and estate taxes.', url: '/resources/asset-protection-irrevocable-trusts' }
       ]
@@ -604,13 +604,23 @@ function injectResourceCards() {
       + sec.icon + ' ' + sec.heading + '</h2></div>'
       + '<div class="rl-grid">';
 
-    sec.cards.forEach(function(card) {
+    sec.cards.forEach(function(card, cardIdx) {
       var langAttr = card.lang ? ' lang="' + card.lang + '"' : '';
-      html += '<div class="rl-card"' + langAttr + '>'
-        + '<h3>' + card.title + '</h3>'
-        + '<p>' + card.desc + '</p>'
-        + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>'
-        + '</div>';
+      var isFeatured = card.featured ? ' rl-card-featured' : '';
+      html += '<div class="rl-card' + isFeatured + '"' + langAttr + '>';
+      if (card.featured) {
+        html += '<div class="rl-icon">' + sec.icon + '</div>'
+          + '<div class="rl-card-body">'
+          + '<h3>' + card.title + '</h3>'
+          + '<p>' + card.desc + '</p>'
+          + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>'
+          + '</div>';
+      } else {
+        html += '<h3>' + card.title + '</h3>'
+          + '<p>' + card.desc + '</p>'
+          + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>';
+      }
+      html += '</div>';
     });
 
     html += '</div>';

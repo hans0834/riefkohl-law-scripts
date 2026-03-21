@@ -305,6 +305,55 @@ article:has(.rl-sub) {
 }
 .rl-sub .rl-sub-cta a:hover { background: #a68c42; }
 
+/* === RESOURCES PAGE LAYOUT VARIETY === */
+/* Featured/highlight card spans full width */
+.rl-rc .rl-card-featured {
+  grid-column: 1 / -1 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 28px !important;
+  padding: 32px 36px !important;
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%) !important;
+  border-color: transparent !important;
+}
+.rl-rc .rl-card-featured h3 { color: #fff !important; font-size: 1.15rem !important; }
+.rl-rc .rl-card-featured p { color: rgba(255,255,255,.65) !important; }
+.rl-rc .rl-card-featured a { color: #bfa35d !important; }
+.rl-rc .rl-card-featured:hover { transform: none !important; box-shadow: 0 8px 24px rgba(0,0,0,.15) !important; }
+.rl-rc .rl-card-featured .rl-icon {
+  width: 56px !important;
+  height: 56px !important;
+  background: rgba(191,163,93,.15) !important;
+  font-size: 1.8rem !important;
+  flex-shrink: 0 !important;
+}
+.rl-rc .rl-card-featured .rl-card-body { flex: 1 !important; }
+
+/* Alternating section backgrounds for visual rhythm */
+.rl-rc .rl-extra-cards > div:nth-child(even) {
+  background: #f9f9fb !important;
+  padding: 32px 0 !important;
+  margin: 0 -28px !important;
+  border-radius: 0 !important;
+}
+.rl-rc .rl-extra-cards > div:nth-child(even) .rl-grid {
+  max-width: 1140px !important;
+}
+
+/* Section icon badges */
+.rl-rc .rl-section-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: .72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .08em !important;
+  color: #a68c42 !important;
+  margin-bottom: 4px !important;
+}
+
 @media (max-width: 767px) {
   .rl-sub { padding: 24px 16px 40px; }
   .rl-sub .rl-sub-hero { padding: 32px 20px; }
@@ -312,4 +361,7 @@ article:has(.rl-sub) {
   .rl-sub h2 { font-size: 1.1rem; }
   .rl-sub .rl-glossary-table { font-size: .82rem; }
   .rl-sub .rl-glossary-table th, .rl-sub .rl-glossary-table td { padding: 8px 10px; }
+  /* Featured card stacks on mobile */
+  .rl-rc .rl-card-featured { flex-direction: column !important; padding: 24px 20px !important; gap: 16px !important; }
+  .rl-rc .rl-extra-cards > div:nth-child(even) { margin: 0 -16px !important; padding: 24px 0 !important; }
 }

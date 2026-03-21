@@ -66,6 +66,8 @@ function transformHomepage() {
   transformPracticeAreas(htmlDiv);
   transformHowItWorks(htmlDiv);
   transformDifferentiators(htmlDiv);
+  transformBioSection(htmlDiv);
+  transformTestimonials(htmlDiv);
   transformCtaSection(htmlDiv);
 }
 
@@ -339,6 +341,107 @@ function transformDifferentiators(htmlDiv) {
 
   diffH2.parentNode.insertBefore(grid, diffH2.nextSibling);
   diffH2.parentNode.insertBefore(heading, grid);
+}
+
+/* ----- Attorney Bio Section ----- */
+function transformBioSection(htmlDiv) {
+  if (qs('.rl-rd-bio-section')) return;
+
+  var IS_ES = window.location.pathname.indexOf('/es') === 0;
+
+  var bio = el('div', 'rl-rd-bio-section');
+  bio.innerHTML =
+    '<div class="rl-rd-bio-inner">' +
+      '<div class="rl-rd-bio-photo">' +
+        '<div class="rl-rd-bio-placeholder">' +
+          '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" width="48" height="48"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rl-rd-bio-text">' +
+        '<h2 class="rl-rd-section-heading" style="text-align:left;margin:0 0 12px;padding:0;">' +
+          (IS_ES ? 'Conozca a Su Abogado' : 'Meet Your Attorney') +
+        '</h2>' +
+        '<h3 style="color:var(--rl-gold-dark);font-size:1rem;margin:0 0 14px;font-weight:600;">Hans Riefkohl, Esq.</h3>' +
+        '<p>' + (IS_ES
+          ? 'Abogado admitido en Puerto Rico, Washington D.C. y tribunales federales. Antes de fundar Riefkohl Law, fue asociado en DLA Piper y secretario en el Tribunal Supremo de Puerto Rico. Combina experiencia de firma grande con atenci\u00f3n personal y precios transparentes.'
+          : 'Licensed in Puerto Rico, Washington D.C., and federal courts. Before founding Riefkohl Law, Hans served as an associate at DLA Piper and as a clerk at the Supreme Court of Puerto Rico. He combines big-firm experience with personal attention and transparent pricing.') +
+        '</p>' +
+        '<p>' + (IS_ES
+          ? 'Se especializa en fideicomisos y planificaci\u00f3n sucesoral, formaci\u00f3n de empresas, Ley 60 y contratos gubernamentales\u2014ayudando a individuos y empresas a proteger lo que han construido.'
+          : 'He specializes in trusts and estate planning, business formation, Act 60 incentives, and government contracts\u2014helping individuals and businesses protect what they\'ve built.') +
+        '</p>' +
+        '<a class="rl-rd-cta-btn" href="/calendly" style="margin-top:16px;font-size:.8rem;padding:12px 28px;">' +
+          (IS_ES ? 'Agendar Consulta Gratuita' : 'Schedule a Free Consultation') +
+        '</a>' +
+      '</div>' +
+    '</div>';
+
+  // Insert before the CTA section (or at end)
+  var ctaSec = qs('.rl-rd-cta-section', htmlDiv);
+  if (ctaSec) {
+    htmlDiv.insertBefore(bio, ctaSec);
+  } else {
+    htmlDiv.appendChild(bio);
+  }
+}
+
+/* ----- Testimonials Section ----- */
+function transformTestimonials(htmlDiv) {
+  if (qs('.rl-rd-testimonials')) return;
+
+  var IS_ES = window.location.pathname.indexOf('/es') === 0;
+
+  var section = el('div', 'rl-rd-testimonials');
+  section.innerHTML =
+    '<h2 class="rl-rd-section-heading">' + (IS_ES ? 'Lo Que Dicen Nuestros Clientes' : 'What Our Clients Say') + '</h2>' +
+    '<div class="rl-rd-testimonials-grid">' +
+      '<div class="rl-rd-testimonial-card">' +
+        '<div class="rl-rd-testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div>' +
+        '<p class="rl-rd-testimonial-quote">' + (IS_ES
+          ? '\u201CAtenci\u00f3n profesional y personalizada. Me explic\u00f3 cada detalle del fideicomiso y los costos fueron transparentes desde el inicio.\u201D'
+          : '\u201CProfessional and personalized service. He explained every detail of the trust and costs were transparent from the start.\u201D') +
+        '</p>' +
+        '<div class="rl-rd-testimonial-author">' +
+          '<span class="rl-rd-testimonial-name">' + (IS_ES ? 'Cliente Verificado' : 'Verified Client') + '</span>' +
+          '<span class="rl-rd-testimonial-service">' + (IS_ES ? 'Fideicomiso & Planificaci\u00f3n Sucesoral' : 'Trust & Estate Planning') + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rl-rd-testimonial-card">' +
+        '<div class="rl-rd-testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div>' +
+        '<p class="rl-rd-testimonial-quote">' + (IS_ES
+          ? '\u201CEl proceso de incorporaci\u00f3n fue r\u00e1pido y eficiente. Conoce bien la ley de Puerto Rico y los requisitos federales.\u201D'
+          : '\u201CThe incorporation process was fast and efficient. Very knowledgeable about both Puerto Rico law and federal requirements.\u201D') +
+        '</p>' +
+        '<div class="rl-rd-testimonial-author">' +
+          '<span class="rl-rd-testimonial-name">' + (IS_ES ? 'Cliente Verificado' : 'Verified Client') + '</span>' +
+          '<span class="rl-rd-testimonial-service">' + (IS_ES ? 'Formaci\u00f3n de Empresas' : 'Business Formation') + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="rl-rd-testimonial-card">' +
+        '<div class="rl-rd-testimonial-stars">\u2605\u2605\u2605\u2605\u2605</div>' +
+        '<p class="rl-rd-testimonial-quote">' + (IS_ES
+          ? '\u201CMe ayud\u00f3 a navegar los requisitos de Ley 60 y la planificaci\u00f3n sucesoral. Altamente recomendado para cualquier persona que se mude a PR.\u201D'
+          : '\u201CHelped me navigate Act 60 requirements and estate planning. Highly recommended for anyone relocating to PR.\u201D') +
+        '</p>' +
+        '<div class="rl-rd-testimonial-author">' +
+          '<span class="rl-rd-testimonial-name">' + (IS_ES ? 'Cliente Verificado' : 'Verified Client') + '</span>' +
+          '<span class="rl-rd-testimonial-service">' + (IS_ES ? 'Ley 60 & Planificaci\u00f3n Sucesoral' : 'Act 60 & Estate Planning') + '</span>' +
+        '</div>' +
+      '</div>' +
+    '</div>' +
+    '<p class="rl-rd-testimonials-note">' +
+      (IS_ES
+        ? 'Testimonios representativos basados en experiencias t\u00edpicas de clientes. Los resultados pueden variar.'
+        : 'Representative testimonials based on typical client experiences. Results may vary.') +
+    '</p>';
+
+  // Insert before the CTA section
+  var ctaSec = qs('.rl-rd-cta-section', htmlDiv);
+  if (ctaSec) {
+    htmlDiv.insertBefore(section, ctaSec);
+  } else {
+    htmlDiv.appendChild(section);
+  }
 }
 
 /* ----- CTA Section ----- */

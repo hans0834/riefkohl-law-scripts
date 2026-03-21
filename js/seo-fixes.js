@@ -918,7 +918,14 @@ var SEO = {
     h1: 'MAPFRE v. Oriental: Fondos P\u00fablicos de Construcci\u00f3n y Compensaci\u00f3n Bancaria',
     meta: 'Tribunal de quiebras ordena a Oriental devolver $464,757 en fondos p\u00fablicos de construcci\u00f3n. An\u00e1lisis de compensaci\u00f3n bancaria, subrogaci\u00f3n equitativa y Ley 388-1951.',
     schema: null
-  }
+  },
+
+       /* ---- Session 12: Fideicomiso Blog Post ---- */
+       '/blog/para-que-sirve-fideicomiso-puerto-rico': {
+         h1: '\u00bfPara Qu\u00e9 Sirve un Fideicomiso en Puerto Rico? Lo Que Debes Saber Antes de Dar el Primer Paso',
+                  meta: 'Descubre qu\u00e9 es un fideicomiso en Puerto Rico, c\u00f3mo se diferencia de los trusts en EE.UU., para qu\u00e9 sirve y qu\u00e9 debes considerar antes de crear uno bajo la Ley 219-2012.',
+                  schema: null
+}
 };
 
 /* ================================================

@@ -3,41 +3,6 @@
 /* Must load AFTER homepage-services-redesign.html */
 
 /* style id="rl-images-css" */
-/* ===== HERO BACKGROUND IMAGE ===== */
-.rl-rd-hero.rl-has-bg {
-  position: relative;
-  background: url('https://images.squarespace-cdn.com/content/6341e033d606ac41fb5ed5de/96b8219f-64c2-40a6-b10e-f6a58f631cbf/1.+The+Fountain+Pen+actively+signing+vellum+paper+.png') center/cover no-repeat;
-  border-radius: var(--rl-r, 10px);
-  margin-left: -28px;
-  margin-right: -28px;
-  padding: 72px 48px 64px;
-  overflow: hidden;
-}
-.rl-rd-hero.rl-has-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(26, 32, 51, 0.52);
-  z-index: 0;
-}
-.rl-rd-hero.rl-has-bg > * {
-  position: relative;
-  z-index: 1;
-}
-body .rl-rd-hero.rl-has-bg h1,
-body.homepage .page-section .rl-rd-hero.rl-has-bg h1 {
-  color: #fff !important;
-  text-shadow: 0 2px 12px rgba(0,0,0,.18);
-}
-body .rl-rd-hero.rl-has-bg p,
-body.homepage .page-section .rl-rd-hero.rl-has-bg p {
-  color: rgba(255,255,255,.88) !important;
-}
-.rl-rd-hero.rl-has-bg .rl-rd-cta-btn {
-  background: var(--rl-gold, #bfa35d);
-  box-shadow: 0 4px 16px rgba(0,0,0,.2);
-}
-
 /* ===== PRACTICE AREA CARD IMAGES ===== */
 .rl-rd-card .rl-card-img {
   width: 100%;
@@ -145,12 +110,6 @@ body.homepage .page-section .rl-rd-hero.rl-has-bg p {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 767px) {
-  .rl-rd-hero.rl-has-bg {
-    margin-left: -16px;
-    margin-right: -16px;
-    padding: 48px 24px 40px;
-    border-radius: 0;
-  }
   .rl-rd-card .rl-card-img { height: 120px; }
   .rl-diff-accent-img { padding: 0 16px; }
   .rl-diff-accent-img img { height: 140px; }

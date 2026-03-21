@@ -34,13 +34,7 @@ function makeImg(src, alt) {
    HOME PAGE IMAGE INJECTION
    ============================ */
 function injectHomeImages() {
-  /* 1. Hero background */
-  var hero = qs('.rl-rd-hero');
-  if (hero && !hero.classList.contains('rl-has-bg')) {
-    hero.classList.add('rl-has-bg');
-  }
-
-  /* 2. Practice area card images */
+  /* 1. Practice area card images */
   var cards = qsa('.rl-rd-card');
   var cardMap = {
     'Corporate & Transactional': { src: IMGS.blueprint, alt: 'Architectural blueprint on desk' },

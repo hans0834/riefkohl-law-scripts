@@ -1069,6 +1069,34 @@ body.homepage .page-section .rl-rd-hero.rl-has-bg p {
 .rl-rc .rl-card a:hover {
   color: #1a2033 !important;
 }
+/* Button-style links inside cards — clear background for better contrast */
+.rl-rc .rl-card a.sqs-block-button-element,
+.rl-rc .rl-card .sqs-block-button-element,
+.rl-rc .rl-card a[class*="button"],
+.rl-rc .rl-card .sqs-button-element--primary,
+.rl-rc .rl-card .sqs-editable-button,
+.rl-rc .rl-card a:only-of-type:last-child {
+  display: block !important;
+  background: transparent !important;
+  color: #a68c42 !important;
+  border: 1.5px solid #a68c42 !important;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  font-size: .85rem !important;
+  transition: background .2s, color .2s !important;
+  margin-top: auto !important;
+}
+.rl-rc .rl-card a.sqs-block-button-element:hover,
+.rl-rc .rl-card .sqs-block-button-element:hover,
+.rl-rc .rl-card a[class*="button"]:hover,
+.rl-rc .rl-card .sqs-button-element--primary:hover,
+.rl-rc .rl-card .sqs-editable-button:hover,
+.rl-rc .rl-card a:only-of-type:last-child:hover {
+  background: #a68c42 !important;
+  color: #fff !important;
+}
 
 /* CTA section at bottom */
 .rl-rc .rl-cta,
@@ -1785,7 +1813,7 @@ h3.rl-auto-heading {
   transition: background .25s, transform .15s;
 }
 .rl-act60-hero-cta:hover { background: #d4b96a; transform: translateY(-1px); }
-.rl-act60-hero-secondary { color: rgba(255,255,255,.4); font-size: .8rem; margin-top: 14px; }
+.rl-act60-hero-secondary { color: rgba(255,255,255,.75); font-size: .8rem; margin-top: 14px; }
 .rl-act60-hero-secondary a { color: #bfa35d !important; text-decoration: none !important; }
 .rl-act60-hero-urgency {
   display: inline-block; margin-top: 20px; padding: 8px 18px;

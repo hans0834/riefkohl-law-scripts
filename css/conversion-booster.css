@@ -162,7 +162,7 @@
   transition: background .25s, transform .15s;
 }
 .rl-act60-hero-cta:hover { background: #d4b96a; transform: translateY(-1px); }
-.rl-act60-hero-secondary { color: rgba(255,255,255,.4); font-size: .8rem; margin-top: 14px; }
+.rl-act60-hero-secondary { color: rgba(255,255,255,.75); font-size: .8rem; margin-top: 14px; }
 .rl-act60-hero-secondary a { color: #bfa35d !important; text-decoration: none !important; }
 .rl-act60-hero-urgency {
   display: inline-block; margin-top: 20px; padding: 8px 18px;

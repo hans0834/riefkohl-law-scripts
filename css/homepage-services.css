@@ -458,6 +458,41 @@ body .sqs-block-content .rl-rd-cta-section p {
   .rl-rd-practice-page .fluid-engine .sqs-html-content { padding: 0 16px; }
   .rl-rd-practice-page .fluid-engine .sqs-html-content h1 { font-size: 1.5rem; }
 }
+/* ===== DARK SECTION TEXT CONTRAST FIXES ===== */
+.page-section.background-width--full .section-background--dark h1,
+.page-section.background-width--full .section-background--dark h2,
+.page-section.background-width--full .section-background--dark h3,
+.page-section.background-width--full .section-background--dark h4,
+.page-section[data-section-theme="dark"] h1,
+.page-section[data-section-theme="dark"] h2,
+.page-section[data-section-theme="dark"] h3,
+.page-section[data-section-theme="dark"] h4,
+.sqs-alternate-block-style-container h1,
+.sqs-alternate-block-style-container h2,
+.sqs-alternate-block-style-container h3,
+.sqs-alternate-block-style-container h4,
+[data-section-theme="dark"] .sqs-html-content h1,
+[data-section-theme="dark"] .sqs-html-content h2,
+[data-section-theme="dark"] .sqs-html-content h3,
+[data-section-theme="dark"] .sqs-html-content h4 {
+  color: #fff !important;
+  font-style: normal !important;
+}
+
+/* ===== REDUCE WHITESPACE BETWEEN SECTIONS ===== */
+body.homepage .page-section + .page-section,
+body .page-section + .page-section {
+  margin-top: 0 !important;
+}
+body.homepage .page-section .content-wrapper,
+body .page-section .content-wrapper {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+body.homepage .page-section:first-child .content-wrapper {
+  padding-top: 48px !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rl-rd-card, .rl-rd-tier-card, .rl-rd-svc-card, .rl-rd-diff-item, .rl-rd-cta-btn, .rl-rd-card-arrow {
     transition: none !important;

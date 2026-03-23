@@ -487,9 +487,9 @@ function transformCtaSection(htmlDiv) {
   var cta = el('div', 'rl-rd-cta-section');
   cta.innerHTML =
     '<h2 style="color:#fff !important">Ready to Protect What You\u2019ve Built?</h2>' +
-    '<p style="color:rgba(255,255,255,.75) !important">Whether you\u2019re planning your estate, forming a business, or relocating to Puerto Rico, we\u2019re here to help \u2014 with clear pricing and no surprises.</p>' +
+    '<p style="color:rgba(255,255,255,.92) !important">Whether you\u2019re planning your estate, forming a business, or relocating to Puerto Rico, we\u2019re here to help \u2014 with clear pricing and no surprises.</p>' +
     '<a class="rl-rd-cta-btn" href="/calendly">Get Your Free Case Review</a>' +
-    '<p style="color:rgba(255,255,255,.85);font-size:.9rem;margin-top:14px;">Or call: <a href="tel:+17872361657" style="color:#bfa35d;font-weight:600;">(787) 236-1657</a></p>';
+    '<p style="color:rgba(255,255,255,.92) !important;font-size:.9rem;margin-top:14px;">Or call: <a href="tel:+17872361657" style="color:#bfa35d;font-weight:600;">(787) 236-1657</a></p>';
 
   // Hide originals from readyH2 onward
   for (var k = startIdx; k < kids.length; k++) {

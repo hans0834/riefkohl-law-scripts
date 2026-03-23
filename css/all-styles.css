@@ -399,9 +399,16 @@ article.h-entry {
   max-width: 640px;
   margin: 40px auto 48px;
   padding: 48px 24px;
-  background: var(--rl-navy);
+  background: var(--rl-navy) !important;
   border-radius: var(--rl-r);
   color: var(--rl-white);
+}
+.rl-rd-cta-section * {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.rl-rd-cta-section .rl-rd-cta-btn {
+  background: #bfa35d !important;
 }
 body .rl-rd-cta-section h2,
 body.homepage .page-section .rl-rd-cta-section h2 {
@@ -414,7 +421,7 @@ body.homepage .page-section .rl-rd-cta-section p,
 body .sqs-html-content .rl-rd-cta-section p,
 body .sqs-block-content .rl-rd-cta-section p {
   font-size: 1rem;
-  color: rgba(255,255,255,.75) !important;
+  color: rgba(255,255,255,.92) !important;
   line-height: 1.6;
   margin: 0 0 24px;
 }

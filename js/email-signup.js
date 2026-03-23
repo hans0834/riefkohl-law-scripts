@@ -13,8 +13,8 @@ var IS_ES = PATH.indexOf('/espanol') === 0 || PATH.indexOf('/recursos-') === 0;
 function injectFooterSignup() {
   if (document.querySelector('.rl-footer-signup')) return;
 
-  // Don't show on calendly/booking pages
-  if (PATH === '/calendly' || PATH === '/espanol-cita') return;
+  // Don't show on homepage, calendly/booking pages
+  if (PATH === '/' || PATH === '' || PATH === '/calendly' || PATH === '/espanol-cita') return;
 
   var heading = IS_ES
     ? 'Descarga Gratuita: Lista de Verificación para Fideicomisos en Puerto Rico'

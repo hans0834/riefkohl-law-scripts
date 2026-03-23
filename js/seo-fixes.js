@@ -483,15 +483,10 @@ var SEO = {
     schema: null
   },
 
-  /* ---- Trust Law Article Series (15 articles) ---- */
+  /* ---- Trust Law Article Series (14 articles) ---- */
   '/resources/what-is-puerto-rico-trust': {
     h1: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',
     meta: 'Puerto Rico trusts (fideicomisos) are autonomous estates under Law 219-2012, not fiduciary relationships. Learn how this distinction affects Act 60 investors.',
-    schema: null
-  },
-  '/resources/types-of-trusts': {
-    h1: 'Types of Trusts Available Under Puerto Rico Law',
-    meta: 'Survey of Puerto Rico trust types under Ley 219-2012: asset protection, estate planning, ILITs, SLATs, special needs, dynasty trusts, and the Act 60 revocable trust exception.',
     schema: null
   },
   '/resources/act-60-trust-planning': {

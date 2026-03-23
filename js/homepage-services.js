@@ -122,7 +122,7 @@ function transformHero(htmlDiv, sec) {
     '<span class="rl-cred-sep">&middot;</span>' +
     '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg> DLA Piper Alumnus</span>' +
     '<span class="rl-cred-sep">&middot;</span>' +
-    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3 21h18M3 7l9-4 9 4M5 7v8M19 7v8M9 11v4M15 11v4M12 11v4"/></svg> Supreme Court of PR Clerk</span>' +
+    '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3 21h18M3 7l9-4 9 4M5 7v8M19 7v8M9 11v4M15 11v4M12 11v4"/></svg> Ex-Supreme Court of PR Clerk</span>' +
     '<span class="rl-cred-sep">&middot;</span>' +
     '<span class="rl-cred-item"><svg class="rl-cred-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Notary Public</span>';
   hero.appendChild(credBar);

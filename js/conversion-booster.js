@@ -190,7 +190,7 @@ function injectPageCTAs() {
     '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">' + config.heading + '</h2>' +
     '<p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0 0 24px;max-width:500px;margin-left:auto;margin-right:auto;">' + config.body + '</p>' +
     '<a href="' + bookUrl + '" style="display:inline-block;padding:14px 28px;background:#bfa35d;color:#1a2033;font-size:.85rem;font-weight:700;text-decoration:none;border-radius:6px;transition:background .25s;">' + config.btn + '</a>' +
-    '<p style="color:rgba(255,255,255,.4);font-size:.8rem;margin-top:14px;">' + config.secondary + '</p>';
+    '<p style="color:rgba(255,255,255,.8);font-size:.85rem;margin-top:14px;">' + config.secondary + '</p>';
 
   // Insert before the footer signup or at end of main content
   var footerSignup = document.querySelector('.rl-footer-signup');

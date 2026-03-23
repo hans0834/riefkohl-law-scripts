@@ -357,6 +357,76 @@
       contentArea.insertBefore(seriesDiv.firstChild, contentArea.firstChild);
     }
 
+    // --- DISCLAIMERS & JURISDICTIONAL NOTES ---
+    if (!contentArea.querySelector('.rl-disclaimer')) {
+      var spanish = isSpanish();
+      var disclaimerHtml = '';
+      var category = getPostCategory(slug);
+
+      // Non-PR case law posts: add jurisdictional note
+      // These are individual case posts from mainland U.S. jurisdictions
+      var NON_PR_CASE_SLUGS = {
+        'in-re-kirton-morris-v-housing-authority': 'New York',
+        'estate-of-wallace-lucas-sr': 'Louisiana',
+        'andersen-estate-eileen-andersen-pr': 'Florida',
+        'williams-as-successor-pr-of-estate-of-adams-shirer': 'Florida',
+        'mcarthur-as-pr-of-estate-of-clarence-maurice-logan-jr': 'Texas',
+        'integrated-health-services-v-estate-of-desantis': 'Florida',
+        'parra-v-rapid-casting-rapid-american-corp': 'Mississippi',
+        'shabani-v-burton-trustee': 'California',
+        'antero-resources-v-pike-case-08': 'West Virginia',
+        'commonwealth-v-valenti': 'Massachusetts',
+        'pereira-v-pereira': 'Massachusetts',
+        'american-health-law-assn-v-estate-of-cunningham': 'Arkansas',
+        'in-re-el-a-minor-ch-v-jn': 'California',
+        'murphy-dependent-of-harold-r-murphy': 'West Virginia',
+        'chaires-v-champion-realty': 'Maryland',
+        'alevras-cga-associates-v-brewster-jr': 'New Jersey'
+      };
+
+      var state = NON_PR_CASE_SLUGS[slug];
+      if (state) {
+        // Jurisdictional disclaimer for non-PR cases
+        disclaimerHtml = '<div class="rl-disclaimer rl-jurisdictional-note" style="background:#faf8f4;border-left:4px solid #bfa35d;padding:16px 20px;margin:32px 0 24px;border-radius:0 8px 8px 0;font-size:.88rem;line-height:1.6;color:#555;">'
+          + '<p style="margin:0 0 8px;font-weight:600;color:#333;">Important Jurisdictional Note</p>'
+          + '<p style="margin:0;">This case was decided under the common law of ' + state + '. Puerto Rico is a civil-law jurisdiction with a fundamentally different legal framework. Puerto Rico trusts are governed by Law 219-2012, and succession is governed by the Civil Code (Ley 55-2020), which includes forced heirship rules that have no equivalent in most U.S. states. The holding in this case does not apply as precedent in Puerto Rico courts. This summary is published for educational purposes to illustrate how trust and estate issues arise in practice; consult a Puerto Rico attorney for guidance on how local law applies to your situation.</p>'
+          + '</div>';
+      }
+
+      // Per-article disclaimer for estate planning / trust / Act 60 blog posts
+      var DISCLAIMER_SLUGS_EN = [
+        '5-critical-mistakes-act-60-decree-holders-make-with-estate-planning',
+        'puerto-rico-trust-vs-will-which-do-you-need',
+        'irs-scrutiny-of-act-60-decree-holders-what-you-need-to-know-2026',
+        'how-forced-heirship-affects-your-estate-plan-in-puerto-rico',
+        'puerto-rico-asset-protection-how-irrevocable-trusts-shield-your-wealth',
+        'the-complete-guide-to-puerto-rico-trusts-under-law-219-2012'
+      ];
+      var DISCLAIMER_SLUGS_ES = [
+        'fideicomiso-irrevocable-en-puerto-rico-guia-completa-bajo-la-ley-219-2012',
+        'planificacion-sucesoral-en-puerto-rico-lo-que-todo-residente-debe-saber',
+        'ley-60-guia-para-inversionistas-individuales-que-se-mudan-a-puerto-rico',
+        'proceso-de-declaratoria-de-herederos-en-puerto-rico',
+        'para-que-sirve-un-fideicomiso-en-puerto-rico'
+      ];
+
+      if (DISCLAIMER_SLUGS_EN.indexOf(slug) !== -1) {
+        disclaimerHtml = '<div class="rl-disclaimer" style="background:#faf8f4;border-left:4px solid #bfa35d;padding:16px 20px;margin:32px 0 24px;border-radius:0 8px 8px 0;font-size:.85rem;line-height:1.6;color:#666;font-style:italic;">'
+          + '<p style="margin:0;">Disclaimer: This article is for general informational purposes only and does not constitute legal or tax advice. No attorney-client relationship is created by reading this content. Tax laws and regulations change frequently; the information here reflects the law as of the publication date and may not reflect subsequent changes. Consult a qualified attorney regarding your specific situation.</p>'
+          + '</div>';
+      } else if (DISCLAIMER_SLUGS_ES.indexOf(slug) !== -1) {
+        disclaimerHtml = '<div class="rl-disclaimer" style="background:#faf8f4;border-left:4px solid #bfa35d;padding:16px 20px;margin:32px 0 24px;border-radius:0 8px 8px 0;font-size:.85rem;line-height:1.6;color:#666;font-style:italic;">'
+          + '<p style="margin:0;">Aviso: Este art\u00edculo es solo para fines informativos generales y no constituye asesoramiento legal ni tributario. La lectura de este contenido no crea una relaci\u00f3n abogado-cliente. Las leyes y regulaciones tributarias cambian con frecuencia; la informaci\u00f3n aqu\u00ed refleja la ley vigente a la fecha de publicaci\u00f3n y puede no reflejar cambios posteriores. Consulte con un abogado cualificado respecto a su situaci\u00f3n particular.</p>'
+          + '</div>';
+      }
+
+      if (disclaimerHtml) {
+        var discDiv = document.createElement('div');
+        discDiv.innerHTML = disclaimerHtml;
+        contentArea.appendChild(discDiv.firstChild);
+      }
+    }
+
     // Add related posts before CTA
     var relatedHtml = buildRelatedPosts(slug);
     if (relatedHtml && !contentArea.querySelector('.rl-related-posts')) {

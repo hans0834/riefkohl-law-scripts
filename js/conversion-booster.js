@@ -24,16 +24,14 @@ function createCallBanner() {
   banner.setAttribute('role', 'banner');
   banner.setAttribute('aria-label', IS_ES ? 'Contenido destacado' : 'Featured content');
 
-  var promoText = IS_ES
-    ? 'Nuevo: Serie de 15 art\u00edculos sobre fideicomisos en Puerto Rico'
-    : 'New: 15-Part Trust Law Series \u2014 Free Estate Planning Resources';
-  var linkText = IS_ES ? 'Leer ahora' : 'Read now';
-  var linkUrl = '/resources';
-
   banner.innerHTML =
-    '<span class="rl-call-text">' + promoText + '</span>' +
+    '<a href="tel:+17872361657" aria-label="Call (787) 236-1657">' + PHONE_SVG + '(787) 236-1657</a>' +
     '<span class="rl-call-sep">|</span>' +
-    '<a href="' + linkUrl + '">' + linkText + ' &rarr;</a>';
+    '<a href="mailto:hans@riefkohllaw.com" aria-label="Email hans@riefkohllaw.com">hans@riefkohllaw.com</a>' +
+    '<span class="rl-call-sep">|</span>' +
+    '<span class="rl-call-text">' + (IS_ES ? 'Serie de Fideicomisos en PR' : '12-Part Trust Law Series') + '</span>' +
+    '<span class="rl-call-sep">|</span>' +
+    '<a href="/resources">' + (IS_ES ? 'Leer ahora' : 'Read now') + ' &rarr;</a>';
 
   // Insert at very top of body, before the header
   var header = document.querySelector('header') || document.querySelector('.header');

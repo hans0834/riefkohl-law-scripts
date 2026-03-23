@@ -1105,7 +1105,7 @@ function injectAttorneySchema() {
     'description': 'Puerto Rico law firm specializing in trusts, estate planning, Act 60 tax incentives, and business law.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
-    'email': 'info@riefkohllaw.com',
+    'email': 'hans@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '273 Ponce de Le\u00f3n Ave.',

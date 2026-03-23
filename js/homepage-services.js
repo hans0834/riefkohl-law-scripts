@@ -198,6 +198,18 @@ function transformPracticeAreas(htmlDiv) {
 
   if (practiceAreas.length === 0) return;
 
+  // Merge "Business Formation" into "Corporate & Transactional"
+  var bfIdx = -1, ctIdx = -1;
+  for (var m = 0; m < practiceAreas.length; m++) {
+    if (practiceAreas[m].title.indexOf('Business Formation') > -1) bfIdx = m;
+    if (practiceAreas[m].title.indexOf('Corporate') > -1) ctIdx = m;
+  }
+  if (bfIdx > -1 && ctIdx > -1) {
+    practiceAreas[ctIdx].title = 'Corporate, Transactional & Business Formation';
+    practiceAreas[ctIdx].desc = 'LLCs, corporations, contracts, M&A, and deal structuring from formation through growth.';
+    practiceAreas.splice(bfIdx, 1);
+  }
+
   // Reorder: Trusts & Estate Planning first, then Business, then others
   var categoryOrder = ['Trusts & Estate Planning', 'For Your Business'];
   practiceAreas.sort(function(a, b) {

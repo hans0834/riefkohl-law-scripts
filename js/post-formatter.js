@@ -62,14 +62,14 @@
     '<h3>Need Legal Guidance?</h3>' +
     '<p>If you have questions about this area of law, our attorneys can help. We offer personalized consultations to discuss your specific situation.</p>' +
     '<a href="/book-an-appointment" class="rl-cta-btn">Schedule a Consultation</a>' +
-    '<p class="rl-cta-sub">Or call us at <a href="tel:+17877221277">(787) 722-1277</a></p>' +
+    '<p class="rl-cta-sub">Or call us at <a href="tel:+17872361657">(787) 236-1657</a></p>' +
     '</div>';
 
   var CTA_ES = '<div class="rl-post-cta">' +
     '<h3>\u00bfNecesita Asesor\u00eda Legal?</h3>' +
     '<p>Si tiene preguntas sobre esta \u00e1rea del derecho, nuestros abogados pueden ayudarle. Ofrecemos consultas personalizadas para discutir su situaci\u00f3n espec\u00edfica.</p>' +
     '<a href="/book-an-appointment" class="rl-cta-btn">Agende una Consulta</a>' +
-    '<p class="rl-cta-sub">O ll\u00e1menos al <a href="tel:+17877221277">(787) 722-1277</a></p>' +
+    '<p class="rl-cta-sub">O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a></p>' +
     '</div>';
 
   // Back to blog link

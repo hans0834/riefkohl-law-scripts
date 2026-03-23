@@ -1583,19 +1583,24 @@ h3.rl-auto-heading {
 .rl-post-cta {
   margin-top: 3em;
   padding: 2em;
-  background: linear-gradient(135deg, #1a2033 0%, #243047 100%);
+  background: linear-gradient(135deg, #1a2033 0%, #243047 100%) !important;
   border-radius: 12px;
   text-align: center;
-  color: #f9f9fb;
+  color: #f9f9fb !important;
+}
+.rl-post-cta * {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 .rl-post-cta h3 {
   font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
-  color: #bfa35d;
+  color: #bfa35d !important;
   font-size: 1.4em;
   margin: 0 0 0.5em 0;
 }
 .rl-post-cta p {
-  color: #c8c9ce;
+  color: #e0e1e5 !important;
   font-size: 1em;
   line-height: 1.6;
   margin: 0 0 1em 0;
@@ -1603,9 +1608,9 @@ h3.rl-auto-heading {
   margin-left: auto;
   margin-right: auto;
 }
-.rl-cta-btn {
+.rl-post-cta .rl-cta-btn {
   display: inline-block;
-  background: #bfa35d;
+  background: #bfa35d !important;
   color: #1a2033 !important;
   padding: 0.75em 2em;
   border-radius: 100px;
@@ -1614,15 +1619,15 @@ h3.rl-auto-heading {
   font-size: 1em;
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.rl-cta-btn:hover {
-  background: #a68c42;
+.rl-post-cta .rl-cta-btn:hover {
+  background: #a68c42 !important;
   transform: translateY(-1px);
   color: #1a2033 !important;
 }
 .rl-cta-sub {
   font-size: 0.9em !important;
   margin-top: 0.75em !important;
-  color: #a8a298 !important;
+  color: rgba(255,255,255,.7) !important;
 }
 .rl-cta-sub a {
   color: #bfa35d !important;
@@ -2074,53 +2079,7 @@ h3.rl-auto-heading {
   color: #243047;
 }
 
-/* CTA block at bottom of posts */
-.rl-post-cta {
-  margin-top: 3em;
-  padding: 2em;
-  background: linear-gradient(135deg, #1a2033 0%, #243047 100%);
-  border-radius: 12px;
-  text-align: center;
-  color: #f9f9fb;
-}
-.rl-post-cta h3 {
-  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
-  color: #bfa35d;
-  font-size: 1.4em;
-  margin: 0 0 0.5em 0;
-}
-.rl-post-cta p {
-  color: #c8c9ce;
-  font-size: 1em;
-  line-height: 1.6;
-  margin: 0 0 1em 0;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.rl-cta-btn {
-  display: inline-block;
-  background: #bfa35d;
-  color: #1a2033 !important;
-  padding: 0.75em 2em;
-  border-radius: 100px;
-  text-decoration: none !important;
-  font-weight: 600;
-  font-size: 1em;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-.rl-cta-btn:hover {
-  background: #a68c42;
-  transform: translateY(-1px);
-  color: #1a2033 !important;
-}
-.rl-cta-sub {
-  font-size: 0.9em !important;
-  margin-top: 0.75em !important;
-  color: #a8a298 !important;
-}
-.rl-cta-sub a { color: #bfa35d !important; text-decoration: none; }
-.rl-cta-sub a:hover { text-decoration: underline; }
+/* CTA block at bottom of posts — duplicate removed, see earlier block */
 
 /* Related posts section */
 .rl-related-posts {

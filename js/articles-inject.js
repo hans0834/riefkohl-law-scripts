@@ -3049,7 +3049,7 @@ function injectArticleHub() {
     + '<div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:36px 32px;border-radius:10px;text-align:center;margin-bottom:32px;">'
     + '<p style="color:#bfa35d;font-weight:700;font-size:.9rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">In-Depth Article Series</p>'
     + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.6rem;font-weight:700;color:#fff;margin:0 0 10px;letter-spacing:-.02em;">Puerto Rico Trust Law for Act 60 Investors</h2>'
-    + '<p style="color:rgba(255,255,255,.55);font-size:.92rem;max-width:560px;margin:0 auto;">A 14-article practitioner-grade series covering everything from trust fundamentals to advanced tax planning. Written by Hans Riefkohl for investors who want to understand the law, not just follow instructions.</p>'
+    + '<p style="color:rgba(255,255,255,.85);font-size:.92rem;max-width:560px;margin:0 auto;">A 14-article practitioner-grade series covering everything from trust fundamentals to advanced tax planning. Written by Hans Riefkohl for investors who want to understand the law, not just follow instructions.</p>'
     + '</div>';
   
   categories.forEach(function(cat) {

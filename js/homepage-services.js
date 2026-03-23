@@ -363,7 +363,7 @@ function transformBioSection(htmlDiv) {
         '</h2>' +
         '<h3 style="color:var(--rl-gold-dark);font-size:1rem;margin:0 0 14px;font-weight:600;">Hans Riefkohl, Esq.</h3>' +
         '<p>' + (IS_ES
-          ? 'Abogado admitido en Puerto Rico, Washington D.C. y tribunales federales. Antes de fundar Riefkohl Law, fue asociado en DLA Piper y secretario en el Tribunal Supremo de Puerto Rico. Combina experiencia de firma grande con atenci\u00f3n personal y precios transparentes.'
+          ? 'Abogado admitido en Puerto Rico, Washington D.C. y tribunales federales. Antes de fundar Riefkohl Law, fue asociado en DLA Piper y fue oficial jur\u00eddico en el Tribunal Supremo de Puerto Rico. Combina experiencia de firma grande con atenci\u00f3n personal y precios transparentes.'
           : 'Licensed in Puerto Rico, Washington D.C., and federal courts. Before founding Riefkohl Law, Hans served as an associate at DLA Piper and as a clerk at the Supreme Court of Puerto Rico. He combines big-firm experience with personal attention and transparent pricing.') +
         '</p>' +
         '<p>' + (IS_ES

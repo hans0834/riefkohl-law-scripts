@@ -8,7 +8,7 @@
 var SEO = {
   '/': {
     h1: 'Puerto Rico Law Firm — Trusts, Estate Planning & Business Law',
-    meta: 'Puerto Rico law firm specializing in trusts, estate planning, Act 60 tax incentives, and business law. Free strategy call. (787) 236-1657.',
+    meta: 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law. Free strategy call. (787) 236-1657.',
     schema: null
   },
   '/services': {
@@ -18,12 +18,12 @@ var SEO = {
   },
   '/about': {
     h1: 'About Hans E. Riefkohl — Founder & Managing Attorney',
-    meta: 'Attorney Hans Riefkohl brings over a decade of experience from DLA Piper, LUMA Energy, and the federal courts. Puerto Rico trusts, estate planning, and corporate law.',
+    meta: 'Attorney Hans Riefkohl brings experience from DLA Piper, LUMA Energy, and the federal courts to his Puerto Rico trusts, estate planning, and corporate law practice.',
     schema: null
   },
   '/about-us': {
     h1: 'About Hans E. Riefkohl — Founder & Managing Attorney',
-    meta: 'Attorney Hans Riefkohl brings over a decade of experience from DLA Piper, LUMA Energy, and the federal courts. Puerto Rico trusts, estate planning, and corporate law.',
+    meta: 'Attorney Hans Riefkohl brings experience from DLA Piper, LUMA Energy, and the federal courts to his Puerto Rico trusts, estate planning, and corporate law practice.',
     schema: null
   },
   '/contact': {
@@ -48,7 +48,7 @@ var SEO = {
   },
   '/puerto-rico-trusts': {
     h1: 'Puerto Rico Trust Attorney — Fideicomisos & Asset Protection',
-    meta: 'Puerto Rico trust attorney specializing in irrevocable trusts under Law 219-2012, asset protection, and fiduciary services. Free consultation.',
+    meta: 'Puerto Rico trust attorney focused on irrevocable trusts under Law 219-2012, asset protection, and fiduciary services. Free consultation.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -252,7 +252,7 @@ var SEO = {
   },
   '/espanol-sobre-nosotros': {
     h1: 'Sobre el Lcdo. Hans E. Riefkohl — Fundador',
-    meta: 'Lcdo. Hans Riefkohl, fundador de Riefkohl Law. M\u00e1s de una d\u00e9cada de experiencia en DLA Piper y LUMA Energy. Fideicomisos y derecho corporativo en PR.',
+    meta: 'Lcdo. Hans Riefkohl, fundador de Riefkohl Law. Experiencia en DLA Piper, LUMA Energy y los tribunales federales. Fideicomisos y derecho corporativo en PR.',
     schema: null
   },
   '/espanol-contacto': {
@@ -506,7 +506,7 @@ var SEO = {
   },
   '/resources/asset-protection-trusts-pr': {
     h1: 'Asset Protection Trusts Under Puerto Rico\u2019s Trust Act',
-    meta: 'Puerto Rico\u2019s autonomous estate doctrine provides asset protection no mainland DAPT can match. Learn the three-layer creditor protection structure.',
+    meta: 'Puerto Rico\u2019s autonomous estate doctrine offers distinctive asset protection advantages over mainland DAPTs. Learn the three-layer creditor protection structure.',
     schema: null
   },
   '/resources/special-needs-trusts-medicaid': {
@@ -1102,7 +1102,7 @@ function injectAttorneySchema() {
     '@context': 'https://schema.org',
     '@type': 'Attorney',
     'name': 'Riefkohl Law',
-    'description': 'Puerto Rico law firm specializing in trusts, estate planning, Act 60 tax incentives, and business law.',
+    'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
     'email': 'hans@riefkohllaw.com',

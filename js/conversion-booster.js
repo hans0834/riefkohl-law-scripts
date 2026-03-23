@@ -88,7 +88,7 @@ function injectLocalBusinessSchema() {
     '@id': 'https://www.riefkohllaw.com/#organization',
     'name': 'Riefkohl Law',
     'alternateName': 'Riefkohl Law Office',
-    'description': 'Puerto Rico law firm specializing in trusts, estate planning, Act 60 tax incentives, business formation, and government contracts.',
+    'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, business formation, and government contracts.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
     'email': 'hans@riefkohllaw.com',

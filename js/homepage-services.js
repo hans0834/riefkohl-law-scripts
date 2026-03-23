@@ -654,14 +654,7 @@ function transformTrustPricing(htmlDiv) {
     if (idx === 1) html += '<div class="rl-rd-popular-badge">Most Popular</div>';
     html += '<div class="rl-rd-tier-label">' + escHtml(tier.label) + '</div>';
     html += '<h3>' + escHtml(tier.name) + '</h3>';
-    // Extract low end of price range, reduce by 75%, show as "From $X"
     var priceDisplay = tier.price;
-    var pm = tier.price.match(/\$([\d,]+)/);
-    if (pm) {
-      var low = parseInt(pm[1].replace(/,/g, ''), 10);
-      var reduced = Math.round(low * 0.25);
-      priceDisplay = 'From $' + reduced.toLocaleString();
-    }
     html += '<div class="rl-rd-price">' + escHtml(priceDisplay) + '</div>';
     html += '<ul>';
     displayItems.forEach(function(item) {

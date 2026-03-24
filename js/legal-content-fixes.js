@@ -550,23 +550,17 @@ function fixAct60ExemptionPercentages() {
 
     var text = node.nodeValue;
 
-    /* Fix "75% exemption on municipal" -> "50% exemption on municipal" */
-    /* Use targeted replacement to avoid changing unrelated 75% figures */
+    /* Fix "75% exemption on municipal" -> "50% exemption on municipal"
+       Use proximity-aware regex: only change 75% when followed (within ~40 chars) by municipal/patente */
     if (text.indexOf('75%') >= 0 && (text.indexOf('municipal') >= 0 || text.indexOf('patente') >= 0)) {
-      node.nodeValue = text.replace(/75%\s*(exemption|exenci[oó]n)/g, '50% $1');
-      /* Fallback: if no "exemption" follows, replace the first 75% near municipal */
-      if (node.nodeValue.indexOf('75%') >= 0 && (node.nodeValue.indexOf('municipal') >= 0 || node.nodeValue.indexOf('patente') >= 0)) {
-        node.nodeValue = node.nodeValue.replace('75%', '50%');
-      }
+      node.nodeValue = text.replace(/75%([\s\w]{0,40})(municipal|patente)/g, '50%$1$2');
     }
 
-    /* Fix "60% exemption on...property" -> "75% exemption on...property" */
+    /* Fix "60% exemption on...property" -> "75% exemption on...property"
+       Use proximity-aware regex: only change 60% when followed (within ~40 chars) by property */
     text = node.nodeValue; /* re-read after possible change */
     if (text.indexOf('60%') >= 0 && text.indexOf('property') >= 0) {
-      node.nodeValue = text.replace(/60%\s*(exemption|exenci[oó]n)/g, '75% $1');
-      if (node.nodeValue.indexOf('60%') >= 0 && node.nodeValue.indexOf('property') >= 0) {
-        node.nodeValue = node.nodeValue.replace('60%', '75%');
-      }
+      node.nodeValue = text.replace(/60%([\s\w]{0,40})(property)/g, '75%$1$2');
     }
   }
 }

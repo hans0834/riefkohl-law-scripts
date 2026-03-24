@@ -21,13 +21,15 @@ Scripts load in the order listed in `code-injection-header.html`:
 | 2 | `seo-fixes.js` | SEO fixes (H1, meta descriptions, schema, canonicals, hreflang) |
 | 3 | `homepage-services.js` | Homepage and services page visual design |
 | 4 | `images-injection.js` | Branded illustration images |
-| 5 | `resources-fix.js` | Resources page subpages and cross-links |
+| 5 | `resources-fix.js` | Resources page subpages, cross-links, Act 60 content pages |
 | 6 | `blog-dashboard.js` | Blog dashboard with filtering/search |
 | 7 | `articles-inject.js` | 15-article Trust Law Series |
 | 8 | `breadcrumb-schema.js` | BreadcrumbList structured data |
 | 9 | `post-formatter.js` | Auto-formats imported case law blog posts |
 | 10 | `conversion-booster.js` | Click-to-call banner, sticky mobile CTA, LocalBusiness schema |
 | 11 | `email-signup.js` | Site-wide newsletter bar + inline blog lead magnets |
+| 12 | `service-crosslinks.js` | Related services links on service pages |
+| 13 | `legal-content-fixes.js` | Statutory corrections, HB 505 updates, CPA audit fixes |
 
 ## Deployment
 

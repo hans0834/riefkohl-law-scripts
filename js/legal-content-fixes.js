@@ -520,7 +520,7 @@ function updateAct60Disclaimer() {
 /* ================================================
    13. FIX ACT 60 MUNICIPAL/PROPERTY TAX EXEMPTION PERCENTAGES
    Reality: Municipal license tax exemption = 50% (not 75%).
-   Property tax exemption = 70% (not 60%).
+   Property tax exemption = 75% (not 60%).
    These were swapped/incorrect across multiple pages.
    ================================================ */
 function fixAct60ExemptionPercentages() {
@@ -543,10 +543,10 @@ function fixAct60ExemptionPercentages() {
       node.nodeValue = text.replace(/75%/g, '50%');
     }
 
-    /* Fix "60% exemption on...property" -> "70% exemption on...property" */
+    /* Fix "60% exemption on...property" -> "75% exemption on...property" */
     text = node.nodeValue; /* re-read after possible change */
     if (text.indexOf('60%') >= 0 && text.indexOf('property') >= 0) {
-      node.nodeValue = text.replace(/60%/g, '70%');
+      node.nodeValue = text.replace(/60%/g, '75%');
     }
   }
 }
@@ -597,6 +597,354 @@ function clarify183DayPresenceTest() {
 }
 
 /* ================================================
+   15. ADD SMALL BUSINESS 100% EXEMPTION NOTE
+   Reality: Businesses under $3M volume qualify for
+   100% property & municipal exemption for first 5 years.
+   ================================================ */
+function addSmallBusinessExemptionNote() {
+  if (path !== '/act-60-tax-incentives' && path !== '/business-formation') return;
+  if (document.getElementById('rl-small-biz-exemption-note')) return;
+
+  /* Find elements mentioning property tax or municipal tax exemptions */
+  var elements = document.querySelectorAll('.sqs-html-content li, .sqs-html-content p, .sqs-code-container li, .sqs-code-container p');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var text = el.textContent || '';
+    if ((text.indexOf('75%') >= 0 && text.indexOf('property') >= 0) ||
+        (text.indexOf('50%') >= 0 && text.indexOf('municipal') >= 0)) {
+      /* Check if the note already exists nearby */
+      if (el.parentNode.querySelector('#rl-small-biz-exemption-note')) return;
+      var note = document.createElement('p');
+      note.id = 'rl-small-biz-exemption-note';
+      note.style.cssText = 'margin:8px 0 16px;padding:10px 14px;background:#f0f7f0;border-left:3px solid #27ae60;border-radius:0 4px 4px 0;font-size:.84rem;color:#2d572c;line-height:1.5;';
+      note.innerHTML = '<strong>Small business benefit:</strong> Businesses with annual gross income under $3 million may qualify for <strong>100% exemption</strong> on both property and municipal license taxes during the first five years of operations.';
+      /* Insert after the last matching element in the same list/section */
+      el.parentNode.insertBefore(note, el.nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
+   16. FIX CONFLICTING ACT 38-2026 / HB 505 DATES
+   Reality: Some pages say 0% ends "after 2025" or
+   "starting January 1, 2026" — the correct deadline
+   is December 31, 2026 (4% applies Jan 1, 2027+).
+   ================================================ */
+function fixConflictingAct38Dates() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Fix "after 2025" in context of Act 60 rate changes */
+    if (text.indexOf('after 2025') >= 0 && (text.indexOf('4%') >= 0 || text.indexOf('capital gains') >= 0 || text.indexOf('Act 60') >= 0)) {
+      node.nodeValue = text.replace('after 2025', 'for applications filed on or after January 1, 2027');
+    }
+
+    /* Fix "starting January 1, 2026" -> "starting January 1, 2027" */
+    text = node.nodeValue;
+    if (text.indexOf('starting January 1, 2026') >= 0 && (text.indexOf('4%') >= 0 || text.indexOf('new rate') >= 0 || text.indexOf('Act 60') >= 0)) {
+      node.nodeValue = text.replace('starting January 1, 2026', 'starting January 1, 2027');
+    }
+
+    /* Fix "new investors face the 4% rate starting...2026" pattern */
+    text = node.nodeValue;
+    if (text.indexOf('2026') >= 0 && text.indexOf('4% rate') >= 0 && text.indexOf('new') >= 0 && text.indexOf('2027') < 0) {
+      node.nodeValue = text.replace(/face[sd]? (?:a |the )?4% rate (?:starting |beginning |from )(?:January 1, )?2026/,
+        'face a 4% rate for applications filed on or after January 1, 2027');
+    }
+  }
+}
+
+/* ================================================
+   17. FIX "4% FOR ALL RESIDENTS" CLAIM
+   Reality: The enacted Act 38-2026 ties the 4% rate
+   exclusively to Act 60 decree holders, NOT all PR
+   residents. The earlier HB 505 draft language about
+   extending 4% to all residents was not enacted.
+   ================================================ */
+function fixFourPercentAllResidentsClaim() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Fix "even without an Act 60 decree" claim */
+    if (text.indexOf('without an Act 60 decree') >= 0 && text.indexOf('4%') >= 0) {
+      node.nodeValue = text.replace(
+        /[Ee]ven without an Act 60 decree,?\s*residents may pay just 4% on capital gains/,
+        'Under Act 38-2026, Individual Resident Investor decree holders who apply after December 31, 2026 will pay 4% on post-residency capital gains, interest, and dividends'
+      );
+    }
+
+    /* Fix "4% for all residents" or "all Puerto Rico residents" in context of capital gains */
+    text = node.nodeValue;
+    if (text.indexOf('all residents') >= 0 && text.indexOf('4%') >= 0 && text.indexOf('capital gains') >= 0) {
+      node.nodeValue = text.replace(
+        /4%[^.]*all (?:Puerto Rico )?residents/,
+        '4% preferential rate for Act 60 Individual Resident Investor decree holders (applications filed after December 31, 2026)'
+      );
+    }
+  }
+}
+
+/* ================================================
+   18. UPDATE CHARITABLE DONATION $10K → $15K (HB 505)
+   AND ADD CONSANGUINITY/AFFINITY RESTRICTIONS
+   Reality: HB 505 raised from $10,000 to $15,000.
+   Donations cannot go to entities controlled by
+   relatives within 4th degree consanguinity /
+   2nd degree affinity.
+   ================================================ */
+function updateCharitableDonationHB505() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Update $10,000 -> $15,000 in charitable donation context */
+    if (text.indexOf('$10,000') >= 0 && (text.indexOf('charitable') >= 0 || text.indexOf('donation') >= 0 || text.indexOf('annual') >= 0)) {
+      node.nodeValue = text.replace(/\$10,000/g, '$15,000');
+    }
+  }
+
+  /* Add restriction note after charitable donation list items or paragraphs */
+  if (path !== '/act-60-tax-incentives' && path !== '/act-60-compliance-requirements-audit-triggers') return;
+  if (document.getElementById('rl-donation-restrictions-note')) return;
+
+  var elements = document.querySelectorAll('.sqs-html-content li, .sqs-html-content p, .sqs-code-container li, .sqs-code-container p');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    if ((el.textContent.indexOf('$15,000') >= 0 || el.textContent.indexOf('charitable') >= 0) &&
+        el.textContent.indexOf('donation') >= 0) {
+      /* Check if note already exists */
+      if (el.parentNode.querySelector('#rl-donation-restrictions-note')) return;
+      var note = document.createElement('p');
+      note.id = 'rl-donation-restrictions-note';
+      note.style.cssText = 'margin:6px 0 14px;padding:10px 14px;background:#fdf6ec;border-left:3px solid #e67e22;border-radius:0 4px 4px 0;font-size:.82rem;color:#7d4e00;line-height:1.5;';
+      note.innerHTML = '<strong>Donation restrictions:</strong> At least half of the required donation must go to CECFL-approved organizations dedicated to <strong>eradicating child poverty</strong> in Puerto Rico. Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity. (Updated to $15,000 under Act 38-2026, effective for applications filed after December 31, 2026.)';
+      el.parentNode.insertBefore(note, el.nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
+   19. ADD PRE-MOVE CAPITAL GAINS TREATMENT
+   Reality: Pre-move appreciation is NOT exempt.
+   Within 10 years: federal rate. After 10 years: 5% PR.
+   Split holding period for crypto and other assets.
+   ================================================ */
+function addPreMoveCapitalGainsNote() {
+  if (path !== '/act-60-tax-incentives') return;
+  if (document.getElementById('rl-premove-gains-note')) return;
+
+  /* Find the "100% tax exemption on capital gains" element */
+  var elements = document.querySelectorAll('.sqs-html-content p, .sqs-html-content li, .sqs-code-container p, .sqs-code-container li');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    if (el.textContent.indexOf('capital gains accrued after') >= 0 || el.textContent.indexOf('100% tax exemption on capital gains') >= 0) {
+      var note = document.createElement('div');
+      note.id = 'rl-premove-gains-note';
+      note.style.cssText = 'margin:12px 0 18px;padding:16px 20px;background:#f5f0ff;border:1px solid #d4c5f0;border-left:4px solid #7c3aed;border-radius:4px;font-size:.86rem;color:#3b1f6e;line-height:1.6;';
+      note.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.92rem;">What About Pre-Move Capital Gains?</p>'
+        + '<p style="margin:0 0 6px;">The 0% (or 4% for post-2026 applicants) exemption applies <strong>only to gains accrued after</strong> you become a bona fide Puerto Rico resident. Appreciation that occurred <strong>before</strong> your move is treated differently:</p>'
+        + '<ul style="margin:6px 0;padding:0 0 0 20px;">'
+        + '<li style="margin:0 0 4px;"><strong>Realized within 10 years of residency:</strong> Subject to U.S. federal capital gains tax rates</li>'
+        + '<li style="margin:0 0 4px;"><strong>Realized after 10 years of PR residency:</strong> Subject to a 5% Puerto Rico tax rate</li>'
+        + '<li style="margin:0;"><strong>Cryptocurrency and other assets:</strong> A "split holding period" analysis is required to bifurcate pre-move vs. post-move appreciation. The IRS has issued memorandums specifically targeting aggressive sourcing of pre-residency crypto gains to Puerto Rico.</li>'
+        + '</ul>'
+        + '<p style="margin:6px 0 0;"><a href="/calendly" style="color:#5b21b6;text-decoration:underline;">Schedule a consultation</a> to discuss the tax treatment of your specific asset portfolio before relocating.</p>';
+      el.parentNode.insertBefore(note, el.nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
+   20. DISCLOSE SPECIFIC APPLICATION FEES
+   Reality: Site mentions "required fees" without
+   specifying amounts. Prospects need this for due diligence.
+   ================================================ */
+function addFeeDisclosure() {
+  if (path !== '/act-60-tax-incentives') return;
+  if (document.getElementById('rl-fee-disclosure')) return;
+
+  /* Find a reference to "required fees" or "application" in context of fees */
+  var elements = document.querySelectorAll('.sqs-html-content p, .sqs-html-content li, .sqs-code-container p, .sqs-code-container li');
+  var insertAfter = null;
+  for (var i = 0; i < elements.length; i++) {
+    var text = elements[i].textContent || '';
+    if ((text.indexOf('required fees') >= 0 || text.indexOf('application fee') >= 0 || text.indexOf('filing fee') >= 0) ||
+        (text.indexOf('annual report') >= 0 && text.indexOf('fee') >= 0)) {
+      insertAfter = elements[i];
+      break;
+    }
+  }
+
+  /* If no match, find the compliance/requirements section */
+  if (!insertAfter) {
+    var headings = document.querySelectorAll('.sqs-html-content h2, .sqs-html-content h3');
+    for (var j = 0; j < headings.length; j++) {
+      var hText = headings[j].textContent.toLowerCase();
+      if (hText.indexOf('compliance') >= 0 || hText.indexOf('requirement') >= 0 || hText.indexOf('cost') >= 0) {
+        insertAfter = headings[j];
+        break;
+      }
+    }
+  }
+
+  if (!insertAfter) return;
+
+  var table = document.createElement('div');
+  table.id = 'rl-fee-disclosure';
+  table.style.cssText = 'margin:16px 0 24px;padding:18px 22px;background:#f8f9fa;border:1px solid #dee2e6;border-radius:6px;font-size:.86rem;line-height:1.6;';
+  table.innerHTML = '<p style="margin:0 0 10px;font-weight:700;font-size:.92rem;">Act 60 Application & Annual Fees</p>'
+    + '<table style="width:100%;border-collapse:collapse;font-size:.84rem;">'
+    + '<thead><tr style="border-bottom:2px solid #bfa35d;text-align:left;"><th style="padding:6px 10px;">Fee Type</th><th style="padding:6px 10px;">Individual Investor (Ch. 2)</th><th style="padding:6px 10px;">Export Services (Ch. 3)</th></tr></thead>'
+    + '<tbody>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Application fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$1,000</strong></td></tr>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Entity registration</td><td style="padding:6px 10px;">$250</td><td style="padding:6px 10px;">$150</td></tr>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Annual report fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$500</strong></td></tr>'
+    + '<tr><td style="padding:6px 10px;">Annual charitable donation</td><td style="padding:6px 10px;">$15,000</td><td style="padding:6px 10px;">N/A</td></tr>'
+    + '</tbody></table>'
+    + '<p style="margin:8px 0 0;font-size:.8rem;color:#6c757d;"><em>Fees are subject to change. Contact our office for current fee schedules and a complete cost analysis.</em></p>';
+
+  insertAfter.parentNode.insertBefore(table, insertAfter.nextSibling);
+}
+
+/* ================================================
+   21. FIX CRYPTOCURRENCY OVERSIMPLIFICATION
+   Reality: Marketing says "0% tax on crypto acquired
+   after moving" without mentioning split holding period
+   or IRS enforcement memorandums.
+   ================================================ */
+function fixCryptoOversimplification() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Find "crypto" mentions alongside "0%" or "tax exemption" */
+    if ((text.indexOf('crypto') >= 0 || text.indexOf('cryptocurrency') >= 0 || text.indexOf('digital asset') >= 0) &&
+        (text.indexOf('0%') >= 0 || text.indexOf('tax exemption') >= 0 || text.indexOf('tax-free') >= 0)) {
+      /* Don't modify if already clarified */
+      if (text.indexOf('split holding') >= 0 || text.indexOf('pre-residency') >= 0) continue;
+      if (node.parentNode.getAttribute('data-crypto-clarified')) continue;
+      node.parentNode.setAttribute('data-crypto-clarified', 'true');
+
+      var note = document.createElement('em');
+      note.style.cssText = 'display:block;margin-top:6px;font-size:.88em;color:#555;line-height:1.5;';
+      note.innerHTML = '<strong>Important:</strong> This exemption applies only to gains accrued <em>after</em> establishing bona fide PR residency. Pre-residency crypto holdings are subject to a "split holding period" analysis, and pre-move appreciation remains subject to U.S. federal capital gains taxes. The IRS has issued enforcement memorandums specifically targeting aggressive crypto sourcing to Puerto Rico.';
+      node.parentNode.appendChild(note);
+    }
+  }
+}
+
+/* ================================================
+   22. CLARIFY EMPLOYMENT REQUIREMENTS ($3M THRESHOLD)
+   Reality: One FTE for businesses under $3M revenue;
+   three FTEs for industrial incentives. The owner can
+   count as the employee.
+   ================================================ */
+function fixEmploymentRequirements() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    if (text.indexOf('at least one full-time employee in addition to the owner') >= 0) {
+      node.nodeValue = text.replace(
+        'at least one full-time employee in addition to the owner within the first two years',
+        'at least one full-time Puerto Rico\u2013resident employee (which may include the business owner). Businesses with annual gross income exceeding $3 million have higher employment thresholds; industrial incentive grantees must maintain at least three employees'
+      );
+    }
+
+    /* Also fix "typically at least one full-time employee" variant */
+    text = node.nodeValue;
+    if (text.indexOf('typically at least one full-time employee') >= 0 && text.indexOf('in addition to the owner') >= 0) {
+      node.nodeValue = text.replace(
+        /typically at least one full-time employee in addition to the owner[^).]*/,
+        'at least one full-time Puerto Rico\u2013resident employee (the owner may count). Businesses exceeding $3M gross income have higher thresholds'
+      );
+    }
+  }
+}
+
+/* ================================================
+   23. FIX DECREE DURATION DESCRIPTION
+   Reality: Ch. 3 = 15 years + 15-year extension (30 total).
+   Ch. 2 = tied to statutory period (now 2055 under HB 505).
+   "15 years with option to extend" is vague/inaccurate.
+   ================================================ */
+function fixDecreeDuration() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    if (text.indexOf('15 years with the option to extend') >= 0 || text.indexOf('15 years with an option to extend') >= 0) {
+      node.nodeValue = text.replace(
+        /15 years with (?:the |an )?option to extend/,
+        '15 years, with an extension of 15 additional years for a total of up to 30 years (Export Services, Ch. 3). For Individual Resident Investors (Ch. 2), benefits are available through December 31, 2055 under Act 38-2026'
+      );
+    }
+  }
+}
+
+/* ================================================
+   24. SURFACE PR TRUST IRREVOCABILITY ON ESTATE PLANNING
+   Reality: Under PR Law 219-2012, trusts are irrevocable
+   by default. This critical fact is buried in resource
+   articles but absent from /estate-planning.
+   ================================================ */
+function addTrustIrrevocabilityNotice() {
+  if (path !== '/estate-planning') return;
+  if (document.getElementById('rl-trust-irrevocability-notice')) return;
+
+  var htmlContent = document.querySelector('.sqs-html-content');
+  if (!htmlContent) return;
+
+  /* Find the trusts section or a heading mentioning trusts */
+  var headings = htmlContent.querySelectorAll('h2, h3');
+  var insertBefore = null;
+  for (var i = 0; i < headings.length; i++) {
+    var hText = headings[i].textContent.toLowerCase();
+    if (hText.indexOf('trust') >= 0 || hText.indexOf('fideicomiso') >= 0) {
+      /* Insert after the first paragraph following this heading */
+      var sibling = headings[i].nextElementSibling;
+      while (sibling && sibling.tagName === 'P') {
+        sibling = sibling.nextElementSibling;
+      }
+      insertBefore = sibling || headings[i].nextElementSibling;
+      break;
+    }
+  }
+
+  var notice = document.createElement('div');
+  notice.id = 'rl-trust-irrevocability-notice';
+  notice.style.cssText = 'margin:20px 0;padding:16px 20px;background:#fff8f0;border:1px solid #f0d4a8;border-left:4px solid #d4870e;border-radius:4px;font-size:.86rem;color:#5a3e00;line-height:1.6;';
+  notice.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.92rem;">Puerto Rico Trusts Are Irrevocable by Default</p>'
+    + '<p style="margin:0 0 6px;">Under the Puerto Rico Trust Act (Ley 219-2012), trusts are <strong>irrevocable by default</strong> unless the trust instrument expressly reserves the grantor\u2019s right to revoke or modify. This is a critical distinction from many mainland states, where revocable trusts are the norm.</p>'
+    + '<p style="margin:0;">For clients relocating from the mainland, this means existing mainland trust structures may not function as expected under Puerto Rico law. <a href="/resources/what-is-puerto-rico-trust" style="color:#8b5e00;text-decoration:underline;">Learn more about PR trust fundamentals</a> or <a href="/calendly" style="color:#8b5e00;text-decoration:underline;">schedule a consultation</a> to review your existing trust arrangements.</p>';
+
+  if (insertBefore) {
+    insertBefore.parentNode.insertBefore(notice, insertBefore);
+  } else {
+    /* Fallback: insert before FAQ or CTA section */
+    var allH = htmlContent.querySelectorAll('h2');
+    for (var j = 0; j < allH.length; j++) {
+      if (allH[j].textContent.toLowerCase().indexOf('frequently') >= 0 || allH[j].textContent.toLowerCase().indexOf('contact') >= 0) {
+        htmlContent.insertBefore(notice, allH[j]);
+        return;
+      }
+    }
+    htmlContent.appendChild(notice);
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -615,6 +963,17 @@ function runLegalFixes() {
   fixJudgeGelpiReference();
   fixAct60ExemptionPercentages();
   clarify183DayPresenceTest();
+  /* CPA Legal Claims Check — new fixes */
+  addSmallBusinessExemptionNote();
+  fixConflictingAct38Dates();
+  fixFourPercentAllResidentsClaim();
+  updateCharitableDonationHB505();
+  addPreMoveCapitalGainsNote();
+  addFeeDisclosure();
+  fixCryptoOversimplification();
+  fixEmploymentRequirements();
+  fixDecreeDuration();
+  addTrustIrrevocabilityNotice();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

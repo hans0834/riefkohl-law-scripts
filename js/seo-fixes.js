@@ -616,6 +616,151 @@ var SEO = {
     schema: null
   },
 
+  /* ---- CPA Legal Claims Check — New Resource Pages ---- */
+  '/resources/act-38-2026-hb-505': {
+    h1: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
+    meta: 'Comprehensive legal analysis of Act 38-2026 (HB 505): new 4% rate for post-2026 applicants, grandfathering provisions, $15K donation, program extension to 2055.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is the new tax rate under Act 38-2026 for Act 60 investors?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Applications filed on or after January 1, 2027 will be subject to a 4% preferential tax rate on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are existing Act 60 decree holders affected by Act 38-2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Existing decree holders are grandfathered under their current terms and retain the 0% rate. Applications filed before December 31, 2026 also qualify for the grandfathered 0% rate.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long is the Act 60 program extended under Act 38-2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Act 38-2026 extends the Individual Resident Investor program through December 31, 2055, from the prior 2035 sunset date.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/irs-enforcement-act-60': {
+    h1: 'IRS Enforcement of Act 60: Campaign 685, Criminal Prosecutions & Compliance Risks',
+    meta: 'IRS Compliance Campaign 685 targets Act 60 decree holders. Learn about criminal prosecutions, GAO reports, and why you need attorney-client privilege.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Does the IRS have jurisdiction in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. The IRS has full enforcement jurisdiction in Puerto Rico. IRC \u00a7933 provides an exclusion from federal income tax for PR-source income of bona fide residents, but does not limit IRS authority. Act 60 decree holders must file Form 1040 and comply with FBAR and FATCA requirements.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is IRS Compliance Campaign 685?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Campaign 685 is a dedicated IRS enforcement initiative targeting Act 60/22 decree holders, with 12 staff members focused on auditing bona fide residency compliance, income sourcing, and pre-move capital gains treatment.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/why-law-firm-act-60': {
+    h1: 'Why Hire a Law Firm for Act 60 Planning?',
+    meta: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 why Act 60 planning requires legal counsel, not just a CPA.',
+    schema: null
+  },
+  '/resources/compliance-certificate-act-52': {
+    h1: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
+    meta: 'Act 52-2022 requires biennial compliance certification for all Act 60 decree holders. Learn about AUP engagements and what happens if you don\u2019t renew.',
+    schema: null
+  },
+  '/resources/bona-fide-residency-guide': {
+    h1: 'Complete Guide to Bona Fide Residency Under IRC \u00a7937',
+    meta: 'All three IRC \u00a7937 residency tests explained: presence (with five alternative paths), tax home, and closer connection. Plus the difference between requirements and supporting evidence.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What are the three tests for bona fide residency in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'IRC \u00a7937(a) requires satisfying three tests: (1) the Presence Test (183 days or alternative paths), (2) the Tax Home Test (your principal place of business must be in PR), and (3) the Closer Connection Test (no closer connection to the U.S. or another country). All three must be met simultaneously.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is the 183-day rule the only way to satisfy the presence test?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. The regulations under \u00a71.937-1 provide five alternative paths, including a 549-day/three-year test, a no-significant-connection test, a year-of-move safe harbor, and transitional rules for existing PR residents.'
+          }
+        }
+      ]
+    }
+  },
+
+  /* ---- Migrated Blog Post SEO (existing resource subpages) ---- */
+  '/resources/act-60-estate-planning-mistakes': {
+    h1: '5 Critical Mistakes Act 60 Holders Make with Estate Planning',
+    meta: 'The five most common estate planning mistakes Act 60 decree holders make when relocating to Puerto Rico, and how to avoid them.',
+    schema: null
+  },
+  '/resources/trust-vs-will-puerto-rico': {
+    h1: 'Puerto Rico Trust vs. Will: Which Do You Need?',
+    meta: 'Side-by-side comparison of trusts and wills under Puerto Rico law. Probate, costs, privacy, asset protection, and when you need both.',
+    schema: null
+  },
+  '/resources/forced-heirship-estate-plan': {
+    h1: 'How Forced Heirship Affects Your Estate Plan',
+    meta: 'Understanding Puerto Rico\u2019s leg\u00EDtima and planning strategies that work within forced heirship rules under the 2020 Civil Code.',
+    schema: null
+  },
+  '/resources/asset-protection-irrevocable-trusts': {
+    h1: 'Asset Protection with Irrevocable Trusts in Puerto Rico',
+    meta: 'How irrevocable trusts under Puerto Rico Law 219-2012 protect assets from creditors, lawsuits, and estate taxes.',
+    schema: null
+  },
+  '/resources/complete-guide-puerto-rico-trusts': {
+    h1: 'Complete Guide to Puerto Rico Trusts',
+    meta: 'Everything you need to know about trusts under Puerto Rico Law 219-2012. Types, benefits, costs, and estate planning strategies.',
+    schema: null
+  },
+  '/resources/fideicomiso-irrevocable-puerto-rico': {
+    h1: 'Fideicomiso Irrevocable en Puerto Rico: Gu\u00EDa Completa',
+    meta: 'Gu\u00EDa completa sobre fideicomisos irrevocables bajo la Ley 219-2012. Protecci\u00F3n de activos, beneficios contributivos y planificaci\u00F3n sucesoral.',
+    schema: null
+  },
+  '/resources/planificacion-sucesoral-puerto-rico': {
+    h1: 'Planificaci\u00F3n Sucesoral en Puerto Rico',
+    meta: 'Todo lo que necesita saber sobre planificaci\u00F3n sucesoral en Puerto Rico. Leg\u00EDtima, testamentos, fideicomisos, poderes y directivas de salud.',
+    schema: null
+  },
+  '/resources/ley-60-guia-inversionistas': {
+    h1: 'Ley 60: Gu\u00EDa Completa para Inversionistas Individuales',
+    meta: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.',
+    schema: null
+  },
+  '/resources/declaratoria-de-herederos-puerto-rico': {
+    h1: 'Proceso de Declaratoria de Herederos en Puerto Rico',
+    meta: 'Gu\u00EDa del proceso de declaratoria de herederos en Puerto Rico. Requisitos, plazos, costos y c\u00F3mo evitarlo con fideicomisos.',
+    schema: null
+  },
+
   /* ---- CPA Referral Landing Page ---- */
   '/cpa-referral': {
     h1: 'For CPA-Referred Clients — Estate Planning & Trust Services',

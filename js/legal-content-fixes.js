@@ -22,6 +22,16 @@
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
 
+/* Helper: check if a node is inside one of our injected elements (rl- prefixed IDs) */
+function isInsideInjectedElement(node) {
+  var el = node.parentNode;
+  while (el && el !== document.body) {
+    if (el.id && el.id.indexOf('rl-') === 0) return true;
+    el = el.parentNode;
+  }
+  return false;
+}
+
 /* ================================================
    1. FIX ULLCA MISATTRIBUTION (/business-formation)
    Reality: PR LLCs are governed by Chapter XIX of the
@@ -440,11 +450,11 @@ function fixComplianceCharitableDonation() {
   var allP = document.querySelectorAll('.sqs-html-content p, .sqs-code-container p');
   for (var i = 0; i < allP.length; i++) {
     var p = allP[i];
-    /* Fix compliance article */
+    /* Fix compliance article — update amount to reflect HB 505 ($15K total, $7,500 child poverty) */
     if (p.textContent.indexOf('$5,000 directed to a qualifying Puerto Rico nonprofit organization') >= 0) {
       p.innerHTML = p.innerHTML.replace(
         'at least $5,000 directed to a qualifying Puerto Rico nonprofit organization',
-        'at least $5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
+        'at least $7,500 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
       );
     }
   }
@@ -458,7 +468,7 @@ function fixComplianceCharitableDonation() {
           el.textContent.indexOf('$10,000 to qualifying Puerto Rico nonprofits') >= 0) {
         el.innerHTML = el.innerHTML.replace(
           /\$10,000[^<]*(charitable donation|to qualifying)[^<]*/,
-          '$10,000 annual charitable donation (at least $5,000 to CECFL-approved organizations focused on eradicating child poverty)'
+          '$15,000 annual charitable donation (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty)'
         );
       }
     }
@@ -536,17 +546,27 @@ function fixAct60ExemptionPercentages() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    if (isInsideInjectedElement(node)) continue;
+
     var text = node.nodeValue;
 
     /* Fix "75% exemption on municipal" -> "50% exemption on municipal" */
+    /* Use targeted replacement to avoid changing unrelated 75% figures */
     if (text.indexOf('75%') >= 0 && (text.indexOf('municipal') >= 0 || text.indexOf('patente') >= 0)) {
-      node.nodeValue = text.replace(/75%/g, '50%');
+      node.nodeValue = text.replace(/75%\s*(exemption|exenci[oó]n)/g, '50% $1');
+      /* Fallback: if no "exemption" follows, replace the first 75% near municipal */
+      if (node.nodeValue.indexOf('75%') >= 0 && (node.nodeValue.indexOf('municipal') >= 0 || node.nodeValue.indexOf('patente') >= 0)) {
+        node.nodeValue = node.nodeValue.replace('75%', '50%');
+      }
     }
 
     /* Fix "60% exemption on...property" -> "75% exemption on...property" */
     text = node.nodeValue; /* re-read after possible change */
     if (text.indexOf('60%') >= 0 && text.indexOf('property') >= 0) {
-      node.nodeValue = text.replace(/60%/g, '75%');
+      node.nodeValue = text.replace(/60%\s*(exemption|exenci[oó]n)/g, '75% $1');
+      if (node.nodeValue.indexOf('60%') >= 0 && node.nodeValue.indexOf('property') >= 0) {
+        node.nodeValue = node.nodeValue.replace('60%', '75%');
+      }
     }
   }
 }
@@ -635,6 +655,8 @@ function fixConflictingAct38Dates() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    /* Skip nodes inside our own injected elements */
+    if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
     /* Fix "after 2025" in context of Act 60 rate changes */
@@ -668,6 +690,7 @@ function fixFourPercentAllResidentsClaim() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
     /* Fix "even without an Act 60 decree" claim */
@@ -701,10 +724,13 @@ function updateCharitableDonationHB505() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
-    /* Update $10,000 -> $15,000 in charitable donation context */
-    if (text.indexOf('$10,000') >= 0 && (text.indexOf('charitable') >= 0 || text.indexOf('donation') >= 0 || text.indexOf('annual') >= 0)) {
+    /* Update $10,000 -> $15,000 in charitable donation context only */
+    if (text.indexOf('$10,000') >= 0 &&
+        (text.indexOf('charitable') >= 0 || text.indexOf('donation') >= 0) &&
+        text.indexOf('report fee') < 0 && text.indexOf('application fee') < 0) {
       node.nodeValue = text.replace(/\$10,000/g, '$15,000');
     }
   }
@@ -821,10 +847,16 @@ function addFeeDisclosure() {
    or IRS enforcement memorandums.
    ================================================ */
 function fixCryptoOversimplification() {
+  /* Skip if the pre-move capital gains note already covers crypto (avoids duplicate content) */
+  if (document.getElementById('rl-premove-gains-note')) return;
+
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
     var text = node.nodeValue;
+
+    /* Skip nodes inside elements we injected */
+    if (node.parentNode.id && node.parentNode.id.indexOf('rl-') === 0) continue;
 
     /* Find "crypto" mentions alongside "0%" or "tax exemption" */
     if ((text.indexOf('crypto') >= 0 || text.indexOf('cryptocurrency') >= 0 || text.indexOf('digital asset') >= 0) &&
@@ -852,6 +884,7 @@ function fixEmploymentRequirements() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
     if (text.indexOf('at least one full-time employee in addition to the owner') >= 0) {
@@ -882,6 +915,7 @@ function fixDecreeDuration() {
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   while (walker.nextNode()) {
     var node = walker.currentNode;
+    if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
     if (text.indexOf('15 years with the option to extend') >= 0 || text.indexOf('15 years with an option to extend') >= 0) {

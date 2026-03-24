@@ -981,6 +981,23 @@ function addTrustIrrevocabilityNotice() {
 }
 
 /* ================================================
+   CLEANUP: Fix double-word artifacts from replacements
+   ================================================ */
+function cleanupDoubleWords() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+    if (text.indexOf('charitable charitable') >= 0) {
+      node.nodeValue = text.replace(/charitable charitable/g, 'charitable');
+    }
+    if (text.indexOf('donation donation') >= 0) {
+      node.nodeValue = node.nodeValue.replace(/donation donation/g, 'donation');
+    }
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -999,6 +1016,8 @@ function runLegalFixes() {
   fixJudgeGelpiReference();
   fixAct60ExemptionPercentages();
   clarify183DayPresenceTest();
+  /* Clean up any double-word artifacts from prior replacements */
+  cleanupDoubleWords();
   /* CPA Legal Claims Check — new fixes */
   addSmallBusinessExemptionNote();
   fixConflictingAct38Dates();

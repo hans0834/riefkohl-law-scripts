@@ -118,6 +118,22 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Riefkohl Law offers flat-fee estate planning services, providing cost transparency from the start. The fee depends on the complexity of your plan — a basic will differs in cost from a comprehensive trust-based estate plan. Contact us for a free strategy call to discuss your needs and receive a specific quote.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What legal documents do I need after getting my Act 60 decree?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'After receiving your Act 60 decree, you should update or create several legal documents: a Puerto Rico-compliant will that accounts for forced heirship rules, a trust under Law 219-2012 for asset protection and tax planning, updated powers of attorney valid under PR law, healthcare directives, and domicile change documentation. Your mainland estate plan likely needs revision to work within Puerto Rico\'s civil law framework.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How does the 2055 extension affect estate planning for Act 60 holders?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Act 38-2026 extended the Act 60 program through 2055, creating a 30-year planning horizon. This makes multi-generational trust structures more practical and increases the importance of coordinating your estate plan with your decree benefits. Since decrees are non-transferable at death, strategic trust planning is essential to preserve wealth accumulated under the incentive.'
+          }
         }
       ]
     }
@@ -151,6 +167,46 @@ var SEO = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes. The IRS actively scrutinizes Act 60 decree holders, particularly regarding income sourcing and residency compliance. An experienced Act 60 attorney can help ensure your documentation supports your residency position, structure your affairs for compliance, and represent you if the IRS challenges your Act 60 benefits.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is Act 38-2026 and how does it affect Act 60 decrees?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Act 38-2026 extended the Act 60 Individual Resident Investor incentive program through December 31, 2055. This 30-year extension makes long-term estate planning and multi-generational trust strategies significantly more viable for decree holders. Existing decree holders should review their estate plans to take advantage of the extended planning horizon.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Act 38-2026 affect my estate plan?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. The extension of Act 60 incentives to 2055 means your estate plan should account for a much longer planning horizon. Multi-generational trust structures become more practical, and strategies for preserving wealth accumulated under your decree — including decree succession planning and coordination with forced heirship rules — should be reviewed with an attorney.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I need a lawyer in addition to my CPA for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. While your CPA handles tax compliance and filing, an attorney addresses the legal structures that protect your Act 60 benefits — trust creation under Law 219-2012, domicile change documentation, property purchase review, estate planning that accounts for forced heirship, and decree succession planning. These are legal matters that fall outside the scope of accounting services.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is decree succession planning?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Act 60 decrees are personal and non-transferable — they do not pass to your heirs at death. Decree succession planning involves structuring your estate to preserve the wealth accumulated under your decree\'s tax benefits, using tools like irrevocable trusts, strategic asset titling, and coordination with forced heirship rules under Puerto Rico\'s Civil Code.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can my CPA set up a trust for me in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Trust creation in Puerto Rico requires legal counsel. Puerto Rico trusts are governed by Law 219-2012 and operate under a civil law framework that differs significantly from mainland common law trusts. The trust instrument must comply with specific statutory requirements, and only an attorney can draft, review, and execute the trust deed and ensure compliance with forced heirship rules.'
           }
         }
       ]
@@ -552,6 +608,67 @@ var SEO = {
   '/resources/mainland-trust-to-puerto-rico': {
     h1: 'Bringing Your Mainland Trust to Puerto Rico: A Guide for Act 60 Holders',
     meta: 'What Section 45147 protects (and doesn\u2019t) when you bring a mainland trust to PR. Governing law risks, civil law gaps, and practical steps.',
+    schema: null
+  },
+  '/resources/act-38-2026-trust-planning': {
+    h1: 'Act 38-2026 and Long-Term Trust Planning: What the 2055 Extension Means',
+    meta: 'Act 38-2026 extended Act 60 incentives to 2055. Learn how this 30-year horizon changes trust planning strategies for decree holders in Puerto Rico.',
+    schema: null
+  },
+
+  /* ---- CPA Referral Landing Page ---- */
+  '/cpa-referral': {
+    h1: 'For CPA-Referred Clients — Estate Planning & Trust Services',
+    meta: 'Your CPA handles the tax strategy. We handle the legal structure. Puerto Rico trust creation, estate planning, and decree compliance for Act 60 holders.',
+    schema: null
+  },
+
+  /* ---- CPA Bridge + Content Gap Blog Posts ---- */
+  '/blog/irs-audit-triggers-act60': {
+    h1: 'What Triggers an IRS Act 60 Audit: The 7 Red Flags',
+    meta: 'Learn the 7 red flags that trigger IRS audits of Act 60 decree holders. Income sourcing errors, presence test failures, and how to protect yourself.',
+    schema: null
+  },
+  '/blog/irs-audit-process-act60': {
+    h1: 'What to Expect During an Act 60 Compliance Examination',
+    meta: 'Step-by-step guide to the IRS Act 60 audit process. Document requests, interviews, residency examinations, and why you need legal counsel.',
+    schema: null
+  },
+  '/blog/audit-proof-presence-test-act60': {
+    h1: 'How to Build an Audit-Proof Presence Test File',
+    meta: 'Comprehensive guide to documenting your Act 60 bona fide residency. Physical presence, tax home, closer connection — with annual checklist.',
+    schema: null
+  },
+  '/blog/act60-divorce-family-law': {
+    h1: 'Act 60 and Divorce: What Happens to Your Decree in a Puerto Rico Family Law Case?',
+    meta: 'How divorce affects your Act 60 decree, community property, presence test, and estate plan under Puerto Rico civil law.',
+    schema: null
+  },
+  '/blog/leaving-puerto-rico-exit-planning': {
+    h1: 'Leaving Puerto Rico: Exit Planning for Act 60 Decree Holders',
+    meta: 'Tax implications of relinquishing your Act 60 decree. Exit year income sourcing, state re-entry rules, and orderly departure steps.',
+    schema: null
+  },
+  '/blog/act60-crypto-digital-assets': {
+    h1: 'Act 60 and Cryptocurrency: Conservative Compliance for Digital Asset Investors',
+    meta: 'Audit-proof crypto structuring under Act 60. Income sourcing for digital assets, IRS scrutiny, and conservative compliance strategies.',
+    schema: null
+  },
+  '/blog/build-act60-advisory-team': {
+    h1: 'How to Build Your Act 60 Advisory Team: The 5 Professionals Every Decree Holder Needs',
+    meta: 'The 5 professionals every Act 60 decree holder needs: attorney, CPA, real estate agent, insurance advisor, and wealth manager.',
+    schema: null
+  },
+  '/blog/act60-vs-international-alternatives': {
+    h1: 'Act 60 vs. Dubai, Portugal, and Other International Tax Alternatives',
+    meta: 'Compare Act 60 to Dubai, Portugal NHR, Cayman Islands, and other global tax optimization options. Advantages, disadvantages, and who wins.',
+    schema: null
+  },
+
+  /* ---- Pricing Page ---- */
+  '/pricing': {
+    h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
+    meta: 'Riefkohl Law offers flat-fee pricing for all services. Trusts, estate planning, Act 60 advisory, and business formation. Know your investment upfront.',
     schema: null
   },
 
@@ -1301,7 +1418,11 @@ var HREFLANG_PAIRS = [
   ['testamentary-trust-succession-disputes-puerto-rico', 'testamentary-trust-succession-disputes-puerto-rico-es'],
   ['trust-property-disputes-puerto-rico', 'trust-property-disputes-puerto-rico-es'],
   ['trust-validity-challenges-puerto-rico', 'trust-validity-challenges-puerto-rico-es'],
-  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es']
+  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es'],
+  /* CPA bridge posts (Act 38-2026 + CPA content) */
+  ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
+  ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
+  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
 ];
 
 /* Core page pairs (non-blog) */

@@ -209,6 +209,19 @@ var breadcrumbs = {
     { name: 'What to Expect', url: '/resources-process' }
   ],
 
+  /* CPA Referral Landing Page */
+  '/cpa-referral': [
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'CPA-Referred Clients', url: '/cpa-referral' }
+  ],
+
+  /* Pricing Page */
+  '/pricing': [
+    { name: 'Home', url: '/' },
+    { name: 'Pricing', url: '/pricing' }
+  ],
+
   /* Resource subpages (ES) */
   '/recursos-es': [
     { name: 'Inicio', url: '/espanol' },

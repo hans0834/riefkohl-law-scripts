@@ -900,6 +900,30 @@ function demoteExtraH1s() {
   }
 }
 
+/* ===== DDEC CERTIFIED PROFESSIONAL BADGE ===== */
+/* Toggle: Set to true once the Section 6060.03 designation is obtained */
+var SHOW_CERTIFIED_BADGE = false;
+
+function injectCertifiedBadge() {
+  if (!SHOW_CERTIFIED_BADGE) return;
+  if (document.querySelector('.rl-certified-badge')) return;
+
+  var pages = ['/', '/about', '/about-us', '/services', '/act-60-tax-incentives', '/estate-planning', '/puerto-rico-trusts'];
+  if (pages.indexOf(PATH) === -1) return;
+
+  var badge = el('div', 'rl-certified-badge',
+    '<div class="rl-certified-inner">' +
+      '<span class="rl-certified-icon">\u2713</span>' +
+      '<span class="rl-certified-text">DDEC Certified Professional — Section 6060.03, Act 60-2019</span>' +
+    '</div>'
+  );
+
+  var hero = qs('.rl-hero') || qs('.page-section:first-child .content-wrapper');
+  if (hero) {
+    hero.parentNode.insertBefore(badge, hero.nextSibling);
+  }
+}
+
 /* ===== BOOT SEQUENCE ===== */
 function run() {
   try {
@@ -911,6 +935,7 @@ function run() {
       transformPracticePage();
     }
     demoteExtraH1s();
+    injectCertifiedBadge();
   } catch(e) {
     console.error('[rl-redesign]', e);
   }

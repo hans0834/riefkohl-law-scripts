@@ -161,9 +161,84 @@ function trackCalendlyPageView() {
   }
 }
 
+/* ===== UTM / REFERRAL ATTRIBUTION ===== */
+function setupUtmTracking() {
+  var params = new URLSearchParams(window.location.search);
+  var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'ref'];
+  var hasUtm = false;
+  var attribution = {};
+
+  for (var i = 0; i < utmKeys.length; i++) {
+    var val = params.get(utmKeys[i]);
+    if (val) {
+      attribution[utmKeys[i]] = val;
+      hasUtm = true;
+    }
+  }
+
+  if (!hasUtm) return;
+
+  /* Persist in sessionStorage so attribution survives page navigation */
+  try {
+    sessionStorage.setItem('rl_attribution', JSON.stringify(attribution));
+  } catch(e) { /* private browsing */ }
+
+  /* Detect CPA referral (ref=cpa, ref=duffycpa, utm_source contains 'cpa', etc.) */
+  var ref = (attribution.ref || '').toLowerCase();
+  var source = (attribution.utm_source || '').toLowerCase();
+  var isCpaReferral = ref.indexOf('cpa') > -1 || source.indexOf('cpa') > -1;
+
+  /* Fire attribution event */
+  trackEvent('referral_visit', {
+    event_category: 'attribution',
+    utm_source: attribution.utm_source || '',
+    utm_medium: attribution.utm_medium || '',
+    utm_campaign: attribution.utm_campaign || '',
+    ref: attribution.ref || '',
+    is_cpa_referral: isCpaReferral,
+    page_path: window.location.pathname
+  });
+
+  if (isCpaReferral) {
+    trackEvent('cpa_referral_visit', {
+      event_category: 'attribution',
+      event_label: ref || source,
+      ref_partner: ref || source,
+      page_path: window.location.pathname
+    });
+    /* Flag session for CPA-specific messaging */
+    try {
+      sessionStorage.setItem('rl_cpa_referral', ref || source);
+    } catch(e) { /* private browsing */ }
+  }
+}
+
+/* Helper: Get stored attribution data (for use by other scripts) */
+window.rlGetAttribution = function() {
+  try {
+    var data = sessionStorage.getItem('rl_attribution');
+    return data ? JSON.parse(data) : null;
+  } catch(e) { return null; }
+};
+
+/* Helper: Check if current visitor is a CPA referral */
+window.rlIsCpaReferral = function() {
+  try {
+    return !!sessionStorage.getItem('rl_cpa_referral');
+  } catch(e) { return false; }
+};
+
+/* Helper: Get CPA partner name */
+window.rlGetCpaPartner = function() {
+  try {
+    return sessionStorage.getItem('rl_cpa_referral') || '';
+  } catch(e) { return ''; }
+};
+
 /* ===== BOOT ===== */
 function run() {
   try {
+    setupUtmTracking();
     setupClickTracking();
     setupScrollTracking();
     setupTimeTracking();

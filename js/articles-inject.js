@@ -4,7 +4,7 @@
 var path = window.location.pathname.replace(/\/$/,'');
 
 /* Early exit: only run on /resources pages to avoid wasting CPU on other pages */
-if (path.indexOf('/resources') !== 0) return;
+if (path.indexOf('/resources') !== 0 && path !== '/cpa-referral') return;
 
 var ARTICLES = {
 '/resources/what-is-puerto-rico-trust': {
@@ -2908,10 +2908,215 @@ var ARTICLES = {
   +'<div class="rl-sub-cta"><p><strong>Need help with your trust structure?</strong></p><p>Schedule a consultation to discuss your Puerto Rico estate plan.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
   }
 },
+'/resources/act-38-2026-trust-planning': {
+  title: 'Act 38-2026 and Long-Term Trust Planning',
+  subtitle: 'How the 2055 extension transforms multi-generational trust strategies for Act 60 decree holders.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.82rem;color:#a8a298;margin-bottom:24px;"><em>By Hans Riefkohl, Riefkohl Law &bull; March 2026 &bull; Supplement: Act 38-2026 Special Report</em></p>'
+
+  +'<p>On January 10, 2026, Governor Pedro Pierluisi signed Act 38-2026 into law, extending the Act 60 Individual Resident Investor (IRI) program through December 31, 2055. For estate planners, this was not merely a legislative renewal\u2014it was a structural transformation. A program that previously faced periodic sunset uncertainty now has a thirty-year guaranteed horizon, and that changes virtually every calculation in multi-generational trust planning for Act 60 decree holders.</p>'
+
+  +'<p>This article examines what Act 38-2026 changed, why the extended horizon matters for trust strategy, and how practitioners and decree holders should adapt their estate plans to take full advantage of the new planning window.</p>'
+
+  +'<h2>What Act 38-2026 Changed</h2>'
+
+  +'<p>Act 38-2026 amended Section 6070.55 of the Puerto Rico Incentives Code (Act 60-2019) to extend the authorization for the IRI program from its prior sunset date to December 31, 2055. The core tax benefits remain unchanged: 100% exemption on interest and dividend income, 100% exemption on short-term capital gains, 100% exemption on long-term capital gains accrued after the decree holder\u2019s bona fide residency date (with a sliding scale for pre-residency appreciation), and special treatment of capital gains from the sale of securities acquired after becoming a bona fide resident. (Act 60-2019, \u00a76070.54.)</p>'
+
+  +'<p>What changed is the <em>duration of certainty</em>. Prior to Act 38-2026, the IRI program\u2019s continuity depended on periodic legislative renewal, creating planning risk for structures that depended on the program\u2019s ongoing existence. That risk has now been substantially mitigated through 2055.</p>'
+
+  +'<p>It is worth noting that existing decree holders also benefit from Act 38-2026. Under the program\u2019s grandfathering provisions, decree holders who obtained their decrees before any subsequent legislative changes (such as those proposed in House Bill 505, which would impose a 4% rate on passive income for new applicants) retain their original decree terms for the full fifteen-year decree period plus any renewal. The 2055 extension ensures the program itself will be available for decree renewals well beyond the current planning horizon.</p>'
+
+  +'<h2>Why a Thirty-Year Horizon Changes Everything</h2>'
+
+  +'<p>Trust planning is fundamentally about time horizons. The longer the period over which tax benefits can compound, the more powerful the planning structures become. Before Act 38-2026, advisors structuring trusts for Act 60 clients faced a recurring question: <em>what if the program expires?</em> That uncertainty constrained planning in several ways.</p>'
+
+  +'<p>First, advisors were reluctant to recommend complex, expensive trust structures when the underlying tax benefit might disappear in five or ten years. A <a href="/resources/what-is-puerto-rico-trust">Puerto Rico irrevocable trust</a> created under Law 219-2012 cannot be revoked once established (\u00a73352h). If the Act 60 program had expired, the trust would continue to exist but the tax benefits that justified its creation might have evaporated, leaving the client with an irrevocable structure that no longer served its original purpose.</p>'
+
+  +'<p>Second, multi-generational planning\u2014dynasty-style trusts, generation-skipping transfer (GST) strategies, and long-term wealth accumulation vehicles\u2014requires confidence that the legal and tax framework will remain stable over decades. A five-year sunset window is incompatible with a fifty-year trust.</p>'
+
+  +'<p>Third, the periodic uncertainty around program renewal created a planning paralysis. Clients delayed trust creation, waiting to see whether the program would be renewed, extended, or modified. Each legislative cycle introduced a planning gap during which new structures were not created and existing structures were not optimized.</p>'
+
+  +'<p>Act 38-2026 resolves all three of these constraints. A thirty-year horizon\u2014through 2055\u2014is long enough to justify dynasty-style trust planning, long enough for multi-generational wealth transfer strategies to compound meaningfully, and long enough to provide the certainty that sophisticated structures require.</p>'
+
+  +'<h2>Multi-Generational Trust Planning Is Now Viable</h2>'
+
+  +'<h3>Dynasty-Style Trusts</h3>'
+
+  +'<p>A dynasty trust is designed to hold and grow wealth across multiple generations without being subject to estate or gift tax at each generational transfer. Under mainland law, dynasty trusts are common in states like South Dakota, Nevada, and Alaska, which have abolished the rule against perpetuities. Puerto Rico\u2019s Trust Act (Law 219-2012) permits trust durations of up to the lifetime of the last surviving beneficiary named in the trust instrument, which can effectively span multiple generations when structured with successive beneficiary classes.</p>'
+
+  +'<p>With Act 38-2026\u2019s thirty-year extension, creating a Puerto Rico dynasty-style trust for an Act 60 decree holder now makes strategic sense. Wealth accumulated under the decree\u2019s tax exemptions\u2014capital gains, interest, dividends\u2014can be transferred into an irrevocable trust that will continue to benefit the decree holder\u2019s children and grandchildren. The trust itself, as an <a href="/resources/what-is-puerto-rico-trust">autonomous estate under Law 219-2012</a>, is a separate juridical person that owns property in its own right, providing structural separation from the decree holder\u2019s personal estate.</p>'
+
+  +'<h3>Generation-Skipping Transfer (GST) Strategies</h3>'
+
+  +'<p>The generation-skipping transfer tax (GST tax) is a federal tax imposed at a flat 40% rate on transfers that skip a generation\u2014for example, a grandparent transferring assets directly to a grandchild. Each individual has a GST exemption amount, which under the One Big Beautiful Bill Act (OBBBA) of 2025 has been made permanent at approximately $15 million (adjusted for inflation from the Tax Cuts and Jobs Act\u2019s doubled exemption, which was previously set to sunset after 2025).</p>'
+
+  +'<p>With a thirty-year Act 60 horizon, decree holders can now plan GST allocations with confidence that the underlying wealth accumulation will continue to benefit from Puerto Rico\u2019s tax exemptions. A properly structured trust can be designed to use the decree holder\u2019s full GST exemption to shield trust assets from GST tax for multiple generations, while the assets themselves continue to grow in a tax-advantaged environment.</p>'
+
+  +'<p>The coordination between the OBBBA\u2019s permanent $15 million exemption and Act 38-2026\u2019s thirty-year extension creates a historically unusual planning window. Decree holders can transfer up to $15 million (per individual, $30 million per married couple with proper <a href="/resources/ilits-and-slats">SLAT and ILIT planning</a>) into generation-skipping trusts, and the assets transferred can continue to grow free of Puerto Rico income tax on capital gains, interest, and dividends for up to three decades.</p>'
+
+  +'<h2>Impact on Existing Irrevocable Trusts</h2>'
+
+  +'<p>Decree holders who created irrevocable trusts under Law 219-2012 before Act 38-2026\u2019s passage face a practical question: <em>do I need to do anything?</em></p>'
+
+  +'<p>The short answer is that existing trusts remain valid and enforceable. An irrevocable trust created under Law 219-2012 does not expire or become invalid because of changes to the Act 60 program. The trust\u2019s legal existence as an autonomous estate is independent of the decree holder\u2019s tax benefits.</p>'
+
+  +'<p>However, the <em>strategy</em> behind existing trusts may now be worth revisiting. Trusts that were designed conservatively\u2014with shorter distribution timelines, limited beneficiary classes, or cautious investment mandates\u2014because of uncertainty about the program\u2019s duration can potentially be adapted to take advantage of the longer horizon.</p>'
+
+  +'<p>Puerto Rico law provides several mechanisms for modifying irrevocable trusts, as detailed in <a href="/resources/modifying-irrevocable-trusts">Article 3 of this series</a>. Section 3352h of Law 219-2012 allows the trustor to reserve modification powers in the original trust instrument, including the power to amend trust terms, substitute trustees, and add or remove beneficiaries. If the trust instrument includes these reserved powers, the trustor can adjust the trust\u2019s strategy to reflect the new planning reality without judicial intervention.</p>'
+
+  +'<p>For trusts that did not reserve adequate modification powers, the Trust Act provides additional pathways. Judicial modification under Section 3355a permits courts to modify trust terms when circumstances have materially changed since the trust\u2019s creation\u2014and the passage of Act 38-2026, which fundamentally altered the planning horizon, could constitute such a material change. Non-judicial settlement agreements among all interested parties offer another avenue, as do trust decanting provisions that allow the trustee to distribute trust property into a new trust with updated terms.</p>'
+
+  +'<h2>Decree Succession Planning: The Personal Nature of Act 60 Benefits</h2>'
+
+  +'<p>One of the most important\u2014and most frequently overlooked\u2014aspects of Act 60 planning is that <strong>decrees are personal and non-transferable</strong>. An IRI decree belongs to the individual who applied for and received it. It cannot be inherited, assigned, or transferred to a spouse, child, or trust. When the decree holder dies, the decree terminates. (Act 60-2019, \u00a76070.56.)</p>'
+
+  +'<p>This creates a critical planning gap. The wealth accumulated under the decree\u2019s tax benefits\u2014potentially decades of tax-free capital gains, interest, and dividends\u2014does not carry any special tax status after the decree holder\u2019s death. That wealth becomes part of the decree holder\u2019s estate and is subject to ordinary federal estate tax rules, Puerto Rico inheritance considerations, and the <a href="/resources/avoiding-probate-legitima">forced heirship provisions of the Civil Code</a>.</p>'
+
+  +'<p>Trust planning is the primary mechanism for addressing this gap. By transferring wealth into an irrevocable trust during the decree holder\u2019s lifetime, the decree holder can:</p>'
+
+  +'<ul>'
+  +'<li>Remove appreciating assets from the taxable estate, reducing federal estate tax exposure</li>'
+  +'<li>Establish a structure that continues to benefit the family after the decree terminates</li>'
+  +'<li>Create governance provisions that protect the family\u2019s wealth across generations</li>'
+  +'<li>Coordinate with forced heirship requirements proactively rather than leaving this to probate</li>'
+  +'</ul>'
+
+  +'<p>With Act 38-2026\u2019s thirty-year extension, the amount of wealth that could accumulate under a decree\u2019s tax benefits is substantially larger than under a shorter program horizon. This increases the importance\u2014and the urgency\u2014of trust-based succession planning.</p>'
+
+  +'<h2>Forced Heirship Coordination Under the Civil Code 2020</h2>'
+
+  +'<p>Puerto Rico is a forced heirship jurisdiction. Under the Civil Code of 2020 (Ley 55-2020), which took effect on November 28, 2020, <em>la leg\u00edtima</em> reserves one-half of the decedent\u2019s estate for the forced heirs (<em>herederos forzosos</em>)\u2014the decedent\u2019s children and descendants, and in some cases the surviving spouse. (CC 2020, Art. 1803.) This is a mandatory reserve that cannot be defeated by will, trust, or other disposition.</p>'
+
+  +'<p>The interaction between forced heirship and trust planning is one of the most complex areas of Puerto Rico estate law. A trust that purports to exclude forced heirs or distribute assets in a manner that infringes on <em>la leg\u00edtima</em> is subject to challenge and potential reduction (<em>acci\u00f3n de reducci\u00f3n</em>). As discussed in <a href="/resources/avoiding-probate-legitima">Article 4 of this series</a>, the key is to structure trusts that work <em>with</em> forced heirship rather than against it.</p>'
+
+  +'<p>For Act 38-2026 planning purposes, the extended horizon makes this coordination even more important. A trust designed to hold and grow wealth for thirty years will likely span the decree holder\u2019s lifetime, meaning the trust\u2019s distribution provisions must account for forced heirship claims that will arise at death. Best practice includes:</p>'
+
+  +'<ul>'
+  +'<li>Ensuring that the trust\u2019s distribution plan satisfies or exceeds the leg\u00edtima requirements</li>'
+  +'<li>Including explicit provisions acknowledging the forced heirship reserve</li>'
+  +'<li>Coordinating the trust\u2019s beneficiary designations with the decree holder\u2019s testamentary plan</li>'
+  +'<li>Reviewing the trust\u2019s compliance with forced heirship rules whenever the family structure changes (birth of children, divorce, remarriage)</li>'
+  +'</ul>'
+
+  +'<h2>Federal Estate Tax Coordination: The OBBBA\u2019s Permanent $15 Million Exemption</h2>'
+
+  +'<p>The One Big Beautiful Bill Act (OBBBA), signed into law in 2025, made the Tax Cuts and Jobs Act\u2019s doubled estate and gift tax exemption permanent. The federal estate tax exemption is now approximately $15 million per individual (adjusted annually for inflation), or roughly $30 million per married couple using portability. This exemption had been scheduled to sunset at the end of 2025, reverting to approximately $7 million per individual, but the OBBBA eliminated the sunset.</p>'
+
+  +'<p>For Act 60 decree holders, the combination of the OBBBA\u2019s permanent high exemption and Act 38-2026\u2019s extended program duration creates an unusually favorable planning environment. A married couple can transfer up to $30 million out of their combined estates without any federal estate or gift tax, and assets remaining in their estates benefit from Puerto Rico\u2019s tax exemptions on investment income during their lifetimes.</p>'
+
+  +'<p>However, practitioners should not assume that the high exemption eliminates the need for trust planning. Decree holders who have accumulated significant wealth under Act 60\u2019s benefits may have estates that exceed even the $30 million combined exemption. Moreover, the exemption amount, while now permanent, could be reduced by future legislation. Trust structures that remove appreciating assets from the estate\u2014such as <a href="/resources/ilits-and-slats">ILITs, SLATs</a>, and grantor retained annuity trusts (GRATs)\u2014remain important tools even in a high-exemption environment, because they lock in current exemption amounts and protect against future legislative changes.</p>'
+
+  +'<h2>Trust Modification Under Section 3352h</h2>'
+
+  +'<p>For decree holders with existing trusts created before Act 38-2026, the most practical question is how to adapt those structures to the new thirty-year horizon. Section 3352h of Law 219-2012 is the starting point.</p>'
+
+  +'<p>Section 3352h permits the trustor to reserve in the trust instrument the power to modify the trust\u2019s terms. The scope of reserved powers can include: amending distribution provisions, changing the trust\u2019s investment objectives, adding or removing beneficiaries, substituting trustees, and adjusting administrative provisions. If the original trust instrument includes a broad modification clause, the trustor can unilaterally update the trust\u2019s strategy to reflect the post-Act 38-2026 planning landscape.</p>'
+
+  +'<p>Common modifications that may be appropriate in light of Act 38-2026 include:</p>'
+
+  +'<ul>'
+  +'<li><strong>Extending distribution timelines.</strong> Trusts originally designed with shorter distribution schedules\u2014for example, distributing all assets to beneficiaries at age 35\u2014can be amended to provide for longer accumulation periods, allowing tax-advantaged growth to compound for additional years.</li>'
+  +'<li><strong>Expanding beneficiary classes.</strong> Adding grandchildren or future descendants as beneficiaries enables multi-generational planning that was previously considered too speculative given the program\u2019s uncertain duration.</li>'
+  +'<li><strong>Adjusting investment mandates.</strong> A thirty-year horizon supports a more growth-oriented investment strategy, which the trust\u2019s investment provisions should reflect.</li>'
+  +'<li><strong>Adding GST planning provisions.</strong> If the original trust did not allocate GST exemption or include generation-skipping provisions, a modification can add these features.</li>'
+  +'</ul>'
+
+  +'<p>For trusts that lack adequate reserved modification powers, the judicial modification pathway under Section 3355a or the non-judicial settlement agreement approach may be necessary. In either case, the passage of Act 38-2026 provides a strong factual basis for demonstrating the material change in circumstances that justifies modification.</p>'
+
+  +'<h2>Practical Steps for Decree Holders</h2>'
+
+  +'<p>If you hold an Act 60 IRI decree, the following steps will help you take full advantage of the planning opportunity created by Act 38-2026:</p>'
+
+  +'<p><strong>1. Review your existing estate plan.</strong> If your current plan was designed around a shorter Act 60 horizon, it likely needs updating. Have your attorney review your trust instruments, will, and beneficiary designations in light of the thirty-year extension.</p>'
+
+  +'<p><strong>2. Evaluate multi-generational structures.</strong> Consider whether a dynasty-style trust, GST-exempt trust, or expanded beneficiary structure is appropriate for your family\u2019s situation. The thirty-year horizon makes these structures viable in ways they were not before.</p>'
+
+  +'<p><strong>3. Coordinate with forced heirship requirements.</strong> Ensure that any trust modifications or new trust creations comply with the Civil Code 2020\u2019s leg\u00edtima provisions. This requires coordination between your trust counsel and any PR estate litigation specialist if family dynamics are complex.</p>'
+
+  +'<p><strong>4. Align federal and PR planning.</strong> Work with both your CPA and your attorney to coordinate the OBBBA\u2019s permanent exemption with your Act 60 trust strategy. The federal and Puerto Rico planning layers are independent but must be coordinated to avoid gaps or conflicts.</p>'
+
+  +'<p><strong>5. Ensure trust registration compliance.</strong> Following <em>Allio v. Santiago Chard\u00f3n</em>, 2026 TSPR 13, any new trust created in Puerto Rico must be registered in the Special Trust Registry. Unregistered trusts are null <em>ab initio</em>. This requirement applies to all new trusts and modifications that create new trust entities.</p>'
+
+  +'<p><strong>6. Act now, not later.</strong> The thirty-year horizon is an asset, but only if you use it. Every year of delay is a year of tax-advantaged compounding lost. The earlier you establish or update your trust structure, the more time the assets have to grow within the protected framework.</p>'
+
+  +'<p><em>Hans Riefkohl is an attorney at Riefkohl Law in San Juan, Puerto Rico, focusing on trusts, estate planning, and Act 60 advisory services.</em></p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Ready to plan for the long term?</strong></p><p>Schedule a consultation to review your estate plan in light of Act 38-2026.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+'/cpa-referral': {
+  title: 'For CPA-Referred Clients',
+  subtitle: 'Your CPA handles the tax strategy. We handle the legal structure.',
+  noSeriesNav: true,
+  content: function(){return ''
+  +'<div style="max-width:720px;margin:0 auto;">'
+
+  +'<div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:32px 28px;border-radius:10px;margin-bottom:32px;text-align:center;">'
+  +'<p style="color:#bfa35d;font-weight:700;font-size:.85rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">CPA Partner Referral</p>'
+  +'<p style="color:rgba(255,255,255,.92);font-size:1.05rem;line-height:1.6;margin:0;">Your CPA referred you because there are legal structures that only an attorney can create. Tax strategy and legal structure are two sides of the same coin\u2014your CPA optimizes the tax side, and we build the legal framework that makes it enforceable.</p>'
+  +'</div>'
+
+  +'<h2>Why Act 60 Requires Both a CPA and an Attorney</h2>'
+
+  +'<p>Act 60\u2019s Individual Resident Investor program provides powerful tax benefits\u2014but those benefits exist within a legal framework that requires specific legal structures to implement correctly. Your CPA can calculate the tax savings from a 0% capital gains rate, but only an attorney can create the irrevocable trust that protects those gains for your family, draft the domicile documentation that withstands an IRS residency audit, or ensure your estate plan complies with Puerto Rico\u2019s forced heirship rules.</p>'
+
+  +'<p>The most successful Act 60 relocations involve coordinated planning between a CPA and an attorney from the beginning. When the tax strategy and the legal structure are designed together, the result is a plan that is both tax-efficient and legally durable.</p>'
+
+  +'<h2 style="margin-top:36px;">Legal Services for Act 60 Investors</h2>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Trust Creation Under Law 219-2012</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Puerto Rico irrevocable trusts are the cornerstone of Act 60 estate planning. We draft and register trusts that serve as autonomous estates under PR law\u2014separate juridical persons that own property in their own right, provide structural asset protection, and facilitate tax-efficient wealth transfer. Every trust is registered in the Special Trust Registry as required by <em>Allio v. Santiago Chard\u00f3n</em> (2026).</p>'
+  +'</div>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Estate Planning with Forced Heirship Compliance</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Puerto Rico is a forced heirship jurisdiction. Under the Civil Code of 2020, <em>la leg\u00edtima</em> reserves 50% of your estate for forced heirs. Estate plans that work on the mainland may be partially invalid here. We structure wills, trusts, and beneficiary designations that comply with both PR forced heirship rules and federal estate tax requirements, including coordination with the OBBBA\u2019s permanent $15M exemption.</p>'
+  +'</div>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Domicile Change Legal Documentation</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Establishing bona fide residency in Puerto Rico requires more than a plane ticket and a lease. We prepare comprehensive domicile documentation packages\u2014including affidavits, voter registration coordination, driver\u2019s license guidance, and property connection records\u2014that create a defensible paper trail for IRS closer connection and residency tests.</p>'
+  +'</div>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Property Purchase Legal Review</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Purchasing real property in Puerto Rico involves a civil law conveyance system that differs significantly from mainland practice. All transfers require execution before a PR notary, and the PR Property Registry has specific requirements for recording. We review purchase agreements, coordinate with notaries, and ensure title is properly held\u2014whether individually, through an LLC, or in trust.</p>'
+  +'</div>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Decree Succession Planning</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Act 60 decrees are personal and non-transferable\u2014they terminate when the decree holder dies. The wealth accumulated under the decree\u2019s tax benefits needs a legal structure to survive the decree holder. We design trust-based succession plans that preserve decree-era wealth for the next generation while complying with forced heirship and federal estate tax rules.</p>'
+  +'</div>'
+
+  +'<div style="background:#f9f8f5;border-left:4px solid #bfa35d;padding:20px 24px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<h3 style="color:#1a2033;font-size:1rem;margin:0 0 8px;">Business Formation for Act 60 Export Services</h3>'
+  +'<p style="margin:0;font-size:.92rem;color:#4a4540;line-height:1.6;">Act 60\u2019s export services incentive (Chapter 3) requires a bona fide Puerto Rico entity providing eligible services to clients outside Puerto Rico. We form LLCs and corporations under PR law, draft operating agreements, and ensure the entity structure satisfies Act 60\u2019s substance and nexus requirements for the 4% corporate tax rate.</p>'
+  +'</div>'
+
+  +'<h2 style="margin-top:36px;">Practitioner-Grade Trust Knowledge</h2>'
+
+  +'<p>Our 14-article <a href="/resources" style="color:#a68c42;font-weight:600;">Puerto Rico Trust Law Series</a> is the most comprehensive publicly available resource on PR trust planning for Act 60 investors. Covering everything from the autonomous estate concept to advanced ILIT and SLAT structures, the series reflects the depth of analysis we bring to every client engagement. Your CPA can review the series to see how we approach the legal side of the planning equation.</p>'
+
+  +'<div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:36px 28px;border-radius:10px;margin:36px 0;text-align:center;">'
+  +'<h2 style="color:#fff;font-size:1.3rem;margin:0 0 12px;font-family:var(--heading-font-font-family,Georgia,serif);">Schedule a Consultation</h2>'
+  +'<p style="color:rgba(255,255,255,.85);font-size:.95rem;margin:0 0 20px;line-height:1.6;">Let\u2019s discuss the legal structures that support your Act 60 tax strategy.</p>'
+  +'<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:20px;">'
+  +'<a href="/calendly" style="display:inline-block;background:#bfa35d;color:#fff;padding:12px 28px;border-radius:6px;font-weight:700;font-size:.95rem;text-decoration:none;">Book a Free Strategy Call</a>'
+  +'</div>'
+  +'<p style="color:rgba(255,255,255,.7);font-size:.88rem;margin:16px 0 0;"><strong>Phone:</strong> <a href="tel:7872361657" style="color:#bfa35d;text-decoration:none;">(787) 236-1657</a> &nbsp;&bull;&nbsp; <strong>Email:</strong> <a href="mailto:hans@riefkohllaw.com" style="color:#bfa35d;text-decoration:none;">hans@riefkohllaw.com</a></p>'
+  +'</div>'
+
+  +'<p style="font-size:.88rem;color:#706b62;text-align:center;margin-top:24px;"><em>Your CPA can contact us directly to coordinate on shared clients. We are happy to participate in joint planning calls and to align our legal structures with your CPA\u2019s tax strategy.</em></p>'
+
+  +'</div>'
+  }
+},
 };
 
 /* Series navigation HTML appended to each article */
-/* The series has 12 numbered parts + 2 supplements. */
+/* The series has 12 numbered parts + 3 supplements. */
 var SERIES_NAV = '<nav class="rl-series-nav" role="navigation" aria-label="Puerto Rico Trust Law Article Series">'
 +'<h3>Puerto Rico Trust Law Series</h3>'
 +'<ul>'
@@ -2929,6 +3134,7 @@ var SERIES_NAV = '<nav class="rl-series-nav" role="navigation" aria-label="Puert
 +'<li><a href="/resources/family-trust-pitfalls"><span class="part-num">Part 12</span>Family Trust Pitfalls</a></li>'
 +'<li><a href="/resources/foreign-trust-trap"><span class="part-num">Supplement</span>The Foreign Trust Trap</a></li>'
 +'<li><a href="/resources/mainland-trust-to-puerto-rico"><span class="part-num">Supplement</span>Bringing Your Mainland Trust to PR</a></li>'
++'<li><a href="/resources/act-38-2026-trust-planning"><span class="part-num">Supplement</span>Act 38-2026 &amp; Long-Term Planning</a></li>'
 +'</ul></nav>';
 
 /* Inject article subpage — follows same pattern as resources-fix.html injectSubpage() */
@@ -2966,7 +3172,7 @@ function injectArticle() {
   wrapper.innerHTML = ''
     + '<div class="rl-sub-hero"><h1>' + page.title + '</h1><p>' + page.subtitle + '</p></div>'
     + page.content()
-    + seriesNavWithCurrent
+    + (page.noSeriesNav ? '' : seriesNavWithCurrent)
     + '<div class="rl-sub-disclaimer" style="margin-top:32px;padding-top:20px;border-top:1px solid #e8e9ee;font-size:.78rem;color:#706b62;line-height:1.5;text-align:center;">'
     + '<p>The information on this page is for general educational purposes only and does not constitute legal or tax advice. Tax outcomes depend on individual circumstances including residency, income sourcing, decree terms, and applicable law. No attorney-client relationship is formed by viewing this content. For advice specific to your situation, <a href="/calendly" style="color:#a68c42;">schedule a consultation</a>.</p>'
     + '</div>';
@@ -3008,7 +3214,8 @@ function injectArticleHub() {
       cards: [
         { part: '1', title: 'What Is a Puerto Rico Trust?', desc: 'The autonomous estate concept, Law 219-2012, and why PR trusts are fundamentally different from mainland trusts.', url: '/resources/what-is-puerto-rico-trust' },
         { part: '2', title: 'Trust Planning for Act 60 Investors', desc: 'Maintain your mainland revocable trust or create a new PR irrevocable trust? The central decision framework.', url: '/resources/act-60-trust-planning' },
-        { part: 'Guide', title: 'Bringing Your Mainland Trust to PR', desc: 'What Section 45147 protects, what it doesn\u2019t, and how to avoid the civil law gap.', url: '/resources/mainland-trust-to-puerto-rico' }
+        { part: 'Guide', title: 'Bringing Your Mainland Trust to PR', desc: 'What Section 45147 protects, what it doesn\u2019t, and how to avoid the civil law gap.', url: '/resources/mainland-trust-to-puerto-rico' },
+        { part: 'Guide', title: 'Act 38-2026 & Long-Term Planning', desc: 'How the 2055 extension transforms multi-generational trust strategies.', url: '/resources/act-38-2026-trust-planning' }
       ]
     },
     {
@@ -3110,7 +3317,8 @@ function injectArticleSchema() {
     '/resources/fiduciary-duties-trustees': ['2026-03-15', '2026-03-15'],
     '/resources/family-trust-pitfalls': ['2026-03-15', '2026-03-15'],
     '/resources/foreign-trust-trap': ['2026-03-15', '2026-03-15'],
-    '/resources/mainland-trust-to-puerto-rico': ['2026-03-15', '2026-03-15']
+    '/resources/mainland-trust-to-puerto-rico': ['2026-03-15', '2026-03-15'],
+    '/resources/act-38-2026-trust-planning': ['2026-03-24', '2026-03-24']
   };
   var dates = articleDates[path] || ['2026-03-15', '2026-03-15'];
 

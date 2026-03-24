@@ -8,6 +8,66 @@
 
 var PATH = window.location.pathname.replace(/\/+$/, '') || '/';
 var IS_ES = PATH.indexOf('/espanol') === 0 || PATH.indexOf('/recursos-') === 0;
+var IS_ACT60_PAGE = PATH.indexOf('/act-60') > -1 || PATH.indexOf('/ley-60') > -1 || PATH.indexOf('/cpa-referral') > -1;
+var IS_CPA_REF = typeof window.rlIsCpaReferral === 'function' && window.rlIsCpaReferral();
+
+/* ===== LEAD MAGNET CONFIGURATION ===== */
+/* Select the most relevant lead magnet based on page context and referral source */
+var LEAD_MAGNETS = {
+  /* CPA-referred visitors on any page */
+  cpa: {
+    heading_en: 'Free Guide: What Your Act 60 CPA Can\'t Do For You',
+    heading_es: 'Guía Gratuita: Lo Que Su Contador de Ley 60 No Puede Hacer Por Usted',
+    desc_en: 'The 6 legal needs every Act 60 decree holder has — that only an attorney can address. Trusts, forced heirship, decree succession, and more.',
+    desc_es: 'Las 6 necesidades legales que todo decreto Ley 60 tiene — que solo un abogado puede atender.',
+    badge_en: 'CPA Clients',
+    badge_es: 'Clientes CPA',
+    btn_en: 'Get the Guide',
+    btn_es: 'Obtener la Guía'
+  },
+  /* Act 38-2026 / Act 60 pages */
+  act38: {
+    heading_en: 'Free Checklist: 7 Estate Planning Steps After the 2055 Extension',
+    heading_es: 'Lista de Verificación: 7 Pasos de Planificación Sucesoral Tras la Extensión al 2055',
+    desc_en: 'Act 38-2026 extended Act 60 to 2055. Is your estate plan ready for a 30-year horizon? Get the checklist.',
+    desc_es: 'La Ley 38-2026 extendió la Ley 60 hasta 2055. ¿Está listo su plan sucesoral para un horizonte de 30 años?',
+    badge_en: 'Act 38-2026',
+    badge_es: 'Ley 38-2026',
+    btn_en: 'Get the Checklist',
+    btn_es: 'Obtener la Lista'
+  },
+  /* Pre-move checklist for homepage and general pages */
+  premove: {
+    heading_en: 'Free: The Pre-Move Puerto Rico Legal Checklist',
+    heading_es: 'Gratis: Lista Legal Pre-Mudanza a Puerto Rico',
+    desc_en: '12 legal steps to complete before, during, and after your move to PR. Don\'t leave your estate plan, business structure, or compliance to chance.',
+    desc_es: '12 pasos legales para completar antes, durante y después de su mudanza a PR.',
+    badge_en: 'Moving to PR?',
+    badge_es: '¿Mudándose a PR?',
+    btn_en: 'Get the Checklist',
+    btn_es: 'Obtener la Lista'
+  },
+  /* Default trust planning checklist */
+  default: {
+    heading_en: 'Free: Puerto Rico Trust Planning Checklist',
+    heading_es: 'Descarga Gratuita: Lista de Verificación para Fideicomisos en Puerto Rico',
+    desc_en: '7 essential steps to take before meeting with an estate planning attorney. Get the checklist and receive weekly Puerto Rico legal insights.',
+    desc_es: '7 pasos esenciales antes de reunirse con un abogado de planificación patrimonial. Obtenga la lista y reciba estrategias legales semanales sobre Puerto Rico.',
+    badge_en: 'Free Download',
+    badge_es: 'Guía Gratuita',
+    btn_en: 'Get the Checklist',
+    btn_es: 'Obtener la Lista'
+  }
+};
+
+var IS_HOMEPAGE = PATH === '/' || PATH === '/espanol';
+
+function getLeadMagnet() {
+  if (IS_CPA_REF) return LEAD_MAGNETS.cpa;
+  if (IS_ACT60_PAGE) return LEAD_MAGNETS.act38;
+  if (IS_HOMEPAGE) return LEAD_MAGNETS.premove;
+  return LEAD_MAGNETS.default;
+}
 
 /* ===== FOOTER NEWSLETTER BAR (injected site-wide) ===== */
 function injectFooterSignup() {
@@ -16,19 +76,16 @@ function injectFooterSignup() {
   // Disabled site-wide: no email provider configured yet, download doesn't exist
   return;
 
-  var heading = IS_ES
-    ? 'Descarga Gratuita: Lista de Verificación para Fideicomisos en Puerto Rico'
-    : 'Free: Puerto Rico Trust Planning Checklist';
-  var desc = IS_ES
-    ? '7 pasos esenciales antes de reunirse con un abogado de planificación patrimonial. Obtenga la lista y reciba estrategias legales semanales sobre Puerto Rico.'
-    : '7 essential steps to take before meeting with an estate planning attorney. Get the checklist and receive weekly Puerto Rico legal insights.';
+  var magnet = getLeadMagnet();
+  var heading = IS_ES ? magnet.heading_es : magnet.heading_en;
+  var desc = IS_ES ? magnet.desc_es : magnet.desc_en;
   var placeholder = IS_ES ? 'Su correo electrónico' : 'Your email address';
-  var btnText = IS_ES ? 'Obtener la Lista' : 'Get the Checklist';
+  var btnText = IS_ES ? magnet.btn_es : magnet.btn_en;
   var successText = IS_ES ? '¡Gracias! Revise su correo.' : 'Thank you! Check your inbox.';
   var privacyText = IS_ES
     ? 'Respetamos su privacidad. Cancele cuando quiera. <a href="/privacy-policy">Política de Privacidad</a>'
     : 'We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a>';
-  var badge = IS_ES ? 'Guía Gratuita' : 'Free Download';
+  var badge = IS_ES ? magnet.badge_es : magnet.badge_en;
 
   var bar = document.createElement('div');
   bar.className = 'rl-footer-signup';

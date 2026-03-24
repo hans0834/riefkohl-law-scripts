@@ -465,17 +465,17 @@ function fixComplianceCharitableDonation() {
     for (var j = 0; j < allEls.length; j++) {
       var el = allEls[j];
       var elText = el.textContent;
-      /* Pattern: "...donation of $10,000 to qualifying..." */
+      /* Pattern: "...donation of $10,000 to qualifying Puerto Rico nonprofits" */
       if (elText.indexOf('$10,000 to qualifying') >= 0) {
         el.innerHTML = el.innerHTML.replace(
-          /donation of \$10,000 to qualifying[^<]*/,
-          'charitable donation of $15,000 (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty)'
+          /(?:charitable )?donation of \$10,000 to qualifying Puerto Rico nonprofits\.?/,
+          'charitable donation of $15,000 (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty).'
         );
       }
-      /* Pattern: "$10,000 annual charitable donations" */
+      /* Pattern: "$10,000 annual charitable donations" — stop at comma or period */
       if (elText.indexOf('$10,000 annual charitable donation') >= 0) {
         el.innerHTML = el.innerHTML.replace(
-          /\$10,000 annual charitable donations?[^<]*/,
+          /\$10,000 annual charitable donations?/,
           '$15,000 annual charitable donation (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty)'
         );
       }

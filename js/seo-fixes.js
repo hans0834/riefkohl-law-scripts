@@ -1183,7 +1183,14 @@ var SEO = {
          h1: '\u00bfPara Qu\u00e9 Sirve un Fideicomiso en Puerto Rico? Lo Que Debes Saber Antes de Dar el Primer Paso',
                   meta: 'Descubre qu\u00e9 es un fideicomiso en Puerto Rico, c\u00f3mo se diferencia de los trusts en EE.UU., para qu\u00e9 sirve y qu\u00e9 debes considerar antes de crear uno bajo la Ley 219-2012.',
                   schema: null
-}
+},
+
+  /* ---- LinkedIn Post: Handler v. Centerview ---- */
+  '/blog/handler-v-centerview-partner-vs-employee': {
+    h1: 'When Is Someone a Partner and Not Just an Employee? Handler v. Centerview',
+    meta: 'Delaware Supreme Court\u2019s Handler v. Centerview decision illustrates the factors courts weigh when determining whether a partnership was formed through informal negotiations.',
+    schema: null
+  }
 };
 
 /* ================================================

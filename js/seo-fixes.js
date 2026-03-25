@@ -1186,7 +1186,7 @@ var SEO = {
 },
 
   /* ---- LinkedIn Post: Handler v. Centerview ---- */
-  '/blog/handler-v-centerview-partner-vs-employee': {
+  '/blog/law-firms-take-notice-when-is-someone-a-partner-and-not-just-an-employee': {
     h1: 'When Is Someone a Partner and Not Just an Employee? Handler v. Centerview',
     meta: 'Delaware Supreme Court\u2019s Handler v. Centerview decision illustrates the factors courts weigh when determining whether a partnership was formed through informal negotiations.',
     schema: null

@@ -616,7 +616,7 @@ var SEO = {
     schema: null
   },
 
-  /* ---- CPA Legal Claims Check — New Resource Pages ---- */
+  /* TEMPORARILY REMOVED — Act 60 subpage SEO entries pending content verification
   '/resources/act-38-2026-hb-505': {
     h1: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
     meta: 'Comprehensive legal analysis of Act 38-2026 (HB 505): new 4% rate for post-2026 applicants, grandfathering provisions, $15K donation, program extension to 2055.',
@@ -713,6 +713,7 @@ var SEO = {
       ]
     }
   },
+  END OF TEMPORARILY REMOVED Act 60 subpage SEO entries */
 
   /* ---- Migrated Blog Post SEO (existing resource subpages) ---- */
   '/resources/act-60-estate-planning-mistakes': {

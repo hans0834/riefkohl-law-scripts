@@ -541,197 +541,10 @@ var PAGES = {
   }
 }
 
-,
-
-/* ============================================
-   NEW PAGES — CPA Legal Claims Check Audit
-   ============================================ */
-
-'/resources/act-38-2026-hb-505': {
-  title: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
-  subtitle: 'A comprehensive legal analysis of the most significant changes to Puerto Rico\u2019s Act 60 Individual Resident Investor incentives since the program\u2019s creation.',
-  content: function(){return ''
-  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
-  +'<h2>Overview</h2>'
-  +'<p>On February 17, 2026, the Puerto Rico Legislature approved House Bill 505, enacted as Act 38-2026. This legislation represents the most significant amendment to Act 60\u2019s Individual Resident Investor (Chapter 2) incentives since the original program was created under Act 22 of 2012. Below is a detailed analysis of the key changes and their implications.</p>'
-
-  +'<h2>The New 4% Preferential Tax Rate</h2>'
-  +'<p>The most consequential change: the <strong>0% tax rate on post-residency capital gains, interest, and dividends</strong> is available only for applications submitted <strong>on or before December 31, 2026</strong>. Applications filed on or after January 1, 2027 will be subject to a <strong>4% preferential tax rate</strong> on these categories of passive income.</p>'
-  +'<p>This 4% rate applies exclusively to Act 60 Individual Resident Investor decree holders. It does <strong>not</strong> extend to all Puerto Rico residents\u2014despite early legislative discussions that contemplated broader application.</p>'
-
-  +'<h2>Grandfathering Provisions</h2>'
-  +'<p>Existing decree holders and applicants who file before the deadline are protected:</p>'
-  +'<ul>'
-  +'<li><strong>Current decree holders:</strong> Retain 0% rate under their existing decree terms for the duration of the decree.</li>'
-  +'<li><strong>Applications filed by December 31, 2026:</strong> Qualify for the grandfathered 0% rate, even if the decree is not issued until 2027 or later.</li>'
-  +'<li><strong>Pending applications:</strong> Applications already in the pipeline as of the law\u2019s effective date are treated as pre-deadline filings.</li>'
-  +'</ul>'
-
-  +'<h2>Program Extension Through 2055</h2>'
-  +'<p>Act 38-2026 extends the Individual Resident Investor program through <strong>December 31, 2055</strong> (from the prior 2035 sunset). This provides a nearly 30-year planning horizon for decree holders and prospective applicants.</p>'
-
-  +'<h2>Charitable Donation Increase: $10,000 \u2192 $15,000</h2>'
-  +'<p>The annual charitable donation requirement for Individual Resident Investors increases from $10,000 to <strong>$15,000</strong>. Key restrictions:</p>'
-  +'<ul>'
-  +'<li>At least <strong>half ($7,500)</strong> must go to organizations approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that are dedicated to <strong>eradicating child poverty</strong> in Puerto Rico.</li>'
-  +'<li>Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity.</li>'
-  +'</ul>'
-
-  +'<h2>Non-Residency Lookback Period: 10 Years \u2192 6 Years</h2>'
-  +'<p>For applications filed after December 31, 2026, the non-residency lookback period is shortened from 10 years to <strong>6 years</strong>. Applicants must demonstrate they were not bona fide residents of Puerto Rico for at least 6 years prior to their application date. This makes the program accessible to a wider pool of applicants, including those who previously lived in Puerto Rico and left.</p>'
-
-  +'<h2>Pre-Move Capital Gains: What Remains Unchanged</h2>'
-  +'<p>Act 38-2026 does not change the treatment of pre-residency appreciation:</p>'
-  +'<ul>'
-  +'<li><strong>Within 10 years of establishing residency:</strong> Pre-move gains are subject to U.S. federal capital gains tax rates.</li>'
-  +'<li><strong>After 10 years of PR residency:</strong> Pre-move gains are subject to a 5% Puerto Rico tax rate.</li>'
-  +'<li><strong>Cryptocurrency and other assets:</strong> A "split holding period" analysis is required to bifurcate pre-move vs. post-move appreciation.</li>'
-  +'</ul>'
-
-  +'<h2>What This Means for You</h2>'
-  +'<p>If you are considering relocating to Puerto Rico under Act 60, the December 31, 2026 deadline is critical. Filing your application before this date locks in the 0% rate on post-residency passive income for the duration of your decree. After this date, the 4% rate applies.</p>'
-
-  +'<div class="rl-sub-cta"><p><strong>Don\u2019t miss the December 31, 2026 deadline.</strong></p><p>Contact us immediately to begin your application and lock in the 0% rate.</p><a href="/calendly">Schedule a Strategy Call</a></div>'
-  }
-},
-
-'/resources/irs-enforcement-act-60': {
-  title: 'IRS Enforcement of Act 60: Campaign 685, Criminal Prosecutions & Compliance Risks',
-  subtitle: 'Why CPAs who say "Freedom from the IRS" are wrong\u2014and what decree holders need to know about federal enforcement.',
-  content: function(){return ''
-  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
-  +'<h2>The IRS Has Full Jurisdiction in Puerto Rico</h2>'
-  +'<p>Despite claims by some advisors, the IRS has <strong>full enforcement jurisdiction</strong> in Puerto Rico. Puerto Rico is a U.S. territory, and federal tax law applies. What IRC \u00a7933 provides is an <strong>exclusion</strong> from federal income tax for Puerto Rico-source income earned by bona fide residents\u2014not an exemption from IRS authority.</p>'
-  +'<p>Every Act 60 decree holder remains subject to IRS filing requirements, including Form 1040 reporting of worldwide income, FBAR compliance, and FATCA obligations.</p>'
-
-  +'<h2>IRS Compliance Campaign 685</h2>'
-  +'<p>The IRS has designated <strong>Compliance Campaign 685</strong> to specifically target Act 60/22 decree holders. This campaign assigns <strong>12 dedicated IRS staff members</strong> to audit and investigate potential non-compliance among decree holders. Areas of focus include:</p>'
-  +'<ul>'
-  +'<li>Bona fide residency test compliance under IRC \u00a7937</li>'
-  +'<li>Income sourcing \u2014 whether income claimed as PR-source was actually earned in Puerto Rico</li>'
-  +'<li>Pre-move capital gains treatment and holding period bifurcation</li>'
-  +'<li>Transfer pricing between mainland entities and PR-based businesses</li>'
-  +'</ul>'
-
-  +'<h2>Criminal Prosecution: United States v. Suresh Gajwani</h2>'
-  +'<p>In 2025, the U.S. District Court for the Southern District of Florida sentenced Act 60 participant Suresh Gajwani to probation and <strong>$15.3 million in restitution</strong> for filing a false IRS form to shelter capital gains under Act 60. This case demonstrates that the IRS treats abusive Act 60 claims as criminal tax fraud, not merely civil non-compliance.</p>'
-
-  +'<h2>Senate Finance Committee Investigation</h2>'
-  +'<p>The Senate Finance Committee has opened an investigation into <strong>Pantera Capital founder Dan Morehead</strong> for alleged abuse of Act 60 tax incentives. Additionally, grand jury subpoenas have been served on <strong>Baker McKenzie</strong> for Puerto Rico tax planning records, signaling broad federal interest in aggressive Act 60 planning strategies.</p>'
-
-  +'<h2>GAO Report: GAO-26-107225</h2>'
-  +'<p>A December 2025 Government Accountability Office report documented that <strong>5,852 Act 60 decrees</strong> have been granted and found <strong>inadequate IRS oversight</strong> of the program. The report recommended increased enforcement resources and better information sharing between DDEC and the IRS.</p>'
-
-  +'<h2>Why You Need an Attorney\u2014Not Just a CPA</h2>'
-  +'<p>If you are audited by the IRS, <strong>attorney-client privilege</strong> protects your communications with your attorney. Communications with CPAs are not protected by this privilege. An attorney can also represent you in Tax Court, negotiate with the IRS on your behalf, and provide legal opinions on complex sourcing and residency questions.</p>'
-
-  +'<div class="rl-sub-cta"><p><strong>Concerned about your compliance posture?</strong></p><p>Schedule a confidential consultation to review your decree compliance and audit readiness.</p><a href="/calendly">Book a Confidential Consultation</a></div>'
-  }
-},
-
-'/resources/why-law-firm-act-60': {
-  title: 'Why Hire a Law Firm for Act 60 Planning?',
-  subtitle: 'Understanding why Act 60 relocation requires legal counsel\u2014not just accounting advice.',
-  content: function(){return ''
-  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
-  +'<h2>Act 60 Is a Legal Process, Not Just a Tax Process</h2>'
-  +'<p>While CPAs play an important role in tax planning and compliance, Act 60 relocation involves fundamental <strong>legal</strong> decisions that require attorney involvement. A decree is a <strong>legal instrument</strong>\u2014a binding agreement between you and the government of Puerto Rico that creates rights and obligations. Negotiating its terms, structuring your entities, forming trusts, and defending against IRS challenges are all legal activities.</p>'
-
-  +'<h2>Attorney-Client Privilege</h2>'
-  +'<p>If the IRS audits your decree compliance, communications with your attorney are protected by <strong>attorney-client privilege</strong>. This is one of the most powerful legal protections available. Communications with CPAs enjoy <strong>no equivalent protection</strong> in most circumstances\u2014CPA-client communications can be compelled by the IRS through subpoena.</p>'
-  +'<p>With IRS Compliance Campaign 685 actively targeting Act 60 decree holders, this privilege is not theoretical\u2014it is a practical necessity for anyone with significant assets at stake.</p>'
-
-  +'<h2>Entity Structuring Is the Practice of Law</h2>'
-  +'<p>Choosing between LLCs, corporations, partnerships, and other entity types; drafting governance documents; and structuring ownership are all activities that constitute the <strong>practice of law</strong> in Puerto Rico. While CPAs can advise on tax implications, the legal structuring itself\u2014articles of organization, operating agreements, shareholder agreements\u2014requires attorney preparation.</p>'
-  +'<p>Several CPA firms in Puerto Rico advertise "entity structuring" and "global wealth structuring" services. These services, when they extend beyond tax advice into legal document preparation and governance design, may constitute the unauthorized practice of law.</p>'
-
-  +'<h2>Trust Formation Requires Legal Counsel</h2>'
-  +'<p>Puerto Rico trusts are governed by Law 219-2012 and are <strong>irrevocable by default</strong>. Trust formation involves complex legal decisions about beneficiary rights, trustee duties, distribution standards, and interaction with forced heirship rules. Trusts must also be registered in the Special Registry of Trusts, and failure to register results in absolute nullity. These are legal decisions that cannot be delegated to a CPA.</p>'
-
-  +'<h2>Decree Negotiation</h2>'
-  +'<p>Your Act 60 decree is negotiable. The standard template can be modified to address specific circumstances\u2014business structure, family situation, planned activities, and risk factors. An attorney experienced in decree negotiation can secure terms that protect your interests, while a CPA typically submits the standard application without negotiation.</p>'
-
-  +'<h2>Tax Court Representation</h2>'
-  +'<p>CPAs cannot represent clients in <strong>U.S. Tax Court</strong>. If a dispute with the IRS escalates to litigation\u2014as the Gajwani case demonstrates is possible\u2014only an attorney can advocate on your behalf in court.</p>'
-
-  +'<h2>What a CPA Does Well</h2>'
-  +'<p>CPAs are essential for tax return preparation, financial reporting, agreed-upon procedures (AUP) engagements under Act 52-2022, and ongoing compliance monitoring. The ideal approach is a team: an attorney for legal structuring, decree negotiation, and privileged counsel, and a CPA for tax compliance and financial reporting.</p>'
-
-  +'<div class="rl-sub-cta"><p><strong>Ready to build your Act 60 team?</strong></p><p>We work alongside your CPA to provide comprehensive coverage\u2014legal counsel for structuring and privilege, tax professionals for compliance.</p><a href="/calendly">Schedule a Strategy Call</a></div>'
-  }
-},
-
-'/resources/compliance-certificate-act-52': {
-  title: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
-  subtitle: 'What decree holders need to know about biennial compliance certification and AUP requirements.',
-  content: function(){return ''
-  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
-  +'<h2>What Is the Compliance Certificate?</h2>'
-  +'<p>Act 52-2022 introduced a <strong>biennial Compliance Certificate</strong> requirement for all Act 60 decree holders. This certificate must be issued by a licensed CPA or attorney who certifies that the decree holder is in compliance with all decree obligations.</p>'
-
-  +'<h2>What Happens If You Don\u2019t Renew?</h2>'
-  +'<p>Failure to obtain and file the Compliance Certificate results in <strong>immediate suspension of all tax benefits</strong> under your decree. This means your preferential tax rates (0% or 4% on passive income, 4% on export services income) are revoked until the certificate is filed and accepted.</p>'
-
-  +'<h2>Agreed-Upon Procedures (AUP) Engagements</h2>'
-  +'<p>In addition to the Compliance Certificate, Act 52-2022 mandates an <strong>Agreed-Upon Procedures (AUP) engagement</strong> for:</p>'
-  +'<ul>'
-  +'<li><strong>All Individual Resident Investors</strong> (Chapter 2 decree holders), regardless of income level</li>'
-  +'<li><strong>Export Services businesses</strong> (Chapter 3) with annual gross income exceeding <strong>$1 million</strong></li>'
-  +'</ul>'
-  +'<p>The AUP engagement verifies specific compliance criteria, including residency test satisfaction, charitable donation compliance, employment requirements, and timely filing of annual reports.</p>'
-
-  +'<h2>Who Can Perform These Services?</h2>'
-  +'<p>The Compliance Certificate and AUP engagement can be performed by a <strong>licensed CPA or attorney</strong>. As a law firm with deep expertise in Act 60 compliance, Riefkohl Law is qualified to serve as your compliance professional under Act 52-2022, providing both the legal analysis and the certification required.</p>'
-
-  +'<h2>Key Compliance Obligations Reviewed</h2>'
-  +'<ul>'
-  +'<li><strong>Bona fide residency:</strong> IRC \u00a7937 three-test compliance (presence, tax home, closer connection)</li>'
-  +'<li><strong>Charitable donation:</strong> $15,000 annual requirement (at least half to CECFL-approved child poverty organizations)</li>'
-  +'<li><strong>Employment:</strong> Minimum one full-time PR-resident employee for businesses under $3M; three employees for industrial incentives</li>'
-  +'<li><strong>Annual report filing:</strong> Timely submission with corresponding fees ($5,000 for IRI; $500 for Export Services)</li>'
-  +'<li><strong>Donation restrictions:</strong> No donations to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity</li>'
-  +'</ul>'
-
-  +'<div class="rl-sub-cta"><p><strong>Need a Compliance Certificate or AUP engagement?</strong></p><p>We serve as compliance professionals under Act 52-2022, providing both legal analysis and certification.</p><a href="/calendly">Schedule a Compliance Review</a></div>'
-  }
-},
-
-'/resources/bona-fide-residency-guide': {
-  title: 'Complete Guide to Bona Fide Residency Under IRC \u00a7937',
-  subtitle: 'Understanding the three statutory tests, five alternative presence paths, and the difference between legal requirements and supporting evidence.',
-  content: function(){return ''
-  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
-  +'<h2>The Three Statutory Tests</h2>'
-  +'<p>Bona fide residency in Puerto Rico under IRC \u00a7937(a) requires satisfying <strong>all three</strong> of the following tests simultaneously. Meeting one or two tests alone is insufficient.</p>'
-
-  +'<h3>1. The Presence Test</h3>'
-  +'<p>The regulations under \u00a71.937-1 provide <strong>five alternative paths</strong> to satisfy the presence test:</p>'
-  +'<ul>'
-  +'<li><strong>183-day test:</strong> Be present in Puerto Rico for at least 183 days during the taxable year.</li>'
-  +'<li><strong>549-day/three-year test:</strong> Be present in PR for at least 549 days during the current year and the two preceding years, with at least 60 days of presence in each year.</li>'
-  +'<li><strong>No significant connection test:</strong> No tax home outside PR and no closer connection to the U.S. during the taxable year.</li>'
-  +'<li><strong>Year-of-move safe harbor:</strong> Special rules for the year you establish PR residency.</li>'
-  +'<li><strong>Transitional rules:</strong> For individuals who were already PR residents at the start of the relevant year.</li>'
-  +'</ul>'
-  +'<p>The 183-day standard is the most straightforward, but the alternatives provide flexibility\u2014particularly the 549-day rule for individuals who travel frequently.</p>'
-
-  +'<h3>2. The Tax Home Test</h3>'
-  +'<p>Your <strong>tax home</strong>\u2014your regular or principal place of business\u2014must be in Puerto Rico. If you have no regular place of business, your tax home is your regular place of abode. Maintaining a U.S. mainland office or conducting substantial business outside Puerto Rico can jeopardize this test.</p>'
-
-  +'<h3>3. The Closer Connection Test</h3>'
-  +'<p>You must not have a <strong>closer connection</strong> to the United States (or any other country) than to Puerto Rico during the taxable year. The IRS evaluates this based on objective factors, including where you maintain your permanent home, where your family resides, where your personal belongings are located, and where you hold organizational memberships.</p>'
-
-  +'<h2>Statutory Tests vs. Supporting Evidence</h2>'
-  +'<p>It is critical to understand the distinction between the <strong>three statutory tests</strong> above (which you must legally satisfy) and <strong>supporting evidence factors</strong> (which strengthen your position but do not independently satisfy the tests):</p>'
-  +'<ul>'
-  +'<li><strong>Statutory requirements:</strong> Presence, tax home, and closer connection\u2014these are the legal tests under IRC \u00a7937.</li>'
-  +'<li><strong>Supporting evidence:</strong> Voter registration, PR driver\u2019s license, local bank accounts, community involvement, property ownership, church or club memberships\u2014these are <em>evidence</em> that supports your closer connection and intent to reside in PR, but obtaining a driver\u2019s license or registering to vote does not independently satisfy any of the three statutory tests.</li>'
-  +'</ul>'
-  +'<p>Some advisors present checklist-style approaches that mix these categories, creating a false impression that voter registration or a local bank account is a "requirement." The statutory tests are what the IRS evaluates; the supporting evidence factors strengthen your case.</p>'
-
-  +'<div class="rl-sub-cta"><p><strong>Concerned about your residency compliance?</strong></p><p>We can evaluate your specific situation against all three IRC \u00a7937 tests and recommend documentation strategies.</p><a href="/calendly">Book a Residency Compliance Review</a></div>'
-  }
-}
+/* TEMPORARILY REMOVED — Act 60 Tax Incentives subpages pending content verification.
+   5 subpages removed: act-38-2026-hb-505, irs-enforcement-act-60, why-law-firm-act-60,
+   compliance-certificate-act-52, bona-fide-residency-guide.
+   To restore: check git history for this file. */
 
 }; /* end PAGES */
 
@@ -770,6 +583,7 @@ function injectResourceCards() {
         { title: 'Act 60 & Estate Planning Mistakes', desc: 'Five critical mistakes Act 60 decree holders make with estate planning \u2014 and how to avoid them.', url: '/resources/act-60-estate-planning-mistakes' }
       ]
     },
+    /* TEMPORARILY REMOVED — Act 60 Tax Incentives section pending content verification
     {
       heading: 'Act 60 Tax Incentives',
       icon: '\u2600\uFE0F',
@@ -782,6 +596,7 @@ function injectResourceCards() {
         { title: 'Ley 60: Gu\u00EDa para Inversionistas', desc: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.', url: '/resources/ley-60-guia-inversionistas', lang: 'es' }
       ]
     },
+    END OF TEMPORARILY REMOVED Act 60 Tax Incentives section */
     {
       heading: 'Recursos en Espa\u00F1ol',
       icon: '\uD83C\uDDFA\uD83C\uDDF8',

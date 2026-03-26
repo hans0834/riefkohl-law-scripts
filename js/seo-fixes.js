@@ -1190,6 +1190,13 @@ var SEO = {
     h1: 'When Is Someone a Partner and Not Just an Employee? Handler v. Centerview',
     meta: 'Delaware Supreme Court\u2019s Handler v. Centerview decision illustrates the factors courts weigh when determining whether a partnership was formed through informal negotiations.',
     schema: null
+  },
+
+  /* ---- Session 13: Lascoli v. Fahr Masonry ---- */
+  '/blog/lascoli-v-fahr-masonry-partnership-ownership': {
+    h1: 'A Partner Promised an Employee an Ownership Stake. Was It Enforceable?',
+    meta: 'Pennsylvania court holds that a vague promise of partnership ownership in a one-page employment contract was too indefinite to enforce \u2014 and exceeded a single partner\u2019s authority. Lessons for Puerto Rico businesses.',
+    schema: null
   }
 };
 

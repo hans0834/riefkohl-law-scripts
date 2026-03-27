@@ -57,6 +57,18 @@ function createCallBanner() {
   } else {
     document.body.insertBefore(banner, document.body.firstChild);
   }
+
+  // Push header down so it doesn't overlap the banner
+  adjustHeaderForBanner();
+  window.addEventListener('resize', adjustHeaderForBanner);
+}
+
+function adjustHeaderForBanner() {
+  var banner = document.querySelector('.rl-call-banner');
+  var header = document.querySelector('#header, header.header');
+  if (!banner || !header) return;
+  var bannerH = banner.offsetHeight;
+  header.style.top = bannerH + 'px';
 }
 
 /* ===== 2. STICKY MOBILE CTA BAR ===== */

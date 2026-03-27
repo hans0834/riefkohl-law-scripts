@@ -1721,6 +1721,12 @@ h3.rl-auto-heading {
   }
 }
 
+/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav ===== */
+#header,
+header.header {
+  z-index: 100;
+}
+
 /* ===== STICKY MOBILE CTA BAR ===== */
 .rl-sticky-cta {
   display: none;

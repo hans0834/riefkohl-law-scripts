@@ -56,6 +56,12 @@
   }
 }
 
+/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav ===== */
+#header,
+header.header {
+  z-index: 100;
+}
+
 /* ===== STICKY MOBILE CTA BAR ===== */
 .rl-sticky-cta {
   display: none; /* Hidden on desktop */

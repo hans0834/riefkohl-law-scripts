@@ -316,6 +316,49 @@ if (crumbs && crumbs.length > 0) {
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(schema);
   document.head.appendChild(script);
+
+  /* ===== VISUAL BREADCRUMB TRAIL ===== */
+  /* Render a visible breadcrumb on pages with 2+ levels */
+  if (crumbs.length >= 2 && !document.querySelector('.rl-breadcrumb')) {
+    var nav = document.createElement('nav');
+    nav.className = 'rl-breadcrumb';
+    nav.setAttribute('aria-label', 'Breadcrumb');
+
+    var ol = document.createElement('ol');
+    crumbs.forEach(function(c, i) {
+      var li = document.createElement('li');
+      if (i < crumbs.length - 1) {
+        var a = document.createElement('a');
+        a.href = c.url;
+        a.textContent = c.name;
+        li.appendChild(a);
+      } else {
+        li.textContent = c.name;
+        li.setAttribute('aria-current', 'page');
+      }
+      ol.appendChild(li);
+    });
+
+    nav.appendChild(ol);
+
+    // Insert after header/call banner, before main content
+    function insertBreadcrumb() {
+      var callBanner = document.querySelector('.rl-call-banner');
+      var header = document.querySelector('header') || document.querySelector('.header');
+      var mainContent = document.querySelector('main') || document.querySelector('#page') || document.querySelector('.page-section');
+      var insertPoint = mainContent || (callBanner ? callBanner.nextElementSibling : null) || (header ? header.nextElementSibling : null);
+
+      if (insertPoint && insertPoint.parentNode) {
+        insertPoint.parentNode.insertBefore(nav, insertPoint);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', insertBreadcrumb);
+    } else {
+      insertBreadcrumb();
+    }
+  }
 }
 
 })();

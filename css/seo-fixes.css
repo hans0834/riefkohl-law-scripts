@@ -52,3 +52,71 @@ article.h-entry {
     padding-right: 16px !important;
   }
 }
+
+/* Skip-to-content link — WCAG 2.1 AA accessibility */
+.rl-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100000;
+  background: #1a2033;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 0 0 6px 6px;
+  font-size: .875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top .2s ease;
+}
+.rl-skip-link:focus {
+  top: 0;
+  outline: 3px solid #bfa35d;
+  outline-offset: 2px;
+}
+
+/* Enhanced 404 page */
+.rl-404-help {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.rl-404-help h2 {
+  font-size: 1.5rem;
+  color: #1a2033;
+  margin-bottom: 12px;
+}
+.rl-404-help > p {
+  color: #706b62;
+  margin-bottom: 24px;
+}
+.rl-404-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.rl-404-links a {
+  display: inline-block;
+  background: #1a2033;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: .875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s;
+}
+.rl-404-links a:hover {
+  background: #2d3b56;
+}
+.rl-404-cta {
+  font-size: .9rem;
+  color: #706b62;
+}
+.rl-404-cta a {
+  color: #bfa35d;
+  font-weight: 600;
+  text-decoration: underline;
+}

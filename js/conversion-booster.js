@@ -190,6 +190,80 @@ function injectLocalBusinessSchema() {
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(schema);
   document.head.appendChild(script);
+
+  // Attorney Person schema — helps Google Knowledge Panel
+  var personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Attorney',
+    '@id': 'https://www.riefkohllaw.com/#attorney',
+    'name': 'Hans E. Riefkohl',
+    'givenName': 'Hans',
+    'familyName': 'Riefkohl',
+    'jobTitle': 'Managing Attorney',
+    'description': 'Puerto Rico attorney specializing in trusts, estate planning, Act 60 tax incentives, business formation, and government contracts.',
+    'url': 'https://www.riefkohllaw.com/about',
+    'telephone': '+1-787-236-1657',
+    'email': 'hans@riefkohllaw.com',
+    'worksFor': {
+      '@id': 'https://www.riefkohllaw.com/#organization'
+    },
+    'alumniOf': [
+      {
+        '@type': 'Organization',
+        'name': 'DLA Piper',
+        'description': 'Global law firm'
+      },
+      {
+        '@type': 'CollegeOrUniversity',
+        'name': 'Villanova University',
+        'description': 'BBA cum laude, JD summa cum laude'
+      }
+    ],
+    'hasCredential': [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        'credentialCategory': 'Bar Admission',
+        'recognizedBy': { '@type': 'Organization', 'name': 'Supreme Court of Puerto Rico' }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        'credentialCategory': 'Bar Admission',
+        'recognizedBy': { '@type': 'Organization', 'name': 'District of Columbia Bar' }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        'credentialCategory': 'Bar Admission',
+        'recognizedBy': { '@type': 'Organization', 'name': 'U.S. District Court for the District of Puerto Rico' }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        'credentialCategory': 'Bar Admission',
+        'recognizedBy': { '@type': 'Organization', 'name': 'U.S. Court of Appeals for the First Circuit' }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        'credentialCategory': 'Professional License',
+        'name': 'Notary Public',
+        'recognizedBy': { '@type': 'Organization', 'name': 'Government of Puerto Rico' }
+      }
+    ],
+    'knowsAbout': ['Puerto Rico Trusts', 'Estate Planning', 'Act 60 Tax Incentives', 'Business Formation', 'Government Contracts', 'Forced Heirship', 'Fideicomisos'],
+    'knowsLanguage': ['en', 'es'],
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': '273 Ponce de Leon Ave.',
+      'addressLocality': 'San Juan',
+      'addressRegion': 'PR',
+      'postalCode': '00917',
+      'addressCountry': 'US'
+    },
+    'sameAs': []
+  };
+
+  var personScript = document.createElement('script');
+  personScript.type = 'application/ld+json';
+  personScript.textContent = JSON.stringify(personSchema);
+  document.head.appendChild(personScript);
 }
 
 /* ===== 4. PAGE-SPECIFIC CTA BLOCKS ===== */
@@ -211,6 +285,30 @@ function injectPageCTAs() {
         ? 'Descubra cómo un fideicomiso puede proteger el patrimonio de su familia, evitar la sucesión testamentaria y aprovechar las leyes favorables de Puerto Rico.'
         : 'Learn how a fideicomiso can protect your family\'s wealth, avoid probate, and take advantage of Puerto Rico\'s favorable trust laws.',
       btn: IS_ES ? 'Reserve una Consulta Gratuita' : 'Book a Free Trust Consultation',
+      secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    },
+    '/estate-planning': {
+      heading: IS_ES ? '¿Tiene un plan sucesoral actualizado?' : 'Is Your Estate Plan Up to Date?',
+      body: IS_ES
+        ? 'La legítima de Puerto Rico requiere planificación cuidadosa. Proteja a su familia con un plan que funcione bajo las leyes de PR.'
+        : 'Puerto Rico\'s forced heirship rules (legítima) mean estate planning here is different. Protect your family with a plan built for PR law.',
+      btn: IS_ES ? 'Consulta Gratuita de 15 Minutos' : 'Get Your Free 15-Minute Review',
+      secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    },
+    '/business-formation': {
+      heading: IS_ES ? '¿Listo para formar su negocio en Puerto Rico?' : 'Ready to Form Your Puerto Rico Business?',
+      body: IS_ES
+        ? 'LLC, corporación, o sociedad — estructuraremos su entidad para máxima protección y eficiencia contributiva desde el primer día.'
+        : 'LLC, corporation, or partnership — we\'ll structure your entity for maximum protection and tax efficiency from day one. Flat fee, no surprises.',
+      btn: IS_ES ? 'Reserve Su Consulta Gratuita' : 'Book Your Free Strategy Call',
+      secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    },
+    '/government-contracts': {
+      heading: IS_ES ? '¿Necesita ayuda con contratos gubernamentales?' : 'Need Help with Government Contracts?',
+      body: IS_ES
+        ? 'Desde propuestas hasta cumplimiento, proteja los intereses de su empresa en contratación pública.'
+        : 'From proposal review to compliance and disputes, protect your business interests in government procurement.',
+      btn: IS_ES ? 'Reserve Su Consulta Gratuita' : 'Book Your Free Strategy Call',
       secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
     }
   };
@@ -305,6 +403,161 @@ function injectAct60MidCTA() {
   }
 }
 
+/* ===== 7. ABOUT PAGE CTA ENHANCEMENT ===== */
+function enhanceAboutPage() {
+  if (PATH !== '/about' && PATH !== '/about-us' && PATH !== '/espanol-sobre-nosotros') return;
+  if (document.querySelector('.rl-about-cta')) return;
+
+  var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
+
+  // Add a CTA block at the bottom of the about page
+  var cta = document.createElement('div');
+  cta.className = 'rl-about-cta';
+  cta.style.cssText = 'max-width:720px;margin:48px auto;padding:40px 36px;background:linear-gradient(160deg,#1a2033 0%,#243047 100%);border-radius:12px;text-align:center;box-sizing:border-box;';
+  cta.innerHTML =
+    '<p style="display:inline-block;padding:4px 14px;background:rgba(191,163,93,.15);color:#bfa35d;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border-radius:100px;margin-bottom:16px;">' +
+      (IS_ES ? 'CONSULTA GRATUITA' : 'FREE CONSULTATION') + '</p>' +
+    '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">' +
+      (IS_ES ? 'Hablemos de Su Situaci\u00f3n Legal' : 'Let\u2019s Talk About Your Legal Needs') + '</h2>' +
+    '<p style="color:rgba(255,255,255,.6);font-size:.92rem;line-height:1.6;margin:0 0 24px;max-width:540px;margin-left:auto;margin-right:auto;">' +
+      (IS_ES
+        ? 'Agende una llamada de 15 minutos para discutir sus necesidades. Sin compromiso, sin cargos. Tarifa fija para todos nuestros servicios.'
+        : 'Schedule a 15-minute call to discuss your situation. No obligation, no charge. Flat fee quoted upfront for all services.') + '</p>' +
+    '<a href="' + bookUrl + '" style="display:inline-block;padding:15px 32px;background:#bfa35d;color:#1a2033 !important;font-size:.88rem;font-weight:700;text-decoration:none;border-radius:8px;transition:background .25s,transform .15s;">' +
+      (IS_ES ? 'Agendar Consulta Gratuita' : 'Book Your Free Strategy Call') + '</a>' +
+    '<p style="color:rgba(255,255,255,.75);font-size:.85rem;margin-top:14px;">' +
+      (IS_ES ? 'O llame al ' : 'Or call ') + '<a href="' + PHONE_TEL + '" style="color:#bfa35d !important;text-decoration:none;font-weight:600;">' + PHONE + '</a></p>';
+
+  var footer = document.querySelector('footer') || document.querySelector('.footer-inside');
+  if (footer) {
+    footer.parentNode.insertBefore(cta, footer);
+  }
+}
+
+/* ===== 8. EXIT-INTENT ENGAGEMENT POPUP ===== */
+function initExitIntent() {
+  // Don't show on /calendly (they're already converting) or if already dismissed
+  if (PATH === '/calendly' || PATH === '/espanol-cita') return;
+  try { if (sessionStorage.getItem('rl-exit-dismissed')) return; } catch(e) {}
+
+  var shown = false;
+  var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
+
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+
+    var overlay = document.createElement('div');
+    overlay.className = 'rl-exit-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-label', IS_ES ? 'Oferta especial' : 'Special offer');
+
+    var heading = IS_ES
+      ? '\u00BFAntes de irse? Su consulta es gratis.'
+      : 'Before You Go \u2014 Your First Consultation Is Free';
+    var body = IS_ES
+      ? 'Hable con un abogado sobre fideicomisos, planificaci\u00F3n sucesoral, Ley 60, o formaci\u00F3n de negocios. Sin compromiso, sin cargos.'
+      : 'Talk to an attorney about trusts, estate planning, Act\u00A060, or business formation. No obligation, no charge for the first call.';
+    var btnText = IS_ES ? 'Reservar Mi Consulta Gratuita' : 'Book My Free Consultation';
+    var dismissText = IS_ES ? 'No gracias, continuar navegando' : 'No thanks, I\u2019ll keep browsing';
+
+    overlay.innerHTML =
+      '<div class="rl-exit-popup">' +
+        '<button class="rl-exit-close" aria-label="Close">&times;</button>' +
+        '<div class="rl-exit-badge">' + (IS_ES ? 'OFERTA LIMITADA' : 'FREE CONSULTATION') + '</div>' +
+        '<h2>' + heading + '</h2>' +
+        '<p>' + body + '</p>' +
+        '<a href="' + bookUrl + '" class="rl-exit-cta">' + btnText + '</a>' +
+        '<p class="rl-exit-phone">' + (IS_ES ? 'O llame al ' : 'Or call ') + '<a href="' + PHONE_TEL + '">' + PHONE + '</a></p>' +
+        '<button class="rl-exit-dismiss">' + dismissText + '</button>' +
+      '</div>';
+
+    document.body.appendChild(overlay);
+
+    // Animate in
+    requestAnimationFrame(function() {
+      overlay.style.opacity = '1';
+      overlay.querySelector('.rl-exit-popup').style.transform = 'translateY(0) scale(1)';
+    });
+
+    function dismiss() {
+      overlay.style.opacity = '0';
+      overlay.querySelector('.rl-exit-popup').style.transform = 'translateY(20px) scale(.97)';
+      setTimeout(function() { overlay.remove(); }, 300);
+      try { sessionStorage.setItem('rl-exit-dismissed', '1'); } catch(e) {}
+    }
+
+    overlay.querySelector('.rl-exit-close').addEventListener('click', dismiss);
+    overlay.querySelector('.rl-exit-dismiss').addEventListener('click', dismiss);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) dismiss();
+    });
+
+    /* Focus trap + keyboard handling */
+    var popup = overlay.querySelector('.rl-exit-popup');
+    var focusable = popup.querySelectorAll('button, a[href]');
+    var firstFocusable = focusable[0];
+    var lastFocusable = focusable[focusable.length - 1];
+    firstFocusable.focus();
+
+    overlay.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { dismiss(); return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusable) { e.preventDefault(); lastFocusable.focus(); }
+      } else {
+        if (document.activeElement === lastFocusable) { e.preventDefault(); firstFocusable.focus(); }
+      }
+    });
+  }
+
+  // Desktop: mouse leaves viewport toward top
+  document.addEventListener('mouseout', function(e) {
+    if (e.clientY < 5 && e.relatedTarget == null) showPopup();
+  });
+
+  // Mobile fallback: show after 45 seconds of engagement
+  setTimeout(function() {
+    if (!shown && window.innerWidth < 768) showPopup();
+  }, 45000);
+}
+
+/* ===== COOKIE CONSENT BANNER ===== */
+function initCookieConsent() {
+  if (localStorage.getItem('rl_cookie_consent')) return;
+  if (document.querySelector('.rl-cookie-banner')) return;
+
+  var banner = document.createElement('div');
+  banner.className = 'rl-cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', IS_ES ? 'Consentimiento de cookies' : 'Cookie consent');
+
+  var text = IS_ES
+    ? 'Este sitio usa cookies para mejorar su experiencia y analizar el tr\u00e1fico.'
+    : 'This site uses cookies to improve your experience and analyze traffic.';
+  var linkText = IS_ES ? 'Pol\u00edtica de Privacidad' : 'Privacy Policy';
+  var acceptText = IS_ES ? 'Aceptar' : 'Accept';
+
+  banner.innerHTML =
+    '<div class="rl-cookie-inner">' +
+      '<p class="rl-cookie-text">' + text +
+        ' <a href="/privacy-policy" class="rl-cookie-link">' + linkText + '</a>' +
+      '</p>' +
+      '<button class="rl-cookie-accept" type="button">' + acceptText + '</button>' +
+    '</div>';
+
+  document.body.appendChild(banner);
+
+  banner.querySelector('.rl-cookie-accept').addEventListener('click', function() {
+    localStorage.setItem('rl_cookie_consent', '1');
+    banner.classList.add('rl-cookie-hiding');
+    setTimeout(function() { banner.remove(); }, 400);
+  });
+
+  /* Show with slight delay so it doesn't compete with page load */
+  setTimeout(function() { banner.classList.add('rl-cookie-visible'); }, 1500);
+}
+
 /* ===== BOOT ===== */
 function run() {
   try {
@@ -314,6 +567,9 @@ function run() {
     injectAct60Hero();
     injectAct60MidCTA();
     injectPageCTAs();
+    enhanceAboutPage();
+    initExitIntent();
+    initCookieConsent();
   } catch(e) {
     console.error('[rl-conversion]', e);
   }

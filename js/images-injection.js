@@ -21,11 +21,14 @@ var IMGS = {
 function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
 function qsa(sel, ctx) { return Array.from((ctx || document).querySelectorAll(sel)); }
 
-function makeImg(src, alt) {
+function makeImg(src, alt, w, h) {
   var img = document.createElement('img');
   img.src = src;
   img.alt = alt;
   img.loading = 'lazy';
+  img.decoding = 'async';
+  if (w) img.width = w;
+  if (h) img.height = h;
   img.onload = function() { img.classList.add('rl-loaded'); };
   return img;
 }

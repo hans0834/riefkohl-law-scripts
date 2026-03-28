@@ -235,14 +235,94 @@ window.rlGetCpaPartner = function() {
   } catch(e) { return ''; }
 };
 
+/* ===== TRACK OUTBOUND LINKS ===== */
+function setupOutboundTracking() {
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+
+    // Outbound links (not internal, not tel/mailto)
+    if (href.indexOf('http') === 0 && href.indexOf('riefkohllaw.com') === -1 && href.indexOf('hans0834.github.io') === -1) {
+      trackEvent('outbound_click', {
+        event_category: 'engagement',
+        event_label: href.substring(0, 100),
+        link_text: (link.textContent || '').trim().substring(0, 50),
+        page_path: window.location.pathname
+      });
+    }
+
+    // WhatsApp clicks
+    if (href.indexOf('wa.me') > -1 || href.indexOf('whatsapp') > -1) {
+      trackEvent('whatsapp_click', {
+        event_category: 'conversion',
+        event_label: (link.textContent || '').trim().substring(0, 50),
+        page_path: window.location.pathname
+      });
+    }
+
+    // Exit-intent popup interactions
+    if (link.closest('.rl-exit-popup')) {
+      trackEvent('exit_intent_click', {
+        event_category: 'conversion',
+        event_label: href === '/calendly' || href === '/espanol-cita' ? 'book_consultation' : 'other',
+        page_path: window.location.pathname
+      });
+    }
+  });
+}
+
+/* ===== TRACK BLOG ENGAGEMENT ===== */
+function setupBlogEngagement() {
+  var path = window.location.pathname;
+  if (path.indexOf('/blog/') !== 0) return;
+
+  // Track TOC clicks
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('.rl-toc a');
+    if (link) {
+      trackEvent('toc_click', {
+        event_category: 'engagement',
+        event_label: (link.textContent || '').trim().substring(0, 60),
+        page_path: path
+      });
+    }
+
+    // Track related post clicks
+    var relLink = e.target.closest('.rl-related-posts a');
+    if (relLink) {
+      trackEvent('related_post_click', {
+        event_category: 'engagement',
+        event_label: relLink.getAttribute('href') || '',
+        page_path: path
+      });
+    }
+  });
+
+  // Track CTA engagement in blog posts
+  document.addEventListener('click', function(e) {
+    var ctaLink = e.target.closest('.rl-post-cta a');
+    if (ctaLink) {
+      trackEvent('blog_cta_click', {
+        event_category: 'conversion',
+        event_label: (ctaLink.textContent || '').trim().substring(0, 50),
+        blog_slug: path.replace('/blog/', ''),
+        page_path: path
+      });
+    }
+  });
+}
+
 /* ===== BOOT ===== */
 function run() {
   try {
     setupUtmTracking();
     setupClickTracking();
+    setupOutboundTracking();
     setupScrollTracking();
     setupTimeTracking();
     trackCalendlyPageView();
+    setupBlogEngagement();
   } catch(e) {
     console.error('[rl-tracking]', e);
   }

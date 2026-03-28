@@ -171,3 +171,6 @@ mark.rl-bd-hl{background:var(--gold-glow);color:var(--navy);padding:0 2px;border
     transition-duration:.01ms;scroll-behavior:auto
   }
 }
+
+/* Screen-reader only utility */
+.rl-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

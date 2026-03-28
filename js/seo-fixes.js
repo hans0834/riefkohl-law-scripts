@@ -1,4 +1,23 @@
 
+/* Preconnect hints — start DNS/TLS early for key external resources */
+(function(){
+  var hints = [
+    { rel: 'preconnect', href: 'https://images.squarespace-cdn.com' },
+    { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+    { rel: 'dns-prefetch', href: 'https://calendly.com' }
+  ];
+  hints.forEach(function(h) {
+    if (!document.querySelector('link[rel="' + h.rel + '"][href="' + h.href + '"]')) {
+      var link = document.createElement('link');
+      link.rel = h.rel;
+      link.href = h.href;
+      if (h.rel === 'preconnect') link.crossOrigin = '';
+      document.head.appendChild(link);
+    }
+  });
+})();
+
 (function(){
 'use strict';
 
@@ -29,7 +48,44 @@ var SEO = {
   '/contact': {
     h1: 'Contact Riefkohl Law in San Juan, Puerto Rico',
     meta: 'Contact Riefkohl Law in San Juan, PR. Call (787) 236-1657 or book a free strategy call for estate planning, trusts, and business law.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Where is Riefkohl Law located?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Riefkohl Law is located at 273 Ponce de Le\u00f3n Avenue, San Juan, Puerto Rico 00917, in the Hato Rey financial district. We serve clients throughout Puerto Rico and assist mainland clients relocating under Act 60.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Riefkohl Law offer free consultations?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Riefkohl Law offers a free 15-minute initial strategy call for new clients. During this call, we\u2019ll discuss your legal needs, outline your options, and provide a flat-fee quote if you decide to engage our services. Book online at riefkohllaw.com/calendly or call (787) 236-1657.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Riefkohl Law serve clients who don\u2019t live in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. We regularly assist mainland U.S. clients who are relocating to Puerto Rico under Act 60, own property in Puerto Rico, or have Puerto Rico business interests. We handle most matters remotely via video call, email, and secure document sharing. In-person meetings are available at our San Juan office.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What languages does Riefkohl Law serve clients in?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Riefkohl Law is fully bilingual, providing legal services in both English and Spanish. All documents, consultations, and communications are available in either language.'
+          }
+        }
+      ]
+    }
   },
   '/blog': {
     h1: 'Puerto Rico Legal Blog — Case Analysis & Commentary',
@@ -283,7 +339,36 @@ var SEO = {
   '/corporate': {
     h1: 'Corporate & Transactional Law — Puerto Rico Business Attorney',
     meta: 'Puerto Rico corporate attorney for mergers, acquisitions, joint ventures, and commercial transactions. Strategic counsel for businesses operating in PR.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What corporate legal services does Riefkohl Law offer in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Riefkohl Law provides comprehensive corporate and transactional legal services including entity formation, mergers and acquisitions, joint ventures, contract drafting and review, corporate governance, and commercial transactions. We serve businesses from startups to established companies operating in Puerto Rico.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can Riefkohl Law help with mergers and acquisitions in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. We handle M&A transactions including due diligence, purchase agreement negotiation, regulatory compliance, and closing. Our experience includes transactions involving Act 60 businesses, real estate holdings, and cross-border deals between mainland U.S. and Puerto Rico entities.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Riefkohl Law use flat fees for corporate work?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Riefkohl Law offers flat-fee pricing for most corporate services, including entity formation, contract drafting, and standard corporate governance matters. For complex transactions like M&A deals, we provide project-based fee quotes upfront so you know the cost before we begin. No hourly billing surprises.'
+          }
+        }
+      ]
+    }
   },
   '/espanol-quiebras': {
     h1: 'Abogado de Quiebras en Puerto Rico — Servicios de Insolvencia',
@@ -456,7 +541,36 @@ var SEO = {
   '/resources-faq': {
     h1: 'Frequently Asked Questions — Puerto Rico Estate Planning & Trusts',
     meta: 'Answers to common questions about Puerto Rico estate planning, trusts under Law 219-2012, probate, and forced heirship. Free consultation available.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How does probate work in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Probate in Puerto Rico is a court-supervised process for distributing a deceased person\'s estate. It can take 1\u20133 years and involves filing the will with the court, appointing an executor, inventorying assets, paying debts, and distributing property. A properly funded trust can avoid probate entirely.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is a fideicomiso (Puerto Rico trust)?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A fideicomiso is a trust governed by Puerto Rico Law 219-2012. It allows you to transfer assets to a trustee who manages them for your beneficiaries. Puerto Rico trusts offer asset protection, probate avoidance, privacy, and potential tax benefits. They are especially useful for Act 60 decree holders and families with mixed-jurisdiction assets.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I use my mainland will in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'While a valid mainland will may be recognized in Puerto Rico, it likely does not account for Puerto Rico\'s forced heirship rules (leg\u00edtima), which reserve half the estate for children and surviving spouse. A PR-specific will or trust is strongly recommended to ensure your estate plan works under local civil law.'
+          }
+        }
+      ]
+    }
   },
   '/resources-wills-vs-trusts': {
     h1: 'Wills vs. Trusts in Puerto Rico — Which Is Right for You?',
@@ -815,7 +929,36 @@ var SEO = {
   '/pricing': {
     h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
     meta: 'Riefkohl Law offers flat-fee pricing for all services. Trusts, estate planning, Act 60 advisory, and business formation. Know your investment upfront.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Why does Riefkohl Law use flat-fee pricing?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Flat-fee pricing aligns our incentives with yours. You know the full cost upfront before any work begins, so there are no surprises or escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is the initial consultation really free?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Your first strategy call with Attorney Riefkohl is completely free with no obligation. We use this call to understand your situation, explain your options, and provide a specific flat-fee quote if you decide to proceed.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods do you accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept credit cards, bank transfers (ACH), checks, and wire transfers. Payment plans are available for larger engagements. The flat fee is typically collected at the start of the engagement.'
+          }
+        }
+      ]
+    }
   },
 
   /* ---- Session 7: Case Law Blog Posts (9 Category Summaries) ---- */
@@ -1456,6 +1599,36 @@ function injectPersonSchema() {
 }
 
 /* ================================================
+   9b. WEBSITE SCHEMA WITH SEARCHACTION (homepage only)
+   ================================================ */
+function injectWebSiteSchema() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  if (path !== '/') return;
+
+  var schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Riefkohl Law',
+    'url': 'https://www.riefkohllaw.com',
+    'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
+    'inLanguage': ['en', 'es'],
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': {
+        '@type': 'EntryPoint',
+        'urlTemplate': 'https://www.riefkohllaw.com/blog?q={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+/* ================================================
    10. OG:TITLE, OG:TYPE, AND TWITTER CARD META TAGS
    ================================================ */
 function fixOpenGraphAndTwitter() {
@@ -1534,20 +1707,59 @@ function fixLangAttribute() {
 /* ================================================
    EXECUTE ALL FIXES
    ================================================ */
+/* ================================================
+   ACCESSIBILITY: SKIP TO CONTENT LINK
+   ================================================ */
+function injectSkipLink() {
+  if (document.querySelector('.rl-skip-link')) return;
+
+  var mainContent = document.querySelector('main') || document.querySelector('#page') ||
+    document.querySelector('.page-section:first-of-type') || document.querySelector('article');
+  if (mainContent && !mainContent.id) mainContent.id = 'main-content';
+  var targetId = mainContent ? (mainContent.id || 'main-content') : 'page';
+
+  var link = document.createElement('a');
+  link.className = 'rl-skip-link';
+  link.href = '#' + targetId;
+  link.textContent = 'Skip to main content';
+  document.body.insertBefore(link, document.body.firstChild);
+}
+
 function runFixes() {
   fixMeta();
   fixCanonical();
   injectFAQSchema();
   injectAttorneySchema();
   injectPersonSchema();
+  injectWebSiteSchema();
   fixOpenGraphAndTwitter();
   fixLangAttribute();
+  injectSkipLink();
 
   /* H1, staging URLs, and images need the DOM to be more fully loaded */
   fixH1();
   fixStagingUrls();
   fixImageAlts();
   injectDisclaimer();
+  secureExternalLinks();
+}
+
+/* Secure all external links with noopener noreferrer */
+function secureExternalLinks() {
+  var host = window.location.hostname;
+  var links = document.querySelectorAll('a[href^="http"]');
+  for (var i = 0; i < links.length; i++) {
+    try {
+      var url = new URL(links[i].href);
+      if (url.hostname !== host) {
+        links[i].setAttribute('target', '_blank');
+        var rel = (links[i].getAttribute('rel') || '').toLowerCase();
+        if (rel.indexOf('noopener') < 0) rel += ' noopener';
+        if (rel.indexOf('noreferrer') < 0) rel += ' noreferrer';
+        links[i].setAttribute('rel', rel.trim());
+      }
+    } catch(e) {}
+  }
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */
@@ -1680,6 +1892,65 @@ injectHreflang();
     document.addEventListener('DOMContentLoaded', removeElements);
   } else {
     removeElements();
+  }
+})();
+
+/* ================================================
+   13. ENHANCED 404 PAGE
+   ================================================ */
+(function enhance404() {
+  /* Squarespace 404 pages contain class .sqs-page-error or a specific body class */
+  function is404() {
+    return document.body.classList.contains('collection-type-page') &&
+      (document.querySelector('.sqs-page-error') ||
+       document.title.indexOf('Page Not Found') >= 0 ||
+       document.title.indexOf('404') >= 0);
+  }
+
+  function inject() {
+    if (!is404()) return;
+    var container = document.querySelector('.sqs-page-error') ||
+      document.querySelector('main') ||
+      document.querySelector('#page .page-section');
+    if (!container) return;
+    if (container.querySelector('.rl-404-help')) return;
+
+    var isEs = window.location.pathname.indexOf('/espanol') === 0 ||
+      window.location.pathname.indexOf('/recursos-') === 0;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'rl-404-help';
+    wrap.innerHTML = isEs
+      ? '<h2>P\u00e1gina no encontrada</h2>'
+        + '<p>Lo sentimos, esta p\u00e1gina no existe o fue movida. Pruebe uno de estos enlaces:</p>'
+        + '<div class="rl-404-links">'
+        + '<a href="/espanol">Inicio</a>'
+        + '<a href="/espanol-servicios">Servicios</a>'
+        + '<a href="/espanol-blog">Blog Legal</a>'
+        + '<a href="/recursos-es">Recursos</a>'
+        + '<a href="/espanol-contacto">Contacto</a>'
+        + '<a href="/espanol-cita">Agendar Cita</a>'
+        + '</div>'
+        + '<p class="rl-404-cta">O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a></p>'
+      : '<h2>Page Not Found</h2>'
+        + '<p>Sorry, this page doesn\u2019t exist or has been moved. Try one of these:</p>'
+        + '<div class="rl-404-links">'
+        + '<a href="/">Home</a>'
+        + '<a href="/services">Services</a>'
+        + '<a href="/blog">Legal Blog</a>'
+        + '<a href="/resources">Resources</a>'
+        + '<a href="/contact">Contact</a>'
+        + '<a href="/calendly">Free Consultation</a>'
+        + '</div>'
+        + '<p class="rl-404-cta">Or call us at <a href="tel:+17872361657">(787) 236-1657</a></p>';
+
+    container.appendChild(wrap);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inject);
+  } else {
+    inject();
   }
 })();
 

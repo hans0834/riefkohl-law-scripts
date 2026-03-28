@@ -1,5 +1,21 @@
 /* Riefkohl Law — Blog Post Formatter Styles */
 
+/* Smooth scroll for TOC anchor links + offset for fixed header */
+html {
+  scroll-behavior: smooth;
+}
+.blog-item-content-wrapper h2[id],
+.blog-item-content-wrapper h3[id],
+.rl-article-content h2[id],
+.rl-article-content h3[id] {
+  scroll-margin-top: 80px;
+}
+/* Skip link target offset */
+#main-content,
+#page {
+  scroll-margin-top: 20px;
+}
+
 /* Auto-promoted headings */
 .rl-auto-heading {
   font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
@@ -16,6 +32,63 @@ h2.rl-auto-heading {
 h3.rl-auto-heading {
   font-size: 1.2em;
   color: #243047;
+}
+
+/* Table of Contents */
+.rl-toc {
+  background: #f9f9fb;
+  border: 1.5px solid #e8e9ee;
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 28px;
+}
+.rl-toc-title {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #a68c42;
+  margin: 0 0 12px !important;
+}
+.rl-toc ol {
+  list-style: none;
+  counter-reset: toc-counter;
+  padding: 0;
+  margin: 0;
+}
+.rl-toc li {
+  counter-increment: toc-counter;
+  margin-bottom: 6px;
+  padding-left: 24px;
+  position: relative;
+  font-size: .88rem;
+  line-height: 1.4;
+}
+.rl-toc li::before {
+  content: counter(toc-counter) ".";
+  position: absolute;
+  left: 0;
+  color: #bfa35d;
+  font-weight: 700;
+  font-size: .82rem;
+}
+.rl-toc li.rl-toc-indent {
+  padding-left: 44px;
+  font-size: .84rem;
+  color: #706b62;
+}
+.rl-toc li.rl-toc-indent::before {
+  left: 20px;
+  font-size: .78rem;
+}
+.rl-toc a {
+  color: #1a2033;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.rl-toc a:hover {
+  color: #bfa35d;
 }
 
 /* CTA block at bottom of posts */
@@ -70,6 +143,43 @@ h3.rl-auto-heading {
 .rl-cta-sub a:hover {
   text-decoration: underline;
 }
+
+/* Social share bar */
+.rl-share-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0;
+  padding: 16px 0;
+  border-top: 1px solid #e8e9ee;
+  border-bottom: 1px solid #e8e9ee;
+}
+.rl-share-label {
+  font-size: .78rem;
+  font-weight: 600;
+  color: #706b62;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.rl-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f0f0f3;
+  color: #706b62 !important;
+  text-decoration: none !important;
+  transition: background .2s, color .2s, transform .15s;
+}
+.rl-share-btn:hover {
+  transform: translateY(-2px);
+}
+.rl-share-li:hover { background: #0077b5; color: #fff !important; }
+.rl-share-tw:hover { background: #1a1a1a; color: #fff !important; }
+.rl-share-fb:hover { background: #1877f2; color: #fff !important; }
+.rl-share-em:hover { background: #bfa35d; color: #fff !important; }
 
 /* Related posts section */
 .rl-related-posts {
@@ -162,4 +272,49 @@ h3.rl-auto-heading {
 .rl-post-back a:hover {
   color: #a68c42;
   text-decoration: underline;
+}
+
+/* Print styles for blog posts */
+@media print {
+  .rl-call-banner,
+  .rl-sticky-cta,
+  .rl-exit-overlay,
+  .rl-progress-bar,
+  .rl-post-back,
+  .rl-post-cta,
+  .rl-crosslinks,
+  .header,
+  .header-menu,
+  footer,
+  .footer-inside,
+  .rl-reading-time { display: none !important; }
+
+  body { padding: 0 !important; }
+
+  .blog-item-content-wrapper,
+  .blog-item-content-wrapper .sqs-layout {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .rl-toc {
+    border: 1px solid #ccc;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .rl-related-posts {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: .8em;
+    color: #666;
+  }
+
+  .rl-toc a::after,
+  .rl-related-posts a::after { content: none; }
 }

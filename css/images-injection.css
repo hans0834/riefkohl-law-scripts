@@ -7,12 +7,14 @@
 .rl-rd-card .rl-card-img {
   width: 100%;
   height: 140px;
+  aspect-ratio: 16/7;
   object-fit: cover;
   border-radius: var(--rl-r-sm, 6px);
   margin-bottom: 16px;
   display: block;
   opacity: 0;
   transition: opacity .5s ease;
+  background: #f0f0f3;
 }
 .rl-rd-card .rl-card-img.rl-loaded {
   opacity: 1;

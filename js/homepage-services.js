@@ -96,19 +96,30 @@ function transformHero(htmlDiv, sec) {
 
   // Create hero wrapper
   var hero = el('div', 'rl-rd-hero');
-  var heroH1 = el('h1', '', h1.textContent.trim());
+
+  // Visual headline: client-benefit-focused (SEO H1 is set separately by seo-fixes.js)
+  var heroH1 = el('h1', '', 'Protect Your Family\u2019s Wealth with a Puerto Rico Trust \u2014 Flat Fee, No Surprises');
   hero.appendChild(heroH1);
 
-  if (subtitle) {
-    var heroP = el('p', '', subtitle.textContent.trim());
-    hero.appendChild(heroP);
-  }
+  var heroP = el('p', '', 'Estate planning, irrevocable trusts, Act\u00A060 advisory, and business law from a DLA\u00A0Piper\u2013trained attorney in San Juan. Your first consultation is free.');
+  hero.appendChild(heroP);
 
-  // Add CTA button
+  // Add CTA buttons container
+  var ctaWrap = el('div', 'rl-rd-cta-wrap');
+
+  // Primary CTA
   var ctaLink = el('a', 'rl-rd-cta-btn');
   ctaLink.href = '/calendly';
   ctaLink.textContent = 'Get Your Free 15-Minute Case Review';
-  hero.appendChild(ctaLink);
+  ctaWrap.appendChild(ctaLink);
+
+  // Secondary CTA — lower commitment
+  var ctaSecondary = el('a', 'rl-rd-cta-secondary');
+  ctaSecondary.href = '/resources';
+  ctaSecondary.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Browse Free Trust Planning Guides';
+  ctaWrap.appendChild(ctaSecondary);
+
+  hero.appendChild(ctaWrap);
 
   // Add phone number below CTA
   var phoneP = el('p', 'rl-rd-hero-phone');
@@ -147,6 +158,16 @@ function transformHero(htmlDiv, sec) {
 
   // Insert hero at the top
   htmlDiv.insertBefore(hero, htmlDiv.firstChild);
+
+  // Add trust metrics bar after hero
+  var metrics = el('div', 'rl-rd-trust-metrics');
+  metrics.setAttribute('aria-label', 'Firm credentials');
+  metrics.innerHTML =
+    '<div class="rl-trust-metric"><span class="rl-trust-metric-num">$100M+</span><span class="rl-trust-metric-label">In Transactions Handled</span></div>' +
+    '<div class="rl-trust-metric"><span class="rl-trust-metric-num">4</span><span class="rl-trust-metric-label">Bar Admissions (PR, DC, Federal, 1st Cir.)</span></div>' +
+    '<div class="rl-trust-metric"><span class="rl-trust-metric-num">10+</span><span class="rl-trust-metric-label">Years of Legal Experience</span></div>' +
+    '<div class="rl-trust-metric"><span class="rl-trust-metric-num">100%</span><span class="rl-trust-metric-label">Flat-Fee Billing</span></div>';
+  hero.parentNode.insertBefore(metrics, hero.nextSibling);
 }
 
 /* ----- Practice Areas Card Grid ----- */
@@ -511,6 +532,7 @@ function transformServices() {
   transformServicesHero(htmlDiv);
   transformTrustPricing(htmlDiv);
   transformServiceCategories(htmlDiv);
+  injectFlatFeeComparison(htmlDiv);
   transformServicesDisclaimer(htmlDiv);
 }
 
@@ -817,6 +839,55 @@ function transformServiceCategory(htmlDiv, kids, cat) {
 
   // Insert after the hidden header
   kids[headerIdx].parentNode.insertBefore(section, kids[headerIdx].nextSibling);
+}
+
+/* ----- Flat Fee vs Hourly Comparison ----- */
+function injectFlatFeeComparison(htmlDiv) {
+  if (qs('.rl-rd-compare-table')) return;
+
+  var heading = el('h2', 'rl-rd-section-heading', 'Why Flat-Fee Billing?');
+  var table = el('div', 'rl-rd-compare-table');
+  table.innerHTML =
+    '<div class="rl-compare-row rl-compare-header">' +
+      '<div class="rl-compare-feature"></div>' +
+      '<div class="rl-compare-them">Traditional Hourly</div>' +
+      '<div class="rl-compare-us">Riefkohl Law</div>' +
+    '</div>' +
+    '<div class="rl-compare-row">' +
+      '<div class="rl-compare-feature">Price transparency</div>' +
+      '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> Unknown until you get the bill</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> Quoted upfront, fixed price</div>' +
+    '</div>' +
+    '<div class="rl-compare-row">' +
+      '<div class="rl-compare-feature">Incentive alignment</div>' +
+      '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> More hours = more revenue</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> Incentivized to be efficient</div>' +
+    '</div>' +
+    '<div class="rl-compare-row">' +
+      '<div class="rl-compare-feature">Communication</div>' +
+      '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> Every email costs you</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> Ask questions freely</div>' +
+    '</div>' +
+    '<div class="rl-compare-row">' +
+      '<div class="rl-compare-feature">Budget certainty</div>' +
+      '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> Invoices vary month to month</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> One price, no surprises</div>' +
+    '</div>' +
+    '<div class="rl-compare-row">' +
+      '<div class="rl-compare-feature">Technology</div>' +
+      '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> Paper-heavy, slow processes</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> AI-assisted, modern workflows</div>' +
+    '</div>';
+
+  // Insert before the disclaimer/CTA section at the end
+  var disclaimer = qs('.rl-rd-disclaimer', htmlDiv) || qs('.rl-rd-cta-section', htmlDiv);
+  if (disclaimer) {
+    disclaimer.parentNode.insertBefore(table, disclaimer);
+    disclaimer.parentNode.insertBefore(heading, table);
+  } else {
+    htmlDiv.appendChild(heading);
+    htmlDiv.appendChild(table);
+  }
 }
 
 /* ----- Services Disclaimer ----- */

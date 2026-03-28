@@ -1,3 +1,57 @@
-/* Riefkohl Law BreadcrumbList Schema — Structured Data */
-/* DEPLOY: Add to seo-fixes.html or append to Code Injection Header */
-/* PURPOSE: Adds BreadcrumbList schema.org structured data for rich search results */
+/* Riefkohl Law BreadcrumbList Schema + Visual Breadcrumbs */
+
+/* Visual breadcrumb trail */
+.rl-breadcrumb {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 10px 28px;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+.rl-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+}
+.rl-breadcrumb li {
+  font-size: .78rem;
+  color: #706b62;
+  display: flex;
+  align-items: center;
+}
+.rl-breadcrumb li:not(:last-child)::after {
+  content: '\203A';
+  margin: 0 8px;
+  color: #c8c9ce;
+  font-size: .9rem;
+}
+.rl-breadcrumb li[aria-current="page"] {
+  color: #1a2033;
+  font-weight: 600;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rl-breadcrumb a {
+  color: #a68c42;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s;
+}
+.rl-breadcrumb a:hover {
+  color: #bfa35d;
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .rl-breadcrumb { padding: 8px 16px; }
+  .rl-breadcrumb li { font-size: .72rem; }
+}
+
+@media print {
+  .rl-breadcrumb { display: none; }
+}

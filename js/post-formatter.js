@@ -57,20 +57,44 @@
     headerMap[h.toLowerCase()] = h;
   });
 
-  // CTA block HTML
-  var CTA_EN = '<div class="rl-post-cta">' +
-    '<h3>Need Legal Guidance?</h3>' +
-    '<p>If you have questions about this area of law, our attorneys can help. We offer personalized consultations to discuss your specific situation.</p>' +
-    '<a href="/calendly" class="rl-cta-btn">Schedule a Consultation</a>' +
-    '<p class="rl-cta-sub">Or call us at <a href="tel:+17872361657">(787) 236-1657</a></p>' +
-    '</div>';
+  // Context-aware CTA blocks based on post category
+  var CTA_CONFIGS = {
+    'trusts': {
+      en: { h: 'Considering a Puerto Rico Trust?', p: 'Find out how a fideicomiso can protect your assets, reduce taxes, and bypass probate. Your first consultation is free \u2014 flat fee, no hourly billing.' },
+      es: { h: '\u00bfConsidera un Fideicomiso en Puerto Rico?', p: 'Descubra c\u00f3mo un fideicomiso puede proteger sus activos, reducir impuestos y evitar la sucesi\u00f3n testamentaria. Su primera consulta es gratis.' }
+    },
+    'estate-planning': {
+      en: { h: 'Is Your Estate Plan Ready for Puerto Rico?', p: 'Forced heirship rules mean your mainland estate plan may not work here. Get a free review with a PR-licensed attorney.' },
+      es: { h: '\u00bfEst\u00e1 Listo Su Plan Sucesoral?', p: 'Las reglas de leg\u00edtima de Puerto Rico significan que su plan de la jurisdicci\u00f3n anterior podr\u00eda no funcionar aqu\u00ed. Obtenga una revisi\u00f3n gratuita.' }
+    },
+    'act-60': {
+      en: { h: 'Act 60 Decree Holder? Protect Your Benefits.', p: 'Estate planning mistakes can put your Act 60 benefits at risk. Talk to an attorney who understands both the tax code and PR trust law.' },
+      es: { h: '\u00bfTiene Decreto de Ley 60? Proteja Sus Beneficios.', p: 'Errores en la planificaci\u00f3n sucesoral pueden poner en riesgo sus beneficios de Ley 60. Hable con un abogado que entiende ambas \u00e1reas.' }
+    },
+    'default': {
+      en: { h: 'Need Legal Guidance?', p: 'Get personalized advice from a DLA Piper\u2013trained attorney in San Juan. Your first consultation is free \u2014 flat fee, no surprises.' },
+      es: { h: '\u00bfNecesita Asesor\u00eda Legal?', p: 'Obtenga asesoramiento personalizado de un abogado en San Juan. Su primera consulta es gratis \u2014 tarifa fija, sin sorpresas.' }
+    }
+  };
 
-  var CTA_ES = '<div class="rl-post-cta">' +
-    '<h3>\u00bfNecesita Asesor\u00eda Legal?</h3>' +
-    '<p>Si tiene preguntas sobre esta \u00e1rea del derecho, nuestros abogados pueden ayudarle. Ofrecemos consultas personalizadas para discutir su situaci\u00f3n espec\u00edfica.</p>' +
-    '<a href="/calendly" class="rl-cta-btn">Agende una Consulta</a>' +
-    '<p class="rl-cta-sub">O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a></p>' +
-    '</div>';
+  function getPostCTA(category, isSpanish) {
+    var cfg = CTA_CONFIGS[category] || CTA_CONFIGS['default'];
+    var lang = isSpanish ? cfg.es : cfg.en;
+    var btnText = isSpanish ? 'Agende Su Consulta Gratuita' : 'Book Your Free Consultation';
+    var subText = isSpanish
+      ? 'O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a>'
+      : 'Or call <a href="tel:+17872361657">(787) 236-1657</a>';
+    return '<div class="rl-post-cta">' +
+      '<h3>' + lang.h + '</h3>' +
+      '<p>' + lang.p + '</p>' +
+      '<a href="/calendly" class="rl-cta-btn">' + btnText + '</a>' +
+      '<p class="rl-cta-sub">' + subText + '</p>' +
+      '</div>';
+  }
+
+  // Fallback CTA for posts where category detection fails
+  var CTA_EN = getPostCTA('default', false);
+  var CTA_ES = getPostCTA('default', true);
 
   // Back to blog link
   var BACK_LINK = '<div class="rl-post-back">' +
@@ -255,6 +279,26 @@
     if (contentArea.getAttribute('data-rl-formatted')) return;
     contentArea.setAttribute('data-rl-formatted', 'true');
 
+    // Add reading time estimate
+    if (!document.querySelector('.rl-reading-time')) {
+      var wordCount = (contentArea.textContent || '').split(/\s+/).length;
+      var minutes = Math.max(1, Math.round(wordCount / 225));
+      var spanish = isSpanish();
+      var timeLabel = spanish
+        ? minutes + ' min de lectura'
+        : minutes + ' min read';
+      var timeBadge = document.createElement('div');
+      timeBadge.className = 'rl-reading-time';
+      timeBadge.style.cssText = 'display:inline-flex;align-items:center;gap:5px;padding:4px 12px;background:#f9f9fb;border:1px solid #e8e9ee;border-radius:100px;font-size:.75rem;color:#706b62;font-weight:500;margin-bottom:20px;';
+      timeBadge.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ' + timeLabel;
+      var topWrapper = document.querySelector('.blog-item-top-wrapper') || document.querySelector('.blog-item-wrapper header');
+      if (topWrapper) {
+        topWrapper.parentNode.insertBefore(timeBadge, topWrapper.nextSibling);
+      } else {
+        contentArea.insertBefore(timeBadge, contentArea.firstChild);
+      }
+    }
+
     // Check if post already has proper H2/H3 structure
     var existingHeadings = contentArea.querySelectorAll('h2, h3');
     var alreadyStructured = existingHeadings.length >= 2;
@@ -348,6 +392,25 @@
     }
 
     // Get slug for related posts
+    // Auto-generate Table of Contents for long posts (4+ headings)
+    var tocHeadings = contentArea.querySelectorAll('h2, h3');
+    if (tocHeadings.length >= 4 && !contentArea.querySelector('.rl-toc')) {
+      var spanish = isSpanish();
+      var tocHtml = '<div class="rl-toc">' +
+        '<p class="rl-toc-title">' + (spanish ? 'En Este Art\u00edculo' : 'In This Article') + '</p><ol>';
+      for (var ti = 0; ti < tocHeadings.length; ti++) {
+        var th = tocHeadings[ti];
+        var anchor = 'section-' + ti;
+        th.id = anchor;
+        var indent = th.tagName === 'H3' ? ' class="rl-toc-indent"' : '';
+        tocHtml += '<li' + indent + '><a href="#' + anchor + '">' + th.textContent.trim() + '</a></li>';
+      }
+      tocHtml += '</ol></div>';
+      var tocDiv = document.createElement('div');
+      tocDiv.innerHTML = tocHtml;
+      contentArea.insertBefore(tocDiv.firstChild, contentArea.firstChild);
+    }
+
     var slug = path.replace(/^\/blog\//, '').replace(/\/$/, '');
 
     // Add series navigation (for numbered series posts)
@@ -445,6 +508,29 @@
       }
     }
 
+    // Add social share buttons
+    if (!contentArea.querySelector('.rl-share-bar')) {
+      var pageUrl = encodeURIComponent(window.location.href);
+      var pageTitle = encodeURIComponent(document.title || '');
+      var shareBar = document.createElement('div');
+      shareBar.className = 'rl-share-bar';
+      shareBar.innerHTML =
+        '<span class="rl-share-label">' + (isSpanish() ? 'Compartir:' : 'Share:') + '</span>' +
+        '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl + '" target="_blank" rel="noopener" class="rl-share-btn rl-share-li" aria-label="Share on LinkedIn" title="Share on LinkedIn">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>' +
+        '</a>' +
+        '<a href="https://twitter.com/intent/tweet?url=' + pageUrl + '&text=' + pageTitle + '" target="_blank" rel="noopener" class="rl-share-btn rl-share-tw" aria-label="Share on X" title="Share on X">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>' +
+        '</a>' +
+        '<a href="https://www.facebook.com/sharer/sharer.php?u=' + pageUrl + '" target="_blank" rel="noopener" class="rl-share-btn rl-share-fb" aria-label="Share on Facebook" title="Share on Facebook">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>' +
+        '</a>' +
+        '<a href="mailto:?subject=' + pageTitle + '&body=' + pageUrl + '" class="rl-share-btn rl-share-em" aria-label="Share via email" title="Share via email">' +
+          '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>' +
+        '</a>';
+      contentArea.appendChild(shareBar);
+    }
+
     // Add related posts before CTA
     var relatedHtml = buildRelatedPosts(slug);
     if (relatedHtml && !contentArea.querySelector('.rl-related-posts')) {
@@ -453,13 +539,15 @@
       contentArea.appendChild(relDiv.firstChild);
     }
 
-    // Add CTA block if not already present
+    // Add CTA block if not already present — context-aware based on post category
     var hasCTA = contentArea.querySelector('.rl-post-cta') ||
                  /schedule.*consult|book.*appointment|riefkohllaw\.com/i.test(contentArea.innerHTML);
     if (!hasCTA) {
       var spanish = isSpanish();
+      var postCategory = getPostCategory(slug);
+      var ctaHtml = getPostCTA(postCategory, spanish);
       var ctaDiv = document.createElement('div');
-      ctaDiv.innerHTML = spanish ? CTA_ES : CTA_EN;
+      ctaDiv.innerHTML = ctaHtml;
       contentArea.appendChild(ctaDiv.firstChild);
     }
 
@@ -473,9 +561,125 @@
     }
   }
 
+  // Open Graph meta tags for social sharing
+  function injectOpenGraphMeta() {
+    // Don't override if Squarespace already set OG tags
+    if (document.querySelector('meta[property="og:title"]')) return;
+
+    var title = document.title || '';
+    var desc = (document.querySelector('meta[name="description"]') || {}).content || title;
+    var url = window.location.href;
+    var img = document.querySelector('.blog-item-wrapper img, article img');
+    var imgUrl = img ? img.src : 'https://www.riefkohllaw.com/favicon.ico';
+
+    var tags = [
+      { property: 'og:type', content: 'article' },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: desc.substring(0, 200) },
+      { property: 'og:url', content: url },
+      { property: 'og:site_name', content: 'Riefkohl Law' },
+      { property: 'og:locale', content: isSpanish() ? 'es_PR' : 'en_US' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: desc.substring(0, 200) }
+    ];
+
+    if (imgUrl) {
+      tags.push({ property: 'og:image', content: imgUrl });
+      tags.push({ name: 'twitter:image', content: imgUrl });
+    }
+
+    tags.forEach(function(t) {
+      var meta = document.createElement('meta');
+      if (t.property) meta.setAttribute('property', t.property);
+      if (t.name) meta.setAttribute('name', t.name);
+      meta.setAttribute('content', t.content);
+      document.head.appendChild(meta);
+    });
+  }
+
+  // Article structured data (schema.org)
+  function injectArticleSchema() {
+    // Don't duplicate
+    var existing = document.querySelectorAll('script[type="application/ld+json"]');
+    for (var i = 0; i < existing.length; i++) {
+      if (existing[i].textContent.indexOf('"Article"') > -1 ||
+          existing[i].textContent.indexOf('"BlogPosting"') > -1) return;
+    }
+
+    var title = (document.querySelector('h1.blog-title') || document.querySelector('h1') || {}).textContent || document.title || '';
+    var desc = (document.querySelector('meta[name="description"]') || {}).content || '';
+    var dateEl = document.querySelector('time.blog-date, .dt-published, time[datetime]');
+    var datePublished = dateEl ? (dateEl.getAttribute('datetime') || dateEl.textContent) : '';
+    var url = window.location.href;
+    var contentArea = document.querySelector('.blog-item-content-wrapper .sqs-layout') ||
+                      document.querySelector('.blog-item-content-wrapper') ||
+                      document.querySelector('.entry-content');
+    var wordCount = contentArea ? (contentArea.textContent || '').split(/\s+/).length : 0;
+
+    var schema = {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      'headline': title.trim().substring(0, 110),
+      'description': desc || title.trim().substring(0, 160),
+      'url': url,
+      'author': {
+        '@type': 'Person',
+        '@id': 'https://www.riefkohllaw.com/#attorney',
+        'name': 'Hans E. Riefkohl',
+        'url': 'https://www.riefkohllaw.com/about'
+      },
+      'publisher': {
+        '@type': 'LegalService',
+        '@id': 'https://www.riefkohllaw.com/#organization',
+        'name': 'Riefkohl Law',
+        'url': 'https://www.riefkohllaw.com'
+      },
+      'inLanguage': isSpanish() ? 'es' : 'en',
+      'wordCount': wordCount,
+      'isAccessibleForFree': true
+    };
+
+    if (datePublished) {
+      schema.datePublished = datePublished;
+      schema.dateModified = datePublished;
+    }
+
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+
+  // Reading progress bar for blog posts
+  function initProgressBar() {
+    if (document.querySelector('.rl-progress-bar')) return;
+    var bar = document.createElement('div');
+    bar.className = 'rl-progress-bar';
+    bar.style.cssText = 'position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#bfa35d,#d4b96a);z-index:99999;transition:width .15s ease-out;pointer-events:none;';
+    document.body.appendChild(bar);
+
+    var ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(function() {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          var progress = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+          bar.style.width = progress + '%';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
   ready(function() {
     // Run formatter
     formatPost();
+    initProgressBar();
+    injectArticleSchema();
+    injectOpenGraphMeta();
 
     // Also watch for Squarespace AJAX page loads
     var observer = new MutationObserver(function(mutations) {

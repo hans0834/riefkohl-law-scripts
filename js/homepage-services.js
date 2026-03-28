@@ -979,7 +979,7 @@ function injectCertifiedBadge() {
   if (!SHOW_CERTIFIED_BADGE) return;
   if (document.querySelector('.rl-certified-badge')) return;
 
-  var pages = ['/', '/about', '/about-us', '/services', '/act-60-tax-incentives', '/estate-planning', '/puerto-rico-trusts'];
+  var pages = ['/', '/about', '/about-us', '/services', '/pricing', '/act-60-tax-incentives', '/estate-planning', '/puerto-rico-trusts'];
   if (pages.indexOf(PATH) === -1) return;
 
   var badge = el('div', 'rl-certified-badge',
@@ -996,11 +996,33 @@ function injectCertifiedBadge() {
 }
 
 /* ===== BOOT SEQUENCE ===== */
+/* Collapse page-sections where all visible content is hidden */
+function collapseEmptySections() {
+  if (PATH !== '/') return;
+  var sections = qsa('.page-section');
+  sections.forEach(function(sec) {
+    /* Skip the main content section */
+    if (sec.querySelector('.rl-rd-hero') || sec.querySelector('.rl-rd-cards-grid') ||
+        sec.querySelector('.rl-rd-cta-section') || sec.querySelector('.rl-rd-diff-grid')) return;
+    /* Check if all block children are hidden */
+    var blocks = qsa('.sqs-block, .fe-block', sec);
+    if (!blocks.length) return;
+    var allHidden = blocks.every(function(b) {
+      var style = window.getComputedStyle(b);
+      return style.display === 'none' || style.visibility === 'hidden' || b.offsetHeight === 0;
+    });
+    if (allHidden) {
+      sec.classList.add('rl-section-collapsed');
+    }
+  });
+}
+
 function run() {
   try {
     if (PATH === '/') {
       transformHomepage();
-    } else if (PATH === '/services') {
+      collapseEmptySections();
+    } else if (PATH === '/services' || PATH === '/pricing') {
       transformServices();
     } else if (PRACTICE_PAGES.indexOf(PATH) > -1) {
       transformPracticePage();

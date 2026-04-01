@@ -248,6 +248,55 @@
   transform: translateX(4px);
 }
 
+/* ===== HOW IT WORKS STEPS ===== */
+.rl-rd-how-it-works {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--rl-max-w);
+  margin: 32px auto 48px;
+  padding: 0 28px;
+}
+.rl-rd-step-item {
+  text-align: center;
+  padding: 32px 20px 28px;
+  background: var(--rl-cream);
+  border-radius: var(--rl-r);
+  border: 1px solid transparent;
+  transition: border-color .3s var(--rl-ease), box-shadow .3s var(--rl-ease);
+}
+.rl-rd-step-item:hover {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow);
+}
+.rl-rd-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rl-gold);
+  color: var(--rl-white);
+  font-family: var(--heading-font-font-family, Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.rl-rd-step-item h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rl-navy);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+.rl-rd-step-item p {
+  font-size: .9rem;
+  color: var(--rl-warm-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ===== DIFFERENTIATORS GRID ===== */
 .rl-rd-diff-grid {
   display: grid;
@@ -678,6 +727,7 @@ body .rl-rd-cta-section a[href^="tel"],
 @media (max-width: 1023px) {
   .rl-rd-cards-grid { grid-template-columns: repeat(2, 1fr); }
   .rl-rd-diff-grid { grid-template-columns: repeat(2, 1fr); }
+  .rl-rd-how-it-works { grid-template-columns: repeat(3, 1fr); }
   .rl-rd-tier-grid { grid-template-columns: repeat(2, 1fr); }
   .rl-rd-svc-grid { grid-template-columns: 1fr; }
   .rl-rd-testimonials-grid { grid-template-columns: 1fr; }
@@ -695,6 +745,7 @@ body .rl-rd-cta-section a[href^="tel"],
   .rl-rd-section-heading { font-size: 1.4rem; margin-top: 40px; }
   .rl-rd-cards-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
   .rl-rd-diff-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
+  .rl-rd-how-it-works { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
   .rl-rd-tier-grid { grid-template-columns: 1fr; padding: 0 16px; }
   .rl-rd-cta-section { margin: 32px 16px 40px; padding: 36px 20px; }
   .rl-rd-cta-section h2 { font-size: 1.3rem; }

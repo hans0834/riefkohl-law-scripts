@@ -498,6 +498,15 @@ body .sqs-block-content .rl-rd-cta-section p {
   line-height: 1.6;
   margin: 0 0 24px;
 }
+/* Phone link inside CTA must stay visible against dark background */
+body .rl-rd-cta-section p a,
+body .rl-rd-cta-section a[href^="tel"],
+.rl-rd-cta-section p a {
+  color: #bfa35d !important;
+  font-weight: 600;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
 .rl-rd-cta-section .rl-rd-cta-btn {
   margin-top: 0;
 }
@@ -851,6 +860,16 @@ body .page-section .content-wrapper {
 }
 body.homepage .page-section:first-child .content-wrapper {
   padding-top: 48px !important;
+}
+/* Collapse sections flagged as empty by JS */
+body.homepage .page-section.rl-section-collapsed {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+body.homepage .page-section.rl-section-collapsed .content-wrapper {
+  padding: 0 !important;
+  min-height: 0 !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

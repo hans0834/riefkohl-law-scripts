@@ -429,6 +429,7 @@ var PAGES = {
   +'<li>Puerto Rico income tax depends on trust situs, residency, and income source</li>'
   +'<li>Irrevocable trust assets generally removed from federal taxable estate</li>'
   +'<li>Federal estate tax exemption of $15M per individual (made permanent by the One Big Beautiful Bill Act with inflation indexing)</li></ul>'
+  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Ready to start planning your Puerto Rico trust?</strong></p><p>A 30-minute strategy call will help you understand which trust type fits your situation. Flat-fee pricing, no hourly billing.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
   +'<h2>Common Mistakes</h2>'
   +'<ul><li>Failing to fund the trust after creation</li><li>Choosing the wrong trustee</li><li>Ignoring forced heirship</li><li>Retaining too much control (undermines asset protection)</li><li>Not updating the trust after life changes</li><li>Using a mainland trust without Puerto Rico review</li></ul>'
   +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Go deeper with our Trust Law Series:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/what-is-puerto-rico-trust" style="color:#a68c42;">What Is a Puerto Rico Trust?</a> \u2014 The autonomous estate concept</li><li><a href="/resources/act-60-trust-planning" style="color:#a68c42;">Trust Planning for Act 60 Investors</a> \u2014 Mainland vs. PR trust decision</li><li><a href="/resources/trust-costs-puerto-rico" style="color:#a68c42;">Trust Costs</a> \u2014 Transparent pricing breakdown</li><li><a href="/resources/modifying-irrevocable-trusts" style="color:#a68c42;">Modifying &amp; Decanting Irrevocable Trusts</a> \u2014 When and how changes are possible</li><li><a href="/resources/special-needs-trusts-medicaid" style="color:#a68c42;">Special Needs Trusts &amp; Medicaid</a> \u2014 Protecting beneficiaries with disabilities</li><li><a href="/resources/ilits-and-slats" style="color:#a68c42;">ILITs and SLATs</a> \u2014 Advanced insurance and spousal trust strategies</li></ul></div>'
@@ -639,6 +640,14 @@ function injectResourceCards() {
   });
 
   html += '</div>';
+
+  /* Booking CTA at bottom of resources hub */
+  html += '<div style="max-width:680px;margin:48px auto;padding:40px 36px;background:linear-gradient(160deg,#1a2033 0%,#243047 100%);border-radius:10px;text-align:center;box-sizing:border-box;">'
+    + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">Have Questions About What You\u2019re Reading?</h2>'
+    + '<p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0 0 24px;max-width:500px;margin-left:auto;margin-right:auto;">Our articles provide general guidance, but every situation is different. Schedule a free 30-minute strategy call for personalized advice.</p>'
+    + '<a href="/calendly" style="display:inline-block;padding:14px 28px;background:#bfa35d;color:#1a2033;font-size:.85rem;font-weight:700;text-decoration:none;border-radius:6px;transition:background .25s;">Book a Free Strategy Call</a>'
+    + '<p style="color:rgba(255,255,255,.4);font-size:.8rem;margin-top:14px;">Or call <a href="tel:+17872361657" style="color:#bfa35d;text-decoration:none;">(787) 236-1657</a></p>'
+    + '</div>';
 
   var container = document.createElement('div');
   container.innerHTML = html;

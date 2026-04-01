@@ -310,6 +310,60 @@ function injectPageCTAs() {
         : 'From proposal review to compliance and disputes, protect your business interests in government procurement.',
       btn: IS_ES ? 'Reserve Su Consulta Gratuita' : 'Book Your Free Strategy Call',
       secondary: IS_ES ? 'O llame al (787) 236-1657' : 'Or call (787) 236-1657'
+    },
+    '/act-60-federal-residency-test-puerto-rico': {
+      heading: 'Not Sure If You Pass the Residency Test?',
+      body: 'Puerto Rico\'s residency tests have specific safe harbors and traps for newcomers. A 30-minute consultation will tell you exactly where you stand.',
+      btn: 'Book Your Act 60 Compliance Review',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/act-60-compliance-requirements-audit-triggers': {
+      heading: 'Stay Compliant. Avoid the Audit.',
+      body: 'Act 60 compliance has strict annual reporting and residency requirements. We review your situation, identify gaps, and help you stay protected.',
+      btn: 'Book a Compliance Consultation',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/act-60-income-sourcing-rules-puerto-rico': {
+      heading: 'Is Your Income Properly Sourced to Puerto Rico?',
+      body: 'Incorrect income sourcing is the #1 reason the IRS challenges Act 60 benefits. Get clarity on your specific situation before filing.',
+      btn: 'Book an Income Sourcing Review',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/act-60-year-of-move-safe-harbor-transition-year': {
+      heading: 'Planning Your Move to Puerto Rico?',
+      body: 'The year-of-move transition rules determine when your Act 60 benefits begin. Get the timing right to maximize your tax savings from day one.',
+      btn: 'Book a Pre-Move Strategy Call',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/puerto-rico-estate-planning-nrnc-classification': {
+      heading: 'Act 60 Decree Holder? Your Estate Plan Matters.',
+      body: 'NRNC classification affects how your assets are taxed at death. A properly structured estate plan protects your Act 60 benefits for your heirs.',
+      btn: 'Book an Estate Planning Consultation',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/about': {
+      heading: 'Ready to Discuss Your Legal Needs?',
+      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014flat fee, no surprises.',
+      btn: 'Book Your Free Strategy Call',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/about-us': {
+      heading: 'Ready to Discuss Your Legal Needs?',
+      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014flat fee, no surprises.',
+      btn: 'Book Your Free Strategy Call',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/blog': {
+      heading: 'Have Questions About What You\'re Reading?',
+      body: 'Our articles provide general guidance, but every situation is different. Get personalized advice in a free strategy call.',
+      btn: 'Book a Free Strategy Call',
+      secondary: 'Or call (787) 236-1657'
+    },
+    '/services': {
+      heading: 'Let\'s Find the Right Service for You',
+      body: 'Not sure where to start? A 30-minute strategy call will help us understand your needs and recommend the best approach\u2014flat fee, no hourly billing.',
+      btn: 'Book Your Free Strategy Call',
+      secondary: 'Or call (787) 236-1657'
     }
   };
 

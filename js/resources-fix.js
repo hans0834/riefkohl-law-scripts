@@ -30,7 +30,7 @@ var PAGES = {
   +'<div class="rl-faq-a"><p>If you die intestate (without a valid will), Puerto Rico\u2019s Civil Code determines how your assets are distributed. Generally, your estate passes to your descendants first, then to your surviving spouse, parents, and other relatives in a statutory order of succession. The court will appoint an administrator, and the process can be significantly longer and more expensive than with a proper estate plan in place.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Can I create an irrevocable trust in Puerto Rico?</button>'
-  +'<div class="rl-faq-a"><p>Yes. Puerto Rico\u2019s Trust Act permits both revocable and irrevocable trusts. Irrevocable trusts are often used for asset protection, tax planning, and ensuring assets pass outside of probate. Once established, the grantor generally cannot modify or revoke the trust without the beneficiaries\u2019 consent, which provides stronger creditor protection.</p></div></div>'
+  +'<div class="rl-faq-a"><p>Yes. Under Puerto Rico\u2019s Trust Act (Ley 219-2012), trusts are irrevocable by default. The grantor cannot reserve the right to revoke the trust, which provides strong creditor protection since assets are permanently separated from the grantor\u2019s personal estate. However, Act 60 Individual Resident Investor (IRI) decree holders have a special exception under the Incentives Code (13 LPRA \u00a710854a(b)) that permits them to establish revocable trusts as well. Irrevocable trusts can still be <em>modified</em> in significant ways under \u00a73352h\u2014including changing beneficiaries, trustees, and distribution standards\u2014providing flexibility without sacrificing asset protection.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How does Act 60 affect my estate planning?</button>'
   +'<div class="rl-faq-a"><p>Act 60 (formerly Acts 20 and 22) provides significant tax incentives for individuals and businesses that relocate to Puerto Rico. However, these incentives apply primarily to income and capital gains earned after becoming a <em>bona fide</em> resident. Estate planning for Act 60 decree holders often involves coordinating federal estate tax obligations, structuring trusts to protect incentivized assets, and considering dual-will architecture for assets in multiple jurisdictions.</p></div></div>'
@@ -64,8 +64,8 @@ var PAGES = {
   +'<h2>Trusts (Fideicomiso)</h2>'
   +'<p>Puerto Rico trusts are governed by the Puerto Rico Trust Act (Ley 219-2012), which provides a flexible and powerful planning tool. A trust is a legal arrangement where a grantor (fideicomitente) transfers assets to a trustee (fiduciario) for the benefit of beneficiaries (fideicomisarios).</p>'
   +'<h3>Types of Trusts</h3>'
-  +'<ul><li><strong>Revocable trust:</strong> The grantor retains the right to modify or dissolve the trust during their lifetime.</li>'
-  +'<li><strong>Irrevocable trust:</strong> Once created, the grantor generally cannot change the trust\u2019s terms, providing stronger asset protection.</li>'
+  +'<ul><li><strong>Irrevocable trust (default):</strong> Under Law 219-2012, all Puerto Rico trusts are irrevocable by default. The grantor cannot revoke the trust, but may reserve broad modification rights under \u00a73352h (amend terms, change beneficiaries, substitute trustees), providing flexibility with strong asset protection.</li>'
+  +'<li><strong>Revocable trust (Act 60 IRI only):</strong> Act 60 Individual Resident Investor decree holders may establish revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)). The grantor retains the right to modify or dissolve the trust during their lifetime, but the trust does not provide asset protection.</li>'
   +'<li><strong>Asset protection trust:</strong> Designed to shield assets from creditors while allowing beneficiaries to benefit from the trust.</li></ul>'
   +'<h3>Advantages of a Trust</h3>'
   +'<ul><li>Avoids probate entirely</li><li>Maintains privacy (not a public record)</li><li>Can provide asset protection from creditors</li><li>Effective for managing assets across multiple jurisdictions</li><li>Provides for incapacity planning</li></ul>'
@@ -217,7 +217,7 @@ var PAGES = {
   +'<p>Puerto Rico courts have consistently upheld the forced heirship system, rejecting attempts to bypass the <em>leg\u00edtima</em> through inter vivos transfers that are found to be simulated or made in fraud of heirs\u2019 rights. Courts apply a collation analysis (<em>colaci\u00f3n</em>) to bring certain lifetime gifts back into the estate for distribution purposes. Recent decisions under the 2020 Civil Code are beginning to clarify the application of the new one-half <em>leg\u00edtima</em> rule.</p></div>'
 
   +'<div class="rl-case-card"><h3>Trust Validity and Formation</h3>'
-  +'<p>Since the enactment of the Puerto Rico Trust Act in 2012, courts have addressed questions regarding proper trust formation, the distinction between revocable and irrevocable trusts, and the enforceability of trust provisions that conflict with public policy. Key rulings have reinforced the Act\u2019s intent to create a modern, flexible trust framework while respecting Puerto Rico\u2019s civil law traditions.</p></div>'
+  +'<p>Since the enactment of the Puerto Rico Trust Act in 2012, courts have addressed questions regarding proper trust formation, the scope of irrevocability and modification rights, and the enforceability of trust provisions that conflict with public policy. Key rulings have reinforced the Act\u2019s intent to create a modern, flexible trust framework while respecting Puerto Rico\u2019s civil law traditions.</p></div>'
 
   +'<div class="rl-case-card"><h3>Fiduciary Breach and Liability</h3>'
   +'<p>Puerto Rico courts have addressed trustee liability for breach of fiduciary duty, including cases involving self-dealing, imprudent investments, and failure to provide accountings. These decisions establish that fiduciaries must act with the care and diligence of a prudent person and can face personal liability, including damages and removal, for violations of their duties.</p></div>'
@@ -258,7 +258,7 @@ var PAGES = {
   +'<tr><td>Declaratoria de Herederos</td><td>Declaratoria de Herederos</td><td>A judicial proceeding to identify legal heirs, establish inheritance shares, and authorize the transfer of assets. Required whether or not a will exists; additional steps follow for asset collection, administration, and partition.</td></tr>'
   +'<tr><td>Power of Attorney</td><td>Poder</td><td>A legal document authorizing someone to act on your behalf in legal or financial matters.</td></tr>'
   +'<tr><td>Intestate</td><td>Intestado(a) / Ab Intestato</td><td>Dying without a valid will; the estate is distributed according to statutory rules.</td></tr>'
-  +'<tr><td>Irrevocable Trust</td><td>Fideicomiso Irrevocable</td><td>A trust that cannot be modified or dissolved by the grantor after its creation.</td></tr>'
+  +'<tr><td>Irrevocable Trust</td><td>Fideicomiso Irrevocable</td><td>A trust that cannot be revoked by the grantor after its creation. Under Puerto Rico\u2019s Trust Act, all trusts are irrevocable by default (Act 60 IRI decree holders may create revocable trusts). The grantor may reserve modification rights under \u00a73352h to amend terms, change beneficiaries, and substitute trustees.</td></tr>'
   +'<tr><td>Asset Protection</td><td>Protecci\u00f3n de Activos</td><td>Legal strategies to shield assets from creditors, lawsuits, and judgments.</td></tr>'
   +'<tr><td>Notary Public</td><td>Notario(a)</td><td>In Puerto Rico, an attorney authorized to authenticate legal documents, including wills.</td></tr>'
   +'<tr><td>Succession</td><td>Sucesi\u00f3n</td><td>The process by which a deceased person\u2019s rights and obligations pass to their heirs.</td></tr>'
@@ -308,6 +308,8 @@ var PAGES = {
   subtitle: 'How to protect your tax benefits through proper planning under Puerto Rico law.',
   content: function(){return ''
   +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
   +'<h2>Mistake 1: Not Updating Your Will After Relocating</h2>'
   +'<p>Puerto Rico is a civil law jurisdiction. The estate and succession rules are fundamentally different from common law states. Under the Civil Code (Ley 55-2020), a portion of your estate\u2014the <em>leg\u00edtima</em>\u2014is reserved by law for your children. If your mainland will attempts to leave everything to a spouse or trust without accounting for the <em>leg\u00edtima</em>, a Puerto Rico court can invalidate those provisions.</p>'
   +'<p><strong>What to do:</strong> Have a Puerto Rico-licensed attorney review your existing will. Consider a dual-will architecture\u2014one for Puerto Rico assets and one for assets elsewhere.</p>'
@@ -318,7 +320,7 @@ var PAGES = {
   +'<p>Mainland revocable living trusts were not designed with Puerto Rico\u2019s legal framework in mind. Trust recognition, governing law conflicts, and forced heirship interaction all create issues. A mainland trust does not override Puerto Rico\u2019s forced heirship rules.</p>'
   +'<p><strong>What to do:</strong> Have your existing trust reviewed by a Puerto Rico attorney who understands Law 219-2012. Create a new Puerto Rico trust that works alongside your existing structures.</p>'
   +'<h2>Mistake 4: Not Coordinating Federal and PR Estate Tax</h2>'
-  +'<p>While Puerto Rico abolished its local estate tax through Act 76-2017, federal estate tax still applies, and residency issues can trigger state-level estate taxes in your prior domicile. Without proper planning, your estate may face unexpected tax exposure.</p>'
+  +'<p>U.S. citizens in Puerto Rico are subject to federal estate tax on worldwide assets. Act 60 income tax exemptions do <strong>not</strong> extend to estate and gift taxes. While Puerto Rico abolished its local estate tax through Act 76-2017, federal estate tax still applies, and residency issues can trigger state-level estate taxes in your prior domicile. Without proper planning, your estate may face unexpected tax exposure.</p>'
   +'<p><strong>What to do:</strong> Engage an attorney and tax advisor who can model your estate tax exposure under both federal and Puerto Rico law. Consider lifetime gifting, ILITs, and charitable planning while the federal exemption is still high.</p>'
   +'<h2>Mistake 5: Failing to Maintain Residency Documentation</h2>'
   +'<p>If your residency is challenged posthumously, your estate could be treated as domiciled in your prior state, triggering state estate tax. Your Puerto Rico trust structures may be recharacterized, and Act 60 income tax benefits could be clawed back.</p>'
@@ -336,13 +338,13 @@ var PAGES = {
   +'<h2>How Wills Work in Puerto Rico</h2>'
   +'<p>A will (<em>testamento</em>) directs how your assets are distributed after death. Under the current Civil Code (Ley 55-2020), Puerto Rico recognizes two forms: open wills (before a notary) and holographic wills (handwritten). Wills are subject to forced heirship\u2014one-half of your estate is reserved for your forced heirs (children and surviving spouse). Wills also do not avoid the court-supervised succession process, which can take months to over a year.</p>'
   +'<h2>How Trusts Work in Puerto Rico</h2>'
-  +'<p>Trusts (<em>fideicomiso</em>) are governed by <a href="/puerto-rico-trusts">Law 219-2012</a>. A <strong>revocable trust</strong> avoids probate and provides incapacity planning but does not protect assets from creditors. An <strong>irrevocable trust</strong> provides asset protection, estate tax reduction, and multi-generational planning. <strong>Multi-generational trusts</strong> can last for the life of the last surviving beneficiary named in the trust instrument, plus 30 years.</p>'
+  +'<p>Trusts (<em>fideicomiso</em>) are governed by <a href="/puerto-rico-trusts">Law 219-2012</a>. Under the Trust Act, all trusts are irrevocable by default\u2014but the grantor may reserve broad modification rights under \u00a73352h (amend terms, change beneficiaries, substitute trustees). Act 60 IRI decree holders have an additional option: revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)), which avoid probate and provide incapacity planning but do not protect assets from creditors. <strong>Irrevocable trusts</strong> provide asset protection, estate tax reduction, and multi-generational planning. Trust duration under Law 219-2012 is measured by the life of the last surviving beneficiary named in the trust instrument, plus 30 years (with certain special-purpose trusts potentially extending to 90 years).</p>'
   +'<h2>Key Differences</h2>'
   +'<ul><li><strong>Probate avoidance:</strong> Will\u2014No. Trust\u2014Yes.</li>'
   +'<li><strong>Asset protection:</strong> Will\u2014No. Trust (irrevocable)\u2014Yes.</li>'
   +'<li><strong>Incapacity planning:</strong> Will\u2014No. Trust\u2014Yes.</li>'
   +'<li><strong>Privacy:</strong> Will\u2014Public (probate). Trust\u2014Private.</li>'
-  +'<li><strong>Cost:</strong> Will\u2014$1,500\u2013$3,000. Revocable trust\u2014$7,500\u2013$15,000. Irrevocable trust\u2014$15,000\u2013$50,000+.</li></ul>'
+  +'<li><strong>Cost:</strong> Will\u2014$1,500\u2013$3,000. Revocable trust (Act 60 IRI only)\u2014$7,500\u2013$15,000. Irrevocable trust\u2014$15,000\u2013$50,000+.</li></ul>'
   +'<h2>Trusts and Forced Heirship</h2>'
   +'<p>A trust does not automatically override forced heirship. However, a well-structured trust can work within the framework\u2014providing income to a spouse while preserving principal for children, and using the <em>libre disposici\u00f3n</em> half to benefit non-heirs or to provide additional flexibility in how assets are distributed.</p>'
   +'<h2>When You Need Both</h2>'
@@ -410,12 +412,12 @@ var PAGES = {
   +'<h2>What Is a Trust in Puerto Rico?</h2>'
   +'<p>A trust (<em>fideicomiso</em>) is a legal arrangement where a settlor (<em>fideicomitente</em>) transfers assets to a trustee (<em>fiduciario</em>) for the benefit of beneficiaries (<em>fideicomisarios</em>). Law 219-2012 created a modern, flexible trust statute tailored to Puerto Rico\u2019s civil law system.</p>'
   +'<h2>Types of Trusts</h2>'
-  +'<h3>Revocable Trusts</h3>'
-  +'<p>Can be modified or revoked at any time. Provides probate avoidance and incapacity planning, but no asset protection. All income is reported on the settlor\u2019s personal tax return.</p>'
-  +'<h3>Irrevocable Trusts</h3>'
-  +'<p>Cannot be modified after creation. Provides asset protection, estate tax reduction, and multi-generational planning. Must be structured to respect <a href="/resources/forced-heirship-estate-plan">forced heirship rules</a>.</p>'
+  +'<h3>Irrevocable Trusts (Default Under Law 219-2012)</h3>'
+  +'<p>All Puerto Rico trusts are irrevocable by default. The grantor cannot revoke the trust, but may reserve broad modification rights under \u00a73352h\u2014including amending trust terms, substituting trustees, and adding or removing beneficiaries. Provides strong asset protection, estate tax reduction, and multi-generational planning. Must be structured to respect <a href="/resources/forced-heirship-estate-plan">forced heirship rules</a>.</p>'
+  +'<h3>Revocable Trusts (Act 60 IRI Decree Holders Only)</h3>'
+  +'<p>Act 60 Individual Resident Investor decree holders may establish revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)). Can be modified or revoked at any time. Provides probate avoidance and incapacity planning, but no asset protection. All income is reported on the settlor\u2019s personal tax return.</p>'
   +'<h3>Multi-Generational Trusts</h3>'
-  +'<p>Designed to last multiple generations (life + 30 years under Law 219-2012). Assets pass without probate or estate tax at each generation.</p>'
+  +'<p>Designed to last multiple generations (the life of the last surviving named beneficiary, plus 30 years, under Law 219-2012). Assets pass without probate or estate tax at each generation.</p>'
   +'<h3>Special Purpose Trusts</h3>'
   +'<p>Charitable trusts, special needs trusts, life insurance trusts (ILITs), and business succession trusts.</p>'
   +'<h2>Creating a Trust: 5 Steps</h2>'
@@ -540,12 +542,409 @@ var PAGES = {
   +'<li><strong>Planificaci\u00f3n integral:</strong> Fideicomiso + designaciones de beneficiario + testamento como red de seguridad.</li></ul>'
   +'<div class="rl-sub-cta"><p><strong>\u00bfNecesita ayuda con una declaratoria o quiere evitarla?</strong></p><p>Le ayudaremos a navegar el proceso o a crear un plan que proteja a su familia.</p><a href="/calendly">Agendar Consulta Gratuita</a></div>'
   }
+},
+
+'/resources/act-38-2026-hb-505': {
+  title: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
+  subtitle: 'The most significant changes to Act 60 since the program\u2019s creation.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Tax law is subject to change. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Overview</h2>'
+  +'<p>On January 12, 2026, Puerto Rico enacted Act 38-2026 (originally House Bill 505), the most significant amendment to the Act 60 Individual Resident Investor (IRI) program since its creation as Act 22-2012. The law changes the preferential tax rate for new applicants, extends the program\u2019s lifespan, and introduces new requirements\u2014while grandfathering existing decree holders.</p>'
+
+  +'<h2>Key Changes</h2>'
+  +'<h3>New 4% Tax Rate for Post-2026 Applicants</h3>'
+  +'<p>Applications filed on or after <strong>January 1, 2027</strong> will be subject to a <strong>4% preferential tax rate</strong> on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.</p>'
+  +'<p><strong>Important:</strong> The decree guarantees the Puerto Rico tax treatment for its duration. However, the separate federal tax exclusion under IRC \u00a7933 depends on maintaining bona fide resident (BFR) status under IRC \u00a7937 and proper income sourcing. Federal tax treatment is not guaranteed by the decree and remains subject to IRS examination and potential legislative change.</p>'
+
+  +'<h3>Grandfathering of Existing Decree Holders</h3>'
+  +'<p>Existing decree holders are <strong>fully grandfathered</strong> under their current terms and retain the 0% rate for the duration of their decree. Applications pending or filed before December 31, 2026 also qualify for the grandfathered 0% rate.</p>'
+
+  +'<h3>Program Extension to 2055</h3>'
+  +'<p>Act 38-2026 extends the IRI program through <strong>December 31, 2055</strong>, from the prior 2035 sunset date. This provides long-term certainty for both existing and future decree holders.</p>'
+
+  +'<h3>Federal 10-Year Lookback Rule</h3>'
+  +'<p><strong>Critical federal limitation:</strong> Capital gains on investment property owned before establishing bona fide PR residency are subject to the federal 10-year lookback rule under <strong>Treas. Reg. \u00a71.937-2(f)</strong>. Under this rule, gains on pre-move assets are not treated as Puerto Rico-source income for federal tax purposes and remain subject to U.S. federal capital gains tax. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024); CCM 202538025.</p>'
+
+  +'<h3>Annual Charitable Donation Requirement</h3>'
+  +'<p>The annual charitable donation requirement differs based on when your application is filed:</p>'
+  +'<ul><li><strong>Applications filed on or before December 31, 2026:</strong> $10,000 annual donation\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CEFCL (Comit\u00e9 Especial Fondos Legislativos para Impacto Comunitario), plus $5,000 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01.</li>'
+  +'<li><strong>Applications filed after December 31, 2026:</strong> $15,000 annual donation with the same allocation structure ($7,500 CEFCL + $7,500 qualifying nonprofits).</li></ul>'
+  +'<p><strong>Important:</strong> Qualifying nonprofit organizations cannot be controlled by the decree holder or their family members. Donations must be made annually as a condition of maintaining the decree.</p>'
+
+  +'<h3>Employment Requirement</h3>'
+  +'<p>New applicants with annual revenue exceeding $3 million must create or maintain at least <strong>one full-time employee</strong> (other than the owner) in Puerto Rico within two years. Businesses below this threshold are not subject to the employee requirement. This reinforces the program\u2019s economic development purpose.</p>'
+
+  +'<h3>Six-Year Non-Residency Requirement</h3>'
+  +'<p>Under Act 38-2026, new applicants must demonstrate that they have <strong>not been bona fide residents of Puerto Rico</strong> for at least six years prior to their application. This requirement is designed to ensure the program attracts new residents rather than benefiting individuals already living on the island.</p>'
+
+  +'<h2>What This Means for Current Decree Holders</h2>'
+  +'<ul><li><strong>No change to your 0% rate</strong>\u2014existing decrees are grandfathered</li>'
+  +'<li><strong>No change to your $10,000 donation obligation</strong>\u2014the $15,000 requirement applies only to post-2026 applicants</li>'
+  +'<li><strong>Program extended to 2055</strong>\u2014your decree\u2019s longevity is more secure</li>'
+  +'<li><strong>Compliance obligations unchanged</strong>\u2014continue meeting residency, reporting, and Act 52 certification requirements</li></ul>'
+
+  +'<h2>What This Means for Prospective Applicants</h2>'
+  +'<ul><li><strong>Apply before December 31, 2026</strong> to lock in the 0% rate</li>'
+  +'<li><strong>After 2026:</strong> the 4% rate still represents a significant tax benefit compared to mainland capital gains rates of 20\u201323.8%</li>'
+  +'<li><strong>Plan for the $15K donation and employment requirements</strong> when budgeting your relocation</li>'
+  +'<li><strong>Note the donation allocation:</strong> $7,500 to CEFCL-listed organizations + $7,500 to qualifying PR nonprofits (not controlled by you or your family)</li></ul>'
+
+  +'<h2>Frequently Asked Questions</h2>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is the new tax rate under Act 38-2026?</button>'
+  +'<div class="rl-faq-a"><p>Applications filed on or after January 1, 2027 will be subject to a 4% preferential tax rate on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Are existing Act 60 decree holders affected?</button>'
+  +'<div class="rl-faq-a"><p>No. Existing decree holders are grandfathered under their current terms and retain the 0% rate and $10,000 donation requirement. Applications filed before December 31, 2026 also qualify for the grandfathered terms.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How long is the Act 60 program extended?</button>'
+  +'<div class="rl-faq-a"><p>Act 38-2026 extends the Individual Resident Investor program through December 31, 2055, from the prior 2035 sunset date.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What are the DDEC application and filing fees?</button>'
+  +'<div class="rl-faq-a"><p>The DDEC charges: (1) a <strong>$5,005 application fee</strong> at the time of filing; (2) a <strong>$105 acceptance fee</strong> upon decree grant; and (3) an <strong>annual compliance filing fee of $5,000+</strong> thereafter. These are material costs that should be factored into your relocation budget in addition to legal and CPA fees.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Should I apply before December 31, 2026?</button>'
+  +'<div class="rl-faq-a"><p>If you are seriously considering relocating to Puerto Rico under Act 60, filing your application before December 31, 2026 locks in the 0% rate. However, the decree application process involves establishing bona fide residency, structuring entities, and compliance planning\u2014start early to ensure your application is filed on time.</p></div></div>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 side-by-side comparison of pre-2020, 2020\u20132025, and post-2026 decree requirements</li>'
+  +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar & Deadlines</a> \u2014 DDEC fees, filing deadlines, and donation requirements</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement & Campaign 685</a> \u2014 criminal prosecutions and why attorney privilege matters</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal obligations as a decree holder</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help understanding how Act 38-2026 affects your situation?</strong></p><p>We help both existing decree holders and prospective applicants navigate the new landscape.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/irs-enforcement-act-60': {
+  title: 'IRS Enforcement of Act 60: Campaign 685 & Criminal Prosecutions',
+  subtitle: 'What decree holders must know about federal enforcement in Puerto Rico.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>The IRS Has Full Jurisdiction in Puerto Rico</h2>'
+  +'<p>A common misconception among Act 60 decree holders is that relocating to Puerto Rico means "freedom from the IRS." This is legally wrong and dangerously misleading. The IRS has <strong>full enforcement jurisdiction</strong> in Puerto Rico. The operative federal exclusion is provided by <strong>IRC \u00a7933</strong>, which excludes Puerto Rico-source income from federal gross income for bona fide Puerto Rico residents. The BFR test under IRC \u00a7937 must be satisfied for the entire taxable year, with a limited exception under the year-of-move safe harbor (Treas. Reg. \u00a71.937-1(f)). IRC \u00a7933 does not exclude U.S.-source income, does not eliminate the federal filing requirement, and does not limit IRS authority in any way.</p>'
+  +'<p>Act 60 decree holders must file <strong>Form 1040</strong> annually with the IRS, comply with <strong>FBAR</strong> (FinCEN Form 114) and <strong>FATCA</strong> (Form 8938) requirements, and accurately report worldwide income with proper sourcing.</p>'
+
+  +'<h2>Compliance Campaign 685</h2>'
+  +'<p>In 2021, the IRS Large Business & International Division launched <strong>Compliance Campaign 685</strong>, a dedicated enforcement initiative targeting Act 60/22 decree holders. The campaign has <strong>12 staff members</strong> focused specifically on auditing:</p>'
+  +'<ul><li><strong>Bona fide residency compliance</strong>\u2014whether the taxpayer actually meets the IRC \u00a7937 three-part test</li>'
+  +'<li><strong>Income sourcing</strong>\u2014whether income claimed as PR-source was properly allocated under IRC \u00a7\u00a7861\u2013865</li>'
+  +'<li><strong>Pre-move capital gains</strong>\u2014whether appreciation accrued before establishing PR residency is properly taxed at federal rates</li>'
+  +'<li><strong>Entity structuring</strong>\u2014whether export services companies meet Chapter 3 substance requirements</li></ul>'
+
+  +'<h2>Criminal Prosecutions</h2>'
+  +'<p>The IRS has moved beyond civil audits. Several Act 60 decree holders have faced <strong>criminal prosecution</strong> for:</p>'
+  +'<ul><li><strong>Fraudulent residency claims</strong>\u2014claiming bona fide residency while spending most of the year on the mainland</li>'
+  +'<li><strong>Income sourcing manipulation</strong>\u2014mischaracterizing mainland-source income as Puerto Rico-source to qualify for the exclusion</li>'
+  +'<li><strong>Failure to report pre-move gains</strong>\u2014treating appreciation that accrued before the relocation as exempt Puerto Rico income</li></ul>'
+  +'<p>Convictions have resulted in prison sentences, substantial fines, and full back-tax liability plus penalties and interest. The <strong>Gajwani prosecution (2025)</strong> is a notable recent case that underscores the IRS\u2019s willingness to pursue criminal charges against decree holders who fail to comply with residency and sourcing requirements.</p>'
+
+  +'<h2>Scale of Enforcement</h2>'
+  +'<p>Approximately <strong>1,800 decree holder audits</strong> were underway or completed in 2025. The DDEC and IRS exchange information about decree holders\u2014a DDEC compliance finding or revocation can trigger an IRS examination, and vice versa. This coordinated enforcement posture shows no sign of slowing.</p>'
+
+  +'<h2>GAO Reports & Congressional Scrutiny</h2>'
+  +'<p>The U.S. Government Accountability Office (GAO) has published multiple reports examining the Act 60 program, raising concerns about revenue loss and compliance gaps. These reports have led to increased Congressional scrutiny and calls for enhanced IRS enforcement\u2014a trend that shows no sign of slowing.</p>'
+
+  +'<h2>Why Attorney-Client Privilege Matters</h2>'
+  +'<p>If the IRS audits your Act 60 compliance, communications with your <strong>CPA are not privileged</strong>. The IRS can subpoena your accountant\u2019s workpapers, emails, and notes. In contrast, communications with your <strong>attorney are protected by attorney-client privilege</strong>\u2014they cannot be compelled in an audit or criminal investigation.</p>'
+  +'<p>This distinction is critical for Act 60 decree holders making decisions about residency compliance, income sourcing, and entity structuring that carry criminal exposure.</p>'
+
+  +'<h2>How to Protect Yourself</h2>'
+  +'<ul><li><strong>Maintain meticulous records</strong> of your physical presence in Puerto Rico (travel logs, flight records, gym check-ins, medical appointments)</li>'
+  +'<li><strong>Ensure proper income sourcing</strong> under IRC \u00a7\u00a7861\u2013865, especially for service income and intangible property</li>'
+  +'<li><strong>Work with legal counsel</strong>\u2014not just a CPA\u2014for compliance decisions that carry criminal exposure</li>'
+  +'<li><strong>Complete Act 52 biennial certification</strong> on time (see <a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a>)</li>'
+  +'<li><strong>File all required federal returns</strong> including Forms 1040, 8898, 8938, and FinCEN 114</li></ul>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal filing obligations don\u2019t disappear</li>'
+  +'<li><a href="/resources/ddec-revocation-procedures">DDEC Revocation Procedures</a> \u2014 how decrees get revoked and the tax reversion consequences</li>'
+  +'<li><a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a> \u2014 biennial certification requirements</li>'
+  +'<li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 requirements by decree era</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Concerned about IRS enforcement?</strong></p><p>We provide attorney-privileged compliance review for Act 60 decree holders.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/why-law-firm-act-60': {
+  title: 'Why Hire a Law Firm for Act 60 Planning?',
+  subtitle: 'What attorneys provide that CPAs cannot\u2014and why the distinction matters.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Act 60 Planning Is Not Just Tax Preparation</h2>'
+  +'<p>Many Act 60 applicants approach the process as a tax matter and hire only a CPA. While CPAs play an important role in tax compliance, Act 60 planning involves <strong>legal decisions</strong> that require attorney expertise\u2014and attorney-client privilege.</p>'
+
+  +'<h2>Attorney-Client Privilege</h2>'
+  +'<p>This is the single most important reason to involve a law firm. When the IRS audits your Act 60 compliance\u2014and <a href="/resources/irs-enforcement-act-60">Campaign 685 makes this increasingly likely</a>\u2014there is a critical difference:</p>'
+  +'<ul><li><strong>CPA communications are not privileged.</strong> The IRS can subpoena your accountant\u2019s workpapers, emails, notes, and internal memos.</li>'
+  +'<li><strong>Attorney communications are privileged.</strong> Legal advice about residency compliance, income sourcing, and entity structuring is protected from disclosure.</li></ul>'
+  +'<p>For decisions that carry potential criminal exposure\u2014like whether a particular income stream is properly sourced to Puerto Rico\u2014the privilege distinction is not academic. It is the difference between protected counsel and discoverable evidence.</p>'
+
+  +'<h2>Entity Structuring</h2>'
+  +'<p>Most Act 60 strategies require proper entity formation:</p>'
+  +'<ul><li><strong>Export Services (Chapter 3) companies</strong> must meet substance requirements, have genuine PR operations, and maintain compliant intercompany agreements</li>'
+  +'<li><strong>Holding companies</strong> for investment assets require careful structuring to avoid IRS recharacterization</li>'
+  +'<li><strong>Trust planning</strong> under Puerto Rico\u2019s Trust Act (Ley 219-2012) involves irrevocable trust formation, trustee selection, and coordination with the Act 60 decree</li></ul>'
+  +'<p>Entity formation and governance are fundamentally legal activities\u2014they require legal opinions, operating agreements, and corporate resolutions that CPAs are not licensed to prepare.</p>'
+
+  +'<h2>Decree Application & Negotiation</h2>'
+  +'<p>The Act 60 decree is a <strong>contract with the Government of Puerto Rico</strong>. Its terms can be negotiated, and the application process involves legal representations. An attorney can:</p>'
+  +'<ul><li>Negotiate decree terms, including the effective date, specific carve-outs, and conditions</li>'
+  +'<li>Ensure the application accurately reflects your income sources and business activities</li>'
+  +'<li>Identify potential issues before DDEC (the Department of Economic Development and Commerce) reviews your file</li></ul>'
+
+  +'<h2>Tax Court Representation</h2>'
+  +'<p>If a dispute with the IRS escalates, only attorneys (and a limited number of non-attorney practitioners who pass the Tax Court exam) can represent you in <strong>U.S. Tax Court</strong>. CPAs cannot. If your Act 60 compliance is challenged, you need counsel who can both advise you and advocate for you in court.</p>'
+
+  +'<h2>What CPAs Do Best</h2>'
+  +'<p>CPAs are essential for Act 60 compliance\u2014specifically for:</p>'
+  +'<ul><li>Annual tax return preparation (Federal Form 1040 and Puerto Rico Form 482)</li>'
+  +'<li>Agreed-upon procedures (AUP) for <a href="/resources/compliance-certificate-act-52">Act 52 biennial certification</a></li>'
+  +'<li>Bookkeeping and financial reporting for Chapter 3 export services companies</li>'
+  +'<li>FBAR and FATCA compliance filings</li></ul>'
+  +'<p>The ideal approach is a <strong>coordinated team</strong>: legal counsel for structuring, privilege-protected advice, and decree negotiation, plus a CPA for return preparation and financial compliance.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Ready to structure your Act 60 plan with legal counsel?</strong></p><p>We coordinate with your CPA to ensure comprehensive compliance.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/compliance-certificate-act-52': {
+  title: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
+  subtitle: 'What decree holders must know about biennial certification.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>What Is Act 52-2022?</h2>'
+  +'<p>Act 52-2022 introduced a <strong>biennial compliance certification requirement</strong> for all Act 60 decree holders (and holders of legacy Acts 20 and 22 decrees). Every two years, decree holders must demonstrate that they are meeting the terms of their decree through a formal certification process.</p>'
+
+  +'<h2>Who Must Comply?</h2>'
+  +'<ul><li>All <strong>Individual Resident Investor (IRI)</strong> decree holders (Chapter 2/former Act 22)</li>'
+  +'<li>All <strong>Export Services</strong> decree holders (Chapter 3/former Act 20)</li>'
+  +'<li>Holders of other Act 60 incentive decrees, as specified by DDEC</li></ul>'
+  +'<p>There are no exemptions based on decree age or grandfathering\u2014if you hold a decree, you must comply.</p>'
+
+  +'<h2>CPA / Compliance Professional Requirement</h2>'
+  +'<p>Under Act 52-2022, annual compliance reports must be certified by a qualified <strong>Compliance Professional</strong>\u2014a CPA or attorney licensed in Puerto Rico. This is a critical DDEC regulatory mechanism: decree holders cannot self-certify compliance. The DDEC\u2019s Economic Incentives Review Committee (CRIE) oversees enforcement of this requirement.</p>'
+  +'<p><strong>Act 188-2024</strong> introduced an alternative AUP Report option for qualifying decree holders. Consult counsel to determine whether the standard biennial certificate or the Act 188-2024 alternative applies to your situation.</p>'
+
+  +'<h2>What Is an Agreed-Upon Procedures (AUP) Engagement?</h2>'
+  +'<p>The certification requires an <strong>agreed-upon procedures (AUP) engagement</strong> performed by a licensed CPA or qualified Compliance Professional in Puerto Rico. The professional does not issue an opinion or audit your finances\u2014instead, they perform specific procedures defined by the Department of Economic Development and Commerce (DDEC) and report the factual findings.</p>'
+  +'<h3>Typical AUP procedures include verification of:</h3>'
+  +'<ul><li><strong>Physical presence in Puerto Rico</strong>\u2014travel records, utility bills, lease or mortgage documents</li>'
+  +'<li><strong>Tax filing compliance</strong>\u2014timely filing of Puerto Rico and federal returns</li>'
+  +'<li><strong>Donation requirements</strong>\u2014proof of qualifying donations to Puerto Rico nonprofits, properly allocated between CEFCL-listed organizations and other qualifying nonprofits (see <a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> for amounts by decree era)</li>'
+  +'<li><strong>Employment requirements</strong>\u2014for applicable decrees, proof of job creation or maintenance</li>'
+  +'<li><strong>Annual report filing</strong>\u2014confirmation of timely annual report submission to DDEC</li></ul>'
+
+  +'<h2>Timeline & Deadlines</h2>'
+  +'<ul><li>Compliance certificates are due <strong>every two years</strong> from the date specified in your decree or as established by DDEC</li>'
+  +'<li>DDEC issues specific filing windows\u2014monitor their communications for your cohort\u2019s deadline</li>'
+  +'<li>Extensions may be available but should not be relied upon\u2014late filing can trigger adverse consequences</li></ul>'
+
+  +'<h2>What Happens If You Don\u2019t Comply?</h2>'
+  +'<p>Failure to complete the biennial certification can result in:</p>'
+  +'<ul><li><strong>Decree revocation</strong>\u2014DDEC may revoke your Act 60 decree, retroactively eliminating your tax benefits</li>'
+  +'<li><strong>Back taxes</strong>\u2014revocation means you owe Puerto Rico taxes at standard rates for the entire period</li>'
+  +'<li><strong>Federal implications</strong>\u2014if your decree is revoked, the IRS may also reassess your federal returns for those years</li>'
+  +'<li><strong>Inability to renew</strong>\u2014non-compliance blocks future decree renewals or modifications</li></ul>'
+
+  +'<h2>How to Prepare</h2>'
+  +'<ul><li><strong>Maintain organized records year-round</strong>\u2014don\u2019t wait until the certification is due to gather documentation</li>'
+  +'<li><strong>Track your physical presence</strong> with a contemporaneous log (travel records, flight itineraries, credit card statements showing PR purchases)</li>'
+  +'<li><strong>Keep donation receipts</strong> from qualifying Puerto Rico nonprofits</li>'
+  +'<li><strong>File all tax returns on time</strong>\u2014both Puerto Rico and federal</li>'
+  +'<li><strong>Engage a Puerto Rico CPA early</strong> to perform the AUP engagement before the deadline</li>'
+  +'<li><strong>Consult legal counsel</strong> if you have any gaps in compliance\u2014it is better to address issues proactively than to have them surface in the certification</li></ul>'
+
+  +'<h2>DDEC Circular Letters</h2>'
+  +'<p>The granular implementation of Act 60 compliance requirements\u2014including eligible activity definitions, rate applications, and administrative procedures\u2014is governed by <strong>DDEC Circular Letters</strong>, not the broad statutory text alone. Decree holders and their advisors should review the applicable Circular Letters for their specific decree type and era. These Circular Letters are the authoritative source for how DDEC interprets and enforces the statute.</p>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026</a> \u2014 requirements differ by decree era</li>'
+  +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar & Deadlines</a> \u2014 every fee, filing, and deadline</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal obligations don\u2019t disappear</li>'
+  +'<li><a href="/resources/ddec-revocation-procedures">DDEC Revocation Procedures</a> \u2014 what happens if you don\u2019t comply</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help preparing for your Act 52 compliance certification?</strong></p><p>We coordinate with your CPA to ensure you\u2019re ready before the deadline.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
 }
 
-/* TEMPORARILY REMOVED — Act 60 Tax Incentives subpages pending content verification.
-   5 subpages removed: act-38-2026-hb-505, irs-enforcement-act-60, why-law-firm-act-60,
-   compliance-certificate-act-52, bona-fide-residency-guide.
-   To restore: check git history for this file. */
+},
+
+'/resources/act-60-decree-comparison': {
+  title: 'Act 60 Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026',
+  subtitle: 'Requirements differ by when your decree was granted. Know which rules apply to you.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>Why Decree Grant Date Matters</h2>'
+  +'<p>Act 60 is not a monolithic framework. The requirements, tax rates, charitable obligations, and compliance mechanisms differ significantly depending on when your decree was granted. The firm identifies three distinct eras:</p>'
+
+  +'<h2>Comparison Table</h2>'
+  +'<div style="overflow-x:auto;">'
+  +'<table class="rl-comparison-table" style="width:100%;border-collapse:collapse;font-size:.88rem;margin:20px 0;">'
+  +'<thead><tr style="background:#1a2033;color:#fff;">'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Requirement</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Pre-2020 (Act 22 Legacy)</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">2020\u20132025 (Act 60 + Act 52-2022)</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Post-Dec 31, 2026 (Act 38-2026)</th>'
+  +'</tr></thead>'
+  +'<tbody>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Capital Gains Rate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">4%</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CEFCL + $5K qualifying nonprofits)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$15,000 ($7.5K CEFCL + $7.5K qualifying nonprofits)</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Property Purchase</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years; must register in PR Property Registry</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">1 FTE if revenue >$3M</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Biennial Compliance Certificate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required (Act 52-2022 applies retroactively)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">CPA/Compliance Professional</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Prior Non-Residency</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">6 years of non-PR residency required</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Decree Duration</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2035)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2055)</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">DDEC Circular Letters</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable for eligible activities and rate definitions</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; governs granular implementation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; new Circular Letters expected</td></tr>'
+  +'</tbody></table></div>'
+
+  +'<h2>Key Takeaways</h2>'
+  +'<ul><li><strong>Existing decree holders are grandfathered</strong> under their original terms\u2014your rate and donation obligations do not change under Act 38-2026</li>'
+  +'<li><strong>Act 52-2022 compliance applies to all decree holders</strong> regardless of when the decree was granted\u2014biennial certification is mandatory</li>'
+  +'<li><strong>The federal 10-year lookback rule applies to all decree holders</strong>\u2014pre-move capital gains are federally taxable regardless of your decree era</li>'
+  +'<li><strong>DDEC Circular Letters</strong>\u2014not the broad statutory text alone\u2014govern the practical application of Act 60 benefits, including eligible activity definitions and administrative procedures</li></ul>'
+
+  +'<p><strong>Note:</strong> This table reflects general requirements. Individual decree terms may vary. Consult qualified Puerto Rico tax counsel to confirm the specific terms applicable to your decree.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Not sure which rules apply to your decree?</strong></p><p>We help decree holders of all eras understand their specific obligations and plan accordingly.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/annual-compliance-calendar': {
+  title: 'Act 60 Annual Compliance Calendar & Filing Deadlines',
+  subtitle: 'Every fee, filing, and deadline decree holders must track.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Verify deadlines against the most current DDEC publications. Reflects Act 65-2025 streamlined filing deadlines where applicable.</p>'
+
+  +'<h2>DDEC Fees & Costs</h2>'
+  +'<ul><li><strong>Application fee:</strong> $5,005 (paid at time of filing)</li>'
+  +'<li><strong>Acceptance fee:</strong> $105 (paid upon decree grant)</li>'
+  +'<li><strong>Annual compliance filing fee:</strong> $5,000+ (paid with annual report)</li></ul>'
+
+  +'<h2>Annual Filing Obligations</h2>'
+  +'<ul><li><strong>DDEC Annual Report</strong>\u2014due annually as specified by your decree or DDEC directive. Includes compliance attestation and payment of the annual filing fee. Act 65-2025 introduced streamlined filing deadlines; verify your cohort\u2019s specific date with DDEC.</li>'
+  +'<li><strong>Puerto Rico Tax Return (Form 482)</strong>\u2014due April 15 (extensions available). Must report all PR-source income.</li>'
+  +'<li><strong>Federal Tax Return (Form 1040)</strong>\u2014due April 15 (extensions available). BFRs must file and report worldwide income with proper sourcing.</li>'
+  +'<li><strong>Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession)</strong>\u2014due with your federal return for the year you establish or terminate PR residency. <strong>Penalty: $1,000 for failure to file.</strong></li>'
+  +'<li><strong>FBAR (FinCEN Form 114)</strong>\u2014due April 15 (auto-extension to October 15) if aggregate foreign financial accounts exceed $10,000 at any point during the year. PR BFRs remain U.S. persons for reporting purposes.</li>'
+  +'<li><strong>FATCA (Form 8938)</strong>\u2014due with your federal return if specified foreign financial asset thresholds are met.</li></ul>'
+
+  +'<h2>Biennial Obligations</h2>'
+  +'<ul><li><strong>Act 52-2022 Compliance Certificate</strong>\u2014due every two years. Requires an agreed-upon procedures (AUP) engagement performed by a licensed Puerto Rico CPA or qualified Compliance Professional. See <a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a> for details.</li>'
+  +'<li><strong>Act 188-2024 AUP Report</strong>\u2014an alternative to the standard biennial compliance certificate for qualifying decree holders. Consult counsel to determine eligibility.</li></ul>'
+
+  +'<h2>Annual Charitable Donation</h2>'
+  +'<ul><li><strong>Pre-2027 applicants:</strong> $10,000/year ($5K CEFCL + $5K qualifying nonprofits)</li>'
+  +'<li><strong>Post-2026 applicants:</strong> $15,000/year ($7.5K CEFCL + $7.5K qualifying nonprofits)</li>'
+  +'<li>Organizations cannot be controlled by the decree holder or family members</li>'
+  +'<li>Retain all donation receipts for AUP verification</li></ul>'
+
+  +'<h2>Late Filing Consequences</h2>'
+  +'<ul><li><strong>DDEC deficiency notices</strong> with fines up to $10,000 per violation</li>'
+  +'<li><strong>Automatic fines</strong> starting at $1,000 for failure to file annual reports (effective January 15, 2026)</li>'
+  +'<li><strong>Decree revocation</strong>\u2014persistent non-compliance can result in DDEC revoking your decree, with retroactive tax liability at standard PR rates</li>'
+  +'<li><strong>Form 8898 penalty:</strong> $1,000 for failure to file</li></ul>'
+
+  +'<h2>Self-Employment Tax</h2>'
+  +'<p>Self-employment tax obligations (Social Security and Medicare) apply to Act 60 decree holders who are self-employed or operate as sole proprietors, regardless of decree status. This is a federal obligation that the Act 60 decree does not affect.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help staying on top of your compliance obligations?</strong></p><p>We provide annual compliance reviews and coordinate with your CPA to ensure all deadlines are met.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/federal-reporting-act-60': {
+  title: 'Federal Reporting Obligations for Act 60 Decree Holders',
+  subtitle: 'FBAR, FATCA, CFC/PFIC, and why your federal filing obligations don\u2019t disappear.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>You Are Still a U.S. Person</h2>'
+  +'<p>Puerto Rico bona fide residents remain <strong>U.S. persons</strong> for virtually all federal reporting purposes. Your Act 60 decree provides Puerto Rico tax benefits\u2014it does not exempt you from federal information reporting, anti-deferral regimes, or financial account disclosure requirements.</p>'
+
+  +'<h2>FBAR (FinCEN Form 114)</h2>'
+  +'<p>If you have a financial interest in, or signature authority over, foreign financial accounts with an aggregate value exceeding $10,000 at any time during the calendar year, you must file an FBAR. This applies regardless of your Act 60 status. Filing is due April 15 with an automatic extension to October 15. Willful violations carry penalties up to the greater of $100,000 or 50% of the account balance per violation.</p>'
+
+  +'<h2>FATCA (Form 8938)</h2>'
+  +'<p>If your specified foreign financial assets exceed the applicable reporting threshold, you must file Form 8938 with your federal return. The thresholds vary based on filing status and whether you reside in the U.S. or abroad. Puerto Rico BFRs use the domestic thresholds.</p>'
+
+  +'<h2>CFC & Subpart F Income (IRC \u00a7\u00a7951\u2013965)</h2>'
+  +'<p>If you are a U.S. shareholder of a controlled foreign corporation (CFC), Subpart F income is taxable to you currently regardless of whether it is distributed. <strong>Act 60 decree benefits do not override federal anti-deferral regimes.</strong> Business owners with foreign entities must carefully analyze whether their structures create CFC exposure.</p>'
+
+  +'<h2>PFIC Rules (IRC \u00a71297)</h2>'
+  +'<p>Investments in passive foreign investment companies (PFICs) are subject to punitive federal tax treatment unless a qualifying fund election (QEF) or mark-to-market election is made. Act 60 decree holders with foreign mutual funds, hedge funds, or investment entities must evaluate PFIC classification carefully.</p>'
+
+  +'<h2>Form 8898</h2>'
+  +'<p>Individuals who begin or end bona fide residence in Puerto Rico must file Form 8898 with their federal return for the year of the change. <strong>Failure to file carries a $1,000 penalty.</strong></p>'
+
+  +'<h2>Key Takeaway</h2>'
+  +'<p>Act 60 reduces your Puerto Rico tax burden on qualifying income. It does not reduce your federal reporting obligations. Failure to comply with FBAR, FATCA, CFC/PFIC, or Form 8898 requirements can result in severe penalties\u2014even criminal prosecution\u2014independent of your decree status.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need a compliance review of your federal reporting?</strong></p><p>We provide attorney-privileged reviews of your full reporting posture\u2014federal, Puerto Rico, and international.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/ddec-revocation-procedures': {
+  title: 'DDEC Decree Revocation: Procedures, Consequences & Tax Reversion',
+  subtitle: 'What happens when a decree is revoked\u2014and how to prevent it.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>DDEC Administrative Revocation</h2>'
+  +'<p>The Department of Economic Development and Commerce (DDEC) has the authority to revoke Act 60 decrees through an administrative process. Under Act 52-2022, the <strong>Economic Incentives Review Committee (CRIE)</strong> oversees enforcement and can initiate revocation proceedings for decree holders who fail to comply with their obligations.</p>'
+
+  +'<h2>Grounds for Revocation</h2>'
+  +'<ul><li><strong>Failure to file annual reports</strong> or pay the annual compliance fee</li>'
+  +'<li><strong>Failure to complete biennial compliance certification</strong> (Act 52-2022 AUP)</li>'
+  +'<li><strong>Non-compliance with decree terms</strong>\u2014including residency, donation, employment, or property requirements</li>'
+  +'<li><strong>Material misrepresentation</strong> in the application or annual filings</li>'
+  +'<li><strong>Fines exceeding $10,000</strong> per violation for specific deficiencies</li>'
+  +'<li><strong>Automatic fines</strong> starting at $1,000 for failure to file (effective January 15, 2026)</li></ul>'
+
+  +'<h2>Revocation Procedure</h2>'
+  +'<ul><li>DDEC issues a <strong>deficiency notice</strong> identifying the compliance failure</li>'
+  +'<li>The decree holder is given an opportunity to <strong>cure the deficiency</strong> within a specified period</li>'
+  +'<li>If the deficiency is not cured, DDEC may issue a <strong>formal revocation order</strong></li>'
+  +'<li>The decree holder may <strong>appeal</strong> the revocation through administrative channels</li></ul>'
+
+  +'<h2>Tax Reversion After Revocation</h2>'
+  +'<p>When a decree is revoked, the tax benefits are <strong>retroactively eliminated</strong>. This means:</p>'
+  +'<ul><li><strong>Puerto Rico taxes at standard rates</strong> apply for the entire period the decree was in effect\u2014including the standard corporate tax structure (20% normal tax plus graduated surtax, combined maximum 37.5%) for Chapter 3 holders</li>'
+  +'<li><strong>Interest and penalties</strong> accrue on the unpaid tax differential</li>'
+  +'<li><strong>Federal reassessment</strong>\u2014the IRS may also reexamine your federal returns if your decree status changes</li></ul>'
+
+  +'<h2>Tax Reversion After Decree Expiration</h2>'
+  +'<p>When a decree expires (and is not renewed), income earned after expiration reverts to standard Puerto Rico tax rates. The local tax rates that apply after expiration depend on the type of income and the current Puerto Rico tax code. Decree holders should plan for this transition well in advance of expiration.</p>'
+
+  +'<h2>DDEC-IRS Information Exchange</h2>'
+  +'<p>DDEC and the IRS exchange information about decree holders. A DDEC revocation or compliance finding can trigger an IRS examination. Approximately <strong>1,800 decree holder audits</strong> were underway or completed in 2025, reflecting the coordinated enforcement posture between the agencies.</p>'
+
+  +'<h2>How to Prevent Revocation</h2>'
+  +'<ul><li><strong>Maintain compliance year-round</strong>\u2014don\u2019t wait for a deficiency notice</li>'
+  +'<li><strong>Engage a CPA and attorney</strong> to ensure all filings, certifications, and donations are timely</li>'
+  +'<li><strong>Respond immediately</strong> to any DDEC communication or deficiency notice</li>'
+  +'<li><strong>Document everything</strong>\u2014residency records, donation receipts, employment records, and annual report submissions</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Received a DDEC deficiency notice?</strong></p><p>We provide attorney-privileged representation in DDEC compliance matters and revocation proceedings.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+}
 
 }; /* end PAGES */
 
@@ -571,7 +970,7 @@ function injectResourceCards() {
       heading: 'Trusts & Asset Protection',
       icon: '\uD83D\uDEE1\uFE0F',
       cards: [
-        { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts', featured: true },
+        { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts' },
         { title: 'Trust vs. Will in Puerto Rico', desc: 'A side-by-side comparison of wills and trusts under Puerto Rico law, including costs, probate, privacy, and which is right for your situation.', url: '/resources/trust-vs-will-puerto-rico' },
         { title: 'Asset Protection with Irrevocable Trusts', desc: 'How irrevocable trusts under Ley 219-2012 protect your assets from creditors, lawsuits, and estate taxes.', url: '/resources/asset-protection-irrevocable-trusts' }
       ]
@@ -584,7 +983,6 @@ function injectResourceCards() {
         { title: 'Act 60 & Estate Planning Mistakes', desc: 'Five critical mistakes Act 60 decree holders make with estate planning \u2014 and how to avoid them.', url: '/resources/act-60-estate-planning-mistakes' }
       ]
     },
-    /* TEMPORARILY REMOVED — Act 60 Tax Incentives section pending content verification
     {
       heading: 'Act 60 Tax Incentives',
       icon: '\u2600\uFE0F',
@@ -593,11 +991,13 @@ function injectResourceCards() {
         { title: 'IRS Enforcement & Campaign 685', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
         { title: 'Why Hire a Law Firm for Act 60', desc: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 what CPAs cannot provide.', url: '/resources/why-law-firm-act-60' },
         { title: 'Compliance Certificates & AUP', desc: 'Act 52-2022 biennial compliance certification, agreed-upon procedures, and what happens if you don\u2019t renew.', url: '/resources/compliance-certificate-act-52' },
-        { title: 'Bona Fide Residency Guide', desc: 'Complete guide to IRC \u00a7937: three statutory tests, five presence test paths, and the difference between requirements and evidence.', url: '/resources/bona-fide-residency-guide' },
+        { title: 'Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026', desc: 'Rates, donations, employment, and compliance differ by decree era. Side-by-side comparison table.', url: '/resources/act-60-decree-comparison', featured: true },
+        { title: 'Annual Compliance Calendar & Deadlines', desc: 'Every fee, filing, and deadline Act 60 decree holders must track\u2014DDEC, IRS, FBAR, FATCA, and more.', url: '/resources/annual-compliance-calendar' },
+        { title: 'Federal Reporting: FBAR, FATCA, CFC/PFIC', desc: 'Your federal reporting obligations don\u2019t disappear with an Act 60 decree. FBAR, FATCA, Subpart F, and Form 8898.', url: '/resources/federal-reporting-act-60' },
+        { title: 'DDEC Revocation Procedures', desc: 'How decrees get revoked, the administrative process, tax reversion consequences, and how to prevent it.', url: '/resources/ddec-revocation-procedures' },
         { title: 'Ley 60: Gu\u00EDa para Inversionistas', desc: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.', url: '/resources/ley-60-guia-inversionistas', lang: 'es' }
       ]
     },
-    END OF TEMPORARILY REMOVED Act 60 Tax Incentives section */
     {
       heading: 'Recursos en Espa\u00F1ol',
       icon: '\uD83C\uDDFA\uD83C\uDDF8',
@@ -617,23 +1017,13 @@ function injectResourceCards() {
       + sec.icon + ' ' + sec.heading + '</h2></div>'
       + '<div class="rl-grid">';
 
-    sec.cards.forEach(function(card, cardIdx) {
+    sec.cards.forEach(function(card) {
       var langAttr = card.lang ? ' lang="' + card.lang + '"' : '';
-      var isFeatured = card.featured ? ' rl-card-featured' : '';
-      html += '<div class="rl-card' + isFeatured + '"' + langAttr + '>';
-      if (card.featured) {
-        html += '<div class="rl-icon">' + sec.icon + '</div>'
-          + '<div class="rl-card-body">'
-          + '<h3>' + card.title + '</h3>'
-          + '<p>' + card.desc + '</p>'
-          + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>'
-          + '</div>';
-      } else {
-        html += '<h3>' + card.title + '</h3>'
-          + '<p>' + card.desc + '</p>'
-          + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>';
-      }
-      html += '</div>';
+      html += '<div class="rl-card"' + langAttr + '>'
+        + '<h3>' + card.title + '</h3>'
+        + '<p>' + card.desc + '</p>'
+        + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>'
+        + '</div>';
     });
 
     html += '</div>';
@@ -641,9 +1031,9 @@ function injectResourceCards() {
 
   html += '</div>';
 
-  /* Booking CTA at bottom of resources hub */
+  /* Add booking CTA to Resources hub */
   html += '<div style="max-width:680px;margin:48px auto;padding:40px 36px;background:linear-gradient(160deg,#1a2033 0%,#243047 100%);border-radius:10px;text-align:center;box-sizing:border-box;">'
-    + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.5rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">Have Questions About What You\u2019re Reading?</h2>'
+    + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.35rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">Have Questions About What You\u2019re Reading?</h2>'
     + '<p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0 0 24px;max-width:500px;margin-left:auto;margin-right:auto;">Our articles provide general guidance, but every situation is different. Schedule a free 30-minute strategy call for personalized advice.</p>'
     + '<a href="/calendly" style="display:inline-block;padding:14px 28px;background:#bfa35d;color:#1a2033;font-size:.85rem;font-weight:700;text-decoration:none;border-radius:6px;transition:background .25s;">Book a Free Strategy Call</a>'
     + '<p style="color:rgba(255,255,255,.4);font-size:.8rem;margin-top:14px;">Or call <a href="tel:+17872361657" style="color:#bfa35d;text-decoration:none;">(787) 236-1657</a></p>'
@@ -803,4 +1193,3 @@ if (typeof MutationObserver !== 'undefined') {
 }
 
 })();
-

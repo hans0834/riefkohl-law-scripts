@@ -1,23 +1,4 @@
 
-/* Preconnect hints — start DNS/TLS early for key external resources */
-(function(){
-  var hints = [
-    { rel: 'preconnect', href: 'https://images.squarespace-cdn.com' },
-    { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
-    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-    { rel: 'dns-prefetch', href: 'https://calendly.com' }
-  ];
-  hints.forEach(function(h) {
-    if (!document.querySelector('link[rel="' + h.rel + '"][href="' + h.href + '"]')) {
-      var link = document.createElement('link');
-      link.rel = h.rel;
-      link.href = h.href;
-      if (h.rel === 'preconnect') link.crossOrigin = '';
-      document.head.appendChild(link);
-    }
-  });
-})();
-
 (function(){
 'use strict';
 
@@ -48,44 +29,7 @@ var SEO = {
   '/contact': {
     h1: 'Contact Riefkohl Law in San Juan, Puerto Rico',
     meta: 'Contact Riefkohl Law in San Juan, PR. Call (787) 236-1657 or book a free strategy call for estate planning, trusts, and business law.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'Where is Riefkohl Law located?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Riefkohl Law is located at 273 Ponce de Le\u00f3n Avenue, San Juan, Puerto Rico 00917, in the Hato Rey financial district. We serve clients throughout Puerto Rico and assist mainland clients relocating under Act 60.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does Riefkohl Law offer free consultations?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. Riefkohl Law offers a free 15-minute initial strategy call for new clients. During this call, we\u2019ll discuss your legal needs, outline your options, and provide a flat-fee quote if you decide to engage our services. Book online at riefkohllaw.com/calendly or call (787) 236-1657.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does Riefkohl Law serve clients who don\u2019t live in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. We regularly assist mainland U.S. clients who are relocating to Puerto Rico under Act 60, own property in Puerto Rico, or have Puerto Rico business interests. We handle most matters remotely via video call, email, and secure document sharing. In-person meetings are available at our San Juan office.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What languages does Riefkohl Law serve clients in?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Riefkohl Law is fully bilingual, providing legal services in both English and Spanish. All documents, consultations, and communications are available in either language.'
-          }
-        }
-      ]
-    }
+    schema: null
   },
   '/blog': {
     h1: 'Puerto Rico Legal Blog — Case Analysis & Commentary',
@@ -174,22 +118,6 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Riefkohl Law offers flat-fee estate planning services, providing cost transparency from the start. The fee depends on the complexity of your plan — a basic will differs in cost from a comprehensive trust-based estate plan. Contact us for a free strategy call to discuss your needs and receive a specific quote.'
           }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What legal documents do I need after getting my Act 60 decree?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'After receiving your Act 60 decree, you should update or create several legal documents: a Puerto Rico-compliant will that accounts for forced heirship rules, a trust under Law 219-2012 for asset protection and tax planning, updated powers of attorney valid under PR law, healthcare directives, and domicile change documentation. Your mainland estate plan likely needs revision to work within Puerto Rico\'s civil law framework.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'How does the 2055 extension affect estate planning for Act 60 holders?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Act 38-2026 extended the Act 60 program through 2055, creating a 30-year planning horizon. This makes multi-generational trust structures more practical and increases the importance of coordinating your estate plan with your decree benefits. Since decrees are non-transferable at death, strategic trust planning is essential to preserve wealth accumulated under the incentive.'
-          }
         }
       ]
     }
@@ -214,7 +142,7 @@ var SEO = {
           'name': 'How do I qualify for Act 60 individual investor benefits?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'To qualify, you must become a bona fide resident of Puerto Rico by satisfying all three tests under IRC §937: (1) physical presence of at least 183 days per year, (2) a tax home in Puerto Rico, and (3) a closer connection to Puerto Rico than to any other jurisdiction. All three tests must be met — 183 days alone is not sufficient. Additional decree obligations such as charitable donations and property purchase also apply. Consult an attorney to confirm current eligibility requirements.'
+            'text': 'To qualify, you must become a bona fide resident of Puerto Rico by satisfying all three tests under IRC §937: (1) one of five alternative presence tests under Treas. Reg. §1.937-1(c)\u2014the most common being physical presence for at least 183 days per year (alternatives include a 549-day/3-year average, a 90-day U.S. limitation, an earned income limitation, and a no-significant-connection standard), (2) a tax home in Puerto Rico, and (3) a closer connection to Puerto Rico than to the United States or any foreign country, assessed under a totality-of-circumstances analysis based on factors in Treas. Reg. §301.7701(b)-2(d). All three tests must be met. Additional decree obligations such as charitable donations and property purchase also apply. Consult an attorney to confirm current eligibility requirements.'
           }
         },
         {
@@ -227,46 +155,77 @@ var SEO = {
         },
         {
           '@type': 'Question',
-          'name': 'What is Act 38-2026 and how does it affect Act 60 decrees?',
+          'name': 'How long does the Act 60 application process take?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Act 38-2026 extended the Act 60 Individual Resident Investor incentive program through December 31, 2055. This 30-year extension makes long-term estate planning and multi-generational trust strategies significantly more viable for decree holders. Existing decree holders should review their estate plans to take advantage of the extended planning horizon.'
+            'text': 'The Act 60 decree application is filed with Puerto Rico\'s Department of Economic Development and Commerce (DDEC). While DDEC\'s administrative target is 60\u2013120 days, actual processing times frequently range from several months to over a year from application submission to final decree issuance. The application submission date\u2014not the decree issuance date\u2014is the relevant date for grandfathering under Act 38-2026. An attorney who regularly files Act 60 applications can help avoid common delays by ensuring all documentation is complete and properly formatted from the start.'
           }
         },
         {
           '@type': 'Question',
-          'name': 'Does Act 38-2026 affect my estate plan?',
+          'name': 'Do I need to sell my mainland home to qualify for Act 60?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. The extension of Act 60 incentives to 2055 means your estate plan should account for a much longer planning horizon. Multi-generational trust structures become more practical, and strategies for preserving wealth accumulated under your decree — including decree succession planning and coordination with forced heirship rules — should be reviewed with an attorney.'
+            'text': 'You are not strictly required to sell your mainland home, but maintaining a home in your former state is one of the factors the IRS considers when evaluating your closer connection to Puerto Rico. Keeping a mainland home — especially as a primary residence — can weaken your residency position. Many Act 60 holders sell or convert their mainland property to a rental to reduce audit risk.'
           }
         },
         {
           '@type': 'Question',
-          'name': 'Do I need a lawyer in addition to my CPA for Act 60?',
+          'name': 'Can I keep my mainland business and still get Act 60 benefits?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. While your CPA handles tax compliance and filing, an attorney addresses the legal structures that protect your Act 60 benefits — trust creation under Law 219-2012, domicile change documentation, property purchase review, estate planning that accounts for forced heirship, and decree succession planning. These are legal matters that fall outside the scope of accounting services.'
+            'text': 'Yes, but the income must be properly sourced. For Chapter 3 (export services), your business must serve clients outside Puerto Rico and meet local employment requirements. For Chapter 2 (individual investor), income sourcing rules determine which capital gains qualify for preferential rates. Proper structuring with an Act 60 attorney is essential to ensure your business arrangement supports your decree.'
           }
         },
         {
           '@type': 'Question',
-          'name': 'What is decree succession planning?',
+          'name': 'What happens if I fail the Act 60 residency test?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Act 60 decrees are personal and non-transferable — they do not pass to your heirs at death. Decree succession planning involves structuring your estate to preserve the wealth accumulated under your decree\'s tax benefits, using tools like irrevocable trusts, strategic asset titling, and coordination with forced heirship rules under Puerto Rico\'s Civil Code.'
+            'text': 'If the IRS determines you are not a bona fide resident of Puerto Rico, your Act 60 tax benefits can be retroactively revoked. This means capital gains, dividends, and other income you reported as exempt would be subject to full federal taxation, plus interest and potential penalties. Maintaining thorough residency documentation and working with local counsel helps protect against this risk.'
           }
         },
         {
           '@type': 'Question',
-          'name': 'Can my CPA set up a trust for me in Puerto Rico?',
+          'name': 'How much does an Act 60 lawyer cost in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No. Trust creation in Puerto Rico requires legal counsel. Puerto Rico trusts are governed by Law 219-2012 and operate under a civil law framework that differs significantly from mainland common law trusts. The trust instrument must comply with specific statutory requirements, and only an attorney can draft, review, and execute the trust deed and ensure compliance with forced heirship rules.'
+            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 services. Decree applications typically range from $5,000 to $7,500, annual compliance reviews from $2,500 to $4,000, and IRS audit defense starts at $15,000 depending on complexity. All fees are quoted upfront before work begins — no hourly billing or hidden charges.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the difference between Act 60 Chapter 2 and Chapter 3?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Chapter 2 (Individual Investor) provides capital gains and passive income benefits to individuals who become bona fide PR residents. Chapter 3 (Export Services) provides a 4% corporate tax rate and 100% Puerto Rico income tax exemption on distributions of qualifying export service earnings to shareholders who are bona fide PR residents\u2014federal tax consequences depend on shareholder status and entity classification. To qualify, at least 80% of the entity\u2019s revenue must be derived from clients located outside Puerto Rico. Many relocating business owners apply for both chapters to cover personal investment income and business income separately.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Act 60 apply to cryptocurrency and digital assets?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Capital gains from cryptocurrency, NFTs, and other digital assets can qualify for Act 60 Chapter 2 benefits, but only gains that accrue after you become a bona fide Puerto Rico resident. Pre-move appreciation remains subject to federal capital gains tax under the 10-year lookback rule (Treas. Reg. \u00a71.937-2(f))\u2014gains on assets owned before establishing PR residency are not treated as Puerto Rico-source income for federal purposes. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024). The IRS pays close attention to crypto holders claiming Act 60 benefits, making proper cost basis tracking and residency documentation critical.'
           }
         }
       ]
     }
+  },
+  '/act-60-export-services': {
+    h1: 'Act 60 Export Services — 4% Corporate Tax Rate in Puerto Rico',
+    meta: 'Puerto Rico Act 60 Chapter 3 attorney for export services businesses. 4% corporate tax, 100% distribution exemption. Application filing, compliance, and IRS defense. Free strategy call.',
+    schema: null
+  },
+  '/act-60-individual-investor': {
+    h1: 'Act 60 Individual Investor — Capital Gains Tax Benefits in Puerto Rico',
+    meta: 'Puerto Rico Act 60 Chapter 2 attorney for individual investors. 0% capital gains (through 2026), residency compliance, state departure planning. Free strategy call.',
+    schema: null
+  },
+  '/act-60-crypto-investor': {
+    h1: 'Act 60 for Cryptocurrency — Puerto Rico Crypto Tax Benefits',
+    meta: 'Puerto Rico Act 60 attorney for crypto investors. Capital gains benefits for Bitcoin, Ethereum, and digital assets. Residency structuring, cost basis tracking, IRS defense. Free call.',
+    schema: null
   },
   '/business-formation': {
     h1: 'Puerto Rico Business Formation — LLC, Corp & Startup Services',
@@ -339,36 +298,7 @@ var SEO = {
   '/corporate': {
     h1: 'Corporate & Transactional Law — Puerto Rico Business Attorney',
     meta: 'Puerto Rico corporate attorney for mergers, acquisitions, joint ventures, and commercial transactions. Strategic counsel for businesses operating in PR.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'What corporate legal services does Riefkohl Law offer in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Riefkohl Law provides comprehensive corporate and transactional legal services including entity formation, mergers and acquisitions, joint ventures, contract drafting and review, corporate governance, and commercial transactions. We serve businesses from startups to established companies operating in Puerto Rico.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can Riefkohl Law help with mergers and acquisitions in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. We handle M&A transactions including due diligence, purchase agreement negotiation, regulatory compliance, and closing. Our experience includes transactions involving Act 60 businesses, real estate holdings, and cross-border deals between mainland U.S. and Puerto Rico entities.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Does Riefkohl Law use flat fees for corporate work?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. Riefkohl Law offers flat-fee pricing for most corporate services, including entity formation, contract drafting, and standard corporate governance matters. For complex transactions like M&A deals, we provide project-based fee quotes upfront so you know the cost before we begin. No hourly billing surprises.'
-          }
-        }
-      ]
-    }
+    schema: null
   },
   '/espanol-quiebras': {
     h1: 'Abogado de Quiebras en Puerto Rico — Servicios de Insolvencia',
@@ -541,36 +471,7 @@ var SEO = {
   '/resources-faq': {
     h1: 'Frequently Asked Questions — Puerto Rico Estate Planning & Trusts',
     meta: 'Answers to common questions about Puerto Rico estate planning, trusts under Law 219-2012, probate, and forced heirship. Free consultation available.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'How does probate work in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Probate in Puerto Rico is a court-supervised process for distributing a deceased person\'s estate. It can take 1\u20133 years and involves filing the will with the court, appointing an executor, inventorying assets, paying debts, and distributing property. A properly funded trust can avoid probate entirely.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What is a fideicomiso (Puerto Rico trust)?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'A fideicomiso is a trust governed by Puerto Rico Law 219-2012. It allows you to transfer assets to a trustee who manages them for your beneficiaries. Puerto Rico trusts offer asset protection, probate avoidance, privacy, and potential tax benefits. They are especially useful for Act 60 decree holders and families with mixed-jurisdiction assets.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Can I use my mainland will in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'While a valid mainland will may be recognized in Puerto Rico, it likely does not account for Puerto Rico\'s forced heirship rules (leg\u00edtima), which reserve half the estate for children and surviving spouse. A PR-specific will or trust is strongly recommended to ensure your estate plan works under local civil law.'
-          }
-        }
-      ]
-    }
+    schema: null
   },
   '/resources-wills-vs-trusts': {
     h1: 'Wills vs. Trusts in Puerto Rico — Which Is Right for You?',
@@ -724,16 +625,11 @@ var SEO = {
     meta: 'What Section 45147 protects (and doesn\u2019t) when you bring a mainland trust to PR. Governing law risks, civil law gaps, and practical steps.',
     schema: null
   },
-  '/resources/act-38-2026-trust-planning': {
-    h1: 'Act 38-2026 and Long-Term Trust Planning: What the 2055 Extension Means',
-    meta: 'Act 38-2026 extended Act 60 incentives to 2055. Learn how this 30-year horizon changes trust planning strategies for decree holders in Puerto Rico.',
-    schema: null
-  },
 
-  /* TEMPORARILY REMOVED — Act 60 subpage SEO entries pending content verification
+  /* ---- Act 60 Tax Incentives Subpages ---- */
   '/resources/act-38-2026-hb-505': {
     h1: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
-    meta: 'Comprehensive legal analysis of Act 38-2026 (HB 505): new 4% rate for post-2026 applicants, grandfathering provisions, $15K donation, program extension to 2055.',
+    meta: 'Act 38-2026 (HB 505) analysis: 4% rate for post-2026 applicants, grandfathering provisions, $10K/$15K donation tiering, 6-year non-residency requirement, DDEC fees, federal 10-year lookback, program extension to 2055.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -798,167 +694,28 @@ var SEO = {
   },
   '/resources/compliance-certificate-act-52': {
     h1: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
-    meta: 'Act 52-2022 requires biennial compliance certification for all Act 60 decree holders. Learn about AUP engagements and what happens if you don\u2019t renew.',
+    meta: 'Act 52-2022 requires biennial compliance certification for all Act 60 decree holders. CPA/Compliance Professional requirement, AUP engagements, Act 188-2024 alternative, and consequences of non-compliance.',
     schema: null
   },
-  '/resources/bona-fide-residency-guide': {
-    h1: 'Complete Guide to Bona Fide Residency Under IRC \u00a7937',
-    meta: 'All three IRC \u00a7937 residency tests explained: presence (with five alternative paths), tax home, and closer connection. Plus the difference between requirements and supporting evidence.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'What are the three tests for bona fide residency in Puerto Rico?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'IRC \u00a7937(a) requires satisfying three tests: (1) the Presence Test (183 days or alternative paths), (2) the Tax Home Test (your principal place of business must be in PR), and (3) the Closer Connection Test (no closer connection to the U.S. or another country). All three must be met simultaneously.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is the 183-day rule the only way to satisfy the presence test?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'No. The regulations under \u00a71.937-1 provide five alternative paths, including a 549-day/three-year test, a no-significant-connection test, a year-of-move safe harbor, and transitional rules for existing PR residents.'
-          }
-        }
-      ]
-    }
-  },
-  END OF TEMPORARILY REMOVED Act 60 subpage SEO entries */
-
-  /* ---- Migrated Blog Post SEO (existing resource subpages) ---- */
-  '/resources/act-60-estate-planning-mistakes': {
-    h1: '5 Critical Mistakes Act 60 Holders Make with Estate Planning',
-    meta: 'The five most common estate planning mistakes Act 60 decree holders make when relocating to Puerto Rico, and how to avoid them.',
+  '/resources/act-60-decree-comparison': {
+    h1: 'Act 60 Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026',
+    meta: 'Side-by-side comparison of Act 60 decree requirements by era. Tax rates, charitable donations, employment, compliance, and property requirements differ by grant date.',
     schema: null
   },
-  '/resources/trust-vs-will-puerto-rico': {
-    h1: 'Puerto Rico Trust vs. Will: Which Do You Need?',
-    meta: 'Side-by-side comparison of trusts and wills under Puerto Rico law. Probate, costs, privacy, asset protection, and when you need both.',
+  '/resources/annual-compliance-calendar': {
+    h1: 'Act 60 Annual Compliance Calendar & Filing Deadlines',
+    meta: 'Complete Act 60 compliance calendar: DDEC fees, annual report deadlines, FBAR, FATCA, Form 8898, charitable donation requirements, and late-filing consequences.',
     schema: null
   },
-  '/resources/forced-heirship-estate-plan': {
-    h1: 'How Forced Heirship Affects Your Estate Plan',
-    meta: 'Understanding Puerto Rico\u2019s leg\u00EDtima and planning strategies that work within forced heirship rules under the 2020 Civil Code.',
+  '/resources/federal-reporting-act-60': {
+    h1: 'Federal Reporting Obligations for Act 60 Decree Holders',
+    meta: 'FBAR, FATCA, CFC/PFIC, Subpart F, and Form 8898 obligations for Act 60 decree holders. Your federal reporting requirements don\u2019t disappear with a PR decree.',
     schema: null
   },
-  '/resources/asset-protection-irrevocable-trusts': {
-    h1: 'Asset Protection with Irrevocable Trusts in Puerto Rico',
-    meta: 'How irrevocable trusts under Puerto Rico Law 219-2012 protect assets from creditors, lawsuits, and estate taxes.',
+  '/resources/ddec-revocation-procedures': {
+    h1: 'DDEC Decree Revocation: Procedures, Consequences & Tax Reversion',
+    meta: 'How Act 60 decrees get revoked by DDEC. Administrative procedures, tax reversion to standard rates, DDEC-IRS information exchange, and prevention strategies.',
     schema: null
-  },
-  '/resources/complete-guide-puerto-rico-trusts': {
-    h1: 'Complete Guide to Puerto Rico Trusts',
-    meta: 'Everything you need to know about trusts under Puerto Rico Law 219-2012. Types, benefits, costs, and estate planning strategies.',
-    schema: null
-  },
-  '/resources/fideicomiso-irrevocable-puerto-rico': {
-    h1: 'Fideicomiso Irrevocable en Puerto Rico: Gu\u00EDa Completa',
-    meta: 'Gu\u00EDa completa sobre fideicomisos irrevocables bajo la Ley 219-2012. Protecci\u00F3n de activos, beneficios contributivos y planificaci\u00F3n sucesoral.',
-    schema: null
-  },
-  '/resources/planificacion-sucesoral-puerto-rico': {
-    h1: 'Planificaci\u00F3n Sucesoral en Puerto Rico',
-    meta: 'Todo lo que necesita saber sobre planificaci\u00F3n sucesoral en Puerto Rico. Leg\u00EDtima, testamentos, fideicomisos, poderes y directivas de salud.',
-    schema: null
-  },
-  '/resources/ley-60-guia-inversionistas': {
-    h1: 'Ley 60: Gu\u00EDa Completa para Inversionistas Individuales',
-    meta: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.',
-    schema: null
-  },
-  '/resources/declaratoria-de-herederos-puerto-rico': {
-    h1: 'Proceso de Declaratoria de Herederos en Puerto Rico',
-    meta: 'Gu\u00EDa del proceso de declaratoria de herederos en Puerto Rico. Requisitos, plazos, costos y c\u00F3mo evitarlo con fideicomisos.',
-    schema: null
-  },
-
-  /* ---- CPA Referral Landing Page ---- */
-  '/cpa-referral': {
-    h1: 'For CPA-Referred Clients — Estate Planning & Trust Services',
-    meta: 'Your CPA handles the tax strategy. We handle the legal structure. Puerto Rico trust creation, estate planning, and decree compliance for Act 60 holders.',
-    schema: null
-  },
-
-  /* ---- CPA Bridge + Content Gap Blog Posts ---- */
-  '/blog/irs-audit-triggers-act60': {
-    h1: 'What Triggers an IRS Act 60 Audit: The 7 Red Flags',
-    meta: 'Learn the 7 red flags that trigger IRS audits of Act 60 decree holders. Income sourcing errors, presence test failures, and how to protect yourself.',
-    schema: null
-  },
-  '/blog/irs-audit-process-act60': {
-    h1: 'What to Expect During an Act 60 Compliance Examination',
-    meta: 'Step-by-step guide to the IRS Act 60 audit process. Document requests, interviews, residency examinations, and why you need legal counsel.',
-    schema: null
-  },
-  '/blog/audit-proof-presence-test-act60': {
-    h1: 'How to Build an Audit-Proof Presence Test File',
-    meta: 'Comprehensive guide to documenting your Act 60 bona fide residency. Physical presence, tax home, closer connection — with annual checklist.',
-    schema: null
-  },
-  '/blog/act60-divorce-family-law': {
-    h1: 'Act 60 and Divorce: What Happens to Your Decree in a Puerto Rico Family Law Case?',
-    meta: 'How divorce affects your Act 60 decree, community property, presence test, and estate plan under Puerto Rico civil law.',
-    schema: null
-  },
-  '/blog/leaving-puerto-rico-exit-planning': {
-    h1: 'Leaving Puerto Rico: Exit Planning for Act 60 Decree Holders',
-    meta: 'Tax implications of relinquishing your Act 60 decree. Exit year income sourcing, state re-entry rules, and orderly departure steps.',
-    schema: null
-  },
-  '/blog/act60-crypto-digital-assets': {
-    h1: 'Act 60 and Cryptocurrency: Conservative Compliance for Digital Asset Investors',
-    meta: 'Audit-proof crypto structuring under Act 60. Income sourcing for digital assets, IRS scrutiny, and conservative compliance strategies.',
-    schema: null
-  },
-  '/blog/build-act60-advisory-team': {
-    h1: 'How to Build Your Act 60 Advisory Team: The 5 Professionals Every Decree Holder Needs',
-    meta: 'The 5 professionals every Act 60 decree holder needs: attorney, CPA, real estate agent, insurance advisor, and wealth manager.',
-    schema: null
-  },
-  '/blog/act60-vs-international-alternatives': {
-    h1: 'Act 60 vs. Dubai, Portugal, and Other International Tax Alternatives',
-    meta: 'Compare Act 60 to Dubai, Portugal NHR, Cayman Islands, and other global tax optimization options. Advantages, disadvantages, and who wins.',
-    schema: null
-  },
-
-  /* ---- Pricing Page ---- */
-  '/pricing': {
-    h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
-    meta: 'Riefkohl Law offers flat-fee pricing for all services. Trusts, estate planning, Act 60 advisory, and business formation. Know your investment upfront.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'Why does Riefkohl Law use flat-fee pricing?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Flat-fee pricing aligns our incentives with yours. You know the full cost upfront before any work begins, so there are no surprises or escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is the initial consultation really free?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. Your first strategy call with Attorney Riefkohl is completely free with no obligation. We use this call to understand your situation, explain your options, and provide a specific flat-fee quote if you decide to proceed.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What payment methods do you accept?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'We accept credit cards, bank transfers (ACH), checks, and wire transfers. Payment plans are available for larger engagements. The flat fee is typically collected at the start of the engagement.'
-          }
-        }
-      ]
-    }
   },
 
   /* ---- Session 7: Case Law Blog Posts (9 Category Summaries) ---- */
@@ -1005,6 +762,13 @@ var SEO = {
   '/blog/family-law-trusts-trustee-removal-puerto-rico': {
     h1: 'Trust in Family Law & Trustee Removal Cases — Puerto Rico',
     meta: 'Puerto Rico case law on trusts in divorce, trustee removal, and family trust disputes. Marital property in trusts and grounds for removing trustees.',
+    schema: null
+  },
+
+  /* ---- Session 11: Additional Case Analysis ---- */
+  '/blog/anthropic-v-department-of-war-preliminary-injunction': {
+    h1: 'Anthropic v. Department of War — Court Blocks Government-Wide AI Company Ban',
+    meta: 'Federal court grants preliminary injunction blocking government-wide ban on Anthropic, finding likely First Amendment retaliation, due process violations, and APA claims. Full case analysis.',
     schema: null
   },
 
@@ -1321,17 +1085,10 @@ var SEO = {
     schema: null
   },
 
-       /* ---- Session 12: Fideicomiso Blog Post ---- */
-       '/blog/para-que-sirve-fideicomiso-puerto-rico': {
-         h1: '\u00bfPara Qu\u00e9 Sirve un Fideicomiso en Puerto Rico? Lo Que Debes Saber Antes de Dar el Primer Paso',
-                  meta: 'Descubre qu\u00e9 es un fideicomiso en Puerto Rico, c\u00f3mo se diferencia de los trusts en EE.UU., para qu\u00e9 sirve y qu\u00e9 debes considerar antes de crear uno bajo la Ley 219-2012.',
-                  schema: null
-},
-
-  /* ---- LinkedIn Post: Handler v. Centerview ---- */
-  '/blog/law-firms-take-notice-when-is-someone-a-partner-and-not-just-an-employee': {
-    h1: 'When Is Someone a Partner and Not Just an Employee? Handler v. Centerview',
-    meta: 'Delaware Supreme Court\u2019s Handler v. Centerview decision illustrates the factors courts weigh when determining whether a partnership was formed through informal negotiations.',
+  /* ---- Session 12: Fideicomiso Blog Post ---- */
+  '/blog/para-que-sirve-fideicomiso-puerto-rico': {
+    h1: '\u00bfPara Qu\u00e9 Sirve un Fideicomiso en Puerto Rico? Lo Que Debes Saber Antes de Dar el Primer Paso',
+    meta: 'Descubre qu\u00e9 es un fideicomiso en Puerto Rico, c\u00f3mo se diferencia de los trusts en EE.UU., para qu\u00e9 sirve y qu\u00e9 debes considerar antes de crear uno bajo la Ley 219-2012.',
     schema: null
   },
 
@@ -1339,6 +1096,13 @@ var SEO = {
   '/blog/lascoli-v-fahr-masonry-partnership-ownership': {
     h1: 'A Partner Promised an Employee an Ownership Stake. Was It Enforceable?',
     meta: 'Pennsylvania court holds that a vague promise of partnership ownership in a one-page employment contract was too indefinite to enforce \u2014 and exceeded a single partner\u2019s authority. Lessons for Puerto Rico businesses.',
+    schema: null
+  },
+
+  /* ---- Session 14: Herederos no son accionistas ---- */
+  '/blog/herederos-no-accionistas-administrador-judicial': {
+    h1: 'Herederos no son accionistas \u2014 la información corporativa debe solicitarse a través del administrador judicial en la partición',
+    meta: 'El Tribunal de Apelaciones resuelve que los herederos no tienen condición de accionistas antes de la partición. La información corporativa debe canalizarse a través de un administrador judicial.',
     schema: null
   }
 };
@@ -1525,7 +1289,7 @@ function injectAttorneySchema() {
     'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
-    'email': 'hans@riefkohllaw.com',
+    'email': 'info@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '273 Ponce de Le\u00f3n Ave.',
@@ -1590,36 +1354,6 @@ function injectPersonSchema() {
       {'@type': 'EducationalOrganization', 'name': 'University of Puerto Rico School of Law'},
       {'@type': 'EducationalOrganization', 'name': 'Villanova University'}
     ]
-  };
-
-  var script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(schema);
-  document.head.appendChild(script);
-}
-
-/* ================================================
-   9b. WEBSITE SCHEMA WITH SEARCHACTION (homepage only)
-   ================================================ */
-function injectWebSiteSchema() {
-  var path = window.location.pathname.replace(/\/$/, '') || '/';
-  if (path !== '/') return;
-
-  var schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    'name': 'Riefkohl Law',
-    'url': 'https://www.riefkohllaw.com',
-    'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
-    'inLanguage': ['en', 'es'],
-    'potentialAction': {
-      '@type': 'SearchAction',
-      'target': {
-        '@type': 'EntryPoint',
-        'urlTemplate': 'https://www.riefkohllaw.com/blog?q={search_term_string}'
-      },
-      'query-input': 'required name=search_term_string'
-    }
   };
 
   var script = document.createElement('script');
@@ -1705,61 +1439,123 @@ function fixLangAttribute() {
 }
 
 /* ================================================
-   EXECUTE ALL FIXES
+   13. SQUARESPACE PAGE CONTENT CORRECTIONS
+   Fixes for content in the Squarespace editor that
+   cannot be changed via code injection alone.
    ================================================ */
-/* ================================================
-   ACCESSIBILITY: SKIP TO CONTENT LINK
-   ================================================ */
-function injectSkipLink() {
-  if (document.querySelector('.rl-skip-link')) return;
 
-  var mainContent = document.querySelector('main') || document.querySelector('#page') ||
-    document.querySelector('.page-section:first-of-type') || document.querySelector('article');
-  if (mainContent && !mainContent.id) mainContent.id = 'main-content';
-  var targetId = mainContent ? (mainContent.id || 'main-content') : 'page';
+/* A1: Municipal license tax 75%→50%, Property tax 60%→75% */
+function fixAct60ExemptionPercentages() {
+  var targets = ['/act-60-tax-incentives', '/business-formation', '/act-60-export-services', '/act-60-individual-investor'];
+  var isTarget = false;
+  for (var t = 0; t < targets.length; t++) {
+    if (path === targets[t]) { isTarget = true; break; }
+  }
+  if (path.indexOf('/blog/') === 0) isTarget = true;
+  if (!isTarget) return;
 
-  var link = document.createElement('a');
-  link.className = 'rl-skip-link';
-  link.href = '#' + targetId;
-  link.textContent = 'Skip to main content';
-  document.body.insertBefore(link, document.body.firstChild);
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+    /* Fix "75% exemption on municipal" -> "50% exemption on municipal" */
+    if (text.indexOf('75%') >= 0 && (text.indexOf('municipal') >= 0 || text.indexOf('patente') >= 0)) {
+      node.nodeValue = text.replace(/75%/g, '50%');
+    }
+    /* Fix "60% exemption on...property" -> "75% exemption on...property" (Spanish pages had transposition) */
+    text = node.nodeValue;
+    if (text.indexOf('60%') >= 0 && (text.indexOf('property') >= 0 || text.indexOf('propiedad') >= 0)) {
+      node.nodeValue = text.replace(/60%/g, '75%');
+    }
+  }
 }
 
+/* A4: NRNC estate/gift tax — fix "born in" to domicile-based */
+function fixNRNCClassification() {
+  if (path !== '/puerto-rico-estate-planning-nrnc-classification') return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+
+    /* Fix imprecise "born in a U.S. territory" language */
+    if (text.indexOf('born in') >= 0 && (text.indexOf('territory') >= 0 || text.indexOf('Puerto Rico') >= 0) && text.indexOf('NRNC') >= 0) {
+      node.nodeValue = text.replace(
+        /born in a U\.S\. territory[^.]*classified as non-?residents? not citizens?[^.]*/i,
+        'Puerto Rico residents may be classified as non-resident not citizens (NRNC) for federal estate and gift tax purposes depending on citizenship status and domicile history under 8 U.S.C. \u00a71402 and IRC \u00a72209'
+      );
+    }
+
+    /* Fix estate tax exemption amount ($13.61M → $15M) */
+    if (text.indexOf('$13.61 million') >= 0) {
+      node.nodeValue = text.replace(
+        /approximately \$13\.61 million[^)]*/,
+        '$15 million per individual (as set by the One Big Beautiful Bill Act, signed July 2025, which made the increased exemption permanent with future inflation indexing'
+      );
+    }
+
+    /* Fix gift tax exclusion year */
+    if (text.indexOf('$19,000 for 2025') >= 0) {
+      node.nodeValue = node.nodeValue.replace('$19,000 for 2025', '$19,000 for 2026');
+    }
+  }
+}
+
+/* A6: Corporate tax rate description */
+function fixCorporateTaxRate() {
+  if (path !== '/act-60-tax-incentives' && path !== '/act-60-export-services') return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+    if (text.indexOf('18.5%') >= 0 && text.indexOf('37.5%') >= 0) {
+      node.nodeValue = text.replace(
+        /18\.5%\s*to\s*37\.5%/,
+        '20% normal tax plus graduated surtax (combined maximum 37.5%)'
+      );
+    }
+  }
+}
+
+/* B9: Advertising language — "maximum tax benefits" → "available tax benefits" */
+function fixAdvertisingLanguage() {
+  if (path.indexOf('act-60') < 0 && path.indexOf('tax-incentives') < 0) return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var text = node.nodeValue;
+    if (text.indexOf('maximum tax benefits') >= 0) {
+      node.nodeValue = text.replace(/maximum tax benefits/g, 'available tax benefits under Act 60');
+    }
+  }
+}
+
+/* ================================================
+   EXECUTE ALL FIXES
+   ================================================ */
 function runFixes() {
   fixMeta();
   fixCanonical();
   injectFAQSchema();
   injectAttorneySchema();
   injectPersonSchema();
-  injectWebSiteSchema();
   fixOpenGraphAndTwitter();
   fixLangAttribute();
-  injectSkipLink();
 
   /* H1, staging URLs, and images need the DOM to be more fully loaded */
   fixH1();
   fixStagingUrls();
   fixImageAlts();
   injectDisclaimer();
-  secureExternalLinks();
-}
 
-/* Secure all external links with noopener noreferrer */
-function secureExternalLinks() {
-  var host = window.location.hostname;
-  var links = document.querySelectorAll('a[href^="http"]');
-  for (var i = 0; i < links.length; i++) {
-    try {
-      var url = new URL(links[i].href);
-      if (url.hostname !== host) {
-        links[i].setAttribute('target', '_blank');
-        var rel = (links[i].getAttribute('rel') || '').toLowerCase();
-        if (rel.indexOf('noopener') < 0) rel += ' noopener';
-        if (rel.indexOf('noreferrer') < 0) rel += ' noreferrer';
-        links[i].setAttribute('rel', rel.trim());
-      }
-    } catch(e) {}
-  }
+  /* Squarespace page content corrections (A1, A4, A6, B9) */
+  fixAct60ExemptionPercentages();
+  fixNRNCClassification();
+  fixCorporateTaxRate();
+  fixAdvertisingLanguage();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */
@@ -1790,11 +1586,7 @@ var HREFLANG_PAIRS = [
   ['testamentary-trust-succession-disputes-puerto-rico', 'testamentary-trust-succession-disputes-puerto-rico-es'],
   ['trust-property-disputes-puerto-rico', 'trust-property-disputes-puerto-rico-es'],
   ['trust-validity-challenges-puerto-rico', 'trust-validity-challenges-puerto-rico-es'],
-  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es'],
-  /* CPA bridge posts (Act 38-2026 + CPA content) */
-  ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
-  ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
-  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
+  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es']
 ];
 
 /* Core page pairs (non-blog) */
@@ -1895,64 +1687,4 @@ injectHreflang();
   }
 })();
 
-/* ================================================
-   13. ENHANCED 404 PAGE
-   ================================================ */
-(function enhance404() {
-  /* Squarespace 404 pages contain class .sqs-page-error or a specific body class */
-  function is404() {
-    return document.body.classList.contains('collection-type-page') &&
-      (document.querySelector('.sqs-page-error') ||
-       document.title.indexOf('Page Not Found') >= 0 ||
-       document.title.indexOf('404') >= 0);
-  }
-
-  function inject() {
-    if (!is404()) return;
-    var container = document.querySelector('.sqs-page-error') ||
-      document.querySelector('main') ||
-      document.querySelector('#page .page-section');
-    if (!container) return;
-    if (container.querySelector('.rl-404-help')) return;
-
-    var isEs = window.location.pathname.indexOf('/espanol') === 0 ||
-      window.location.pathname.indexOf('/recursos-') === 0;
-
-    var wrap = document.createElement('div');
-    wrap.className = 'rl-404-help';
-    wrap.innerHTML = isEs
-      ? '<h2>P\u00e1gina no encontrada</h2>'
-        + '<p>Lo sentimos, esta p\u00e1gina no existe o fue movida. Pruebe uno de estos enlaces:</p>'
-        + '<div class="rl-404-links">'
-        + '<a href="/espanol">Inicio</a>'
-        + '<a href="/espanol-servicios">Servicios</a>'
-        + '<a href="/espanol-blog">Blog Legal</a>'
-        + '<a href="/recursos-es">Recursos</a>'
-        + '<a href="/espanol-contacto">Contacto</a>'
-        + '<a href="/espanol-cita">Agendar Cita</a>'
-        + '</div>'
-        + '<p class="rl-404-cta">O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a></p>'
-      : '<h2>Page Not Found</h2>'
-        + '<p>Sorry, this page doesn\u2019t exist or has been moved. Try one of these:</p>'
-        + '<div class="rl-404-links">'
-        + '<a href="/">Home</a>'
-        + '<a href="/services">Services</a>'
-        + '<a href="/blog">Legal Blog</a>'
-        + '<a href="/resources">Resources</a>'
-        + '<a href="/contact">Contact</a>'
-        + '<a href="/calendly">Free Consultation</a>'
-        + '</div>'
-        + '<p class="rl-404-cta">Or call us at <a href="tel:+17872361657">(787) 236-1657</a></p>';
-
-    container.appendChild(wrap);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', inject);
-  } else {
-    inject();
-  }
 })();
-
-})();
-

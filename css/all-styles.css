@@ -560,6 +560,21 @@ body .rl-rd-cta-section a[href^="tel"],
   margin-top: 0;
 }
 
+/* ===== PHONE LINK VISIBILITY ON DARK BACKGROUNDS ===== */
+.sqs-block-content a[href*="tel:"],
+.sqs-html-content a[href*="tel:"],
+.page-section .content-wrapper a[href*="tel:"] {
+  color: var(--rl-gold) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+.sqs-block.sqs-background--dark a[href*="tel:"],
+.page-section.has-background a[href*="tel:"],
+[data-section-theme="dark"] a[href*="tel:"],
+.dark-bold a[href*="tel:"] {
+  color: var(--rl-gold) !important;
+}
+
 /* ===== SERVICES PAGE: PRICING TIERS ===== */
 .rl-rd-tier-grid {
   display: grid;

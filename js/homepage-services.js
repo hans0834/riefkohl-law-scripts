@@ -616,8 +616,8 @@ function transformTrustPricing(htmlDiv) {
     }
 
     if (currentTier) {
-      // Price line (e.g., "$7,500 - $12,000")
-      if (child.tagName === 'P' && text.match(/^\$[\d,]+/)) {
+      // Price line — match "$X", "From $X", "$X - $Y", etc.
+      if (child.tagName === 'P' && text.match(/\$[\d,]+/)) {
         currentTier.price = text;
         child.style.display = 'none';
         continue;
@@ -676,7 +676,10 @@ function transformTrustPricing(htmlDiv) {
     if (idx === 1) html += '<div class="rl-rd-popular-badge">Most Popular</div>';
     html += '<div class="rl-rd-tier-label">' + escHtml(tier.label) + '</div>';
     html += '<h3>' + escHtml(tier.name) + '</h3>';
-    var priceDisplay = tier.price;
+    // Hardcoded "From" prices — these are the canonical display prices
+    // and must not depend on Squarespace editor content
+    var TIER_PRICES = ['From $1,875', 'From $3,000', 'From $4,500', 'From $7,500'];
+    var priceDisplay = TIER_PRICES[idx] || tier.price;
     html += '<div class="rl-rd-price">' + escHtml(priceDisplay) + '</div>';
     html += '<ul>';
     displayItems.forEach(function(item) {
@@ -918,6 +921,18 @@ function transformServicesDisclaimer(htmlDiv) {
       var disc = el('div', 'rl-rd-disclaimer', escHtml(text));
       child.style.display = 'none';
       child.parentNode.insertBefore(disc, child.nextSibling);
+      continue;
+    }
+
+    // Hide "Explore Our Practice Areas" section and any trailing native content
+    if (text.indexOf('Explore Our Practice Areas') > -1 || text.indexOf('Explore Our') === 0) {
+      child.style.display = 'none';
+      // Hide all remaining siblings after this heading
+      for (var k = i + 1; k < kids.length; k++) {
+        if (!kids[k].classList || !kids[k].classList.contains('rl-rd-cta-section')) {
+          kids[k].style.display = 'none';
+        }
+      }
       continue;
     }
   }

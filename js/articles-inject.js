@@ -1564,7 +1564,7 @@ var ARTICLES = {
   +'<p><strong>The Rule:</strong> Beneficiaries have a statutory right to receive accounting information from the trustee, period. The right is not conditional on showing harm or breach. Trustees cannot avoid the duty by arguing the beneficiary wasn\u2019t damaged.</p>'
 
   +'<h3>Fideicomiso Irrevocable Rodr\u00edguez Bruno v. Aponte Cruz (2024 TCA) \u2013 Timing and Forced Heirship</h3>'
-  +'<p>A trust was created just 8 days after the 2020 Code came into effect, was funded with the settlor\u2019s family home, and the settlor died 5 months later. The widow sought to enforce her forced heirship rights (widow\u2019s <em>mejora</em>).</p>'
+  +'<p>A trust was created just 8 days after the 2020 Code came into effect, was funded with the settlor\u2019s family home, and the settlor died 5 months later. The widow sought to enforce her forced heirship rights as a <em>heredera forzosa</em> (forced heir)\u2014a status created by the 2020 Civil Code, which eliminated the <em>mejora</em> and made surviving spouses forced heirs for the first time.</p>'
   +'<p>The court enforced the widow\u2019s rights despite the trust\u2019s irrevocable nature and the short timeline. This case reinforces that trusts cannot circumvent spousal forced heirship, no matter how quickly they are set up or how long the settlor lives thereafter.</p>'
 
   +'<h3>Fideicomiso Caro Delui (2012 TCA) \u2013 Separate vs. Community Property</h3>'
@@ -3166,7 +3166,7 @@ var ARTICLES = {
 
   +'<h2 style="margin-top:36px;">Practitioner-Grade Trust Knowledge</h2>'
 
-  +'<p>Our 14-article <a href="/resources" style="color:#a68c42;font-weight:600;">Puerto Rico Trust Law Series</a> is the most comprehensive publicly available resource on PR trust planning for Act 60 investors. Covering everything from the autonomous estate concept to advanced ILIT and SLAT structures, the series reflects the depth of analysis we bring to every client engagement. Your CPA can review the series to see how we approach the legal side of the planning equation.</p>'
+  +'<p>Our 15-article <a href="/resources" style="color:#a68c42;font-weight:600;">Puerto Rico Trust Law Series</a> is the most comprehensive publicly available resource on PR trust planning for Act 60 investors. Covering everything from the autonomous estate concept to advanced ILIT and SLAT structures, the series reflects the depth of analysis we bring to every client engagement. Your CPA can review the series to see how we approach the legal side of the planning equation.</p>'
 
   +'<div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:36px 28px;border-radius:10px;margin:36px 0;text-align:center;">'
   +'<h2 style="color:#fff;font-size:1.3rem;margin:0 0 12px;font-family:var(--heading-font-font-family,Georgia,serif);">Schedule a Consultation</h2>'
@@ -3325,7 +3325,7 @@ function injectArticleHub() {
     + '<div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:36px 32px;border-radius:10px;text-align:center;margin-bottom:32px;">'
     + '<p style="color:#bfa35d;font-weight:700;font-size:.9rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">In-Depth Article Series</p>'
     + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.6rem;font-weight:700;color:#fff;margin:0 0 10px;letter-spacing:-.02em;">Puerto Rico Trust Law for Act 60 Investors</h2>'
-    + '<p style="color:rgba(255,255,255,.85);font-size:.92rem;max-width:560px;margin:0 auto;">A 14-article practitioner-grade series covering everything from trust fundamentals to advanced tax planning. Written by Hans Riefkohl for investors who want to understand the law, not just follow instructions.</p>'
+    + '<p style="color:rgba(255,255,255,.85);font-size:.92rem;max-width:560px;margin:0 auto;">A 15-article practitioner-grade series covering everything from trust fundamentals to advanced tax planning. Written by Hans Riefkohl for investors who want to understand the law, not just follow instructions.</p>'
     + '</div>';
   
   categories.forEach(function(cat) {

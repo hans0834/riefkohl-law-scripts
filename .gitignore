@@ -1,0 +1,9 @@
+.DS_Store
+.venv/
+*.pem
+cert.pem
+key.pem
+node_modules/
+__pycache__/
+*.pyc
+backups-*/

@@ -1,4 +1,23 @@
 
+/* Preconnect hints — start DNS/TLS early for key external resources */
+(function(){
+  var hints = [
+    { rel: 'preconnect', href: 'https://images.squarespace-cdn.com' },
+    { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
+    { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+    { rel: 'dns-prefetch', href: 'https://calendly.com' }
+  ];
+  hints.forEach(function(h) {
+    if (!document.querySelector('link[rel="' + h.rel + '"][href="' + h.href + '"]')) {
+      var link = document.createElement('link');
+      link.rel = h.rel;
+      link.href = h.href;
+      if (h.rel === 'preconnect') link.crossOrigin = '';
+      document.head.appendChild(link);
+    }
+  });
+})();
+
 (function(){
 'use strict';
 
@@ -1104,6 +1123,42 @@ var SEO = {
     h1: 'Herederos no son accionistas \u2014 la información corporativa debe solicitarse a través del administrador judicial en la partición',
     meta: 'El Tribunal de Apelaciones resuelve que los herederos no tienen condición de accionistas antes de la partición. La información corporativa debe canalizarse a través de un administrador judicial.',
     schema: null
+  },
+
+  /* ---- Pricing Page ---- */
+  '/pricing': {
+    h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
+    meta: 'Riefkohl Law offers flat-fee pricing for all services. Trusts, estate planning, Act 60 advisory, and business formation. Know your investment upfront.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Why does Riefkohl Law use flat-fee pricing?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Flat-fee pricing aligns our incentives with yours. You know the full cost upfront before any work begins, so there are no surprises or escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is the initial consultation really free?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Your first strategy call with Attorney Riefkohl is completely free with no obligation. We use this call to understand your situation, explain your options, and provide a specific flat-fee quote if you decide to proceed.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What payment methods do you accept?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We accept credit cards, bank transfers (ACH), checks, and wire transfers. Payment plans are available for larger engagements. The flat fee is typically collected at the start of the engagement.'
+          }
+        }
+      ]
+    }
   }
 };
 
@@ -1289,7 +1344,7 @@ function injectAttorneySchema() {
     'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
-    'email': 'info@riefkohllaw.com',
+    'email': 'hans@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '273 Ponce de Le\u00f3n Ave.',
@@ -1439,6 +1494,72 @@ function fixLangAttribute() {
 }
 
 /* ================================================
+   9b. WEBSITE SCHEMA WITH SEARCHACTION (homepage only)
+   ================================================ */
+function injectWebSiteSchema() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  if (path !== '/') return;
+
+  var schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Riefkohl Law',
+    'url': 'https://www.riefkohllaw.com',
+    'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law.',
+    'inLanguage': ['en', 'es'],
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': {
+        '@type': 'EntryPoint',
+        'urlTemplate': 'https://www.riefkohllaw.com/blog?q={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
+    }
+  };
+
+  var script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
+/* ================================================
+   ACCESSIBILITY: SKIP TO CONTENT LINK
+   ================================================ */
+function injectSkipLink() {
+  if (document.querySelector('.rl-skip-link')) return;
+
+  var mainContent = document.querySelector('main') || document.querySelector('#page') ||
+    document.querySelector('.page-section:first-of-type') || document.querySelector('article');
+  if (mainContent && !mainContent.id) mainContent.id = 'main-content';
+  var targetId = mainContent ? (mainContent.id || 'main-content') : 'page';
+
+  var link = document.createElement('a');
+  link.className = 'rl-skip-link';
+  link.href = '#' + targetId;
+  link.textContent = 'Skip to main content';
+  document.body.insertBefore(link, document.body.firstChild);
+}
+
+/* Secure all external links with noopener noreferrer */
+function secureExternalLinks() {
+  var host = window.location.hostname;
+  var links = document.querySelectorAll('a[href^="http"]');
+  for (var i = 0; i < links.length; i++) {
+    try {
+      var url = new URL(links[i].href);
+      if (url.hostname !== host) {
+        links[i].setAttribute('target', '_blank');
+        var rel = (links[i].getAttribute('rel') || '').toLowerCase();
+        if (rel.indexOf('noopener') < 0) rel += ' noopener';
+        if (rel.indexOf('noreferrer') < 0) rel += ' noreferrer';
+        links[i].setAttribute('rel', rel.trim());
+      }
+    } catch(e) {}
+  }
+}
+
+/* ================================================
    13. SQUARESPACE PAGE CONTENT CORRECTIONS
    Fixes for content in the Squarespace editor that
    cannot be changed via code injection alone.
@@ -1542,14 +1663,17 @@ function runFixes() {
   injectFAQSchema();
   injectAttorneySchema();
   injectPersonSchema();
+  injectWebSiteSchema();
   fixOpenGraphAndTwitter();
   fixLangAttribute();
+  injectSkipLink();
 
   /* H1, staging URLs, and images need the DOM to be more fully loaded */
   fixH1();
   fixStagingUrls();
   fixImageAlts();
   injectDisclaimer();
+  secureExternalLinks();
 
   /* Squarespace page content corrections (A1, A4, A6, B9) */
   fixAct60ExemptionPercentages();
@@ -1586,7 +1710,11 @@ var HREFLANG_PAIRS = [
   ['testamentary-trust-succession-disputes-puerto-rico', 'testamentary-trust-succession-disputes-puerto-rico-es'],
   ['trust-property-disputes-puerto-rico', 'trust-property-disputes-puerto-rico-es'],
   ['trust-validity-challenges-puerto-rico', 'trust-validity-challenges-puerto-rico-es'],
-  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es']
+  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es'],
+  /* CPA bridge posts (Act 38-2026 + CPA content) */
+  ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
+  ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
+  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
 ];
 
 /* Core page pairs (non-blog) */
@@ -1684,6 +1812,65 @@ injectHreflang();
     document.addEventListener('DOMContentLoaded', removeElements);
   } else {
     removeElements();
+  }
+})();
+
+/* ================================================
+   13. ENHANCED 404 PAGE
+   ================================================ */
+(function enhance404() {
+  /* Squarespace 404 pages contain class .sqs-page-error or a specific body class */
+  function is404() {
+    return document.body.classList.contains('collection-type-page') &&
+      (document.querySelector('.sqs-page-error') ||
+       document.title.indexOf('Page Not Found') >= 0 ||
+       document.title.indexOf('404') >= 0);
+  }
+
+  function inject() {
+    if (!is404()) return;
+    var container = document.querySelector('.sqs-page-error') ||
+      document.querySelector('main') ||
+      document.querySelector('#page .page-section');
+    if (!container) return;
+    if (container.querySelector('.rl-404-help')) return;
+
+    var isEs = window.location.pathname.indexOf('/espanol') === 0 ||
+      window.location.pathname.indexOf('/recursos-') === 0;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'rl-404-help';
+    wrap.innerHTML = isEs
+      ? '<h2>P\u00e1gina no encontrada</h2>'
+        + '<p>Lo sentimos, esta p\u00e1gina no existe o fue movida. Pruebe uno de estos enlaces:</p>'
+        + '<div class="rl-404-links">'
+        + '<a href="/espanol">Inicio</a>'
+        + '<a href="/espanol-servicios">Servicios</a>'
+        + '<a href="/espanol-blog">Blog Legal</a>'
+        + '<a href="/recursos-es">Recursos</a>'
+        + '<a href="/espanol-contacto">Contacto</a>'
+        + '<a href="/espanol-cita">Agendar Cita</a>'
+        + '</div>'
+        + '<p class="rl-404-cta">O ll\u00e1menos al <a href="tel:+17872361657">(787) 236-1657</a></p>'
+      : '<h2>Page Not Found</h2>'
+        + '<p>Sorry, this page doesn\u2019t exist or has been moved. Try one of these:</p>'
+        + '<div class="rl-404-links">'
+        + '<a href="/">Home</a>'
+        + '<a href="/services">Services</a>'
+        + '<a href="/blog">Legal Blog</a>'
+        + '<a href="/resources">Resources</a>'
+        + '<a href="/contact">Contact</a>'
+        + '<a href="/calendly">Free Consultation</a>'
+        + '</div>'
+        + '<p class="rl-404-cta">Or call us at <a href="tel:+17872361657">(787) 236-1657</a></p>';
+
+    container.appendChild(wrap);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', inject);
+  } else {
+    inject();
   }
 })();
 

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riefkohl Law - Image Placement Blueprint</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: #f5f5f0; color: #1a1a2e; }
+
+  .page-divider {
+    background: #1a1a2e; color: white; text-align: center; padding: 40px 20px;
+    font-size: 32px; font-weight: bold; letter-spacing: 3px; text-transform: uppercase;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .page-divider span { font-size: 14px; display: block; margin-top: 8px; letter-spacing: 1px; opacity: 0.7; font-weight: normal; }
+
+  .annotation-bar {
+    background: #e74c3c; color: white; padding: 12px 30px; font-size: 13px;
+    font-family: 'Arial', sans-serif; letter-spacing: 1px; text-transform: uppercase;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .annotation-bar .num {
+    background: white; color: #e74c3c; border-radius: 50%; width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;
+  }
+  .annotation-bar .file-tag {
+    background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 3px; font-size: 11px; margin-left: auto; white-space: nowrap;
+  }
+  .instruction-box {
+    background: #fff8e1; border-left: 4px solid #f9a825; padding: 14px 30px; font-family: 'Arial', sans-serif; font-size: 13px; color: #5d4037; line-height: 1.6;
+  }
+  .instruction-box strong { color: #e74c3c; }
+
+  /* ============ HOME PAGE ============ */
+
+  /* 1. Hero Section */
+  .hero-section {
+    position: relative; min-height: 520px; display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-section .bg-image {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+  }
+  .hero-section .overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 30, 0.45); z-index: 2;
+  }
+  .hero-section .content {
+    position: relative; z-index: 3; text-align: center; color: white; padding: 40px;
+  }
+  .hero-section h1 {
+    font-size: 42px; line-height: 1.3; margin-bottom: 20px; font-weight: bold;
+  }
+  .hero-section p { font-size: 17px; max-width: 650px; margin: 0 auto 30px; line-height: 1.7; opacity: 0.9; }
+  .hero-section .cta {
+    display: inline-block; border: 2px solid white; color: white; padding: 14px 32px;
+    text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 13px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* 2. Trust/Stats Section */
+  .stats-section { background: white; padding: 60px 40px; text-align: center; }
+  .stats-row { display: flex; justify-content: center; gap: 60px; margin-bottom: 40px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .number { font-size: 36px; font-weight: bold; color: #1a1a2e; }
+  .stat .label { font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; font-family: 'Arial', sans-serif; }
+  .stats-image { max-width: 700px; margin: 0 auto; }
+  .stats-image img { width: 100%; height: auto; display: block; }
+
+  /* 3. Practice Areas Grid */
+  .practice-section { background: #f5f5f0; padding: 60px 40px; }
+  .practice-section h2 { text-align: center; font-size: 28px; margin-bottom: 40px; }
+  .practice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .practice-card {
+    background: white; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  .practice-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+  .practice-card .card-body { padding: 24px; }
+  .practice-card h3 { font-size: 18px; margin-bottom: 8px; }
+  .practice-card p { font-size: 14px; color: #666; line-height: 1.6; font-family: 'Arial', sans-serif; }
+
+  /* ============ SERVICES PAGE ============ */
+
+  /* 4. Services Header */
+  .services-header {
+    position: relative; min-height: 300px; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .services-header .bg-image {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;
+  }
+  .services-header .overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(10, 10, 30, 0.60); z-index: 2;
+  }
+  .services-header .content { position: relative; z-index: 3; text-align: center; color: white; }
+  .services-header h1 { font-size: 38px; }
+
+  /* 5. Corporate Section */
+  .service-row { display: flex; align-items: flex-start; gap: 40px; padding: 50px 60px; background: white; }
+  .service-row.reverse { flex-direction: row-reverse; }
+  .service-row img { width: 33%; min-width: 250px; object-fit: cover; flex-shrink: 0; }
+  .service-row .text { flex: 1; }
+  .service-row h2 { font-size: 24px; margin-bottom: 6px; }
+  .service-row .price { font-size: 20px; color: #2e7d32; font-weight: bold; margin-bottom: 16px; font-family: 'Arial', sans-serif; }
+  .service-row p { font-size: 15px; line-height: 1.7; color: #444; font-family: 'Arial', sans-serif; }
+
+  /* 7. Estate Planning Pricing */
+  .estate-section { background: #f5f5f0; padding: 60px 40px; text-align: center; }
+  .estate-section img { max-width: 500px; margin: 0 auto 40px; display: block; width: 100%; }
+  .estate-section h2 { font-size: 28px; margin-bottom: 30px; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
+  .tier {
+    background: white; padding: 30px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .tier h4 { font-size: 16px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  .tier .tier-price { font-size: 28px; font-weight: bold; color: #1a1a2e; margin-bottom: 14px; }
+  .tier ul { list-style: none; text-align: left; font-size: 13px; color: #555; font-family: 'Arial', sans-serif; line-height: 2; }
+
+  /* Spacer between sections in mockup */
+  .section-gap { height: 4px; background: #ddd; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1: HOME PAGE -->
+<!-- ============================================================ -->
+<div class="page-divider">
+  Phase 1: Home Page <span>The "Trust & Authority" Funnel</span>
+</div>
+
+<!-- HERO SECTION -->
+<div class="annotation-bar">
+  <div class="num">1</div>
+  Hero Section &mdash; Background Image with 40-50% Dark Overlay
+  <div class="file-tag">1. Fountain Pen signing vellum paper.png</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> Edit Home &rarr; Click the top section &rarr; Pencil icon &rarr; <strong>Background</strong> tab &rarr; Upload this image &rarr; Set <strong>Image Overlay to 40-50% black/dark navy</strong>. Your white heading text will pop beautifully.
+</div>
+<div class="hero-section">
+  <img class="bg-image" src="illustrations/1. The Fountain Pen actively signing vellum paper .png" alt="Fountain pen signing">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Big-Firm Expertise. Personal<br>Attention. Transparent Pricing.</h1>
+    <p>Puerto Rico's trusted counsel for estate planning, irrevocable trusts, and asset protection &mdash; plus corporate, transactional, and business law.</p>
+    <a href="#" class="cta">Book Your Free Strategy Call</a>
+  </div>
+</div>
+
+<div class="section-gap"></div>
+
+<!-- TRUST & STATISTICS SECTION -->
+<div class="annotation-bar">
+  <div class="num">2</div>
+  Trust & Statistics Section &mdash; Image Block Below or Adjacent to Stats
+  <div class="file-tag">2. Ancient Oak Tree Trunk and Concrete Wall.jpg</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> In the stats section, add an <strong>Image Block</strong> directly below the numbers. Upload this image. Set the design to <strong>"Fit"</strong> (not Fill) to preserve the minimalist white space.
+</div>
+<div class="stats-section">
+  <div class="stats-row">
+    <div class="stat"><div class="number">$100M+</div><div class="label">In Transactions</div></div>
+    <div class="stat"><div class="number">500+</div><div class="label">Matters Handled</div></div>
+    <div class="stat"><div class="number">15+</div><div class="label">Years Experience</div></div>
+  </div>
+  <div class="stats-image">
+    <img src="illustrations/2.Ancient Oak Tree Trunk and Concrete Wall.jpg" alt="Oak tree and concrete wall" style="border: 1px solid #eee;">
+  </div>
+</div>
+
+<div class="section-gap"></div>
+
+<!-- PRACTICE AREAS GRID -->
+<div class="annotation-bar">
+  <div class="num">3</div>
+  Practice Areas Grid &mdash; One Image Per Card
+  <div class="file-tag">3a. Blueprint &nbsp;|&nbsp; 3b. Oak Sapling &nbsp;|&nbsp; 3c. Hands</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> In your Practice Areas grid/list, assign each image to its corresponding card. Click each card &rarr; upload the matching image below.
+</div>
+<div class="practice-section">
+  <h2>Practice Areas</h2>
+  <div class="practice-grid">
+    <div class="practice-card">
+      <img src="illustrations/3a. Architectural Blueprint and Desk .png" alt="Architectural blueprint">
+      <div class="card-body">
+        <h3>Corporate & Transactional</h3>
+        <p>Structure, strategy, and precision for your business formation and transactions.</p>
+      </div>
+    </div>
+    <div class="practice-card">
+      <img src="illustrations/3b. Oak Sapling in Precise Concrete Crack.jpg" alt="Sapling in concrete">
+      <div class="card-body">
+        <h3>Bankruptcy</h3>
+        <p>A fresh start and resilient growth &mdash; even from the hardest places.</p>
+      </div>
+    </div>
+    <div class="practice-card">
+      <img src="illustrations/3c. Hand Layered on a Child's Hand .jpg" alt="Hands together">
+      <div class="card-body">
+        <h3>Estate Planning & Trusts</h3>
+        <p>Protect your family, your legacy, and everything you've built.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 2: SERVICES PAGE -->
+<!-- ============================================================ -->
+<div class="page-divider" style="margin-top: 20px;">
+  Phase 2: Services Page <span>The "Conversion & Clarity" Funnel</span>
+</div>
+
+<!-- SERVICES HEADER -->
+<div class="annotation-bar">
+  <div class="num">4</div>
+  Services Page Header &mdash; Banner/Background with Heavy Overlay
+  <div class="file-tag">4. Antique Brass Compass on Nautical Chart.jpg</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> Edit Services page &rarr; Top section &rarr; Pencil icon &rarr; <strong>Background</strong> tab &rarr; Upload compass image &rarr; Set overlay to <strong>60% dark</strong> so pricing text below stays readable.
+</div>
+<div class="services-header">
+  <img class="bg-image" src="illustrations/4.Antique Brass Compass on Nautical Chart.jpg" alt="Compass on nautical chart">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>Our Services</h1>
+  </div>
+</div>
+
+<div class="section-gap"></div>
+
+<!-- CORPORATE SERVICE -->
+<div class="annotation-bar">
+  <div class="num">5</div>
+  Corporate & Transactional ($750) &mdash; Image Floated LEFT, ~1/3 Width
+  <div class="file-tag">5. Mechanical Watch Movement.png</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> Add an <strong>Image Block</strong> to the left of your corporate services text. Resize it to take up about <strong>1/3 of the page width</strong>.
+</div>
+<div class="service-row">
+  <img src="illustrations/5. Extreme Macro of a Mechanical Watch Movement .png" alt="Watch movement">
+  <div class="text">
+    <h2>Corporate & Transactional</h2>
+    <div class="price">$750 Flat Fee</div>
+    <p>From LLC formation to complex corporate restructuring, we handle every moving part with surgical precision. Our flat-fee model means you know the cost before we begin &mdash; no surprises, no billable-hour anxiety. Includes entity formation, operating agreements, registered agent service, and EIN procurement.</p>
+  </div>
+</div>
+
+<div class="section-gap"></div>
+
+<!-- BANKRUPTCY SERVICE -->
+<div class="annotation-bar">
+  <div class="num">6</div>
+  Bankruptcy ($5,000) &mdash; Image Floated RIGHT to Break Visual Monotony
+  <div class="file-tag">6. Rowboat on Calm Water.png</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> Add an <strong>Image Block</strong> floated to the <strong>right</strong> of your bankruptcy text. This flipped layout breaks up the left-right reading monotony. The calm water counteracts client anxiety.
+</div>
+<div class="service-row reverse">
+  <img src="illustrations/6. Rowboat on Calm Water.png" alt="Rowboat on calm water">
+  <div class="text">
+    <h2>Bankruptcy</h2>
+    <div class="price">$5,000 Flat Fee</div>
+    <p>Navigate to a place of safety and calm. Our bankruptcy practice guides you through Chapter 7 and Chapter 13 filings with compassion and precision. We handle all court filings, creditor communications, and the automatic stay process so you can focus on your fresh start.</p>
+  </div>
+</div>
+
+<div class="section-gap"></div>
+
+<!-- ESTATE PLANNING PRICING -->
+<div class="annotation-bar">
+  <div class="num">7</div>
+  Estate Planning Trust Tiers &mdash; Centered Image ABOVE Pricing Table
+  <div class="file-tag">7. Leather-Bound Books with Bookmark.jpg</div>
+</div>
+<div class="instruction-box">
+  <strong>Squarespace:</strong> Add an <strong>Image Block centered</strong> directly above your 4-tier pricing breakdown. It sets a premium, sophisticated stage before visitors look at numbers.
+</div>
+<div class="estate-section">
+  <h2>Estate Planning & Trust Services</h2>
+  <img src="illustrations/7. Stack of Premium Leather-Bound Books with Bookmark.jpg" alt="Leather-bound books">
+  <div class="pricing-grid">
+    <div class="tier">
+      <h4>Essential</h4>
+      <div class="tier-price">$2,500</div>
+      <ul>
+        <li>Simple Will</li>
+        <li>Power of Attorney</li>
+        <li>Healthcare Directive</li>
+      </ul>
+    </div>
+    <div class="tier">
+      <h4>Foundation</h4>
+      <div class="tier-price">$5,000</div>
+      <ul>
+        <li>Revocable Living Trust</li>
+        <li>Pour-Over Will</li>
+        <li>All Essential items</li>
+      </ul>
+    </div>
+    <div class="tier">
+      <h4>Guardian</h4>
+      <div class="tier-price">$7,500</div>
+      <ul>
+        <li>Irrevocable Trust</li>
+        <li>Asset Protection</li>
+        <li>All Foundation items</li>
+      </ul>
+    </div>
+    <div class="tier">
+      <h4>Dynasty</h4>
+      <div class="tier-price">$12,500+</div>
+      <ul>
+        <li>Multi-Gen Planning</li>
+        <li>Business Succession</li>
+        <li>All Guardian items</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div style="background: #1a1a2e; color: white; text-align: center; padding: 40px; font-family: Arial, sans-serif; font-size: 14px; line-height: 2;">
+  <strong style="font-size: 18px; display: block; margin-bottom: 10px;">Quick Reference: File &rarr; Location</strong>
+  1. Fountain Pen &rarr; Home Hero Background<br>
+  2. Oak Tree &amp; Concrete &rarr; Home Stats Section<br>
+  3a. Blueprint &rarr; Home Practice Card: Corporate<br>
+  3b. Sapling in Concrete &rarr; Home Practice Card: Bankruptcy<br>
+  3c. Hands &rarr; Home Practice Card: Estate Planning<br>
+  4. Compass &rarr; Services Page Header Background<br>
+  5. Watch Movement &rarr; Services: Corporate (left float)<br>
+  6. Rowboat &rarr; Services: Bankruptcy (right float)<br>
+  7. Leather Books &rarr; Services: Above Estate Pricing Tiers
+</div>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!-- Riefkohl Law Email Signup — Auto-Injected Newsletter Bar + Blog Lead Magnets -->
+<!-- DEPLOY: Add to Squarespace → Settings → Advanced → Code Injection → Footer -->
+<!-- NOTE: Replace YOUR_FORM_ACTION_URL with your email provider's form action URL -->
+<!-- RECOMMENDED: MailerLite (free up to 1,000 subscribers) — see setup instructions at bottom -->
+
+<style id="rl-email-signup-css">
+/* === SITE-WIDE FOOTER NEWSLETTER BAR === */
+.rl-footer-signup {
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%);
+  padding: 40px 28px;
+  text-align: center;
+  border-top: 2px solid rgba(191,163,93,.2);
+}
+.rl-footer-signup * { box-sizing: border-box; }
+.rl-footer-signup-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.rl-footer-signup-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(191,163,93,.15);
+  color: #bfa35d;
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.rl-footer-signup h4,
+.rl-footer-signup h3,
+.rl-footer-signup h2 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff !important;
+  font-style: normal !important;
+  margin: 0 0 8px;
+}
+.rl-footer-signup p {
+  color: rgba(255,255,255,.55);
+  font-size: .85rem;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+.rl-footer-signup .rl-signup-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.rl-footer-signup .rl-signup-input {
+  flex: 1;
+  height: 46px;
+  padding: 0 16px;
+  font-size: .88rem;
+  font-family: inherit;
+  border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 6px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  outline: none;
+  transition: border-color .25s, background .25s;
+}
+.rl-footer-signup .rl-signup-input::placeholder { color: rgba(255,255,255,.35); }
+.rl-footer-signup .rl-signup-input:focus {
+  border-color: #bfa35d;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 0 0 2px rgba(191,163,93,.2);
+}
+.rl-footer-signup .rl-signup-btn {
+  height: 46px;
+  padding: 0 22px;
+  font-size: .82rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: #bfa35d;
+  color: #1a2033;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .25s, transform .15s;
+}
+.rl-footer-signup .rl-signup-btn:hover { background: #d4b96a; transform: translateY(-1px); }
+.rl-footer-signup .rl-signup-btn:active { transform: translateY(0); }
+.rl-footer-signup .rl-signup-privacy {
+  color: rgba(255,255,255,.3);
+  font-size: .7rem;
+  margin-top: 12px;
+}
+.rl-footer-signup .rl-signup-privacy a { color: rgba(255,255,255,.45); text-decoration: underline; }
+.rl-footer-signup .rl-signup-success {
+  display: none;
+  color: #bfa35d;
+  font-size: .95rem;
+  font-weight: 600;
+  padding: 12px 0;
+}
+
+@media (max-width: 540px) {
+  .rl-footer-signup { padding: 32px 20px; }
+  .rl-footer-signup h4 { font-size: 1.05rem; }
+  .rl-footer-signup .rl-signup-form { flex-direction: column; }
+  .rl-footer-signup .rl-signup-btn { width: 100%; }
+}
+
+/* === INLINE SIGNUP (Blog Post / Article Embed) === */
+.rl-signup-inline {
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  max-width: 680px;
+  margin: 48px auto;
+  padding: 40px 36px;
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%);
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.rl-signup-inline * { box-sizing: border-box; }
+.rl-signup-inline .rl-signup-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  background: rgba(191,163,93,.15);
+  color: #bfa35d;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border-radius: 100px;
+  margin-bottom: 16px;
+}
+.rl-signup-inline h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -.02em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.rl-signup-inline p {
+  color: rgba(255,255,255,.6);
+  font-size: .9rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rl-signup-inline .rl-signup-form {
+  display: flex;
+  gap: 10px;
+  max-width: 460px;
+  margin: 0 auto;
+}
+.rl-signup-inline .rl-signup-input {
+  flex: 1;
+  height: 48px;
+  padding: 0 16px;
+  font-size: .9rem;
+  font-family: inherit;
+  border: 1.5px solid rgba(255,255,255,.15);
+  border-radius: 6px;
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  outline: none;
+  transition: border-color .25s, background .25s;
+}
+.rl-signup-inline .rl-signup-input::placeholder { color: rgba(255,255,255,.35); }
+.rl-signup-inline .rl-signup-input:focus {
+  border-color: #bfa35d;
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 0 0 2px rgba(191,163,93,.2);
+}
+.rl-signup-inline .rl-signup-btn {
+  height: 48px;
+  padding: 0 24px;
+  font-size: .85rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: #bfa35d;
+  color: #1a2033;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .25s, transform .15s;
+}
+.rl-signup-inline .rl-signup-btn:hover { background: #d4b96a; transform: translateY(-1px); }
+.rl-signup-inline .rl-signup-privacy {
+  color: rgba(255,255,255,.35);
+  font-size: .72rem;
+  margin-top: 12px;
+}
+.rl-signup-inline .rl-signup-privacy a { color: rgba(255,255,255,.5); text-decoration: underline; }
+.rl-signup-inline .rl-signup-success {
+  display: none;
+  color: #bfa35d;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 16px 0;
+}
+@media (max-width: 540px) {
+  .rl-signup-inline { padding: 32px 20px; margin: 32px 16px; }
+  .rl-signup-inline h3 { font-size: 1.25rem; }
+  .rl-signup-inline .rl-signup-form { flex-direction: column; }
+  .rl-signup-inline .rl-signup-btn { width: 100%; }
+}
+</style>
+
+<script>
+(function(){
+'use strict';
+
+var PATH = window.location.pathname.replace(/\/+$/, '') || '/';
+var IS_ES = PATH.indexOf('/espanol') === 0 || PATH.indexOf('/recursos-') === 0;
+
+/* ===== FOOTER NEWSLETTER BAR (injected site-wide) ===== */
+function injectFooterSignup() {
+  if (document.querySelector('.rl-footer-signup')) return;
+
+  // Don't show on calendly/booking pages
+  if (PATH === '/calendly' || PATH === '/espanol-cita') return;
+
+  var heading = IS_ES
+    ? '¿Su negocio cualifica para la tasa contributiva del 4%?'
+    : 'Does Your Business Qualify for the 4% Tax Rate?';
+  var desc = IS_ES
+    ? 'Obtenga nuestra lista de elegibilidad para la Ley 60 y reciba estrategias tributarias mensuales para negocios en Puerto Rico.'
+    : 'Get our Act 60 Eligibility Checklist plus monthly tax strategy insights for Puerto Rico businesses.';
+  var placeholder = IS_ES ? 'Su correo electrónico' : 'Your email address';
+  var btnText = IS_ES ? 'Obtener la Guía' : 'Get the Checklist';
+  var successText = IS_ES ? '¡Gracias! Revise su correo.' : 'Thank you! Check your inbox.';
+  var privacyText = IS_ES
+    ? 'Respetamos su privacidad. Cancele cuando quiera. <a href="/privacy-policy">Política de Privacidad</a>'
+    : 'We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a>';
+  var badge = IS_ES ? 'Guía Gratuita Ley 60' : 'Free Act 60 Guide';
+
+  var bar = document.createElement('div');
+  bar.className = 'rl-footer-signup';
+  bar.innerHTML =
+    '<div class="rl-footer-signup-inner">' +
+      '<div class="rl-footer-signup-badge">' + badge + '</div>' +
+      '<h4>' + heading + '</h4>' +
+      '<p>' + desc + '</p>' +
+      '<form class="rl-signup-form" action="YOUR_FORM_ACTION_URL" method="POST">' +
+        '<input type="email" name="email" class="rl-signup-input" placeholder="' + placeholder + '" required aria-label="' + placeholder + '">' +
+        '<button type="submit" class="rl-signup-btn">' + btnText + '</button>' +
+      '</form>' +
+      '<div class="rl-signup-success">' + successText + '</div>' +
+      '<p class="rl-signup-privacy">' + privacyText + '</p>' +
+    '</div>';
+
+  // Insert before footer or at end of body
+  var footer = document.querySelector('footer') || document.querySelector('.footer-inside');
+  if (footer) {
+    footer.parentNode.insertBefore(bar, footer);
+  } else {
+    document.body.appendChild(bar);
+  }
+
+  // Handle form submission — redirect to booking page until email provider is configured
+  var form = bar.querySelector('.rl-signup-form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      var action = form.getAttribute('action') || '';
+      // If the form action is still the placeholder, handle gracefully
+      if (action === 'YOUR_FORM_ACTION_URL' || action === '' || action === '#') {
+        e.preventDefault();
+        var emailInput = form.querySelector('.rl-signup-input');
+        var email = emailInput ? emailInput.value : '';
+        // Show success message
+        var successEl = bar.querySelector('.rl-signup-success');
+        if (successEl) {
+          successEl.style.display = 'block';
+          successEl.textContent = IS_ES
+            ? '\u00A1Gracias por su inter\u00E9s! Agende una consulta gratuita para recibir su gu\u00EDa personalizada.'
+            : 'Thanks for your interest! Book a free strategy call to get your personalized Act 60 guide.';
+        }
+        form.style.display = 'none';
+        // After a brief pause, redirect to booking
+        var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
+        setTimeout(function() {
+          window.location.href = bookUrl + (email ? '?email=' + encodeURIComponent(email) : '');
+        }, 2500);
+      }
+      // If a real action URL is configured, let the form submit normally
+    });
+  }
+}
+
+/* ===== BOOT ===== */
+function run() {
+  try {
+    injectFooterSignup();
+  } catch(e) {
+    console.error('[rl-email-signup]', e);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', run);
+} else {
+  run();
+}
+
+})();
+</script>
+
+<!-- ============================================
+     INLINE SIGNUP FOR BLOG POSTS (Copy & paste into Squarespace Code Blocks)
+     ============================================ -->
+<!--
+     To add a lead magnet signup to individual blog posts or articles:
+     1. Edit the blog post in Squarespace
+     2. Add a "Code" block at the bottom
+     3. Paste the HTML below (uncommented)
+
+<div class="rl-signup-inline">
+  <div class="rl-signup-badge">Free Guide</div>
+  <h3>5 Things Every Act 60 Holder Should Know About PR Trusts</h3>
+  <p>Get our free guide on how Puerto Rico trusts interact with your Act 60 decree — estate tax, forced heirship, and asset protection strategies.</p>
+  <form class="rl-signup-form" action="YOUR_FORM_ACTION_URL" method="POST">
+    <input type="email" name="email" class="rl-signup-input" placeholder="Your email address" required aria-label="Email address">
+    <button type="submit" class="rl-signup-btn">Get the Guide</button>
+  </form>
+  <div class="rl-signup-success">Thank you! Check your email for the guide.</div>
+  <p class="rl-signup-privacy">We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a></p>
+</div>
+-->
+
+<!-- ============================================
+     SETUP INSTRUCTIONS
+     ============================================
+
+     QUICKEST PATH: MailerLite (recommended — free up to 1,000 subscribers)
+     ─────────────────────────────────────────────
+     1. Create account at mailerlite.com
+     2. Create a subscriber group called "Newsletter"
+     3. Go to Forms → Embedded Forms → Create
+     4. Copy the form action URL from the embed code
+     5. Find-and-replace YOUR_FORM_ACTION_URL in this file with that URL
+     6. Deploy this file to Code Injection → Footer
+     7. Set up automation: when subscriber joins → send welcome email sequence
+        (see email-welcome-sequence.md for the 5-email sequence content)
+
+     ALTERNATIVE PROVIDERS:
+     ─────────────────────────────────────────────
+     A) Mailchimp (free up to 500 contacts)
+        - Create Audience → Signup Forms → Embedded Forms
+        - Copy form action URL
+        - Add hidden fields for u and id values
+
+     B) ConvertKit (free up to 1,000 subscribers)
+        - Create a Form → Get HTML embed → Copy action URL
+
+     C) Squarespace Email Campaigns (built-in, simplest)
+        - Marketing → Email Campaigns → Create mailing list
+        - Use their Newsletter Block instead of this code
+
+-->

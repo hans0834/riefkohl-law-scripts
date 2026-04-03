@@ -1,0 +1,1722 @@
+<!-- Riefkohl Law Resources Page Fix - Styling + Subpage Content -->
+<!-- Deployed via site-wide Code Injection (Header) -->
+
+<style id="rl-rc-fix">
+/* === RESOURCES PAGE STYLING FIX === */
+/* Override the blue gradient hero with navy to match site design */
+.rl-rc { font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif); color: #3d3a35; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+.rl-rc .rl-hero {
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%) !important;
+  padding: 56px 28px 44px !important;
+  border-radius: 10px !important;
+  text-align: center;
+  margin-bottom: 36px;
+}
+.rl-rc .rl-hero h1 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+  margin-bottom: 10px !important;
+}
+.rl-rc .rl-hero .tl {
+  color: #bfa35d !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 14px !important;
+}
+.rl-rc .rl-hero p:not(.tl) {
+  color: rgba(255,255,255,.55) !important;
+  font-size: .95rem !important;
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+/* Cards grid */
+.rl-rc .rl-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 16px !important;
+  max-width: 1140px !important;
+  margin: 0 auto 40px !important;
+  padding: 0 28px !important;
+}
+@media (max-width: 1023px) { .rl-rc .rl-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+@media (max-width: 767px) { .rl-rc .rl-grid { grid-template-columns: 1fr !important; padding: 0 16px !important; } }
+
+/* Cards */
+.rl-rc .rl-card {
+  background: #fff !important;
+  border: 1.5px solid #e8e9ee !important;
+  border-radius: 10px !important;
+  padding: 28px !important;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif) !important;
+  transition: border-color .25s cubic-bezier(.4,0,.2,1), box-shadow .25s cubic-bezier(.4,0,.2,1), transform .25s cubic-bezier(.4,0,.2,1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.rl-rc .rl-card:hover {
+  border-color: #bfa35d !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Card icons */
+.rl-rc .rl-card .rl-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(191,163,93,.08) !important;
+  border-radius: 6px !important;
+  font-size: 1.4rem !important;
+  margin-bottom: 16px !important;
+}
+
+/* Card headings */
+.rl-rc .rl-card h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #1a2033 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 10px !important;
+}
+
+/* Card descriptions */
+.rl-rc .rl-card p {
+  font-size: .88rem !important;
+  color: #706b62 !important;
+  line-height: 1.6 !important;
+  flex: 1 !important;
+  margin-bottom: 14px !important;
+}
+
+/* Card links */
+.rl-rc .rl-card a {
+  color: #a68c42 !important;
+  font-weight: 600 !important;
+  font-size: .85rem !important;
+  text-decoration: none !important;
+  transition: color .2s !important;
+}
+.rl-rc .rl-card a:hover {
+  color: #1a2033 !important;
+}
+/* Button-style links inside cards — clear background for better contrast */
+.rl-rc .rl-card a.sqs-block-button-element,
+.rl-rc .rl-card .sqs-block-button-element,
+.rl-rc .rl-card a[class*="button"],
+.rl-rc .rl-card .sqs-button-element--primary,
+.rl-rc .rl-card .sqs-editable-button,
+.rl-rc .rl-card a:only-of-type:last-child {
+  display: block !important;
+  background: transparent !important;
+  color: #a68c42 !important;
+  border: 1.5px solid #a68c42 !important;
+  padding: 10px 16px !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  font-weight: 600 !important;
+  font-size: .85rem !important;
+  transition: background .2s, color .2s !important;
+  margin-top: auto !important;
+}
+.rl-rc .rl-card a.sqs-block-button-element:hover,
+.rl-rc .rl-card .sqs-block-button-element:hover,
+.rl-rc .rl-card a[class*="button"]:hover,
+.rl-rc .rl-card .sqs-button-element--primary:hover,
+.rl-rc .rl-card .sqs-editable-button:hover,
+.rl-rc .rl-card a:only-of-type:last-child:hover {
+  background: #a68c42 !important;
+  color: #fff !important;
+}
+
+/* CTA section at bottom */
+.rl-rc .rl-cta,
+.rl-rc + .sqs-block .rl-cta,
+[class*="rl-cta"] {
+  background: #f5f5f8 !important;
+  padding: 40px 28px !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+  max-width: 1140px !important;
+  margin: 0 auto 40px !important;
+}
+.rl-rc .rl-cta strong,
+[class*="rl-cta"] strong {
+  color: #1a2033 !important;
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+}
+.rl-rc .rl-cta a,
+[class*="rl-cta"] a {
+  display: inline-block !important;
+  padding: 14px 32px !important;
+  background: #bfa35d !important;
+  color: #1a2033 !important;
+  font-weight: 700 !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  margin-top: 16px !important;
+  transition: background .25s !important;
+}
+.rl-rc .rl-cta a:hover,
+[class*="rl-cta"] a:hover {
+  background: #a68c42 !important;
+}
+
+/* === RESOURCE SUBPAGE STYLING === */
+/* Ensure parent container is full-width so centering works */
+.page-section:has(.rl-sub),
+.content-wrapper:has(.rl-sub),
+.sqs-layout:has(.rl-sub),
+.sqs-block:has(.rl-sub),
+.sqs-block-content:has(.rl-sub),
+article:has(.rl-sub) {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.rl-sub {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 28px 60px;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
+  color: #3d3a35;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  box-sizing: border-box;
+}
+.rl-sub .rl-sub-hero {
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%) !important;
+  padding: 44px 32px !important;
+  border-radius: 10px !important;
+  text-align: center !important;
+  margin-bottom: 36px !important;
+}
+.rl-sub .rl-sub-hero h1 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+  font-size: 1.8rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  margin-bottom: 10px !important;
+}
+.rl-sub .rl-sub-hero p {
+  color: rgba(255,255,255,.55) !important;
+  font-size: .92rem !important;
+  max-width: 500px !important;
+  margin: 0 auto !important;
+  line-height: 1.55 !important;
+}
+.rl-sub h2 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a2033;
+  margin: 32px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(191,163,93,.2);
+}
+.rl-sub h3 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a2033;
+  margin: 24px 0 10px;
+}
+.rl-sub p {
+  font-size: .92rem;
+  color: #706b62;
+  margin-bottom: 14px;
+  font-family: var(--body-font-font-family, "Montserrat", sans-serif) !important;
+}
+.rl-sub ul, .rl-sub ol {
+  margin: 10px 0 18px 24px;
+  font-size: .92rem;
+  color: #706b62;
+}
+.rl-sub li { margin-bottom: 6px; }
+.rl-sub strong { color: #3d3a35; }
+.rl-sub a { color: #a68c42; font-weight: 600; text-decoration: none; transition: color .2s; }
+.rl-sub a:hover { color: #1a2033; }
+
+/* FAQ accordion styles */
+.rl-sub .rl-faq { margin-bottom: 10px; }
+.rl-sub .rl-faq-q {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 20px; background: #f5f5f8; border: 1px solid #e8e9ee; border-radius: 8px;
+  cursor: pointer; font-weight: 600; font-size: .92rem; color: #1a2033; width: 100%;
+  text-align: left; transition: background .2s, border-color .2s;
+  font-family: var(--body-font-font-family, "Montserrat", sans-serif) !important;
+}
+.rl-sub .rl-faq-q:hover { border-color: #bfa35d; background: rgba(191,163,93,.06); }
+.rl-sub .rl-faq-q[aria-expanded="true"] { border-color: #bfa35d; background: rgba(191,163,93,.08); border-radius: 8px 8px 0 0; }
+.rl-sub .rl-faq-q::after { content: '+'; font-size: 1.2rem; color: #a68c42; transition: transform .2s; flex-shrink: 0; }
+.rl-sub .rl-faq-q[aria-expanded="true"]::after { content: '\2212'; }
+.rl-sub .rl-faq-a {
+  padding: 16px 20px; border: 1px solid #e8e9ee; border-top: none; border-radius: 0 0 8px 8px;
+  background: #fff; display: none;
+  font-family: var(--body-font-font-family, "Montserrat", sans-serif) !important;
+}
+.rl-sub .rl-faq-a p {
+  font-family: var(--body-font-font-family, "Montserrat", sans-serif) !important;
+}
+.rl-sub .rl-faq-a[data-open="true"] { display: block; }
+
+/* Glossary table */
+.rl-sub .rl-glossary-table {
+  width: 100%; border-collapse: collapse; margin: 16px 0 24px;
+}
+.rl-sub .rl-glossary-table th {
+  background: #1a2033; color: #fff; padding: 12px 16px; text-align: left;
+  font-size: .82rem; font-weight: 600; text-transform: uppercase; letter-spacing: .04em;
+}
+.rl-sub .rl-glossary-table td {
+  padding: 12px 16px; border-bottom: 1px solid #e8e9ee; font-size: .88rem; color: #706b62;
+  font-family: var(--body-font-font-family, "Montserrat", sans-serif) !important;
+}
+.rl-sub .rl-glossary-table tr:hover td { background: rgba(191,163,93,.04); }
+.rl-sub .rl-glossary-table td:first-child { font-weight: 600; color: #1a2033; }
+
+/* Process timeline */
+.rl-sub .rl-timeline { position: relative; padding-left: 32px; margin: 20px 0 30px; }
+.rl-sub .rl-timeline::before {
+  content: ''; position: absolute; left: 10px; top: 8px; bottom: 8px; width: 2px;
+  background: linear-gradient(to bottom, #bfa35d, #e8e9ee);
+}
+.rl-sub .rl-step { position: relative; margin-bottom: 28px; }
+.rl-sub .rl-step::before {
+  content: ''; position: absolute; left: -26px; top: 6px;
+  width: 12px; height: 12px; background: #bfa35d; border-radius: 50%;
+  border: 2px solid #fff; box-shadow: 0 0 0 2px rgba(191,163,93,.3);
+}
+.rl-sub .rl-step-title {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
+  font-weight: 700; color: #1a2033; font-size: .95rem; margin-bottom: 4px;
+}
+.rl-sub .rl-step-desc { font-size: .88rem; color: #706b62; }
+.rl-sub .rl-step-time { font-size: .78rem; color: #a8a298; font-style: italic; margin-top: 2px; }
+
+/* Case card */
+.rl-sub .rl-case-card {
+  background: #f5f5f8; border: 1px solid #e8e9ee; border-radius: 8px;
+  padding: 20px; margin-bottom: 16px;
+}
+.rl-sub .rl-case-card h3 { margin-top: 0; }
+
+/* Back link */
+.rl-sub .rl-back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: .85rem; color: #a68c42; font-weight: 600; margin-bottom: 16px;
+}
+.rl-sub .rl-back:hover { color: #1a2033; }
+
+/* CTA at bottom of subpages */
+.rl-sub .rl-sub-cta {
+  background: linear-gradient(160deg, #1a2033 0%, #243047 100%) !important;
+  padding: 36px 28px !important; border-radius: 10px !important; text-align: center !important; margin-top: 40px !important;
+}
+.rl-sub .rl-sub-cta p { color: rgba(255,255,255,.7) !important; font-size: .92rem !important; margin-bottom: 16px !important; }
+.rl-sub .rl-sub-cta strong { color: #fff !important; font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important; font-size: 1.15rem !important; }
+.rl-sub .rl-sub-cta a {
+  display: inline-block !important; padding: 12px 28px !important; background: #bfa35d !important; color: #1a2033 !important;
+  font-weight: 700 !important; border-radius: 6px !important; text-decoration: none !important; transition: background .25s !important;
+}
+.rl-sub .rl-sub-cta a:hover { background: #a68c42; }
+
+@media (max-width: 767px) {
+  .rl-sub { padding: 24px 16px 40px; }
+  .rl-sub .rl-sub-hero { padding: 32px 20px; }
+  .rl-sub .rl-sub-hero h1 { font-size: 1.4rem !important; color: #fff !important; }
+  .rl-sub h2 { font-size: 1.1rem; }
+  .rl-sub .rl-glossary-table { font-size: .82rem; }
+  .rl-sub .rl-glossary-table th, .rl-sub .rl-glossary-table td { padding: 8px 10px; }
+}
+</style>
+
+<script>
+(function(){
+'use strict';
+var path = window.location.pathname.replace(/\/$/,'');
+
+/* ============================================
+   RESOURCE SUBPAGE CONTENT INJECTION
+   ============================================ */
+var PAGES = {
+
+'/resources-faq': {
+  title: 'Estate Planning FAQ',
+  subtitle: 'Answers to the most common questions about estate planning in Puerto Rico.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is estate planning, and why is it important in Puerto Rico?</button>'
+  +'<div class="rl-faq-a"><p>Estate planning is the process of arranging for the management and distribution of your assets during your lifetime and after death. In Puerto Rico, it is especially important because the jurisdiction follows a civil law system derived from Spanish law, which includes forced heirship rules that may limit how you distribute your estate. Proper planning ensures your wishes are honored while complying with local law.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is the difference between a will and a trust under Puerto Rico law?</button>'
+  +'<div class="rl-faq-a"><p>A will (<em>testamento</em>) is a document that takes effect only upon your death and must go through the probate process. A trust (<em>fideicomiso</em>) can take effect during your lifetime and operates outside of probate, potentially allowing faster and more private asset distribution. Puerto Rico trusts are governed by the Puerto Rico Trust Act (Ley 219-2012), which offers significant planning flexibility.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is forced heirship (leg\u00edtima)?</button>'
+  +'<div class="rl-faq-a"><p>Under Puerto Rico\u2019s Civil Code, a portion of your estate is reserved by law for certain heirs, known as <em>legitimarios</em> (forced heirs). Under the 2020 Civil Code (Ley 55-2020), the legitimate portion (<em>leg\u00edtima</em>) is one-half of the estate, reserved for descendants. The remaining half is freely disposable. This system restricts your ability to disinherit children but provides more flexibility than the prior three-thirds rule.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Do I need to go through probate in Puerto Rico?</button>'
+  +'<div class="rl-faq-a"><p>If you hold assets solely in your name at the time of death, your heirs generally must obtain a <em>declaratoria de herederos</em> (judicial declaration of heirship) to establish who the legal heirs are and in what proportion they inherit. Additional steps are then required to collect, administer, and partition the estate\u2019s assets. Assets held in trust, joint accounts, or with designated beneficiaries can bypass this process entirely. Proper estate planning can significantly reduce or eliminate the need for court proceedings.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What happens if I die without a will in Puerto Rico?</button>'
+  +'<div class="rl-faq-a"><p>If you die intestate (without a valid will), Puerto Rico\u2019s Civil Code determines how your assets are distributed. Generally, your estate passes to your descendants first, then to your surviving spouse, parents, and other relatives in a statutory order of succession. The court will appoint an administrator, and the process can be significantly longer and more expensive than with a proper estate plan in place.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Can I create an irrevocable trust in Puerto Rico?</button>'
+  +'<div class="rl-faq-a"><p>Yes. Under Puerto Rico\u2019s Trust Act (Ley 219-2012), trusts are irrevocable by default. The grantor cannot reserve the right to revoke the trust, which provides strong creditor protection since assets are permanently separated from the grantor\u2019s personal estate. However, Act 60 Individual Resident Investor (IRI) decree holders have a special exception under the Incentives Code (13 LPRA \u00a710854a(b)) that permits them to establish revocable trusts as well. Irrevocable trusts can still be <em>modified</em> in significant ways under \u00a73352h\u2014including changing beneficiaries, trustees, and distribution standards\u2014providing flexibility without sacrificing asset protection.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How does Act 60 affect my estate planning?</button>'
+  +'<div class="rl-faq-a"><p>Act 60 (formerly Acts 20 and 22) provides significant tax incentives for individuals and businesses that relocate to Puerto Rico. However, these incentives apply primarily to income and capital gains earned after becoming a <em>bona fide</em> resident. Estate planning for Act 60 decree holders often involves coordinating federal estate tax obligations, structuring trusts to protect incentivized assets, and considering dual-will architecture for assets in multiple jurisdictions.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What types of powers of attorney should I have?</button>'
+  +'<div class="rl-faq-a"><p>In Puerto Rico, it is advisable to have both a general durable power of attorney (<em>poder general duradero</em>) for financial matters and a healthcare directive or power of attorney for medical decisions. These documents ensure that trusted individuals can manage your affairs if you become incapacitated, without requiring court intervention.</p></div></div>'
+
+  +'<div class="rl-sub-cta"><p><strong>Have more questions?</strong></p><p>Schedule a consultation to discuss your estate planning needs.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-wills-vs-trusts': {
+  title: 'Wills vs. Trusts in Puerto Rico',
+  subtitle: 'Understanding which estate planning tool is right for your situation.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>Overview</h2>'
+  +'<p>Both wills and trusts are essential estate planning tools in Puerto Rico, but they serve different purposes and operate under distinct legal frameworks. Understanding their differences is key to building an effective estate plan.</p>'
+
+  +'<h2>Wills (Testamento)</h2>'
+  +'<p>A will is a legal document in which you declare how your assets should be distributed after death. In Puerto Rico, wills must comply with the Civil Code\u2019s formalities, including being executed before a notary public. Under the 2020 Civil Code (Art. 1644), witnesses are no longer mandatory for open wills unless requested by the testator or the notary.</p>'
+  +'<h3>Types of Wills in Puerto Rico</h3>'
+  +'<ul><li><strong>Open will (<em>testamento abierto</em>):</strong> Executed before a notary public; the most common and standard form under the current Civil Code. Under Art. 1644 of Ley 55-2020, witnesses are no longer mandatory unless requested by the testator or notary.</li>'
+  +'<li><strong>Holographic will (<em>testamento ol\u00f3grafo</em>):</strong> Written entirely in the testator\u2019s handwriting; requires judicial validation after death.</li></ul>'
+  +'<p><em>Note: Under the prior Civil Code, Puerto Rico also recognized closed wills (<em>testamento cerrado</em>). The 2020 Civil Code (Ley 55-2020) eliminated this form. Legacy closed wills executed before November 28, 2020 may still be valid under transitional rules.</em></p>'
+  +'<h3>Advantages of a Will</h3>'
+  +'<ul><li>Relatively simple and inexpensive to create</li><li>Can appoint guardians for minor children</li><li>Can be updated or revoked at any time during your lifetime</li><li>Familiar and widely understood legal instrument</li></ul>'
+  +'<h3>Limitations</h3>'
+  +'<ul><li>Requires a court-supervised succession process (<em>declaratoria de herederos</em>) to identify heirs and authorize asset transfers</li><li>Becomes public record after death</li><li>Does not provide asset protection during your lifetime</li><li>Subject to forced heirship restrictions</li></ul>'
+
+  +'<h2>Trusts (Fideicomiso)</h2>'
+  +'<p>Puerto Rico trusts are governed by the Puerto Rico Trust Act (Ley 219-2012), which provides a flexible and powerful planning tool. A trust is a legal arrangement where a grantor (fideicomitente) transfers assets to a trustee (fiduciario) for the benefit of beneficiaries (fideicomisarios).</p>'
+  +'<h3>Types of Trusts</h3>'
+  +'<ul><li><strong>Irrevocable trust (default):</strong> Under Law 219-2012, all Puerto Rico trusts are irrevocable by default. The grantor cannot revoke the trust, but may reserve broad modification rights under \u00a73352h (amend terms, change beneficiaries, substitute trustees), providing flexibility with strong asset protection.</li>'
+  +'<li><strong>Revocable trust (Act 60 IRI only):</strong> Act 60 Individual Resident Investor decree holders may establish revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)). The grantor retains the right to modify or dissolve the trust during their lifetime, but the trust does not provide asset protection.</li>'
+  +'<li><strong>Asset protection trust:</strong> Designed to shield assets from creditors while allowing beneficiaries to benefit from the trust.</li></ul>'
+  +'<h3>Advantages of a Trust</h3>'
+  +'<ul><li>Avoids probate entirely</li><li>Maintains privacy (not a public record)</li><li>Can provide asset protection from creditors</li><li>Effective for managing assets across multiple jurisdictions</li><li>Provides for incapacity planning</li></ul>'
+  +'<h3>Limitations</h3>'
+  +'<ul><li>More complex and costly to establish than a will</li><li>Requires proper funding (assets must be titled in the trust)</li><li>Ongoing administration and fiduciary responsibilities</li></ul>'
+
+  +'<h2>Which Is Right for You?</h2>'
+  +'<p>Most comprehensive estate plans in Puerto Rico include both a will and a trust. The will serves as a safety net for assets not held in trust, while the trust handles the bulk of the estate planning objectives\u2014privacy, probate avoidance, and asset protection. The right combination depends on your family structure, assets, and goals.</p>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Related articles from our Trust Law Series:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/trust-vs-will-puerto-rico" style="color:#a68c42;">Trust vs. Will: Which Do You Need?</a> \u2014 Side-by-side comparison under PR law</li><li><a href="/resources/modifying-irrevocable-trusts" style="color:#a68c42;">Modifying &amp; Decanting Irrevocable Trusts</a> \u2014 When and how changes are possible</li><li><a href="/resources/family-trust-pitfalls" style="color:#a68c42;">Common Family Trust Mistakes</a> \u2014 Pitfalls to avoid in trust planning</li></ul></div>'
+  +'<div class="rl-sub-cta"><p><strong>Need help deciding?</strong></p><p>Our attorneys can evaluate your situation and recommend the best approach.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-forced-heirship': {
+  title: 'Forced Heirship (Leg\u00edtima)',
+  subtitle: 'How Puerto Rico\u2019s forced heirship rules affect your estate plan.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>What Is Forced Heirship?</h2>'
+  +'<p>Forced heirship is a legal principle in civil law jurisdictions, including Puerto Rico, that reserves a mandatory portion of a deceased person\u2019s estate for certain close relatives\u2014descendants and, under the 2020 Civil Code, the surviving spouse. This means you cannot freely dispose of your entire estate; a portion must pass to your forced heirs (<em>herederos forzosos</em> or <em>legitimarios</em>).</p>'
+
+  +'<h2>The 2020 Civil Code (Ley 55-2020)</h2>'
+  +'<p>Puerto Rico\u2019s new Civil Code, enacted as Ley 55-2020 and effective November 28, 2020, significantly reformed the forced heirship system. Under the previous code, the estate was divided into thirds: one-third as the <em>leg\u00edtima estricta</em>, one-third as the <em>mejora</em> (improvement third), and one-third as free disposition. The new code simplifies this to a two-part system.</p>'
+
+  +'<h3>Current Structure</h3>'
+  +'<ul><li><strong>Leg\u00edtima (one-half):</strong> Reserved for forced heirs (children, their descendants by representation, and the surviving spouse). This half must be distributed equally among all forced heirs.</li>'
+  +'<li><strong>Free disposition (one-half):</strong> The testator may distribute this portion to anyone, including a favored child, a spouse, a charity, or any third party.</li></ul>'
+
+  +'<h3>Who Are Forced Heirs?</h3>'
+  +'<ul><li><strong>Descendants:</strong> Children are the primary forced heirs. If a child predeceases the testator, that child\u2019s descendants inherit by right of representation.</li>'
+  +'<li><strong>Surviving spouse:</strong> Under the 2020 Civil Code, the surviving spouse is a forced heir in the first order of succession, sharing the leg\u00edtima equally with the children.</li>'
+  +'<li><strong>Ascending heirs:</strong> If there are no descendants, parents may have limited forced heirship rights depending on the circumstances.</li></ul>'
+
+  +'<h2>Key Changes from the Prior Code</h2>'
+  +'<ul><li>The <em>mejora</em> (improvement third) has been eliminated</li>'
+  +'<li>The forced portion was reduced from two-thirds to one-half</li>'
+  +'<li>Greater testamentary freedom to dispose of assets</li>'
+  +'<li>The right of representation for grandchildren was preserved</li></ul>'
+
+  +'<h2>Planning Around Forced Heirship</h2>'
+  +'<p>For assets with <strong>Puerto Rico situs</strong>\u2014real property located in PR, tangible personal property physically in PR, and interests in PR entities\u2014forced heirship cannot be avoided by trusts or creative planning. The leg\u00edtima applies as a matter of PR public policy regardless of the vehicle used to hold the asset.</p>'
+  +'<p>However, <strong>assets with non-PR situs</strong> (e.g., mainland real estate, accounts at mainland financial institutions, interests in non-PR entities) may be governed by the succession laws of their own jurisdiction. For these assets, trusts governed by the law of another state or country may distribute freely without regard to Puerto Rico\u2019s forced heirship rules.</p>'
+
+  +'<h3>How Asset Situs Is Determined Under PR Law</h3>'
+  +'<ul><li><strong>Real property:</strong> Situs is where the property is physically located.</li>'
+  +'<li><strong>Tangible personal property:</strong> Situs is the jurisdiction where the property is situated at the owner\u2019s death.</li>'
+  +'<li><strong>Intangible property</strong> (bank accounts, securities, entity interests): Situs determination is more complex and depends on the domicile of the owner, the location of the entity, and the governing law of the instrument. Consult counsel for specific analysis.</li></ul>'
+
+  +'<h3>Strategies Within the System</h3>'
+  +'<ul><li><strong>Trust planning for non-PR assets:</strong> Assets located outside Puerto Rico can be held in trusts governed by another jurisdiction\u2019s law, allowing free distribution outside the leg\u00edtima.</li>'
+  +'<li><strong>Lifetime gifts:</strong> Gifts made during your lifetime may reduce the estate subject to forced heirship, though collation rules (<em>colaci\u00f3n</em>) may apply to bring certain gifts back into the calculation.</li>'
+  +'<li><strong>Multi-jurisdictional planning:</strong> A dual-will or dual-trust structure can separate PR-situs assets (subject to the leg\u00edtima) from non-PR-situs assets (distributed freely).</li>'
+  +'<li><strong>Insurance and beneficiary designations:</strong> Life insurance proceeds payable to named beneficiaries generally fall outside the estate for forced heirship purposes.</li></ul>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>Want the deep dive?</strong> Read our comprehensive analysis: <a href="/resources/avoiding-probate-legitima" style="color:#a68c42;font-weight:600;">Avoiding Probate in Puerto Rico: Trusts and the Leg\u00edtima \u2192</a></p></div>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Related articles:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/forced-heirship-estate-plan" style="color:#a68c42;">How Forced Heirship Affects Your Estate Plan</a> \u2014 Strategies that work within the leg\u00edtima</li><li><a href="/resources/special-needs-trusts-medicaid" style="color:#a68c42;">Special Needs Trusts &amp; Medicaid Planning</a> \u2014 Protecting beneficiaries with disabilities</li><li><a href="/resources/ilits-and-slats" style="color:#a68c42;">ILITs and SLATs</a> \u2014 Advanced insurance and spousal trust strategies</li></ul></div>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need to plan around forced heirship?</strong></p><p>Our team can help structure your estate to maximize flexibility while complying with Puerto Rico law.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-fiduciary-duties': {
+  title: 'Fiduciary Duties',
+  subtitle: 'Understanding the responsibilities of trustees and executors in Puerto Rico.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>What Is a Fiduciary?</h2>'
+  +'<p>A fiduciary is a person or entity entrusted with the legal responsibility to manage assets or affairs on behalf of another. In Puerto Rico estate planning, the most common fiduciary roles are trustees (<em>fiduciarios</em>) of trusts and executors (<em>albaceas</em>) of estates.</p>'
+
+  +'<h2>Core Fiduciary Duties</h2>'
+  +'<h3>Duty of Loyalty</h3>'
+  +'<p>The fiduciary must act solely in the interest of the beneficiaries, not for personal gain. This means avoiding conflicts of interest and never engaging in self-dealing transactions unless expressly authorized by the trust instrument or applicable law.</p>'
+  +'<h3>Duty of Care (Prudence)</h3>'
+  +'<p>A fiduciary must manage trust or estate assets with the skill and diligence that a reasonably prudent person would exercise. For investment decisions, this generally means diversifying assets, considering the beneficiaries\u2019 needs, and following a rational investment strategy.</p>'
+  +'<h3>Duty of Impartiality</h3>'
+  +'<p>When there are multiple beneficiaries, the fiduciary must balance the interests of all parties fairly. This is particularly important when a trust has both income beneficiaries and remainder beneficiaries with potentially competing interests.</p>'
+  +'<h3>Duty to Inform and Account</h3>'
+  +'<p>Fiduciaries must keep accurate records and provide regular accountings to beneficiaries. Under Puerto Rico\u2019s Trust Act, the trustee has an affirmative obligation to provide information about the trust\u2019s administration to qualified beneficiaries.</p>'
+  +'<h3>Duty Not to Delegate Improperly</h3>'
+  +'<p>While a fiduciary may hire professionals (accountants, attorneys, investment advisors), they cannot abdicate their core decision-making responsibilities. Delegation must be prudent and properly supervised.</p>'
+
+  +'<h2>Trustee vs. Executor Responsibilities</h2>'
+  +'<h3>Trustee Responsibilities</h3>'
+  +'<ul><li>Managing and investing trust assets according to the trust document</li>'
+  +'<li>Making distributions to beneficiaries as directed by the trust terms</li>'
+  +'<li>Filing trust tax returns and paying applicable taxes</li>'
+  +'<li>Providing annual accountings to beneficiaries</li>'
+  +'<li>Maintaining trust records and documentation</li></ul>'
+
+  +'<h3>Executor Responsibilities</h3>'
+  +'<ul><li>Locating and securing the decedent\u2019s assets</li>'
+  +'<li>Paying debts, taxes, and expenses of the estate</li>'
+  +'<li>Filing the will for probate and obtaining court authority</li>'
+  +'<li>Distributing assets according to the will\u2019s terms</li>'
+  +'<li>Providing a final accounting to the court and beneficiaries</li></ul>'
+
+  +'<h2>Liability and Protection</h2>'
+  +'<p>Fiduciaries who breach their duties can be held personally liable for losses. However, many trust instruments include exculpation clauses that limit liability for good-faith decisions. Fiduciaries should maintain detailed records, seek professional advice when needed, and consider fiduciary liability insurance for larger estates.</p>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>Want the deep dive?</strong> Read our comprehensive analysis: <a href="/resources/fiduciary-duties-trustees" style="color:#a68c42;font-weight:600;">Fiduciary Duties Under Puerto Rico Trust Law \u2192</a></p></div>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>See also:</strong> <a href="/resources/family-trust-pitfalls" style="color:#a68c42;font-weight:600;">Common Family Trust Mistakes \u2192</a> \u2014 Pitfalls trustees and families should avoid</p></div>'
+
+  +'<div class="rl-sub-cta"><p><strong>Serving as a trustee or executor?</strong></p><p>We can guide you through your fiduciary obligations and help you fulfill them properly.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-act60': {
+  title: 'Estate Planning for Act 60 Decree Holders',
+  subtitle: 'Essential strategies for protecting your tax incentives through proper planning.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>Understanding Act 60 and Estate Planning</h2>'
+  +'<p>Act 60 (the Puerto Rico Incentives Code, consolidating former Acts 20, 22, and others) provides significant tax benefits to individuals and businesses that establish bona fide residency in Puerto Rico. While Act 60 primarily addresses income and capital gains taxation, its benefits create unique estate planning considerations that require careful coordination.</p>'
+
+  +'<h2>Key Considerations</h2>'
+  +'<h3>Federal Estate Tax Exposure</h3>'
+  +'<p>Puerto Rico residents remain subject to the federal estate tax. As a U.S. citizen, your estate is subject to federal estate tax if it exceeds the applicable exclusion amount ($15 million per individual under the OBBBA, indexed for inflation). While Act 60 may reduce income tax obligations, it does not affect your federal estate and gift tax status. Proper planning can minimize or eliminate this exposure through trusts, gifting strategies, and other techniques.</p>'
+  +'<div style="background:#fff3cd;border-left:4px solid #d4a017;padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;line-height:1.6;"><strong>Important NRNC Clarification:</strong> Most Act 60 decree holders\u2014those born or naturalized in the 50 states or D.C.\u2014remain full U.S. citizens for estate and gift tax purposes and <em>do not</em> qualify as Non-Resident Not Citizens (NRNCs). NRNC treatment under IRC \u00a72209 and \u00a72501(c) is relevant only to a narrow subset of Puerto Rico residents whose U.S. citizenship derives solely from their connection to a U.S. territory. Do not assume NRNC status applies to you without consulting qualified counsel.</p></div>'
+
+  +'<h3>Dual-Will Architecture</h3>'
+  +'<p>Many Act 60 decree holders maintain assets in both Puerto Rico and U.S. states. A dual-will strategy uses separate wills for each jurisdiction\u2014a Puerto Rico will for local assets governed by civil law, and a stateside will for common-law assets. This approach avoids conflicts between jurisdictions and ensures each set of assets is administered under the appropriate legal framework.</p>'
+
+  +'<h3>Trust Structures for Act 60 Holders</h3>'
+  +'<p>Puerto Rico trusts can be powerful tools for Act 60 decree holders. Key structures include:</p>'
+  +'<ul><li><strong>Puerto Rico irrevocable trusts:</strong> Can hold assets outside the grantor\u2019s estate while potentially benefiting from Puerto Rico\u2019s trust-friendly laws.</li>'
+  +'<li><strong>Asset protection trusts:</strong> Protect incentivized assets from potential creditor claims.</li>'
+  +'<li><strong>Multi-generational trusts:</strong> Allow multi-generational wealth transfer while maintaining trust benefits across generations.</li></ul>'
+
+  +'<h3>Residency and Domicile Planning</h3>'
+  +'<p>Maintaining bona fide Puerto Rico residency is critical for Act 60 benefits. Your estate plan should be consistent with your residency position. Key documentation includes Puerto Rico-situs bank accounts, local property ownership, voter registration, and driver\u2019s license\u2014all of which support your domicile claim for both tax and estate planning purposes.</p>'
+
+  +'<h3>Coordination with Pre-Move Assets</h3>'
+  +'<p>Assets acquired before relocating to Puerto Rico may have different tax treatment than those acquired after establishing residency. Your estate plan should clearly identify and separate pre-move and post-move assets, as this distinction affects capital gains treatment and, in turn, estate valuation.</p>'
+
+  +'<h2>Common Pitfalls</h2>'
+  +'<ul><li>Failing to update an existing estate plan after relocating to Puerto Rico</li>'
+  +'<li>Using only a mainland U.S. will, which may conflict with Puerto Rico\u2019s civil law system</li>'
+  +'<li>Overlooking forced heirship rules when structuring asset distribution</li>'
+  +'<li>Neglecting to coordinate federal estate tax planning with Act 60 income tax benefits</li>'
+  +'<li>Inconsistent residency documentation that undermines domicile claims</li></ul>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Related articles for Act 60 decree holders:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/trust-taxation-act-60" style="color:#a68c42;">Trust Taxation &amp; Act 60 Benefits</a> \u2014 How trusts interact with Act 60 tax incentives</li><li><a href="/resources/foreign-trust-trap" style="color:#a68c42;">The Foreign Trust Trap</a> \u2014 Classification risks for mainland-created trusts</li><li><a href="/resources/mainland-trust-to-puerto-rico" style="color:#a68c42;">Migrating a Mainland Trust to Puerto Rico</a> \u2014 Steps and considerations for redomiciling</li></ul></div>'
+  +'<div class="rl-sub-cta"><p><strong>Act 60 decree holder?</strong></p><p>We specialize in helping decree holders build estate plans that protect their incentives.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-cases': {
+  title: 'Case Highlights',
+  subtitle: 'Key judicial decisions that shape Puerto Rico trust and estate law.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p>Puerto Rico\u2019s trust and estate law is shaped by judicial decisions from the Puerto Rico Supreme Court, the U.S. District Court for the District of Puerto Rico, and the U.S. Court of Appeals for the First Circuit. Below are key areas where case law has provided important guidance for estate planners and fiduciaries.</p>'
+
+  +'<div class="rl-case-card"><h3>Forced Heirship Challenges</h3>'
+  +'<p>Puerto Rico courts have consistently upheld the forced heirship system, rejecting attempts to bypass the <em>leg\u00edtima</em> through inter vivos transfers that are found to be simulated or made in fraud of heirs\u2019 rights. Courts apply a collation analysis (<em>colaci\u00f3n</em>) to bring certain lifetime gifts back into the estate for distribution purposes. Recent decisions under the 2020 Civil Code are beginning to clarify the application of the new one-half <em>leg\u00edtima</em> rule.</p></div>'
+
+  +'<div class="rl-case-card"><h3>Trust Validity and Formation</h3>'
+  +'<p>Since the enactment of the Puerto Rico Trust Act in 2012, courts have addressed questions regarding proper trust formation, the scope of irrevocability and modification rights, and the enforceability of trust provisions that conflict with public policy. Key rulings have reinforced the Act\u2019s intent to create a modern, flexible trust framework while respecting Puerto Rico\u2019s civil law traditions.</p></div>'
+
+  +'<div class="rl-case-card"><h3>Fiduciary Breach and Liability</h3>'
+  +'<p>Puerto Rico courts have addressed trustee liability for breach of fiduciary duty, including cases involving self-dealing, imprudent investments, and failure to provide accountings. These decisions establish that fiduciaries must act with the care and diligence of a prudent person and can face personal liability, including damages and removal, for violations of their duties.</p></div>'
+
+  +'<div class="rl-case-card"><h3>Domicile and Residency Disputes</h3>'
+  +'<p>With the growth of Act 60 relocations, courts have been asked to determine an individual\u2019s domicile for tax and estate purposes. Decisions focus on objective factors\u2014where the individual maintains a home, conducts business, votes, and has social and family ties. These cases are critical for estate planning because domicile determines which jurisdiction\u2019s succession laws apply.</p></div>'
+
+  +'<div class="rl-case-card"><h3>Will Contest and Testamentary Capacity</h3>'
+  +'<p>Will contests in Puerto Rico often involve claims of lack of testamentary capacity, undue influence, or failure to comply with formal requirements. Courts apply a presumption of testamentary capacity and require clear evidence to invalidate a will. Notarized open wills (<em>testamento abierto</em>) receive the strongest presumption of validity.</p></div>'
+
+  +'<div class="rl-case-card"><h3>Government Contract and Procurement Disputes</h3>'
+  +'<p>Our practice also addresses significant government contracting cases, including bid protests, contract interpretation disputes, and procurement compliance challenges. Key decisions from Puerto Rico courts and federal tribunals have established important precedents regarding standing in bid protests, the scope of government immunity in contract disputes, and the application of federal procurement regulations in Puerto Rico.</p></div>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>Want the full case-by-case analysis?</strong> Read our in-depth article: <a href="/resources/landmark-trust-cases" style="color:#a68c42;font-weight:600;">Landmark Puerto Rico Trust Cases You Should Know \u2192</a></p></div>'
+
+  +'<p style="font-size:.85rem;color:#a8a298;font-style:italic;margin-top:24px;">This page provides general educational information about areas of law addressed in Puerto Rico case decisions. For analysis of specific cases and their impact, visit our <a href="/blog" style="color:#a68c42;">Blog</a>.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need case-specific guidance?</strong></p><p>Our attorneys can analyze how relevant decisions affect your legal situation.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-glossary': {
+  title: 'Bilingual Glossary',
+  subtitle: 'Essential estate planning terms in English and Spanish.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p>Puerto Rico\u2019s legal system operates in both English and Spanish. Understanding key estate planning terms in both languages is essential for effective communication with attorneys, courts, and family members.</p>'
+  +'<table class="rl-glossary-table"><thead><tr><th>English</th><th>Espa\u00f1ol</th><th>Definition</th></tr></thead><tbody>'
+  +'<tr><td>Beneficiary</td><td>Beneficiario</td><td>A person or entity designated to receive assets from a trust, will, or insurance policy.</td></tr>'
+  +'<tr><td>Trust</td><td>Fideicomiso</td><td>A legal arrangement where assets are held by a trustee for the benefit of beneficiaries.</td></tr>'
+  +'<tr><td>Trustee</td><td>Fiduciario</td><td>The person or entity responsible for managing trust assets according to the trust terms.</td></tr>'
+  +'<tr><td>Grantor / Settlor</td><td>Fideicomitente</td><td>The person who creates and funds a trust.</td></tr>'
+  +'<tr><td>Will / Testament</td><td>Testamento</td><td>A legal document declaring how a person\u2019s assets should be distributed after death.</td></tr>'
+  +'<tr><td>Testator</td><td>Testador(a)</td><td>The person who makes a will.</td></tr>'
+  +'<tr><td>Executor</td><td>Albacea</td><td>The person appointed to carry out the terms of a will and administer the estate.</td></tr>'
+  +'<tr><td>Forced Heirship</td><td>Leg\u00edtima</td><td>The portion of an estate reserved by law for certain heirs (descendants and surviving spouse under the 2020 Civil Code).</td></tr>'
+  +'<tr><td>Forced Heir</td><td>Heredero Forzoso / Legitimario</td><td>A person entitled by law to a share of the estate: descendants, and the surviving spouse under the 2020 Civil Code.</td></tr>'
+  +'<tr><td>Declaratoria de Herederos</td><td>Declaratoria de Herederos</td><td>A judicial proceeding to identify legal heirs, establish inheritance shares, and authorize the transfer of assets. Required whether or not a will exists; additional steps follow for asset collection, administration, and partition.</td></tr>'
+  +'<tr><td>Power of Attorney</td><td>Poder</td><td>A legal document authorizing someone to act on your behalf in legal or financial matters.</td></tr>'
+  +'<tr><td>Intestate</td><td>Intestado(a) / Ab Intestato</td><td>Dying without a valid will; the estate is distributed according to statutory rules.</td></tr>'
+  +'<tr><td>Irrevocable Trust</td><td>Fideicomiso Irrevocable</td><td>A trust that cannot be revoked by the grantor after its creation. Under Puerto Rico\u2019s Trust Act, all trusts are irrevocable by default (Act 60 IRI decree holders may create revocable trusts). The grantor may reserve modification rights under \u00a73352h to amend terms, change beneficiaries, and substitute trustees.</td></tr>'
+  +'<tr><td>Asset Protection</td><td>Protecci\u00f3n de Activos</td><td>Legal strategies to shield assets from creditors, lawsuits, and judgments.</td></tr>'
+  +'<tr><td>Notary Public</td><td>Notario(a)</td><td>In Puerto Rico, an attorney authorized to authenticate legal documents, including wills.</td></tr>'
+  +'<tr><td>Succession</td><td>Sucesi\u00f3n</td><td>The process by which a deceased person\u2019s rights and obligations pass to their heirs.</td></tr>'
+  +'<tr><td>Collation</td><td>Colaci\u00f3n</td><td>The process of adding the value of lifetime gifts back to the estate for distribution calculations.</td></tr>'
+  +'<tr><td>Deed of Gift</td><td>Escritura de Donaci\u00f3n</td><td>A legal document transferring ownership of property as a gift during the donor\u2019s lifetime.</td></tr>'
+  +'<tr><td>Civil Code</td><td>C\u00f3digo Civil</td><td>The primary body of law governing private legal matters in Puerto Rico, including succession.</td></tr>'
+  +'<tr><td>Will Contest</td><td>Impugnaci\u00f3n de Testamento</td><td>A legal challenge to the validity of a will, typically based on capacity, undue influence, or formality defects.</td></tr>'
+  +'</tbody></table>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need bilingual legal counsel?</strong></p><p>Our team is fully bilingual and serves clients in both English and Spanish.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources-process': {
+  title: 'What to Expect',
+  subtitle: 'A step-by-step guide to the estate planning process at Riefkohl Law.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p>Estate planning is a collaborative process. Here is what you can expect when you work with our team, from the first conversation to the execution of your documents.</p>'
+
+  +'<div class="rl-timeline">'
+  +'<div class="rl-step"><div class="rl-step-title">Step 1: Free Strategy Call</div><div class="rl-step-desc">We begin with a complimentary consultation to understand your goals, family situation, and assets. This call helps us determine the scope of your estate plan and provide an initial assessment.</div><div class="rl-step-time">Duration: 30\u201345 minutes</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 2: Information Gathering</div><div class="rl-step-desc">After the initial consultation, we provide a questionnaire and checklist of documents we need\u2014asset inventories, existing estate documents, insurance policies, and family information. This stage ensures we have a complete picture of your situation.</div><div class="rl-step-time">Duration: 1\u20132 weeks (client-dependent)</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 3: Plan Design</div><div class="rl-step-desc">Our attorneys analyze your information and design a customized estate plan. We consider Puerto Rico\u2019s forced heirship rules, tax implications, asset protection strategies, and your specific goals. We then present our recommendations in a clear, detailed proposal.</div><div class="rl-step-time">Duration: 1\u20132 weeks</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 4: Review Meeting</div><div class="rl-step-desc">We meet with you to walk through the proposed plan, explain each document\u2019s purpose, and answer your questions. This is a collaborative session where we refine the plan based on your feedback and ensure you are fully comfortable with every provision.</div><div class="rl-step-time">Duration: 60\u201390 minutes</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 5: Document Drafting</div><div class="rl-step-desc">Our team drafts all estate planning documents, which may include wills, trusts, powers of attorney, healthcare directives, and trust funding instructions. Each document is reviewed for accuracy and compliance with Puerto Rico law.</div><div class="rl-step-time">Duration: 1\u20132 weeks</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 6: Execution and Signing</div><div class="rl-step-desc">We schedule a signing session, typically at our office in San Juan or via a convenient arrangement. For wills, a Puerto Rico notary public officiates the execution (witnesses are no longer mandatory under Art. 1644 of the 2020 Civil Code unless requested). Trust documents and powers of attorney are also formally executed.</div><div class="rl-step-time">Duration: 1\u20132 hours</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Step 7: Trust Funding and Implementation</div><div class="rl-step-desc">After signing, we assist with funding your trust\u2014transferring titles, updating beneficiary designations, and retitling accounts. We provide a detailed checklist and can coordinate directly with your financial institutions.</div><div class="rl-step-time">Duration: 2\u20134 weeks</div></div>'
+
+  +'<div class="rl-step"><div class="rl-step-title">Ongoing: Periodic Review</div><div class="rl-step-desc">Life changes\u2014marriage, children, significant asset changes, new legislation\u2014may require updates to your plan. We recommend reviewing your estate plan every 3\u20135 years or whenever major life events occur.</div><div class="rl-step-time">Ongoing relationship</div></div>'
+  +'</div>'
+
+  +'<div class="rl-sub-cta"><p><strong>Ready to get started?</strong></p><p>Begin with a free strategy call to discuss your estate planning needs.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+}
+
+,
+
+'/resources/act-60-estate-planning-mistakes': {
+  title: '5 Critical Mistakes Act 60 Holders Make with Estate Planning',
+  subtitle: 'How to protect your tax benefits through proper planning under Puerto Rico law.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Mistake 1: Not Updating Your Will After Relocating</h2>'
+  +'<p>Puerto Rico is a civil law jurisdiction. The estate and succession rules are fundamentally different from common law states. Under the Civil Code (Ley 55-2020), a portion of your estate\u2014the <em>leg\u00edtima</em>\u2014is reserved by law for your children. If your mainland will attempts to leave everything to a spouse or trust without accounting for the <em>leg\u00edtima</em>, a Puerto Rico court can invalidate those provisions.</p>'
+  +'<p><strong>What to do:</strong> Have a Puerto Rico-licensed attorney review your existing will. Consider a dual-will architecture\u2014one for Puerto Rico assets and one for assets elsewhere.</p>'
+  +'<h2>Mistake 2: Ignoring Forced Heirship Rules</h2>'
+  +'<p>Under the Civil Code (Ley 55-2020), one-half of your estate is reserved for your forced heirs\u2014your children and surviving spouse, who share the <em>leg\u00edtima</em> equally. The remaining one-half can go to anyone you choose. Importantly, forced heirship applies to <strong>Puerto Rico-situs assets</strong>\u2014assets located outside PR may be governed by different succession laws. See our <a href="/resources-forced-heirship">complete forced heirship guide</a> for details on situs determination and planning strategies.</p>'
+  +'<p><strong>What to do:</strong> Work with an attorney who understands both civil law forced heirship and the trust structures available under <a href="/puerto-rico-trusts">Puerto Rico Law 219-2012</a>.</p>'
+  +'<h2>Mistake 3: Using Only a Mainland Trust</h2>'
+  +'<p>Mainland revocable living trusts were not designed with Puerto Rico\u2019s legal framework in mind. Trust recognition, governing law conflicts, and forced heirship interaction all create issues. A mainland trust does not override Puerto Rico\u2019s forced heirship rules.</p>'
+  +'<p><strong>What to do:</strong> Have your existing trust reviewed by a Puerto Rico attorney who understands Law 219-2012. Create a new Puerto Rico trust that works alongside your existing structures.</p>'
+  +'<h2>Mistake 4: Not Coordinating Federal and PR Estate Tax</h2>'
+  +'<p>U.S. citizens in Puerto Rico are subject to federal estate tax on worldwide assets. Act 60 income tax exemptions do <strong>not</strong> extend to estate and gift taxes. While Puerto Rico abolished its local estate tax through Act 76-2017, federal estate tax still applies, and residency issues can trigger state-level estate taxes in your prior domicile. Without proper planning, your estate may face unexpected tax exposure.</p>'
+  +'<p><strong>What to do:</strong> Engage an attorney and tax advisor who can model your estate tax exposure under both federal and Puerto Rico law. Consider lifetime gifting, ILITs, and charitable planning while the federal exemption is still high.</p>'
+  +'<h2>Mistake 5: Failing to Maintain Residency Documentation</h2>'
+  +'<p>If your residency is challenged posthumously, your estate could be treated as domiciled in your prior state, triggering state estate tax. Your Puerto Rico trust structures may be recharacterized, and Act 60 income tax benefits could be clawed back.</p>'
+  +'<p><strong>What to do:</strong> Maintain meticulous records of your presence in Puerto Rico: flight records, credit card statements, doctor visits, voter registration, community involvement. Instruct your estate planning attorney on where these records are stored.</p>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Related articles:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/trust-taxation-act-60" style="color:#a68c42;">Trust Taxation &amp; Act 60 Benefits</a> \u2014 How trusts interact with Act 60 tax incentives</li><li><a href="/resources/mainland-trust-to-puerto-rico" style="color:#a68c42;">Migrating a Mainland Trust to Puerto Rico</a> \u2014 Steps for redomiciling your trust</li><li><a href="/resources/foreign-trust-trap" style="color:#a68c42;">The Foreign Trust Trap</a> \u2014 Classification risks for mainland-created trusts</li></ul></div>'
+  +'<div class="rl-sub-cta"><p><strong>Ready to review your estate plan?</strong></p><p>Schedule a free strategy call to discuss how your Act 60 decree interacts with your estate planning needs.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/trust-vs-will-puerto-rico': {
+  title: 'Puerto Rico Trust vs. Will: Which Do You Need?',
+  subtitle: 'How each tool works under Puerto Rico law, and when you need both.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>How Wills Work in Puerto Rico</h2>'
+  +'<p>A will (<em>testamento</em>) directs how your assets are distributed after death. Under the current Civil Code (Ley 55-2020), Puerto Rico recognizes two forms: open wills (before a notary) and holographic wills (handwritten). Wills are subject to forced heirship\u2014one-half of your estate is reserved for your forced heirs (children and surviving spouse). Wills also do not avoid the court-supervised succession process, which can take months to over a year.</p>'
+  +'<h2>How Trusts Work in Puerto Rico</h2>'
+  +'<p>Trusts (<em>fideicomiso</em>) are governed by <a href="/puerto-rico-trusts">Law 219-2012</a>. Under the Trust Act, all trusts are irrevocable by default\u2014but the grantor may reserve broad modification rights under \u00a73352h (amend terms, change beneficiaries, substitute trustees). Act 60 IRI decree holders have an additional option: revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)), which avoid probate and provide incapacity planning but do not protect assets from creditors. <strong>Irrevocable trusts</strong> provide asset protection, estate tax reduction, and multi-generational planning. Trust duration under Law 219-2012 is measured by the life of the last surviving beneficiary named in the trust instrument, plus 30 years (with certain special-purpose trusts potentially extending to 90 years).</p>'
+  +'<h2>Key Differences</h2>'
+  +'<ul><li><strong>Probate avoidance:</strong> Will\u2014No. Trust\u2014Yes.</li>'
+  +'<li><strong>Asset protection:</strong> Will\u2014No. Trust (irrevocable)\u2014Yes.</li>'
+  +'<li><strong>Incapacity planning:</strong> Will\u2014No. Trust\u2014Yes.</li>'
+  +'<li><strong>Privacy:</strong> Will\u2014Public (probate). Trust\u2014Private.</li>'
+  +'<li><strong>Cost:</strong> Will\u2014$1,500\u2013$3,000. Revocable trust (Act 60 IRI only)\u2014$7,500\u2013$15,000. Irrevocable trust\u2014$15,000\u2013$50,000+.</li></ul>'
+  +'<h2>Trusts and Forced Heirship</h2>'
+  +'<p>A trust does not automatically override forced heirship. However, a well-structured trust can work within the framework\u2014providing income to a spouse while preserving principal for children, and using the <em>libre disposici\u00f3n</em> half to benefit non-heirs or to provide additional flexibility in how assets are distributed.</p>'
+  +'<h2>When You Need Both</h2>'
+  +'<p>A trust only controls assets transferred into it. A \u201cpour-over will\u201d acts as a safety net, directing any remaining assets into the trust at death. You also need a will to name guardians for minor children and designate an executor.</p>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>See also:</strong> <a href="/resources-wills-vs-trusts" style="color:#a68c42;font-weight:600;">Wills vs. Trusts in Puerto Rico \u2192</a> \u2014 Our resource guide with side-by-side overview</p></div>'
+  +'<div class="rl-sub-cta"><p><strong>Not sure which approach is right?</strong></p><p>We\u2019ll review your situation and recommend a plan that fits your assets and goals under Puerto Rico law.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/forced-heirship-estate-plan': {
+  title: 'How Forced Heirship Affects Your Estate Plan',
+  subtitle: 'Understanding Puerto Rico\u2019s leg\u00edtima and planning strategies that work within it.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>What Is the Leg\u00edtima?</h2>'
+  +'<p>The <em>leg\u00edtima</em> is the portion of your estate that Puerto Rico law reserves for forced heirs (<em>herederos forzosos</em>). Under the Civil Code (Ley 55-2020), your estate is divided into two parts:</p>'
+  +'<ul><li><strong>Leg\u00edtima (1/2):</strong> Divided equally among all forced heirs (children and surviving spouse). No discretion.</li>'
+  +'<li><strong>Libre disposici\u00f3n (1/2):</strong> Can go to anyone you choose.</li></ul>'
+  +'<h2>Who Are Forced Heirs?</h2>'
+  +'<p>Children and the surviving spouse are forced heirs under the 2020 Civil Code. If a child predeceases you, grandchildren step in by right of representation. Parents become forced heirs only if you have no descendants. The 2020 Code elevated the surviving spouse from usufruct-only rights to full forced heir status, sharing the <em>leg\u00edtima</em> equally with children.</p>'
+  +'<h2>Common Conflicts for Mainland Transplants</h2>'
+  +'<ul><li><strong>\u201cEverything to my spouse\u201d plans</strong> \u2014 Children are entitled to their <em>leg\u00edtima</em> at your death, not after the surviving spouse dies.</li>'
+  +'<li><strong>Disinheritance</strong> \u2014 Only permitted for specific, enumerated grounds (e.g., attempted murder of the parent).</li>'
+  +'<li><strong>Unequal distributions</strong> \u2014 The <em>leg\u00edtima</em> must be divided equally among all forced heirs.</li>'
+  +'<li><strong>Trust-based plans</strong> \u2014 A trust does not override the <em>leg\u00edtima</em>.</li></ul>'
+  +'<h2>Planning Strategies</h2>'
+  +'<ul><li><strong>Use the libre disposici\u00f3n strategically</strong> to favor one heir (e.g., a child in the family business or a surviving spouse).</li>'
+  +'<li><strong>Lifetime giving</strong> can reduce the estate, but collation rules may apply.</li>'
+  +'<li><strong>Irrevocable trusts</strong> under <a href="/puerto-rico-trusts">Law 219-2012</a> can provide income to a spouse while preserving forced heirs\u2019 rights.</li>'
+  +'<li><strong>Dual-will architecture</strong> separates Puerto Rico assets from non-PR assets.</li>'
+  +'<li><strong>Life insurance</strong> proceeds are generally not part of the <em>leg\u00edtima</em> calculation.</li></ul>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>See also:</strong> <a href="/resources-forced-heirship" style="color:#a68c42;font-weight:600;">Forced Heirship (Leg\u00edtima) Resource Guide \u2192</a> \u2014 Overview with planning strategies and key changes under Ley 55-2020</p></div>'
+  +'<div class="rl-sub-cta"><p><strong>Need to update your estate plan for forced heirship?</strong></p><p>We help clients structure plans that respect the <em>leg\u00edtima</em> while maximizing flexibility.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/asset-protection-irrevocable-trusts': {
+  title: 'Puerto Rico Asset Protection with Irrevocable Trusts',
+  subtitle: 'How Law 219-2012 shields your wealth from creditors, lawsuits, and divorce.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>Why Puerto Rico for Asset Protection?</h2>'
+  +'<p>Law 219-2012 provides a modern trust statute with strong creditor protections based on the autonomous estate doctrine, and long trust duration. Puerto Rico\u2019s civil law system means certain doctrines creditors use on the mainland may not apply here. Note: Puerto Rico does not have an explicit self-settled asset protection trust (DAPT) statute; creditor protection depends on proper trust structuring, irrevocability, and independent trusteeship.</p>'
+  +'<h2>How Irrevocable Trusts Protect Assets</h2>'
+  +'<p>Assets you no longer own cannot be seized by your creditors. When you transfer assets into an irrevocable trust, the trustee holds legal title. Three key requirements:</p>'
+  +'<ul><li><strong>Irrevocability</strong> \u2014 The transfer must be permanent.</li>'
+  +'<li><strong>Independent trustee</strong> \u2014 Not the settlor or spouse. A professional trustee provides the strongest protection.</li>'
+  +'<li><strong>Completed transfer</strong> \u2014 Assets must actually be retitled in the trust\u2019s name.</li></ul>'
+  +'<h2>What It Protects Against</h2>'
+  +'<ul><li>Tort judgments (car accidents, malpractice)</li><li>Business liabilities (even if the corporate veil is pierced)</li><li>Divorce (if established before marriage or proceedings)</li><li>Professional liability</li><li>Creditor claims against beneficiaries (spendthrift provisions)</li></ul>'
+  +'<h2>What It Cannot Protect Against</h2>'
+  +'<ul><li><strong>Fraudulent transfers</strong> \u2014 Transfers made to defraud existing creditors can be voided.</li><li><strong>Federal tax liens</strong> \u2014 IRS collection powers can reach trust assets in certain cases.</li><li><strong>Pre-existing obligations</strong> \u2014 Child support, alimony, and prior court orders.</li></ul>'
+  +'<h2>Timing Is Everything</h2>'
+  +'<p>The most important variable is timing. Establish your trust <strong>before</strong> any claim arises. Transferring assets after a lawsuit is filed is almost certainly a fraudulent transfer. The lesson: establish your asset protection trust while the sun is shining.</p>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0;font-size:.88rem;"><strong>Want the deep dive?</strong> Read our comprehensive analysis: <a href="/resources/asset-protection-trusts-pr" style="color:#a68c42;font-weight:600;">Asset Protection Trusts Under the PR Trust Act \u2192</a></p></div>'
+  +'<div class="rl-sub-cta"><p><strong>Ready to protect your assets?</strong></p><p>We design irrevocable trusts under Law 219-2012 tailored to your risk profile and goals.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/complete-guide-puerto-rico-trusts': {
+  title: 'The Complete Guide to Puerto Rico Trusts',
+  subtitle: 'Everything you need to know about trusts under Law 219-2012.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<h2>What Is a Trust in Puerto Rico?</h2>'
+  +'<p>A trust (<em>fideicomiso</em>) is a legal arrangement where a settlor (<em>fideicomitente</em>) transfers assets to a trustee (<em>fiduciario</em>) for the benefit of beneficiaries (<em>fideicomisarios</em>). Law 219-2012 created a modern, flexible trust statute tailored to Puerto Rico\u2019s civil law system.</p>'
+  +'<h2>Types of Trusts</h2>'
+  +'<h3>Irrevocable Trusts (Default Under Law 219-2012)</h3>'
+  +'<p>All Puerto Rico trusts are irrevocable by default. The grantor cannot revoke the trust, but may reserve broad modification rights under \u00a73352h\u2014including amending trust terms, substituting trustees, and adding or removing beneficiaries. Provides strong asset protection, estate tax reduction, and multi-generational planning. Must be structured to respect <a href="/resources/forced-heirship-estate-plan">forced heirship rules</a>.</p>'
+  +'<h3>Revocable Trusts (Act 60 IRI Decree Holders Only)</h3>'
+  +'<p>Act 60 Individual Resident Investor decree holders may establish revocable trusts under the Incentives Code (13 LPRA \u00a710854a(b)). Can be modified or revoked at any time. Provides probate avoidance and incapacity planning, but no asset protection. All income is reported on the settlor\u2019s personal tax return.</p>'
+  +'<h3>Multi-Generational Trusts</h3>'
+  +'<p>Designed to last multiple generations (the life of the last surviving named beneficiary, plus 30 years, under Law 219-2012). Assets pass without probate or estate tax at each generation.</p>'
+  +'<h3>Special Purpose Trusts</h3>'
+  +'<p>Charitable trusts, special needs trusts, life insurance trusts (ILITs), and business succession trusts.</p>'
+  +'<h2>Creating a Trust: 5 Steps</h2>'
+  +'<ol><li><strong>Define objectives</strong> \u2014 Probate avoidance? Asset protection? Estate tax reduction?</li>'
+  +'<li><strong>Select the trustee</strong> \u2014 Individual, professional, or co-trustees. Independent trustees are essential for asset protection.</li>'
+  +'<li><strong>Draft the trust instrument</strong> \u2014 Must address distribution standards, trustee powers, spendthrift provisions, forced heirship compliance, and governing law.</li>'
+  +'<li><strong>Fund the trust</strong> \u2014 Transfer assets by deed, account retitling, or assignment. An unfunded trust provides no protection.</li>'
+  +'<li><strong>Ongoing administration</strong> \u2014 Investment management, recordkeeping, tax filing, distributions, and accounting.</li></ol>'
+  +'<h2>Tax Considerations</h2>'
+  +'<ul><li>Federal income tax: grantor trusts (taxed to settlor) vs. non-grantor trusts (taxed to trust)</li>'
+  +'<li>Puerto Rico income tax depends on trust situs, residency, and income source</li>'
+  +'<li>Irrevocable trust assets generally removed from federal taxable estate</li>'
+  +'<li>Federal estate tax exemption of $15M per individual (made permanent by the One Big Beautiful Bill Act with inflation indexing)</li></ul>'
+  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Ready to start planning your Puerto Rico trust?</strong></p><p>A 30-minute strategy call will help you understand which trust type fits your situation. Flat-fee pricing, no hourly billing.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  +'<h2>Common Mistakes</h2>'
+  +'<ul><li>Failing to fund the trust after creation</li><li>Choosing the wrong trustee</li><li>Ignoring forced heirship</li><li>Retaining too much control (undermines asset protection)</li><li>Not updating the trust after life changes</li><li>Using a mainland trust without Puerto Rico review</li></ul>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Go deeper with our Trust Law Series:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/what-is-puerto-rico-trust" style="color:#a68c42;">What Is a Puerto Rico Trust?</a> \u2014 The autonomous estate concept</li><li><a href="/resources/act-60-trust-planning" style="color:#a68c42;">Trust Planning for Act 60 Investors</a> \u2014 Mainland vs. PR trust decision</li><li><a href="/resources/trust-costs-puerto-rico" style="color:#a68c42;">Trust Costs</a> \u2014 Transparent pricing breakdown</li><li><a href="/resources/modifying-irrevocable-trusts" style="color:#a68c42;">Modifying &amp; Decanting Irrevocable Trusts</a> \u2014 When and how changes are possible</li><li><a href="/resources/special-needs-trusts-medicaid" style="color:#a68c42;">Special Needs Trusts &amp; Medicaid</a> \u2014 Protecting beneficiaries with disabilities</li><li><a href="/resources/ilits-and-slats" style="color:#a68c42;">ILITs and SLATs</a> \u2014 Advanced insurance and spousal trust strategies</li></ul></div>'
+  +'<div class="rl-sub-cta"><p><strong>Ready to explore trust planning?</strong></p><p>We create trusts under Law 219-2012 tailored to your assets, family, and goals.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/fideicomiso-irrevocable-puerto-rico': {
+  title: 'Fideicomiso Irrevocable en Puerto Rico',
+  subtitle: 'Gu\u00eda completa bajo la Ley 219-2012: protecci\u00f3n de activos, beneficios contributivos y planificaci\u00f3n sucesoral.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Volver a Recursos</a>'
+  +'<h2>\u00bfQu\u00e9 es un fideicomiso irrevocable?</h2>'
+  +'<p>Un fideicomiso irrevocable es un acuerdo legal donde el fideicomitente transfiere activos a un fiduciario, quien los administra en beneficio de los fideicomisarios. Una vez creado, <strong>no puede modificarse ni revocarse unilateralmente</strong>. Esta cesi\u00f3n de control es lo que le da su poder: protecci\u00f3n de activos, beneficios contributivos y planificaci\u00f3n sucesoral.</p>'
+  +'<h2>La Ley 219-2012</h2>'
+  +'<p>Antes de 2012, Puerto Rico carec\u00eda de un estatuto integral de fideicomisos. La Ley 219-2012 cre\u00f3 un marco legal moderno con reconocimiento pleno ante los tribunales, flexibilidad en la estructura, separaci\u00f3n patrimonial y compatibilidad con el derecho civil.</p>'
+  +'<h2>Beneficios contributivos</h2>'
+  +'<ul><li><strong>Reducci\u00f3n del patrimonio imponible:</strong> Los activos en el fideicomiso se excluyen del caudal relicto.</li>'
+  +'<li><strong>Planificaci\u00f3n con la contribuci\u00f3n sobre ingresos:</strong> Los ingresos pueden tributar al fideicomiso como entidad separada.</li>'
+  +'<li><strong>Para titulares de Ley 60:</strong> Los beneficios del fideicomiso se suman a las exenciones del decreto, pero las exenciones de Ley 60 <strong>no aplican</strong> al impuesto sobre caudal relicto.</li></ul>'
+  +'<h2>Protecci\u00f3n de activos</h2>'
+  +'<p>Los activos transferidos constituyen un patrimonio separado. Los acreedores personales no pueden reclamar los activos del fideicomiso, con la excepci\u00f3n de transferencias fraudulentas\u2014transferencias realizadas cuando ya era insolvente o con intenci\u00f3n de defraudar acreedores.</p>'
+  +'<h2>Fideicomiso irrevocable y la leg\u00edtima</h2>'
+  +'<p>Un fideicomiso <strong>no puede eludir la leg\u00edtima</strong>. Sin embargo, puede proporcionar flexibilidad: proveer para el c\u00f3nyuge mientras preserva los derechos de los hijos, utilizar la mitad de libre disposici\u00f3n, y estructurar distribuciones para proteger a herederos j\u00f3venes.</p>'
+  +'<h2>C\u00f3mo crear un fideicomiso irrevocable</h2>'
+  +'<ol><li>Defina sus objetivos</li><li>Seleccione al fiduciario</li><li>Identifique los activos</li><li>Redacte el instrumento con un abogado de Puerto Rico</li><li>Transfiera los activos</li><li>Administraci\u00f3n continua</li></ol>'
+  +'<div class="rl-sub-cta"><p><strong>\u00bfListo para explorar si un fideicomiso irrevocable es adecuado?</strong></p><p>Agende una consulta gratuita para discutir c\u00f3mo la Ley 219-2012 puede beneficiar su planificaci\u00f3n patrimonial.</p><a href="/calendly">Agendar Consulta Gratuita</a></div>'
+  }
+},
+
+'/resources/planificacion-sucesoral-puerto-rico': {
+  title: 'Planificaci\u00f3n Sucesoral en Puerto Rico',
+  subtitle: 'Lo que todo residente debe saber: leg\u00edtima, testamentos, fideicomisos y m\u00e1s.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Volver a Recursos</a>'
+  +'<h2>Componentes esenciales</h2>'
+  +'<h3>1. El testamento</h3>'
+  +'<p>Bajo el C\u00f3digo Civil actual (Ley 55-2020), Puerto Rico reconoce dos tipos de testamento: el <strong>testamento abierto</strong> (ante notario\u2014ya no requiere testigos obligatoriamente bajo el Art. 1644, salvo que lo solicite el testador o el notario) y el <strong>testamento ol\u00f3grafo</strong> (escrito a mano, m\u00e1s vulnerable a impugnaci\u00f3n). <em>Nota: El testamento cerrado fue eliminado por la Ley 55-2020.</em></p>'
+  +'<h3>2. La leg\u00edtima</h3>'
+  +'<p>Bajo el C\u00f3digo Civil (Ley 55-2020), la mitad de su patrimonio est\u00e1 reservada para sus herederos forzosos\u2014sus hijos y c\u00f3nyuge sobreviviente, quienes comparten la <em>leg\u00edtima</em> en partes iguales. No puede desheredar a un hijo excepto en circunstancias muy limitadas.</p>'
+  +'<h3>3. Fideicomisos</h3>'
+  +'<p>Los <a href="/puerto-rico-trusts">fideicomisos bajo la Ley 219-2012</a> evitan la declaratoria de herederos, proporcionan planificaci\u00f3n de incapacidad, protegen activos y mantienen privacidad.</p>'
+  +'<h3>4. Poderes legales</h3>'
+  +'<p>Un <strong>poder general duradero</strong> autoriza a alguien a manejar sus asuntos financieros si queda incapacitado. Sin este documento, su familia necesitar\u00eda solicitar tutela judicial.</p>'
+  +'<h3>5. Directiva anticipada de salud</h3>'
+  +'<p>Establece sus deseos sobre tratamiento m\u00e9dico y designa un agente de salud para tomar decisiones en su nombre.</p>'
+  +'<h2>Errores comunes</h2>'
+  +'<ul><li>No tener plan alguno</li><li>Usar un testamento de otro estado sin revisi\u00f3n</li><li>No actualizar despu\u00e9s de cambios de vida</li><li>Ignorar la coordinaci\u00f3n entre jurisdicciones</li><li>No considerar la contribuci\u00f3n federal sobre caudal relicto</li></ul>'
+  +'<div class="rl-sub-cta"><p><strong>\u00bfNecesita crear o actualizar su plan sucesoral?</strong></p><p>Evaluaremos su situaci\u00f3n y le recomendaremos la estructura que mejor proteja a su familia.</p><a href="/calendly">Agendar Consulta Gratuita</a></div>'
+  }
+},
+
+'/resources/ley-60-guia-inversionistas': {
+  title: 'Ley 60: Gu\u00eda para Inversionistas',
+  subtitle: 'Requisitos de residencia, beneficios contributivos, proceso de solicitud y errores comunes.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Volver a Recursos</a>'
+  +'<h2>Beneficios contributivos clave</h2>'
+  +'<p><em>Los beneficios espec\u00edficos dependen de los t\u00e9rminos del decreto, la fecha de solicitud y la legislaci\u00f3n vigente. Las condiciones est\u00e1n sujetas a cambios legislativos; consulte con un abogado antes de tomar decisiones.</em></p>'
+  +'<ul><li><strong>Exenci\u00f3n sobre ganancias de capital</strong> acumuladas despu\u00e9s de establecer residencia (el porcentaje depende del decreto otorgado)</li>'
+  +'<li><strong>Exenci\u00f3n sobre intereses y dividendos</strong> de fuentes dentro de Puerto Rico (seg\u00fan t\u00e9rminos del decreto)</li>'
+  +'<li><strong>4% sobre servicios de exportaci\u00f3n</strong> (Cap\u00edtulo 3)</li>'
+  +'<li><strong>Exenci\u00f3n de contribuciones federales</strong> sobre ingreso de fuente puertorrique\u00f1a (IRC \u00a7933)</li></ul>'
+  +'<p><strong>No est\u00e1 exento:</strong> Ingresos de fuente estadounidense, ganancias pre-mudanza, impuesto sobre caudal relicto, ni contribuciones sobre n\u00f3mina.</p>'
+  +'<h2>Requisitos de residencia (IRC \u00a7937)</h2>'
+  +'<p>Debe cumplir <strong>las tres pruebas</strong> simult\u00e1neamente para cualificar como residente bona fide:</p>'
+  +'<ul><li><strong>Prueba de presencia f\u00edsica:</strong> Al menos 183 d\u00edas en Puerto Rico durante el a\u00f1o contributivo</li>'
+  +'<li><strong>Prueba de hogar contributivo (<em>Tax Home Test</em>):</strong> Su lugar principal de actividad econ\u00f3mica debe estar en PR</li>'
+  +'<li><strong>Prueba de conexi\u00f3n m\u00e1s estrecha (<em>Closer Connection Test</em>):</strong> Residencia principal, registro de votante, licencia de conducir, cuentas bancarias, m\u00e9dico y participaci\u00f3n comunitaria en PR</li></ul>'
+  +'<p><em>Nota: Los 183 d\u00edas por s\u00ed solos no son suficientes. El incumplimiento de cualquiera de las tres pruebas puede resultar en la descalificaci\u00f3n de su residencia.</em></p>'
+  +'<h2>Proceso de solicitud (general)</h2>'
+  +'<ol><li>Establezca residencia bona fide en Puerto Rico (propiedad, licencia, registro de votante, cuentas bancarias)</li>'
+  +'<li>Prepare y presente solicitud ante el DDEC</li>'
+  +'<li>Revisi\u00f3n y aprobaci\u00f3n (puede tomar varios meses)</li>'
+  +'<li>Cumplimiento continuo con las obligaciones t\u00edpicas del decreto (informes anuales, donaci\u00f3n caritativa, compra de propiedad residencial dentro del plazo establecido)</li></ol>'
+  +'<p><em>Las obligaciones espec\u00edficas del decreto pueden variar seg\u00fan la fecha de solicitud y enmiendas legislativas. Verifique los requisitos vigentes antes de solicitar.</em></p>'
+  +'<h2>Ley 60 y planificaci\u00f3n sucesoral</h2>'
+  +'<p>Los beneficios de Ley 60 <strong>no se extienden al impuesto sobre caudal relicto</strong>. Su patrimonio sigue sujeto al impuesto federal. Puerto Rico tiene reglas de herencia forzosa que no existen en estados continentales. Un <a href="/resources/fideicomiso-irrevocable-puerto-rico">fideicomiso irrevocable</a> puede reducir su patrimonio imponible.</p>'
+  +'<h2>Errores comunes</h2>'
+  +'<ul><li>Asumir que comprar una casa es suficiente para residencia</li><li>No mantener registros de presencia</li><li>Ignorar las reglas de fuente de ingresos</li><li>No cumplir con los requisitos del decreto</li><li>No planificar la sucesi\u00f3n\u2014los beneficios mueren con usted</li></ul>'
+  +'<div class="rl-sub-cta"><p><strong>\u00bfConsiderando mudarse bajo Ley 60?</strong></p><p>Asesoramos en todas las etapas\u2014desde planificaci\u00f3n pre-mudanza hasta cumplimiento y planificaci\u00f3n sucesoral.</p><a href="/calendly">Agendar Consulta</a></div>'
+  }
+},
+
+'/resources/declaratoria-de-herederos-puerto-rico': {
+  title: 'Proceso de Declaratoria de Herederos',
+  subtitle: 'Gu\u00eda del proceso sucesorio en Puerto Rico: requisitos, plazos, costos y c\u00f3mo evitarlo.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Volver a Recursos</a>'
+  +'<h2>\u00bfQu\u00e9 es la declaratoria de herederos?</h2>'
+  +'<p>Es un procedimiento judicial mediante el cual un tribunal identifica a los herederos legales, establece la proporci\u00f3n en que heredan y autoriza la transferencia de bienes. Sin esta resoluci\u00f3n, las instituciones financieras no liberar\u00e1n cuentas y el Registro de la Propiedad no inscribir\u00e1 transferencias.</p>'
+  +'<h2>El proceso paso a paso</h2>'
+  +'<div class="rl-timeline">'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 1: Certificado de defunci\u00f3n</div><div class="rl-step-desc">Obtener copia certificada del Registro Demogr\u00e1fico.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 2: Localizar el testamento</div><div class="rl-step-desc">Consultar el \u00edndice del Colegio de Notarios. Testamentos ol\u00f3grafos requieren adveraci\u00f3n judicial.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 3: Contratar abogado</div><div class="rl-step-desc">La complejidad del procedimiento hace la representaci\u00f3n legal pr\u00e1cticamente indispensable.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 4: Presentar demanda</div><div class="rl-step-desc">Ante el Tribunal de Primera Instancia con certificado de defunci\u00f3n, testamento, inventario de bienes y certificaciones de CRIM y Hacienda.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 5: Publicaci\u00f3n de edictos</div><div class="rl-step-desc">Avisos legales en peri\u00f3dico para notificar a herederos desconocidos y acreedores.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 6: Periodo de espera</div><div class="rl-step-desc">30 a 60 d\u00edas para que acreedores y herederos presenten reclamaciones.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 7: Resoluci\u00f3n judicial</div><div class="rl-step-desc">El tribunal declara qui\u00e9nes son los herederos y en qu\u00e9 proporci\u00f3n.</div></div>'
+  +'<div class="rl-step"><div class="rl-step-title">Paso 8: Transferencia</div><div class="rl-step-desc">Con la resoluci\u00f3n, los herederos pueden transferir bienes inmuebles, acceder a cuentas y completar la distribuci\u00f3n.</div></div>'
+  +'</div>'
+  +'<h2>Plazos t\u00edpicos</h2>'
+  +'<ul><li><strong>Caso simple:</strong> 6\u201312 meses</li><li><strong>Caso moderado:</strong> 12\u201318 meses</li><li><strong>Caso complejo:</strong> 18 meses a varios a\u00f1os</li></ul>'
+  +'<h2>C\u00f3mo evitar la declaratoria</h2>'
+  +'<ul><li><strong>Fideicomisos:</strong> Los activos pasan directamente a los beneficiarios en semanas, no meses.</li>'
+  +'<li><strong>Beneficiarios designados:</strong> P\u00f3lizas de seguro, cuentas de retiro (IRA, 401k), cuentas POD/TOD.</li>'
+  +'<li><strong>Planificaci\u00f3n integral:</strong> Fideicomiso + designaciones de beneficiario + testamento como red de seguridad.</li></ul>'
+  +'<div class="rl-sub-cta"><p><strong>\u00bfNecesita ayuda con una declaratoria o quiere evitarla?</strong></p><p>Le ayudaremos a navegar el proceso o a crear un plan que proteja a su familia.</p><a href="/calendly">Agendar Consulta Gratuita</a></div>'
+  }
+},
+
+'/resources/act-38-2026-hb-505': {
+  title: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
+  subtitle: 'The most significant changes to Act 60 since the program\u2019s creation.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Tax law is subject to change. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Overview</h2>'
+  +'<p>On January 12, 2026, Puerto Rico enacted Act 38-2026 (originally House Bill 505), the most significant amendment to the Act 60 Individual Resident Investor (IRI) program since its creation as Act 22-2012. The law changes the preferential tax rate for new applicants, extends the program\u2019s lifespan, and introduces new requirements\u2014while grandfathering existing decree holders.</p>'
+
+  +'<h2>Key Changes</h2>'
+  +'<h3>New 4% Tax Rate for Post-2026 Applicants</h3>'
+  +'<p>Applications filed on or after <strong>January 1, 2027</strong> will be subject to a <strong>4% preferential tax rate</strong> on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.</p>'
+  +'<p><strong>Important:</strong> The decree guarantees the Puerto Rico tax treatment for its duration. However, the separate federal tax exclusion under IRC \u00a7933 depends on maintaining bona fide resident (BFR) status under IRC \u00a7937 and proper income sourcing. Federal tax treatment is not guaranteed by the decree and remains subject to IRS examination and potential legislative change.</p>'
+
+  +'<h3>Grandfathering of Existing Decree Holders</h3>'
+  +'<p>Existing decree holders are <strong>fully grandfathered</strong> under their current terms and retain the 0% rate for the duration of their decree. Applications pending or filed before December 31, 2026 also qualify for the grandfathered 0% rate.</p>'
+
+  +'<h3>Program Extension to 2055</h3>'
+  +'<p>Act 38-2026 extends the IRI program through <strong>December 31, 2055</strong>, from the prior 2035 sunset date. This provides long-term certainty for both existing and future decree holders.</p>'
+
+  +'<h3>Federal 10-Year Lookback Rule</h3>'
+  +'<p><strong>Critical federal limitation:</strong> Capital gains on investment property owned before establishing bona fide PR residency are subject to the federal 10-year lookback rule under <strong>Treas. Reg. \u00a71.937-2(f)</strong>. Under this rule, gains on pre-move assets are not treated as Puerto Rico-source income for federal tax purposes and remain subject to U.S. federal capital gains tax. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024); CCM 202538025.</p>'
+
+  +'<h3>Annual Charitable Donation Requirement</h3>'
+  +'<p>The annual charitable donation requirement differs based on when your application is filed:</p>'
+  +'<ul><li><strong>Applications filed on or before December 31, 2026:</strong> $10,000 annual donation\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CEFCL (Comit\u00e9 Especial Fondos Legislativos para Impacto Comunitario), plus $5,000 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01.</li>'
+  +'<li><strong>Applications filed after December 31, 2026:</strong> $15,000 annual donation with the same allocation structure ($7,500 CEFCL + $7,500 qualifying nonprofits).</li></ul>'
+  +'<p><strong>Important:</strong> Qualifying nonprofit organizations cannot be controlled by the decree holder or their family members. Donations must be made annually as a condition of maintaining the decree.</p>'
+
+  +'<h3>Employment Requirement</h3>'
+  +'<p>New applicants with annual revenue exceeding $3 million must create or maintain at least <strong>one full-time employee</strong> (other than the owner) in Puerto Rico within two years. Businesses below this threshold are not subject to the employee requirement. This reinforces the program\u2019s economic development purpose.</p>'
+
+  +'<h3>Six-Year Non-Residency Requirement</h3>'
+  +'<p>Under Act 38-2026, new applicants must demonstrate that they have <strong>not been bona fide residents of Puerto Rico</strong> for at least six years prior to their application. This requirement is designed to ensure the program attracts new residents rather than benefiting individuals already living on the island.</p>'
+
+  +'<h2>What This Means for Current Decree Holders</h2>'
+  +'<ul><li><strong>No change to your 0% rate</strong>\u2014existing decrees are grandfathered</li>'
+  +'<li><strong>No change to your $10,000 donation obligation</strong>\u2014the $15,000 requirement applies only to post-2026 applicants</li>'
+  +'<li><strong>Program extended to 2055</strong>\u2014your decree\u2019s longevity is more secure</li>'
+  +'<li><strong>Compliance obligations unchanged</strong>\u2014continue meeting residency, reporting, and Act 52 certification requirements</li></ul>'
+
+  +'<h2>What This Means for Prospective Applicants</h2>'
+  +'<ul><li><strong>Apply before December 31, 2026</strong> to lock in the 0% rate</li>'
+  +'<li><strong>After 2026:</strong> the 4% rate still represents a significant tax benefit compared to mainland capital gains rates of 20\u201323.8%</li>'
+  +'<li><strong>Plan for the $15K donation and employment requirements</strong> when budgeting your relocation</li>'
+  +'<li><strong>Note the donation allocation:</strong> $7,500 to CEFCL-listed organizations + $7,500 to qualifying PR nonprofits (not controlled by you or your family)</li></ul>'
+
+  +'<h2>Frequently Asked Questions</h2>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is the new tax rate under Act 38-2026?</button>'
+  +'<div class="rl-faq-a"><p>Applications filed on or after January 1, 2027 will be subject to a 4% preferential tax rate on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Are existing Act 60 decree holders affected?</button>'
+  +'<div class="rl-faq-a"><p>No. Existing decree holders are grandfathered under their current terms and retain the 0% rate and $10,000 donation requirement. Applications filed before December 31, 2026 also qualify for the grandfathered terms.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How long is the Act 60 program extended?</button>'
+  +'<div class="rl-faq-a"><p>Act 38-2026 extends the Individual Resident Investor program through December 31, 2055, from the prior 2035 sunset date.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What are the DDEC application and filing fees?</button>'
+  +'<div class="rl-faq-a"><p>The DDEC charges: (1) a <strong>$5,005 application fee</strong> at the time of filing; (2) a <strong>$105 acceptance fee</strong> upon decree grant; and (3) an <strong>annual compliance filing fee of $5,000+</strong> thereafter. These are material costs that should be factored into your relocation budget in addition to legal and CPA fees.</p></div></div>'
+
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Should I apply before December 31, 2026?</button>'
+  +'<div class="rl-faq-a"><p>If you are seriously considering relocating to Puerto Rico under Act 60, filing your application before December 31, 2026 locks in the 0% rate. However, the decree application process involves establishing bona fide residency, structuring entities, and compliance planning\u2014start early to ensure your application is filed on time.</p></div></div>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 side-by-side comparison of pre-2020, 2020\u20132025, and post-2026 decree requirements</li>'
+  +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar & Deadlines</a> \u2014 DDEC fees, filing deadlines, and donation requirements</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement & Campaign 685</a> \u2014 criminal prosecutions and why attorney privilege matters</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal obligations as a decree holder</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help understanding how Act 38-2026 affects your situation?</strong></p><p>We help both existing decree holders and prospective applicants navigate the new landscape.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/irs-enforcement-act-60': {
+  title: 'IRS Enforcement of Act 60: Campaign 685 & Criminal Prosecutions',
+  subtitle: 'What decree holders must know about federal enforcement in Puerto Rico.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>The IRS Has Full Jurisdiction in Puerto Rico</h2>'
+  +'<p>A common misconception among Act 60 decree holders is that relocating to Puerto Rico means "freedom from the IRS." This is legally wrong and dangerously misleading. The IRS has <strong>full enforcement jurisdiction</strong> in Puerto Rico. The operative federal exclusion is provided by <strong>IRC \u00a7933</strong>, which excludes Puerto Rico-source income from federal gross income for bona fide Puerto Rico residents. The BFR test under IRC \u00a7937 must be satisfied for the entire taxable year, with a limited exception under the year-of-move safe harbor (Treas. Reg. \u00a71.937-1(f)). IRC \u00a7933 does not exclude U.S.-source income, does not eliminate the federal filing requirement, and does not limit IRS authority in any way.</p>'
+  +'<p>Act 60 decree holders must file <strong>Form 1040</strong> annually with the IRS, comply with <strong>FBAR</strong> (FinCEN Form 114) and <strong>FATCA</strong> (Form 8938) requirements, and accurately report worldwide income with proper sourcing.</p>'
+
+  +'<h2>Compliance Campaign 685</h2>'
+  +'<p>In 2021, the IRS Large Business & International Division launched <strong>Compliance Campaign 685</strong>, a dedicated enforcement initiative targeting Act 60/22 decree holders. The campaign has <strong>12 staff members</strong> focused specifically on auditing:</p>'
+  +'<ul><li><strong>Bona fide residency compliance</strong>\u2014whether the taxpayer actually meets the IRC \u00a7937 three-part test</li>'
+  +'<li><strong>Income sourcing</strong>\u2014whether income claimed as PR-source was properly allocated under IRC \u00a7\u00a7861\u2013865</li>'
+  +'<li><strong>Pre-move capital gains</strong>\u2014whether appreciation accrued before establishing PR residency is properly taxed at federal rates</li>'
+  +'<li><strong>Entity structuring</strong>\u2014whether export services companies meet Chapter 3 substance requirements</li></ul>'
+
+  +'<h2>Criminal Prosecutions</h2>'
+  +'<p>The IRS has moved beyond civil audits. Several Act 60 decree holders have faced <strong>criminal prosecution</strong> for:</p>'
+  +'<ul><li><strong>Fraudulent residency claims</strong>\u2014claiming bona fide residency while spending most of the year on the mainland</li>'
+  +'<li><strong>Income sourcing manipulation</strong>\u2014mischaracterizing mainland-source income as Puerto Rico-source to qualify for the exclusion</li>'
+  +'<li><strong>Failure to report pre-move gains</strong>\u2014treating appreciation that accrued before the relocation as exempt Puerto Rico income</li></ul>'
+  +'<p>Convictions have resulted in prison sentences, substantial fines, and full back-tax liability plus penalties and interest. The <strong>Gajwani prosecution (2025)</strong> is a notable recent case that underscores the IRS\u2019s willingness to pursue criminal charges against decree holders who fail to comply with residency and sourcing requirements.</p>'
+
+  +'<h2>Scale of Enforcement</h2>'
+  +'<p>Approximately <strong>1,800 decree holder audits</strong> were underway or completed in 2025. The DDEC and IRS exchange information about decree holders\u2014a DDEC compliance finding or revocation can trigger an IRS examination, and vice versa. This coordinated enforcement posture shows no sign of slowing.</p>'
+
+  +'<h2>GAO Reports & Congressional Scrutiny</h2>'
+  +'<p>The U.S. Government Accountability Office (GAO) has published multiple reports examining the Act 60 program, raising concerns about revenue loss and compliance gaps. These reports have led to increased Congressional scrutiny and calls for enhanced IRS enforcement\u2014a trend that shows no sign of slowing.</p>'
+
+  +'<h2>Why Attorney-Client Privilege Matters</h2>'
+  +'<p>If the IRS audits your Act 60 compliance, communications with your <strong>CPA are not privileged</strong>. The IRS can subpoena your accountant\u2019s workpapers, emails, and notes. In contrast, communications with your <strong>attorney are protected by attorney-client privilege</strong>\u2014they cannot be compelled in an audit or criminal investigation.</p>'
+  +'<p>This distinction is critical for Act 60 decree holders making decisions about residency compliance, income sourcing, and entity structuring that carry criminal exposure.</p>'
+
+  +'<h2>How to Protect Yourself</h2>'
+  +'<ul><li><strong>Maintain meticulous records</strong> of your physical presence in Puerto Rico (travel logs, flight records, gym check-ins, medical appointments)</li>'
+  +'<li><strong>Ensure proper income sourcing</strong> under IRC \u00a7\u00a7861\u2013865, especially for service income and intangible property</li>'
+  +'<li><strong>Work with legal counsel</strong>\u2014not just a CPA\u2014for compliance decisions that carry criminal exposure</li>'
+  +'<li><strong>Complete Act 52 biennial certification</strong> on time (see <a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a>)</li>'
+  +'<li><strong>File all required federal returns</strong> including Forms 1040, 8898, 8938, and FinCEN 114</li></ul>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal filing obligations don\u2019t disappear</li>'
+  +'<li><a href="/resources/ddec-revocation-procedures">DDEC Revocation Procedures</a> \u2014 how decrees get revoked and the tax reversion consequences</li>'
+  +'<li><a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a> \u2014 biennial certification requirements</li>'
+  +'<li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 requirements by decree era</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Concerned about IRS enforcement?</strong></p><p>We provide attorney-privileged compliance review for Act 60 decree holders.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/why-law-firm-act-60': {
+  title: 'Why Hire a Law Firm for Act 60 Planning?',
+  subtitle: 'What attorneys provide that CPAs cannot\u2014and why the distinction matters.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Act 60 Planning Is Not Just Tax Preparation</h2>'
+  +'<p>Many Act 60 applicants approach the process as a tax matter and hire only a CPA. While CPAs play an important role in tax compliance, Act 60 planning involves <strong>legal decisions</strong> that require attorney expertise\u2014and attorney-client privilege.</p>'
+
+  +'<h2>Attorney-Client Privilege</h2>'
+  +'<p>This is the single most important reason to involve a law firm. When the IRS audits your Act 60 compliance\u2014and <a href="/resources/irs-enforcement-act-60">Campaign 685 makes this increasingly likely</a>\u2014there is a critical difference:</p>'
+  +'<ul><li><strong>CPA communications are not privileged.</strong> The IRS can subpoena your accountant\u2019s workpapers, emails, notes, and internal memos.</li>'
+  +'<li><strong>Attorney communications are privileged.</strong> Legal advice about residency compliance, income sourcing, and entity structuring is protected from disclosure.</li></ul>'
+  +'<p>For decisions that carry potential criminal exposure\u2014like whether a particular income stream is properly sourced to Puerto Rico\u2014the privilege distinction is not academic. It is the difference between protected counsel and discoverable evidence.</p>'
+
+  +'<h2>Entity Structuring</h2>'
+  +'<p>Most Act 60 strategies require proper entity formation:</p>'
+  +'<ul><li><strong>Export Services (Chapter 3) companies</strong> must meet substance requirements, have genuine PR operations, and maintain compliant intercompany agreements</li>'
+  +'<li><strong>Holding companies</strong> for investment assets require careful structuring to avoid IRS recharacterization</li>'
+  +'<li><strong>Trust planning</strong> under Puerto Rico\u2019s Trust Act (Ley 219-2012) involves irrevocable trust formation, trustee selection, and coordination with the Act 60 decree</li></ul>'
+  +'<p>Entity formation and governance are fundamentally legal activities\u2014they require legal opinions, operating agreements, and corporate resolutions that CPAs are not licensed to prepare.</p>'
+
+  +'<h2>Decree Application & Negotiation</h2>'
+  +'<p>The Act 60 decree is a <strong>contract with the Government of Puerto Rico</strong>. Its terms can be negotiated, and the application process involves legal representations. An attorney can:</p>'
+  +'<ul><li>Negotiate decree terms, including the effective date, specific carve-outs, and conditions</li>'
+  +'<li>Ensure the application accurately reflects your income sources and business activities</li>'
+  +'<li>Identify potential issues before DDEC (the Department of Economic Development and Commerce) reviews your file</li></ul>'
+
+  +'<h2>Tax Court Representation</h2>'
+  +'<p>If a dispute with the IRS escalates, only attorneys (and a limited number of non-attorney practitioners who pass the Tax Court exam) can represent you in <strong>U.S. Tax Court</strong>. CPAs cannot. If your Act 60 compliance is challenged, you need counsel who can both advise you and advocate for you in court.</p>'
+
+  +'<h2>What CPAs Do Best</h2>'
+  +'<p>CPAs are essential for Act 60 compliance\u2014specifically for:</p>'
+  +'<ul><li>Annual tax return preparation (Federal Form 1040 and Puerto Rico Form 482)</li>'
+  +'<li>Agreed-upon procedures (AUP) for <a href="/resources/compliance-certificate-act-52">Act 52 biennial certification</a></li>'
+  +'<li>Bookkeeping and financial reporting for Chapter 3 export services companies</li>'
+  +'<li>FBAR and FATCA compliance filings</li></ul>'
+  +'<p>The ideal approach is a <strong>coordinated team</strong>: legal counsel for structuring, privilege-protected advice, and decree negotiation, plus a CPA for return preparation and financial compliance.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Ready to structure your Act 60 plan with legal counsel?</strong></p><p>We coordinate with your CPA to ensure comprehensive compliance.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/compliance-certificate-act-52': {
+  title: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
+  subtitle: 'What decree holders must know about biennial certification.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
+
+  +'<h2>What Is Act 52-2022?</h2>'
+  +'<p>Act 52-2022 introduced a <strong>biennial compliance certification requirement</strong> for all Act 60 decree holders (and holders of legacy Acts 20 and 22 decrees). Every two years, decree holders must demonstrate that they are meeting the terms of their decree through a formal certification process.</p>'
+
+  +'<h2>Who Must Comply?</h2>'
+  +'<ul><li>All <strong>Individual Resident Investor (IRI)</strong> decree holders (Chapter 2/former Act 22)</li>'
+  +'<li>All <strong>Export Services</strong> decree holders (Chapter 3/former Act 20)</li>'
+  +'<li>Holders of other Act 60 incentive decrees, as specified by DDEC</li></ul>'
+  +'<p>There are no exemptions based on decree age or grandfathering\u2014if you hold a decree, you must comply.</p>'
+
+  +'<h2>CPA / Compliance Professional Requirement</h2>'
+  +'<p>Under Act 52-2022, annual compliance reports must be certified by a qualified <strong>Compliance Professional</strong>\u2014a CPA or attorney licensed in Puerto Rico. This is a critical DDEC regulatory mechanism: decree holders cannot self-certify compliance. The DDEC\u2019s Economic Incentives Review Committee (CRIE) oversees enforcement of this requirement.</p>'
+  +'<p><strong>Act 188-2024</strong> introduced an alternative AUP Report option for qualifying decree holders. Consult counsel to determine whether the standard biennial certificate or the Act 188-2024 alternative applies to your situation.</p>'
+
+  +'<h2>What Is an Agreed-Upon Procedures (AUP) Engagement?</h2>'
+  +'<p>The certification requires an <strong>agreed-upon procedures (AUP) engagement</strong> performed by a licensed CPA or qualified Compliance Professional in Puerto Rico. The professional does not issue an opinion or audit your finances\u2014instead, they perform specific procedures defined by the Department of Economic Development and Commerce (DDEC) and report the factual findings.</p>'
+  +'<h3>Typical AUP procedures include verification of:</h3>'
+  +'<ul><li><strong>Physical presence in Puerto Rico</strong>\u2014travel records, utility bills, lease or mortgage documents</li>'
+  +'<li><strong>Tax filing compliance</strong>\u2014timely filing of Puerto Rico and federal returns</li>'
+  +'<li><strong>Donation requirements</strong>\u2014proof of qualifying donations to Puerto Rico nonprofits, properly allocated between CEFCL-listed organizations and other qualifying nonprofits (see <a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> for amounts by decree era)</li>'
+  +'<li><strong>Employment requirements</strong>\u2014for applicable decrees, proof of job creation or maintenance</li>'
+  +'<li><strong>Annual report filing</strong>\u2014confirmation of timely annual report submission to DDEC</li></ul>'
+
+  +'<h2>Timeline & Deadlines</h2>'
+  +'<ul><li>Compliance certificates are due <strong>every two years</strong> from the date specified in your decree or as established by DDEC</li>'
+  +'<li>DDEC issues specific filing windows\u2014monitor their communications for your cohort\u2019s deadline</li>'
+  +'<li>Extensions may be available but should not be relied upon\u2014late filing can trigger adverse consequences</li></ul>'
+
+  +'<h2>What Happens If You Don\u2019t Comply?</h2>'
+  +'<p>Failure to complete the biennial certification can result in:</p>'
+  +'<ul><li><strong>Decree revocation</strong>\u2014DDEC may revoke your Act 60 decree, retroactively eliminating your tax benefits</li>'
+  +'<li><strong>Back taxes</strong>\u2014revocation means you owe Puerto Rico taxes at standard rates for the entire period</li>'
+  +'<li><strong>Federal implications</strong>\u2014if your decree is revoked, the IRS may also reassess your federal returns for those years</li>'
+  +'<li><strong>Inability to renew</strong>\u2014non-compliance blocks future decree renewals or modifications</li></ul>'
+
+  +'<h2>How to Prepare</h2>'
+  +'<ul><li><strong>Maintain organized records year-round</strong>\u2014don\u2019t wait until the certification is due to gather documentation</li>'
+  +'<li><strong>Track your physical presence</strong> with a contemporaneous log (travel records, flight itineraries, credit card statements showing PR purchases)</li>'
+  +'<li><strong>Keep donation receipts</strong> from qualifying Puerto Rico nonprofits</li>'
+  +'<li><strong>File all tax returns on time</strong>\u2014both Puerto Rico and federal</li>'
+  +'<li><strong>Engage a Puerto Rico CPA early</strong> to perform the AUP engagement before the deadline</li>'
+  +'<li><strong>Consult legal counsel</strong> if you have any gaps in compliance\u2014it is better to address issues proactively than to have them surface in the certification</li></ul>'
+
+  +'<h2>DDEC Circular Letters</h2>'
+  +'<p>The granular implementation of Act 60 compliance requirements\u2014including eligible activity definitions, rate applications, and administrative procedures\u2014is governed by <strong>DDEC Circular Letters</strong>, not the broad statutory text alone. Decree holders and their advisors should review the applicable Circular Letters for their specific decree type and era. These Circular Letters are the authoritative source for how DDEC interprets and enforces the statute.</p>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026</a> \u2014 requirements differ by decree era</li>'
+  +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar & Deadlines</a> \u2014 every fee, filing, and deadline</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal obligations don\u2019t disappear</li>'
+  +'<li><a href="/resources/ddec-revocation-procedures">DDEC Revocation Procedures</a> \u2014 what happens if you don\u2019t comply</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help preparing for your Act 52 compliance certification?</strong></p><p>We coordinate with your CPA to ensure you\u2019re ready before the deadline.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+}
+
+},
+
+'/resources/act-60-decree-comparison': {
+  title: 'Act 60 Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026',
+  subtitle: 'Requirements differ by when your decree was granted. Know which rules apply to you.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>Why Decree Grant Date Matters</h2>'
+  +'<p>Act 60 is not a monolithic framework. The requirements, tax rates, charitable obligations, and compliance mechanisms differ significantly depending on when your decree was granted. The firm identifies three distinct eras:</p>'
+
+  +'<h2>Chapter 2 (IRI) Capital Gains &amp; Investment Income Rates</h2>'
+  +'<p>The following table shows how Act 52-2022 and Act 38-2026 changed the preferential tax rates for Chapter 2 (Individual Resident Investor) decree holders. Rates depend on when your application was filed and the type of income.</p>'
+  +'<div style="overflow-x:auto;">'
+  +'<table class="rl-comparison-table" style="width:100%;border-collapse:collapse;font-size:.88rem;margin:20px 0;">'
+  +'<thead><tr style="background:#1a2033;color:#fff;">'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Benefit</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Pre-2023 Decrees</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">2023\u20132026 Decrees (Act 52-2022)</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Post-2026 Decrees (Act 38-2026)</th>'
+  +'</tr></thead>'
+  +'<tbody>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Post-move capital gains</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0% (grandfathered)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;"><strong>4%</strong></td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Pre-move appreciation (\u226410 yrs)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">5%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">5% (per decree terms)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Subject to decree terms</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Pre-move appreciation (&gt;10 yrs)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0% (per decree terms)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Subject to decree terms</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Interest &amp; dividends</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0% (grandfathered)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;"><strong>4%</strong></td></tr>'
+  +'</tbody></table></div>'
+  +'<p style="font-size:.85rem;color:#706b62;"><strong>Important:</strong> Act 52-2022 introduced biennial compliance certification and other administrative requirements for <em>all</em> decree holders regardless of era, but did not change the preferential tax rates for existing pre-2023 decree holders. Individual decree terms may vary\u2014always confirm the specific rates in your decree grant letter. Pre-move appreciation rates are also subject to the federal 10-year lookback rule under Treas. Reg. \u00a71.937-2(f).</p>'
+
+  +'<h2>Comprehensive Requirements Comparison</h2>'
+  +'<div style="overflow-x:auto;">'
+  +'<table class="rl-comparison-table" style="width:100%;border-collapse:collapse;font-size:.88rem;margin:20px 0;">'
+  +'<thead><tr style="background:#1a2033;color:#fff;">'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Requirement</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Pre-2020 (Act 22 Legacy)</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">2020\u20132025 (Act 60 + Act 52-2022)</th>'
+  +'<th style="padding:12px 16px;text-align:left;border:1px solid #2a3043;">Post-Dec 31, 2026 (Act 38-2026)</th>'
+  +'</tr></thead>'
+  +'<tbody>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Capital Gains Rate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">4%</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CEFCL + $5K qualifying nonprofits)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$15,000 ($7.5K CEFCL + $7.5K qualifying nonprofits)</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Property Purchase</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years; must register in PR Property Registry</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">1 FTE if revenue >$3M</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Biennial Compliance Certificate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required (Act 52-2022 applies retroactively)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">CPA/Compliance Professional</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Prior Non-Residency</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">6 years of non-PR residency required</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Decree Duration</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2035)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2055)</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">DDEC Circular Letters</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable for eligible activities and rate definitions</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; governs granular implementation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; new Circular Letters expected</td></tr>'
+  +'</tbody></table></div>'
+
+  +'<h2>Key Takeaways</h2>'
+  +'<ul><li><strong>Existing decree holders are grandfathered</strong> under their original terms\u2014your rate and donation obligations do not change under Act 38-2026</li>'
+  +'<li><strong>Act 52-2022 compliance applies to all decree holders</strong> regardless of when the decree was granted\u2014biennial certification is mandatory</li>'
+  +'<li><strong>The federal 10-year lookback rule applies to all decree holders</strong>\u2014pre-move capital gains are federally taxable regardless of your decree era</li>'
+  +'<li><strong>DDEC Circular Letters</strong>\u2014not the broad statutory text alone\u2014govern the practical application of Act 60 benefits, including eligible activity definitions and administrative procedures</li></ul>'
+
+  +'<p><strong>Note:</strong> This table reflects general requirements. Individual decree terms may vary. Consult qualified Puerto Rico tax counsel to confirm the specific terms applicable to your decree.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Not sure which rules apply to your decree?</strong></p><p>We help decree holders of all eras understand their specific obligations and plan accordingly.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/annual-compliance-calendar': {
+  title: 'Act 60 Annual Compliance Calendar & Filing Deadlines',
+  subtitle: 'Every fee, filing, and deadline decree holders must track.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Verify deadlines against the most current DDEC publications. Reflects Act 65-2025 streamlined filing deadlines where applicable.</p>'
+
+  +'<h2>DDEC Fees & Costs</h2>'
+  +'<ul><li><strong>Application fee:</strong> $5,005 (paid at time of filing)</li>'
+  +'<li><strong>Acceptance fee:</strong> $105 (paid upon decree grant)</li>'
+  +'<li><strong>Annual compliance filing fee:</strong> $5,000+ (paid with annual report)</li></ul>'
+
+  +'<h2>Annual Filing Obligations</h2>'
+  +'<ul><li><strong>DDEC Annual Report</strong>\u2014due annually as specified by your decree or DDEC directive. Includes compliance attestation and payment of the annual filing fee. Act 65-2025 introduced streamlined filing deadlines; verify your cohort\u2019s specific date with DDEC.</li>'
+  +'<li><strong>Puerto Rico Tax Return (Form 482)</strong>\u2014due April 15 (extensions available). Must report all PR-source income.</li>'
+  +'<li><strong>Federal Tax Return (Form 1040)</strong>\u2014due April 15 (extensions available). BFRs must file and report worldwide income with proper sourcing.</li>'
+  +'<li><strong>Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession)</strong>\u2014due with your federal return for the year you establish or terminate PR residency. <strong>Penalty: $1,000 for failure to file.</strong></li>'
+  +'<li><strong>FBAR (FinCEN Form 114)</strong>\u2014due April 15 (auto-extension to October 15) if aggregate foreign financial accounts exceed $10,000 at any point during the year. PR BFRs remain U.S. persons for reporting purposes.</li>'
+  +'<li><strong>FATCA (Form 8938)</strong>\u2014due with your federal return if specified foreign financial asset thresholds are met.</li></ul>'
+
+  +'<h2>Biennial Obligations</h2>'
+  +'<ul><li><strong>Act 52-2022 Compliance Certificate</strong>\u2014due every two years. Requires an agreed-upon procedures (AUP) engagement performed by a licensed Puerto Rico CPA or qualified Compliance Professional. See <a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a> for details.</li>'
+  +'<li><strong>Act 188-2024 AUP Report</strong>\u2014an alternative to the standard biennial compliance certificate for qualifying decree holders. Consult counsel to determine eligibility.</li></ul>'
+
+  +'<h2>Annual Charitable Donation</h2>'
+  +'<ul><li><strong>Pre-2027 applicants:</strong> $10,000/year ($5K CEFCL + $5K qualifying nonprofits)</li>'
+  +'<li><strong>Post-2026 applicants:</strong> $15,000/year ($7.5K CEFCL + $7.5K qualifying nonprofits)</li>'
+  +'<li>Organizations cannot be controlled by the decree holder or family members</li>'
+  +'<li>Retain all donation receipts for AUP verification</li></ul>'
+
+  +'<h2>Late Filing Consequences</h2>'
+  +'<ul><li><strong>DDEC deficiency notices</strong> with fines up to $10,000 per violation</li>'
+  +'<li><strong>Automatic fines</strong> starting at $1,000 for failure to file annual reports (effective January 15, 2026)</li>'
+  +'<li><strong>Decree revocation</strong>\u2014persistent non-compliance can result in DDEC revoking your decree, with retroactive tax liability at standard PR rates</li>'
+  +'<li><strong>Form 8898 penalty:</strong> $1,000 for failure to file</li></ul>'
+
+  +'<h2>Self-Employment Tax</h2>'
+  +'<p>Self-employment tax obligations (Social Security and Medicare) apply to Act 60 decree holders who are self-employed or operate as sole proprietors, regardless of decree status. This is a federal obligation that the Act 60 decree does not affect.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help staying on top of your compliance obligations?</strong></p><p>We provide annual compliance reviews and coordinate with your CPA to ensure all deadlines are met.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/federal-reporting-act-60': {
+  title: 'Federal Reporting Obligations for Act 60 Decree Holders',
+  subtitle: 'FBAR, FATCA, CFC/PFIC, and why your federal filing obligations don\u2019t disappear.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>You Are Still a U.S. Person</h2>'
+  +'<p>Puerto Rico bona fide residents remain <strong>U.S. persons</strong> for virtually all federal reporting purposes. Your Act 60 decree provides Puerto Rico tax benefits\u2014it does not exempt you from federal information reporting, anti-deferral regimes, or financial account disclosure requirements.</p>'
+
+  +'<h2>FBAR (FinCEN Form 114)</h2>'
+  +'<p>If you have a financial interest in, or signature authority over, foreign financial accounts with an aggregate value exceeding $10,000 at any time during the calendar year, you must file an FBAR. This applies regardless of your Act 60 status. Filing is due April 15 with an automatic extension to October 15. Willful violations carry penalties up to the greater of $100,000 or 50% of the account balance per violation.</p>'
+
+  +'<h2>FATCA (Form 8938)</h2>'
+  +'<p>If your specified foreign financial assets exceed the applicable reporting threshold, you must file Form 8938 with your federal return. The thresholds vary based on filing status and whether you reside in the U.S. or abroad. Puerto Rico BFRs use the domestic thresholds.</p>'
+
+  +'<h2>CFC & Subpart F Income (IRC \u00a7\u00a7951\u2013965)</h2>'
+  +'<p>If you are a U.S. shareholder of a controlled foreign corporation (CFC), Subpart F income is taxable to you currently regardless of whether it is distributed. <strong>Act 60 decree benefits do not override federal anti-deferral regimes.</strong> Business owners with foreign entities must carefully analyze whether their structures create CFC exposure.</p>'
+
+  +'<h2>PFIC Rules (IRC \u00a71297)</h2>'
+  +'<p>Investments in passive foreign investment companies (PFICs) are subject to punitive federal tax treatment unless a qualifying fund election (QEF) or mark-to-market election is made. Act 60 decree holders with foreign mutual funds, hedge funds, or investment entities must evaluate PFIC classification carefully.</p>'
+
+  +'<h2>Form 8898</h2>'
+  +'<p>Individuals who begin or end bona fide residence in Puerto Rico must file Form 8898 with their federal return for the year of the change. <strong>Failure to file carries a $1,000 penalty.</strong></p>'
+
+  +'<h2>Key Takeaway</h2>'
+  +'<p>Act 60 reduces your Puerto Rico tax burden on qualifying income. It does not reduce your federal reporting obligations. Failure to comply with FBAR, FATCA, CFC/PFIC, or Form 8898 requirements can result in severe penalties\u2014even criminal prosecution\u2014independent of your decree status.</p>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need a compliance review of your federal reporting?</strong></p><p>We provide attorney-privileged reviews of your full reporting posture\u2014federal, Puerto Rico, and international.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/ddec-revocation-procedures': {
+  title: 'DDEC Decree Revocation: Procedures, Consequences & Tax Reversion',
+  subtitle: 'What happens when a decree is revoked\u2014and how to prevent it.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026.</p>'
+
+  +'<h2>DDEC Administrative Revocation</h2>'
+  +'<p>The Department of Economic Development and Commerce (DDEC) has the authority to revoke Act 60 decrees through an administrative process. Under Act 52-2022, the <strong>Economic Incentives Review Committee (CRIE)</strong> oversees enforcement and can initiate revocation proceedings for decree holders who fail to comply with their obligations.</p>'
+
+  +'<h2>Grounds for Revocation</h2>'
+  +'<ul><li><strong>Failure to file annual reports</strong> or pay the annual compliance fee</li>'
+  +'<li><strong>Failure to complete biennial compliance certification</strong> (Act 52-2022 AUP)</li>'
+  +'<li><strong>Non-compliance with decree terms</strong>\u2014including residency, donation, employment, or property requirements</li>'
+  +'<li><strong>Material misrepresentation</strong> in the application or annual filings</li>'
+  +'<li><strong>Fines exceeding $10,000</strong> per violation for specific deficiencies</li>'
+  +'<li><strong>Automatic fines</strong> starting at $1,000 for failure to file (effective January 15, 2026)</li></ul>'
+
+  +'<h2>Revocation Procedure</h2>'
+  +'<ul><li>DDEC issues a <strong>deficiency notice</strong> identifying the compliance failure</li>'
+  +'<li>The decree holder is given an opportunity to <strong>cure the deficiency</strong> within a specified period</li>'
+  +'<li>If the deficiency is not cured, DDEC may issue a <strong>formal revocation order</strong></li>'
+  +'<li>The decree holder may <strong>appeal</strong> the revocation through administrative channels</li></ul>'
+
+  +'<h2>Tax Reversion After Revocation</h2>'
+  +'<p>When a decree is revoked, the tax benefits are <strong>retroactively eliminated</strong>. This means:</p>'
+  +'<ul><li><strong>Puerto Rico taxes at standard rates</strong> apply for the entire period the decree was in effect\u2014including the standard corporate tax structure (20% normal tax plus graduated surtax, combined maximum 37.5%) for Chapter 3 holders</li>'
+  +'<li><strong>Interest and penalties</strong> accrue on the unpaid tax differential</li>'
+  +'<li><strong>Federal reassessment</strong>\u2014the IRS may also reexamine your federal returns if your decree status changes</li></ul>'
+
+  +'<h2>Tax Reversion After Decree Expiration</h2>'
+  +'<p>When a decree expires (and is not renewed), income earned after expiration reverts to standard Puerto Rico tax rates. The local tax rates that apply after expiration depend on the type of income and the current Puerto Rico tax code. Decree holders should plan for this transition well in advance of expiration.</p>'
+
+  +'<h2>DDEC-IRS Information Exchange</h2>'
+  +'<p>DDEC and the IRS exchange information about decree holders. A DDEC revocation or compliance finding can trigger an IRS examination. Approximately <strong>1,800 decree holder audits</strong> were underway or completed in 2025, reflecting the coordinated enforcement posture between the agencies.</p>'
+
+  +'<h2>How to Prevent Revocation</h2>'
+  +'<ul><li><strong>Maintain compliance year-round</strong>\u2014don\u2019t wait for a deficiency notice</li>'
+  +'<li><strong>Engage a CPA and attorney</strong> to ensure all filings, certifications, and donations are timely</li>'
+  +'<li><strong>Respond immediately</strong> to any DDEC communication or deficiency notice</li>'
+  +'<li><strong>Document everything</strong>\u2014residency records, donation receipts, employment records, and annual report submissions</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Received a DDEC deficiency notice?</strong></p><p>We provide attorney-privileged representation in DDEC compliance matters and revocation proceedings.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/ddec-application-process': {
+  title: 'DDEC Application Process for Act 60 Decrees',
+  subtitle: 'Required documents, fees, timelines, and filing procedures for Chapter 2 and Chapter 3 applications.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Verify requirements against the most current DDEC publications and Circular Letters.</p>'
+
+  +'<h2>Overview</h2>'
+  +'<p>All Act 60 decree applications are filed with the <strong>Department of Economic Development and Commerce (DDEC)</strong> through its online portal. The process differs slightly between Chapter 2 (Individual Resident Investor) and Chapter 3 (Export Services), but both follow the same general framework.</p>'
+
+  +'<h2>Chapter 2 (Individual Resident Investor) Application</h2>'
+  +'<h3>Required Documents</h3>'
+  +'<ul><li><strong>Completed DDEC application form</strong> (available on the DDEC portal)</li>'
+  +'<li><strong>Evidence of bona fide residency</strong>\u2014or intent to establish residency\u2014in Puerto Rico (lease agreement, property purchase contract, utility accounts)</li>'
+  +'<li><strong>Prior tax returns</strong>\u2014typically the last three years of federal (Form 1040) and state returns from your prior jurisdiction</li>'
+  +'<li><strong>Government-issued photo identification</strong></li>'
+  +'<li><strong>Criminal background certification</strong>\u2014Good Standing Certificate or equivalent</li>'
+  +'<li><strong>Evidence of six years of non-PR residency</strong> (for applications filed after December 31, 2026, per Act 38-2026)</li>'
+  +'<li><strong>Filing fee payment</strong> ($5,005)</li></ul>'
+
+  +'<h3>Chapter 2 Decree Terms</h3>'
+  +'<ul><li>Preferential tax rate on qualifying investment income (capital gains, interest, dividends) from PR sources</li>'
+  +'<li>Rate depends on application date: 0% for applications on or before December 31, 2026; 4% for applications after that date</li>'
+  +'<li>Property purchase requirement within two years of decree grant</li>'
+  +'<li>Annual charitable donation ($10,000 for pre-2027 applicants; $15,000 for post-2026 applicants)</li></ul>'
+
+  +'<h2>Chapter 3 (Export Services) Application</h2>'
+  +'<h3>Required Documents</h3>'
+  +'<ul><li><strong>Completed DDEC application form</strong></li>'
+  +'<li><strong>Business plan</strong> describing the export services to be performed from Puerto Rico</li>'
+  +'<li><strong>Corporate formation documents</strong>\u2014articles of incorporation, operating agreement, EIN</li>'
+  +'<li><strong>Evidence that services will be rendered from Puerto Rico</strong> for clients located outside PR</li>'
+  +'<li><strong>Financial projections</strong> including anticipated employment and revenue</li>'
+  +'<li><strong>Criminal background certification</strong></li>'
+  +'<li><strong>Filing fee payment</strong> ($5,005)</li></ul>'
+
+  +'<h3>Chapter 3 Decree Terms</h3>'
+  +'<ul><li>4% fixed income tax rate on export service income</li>'
+  +'<li>100% exemption on distributions from earnings and profits</li>'
+  +'<li>50% exemption on municipal license taxes (<em>patentes</em>)</li>'
+  +'<li>75% exemption on real and personal property taxes</li>'
+  +'<li>Employment requirements for businesses exceeding $3 million in annual revenue</li></ul>'
+
+  +'<h2>Fees</h2>'
+  +'<div style="overflow-x:auto;">'
+  +'<table style="width:100%;border-collapse:collapse;font-size:.88rem;margin:20px 0;">'
+  +'<thead><tr style="background:#1a2033;color:#fff;">'
+  +'<th style="padding:10px 16px;text-align:left;border:1px solid #2a3043;">Fee</th>'
+  +'<th style="padding:10px 16px;text-align:left;border:1px solid #2a3043;">Amount</th>'
+  +'<th style="padding:10px 16px;text-align:left;border:1px solid #2a3043;">When Due</th>'
+  +'</tr></thead>'
+  +'<tbody>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;">Application fee</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,005</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">At time of filing</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;">Acceptance fee</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$105</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Upon decree grant</td></tr>'
+  +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;">Annual compliance filing fee</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000+</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Annually with DDEC report</td></tr>'
+  +'</tbody></table></div>'
+
+  +'<h2>Processing Timeline</h2>'
+  +'<ul><li><strong>Initial review:</strong> DDEC typically acknowledges receipt within 2\u20134 weeks</li>'
+  +'<li><strong>Processing:</strong> 3\u20136 months is typical, though timelines vary based on DDEC workload and application completeness</li>'
+  +'<li><strong>Requests for additional information:</strong> DDEC may request supplemental documentation, which restarts portions of the review period</li>'
+  +'<li><strong>Decree grant:</strong> Upon approval, DDEC issues the decree letter specifying all terms and conditions</li></ul>'
+  +'<p><strong>Note:</strong> Filing an application does not guarantee approval. DDEC evaluates each application on its merits. Incomplete or deficient applications experience significant delays.</p>'
+
+  +'<h2>DDEC Contact Information</h2>'
+  +'<ul><li><strong>DDEC portal:</strong> <a href="https://ddec.pr.gov" target="_blank" rel="noopener">ddec.pr.gov</a></li>'
+  +'<li><strong>Office of Industrial Tax Exemption (OITE):</strong> Handles Act 60 decree applications</li>'
+  +'<li><strong>Physical address:</strong> 355 F.D. Roosevelt Ave., Suite 404, Hato Rey, PR 00918</li>'
+  +'<li><strong>Phone:</strong> (787) 758-4747</li></ul>'
+
+  +'<h2>Tips for a Smooth Application</h2>'
+  +'<ul><li><strong>Engage counsel before filing</strong>\u2014an attorney can review your application for completeness and flag potential issues</li>'
+  +'<li><strong>Prepare all documents in advance</strong>\u2014incomplete applications are the primary cause of delays</li>'
+  +'<li><strong>Establish residency steps early</strong>\u2014lease signing, utility setup, and bank account opening can begin before the application is filed</li>'
+  +'<li><strong>Coordinate with your CPA</strong>\u2014ensure your tax situation is clean before DDEC reviews your prior returns</li>'
+  +'<li><strong>Track deadlines</strong>\u2014if you want the 0% rate, your application must be filed on or before December 31, 2026</li></ul>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-38-2026-hb-505">Act 38-2026 (HB 505): What Changed</a> \u2014 new rates, donation requirements, and the December 2026 deadline</li>'
+  +'<li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 side-by-side comparison of decree eras</li>'
+  +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> \u2014 post-decree obligations and deadlines</li>'
+  +'<li><a href="/resources/compliance-certificate-act-52">Compliance Certificates & AUP</a> \u2014 biennial certification requirements</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Ready to apply for an Act 60 decree?</strong></p><p>We handle the full application process\u2014document preparation, DDEC filing, and decree negotiation.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+'/resources/pre-move-post-move-appreciation': {
+  title: 'Pre-Move vs. Post-Move Appreciation Under Act 60',
+  subtitle: 'How capital gains are measured, sourced, and taxed before and after establishing Puerto Rico residency.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+  +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Capital gains treatment depends on individual circumstances, decree terms, and federal law. Consult qualified counsel before acting.</p>'
+
+  +'<h2>Why the Distinction Matters</h2>'
+  +'<p>Act 60 Chapter 2 provides preferential tax rates on capital gains\u2014but only for appreciation that accrues <em>after</em> the investor establishes bona fide Puerto Rico residency. Appreciation that accrued <em>before</em> the move is treated differently at both the Puerto Rico and federal level. Misunderstanding this distinction is one of the most common\u2014and costly\u2014mistakes Act 60 decree holders make.</p>'
+
+  +'<h2>The Three Layers of Capital Gains</h2>'
+  +'<h3>1. Post-Move Appreciation (PR-Source)</h3>'
+  +'<p>Capital gains on appreciation that accrues after establishing bona fide PR residency are eligible for the preferential rate under your Chapter 2 decree: <strong>0%</strong> for applications filed on or before December 31, 2026, or <strong>4%</strong> for later applications under Act 38-2026. At the federal level, this income is excluded from U.S. gross income under <strong>IRC \u00a7933</strong> as Puerto Rico-source income of a bona fide PR resident.</p>'
+
+  +'<h3>2. Pre-Move Appreciation (\u226410 Years)</h3>'
+  +'<p>For assets held for 10 years or less before establishing PR residency, gains attributable to the pre-move holding period are subject to a preferential Puerto Rico rate (typically <strong>5%</strong> for pre-2023 decrees\u2014verify your specific decree terms). However, <strong>at the federal level, this appreciation remains U.S.-source income</strong> under the 10-year lookback rule.</p>'
+
+  +'<h3>3. Pre-Move Appreciation (&gt;10 Years)</h3>'
+  +'<p>For assets held for more than 10 years before establishing PR residency, the pre-move appreciation may qualify for a <strong>0%</strong> Puerto Rico rate (for pre-2023 decrees). The federal treatment depends on the lookback period analysis under Treas. Reg. \u00a71.937-2(f).</p>'
+
+  +'<h2>The Federal 10-Year Lookback Rule</h2>'
+  +'<p>This is the most critical\u2014and most frequently misunderstood\u2014rule for Act 60 investors. Under <strong>Treas. Reg. \u00a71.937-2(f)</strong>, capital gains on property acquired before becoming a bona fide PR resident are <strong>not</strong> treated as Puerto Rico-source income for federal purposes. This means:</p>'
+  +'<ul><li>The appreciation is <strong>U.S.-source income</strong> subject to federal capital gains tax at standard rates (0%, 15%, or 20% plus 3.8% NIIT)</li>'
+  +'<li>The IRC \u00a7933 exclusion <strong>does not apply</strong> to pre-move appreciation</li>'
+  +'<li>The lookback applies regardless of your Act 60 decree terms</li></ul>'
+
+  +'<h3>Split-Source Election</h3>'
+  +'<p>Taxpayers may elect to use the <strong>possession holding period method</strong> to split gains between pre-move (U.S.-source) and post-move (PR-source) portions based on the respective holding periods. This allows the post-move portion to qualify for the IRC \u00a7933 exclusion. See <strong>IRS AM 2024-005</strong> (Dec. 2024) and <strong>CCM 202538025</strong> for current IRS guidance on this methodology.</p>'
+
+  +'<h2>How Appreciation Is Measured</h2>'
+  +'<ul><li><strong>Basis:</strong> Your original cost basis in the asset (purchase price plus adjustments)</li>'
+  +'<li><strong>FMV at date of PR residency:</strong> The fair market value of the asset on the date you establish bona fide PR residency. This is the dividing line between pre-move and post-move appreciation.</li>'
+  +'<li><strong>Sale price:</strong> The amount realized upon disposition</li></ul>'
+  +'<p><strong>Pre-move gain</strong> = FMV at PR residency date \u2212 original basis</p>'
+  +'<p><strong>Post-move gain</strong> = Sale price \u2212 FMV at PR residency date</p>'
+  +'<p><strong>Practical tip:</strong> Obtain independent appraisals of significant assets as close to your move date as possible. Contemporaneous valuations are far more defensible in an IRS audit than reconstructed values.</p>'
+
+  +'<h2>Interaction with IRC \u00a71031 (Like-Kind Exchanges)</h2>'
+  +'<p>Like-kind exchanges under IRC \u00a71031 defer\u2014but do not eliminate\u2014capital gains. If you performed a \u00a71031 exchange before moving to Puerto Rico, the deferred gain carries over and is treated as pre-move appreciation for Act 60 purposes. The lookback period is measured from the date you originally acquired the relinquished property, not the replacement property. This means \u00a71031 exchanges do not reset the clock for the 10-year lookback rule.</p>'
+
+  +'<h2>Practical Calculation Example</h2>'
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:20px 0;border-radius:0 8px 8px 0;">'
+  +'<p style="margin:0 0 8px;font-size:.88rem;"><strong>Example:</strong> An investor purchased stock for $500,000 in 2018 and moved to Puerto Rico in 2024 (obtaining a Chapter 2 decree with the 0% rate). At the move date, the stock was worth $800,000. In 2027, they sell for $1,200,000.</p>'
+  +'<ul style="font-size:.88rem;margin:8px 0 0;padding-left:18px;">'
+  +'<li><strong>Pre-move gain:</strong> $800K \u2212 $500K = $300,000 (held &lt;10 years \u2192 5% PR rate; federally taxable at standard rates)</li>'
+  +'<li><strong>Post-move gain:</strong> $1.2M \u2212 $800K = $400,000 (0% PR rate under decree; excluded from federal income under IRC \u00a7933)</li>'
+  +'<li><strong>Federal tax due:</strong> $300,000 \u00d7 23.8% (20% + 3.8% NIIT) = $71,400</li>'
+  +'<li><strong>PR tax due:</strong> $300,000 \u00d7 5% = $15,000</li>'
+  +'<li><strong>Total tax:</strong> $86,400 on a $700,000 gain (effective rate ~12.3%)</li></ul>'
+  +'<p style="margin:8px 0 0;font-size:.82rem;color:#706b62;">This is a simplified illustration. Actual tax outcomes depend on decree terms, filing status, other income, and applicable credits. Consult your tax advisor.</p></div>'
+
+  +'<h2>Act 52-2022 and Act 38-2026 Changes</h2>'
+  +'<p>For applications filed after December 31, 2026 (under Act 38-2026), post-move capital gains are subject to a 4% preferential rate rather than 0%. Pre-move appreciation rates are specified in individual decree terms. See the <a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> for a side-by-side breakdown by era.</p>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 rates by decree era</li>'
+  +'<li><a href="/resources/act-38-2026-hb-505">Act 38-2026 (HB 505)</a> \u2014 the 4% regime and grandfathering</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement & Campaign 685</a> \u2014 how the IRS audits pre-move gains</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting Obligations</a> \u2014 FBAR, FATCA, and Form 8898</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Need help structuring your pre-move vs. post-move gains?</strong></p><p>We provide attorney-privileged analysis of your capital gains position and coordinate with your CPA for proper reporting.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+}
+
+}; /* end PAGES */
+
+/* ============================================
+   RESOURCE CARDS INJECTION FOR MAIN /resources PAGE
+   Adds card sections for migrated blog content
+   ============================================ */
+function injectResourceCards() {
+  if (path !== '/resources') return;
+
+  /* Find the rl-rc container (the main resources wrapper) */
+  var rc = document.querySelector('.rl-rc');
+  if (!rc) return;
+
+  /* Don't double-inject */
+  if (document.querySelector('.rl-extra-cards')) return;
+
+  /* Find the CTA section at the bottom to insert before it */
+  var cta = rc.querySelector('.rl-cta');
+
+  var sections = [
+    {
+      heading: 'Trusts & Asset Protection',
+      icon: '\uD83D\uDEE1\uFE0F',
+      cards: [
+        { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts' },
+        { title: 'Trust vs. Will in Puerto Rico', desc: 'A side-by-side comparison of wills and trusts under Puerto Rico law, including costs, probate, privacy, and which is right for your situation.', url: '/resources/trust-vs-will-puerto-rico' },
+        { title: 'Asset Protection with Irrevocable Trusts', desc: 'How irrevocable trusts under Ley 219-2012 protect your assets from creditors, lawsuits, and estate taxes.', url: '/resources/asset-protection-irrevocable-trusts' }
+      ]
+    },
+    {
+      heading: 'Estate Planning',
+      icon: '\uD83D\uDCCB',
+      cards: [
+        { title: 'Forced Heirship & Your Estate Plan', desc: 'How Puerto Rico\u2019s forced heirship rules (leg\u00EDtima) affect your estate plan and strategies to work within the system.', url: '/resources/forced-heirship-estate-plan' },
+        { title: 'Act 60 & Estate Planning Mistakes', desc: 'Five critical mistakes Act 60 decree holders make with estate planning \u2014 and how to avoid them.', url: '/resources/act-60-estate-planning-mistakes' }
+      ]
+    },
+    {
+      heading: 'Act 60 Tax Incentives',
+      icon: '\u2600\uFE0F',
+      cards: [
+        { title: 'Act 38-2026 (HB 505): What Changed', desc: 'The most significant changes to Act 60 since the program\u2019s creation \u2014 new 4% rate, grandfathering, $15K donation, 2055 extension.', url: '/resources/act-38-2026-hb-505', featured: true },
+        { title: 'IRS Enforcement & Campaign 685', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
+        { title: 'Why Hire a Law Firm for Act 60', desc: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 what CPAs cannot provide.', url: '/resources/why-law-firm-act-60' },
+        { title: 'Compliance Certificates & AUP', desc: 'Act 52-2022 biennial compliance certification, agreed-upon procedures, and what happens if you don\u2019t renew.', url: '/resources/compliance-certificate-act-52' },
+        { title: 'Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026', desc: 'Rates, donations, employment, and compliance differ by decree era. Side-by-side comparison table.', url: '/resources/act-60-decree-comparison', featured: true },
+        { title: 'Annual Compliance Calendar & Deadlines', desc: 'Every fee, filing, and deadline Act 60 decree holders must track\u2014DDEC, IRS, FBAR, FATCA, and more.', url: '/resources/annual-compliance-calendar' },
+        { title: 'Federal Reporting: FBAR, FATCA, CFC/PFIC', desc: 'Your federal reporting obligations don\u2019t disappear with an Act 60 decree. FBAR, FATCA, Subpart F, and Form 8898.', url: '/resources/federal-reporting-act-60' },
+        { title: 'DDEC Revocation Procedures', desc: 'How decrees get revoked, the administrative process, tax reversion consequences, and how to prevent it.', url: '/resources/ddec-revocation-procedures' },
+        { title: 'DDEC Application Process', desc: 'Required documents, fees, timelines, and filing procedures for Chapter 2 and Chapter 3 decree applications.', url: '/resources/ddec-application-process' },
+        { title: 'Pre-Move vs. Post-Move Appreciation', desc: 'How capital gains are measured, sourced, and taxed before and after establishing PR residency. Includes the federal 10-year lookback rule.', url: '/resources/pre-move-post-move-appreciation' },
+        { title: 'Ley 60: Gu\u00EDa para Inversionistas', desc: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.', url: '/resources/ley-60-guia-inversionistas', lang: 'es' }
+      ]
+    },
+    {
+      heading: 'Recursos en Espa\u00F1ol',
+      icon: '\uD83C\uDDFA\uD83C\uDDF8',
+      cards: [
+        { title: 'Fideicomiso Irrevocable en Puerto Rico', desc: 'Gu\u00EDa completa sobre fideicomisos irrevocables bajo la Ley 219-2012. Protecci\u00F3n de activos, beneficios contributivos y planificaci\u00F3n sucesoral.', url: '/resources/fideicomiso-irrevocable-puerto-rico', lang: 'es' },
+        { title: 'Planificaci\u00F3n Sucesoral en Puerto Rico', desc: 'Todo lo que necesita saber sobre planificaci\u00F3n sucesoral en Puerto Rico. Leg\u00EDtima, testamentos, fideicomisos, poderes y directivas de salud.', url: '/resources/planificacion-sucesoral-puerto-rico', lang: 'es' },
+        { title: 'Declaratoria de Herederos', desc: 'El proceso de declaratoria de herederos en Puerto Rico paso a paso. Requisitos, plazos, costos y c\u00F3mo evitarlo.', url: '/resources/declaratoria-de-herederos-puerto-rico', lang: 'es' }
+      ]
+    }
+  ];
+
+  var html = '<div class="rl-extra-cards">';
+
+  sections.forEach(function(sec) {
+    html += '<div style="max-width:1140px;margin:0 auto 12px;padding:0 28px;">'
+      + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.25rem;font-weight:700;color:#1a2033;margin:36px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">'
+      + sec.icon + ' ' + sec.heading + '</h2></div>'
+      + '<div class="rl-grid">';
+
+    sec.cards.forEach(function(card) {
+      var langAttr = card.lang ? ' lang="' + card.lang + '"' : '';
+      html += '<div class="rl-card"' + langAttr + '>'
+        + '<h3>' + card.title + '</h3>'
+        + '<p>' + card.desc + '</p>'
+        + '<a href="' + card.url + '">' + (card.lang === 'es' ? 'Leer m\u00E1s \u2192' : 'Read more \u2192') + '</a>'
+        + '</div>';
+    });
+
+    html += '</div>';
+  });
+
+  html += '</div>';
+
+  /* Add booking CTA to Resources hub */
+  html += '<div style="max-width:680px;margin:48px auto;padding:40px 36px;background:linear-gradient(160deg,#1a2033 0%,#243047 100%);border-radius:10px;text-align:center;box-sizing:border-box;">'
+    + '<h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.35rem;font-weight:700;color:#fff;margin:0 0 12px;letter-spacing:-.02em;">Have Questions About What You\u2019re Reading?</h2>'
+    + '<p style="color:rgba(255,255,255,.6);font-size:.9rem;line-height:1.6;margin:0 0 24px;max-width:500px;margin-left:auto;margin-right:auto;">Our articles provide general guidance, but every situation is different. Schedule a free 30-minute strategy call for personalized advice.</p>'
+    + '<a href="/calendly" style="display:inline-block;padding:14px 28px;background:#bfa35d;color:#1a2033;font-size:.85rem;font-weight:700;text-decoration:none;border-radius:6px;transition:background .25s;">Book a Free Strategy Call</a>'
+    + '<p style="color:rgba(255,255,255,.4);font-size:.8rem;margin-top:14px;">Or call <a href="tel:+17872361657" style="color:#bfa35d;text-decoration:none;">(787) 236-1657</a></p>'
+    + '</div>';
+
+  var container = document.createElement('div');
+  container.innerHTML = html;
+
+  /* Insert before CTA if found, otherwise append at end */
+  if (cta) {
+    while (container.firstChild) {
+      cta.parentNode.insertBefore(container.firstChild, cta);
+    }
+  } else {
+    while (container.firstChild) {
+      rc.appendChild(container.firstChild);
+    }
+  }
+}
+
+/* Inject content into subpages, replacing blog dashboard if present */
+function injectSubpage() {
+  var page = PAGES[path];
+  if (!page) return;
+
+  /* Find the target container - try multiple selectors */
+  var target = document.getElementById('sections');
+
+  /* If #sections not found, look for blog dashboard and use its parent */
+  if (!target) {
+    var blogDash = document.getElementById('rl-blog-dashboard');
+    if (blogDash) {
+      target = blogDash.parentElement;
+    }
+  }
+
+  /* Fallback to common Squarespace content wrappers */
+  if (!target) {
+    target = document.querySelector('.page-section .content-wrapper')
+          || document.querySelector('main .content-wrapper')
+          || document.querySelector('main article')
+          || document.querySelector('#page .content-wrapper');
+  }
+
+  if (!target) return;
+
+  /* Check if our content already exists (don't double-inject) */
+  if (document.querySelector('.rl-sub')) return;
+
+  /* Build the subpage */
+  var wrapper = document.createElement('div');
+  wrapper.className = 'rl-sub';
+  wrapper.innerHTML = ''
+    + '<div class="rl-sub-hero"><h1>' + page.title + '</h1><p>' + page.subtitle + '</p></div>'
+    + page.content()
+    + '<div class="rl-sub-disclaimer" style="margin-top:32px;padding-top:20px;border-top:1px solid #e8e9ee;font-size:.78rem;color:#706b62;line-height:1.5;text-align:center;">'
+    + '<p style="margin-bottom:8px;"><strong>Last Updated:</strong> April 2026</p>'
+    + '<p>The information on this page is for general educational purposes only and does not constitute legal or tax advice. Tax outcomes depend on individual circumstances including residency, income sourcing, decree terms, and applicable law. No attorney-client relationship is formed by viewing this content. For advice specific to your situation, <a href="/calendly" style="color:#a68c42;">schedule a consultation</a>.</p>'
+    + '</div>';
+
+  /* Insert into page, replacing existing content */
+  target.innerHTML = '';
+  target.appendChild(wrapper);
+
+  /* Ensure all ancestor containers are full-width so centering works */
+  var el = target;
+  while (el && el !== document.body) {
+    el.style.maxWidth = '100%';
+    el.style.width = '100%';
+    el.style.paddingLeft = '0';
+    el.style.paddingRight = '0';
+    el.style.marginLeft = '0';
+    el.style.marginRight = '0';
+    el = el.parentElement;
+    /* Stop at main page section level */
+    if (el && (el.id === 'sections' || el.id === 'page' || el.tagName === 'MAIN')) break;
+  }
+
+  /* Also hide the blog dashboard if it exists elsewhere on the page */
+  document.querySelectorAll('#rl-blog-dashboard').forEach(function(el) {
+    el.style.display = 'none';
+  });
+
+  /* Bind FAQ accordions if present */
+  wrapper.querySelectorAll('.rl-faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      var answer = btn.nextElementSibling;
+      if (answer) answer.setAttribute('data-open', expanded ? 'false' : 'true');
+    });
+  });
+}
+
+/* Run with delay to ensure Squarespace has finished rendering sections */
+/* Clear header overlap: Squarespace header is position:absolute, so injected
+   content needs padding-top to avoid sitting behind it */
+function fixHeaderOverlap() {
+  var content = document.querySelector('.rl-rc') || document.querySelector('.rl-sub');
+  if (!content) return;
+  var header = document.querySelector('header');
+  if (!header) return;
+  var headerH = header.getBoundingClientRect().height;
+  if (headerH > 50) {
+    var target = content.closest('#sections') || content.parentElement;
+    if (target && !target.dataset.rlPadded) {
+      target.style.paddingTop = (headerH + 20) + 'px';
+      target.dataset.rlPadded = '1';
+    }
+  }
+}
+
+function run() {
+  injectSubpage();
+  injectResourceCards();
+  fixHeaderOverlap();
+}
+
+/* Use MutationObserver to detect when Squarespace renders page content */
+var injected = false;
+var observer;
+function tryRun() {
+  if (injected) return;
+  run();
+  if (document.querySelector('.rl-sub') || document.querySelector('.rl-rc')) {
+    injected = true;
+    if (observer) observer.disconnect();
+  }
+}
+
+function boot() {
+  tryRun();
+  if (!injected && typeof MutationObserver !== 'undefined') {
+    observer = new MutationObserver(function() { tryRun(); });
+    observer.observe(document.body || document.documentElement, { childList: true, subtree: true });
+    setTimeout(function() { if (observer) observer.disconnect(); }, 8000);
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
+}
+window.addEventListener('load', tryRun);
+
+/* Fix any legacy /book-an-appointment links site-wide */
+function fixBookingLinks() {
+  document.querySelectorAll('a[href*="/book-an-appointment"]').forEach(function(a) {
+    a.href = a.href.replace('/book-an-appointment', '/calendly');
+  });
+}
+window.addEventListener('load', fixBookingLinks);
+if (typeof MutationObserver !== 'undefined') {
+  var linkObs = new MutationObserver(fixBookingLinks);
+  linkObs.observe(document.body || document.documentElement, { childList: true, subtree: true });
+  setTimeout(function() { linkObs.disconnect(); }, 8000);
+}
+
+})();
+</script>

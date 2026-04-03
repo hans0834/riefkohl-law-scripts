@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <description>Legal analysis and case law from Riefkohl Law</description>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <wp:author>
+    <wp:author_id>1</wp:author_id>
+    <wp:author_login>hans</wp:author_login>
+    <wp:author_display_name><![CDATA[Hans Riefkohl]]></wp:author_display_name>
+  </wp:author>
+
+  <item>
+    <title><![CDATA[Banking & Insurance Trust Disputes in Puerto Rico — Case Analysis]]></title>
+    <link>https://www.riefkohllaw.com/blog/banking-insurance-trust-disputes-puerto-rico</link>
+    <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[hans]]></dc:creator>
+    <content:encoded><![CDATA[<h2>Need Help With a Trust or Estate Dispute?</h2>
+
+<p>If you are involved in a banking, insurance, or trust dispute in Puerto Rico, understanding the relevant case law is essential to protecting your rights. Attorney Hans Riefkohl at Riefkohl Law provides strategic counsel on trust litigation, fiduciary duty claims, and asset protection.</p>
+
+<p><strong><a href="/calendly">Schedule a Free Consultation →</a></strong></p>
+
+<p><em>Related resources: <a href="/puerto-rico-trusts">Puerto Rico Trust Law Guide</a> | <a href="/resources">Legal Resources</a> | <a href="/resources#trust-law-series">Trust Law Article Series</a></em></p>]]></content:encoded>
+    <excerpt:encoded><![CDATA[Puerto Rico case law on banking and insurance trust disputes. Court rulings on surety bonds, fraudulent transfers, mortgage foreclosure, and trust assets.]]></excerpt:encoded>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_date>2026-03-16 00:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 00:00:00</wp:post_date_gmt>
+    <wp:post_name>banking-insurance-trust-disputes-puerto-rico</wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+
+  <item>
+    <title><![CDATA[Banking & Insurance Trust Disputes in Puerto Rico — Case Analysis]]></title>
+    <link>https://www.riefkohllaw.com/blog/banking-insurance-trust-disputes-puerto-rico</link>
+    <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+    <dc:creator><![CDATA[hans]]></dc:creator>
+    <content:encoded><![CDATA[<h2>Need Help With a Trust or Estate Dispute?</h2>
+
+<p>If you are involved in a banking, insurance, or trust dispute in Puerto Rico, understanding the relevant case law is essential to protecting your rights. Attorney Hans Riefkohl at Riefkohl Law provides strategic counsel on trust litigation, fiduciary duty claims, and asset protection.</p>
+
+<p><strong><a href="/calendly">Schedule a Free Consultation →</a></strong></p>
+
+<p><em>Related resources: <a href="/puerto-rico-trusts">Puerto Rico Trust Law Guide</a> | <a href="/resources">Legal Resources</a> | <a href="/resources#trust-law-series">Trust Law Article Series</a></em></p>]]></content:encoded>
+    <excerpt:encoded><![CDATA[Puerto Rico case law on banking and insurance trust disputes. Court rulings on surety bonds, fraudulent transfers, mortgage foreclosure, and trust assets.]]></excerpt:encoded>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_date>2026-03-16 00:00:00</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 00:00:00</wp:post_date_gmt>
+    <wp:post_name>banking-insurance-trust-disputes-puerto-rico</wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+    <category domain="category" nicename="trust-law"><![CDATA[Trust Law]]></category>
+    <category domain="category" nicename="case-analysis"><![CDATA[Case Analysis]]></category>
+    <category domain="post_tag" nicename="trust-law"><![CDATA[trust-law]]></category>
+    <category domain="post_tag" nicename="case-analysis"><![CDATA[case-analysis]]></category>
+    <category domain="post_tag" nicename="puerto-rico"><![CDATA[puerto-rico]]></category>
+  </item>
+</channel>
+</rss>

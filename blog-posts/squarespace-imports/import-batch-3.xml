@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <item>
+    <title><![CDATA[Engineer's Failure to Communicate or Deliver Work Product]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Engineer's Failure to Communicate or Deliver Work Product Constitutes Defective Performance Justifying Contract Cancellation Under Puerto Rico Civil Code</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 27, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Matos Nazario v. Rivera Ayala, 2026 WL 710443 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>In May 2024, Juan Eugenio Matos Nazario contracted engineer Humberto Rivera Ayala to segregate a parcel of land in Cabo Rojo. Matos Nazario delivered a check for $4,200.00 (50% of the total $8,400.00 contract price) on June 7, 2024. After payment, Rivera Ayala became unresponsive—ignoring emails, phone calls, and letters. Matos Nazario called over 20 times without reaching Rivera Ayala, received no messages in response, and received no details about the segregation plan. On July 26, 2024, Matos Nazario sent a formal letter canceling the project.</p>
+
+    <h2>Procedural Background</h2>
+    <p>On August 27, 2024, Matos Nazario filed a complaint with the Departamento de Asuntos del Consumidor (DACO) alleging deceptive practices. Rivera Ayala answered on October 23, 2024, admitting the deposit was made but claiming he performed work totaling $5,010.00 in expenses. DACO held a hearing and issued a Resolution on October 16, 2025, finding that Rivera Ayala substantially breached the contract and ordering return of the $4,200.00 deposit. Rivera Ayala's motion for reconsideration was denied, and he sought judicial review.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The main controversies were: (1) whether Rivera Ayala's failure to communicate or deliver work product constituted a substantial breach justifying contract cancellation under Puerto Rico civil law; and (2) whether DACO erred in ordering the return of the deposit when Rivera Ayala claimed he was performing work during the relevant period.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Rivera Ayala argued that he was performing professional work during the relevant period and that the $5,010.00 in claimed expenses exceeded the deposit, making a refund unwarranted. Matos Nazario argued that Rivera Ayala's total failure to communicate, provide updates, or deliver any work product after receiving payment constituted a material breach justifying cancellation.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones confirmed the DACO Resolution ordering return of the $4,200.00 deposit.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied Puerto Rico contract law principles governing partial and defective performance. Under this framework, resolution of a contract is justified when partial or defective performance frustrates the contract's purpose for the injured party. The court found that the segregation plan was incomplete (lacking measurement tables and an elaboration date), that Rivera Ayala provided no updates on the project, did not respond to any communications after receiving the check, and presented no evidence of work logs, hours breakdowns, or information collected. These facts constituted defective performance affecting the entire purpose of the agreement. Although the court noted that Matos Nazario could have claimed additional damages under Article 1158 of the Puerto Rico Civil Code, he did not, so the remedy was limited to the $4,200.00 return.</p>]]></content:encoded>
+    <wp:post_id>11</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-04-engineer-defective-performance]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Dual-Tracking Protections Under Federal Regulation X and Puerto Rico Law 169]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Dual-Tracking Protections Under Federal Regulation X and Puerto Rico Law 169: Bank Not Barred from Foreclosure Where Loss Mitigation Application Was Incomplete</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 27, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Banco Popular de Puerto Rico v. Melóndez Torres, 2026 WL 710303 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>On May 31, 2022, Banco Popular de Puerto Rico filed a complaint against Ferdinand Melóndez Torres and related defendants seeking payment of an outstanding debt of $254,240.69 plus accumulated interest, and execution of the mortgage on residential property through public auction sale. The defendants raised defenses based on loss mitigation protections, arguing the bank was barred from foreclosure.</p>
+
+    <h2>Procedural Background</h2>
+    <p>On October 23, 2025, defendants filed a Motion to Dismiss for Non-Compliance with Law 169 of 2016 and 12 C.F.R. § 1024.41(f), raising three arguments: (1) BPPR was barred because a loss mitigation request was pending (though incomplete) and should be considered "facially complete" under dual-tracking protections; (2) BPPR was barred because it had certified that the debtor completed a loss mitigation request; and (3) BPPR violated § 1024.41(e)(1) of Regulation X by providing late and bad faith notification of a short sale offer without the required 14-day minimum notice period. The trial court denied the motion to dismiss and denied the motion for reconsideration. Defendants sought certiorari review.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether an incomplete loss mitigation application could be deemed "facially complete" for purposes of triggering the dual-tracking protections under 12 C.F.R. § 1024.41(c)(2)(iv) and Puerto Rico Law 169 of 2016, thereby barring the bank from proceeding with foreclosure. The intersection of federal Regulation X with Puerto Rico's own mortgage foreclosure protections created a complex regulatory overlay that the court was asked to parse.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The defendants argued that their loss mitigation request, though incomplete, should be treated as facially complete for dual-tracking protection purposes, and that the bank's certification and short sale notice practices violated federal and Puerto Rico law. Banco Popular argued that an incomplete application does not trigger dual-tracking protections and that it complied with all applicable regulatory requirements.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones denied the certiorari petition, effectively affirming the trial court's denial of the motion to dismiss.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied the discretionary factors for certiorari review under Rule 40 of the Court of Appeals Rules and Rule 52.1 of the Puerto Rico Rules of Civil Procedure. After examining the interlocutory resolution, the court found no evidence that the trial court acted with partiality, abused its discretion, or issued a decision contrary to law. The trial court had appropriately evaluated the parties' positions regarding loss mitigation request procedures, loss mitigation certifications, and short sale notice requirements. The decision underscores the interplay between federal mortgage servicing regulations and Puerto Rico's own foreclosure protection framework, and the deference afforded to trial courts in parsing these overlapping regulatory requirements at the interlocutory stage.</p>]]></content:encoded>
+    <wp:post_id>12</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-05-dual-tracking-protections]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Motor Vehicle Warranty Regulation and Dealer Financial Responsibility]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Motor Vehicle Warranty Regulation Requires Dealer to Bear Full Financial Responsibility When Contract Is Rescinded for Unremedied Defect</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 27, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Ruiz Valle v. Ebenezer Auto, LLC; Popular Auto, LLC, 2026 WL 710265 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>On August 4, 2023, Rosa E. Ruiz Valle purchased a used 2022 Mitsubishi vehicle with 13,800 miles from Ebenezer Auto, LLC. The vehicle was financed through Popular Auto, LLC, with Banco Popular de Puerto Rico (BPPR) as the financing entity. Shortly after purchase, the vehicle developed a noise in the left side panel. Ruiz Valle contacted Ebenezer regarding the defect, but the dealer disclaimed responsibility. She took the vehicle to Caribbean Auto for evaluation. An inspection on August 12, 2024, confirmed the vehicle had traveled 19,702 miles and showed multiple defects.</p>
+
+    <h2>Procedural Background</h2>
+    <p>In December 2023, Ruiz Valle filed a complaint with DACO alleging breach of warranty and improper disclosure of the defect. DACO issued a resolution declaring the complaint valid and ordering contract resolution and return of payments. However, BPPR was not properly included in the proceedings. The dealer appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The main controversies were: (1) whether DACO erred in issuing a resolution that did not address all parties' rights, particularly the financing entity BPPR, which was not properly joined as an indispensable party; (2) whether the dealer had a reasonable opportunity to repair the defect before contract rescission was warranted; and (3) how financial responsibility should be distributed among the dealer, the financing entity, and the consumer when a financed vehicle purchase is rescinded under Puerto Rico's Motor Vehicle Warranty Regulation (Regulation No. 7159).</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Ebenezer Auto argued that DACO's resolution was procedurally deficient for failing to include the financing entity and that the financial distribution was erroneous. Ruiz Valle argued the defect was never remedied despite notice, warranting full contract rescission and return of all payments.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones modified the DACO resolution. It held Ebenezer Auto responsible for returning all financing payments to Ruiz Valle and for releasing the outstanding loan balance with BPPR. BPPR was held responsible for returning the monthly financing payments already collected from Ruiz Valle.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court emphasized that appellate courts give broad deference to administrative agency decisions, limited to situations where the agency acted arbitrarily, irrationally, or illegally, or where decisions lack substantial evidence. The court found that DACO incorrectly applied the principle of solidaridad (joint liability) to bind BPPR without properly including it in the proceedings. Under the Motor Vehicle Warranty Regulation (Regulation No. 7159), the vendor must provide warranty coverage for vehicles up to certain mileage thresholds, and when the vendor cannot or will not correct the defect, contract rescission is appropriate. The court modified the financial obligation distribution to ensure each party bore appropriate responsibility, distinguishing between the dealer's obligation to make the consumer whole and the financing entity's obligation to return payments already collected.</p>]]></content:encoded>
+    <wp:post_id>13</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-06-motor-vehicle-warranty]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Constitutional Right of Access to Public Information and Document Metadata]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Constitutional Right of Access to Public Information Requires Government Agency to Disclose Document Metadata in Legible Format</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 26, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Román v. Departamento de Asuntos del Consumidor (DACO), 2026 WL 710296 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>On December 2, 2024, Katherin Román filed a Special Request for Access to Public Information under Law 141-2019 (the Transparency and Expedited Access Law) seeking access to records and reproductions of public documents from certain DACO cases. DACO allowed access to some writings but refused to provide certain files, claiming it could not locate the physical files. DACO later provided digitalized copies from its SIAC system but claimed the documentation was incomplete because it lacked information in the "created by" and "modified by" fields. The screen captures provided were also illegible.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Román filed a motion for imposition of economic sanctions for DACO's non-compliance. A series of motions and counter-motions ensued regarding compliance with the transparency law and the completeness of the provided documentation. The trial court ordered DACO to provide the information. DACO sought certiorari review.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether information about who created and modified documents in DACO's electronic case management system constituted "routine operational information" exempt from disclosure under Puerto Rico's transparency law, or whether it fell within the broad definition of "documento" subject to mandatory disclosure. A secondary controversy involved the format requirements for providing public records, specifically whether DACO could satisfy the law by providing illegible screen captures rather than readable copies.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>DACO argued that information about document creation and modification was internal system data and not subject to public disclosure requirements. Román argued that the right of access to public information is constitutionally grounded and that the law's broad definition of "documento" encompasses electronic metadata in government systems.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones granted the certiorari petition and modified the lower court's order to require DACO to provide the complete screen captures, including the "created by" and "modified by" designations, in legible colored photograph format, in both physical and electronic formats.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court held that the right of access to public information is a fundamental constitutional right tied to freedom of speech and association under the Puerto Rico Constitution. While this right is not absolute and may be limited by compelling public interest, the government must demonstrate precise and unequivocal applicability of any claimed exception. Law 141-2019 defines "documento" broadly to include all materials in any format, including electronic records created by government entities. DACO's claim that metadata about document creation and modification was internal system information exempt from disclosure was rejected. The court emphasized that the transparency law must be liberally interpreted in favor of public access. The decision establishes that electronic case management metadata, including user attribution for document creation and modification, falls within the scope of public information subject to disclosure.</p>]]></content:encoded>
+    <wp:post_id>14</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-07-public-information-access]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Federal District Court Jurisdiction Before Discovery Sanctions]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Federal District Court Must Resolve Jurisdiction Before Imposing Discovery Sanctions in Puerto Rico Medical Malpractice Action</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> United States Court of Appeals for the First Circuit</p>
+        <p><strong>Date:</strong> March 9, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Villanueva Pérez v. Hospital Damas, Inc., 2026 WL 693346 (1st Cir. 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Marilix Villanueva Pérez and Luis Angel Román Peña brought suit against Hospital Damas, Inc. and individual physicians in the United States District Court for the District of Puerto Rico. The defendant hospital filed a motion to dismiss for lack of diversity jurisdiction.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Despite the pending jurisdictional challenge, the district court did not rule on Hospital Damas's motion to dismiss for lack of jurisdiction. Instead, the court dismissed the case on substantive grounds for the plaintiffs' failure to support their claims with necessary expert witness testimony. The plaintiffs appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the district court erred by bypassing a pending motion to dismiss for lack of diversity jurisdiction and instead dismissing the case on the merits. The case also raised the question of whether a Puerto Rico medical malpractice action brought in federal court under diversity jurisdiction must comply with the expert witness requirements applicable to such claims.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The plaintiffs argued the district court erred by resolving the merits before addressing the threshold jurisdictional challenge. Hospital Damas raised jurisdictional defenses while also defending on the merits.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The First Circuit vacated the district court's decision and remanded. It held that a court's authority to hear a particular case is a necessary precondition to proper performance of judicial function, and that when confronted with motions under both Rule 12(b)(1) (lack of jurisdiction) and Rule 12(b)(6) (failure to state a claim), the court ordinarily ought to decide the jurisdictional question before addressing the merits.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied the well-established principle that subject matter jurisdiction is a threshold issue that must be resolved before a court can properly exercise any of its other powers. If the district court lacks diversity jurisdiction, its merits ruling would be a nullity. On remand, the court was encouraged to first determine whether diversity jurisdiction exists and, if so, to reassess the discovery sanction imposed on the plaintiffs. The case highlights the particular complexities of Puerto Rico medical malpractice litigation in federal court, where the intersection of federal diversity jurisdiction requirements with Puerto Rico's substantive medical malpractice standards creates procedural obligations that courts must navigate in proper sequence.</p>]]></content:encoded>
+    <wp:post_id>15</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-08-federal-district-court-jurisdiction]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+</channel>
+</rss>

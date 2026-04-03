@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <item>
+    <title><![CDATA[No-Contest Clause Triggered by Declaratory Relief Petition]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>No-Contest Clause Triggered by Declaratory Relief Petition Seeking to Interpret Its Own Validity</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeals of Minnesota</p>
+        <p><strong>Date:</strong> February 23, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">In re The Gus A. Chafoulias Revocable Trust, No. A25-0665, 2026 WL 493295 (Minn. Ct. App. Feb. 23, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Gus Chafoulias created a revocable trust in 2005, restated it in 2015 naming his son Andrew as co-trustee, and amended it in 2020. After Gus died in late 2020, his daughter Ann became suspicious of Andrew&rsquo;s management. Andrew&rsquo;s 2020 accounting revealed he had taken nearly $17 million in loans from the trust without repayment. His 2021 inventory of Gus&rsquo;s personal property omitted gold bars and valuable artworks. Andrew gifted trust property to non-beneficiaries, and despite Ann&rsquo;s declining income and loss of health insurance, Andrew made only a single distribution to her discretionary trust between 2020 and 2024. The trust instrument contained a no-contest clause providing forfeiture if a beneficiary sought adjudication that any trust provision was void or otherwise sought to nullify or set aside a provision. The trust also contained provisions establishing Andrew as trustee and barring Ann from removing him, along with mechanisms for a trust advisor and alternative dispute resolution reflecting Gus&rsquo;s preference for keeping disputes out of court.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Ann filed an initial petition alleging breach of trustee duties and requesting Andrew&rsquo;s removal. She then amended the petition to instead request declaratory relief on two questions: (1) whether the no-contest clause was valid and enforceable, and (2) whether a petition to remove Andrew as trustee would trigger the clause. Andrew moved for judgment on the pleadings, arguing both requests triggered the no-contest clause. The district court granted Andrew&rsquo;s motion, finding the clause was unambiguously triggered. Ann appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the trust&rsquo;s no-contest clause was triggered when a beneficiary filed a petition for declaratory relief asking a court to determine the validity and enforceability of the no-contest clause itself. A secondary issue was whether the probable-cause exception to no-contest clauses&mdash;established in Minnesota&rsquo;s will-contest jurisprudence&mdash;should be extended to trust disputes under the Minnesota Uniform Trust Code.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Ann argued that seeking a judicial interpretation of the no-contest clause&rsquo;s enforceability was not the same as seeking to void a trust provision, and that the probable-cause exception from will contests should be imported into trust law under Minnesota Statutes sections 501C.0112 and 501C.0106. Andrew argued that both petitions triggered the no-contest clause&mdash;the first by seeking to nullify the clause, and the second by attempting to circumvent provisions establishing him as trustee.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeals affirmed judgment on the pleadings against Ann, holding that the no-contest clause was triggered. A beneficiary who presents a question of a trust provision&rsquo;s validity to a judicial forum satisfies the clause&rsquo;s condition precedent. The court further held that the probable-cause exception does not apply to trusts under existing Minnesota law.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court reasoned that the trust&rsquo;s language was unambiguous: the clause is triggered whenever a beneficiary &ldquo;seeks to obtain adjudication in any court proceeding that [the trust] or any of its provisions is void, or otherwise seeks to void, nullify, or set aside&rdquo; a provision. Asking a court to rule on whether the no-contest clause is valid and enforceable falls squarely within that language. The court found that Gus&rsquo;s intent to maintain freedom from judicial intervention was reinforced by the trust&rsquo;s ADR procedures and trust-advisor mechanisms. On the probable-cause exception, the court distinguished between a &ldquo;rule of construction&rdquo; (which Section 501C.0112 imports into trust law) and a substantive exception to no-contest clauses (which Section 501C.0112 does not cover). The legislature codified the probable-cause exception in the &ldquo;Wills&rdquo; section of the Uniform Probate Code while creating separate &ldquo;Rules of Construction&rdquo; sections, demonstrating its conscious exclusion from trust law. The court declined to extend the exception through &ldquo;principles of equity&rdquo; under Section 501C.0106, holding such extension was for the legislature or supreme court.</p>]]></content:encoded>
+    <wp:post_id>16</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-01-no-contest-clause]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Trial Court Judgment Vacated for Unadmitted Accounting Evidence]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Trial Court Judgment Vacated for Reliance on Unadmitted Accounting Evidence and Orders Against Non-Party Succession</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeal of Louisiana, Third Circuit</p>
+        <p><strong>Date:</strong> February 19, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">In re LaJaunie Family Irrevocable Trust, No. 2025-508, 2026 WL 468490 (La. App. 3 Cir. Feb. 19, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Chester and Kim LaJaunie created an irrevocable trust in 2017 naming their children Christopher and Angie as co-trustees and principal beneficiaries. They transferred their Breaux Bridge home to the trust, reserving a lifetime usufruct. Chester died in November 2019, and two life insurance policies totaling $287,940.62 naming the trust as beneficiary were paid out. Christopher, as co-trustee, deposited the proceeds into the trust account but then transferred $286,672.90 to Kim&rsquo;s personal account, claiming the funds were needed for her around-the-clock Alzheimer&rsquo;s care. Kim died in May 2024.</p>
+
+    <h2>Procedural Background</h2>
+    <p>In November 2025, Angie filed suit on behalf of the trust to compel Christopher to return the life insurance proceeds and to remove him as co-trustee. Christopher responded with a motion for reimbursement, trust termination, and asset distribution. After day one of hearings, the trial court ordered each party to provide a full accounting. When the parties returned nearly two weeks later, the trial court took no evidence. Instead, the court advised it had already decided the matter based on memoranda and previously submitted materials, declined further argument, and rendered judgment. The judgment credited Christopher&rsquo;s accounting, ordered transfers from Kim&rsquo;s succession (which was not a party), awarded reimbursements, and terminated the trust. Angie appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The main controversies were: (1) whether Christopher breached his fiduciary duty by transferring trust assets to Kim&rsquo;s personal account; (2) whether the trial court could properly rely on accounting documents that were referenced in testimony but never formally offered or admitted into evidence; and (3) whether the trial court had jurisdiction to order transfers from Kim&rsquo;s succession when the succession was not a party to the trust proceeding.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Angie argued that Christopher committed a serious breach of fiduciary duty by diverting nearly all of the insurance proceeds, that the trial court&rsquo;s reliance on unadmitted accountings was reversible error, and that the court exceeded its jurisdiction by ordering transfers from a non-party succession. Christopher maintained the transfers were necessary for their mother&rsquo;s Alzheimer&rsquo;s care and that his accounting was credible.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeal vacated the trial court&rsquo;s judgment in its entirety and remanded for further proceedings. It held that the trial court committed legal error by relying on accountings never admitted into evidence, and exceeded its authority by ordering transfers involving a succession that was not a party to the proceeding.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied the principle that evidence not properly and officially offered and introduced cannot be considered, even if it is physically placed in the record. Documents attached to memoranda do not constitute evidence and cannot be considered as such on appeal. Because the trial court&rsquo;s findings depended on these unadmitted accountings, the appellate court could not review the substantive merits. On the jurisdictional issue, the court held that a judgment cannot be rendered against a party until that party has been joined in the suit and served with process. Kim&rsquo;s succession was not a party, making the trial court&rsquo;s order against it absolutely null. The attorney&rsquo;s fees issue was not properly preserved because Angie had not requested fees at the trial court level.</p>]]></content:encoded>
+    <wp:post_id>17</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-02-trial-court-judgment-vacated]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Cy Pres Applied to Redirect Charitable Trust Funds]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Cy Pres Applied to Redirect Charitable Trust Funds After Hospital Closure&mdash;Trustee's Due Diligence Found Inadequate</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Supreme Court of Rhode Island</p>
+        <p><strong>Date:</strong> February 20, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Bank of America, N.A. v. Neronha, No. 2024-30-Appeal, 2026 WL 478704 (R.I. Feb. 20, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Bank of America served as trustee of five charitable trusts created between 1930 and 1969, all naming Memorial Hospital in Pawtucket, Rhode Island as a beneficiary. The trusts funded free hospital beds for the poor&mdash;the Richardson Trust established the &ldquo;E. Russell Richardson Bed,&rdquo; the Preston Trust established the &ldquo;Florence H. Preston Free Bed&rdquo; and &ldquo;Jennie R. Fairburn Free Bed,&rdquo; and the Wood Trust allocated 20% of income to Memorial Hospital. In 2013, Memorial Hospital was acquired by Care New England Health System. Due to financial difficulties, Memorial Hospital ceased functioning as a licensed hospital in 2018&mdash;its emergency department closed and inpatient care was eliminated. Some outpatient medical offices continued operating on the former campus.</p>
+
+    <h2>Procedural Background</h2>
+    <p>In July 2022, Bank of America filed a petition for application of the cy pres doctrine to redirect trust funds. A Mayor&rsquo;s Advisory Committee recommended a joint proposal from Progreso Latino and The Miriam Hospital Foundation. A seven-day bench trial was held beginning July 2023. Expert testimony established that at the time the trusts were created, &ldquo;hospital care&rdquo; meant inpatient and emergency services. The trial justice entered final judgment designating The Miriam Hospital as the alternative beneficiary, rejecting the trustee&rsquo;s and the Advisory Committee&rsquo;s recommended joint proposal. The Attorney General, CNE, Memorial Hospital, and Kent County Hospital appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The main controversies were: (1) whether Memorial Hospital&rsquo;s closure frustrated the purpose of the charitable trusts; (2) what the settlors&rsquo; charitable intent was at the time of trust creation; (3) which alternative beneficiary would best honor the settlors&rsquo; intent; and (4) whether the trustee performed adequate due diligence in evaluating alternative beneficiaries.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The Attorney General and CNE/Kent County Hospital argued the trial court applied too narrow a definition of &ldquo;hospital care&rdquo; and that modern healthcare delivery changes should be considered. They supported redirecting funds to community health services including mental and behavioral health programs. Bank of America supported The Miriam Hospital as an alternative but was criticized for inadequate due diligence. The Miriam Hospital argued the trial justice properly found it was providing hospital care most similar to what Memorial Hospital historically offered.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Supreme Court affirmed. It held that the cy pres doctrine properly applied, that the settlors expressed a general charitable intent, and that The Miriam Hospital was the alternative beneficiary closest to the settlors&rsquo; original intent. The court found the trustee&rsquo;s due diligence was inadequate but agreed with the trial justice&rsquo;s independent determination.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied Rhode Island&rsquo;s cy pres statute (G.L. 1956 &sect; 18-4-1), which requires courts to carry out settlors&rsquo; intents &ldquo;as near as may be.&rdquo; The court reasoned that it must place itself in the shoes of the settlors at the time of trust creation to determine what they would have wanted. Expert testimony established that in 1930, 1941, and 1969, &ldquo;hospital care&rdquo; consisted of inpatient and emergency services&mdash;not the broader array of outpatient, mental health, and community health services that exist today. The settlors donated to a hospital providing inpatient care, and the closest alternative must be another hospital serving the same purposes. Neither Progreso Latino nor The Miriam Hospital Foundation were hospitals, and their proposed use of funds for predominantly mental and behavioral health services did not comport with the settlors&rsquo; intent as understood at the time of creation. The court also found the trustee&rsquo;s due diligence inadequate&mdash;Bank of America should have investigated settlors&rsquo; obituaries, interviewed Advisory Committee members more thoroughly, and considered the specific services contemplated at trust creation.</p>]]></content:encoded>
+    <wp:post_id>18</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-03-cy-pres-charitable-trust]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Trust ADR Provision Cannot Compel Arbitration of Undue Influence Challenges]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Trust ADR Provision Cannot Compel Arbitration of Undue Influence Challenges to Trust Validity</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeals of Arizona, Division 1</p>
+        <p><strong>Date:</strong> February 17, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">In the Matter of The James A. and Carol A. May Living Trust, No. 1 CA-CV 25-0392 PB, 2026 WL 444664 (Ariz. Ct. App. Feb. 17, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Carol and James May established a living trust in 2003. In 2009, they executed an amendment designating Shannon and Michael May as successor co-trustees and naming them and a third child, Erin, as beneficiaries. A fourth child, Stephen, was expressly excluded. The 2009 Amendment included an ADR provision authorizing appointment of a &ldquo;Special Co-Trustee&rdquo; to resolve disputes through mediation and binding arbitration. James died in 2017. In 2019, Carol executed a new amendment removing Michael, Shannon, and Erin as beneficiaries and naming the May Family Foundation&mdash;a donor-advised fund of Legacy Global Foundation, whose founder was attorney Richard E. Durfee&mdash;as the principal beneficiary. Carol died in 2021.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Shannon and Michael, as successor co-trustees, appointed Jerome Elwell as Special Co-Trustee under the 2009 ADR provision to resolve the dispute over the 2019 Amendment&rsquo;s enforceability. Elwell directed parties to submit memoranda on the amendment&rsquo;s validity. Legacy filed a petition seeking a declaration that A.R.S. &sect; 14-10205 does not permit trustors to require beneficiaries to submit validity challenges to binding ADR. Shannon moved to dismiss, arguing the Special Co-Trustee had authority. The superior court sided with Shannon, characterizing the claim as a &ldquo;distribution&rdquo; challenge rather than a validity challenge. Legacy appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether Arizona&rsquo;s trust code (A.R.S. &sect; 14-10205), which authorizes mandatory ADR provisions for disputes involving trust &ldquo;administration or distribution,&rdquo; extends to challenges attacking the validity of a trust amendment on grounds of undue influence.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Legacy argued that validity challenges&mdash;such as allegations that a trust amendment was procured through undue influence&mdash;are fundamentally different from disputes about administration or distribution and cannot be forced into private ADR. Shannon argued that Arizona&rsquo;s strong public policy favoring ADR required an expansive interpretation, and that any doubt about arbitrability should be resolved in favor of ADR.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeals vacated the superior court&rsquo;s dismissal and remanded. It held that A.R.S. &sect; 14-10205 does not empower trustors to adopt mandatory ADR provisions that deny beneficiaries their right to seek judicial resolution of claims challenging the validity of trust instruments on the basis of undue influence. A challenge to the validity of a trust amendment is not a dispute over &ldquo;administration or distribution.&rdquo;</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court started with the plain meaning of the statute. Consulting Black&rsquo;s Law Dictionary, it found that &ldquo;administration&rdquo; and &ldquo;distribution&rdquo; both presuppose the validity of the underlying trust documents. Neither term encompasses the threshold question of whether the trust instrument itself is valid. The court found further support in A.R.S. &sect; 14-10107(B), which expressly distinguishes between &ldquo;validity&rdquo; and &ldquo;administration&rdquo; by assigning jurisdiction over each to different courts based on different criteria. The court rejected the presumption favoring arbitration, reasoning that this principle applies only when contracting parties who agreed to an arbitration clause dispute its scope&mdash;here, the ADR provision was imposed by the trustors, not agreed to by the disputing parties. The court noted that other jurisdictions have similarly held that arbitration provisions cannot compel arbitration to determine the validity of the trust itself. The court also drew an analogy to contract law, where claims that a contract was procured through undue influence are not within the scope of mandatory arbitration provisions.</p>]]></content:encoded>
+    <wp:post_id>19</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-04-trust-adr-provision]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Prevailing Elder Abuse Plaintiff Entitled to Attorney's Fees]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Prevailing Elder Abuse Plaintiff Entitled to Attorney&rsquo;s Fees for Inextricably Intertwined Defense Work</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeal, Fourth District, Division 1, California</p>
+        <p><strong>Date:</strong> February 18, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Haun v. Pagano, No. D084385, 2026 WL 455372 (Cal. Ct. App. Feb. 18, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Charles Frazier, age 83 with aggressive cancer, was discharged into the care of Michael and Kelly Pagano in November 2019. Despite Frazier&rsquo;s stated intent to only remove his estranged daughter from his trust, the Paganos facilitated execution of a new trust in December 2019 that gave them a large portion of Frazier&rsquo;s assets. Kelly completed the entire questionnaire for the estate planning attorney. In January 2020, when the Paganos could no longer provide adequate care and moved Frazier to a hospice facility, Frazier&rsquo;s nephews visited and learned of the new trust. Frazier told them he felt pressured and asked them to help him change his estate plan. Frazier executed a new trust on January 11, 2020, and died nine days later.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Two days after Frazier&rsquo;s death, Kelly filed a civil complaint asserting financial elder abuse against the nephews and the attorney who prepared the final trust. Theodore Haun, as trustee of the January 2020 trust, filed a competing probate petition alleging elder abuse by the Paganos. Kelly filed a competing probate petition as well. The civil action was stayed and the competing petitions were consolidated. After an eight-day trial, the probate court found undue influence by the Paganos, granted Haun&rsquo;s petition, denied the Paganos&rsquo; petition, awarded $78,870 in doubled compensatory damages, and awarded approximately $536,000 in attorney&rsquo;s fees. The Paganos appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The primary appellate controversy was whether a prevailing plaintiff&rsquo;s attorney&rsquo;s fee award under the unilateral elder abuse fee-shifting statute (Welfare &amp; Institutions Code &sect; 15657.5(a)) could include fees spent defending against the losing party&rsquo;s competing elder abuse claim, where the defense work was inextricably intertwined with prosecuting the successful petition.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The Paganos argued that Haun was effectively a defendant on their competing claim and therefore subject to the Carver doctrine, which limits fee recovery for prevailing defendants under one-way fee-shifting statutes. They also argued the fees were inflated and that apportionment between offense and defense was required. Haun argued he was a prevailing plaintiff&mdash;the type of party the legislature intended to encourage&mdash;and that the Carver rule applies only to defendants. Because the entire case centered on competing elder abuse claims from the same transaction, apportionment was impracticable.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeal affirmed the entire judgment, including the $536,448 attorney&rsquo;s fee award. It held that the Carver doctrine applies only to prevailing defendants seeking fees under conflicting fee-shifting provisions, not to prevailing plaintiffs seeking fees under the very statute that authorizes them. Because the prosecution and defense were inextricably intertwined, all reasonable fees were recoverable.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court distinguished the Carver line of cases by focusing on Haun&rsquo;s status as a petitioner/plaintiff. The Carver rule exists to protect the legislature&rsquo;s intent behind unilateral fee-shifting&mdash;to encourage prosecution of elder abuse claims&mdash;by preventing successful defendants from recovering fees that would deter such claims. No such conflict arises when a successful plaintiff recovers fees under the same statute. The legislative intent is furthered, not undermined, by awarding overlapping fees to the party who successfully proved elder abuse. On apportionment, the court found that because the entire lawsuit centered on competing elder abuse claims arising from the same facts, the fees incurred in prosecuting Haun&rsquo;s claim were entirely intertwined with fees for defending against the Paganos&rsquo; competing claim. The trial court&rsquo;s discretionary reduction of over $65,000 for excessive billing, block billing, vague time entries, and mathematical errors was upheld.</p>]]></content:encoded>
+    <wp:post_id>20</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-05-elder-abuse-attorneys-fees]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+</channel>
+</rss>

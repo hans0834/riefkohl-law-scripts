@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <item>
+    <title><![CDATA[Statute of Limitations Bars Trust Beneficiaries' Claims]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Statute of Limitations Bars Trust Beneficiaries&rsquo; Claims Despite Trustee&rsquo;s Deliberate Concealment&mdash;Constructive Notice of Probate Records Is Irrebuttable</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeals of Texas, Houston (1st District)</p>
+        <p><strong>Date:</strong> February 26, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Conover v. Conover, No. 01-24-00471-CV, 2026 WL 530390 (Tex. App.&mdash;Houston [1st Dist.] Feb. 26, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>William Van Conover III (&ldquo;Van&rdquo;) died in July 2001, leaving two daughters: Rachel (age 10) and Katherine (age 4). Van&rsquo;s will devised his residuary estate to his father, Bill, as trustee for the girls. Van&rsquo;s estate was valued at over $4 million, including business interests (Lagniappe Farms and Lagniappe Interests) valued at $1 each on the inventory. Bill did not establish the trusts until 2010&mdash;nine years after Van&rsquo;s death&mdash;and funded each with only $619,504. Bill consistently refused to provide information about the trusts, telling the girls they were entitled to know everything only at age 35. The girls&rsquo; grandmother warned both their mother and Rachel directly that Bill had a history of mismanaging trusts (having previously been removed as trustee in prior litigation), but they did not believe her. When Bill died in 2021, Rachel and Katherine discovered the estate tax return showing over $4 million and the suspicious $1 valuations.</p>
+
+    <h2>Procedural Background</h2>
+    <p>The daughters sued the co-executors of Bill&rsquo;s estate for breach of fiduciary duty and fraud by non-disclosure, and sued Bill&rsquo;s widow, Connie, for unjust enrichment and constructive trust. The co-executors moved for traditional summary judgment on limitations grounds. The trial court granted the motion, entering final judgment that all parties take nothing. The daughters appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The main controversies were: (1) whether the daughters&rsquo; claims were barred by the two-to-four-year statutes of limitations; (2) whether the discovery rule deferred accrual because the injury was &ldquo;inherently undiscoverable&rdquo;; (3) whether the fraudulent concealment doctrine tolled limitations; and (4) whether the daughters, as beneficiaries of testamentary trusts, were &ldquo;interested persons&rdquo; charged with constructive notice of publicly available probate records.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The daughters argued that Bill&rsquo;s deliberate concealment made the injury inherently undiscoverable, that they were not &ldquo;interested persons&rdquo; in Van&rsquo;s estate because Bill took as trustee on their behalf, and that the fraudulent concealment doctrine should toll limitations. The co-executors argued the daughters were interested persons with an irrebuttable presumption of constructive notice of probate records that disclosed the estate&rsquo;s true value, and that multiple red flags should have prompted inquiry within the limitations period.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeals affirmed summary judgment, holding all claims time-barred. The daughters were &ldquo;interested persons&rdquo; under the Texas Estates Code with constructive notice of publicly available probate records. Neither the discovery rule nor the fraudulent concealment doctrine saved the claims.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court held that the Texas Estates Code defines &ldquo;interested person&rdquo; broadly to include anyone with a legally ascertained pecuniary interest affected by probate proceedings. As beneficiaries of testamentary trusts created under Van&rsquo;s will, the daughters clearly qualified. Texas law charges interested persons with an irrebuttable presumption of actual notice of probate records&rsquo; contents&mdash;a presumption that cannot be contradicted by evidence of a good relationship with the fiduciary or misleading conduct. The probate records disclosed the estate&rsquo;s $4 million value, the suspicious $1 business valuations, and annual income generation. Combined with the grandmother&rsquo;s warnings, Bill&rsquo;s refusal to provide information, and Rachel&rsquo;s 2010 concern about exhausting trust funds, these facts would have alerted a reasonably prudent person to investigate. The court held the injury was not &ldquo;inherently undiscoverable&rdquo; because the very information that prompted the daughters&rsquo; claims was available in the probate records all along. Even assuming fraudulent concealment, tolling ceases when facts come to light triggering inquiry notice, which occurred no later than 2015 when Katherine turned 18.</p>]]></content:encoded>
+    <wp:post_id>21</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-06-statute-of-limitations]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Arbitration Award Does Not Create Priority Lien Over Competing Judgment Creditors]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Arbitration Award Does Not Create Priority Lien Over Competing Judgment Creditors for Escrowed Funds</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Supreme Court, Appellate Division, Second Department, New York</p>
+        <p><strong>Date:</strong> February 18, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">In the Matter of Avigdor v. Avigdor, No. 2022-05085, 2026 WL 452257 (N.Y. App. Div. 2d Dep&rsquo;t Feb. 18, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>In 2014, Moshe Twersky, as executor of the Gelbwachs estate, obtained a money judgment against Morton Avigdor. Separately, Morton&rsquo;s brothers David and Merrill obtained an arbitration award against Morton for misappropriating funds related to their mother&rsquo;s estate. When Morton contracted to sell his Brooklyn home, David commenced proceedings to confirm the arbitration award and obtained an injunction. A settlement stipulation provided that upon closing, $700,000 of the sale proceeds would be deposited into escrow with Choice Abstract Corp. In November 2021, David, Merrill, Morton, and another sibling jointly directed Choice to release $631,000 to David and the balance to Morton. In January 2022, the Gelbwachs estate&rsquo;s attorney advised Choice of the prior Twersky judgment and directed it not to release the funds.</p>
+
+    <h2>Procedural Background</h2>
+    <p>David and Merrill commenced a proceeding under CPLR 5239 and 5240 to determine adverse claims to the escrow funds. The trial court found the petitioners had standing as interested persons but denied their petition on the merits, ruling the escrow funds remained subject to competing creditor claims. Choice appealed and David and Merrill cross-appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the settlement stipulation and confirmed arbitration award placed the $700,000 in escrow funds beyond the reach of the Twersky judgment creditors, or whether Morton retained sufficient control over the funds to make them available to satisfy competing creditor claims.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>David and Merrill argued that the settlement stipulation and arbitration award effectively transferred the funds to them, putting the money beyond the Twersky creditors&rsquo; reach. The Twersky respondents argued that because the debtor (Morton) retained present or future control over the escrowed funds&mdash;as evidenced by the November 2021 joint letter directing distribution&mdash;the funds remained available to all judgment creditors.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Appellate Division affirmed. It held that the petitioners had standing as interested persons but that their petition was properly denied on the merits. The escrow funds were not placed beyond the reach of competing creditors.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied the principle that where a debtor places funds in escrow for payment of specific creditors, as long as those funds remain subject to the debtor&rsquo;s present or future control, they are subject to claims by other creditors who know about the escrow funds. The November 2021 letter&mdash;in which the petitioners and Morton jointly directed Choice to distribute the funds&mdash;demonstrated that Morton retained control. The funds had not been irrevocably transferred beyond Morton&rsquo;s control before the competing creditor&rsquo;s lien attached. The arbitration award and settlement stipulation did not create an escrow arrangement so restrictive as to place the funds beyond the reach of other judgment creditors.</p>]]></content:encoded>
+    <wp:post_id>22</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-07-arbitration-award-priority-lien]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Remedy for Statutory Accounting Breach Limited to Attorney's Fees]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Trust Law Controversies]]></category>
+    <category domain="category"><![CDATA[Trusts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Trust Law Controversies</div>
+    <h1>Remedy for Statutory Accounting Breach Limited to Attorney&rsquo;s Fees&mdash;Unchallenged Summary Judgment Survives Reversal of Final Judgment</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeals of Texas, Houston (14th District)</p>
+        <p><strong>Date:</strong> March 3, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Marshall v. Marshall, No. 14-23-00276-CV, 2026 WL 585070 (Tex. App.&mdash;Houston [14th Dist.] Mar. 3, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>The dispute involved the Marshall Grandchildren&rsquo;s Trust, with Elaine T. Marshall serving as trustee and Preston Marshall as an interested party. Preston claimed Elaine failed to provide a statutory accounting of the trust as required under the Texas Property Code. The litigation involved the broader Marshall/Koch family interests and cross-jurisdictional trust transactions spanning Texas and Wyoming.</p>
+
+    <h2>Procedural Background</h2>
+    <p>The trial court granted summary judgment finding that Elaine had failed to comply with her duty to provide a trust accounting under Texas Property Code &sect; 113.151. In a prior proceeding, the appellate court reversed the final judgment and remanded for a new trial on other issues. Both parties filed motions for rehearing seeking clarification of whether the reversal affected the accounting ruling and whether Preston&rsquo;s accounting claim included damages or only attorney&rsquo;s fees.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The controversies were: (1) whether the appellate court&rsquo;s reversal of the final judgment disturbed the trial court&rsquo;s unchallenged summary judgment ruling on the accounting claim; and (2) whether the remedy for breach of the statutory duty to provide an accounting includes compensatory damages or is limited to attorney&rsquo;s fees.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Preston sought confirmation that the accounting ruling survived the reversal and that attorney&rsquo;s fees remained recoverable. Elaine argued that the accounting claim on remand should be limited to attorney&rsquo;s fees only, that compensatory damages were not an available remedy, and that because the accounting had been provided and the trust had terminated, the underlying claim was moot.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeals clarified that the reversal had no effect on the unchallenged summary judgment finding that Elaine breached her accounting duty. However, the remedy for a statutory accounting claim is limited to attorney&rsquo;s fees&mdash;compensatory damages are not available. Preston&rsquo;s request for attorney&rsquo;s fees kept the claim a live controversy on remand despite the trust&rsquo;s termination.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court reasoned that an appellate reversal addresses only the parties&rsquo; specific arguments on appeal and the challenged portions of the judgment. Because Elaine did not challenge the accounting ruling on appeal, it remained undisturbed. The court held that the remedy for a statutory accounting claim under &sect; 113.151 does not include compensatory damages; it is limited to compelling the accounting and awarding attorney&rsquo;s fees for enforcing that right. This distinction between procedural/compliance breaches and substantive fiduciary duty claims means that failure to account, while a breach, carries a narrowly tailored remedy. Even though the trust had terminated and the accounting was eventually provided, the attorney&rsquo;s fees issue remained a live controversy requiring resolution.</p>]]></content:encoded>
+    <wp:post_id>23</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[trustlaw-08-statutory-accounting-breach]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Per Capita Without Representation Distribution Excludes First Cousin Once Removed from $32 Million Intestate Estate]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Wills and Estate Planning Controversies — Case Analysis]]></category>
+    <category domain="category"><![CDATA[Estate Planning]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Wills and Estate Planning Controversies &mdash; Case Analysis</div>
+    <h1>Per Capita Without Representation Distribution Excludes First Cousin Once Removed from $32 Million Intestate Estate</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <h2>Court</h2>
+    <div class="court-info">
+        <p>Supreme Court of Nevada</p>
+    </div>
+
+    <h2>Date</h2>
+    <div class="court-info">
+        <p>March 12, 2026</p>
+    </div>
+
+    <h2>Citation</h2>
+    <div class="court-info">
+        <p><span class="citation">In the Matter of Estate of William F. Ulvang, No. 89422, 2026 WL 695035, 142 Nev. Adv. Op. 22 (Nev. Mar. 12, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>William F. Ulvang, a Lyon County, Nevada resident, died intestate in 2023, leaving an estate with an estimated value of $32 million. Ulvang was predeceased by his wife and had no children. The Lyon County Public Administrator identified Ulvang's living first cousins as potential heirs of the estate. Ulvang's first cousins were fourth-degree collateral relatives. Jamie Lipson, the child of one of Ulvang's predeceased first cousins and thus a first cousin once removed (fifth-degree relative), contested the distribution, arguing she should inherit by representation through her deceased parent.</p>
+
+    <h2>Procedural Background</h2>
+    <p>The Public Administrator requested an order from the district court confirming Ulvang's living first cousins as the legal heirs of the estate. Lipson contested this determination, arguing that NRS 134.070 should be interpreted as providing a per stirpes distribution scheme, which would allow first cousins once removed to share as heirs by right of representation. The district court concluded that NRS 134.070 plainly and unambiguously requires a per capita distribution of the estate, not a per stirpes distribution, cutting off Lipson's bid for heirship. The district court determined that only respondents, Ulvang's living first cousins, were heirs. Lipson appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether NRS 134.070, which prescribes distribution of a decedent's estate to &ldquo;the next of kin in equal degree,&rdquo; requires distribution per capita (by the head, to the closest living relatives only, excluding more remote relations) or per stirpes (by representation, which would include descendants of predeceased closer relatives). A secondary controversy was whether the Nevada Supreme Court should overturn its century-old precedent in <span class="citation">In re McKay's Estate</span> (1919), which had interpreted the statute's predecessor to require per capita without representation distribution.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Lipson argued that NRS 134.070 should be interpreted to provide a per stirpes distribution scheme, which would allow all of Ulvang's first cousins once removed to also be recognized as heirs by right of representation. She referenced the Uniform Probate Code and California Probate Code as evidence that the modern trend favors per stirpes distribution. She also argued that McKay's Estate was outdated and that per capita distribution leads to absurd and unreasonable results. The respondent first cousins and the Public Administrator argued that the statute's plain language requiring distribution to next of kin &ldquo;in equal degree&rdquo; unambiguously mandates per capita without representation, consistent with McKay's Estate and the civil law of intestacy.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Supreme Court of Nevada affirmed, holding that NRS 134.070 requires a per capita without representation distribution scheme. The court recognized the continuing validity of <span class="citation">In re McKay's Estate</span>, found that the statute's plain language was clear and unambiguous under the civil law of intestacy, and rejected Lipson's arguments based on traditional principles of statutory interpretation and public policy.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court held that <span class="citation">McKay's Estate</span> correctly interpreted the statutory predecessor to NRS 134.070 as requiring per capita without representation distribution, and that the relevant statutory language has remained substantively the same since 1919. The court found that the term &ldquo;next of kin in equal degree&rdquo; directs distribution to the kindred lowest in degree, with each heir taking an equal share. This interpretation is supported by the Restatement (Third) of Property, which explains that intestacy statutes using phrases like &ldquo;in equal degree&rdquo; generally require a nonrepresentational distribution. The court also applied the civil law method for computing degrees of kinship (counting generations up to the common ancestor and back down), finding that first cousins are fourth-degree relatives and first cousins once removed are fifth-degree relatives. Because the first cousins are closer in degree, they inherit to the exclusion of more remote relatives. The court rejected Lipson's arguments that the legislature's use of per stirpes language in adjacent sections of NRS Chapter 134 should inform the reading of NRS 134.070, noting that harmony does not require sameness and that the legislature's century-long silence on amending the statute suggests intentional omission. The court also declined to consult the UPC or California Probate Code, finding no reason to look beyond the clear meaning of NRS 134.070.</p>]]></content:encoded>
+    <wp:post_id>24</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[willsanalysis-01-percapitawithoutrepresentation]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Competing Widows and Conflicting Divorce Records in Heir-Determination Proceeding]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Wills and Estate Planning Controversies — Case Analysis]]></category>
+    <category domain="category"><![CDATA[Estate Planning]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Wills and Estate Planning Controversies &mdash; Case Analysis</div>
+    <h1>Competing Widows and Conflicting Divorce Records in Heir-Determination Proceeding</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <h2>Court</h2>
+    <div class="court-info">
+        <p>Court of Appeals of Georgia</p>
+    </div>
+
+    <h2>Date</h2>
+    <div class="court-info">
+        <p>March 9, 2026</p>
+    </div>
+
+    <h2>Citation</h2>
+    <div class="court-info">
+        <p><span class="citation">In re the Estate of George Edward Samuel, Deceased, No. A25A1573, 2026 WL 656332 (Ga. Ct. App. Mar. 9, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>George and Delores Samuel married in 1963 and had two children, including Devon. Delores moved out of the marital home with the children and settled in Boston, and the couple never lived together after 1969. Delores petitioned for divorce in Connecticut in 1970, but no evidence was presented that she further pursued that filing. George met Rosemary in 1971, and their relationship turned romantic in 1972 while both parties were married at the time. George and Rosemary lived together from that point until he died, working together as truck drivers. Delores filed for separation and custody in Massachusetts in 1973, and petitioned for divorce in Massachusetts in 1981. The parties produced conflicting certifications from different clerks of the Suffolk County, Massachusetts probate court regarding whether those actions resulted in a divorce decree. Rosemary eventually divorced her first husband in 1989, and Tennessee issued a certificate of marriage to George and Rosemary in 2003.</p>
+
+    <h2>Procedural Background</h2>
+    <p>After George's death in 2021, Devon filed a petition to probate George's will in solemn form, which initially identified Rosemary as George's &ldquo;spouse.&rdquo; Devon subsequently amended the petition to identify Delores as George's &ldquo;spouse.&rdquo; Devon then filed a petition to determine heirs, seeking a determination that Rosemary was not an heir. The court held a three-day jury trial at which Devon, Delores, and Rosemary testified, along with other family members and representatives of law firms who testified about the conflicting Massachusetts probate court certifications. The jury found that George's marriage to Delores had been dissolved by divorce, recognizing Rosemary as George's widow. Devon appealed, raising six enumerations of error.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether George's first marriage to Delores had been legally dissolved, which would determine whether his subsequent marriage to Rosemary in 2003 was valid and whether Rosemary was his legal widow for purposes of intestate succession. A secondary controversy concerned whether circumstantial evidence alone could establish the fact of a prior divorce when no direct evidence of a divorce decree was available and the probate court's own records were contradictory.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Devon argued that Rosemary failed to prove the prior divorce because she did not introduce a divorce decree as direct evidence, that the trial court erred in admitting a probate clerk's certificate that was facially false and introduced by a surprise witness, and that the trial court erred in charging the jury that any fact can be proven through circumstantial evidence. Rosemary argued that under Georgia law, the burden shifted to her to establish the prior divorce once Delores was shown to be alive, and that she met that burden through circumstantial evidence including a clerk's certificate showing a 1973 judgment of divorce nisi and a 2003 Tennessee marriage certificate demonstrating a government agency recognized George as legally capable of marriage.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Court of Appeals affirmed the jury verdict and judgment, holding that sufficient evidence supported the jury's finding that George's marriage to Delores was dissolved by divorce. The court found no reversible error in any of Devon's six enumerations.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied the Georgia rule that where a party to a ceremonial marriage was previously married and the validity of the second marriage is challenged, a presumption arises that the second marriage is valid until evidence is adduced that the first spouse is living, at which point the burden shifts to the party contending the second marriage is valid to show the first marriage was dissolved. The court held that the jury was authorized to find that Rosemary met her burden through circumstantial evidence. On the evidentiary issues, the court found Devon waived his objection to the clerk's certificate by initially objecting but then acquiescing when the exhibit was re-tendered. On the jury charge regarding circumstantial evidence, the court held the charge was a correct statement of law and properly given because Rosemary did not have direct evidence (a divorce decree) to establish George's marital status. On the sufficiency of the evidence, the court held that viewing the evidence in the light most favorable to the verdict, the jury was authorized to find that the evidence preponderated to Rosemary's hypothesis that George was legally divorced.</p>]]></content:encoded>
+    <wp:post_id>25</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[willsanalysis-02-competingwidows]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+</channel>
+</rss>

@@ -73,71 +73,21 @@ function getLeadMagnet() {
 function injectFooterSignup() {
   if (document.querySelector('.rl-footer-signup')) return;
 
-  // Disabled site-wide: no email provider configured yet, download doesn't exist
-  return;
-
   var magnet = getLeadMagnet();
   var heading = IS_ES ? magnet.heading_es : magnet.heading_en;
   var desc = IS_ES ? magnet.desc_es : magnet.desc_en;
-  var placeholder = IS_ES ? 'Su correo electrónico' : 'Your email address';
-  var btnText = IS_ES ? magnet.btn_es : magnet.btn_en;
-  var successText = IS_ES ? '¡Gracias! Revise su correo.' : 'Thank you! Check your inbox.';
-  var privacyText = IS_ES
-    ? 'Respetamos su privacidad. Cancele cuando quiera. <a href="/privacy-policy">Política de Privacidad</a>'
-    : 'We respect your privacy. Unsubscribe anytime. <a href="/privacy-policy">Privacy Policy</a>';
-  var badge = IS_ES ? magnet.badge_es : magnet.badge_en;
+  var btnText = IS_ES ? 'Agendar Consulta Gratis' : 'Book a Free Strategy Call';
+  var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
 
   var bar = document.createElement('div');
   bar.className = 'rl-footer-signup';
   bar.innerHTML =
     '<div class="rl-footer-signup-inner">' +
-      '<div class="rl-footer-signup-badge">' + badge + '</div>' +
+      '<div class="rl-footer-signup-badge">' + (IS_ES ? magnet.badge_es : magnet.badge_en) + '</div>' +
       '<h4>' + heading + '</h4>' +
       '<p>' + desc + '</p>' +
-      '<form class="rl-signup-form" action="YOUR_FORM_ACTION_URL" method="POST">' +
-        '<input type="email" name="email" class="rl-signup-input" placeholder="' + placeholder + '" required aria-label="' + placeholder + '">' +
-        '<button type="submit" class="rl-signup-btn">' + btnText + '</button>' +
-      '</form>' +
-      '<div class="rl-signup-success">' + successText + '</div>' +
-      '<p class="rl-signup-privacy">' + privacyText + '</p>' +
+      '<a href="' + bookUrl + '" class="rl-signup-btn rl-signup-cta-link">' + btnText + '</a>' +
     '</div>';
-
-  // Handle form submission: prevent blank page if action URL is not configured
-  var form = bar.querySelector('.rl-signup-form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      var action = form.getAttribute('action') || '';
-      // If action is still the placeholder or empty, show success inline instead of navigating
-      if (!action || action === 'YOUR_FORM_ACTION_URL' || action.indexOf('YOUR_') > -1) {
-        e.preventDefault();
-        var successDiv = bar.querySelector('.rl-signup-success');
-        if (successDiv) {
-          form.style.display = 'none';
-          successDiv.style.display = 'block';
-        }
-        return;
-      }
-      // If real action URL is set, submit via fetch to avoid page navigation
-      e.preventDefault();
-      var emailInput = form.querySelector('input[type="email"]');
-      var submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
-
-      var formData = new FormData(form);
-      fetch(action, { method: 'POST', body: formData, mode: 'no-cors' })
-        .then(function() {
-          form.style.display = 'none';
-          var successDiv = bar.querySelector('.rl-signup-success');
-          if (successDiv) successDiv.style.display = 'block';
-        })
-        .catch(function() {
-          // On error, show success anyway (no-cors won't return status)
-          form.style.display = 'none';
-          var successDiv = bar.querySelector('.rl-signup-success');
-          if (successDiv) successDiv.style.display = 'block';
-        });
-    });
-  }
 
   // Insert before footer or at end of body
   var footer = document.querySelector('footer') || document.querySelector('.footer-inside');
@@ -146,41 +96,70 @@ function injectFooterSignup() {
   } else {
     document.body.appendChild(bar);
   }
+}
 
-  // Handle form submission — redirect to booking page until email provider is configured
-  var form = bar.querySelector('.rl-signup-form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      var action = form.getAttribute('action') || '';
-      // If the form action is still the placeholder, handle gracefully
-      if (action === 'YOUR_FORM_ACTION_URL' || action === '' || action === '#') {
-        e.preventDefault();
-        var emailInput = form.querySelector('.rl-signup-input');
-        var email = emailInput ? emailInput.value : '';
-        // Show success message
-        var successEl = bar.querySelector('.rl-signup-success');
-        if (successEl) {
-          successEl.style.display = 'block';
-          successEl.textContent = IS_ES
-            ? '\u00A1Gracias por su inter\u00E9s! Agende una consulta gratuita para recibir su gu\u00EDa personalizada.'
-            : 'Thanks for your interest! Book a free strategy call to get your personalized Act 60 guide.';
-        }
-        form.style.display = 'none';
-        // After a brief pause, redirect to booking
-        var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
-        setTimeout(function() {
-          window.location.href = bookUrl + (email ? '?email=' + encodeURIComponent(email) : '');
-        }, 2500);
-      }
-      // If a real action URL is configured, let the form submit normally
-    });
+/* ===== SCROLL-TRIGGERED SLIDE-IN CTA (appears once per session) ===== */
+function injectSlideInCTA() {
+  // Only show once per session
+  if (sessionStorage.getItem('rl-cta-dismissed')) return;
+  // Don't show on booking or contact pages
+  if (PATH === '/calendly' || PATH === '/contact' || PATH === '/espanol-cita' || PATH === '/espanol-contacto') return;
+
+  var magnet = getLeadMagnet();
+  var heading = IS_ES ? magnet.heading_es : magnet.heading_en;
+  var desc = IS_ES ? magnet.desc_es : magnet.desc_en;
+  var btnText = IS_ES ? 'Agendar Consulta Gratis' : 'Book a Free Strategy Call';
+  var bookUrl = IS_ES ? '/espanol-cita' : '/calendly';
+  var dismissText = IS_ES ? 'No gracias' : 'No thanks';
+
+  var popup = document.createElement('div');
+  popup.className = 'rl-slide-cta';
+  popup.setAttribute('role', 'dialog');
+  popup.setAttribute('aria-label', IS_ES ? 'Consulta gratuita' : 'Free consultation');
+  popup.innerHTML =
+    '<button class="rl-slide-cta-close" aria-label="Close">&times;</button>' +
+    '<div class="rl-slide-cta-badge">' + (IS_ES ? magnet.badge_es : magnet.badge_en) + '</div>' +
+    '<h4>' + heading + '</h4>' +
+    '<p>' + desc + '</p>' +
+    '<a href="' + bookUrl + '" class="rl-slide-cta-btn">' + btnText + '</a>' +
+    '<button class="rl-slide-cta-dismiss">' + dismissText + '</button>';
+
+  document.body.appendChild(popup);
+
+  function dismiss() {
+    popup.classList.remove('rl-slide-cta-visible');
+    sessionStorage.setItem('rl-cta-dismissed', '1');
+    setTimeout(function() { popup.remove(); }, 400);
   }
+
+  popup.querySelector('.rl-slide-cta-close').addEventListener('click', dismiss);
+  popup.querySelector('.rl-slide-cta-dismiss').addEventListener('click', dismiss);
+
+  // Show after 50% scroll or 45 seconds, whichever comes first
+  var shown = false;
+  function showPopup() {
+    if (shown) return;
+    shown = true;
+    popup.classList.add('rl-slide-cta-visible');
+  }
+
+  var scrollTimer = setTimeout(showPopup, 45000);
+
+  window.addEventListener('scroll', function onScroll() {
+    var scrollPct = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (scrollPct > 0.5) {
+      clearTimeout(scrollTimer);
+      showPopup();
+      window.removeEventListener('scroll', onScroll);
+    }
+  });
 }
 
 /* ===== BOOT ===== */
 function run() {
   try {
     injectFooterSignup();
+    injectSlideInCTA();
   } catch(e) {
     console.error('[rl-email-signup]', e);
   }

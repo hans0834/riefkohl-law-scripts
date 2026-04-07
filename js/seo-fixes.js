@@ -109,7 +109,7 @@ var SEO = {
   },
   '/estate-planning': {
     h1: 'Estate Planning Attorney in Puerto Rico',
-    meta: 'Puerto Rico estate planning attorney. Wills, trusts, probate, powers of attorney, and healthcare directives. Bilingual service. Free consultation.',
+    meta: 'How to protect your assets and avoid forced heirship in Puerto Rico. Trusts, wills, probate avoidance, and Act 60 estate strategies. Bilingual attorney \u2014 free consultation.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -143,7 +143,7 @@ var SEO = {
   },
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
-    meta: 'Puerto Rico Act 60 attorney: 4% corporate tax for export services, individual investor decrees (0% capital gains through 2026 — new 4% rate from 2027). Application guidance, compliance, IRS audit defense. Free strategy call.',
+    meta: 'Is the 4% Act 60 tax rate right for your business? Puerto Rico attorney explains export services decrees, individual investor benefits, compliance traps, and IRS audit risks. Free strategy call with a bilingual PR-licensed lawyer.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -576,12 +576,12 @@ var SEO = {
   /* ---- Trust Law Article Series (14 articles) ---- */
   '/resources/what-is-puerto-rico-trust': {
     h1: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',
-    meta: 'Puerto Rico trusts (fideicomisos) are autonomous estates under Law 219-2012, not fiduciary relationships. Learn how this distinction affects Act 60 investors.',
+    meta: 'Considering a living trust in Puerto Rico? Learn how PR trusts differ from mainland trusts, why they offer stronger asset protection, and what Act 60 investors need to know. Attorney guide.',
     schema: null
   },
   '/resources/act-60-trust-planning': {
     h1: 'Trust Planning for Act 60 Investors: Mainland vs. Puerto Rico Trusts',
-    meta: 'Should Act 60 investors keep their mainland revocable trust or create a PR irrevocable trust? Compare asset protection, tax, and flexibility tradeoffs.',
+    meta: 'Should you keep your mainland trust or create a new one in Puerto Rico? Act 60 investors: compare asset protection, tax benefits, and flexibility before deciding.',
     schema: null
   },
   '/resources/modifying-irrevocable-trusts': {
@@ -591,7 +591,7 @@ var SEO = {
   },
   '/resources/avoiding-probate-legitima': {
     h1: 'Avoiding Probate in Puerto Rico: Trusts and the Leg\u00edtima',
-    meta: 'How Act 60 investors can avoid Puerto Rico probate with trusts while respecting forced heirship (leg\u00edtima) rules under the 2020 Civil Code.',
+    meta: 'How to avoid forced heirship and probate in Puerto Rico using trusts. Learn what the leg\u00edtima means for your estate and how to plan around it. Free strategy call.',
     schema: null
   },
   '/resources/asset-protection-trusts-pr': {
@@ -621,17 +621,22 @@ var SEO = {
   },
   '/resources/trust-costs-puerto-rico': {
     h1: 'Trust Costs in Puerto Rico: Creation, Administration & Termination',
-    meta: 'Transparent breakdown of Puerto Rico trust costs. Attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, administration, and hidden expenses.',
+    meta: 'How much does a living trust cost in Puerto Rico? Full breakdown: attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, and hidden costs most firms don\u2019t disclose.',
     schema: null
   },
   '/resources/fiduciary-duties-trustees': {
     h1: 'Fiduciary Duties Under Puerto Rico Trust Law',
-    meta: 'The 16 statutory trustee duties under Puerto Rico\u2019s Trust Act, dual-track liability framework, removal standards, and 8+ case illustrations.',
+    meta: 'Is your trustee meeting their legal obligations? 16 statutory duties under Puerto Rico\u2019s Trust Act, when trustees can be removed, and real case examples.',
     schema: null
   },
   '/resources/family-trust-pitfalls': {
     h1: 'Family Trust Pitfalls: When Good Intentions Go Wrong',
     meta: '10 specific pitfalls that have destroyed family trusts in Puerto Rico courts. Case illustrations and surgical solutions for each.',
+    schema: null
+  },
+  '/resources/complete-guide-puerto-rico-trusts': {
+    h1: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012',
+    meta: 'Everything you need to know about Puerto Rico trusts: how they work, who needs one, costs, tax implications, and how they differ from mainland trusts. Written by a PR-licensed attorney.',
     schema: null
   },
   '/resources/foreign-trust-trap': {

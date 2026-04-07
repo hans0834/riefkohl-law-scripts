@@ -30,6 +30,12 @@ var ARTICLES = {
 
   +'<p>The scholar Jos\u00e9 A\u00f1eses Negr\u00f3n memorably described the Puerto Rico <em>fideicomiso</em> as a \u201cfour-legged bird that barks and has a tail\u201d\u2014a hybrid creature that does not fit neatly into either the common law or civil law tradition. That description captures both the novelty and the power of the institution. The autonomous estate concept means that trust property does not belong to the trustor, the trustee, or the beneficiary. It belongs to the trust itself. This structural separation is the foundation for Puerto Rico\u2019s robust asset protection framework and distinguishes it from every mainland trust jurisdiction.</p>'
 
+  +'<div class="rl-sub-cta" style="margin:32px 0;">'
+  +'<p><strong>Have questions about Puerto Rico trusts?</strong></p>'
+  +'<p>Schedule a free 30-minute strategy call to discuss your situation.</p>'
+  +'<a href="/calendly">Book a Free Strategy Call</a>'
+  +'</div>'
+
   +'<h2>A Brief History: From Panama to the Modern Trust Act</h2>'
 
   +'<p>Puerto Rico\u2019s trust law has roots in the early twentieth century. The original <em>Ley de Fideicomisos</em> (Act 41 of 1928) was modeled on Panama\u2019s trust statute, itself derived from the work of the Panamanian jurist Ricardo Alfaro, who sought to adapt Anglo-American trust concepts for civil law jurisdictions. For decades, Puerto Rico operated under this framework\u2014a basic trust law that coexisted somewhat uneasily with the island\u2019s Spanish-derived civil law traditions.</p>'
@@ -558,6 +564,11 @@ var ARTICLES = {
   +'<li><strong>Surviving spouse</strong>\u2014elevated to forced heir status by the 2020 Civil Code</li>'
   +'</ol>'
   +'<p>For Act 60 investors from the mainland, forced heirship is an entirely unfamiliar concept. No mainland state imposes it (Louisiana is the sole exception, and its version differs significantly). Understanding the leg\u00edtima is essential before creating any Puerto Rico estate plan.</p>'
+  +'<div class="rl-sub-cta" style="margin:32px 0;">'
+  +'<p><strong>Have questions about forced heirship and your estate plan?</strong></p>'
+  +'<p>Schedule a free 30-minute strategy call to discuss your situation.</p>'
+  +'<a href="/calendly">Book a Free Strategy Call</a>'
+  +'</div>'
   +'<h2>The 2020 Civil Code: A Simplified but Expanded Leg\u00edtima</h2>'
   +'<p>Puerto Rico\u2019s succession law was significantly reformed by Law 55-2020, the new Civil Code that took effect on November 28, 2020.</p>'
   +'<p><strong>Before the 2020 Code,</strong> the estate was divided into three parts: one-third <em>leg\u00edtima estricta</em> (divided equally among forced heirs), one-third <em>mejora</em> (allocated among descendants at the testator\u2019s discretion), and one-third <em>libre disposici\u00f3n</em> (freely disposable). The testator could use the <em>mejora</em> to favor certain children over others, creating a planning tool that allowed differentiation among descendants while still respecting forced heirship.</p>'
@@ -1583,6 +1594,12 @@ var ARTICLES = {
   +'<p>For prospective Act 60 Individual Resident Investors (IRIs) considering trust structures as part of their Puerto Rico tax residency plan, understanding the full cost of entry\u2014and the costs that follow\u2014separates informed decision-making from buyer\u2019s remorse. Whether you\u2019re establishing a simple inter vivos trust or a sophisticated multi-jurisdiction structure with a trust protector, cost transparency is foundational to client trust.</p>'
   +'<p>This article lays bare the economics of Puerto Rico trusts: what creation costs, what administration requires, what termination entails, and where hidden expenses lurk. We\u2019ll also compare structural alternatives and quantify the long-term value of professional trust planning versus the real costs of proceeding without one.</p>'
 
+  +'<div class="rl-sub-cta" style="margin:32px 0;">'
+  +'<p><strong>Have questions about trust costs?</strong></p>'
+  +'<p>Schedule a free 30-minute strategy call to discuss your situation.</p>'
+  +'<a href="/calendly">Book a Free Strategy Call</a>'
+  +'</div>'
+
   +'<h2>1. Creation Costs: Building the Trust Foundation</h2>'
 
   +'<h3>Attorney and Drafting Fees</h3>'
@@ -1971,6 +1988,12 @@ var ARTICLES = {
   +'<h2>Your Trustee Owes You More Than You Think\u2014But Less Than You Hope</h2>'
   +'<p>When you establish a trust under Puerto Rico\u2019s Act 60 regime, you\u2019re entering a relationship governed by centuries of trust jurisprudence\u2014Civil Code fiduciary principles, trust-specific statutory requirements, and over a century of case law that Puerto Rican courts have applied with increasing rigor. Many Act 60 investors assume they\u2019ve handed off control entirely. The truth is more nuanced: your trustee stands in a position of <em>quasi-absolute trust</em> bound by enforceable legal duties that courts will police actively. But those duties have limits, defined by statute, by the trust instrument itself, and by a framework that has evolved dramatically since 2012.</p>'
   +'<p>This article maps the landscape of trustee fiduciary liability under Puerto Rico law\u2014what\u2019s required, what\u2019s forbidden, what can be waived, and what it means for your trust\u2019s long-term stability.</p>'
+
+  +'<div class="rl-sub-cta" style="margin:32px 0;">'
+  +'<p><strong>Have questions about trustee duties and liability?</strong></p>'
+  +'<p>Schedule a free 30-minute strategy call to discuss your situation.</p>'
+  +'<a href="/calendly">Book a Free Strategy Call</a>'
+  +'</div>'
 
   +'<h2>The Five Core Duties Under Puerto Rico Trust Act</h2>'
   +'<p>Puerto Rico\u2019s trust framework, codified primarily in Title 32 of the Puerto Rico Code (\u00a73301 et seq.), establishes five core fiduciary obligations:</p>'

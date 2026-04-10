@@ -373,10 +373,26 @@ function loadSchemaScript(callback) {
   xhr.open('GET', '../js/schema-markup.js', true);
   xhr.onload = function() {
     if (xhr.status === 200) {
-      /* Remove the IIFE wrapper so we can re-execute with patched PATH */
+      /* Remove the IIFE wrapper so we can re-execute with patched PATH.
+         The file looks like: (function() {\n'use strict';\n...code...\n})();
+         We need the inner code WITHOUT the wrapper. */
       var src = xhr.responseText;
-      /* Strip outer IIFE: (function() { ... })(); */
-      src = src.replace(/^\s*\(function\s*\(\)\s*\{/, '').replace(/\}\)\(\);\s*$/, '');
+      /* Find the opening IIFE and strip it */
+      var openMatch = src.indexOf("(function() {\n");
+      if (openMatch === -1) openMatch = src.indexOf("(function(){");
+      if (openMatch > -1) {
+        /* Skip past the opening (function() { */
+        var bracePos = src.indexOf('{', openMatch);
+        src = src.substring(bracePos + 1);
+      }
+      /* Strip the closing })(); — find the LAST occurrence */
+      var closePattern = '})();';
+      var lastClose = src.lastIndexOf(closePattern);
+      if (lastClose > -1) {
+        src = src.substring(0, lastClose);
+      }
+      /* Remove 'use strict' since we're in new Function */
+      src = src.replace("'use strict';", '');
       schemaScriptSource = src;
       callback();
     } else {

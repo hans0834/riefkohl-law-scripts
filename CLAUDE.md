@@ -14,7 +14,7 @@ Squarespace serves the page shell. The Code Injection Header (Settings > Advance
 
 ## Critical Safety Rules
 
-1. **NEVER modify `code-injection-header.html` without verifying ALL 14 entries are present.** In a past incident (Session 10→11), two scripts were accidentally omitted, breaking the homepage for ~24 hours.
+1. **NEVER modify `code-injection-header.html` without verifying ALL 15 entries are present.** In a past incident (Session 10→11), two scripts were accidentally omitted, breaking the homepage for ~24 hours.
 2. **NEVER force-push to `main`.** This branch is served by GitHub Pages.
 3. **NEVER commit secrets** (`.pem`, `.env`, API keys). The `.gitignore` covers these but be vigilant.
 4. **When editing `all-styles.css`, also update the corresponding module CSS file** (e.g., `homepage-services.css`), and vice versa. The site only loads `all-styles.css` but the module files are kept in sync for maintainability.
@@ -41,6 +41,7 @@ Squarespace serves the page shell. The Code Injection Header (Settings > Advance
 | 12 | `js/email-signup.js` | Newsletter signup bar + inline lead magnets | **Needs setup:** replace `YOUR_FORM_ACTION_URL` with email provider form URL |
 | 13 | `js/service-crosslinks.js` | Related services links at bottom of service pages | Runs on service pages |
 | 14 | `js/legal-content-fixes.js` | Statutory corrections (forced heirship, OBBBA, Act 60 exemption %, NR/NC classification, corporate tax rate, advertising language) | Runs on all pages, applies targeted DOM corrections |
+| 15 | `js/schema-markup.js` | Enhanced Organization schema, practice-area LegalService, Article/BlogPosting, dynamic FAQ extraction | Runs on all pages; additive to existing schema in seo-fixes.js and conversion-booster.js |
 
 ---
 

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Schema Markup Test Harness — Riefkohl Law</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #1a1a1a; background: #f5f5f0; padding: 20px; }
+  h1 { font-size: 1.4rem; margin-bottom: 16px; color: #1B3A4B; }
+  h2 { font-size: 1.1rem; margin: 16px 0 8px; color: #2c5f2d; }
+  .test-case { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 16px; margin-bottom: 12px; }
+  .test-case h3 { font-size: 0.95rem; margin-bottom: 8px; }
+  .test-case .path { font-family: monospace; color: #666; font-size: 0.85rem; }
+  .result { margin-top: 8px; }
+  .schema-block { background: #f8f8f5; border: 1px solid #e0e0d8; border-radius: 4px; padding: 10px; margin: 6px 0; font-family: monospace; font-size: 0.78rem; white-space: pre-wrap; word-break: break-all; max-height: 300px; overflow-y: auto; }
+  .pass { color: #2c5f2d; font-weight: bold; }
+  .fail { color: #c0392b; font-weight: bold; }
+  .warn { color: #e67e22; font-weight: bold; }
+  .summary { background: #1B3A4B; color: #fff; padding: 16px; border-radius: 6px; margin-bottom: 16px; }
+  .summary span { font-size: 1.2rem; font-weight: bold; }
+  button { background: #1B3A4B; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin: 4px; font-size: 0.85rem; }
+  button:hover { background: #2a5a72; }
+  #controls { margin-bottom: 16px; }
+</style>
+</head>
+<body>
+
+<h1>Schema Markup Test Harness</h1>
+
+<div id="controls">
+  <button onclick="runAllTests()">Run All Tests</button>
+  <button onclick="clearResults()">Clear</button>
+</div>
+
+<div id="summary" class="summary" style="display:none">
+  <span id="summaryText"></span>
+</div>
+
+<div id="results"></div>
+
+<script>
+/**
+ * Test harness for js/schema-markup.js
+ * Simulates different URL paths and verifies the generated JSON-LD.
+ */
+
+var TEST_PATHS = [
+  {
+    path: '/',
+    name: 'Homepage',
+    expectedTypes: ['Attorney', 'LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var org = findSchema(schemas, function(s) { return s.legalName === 'Riefkohl LLC'; });
+      results.push(check(org, 'Enhanced Organization schema present'));
+      if (org) {
+        results.push(check(org['@type'] && org['@type'].length === 2, '@type is array [Attorney, LegalService]'));
+        results.push(check(org.legalName === 'Riefkohl LLC', 'legalName is "Riefkohl LLC"'));
+        results.push(check(org.sameAs && org.sameAs.length > 0, 'sameAs includes LinkedIn'));
+        results.push(check(org.knowsAbout && org.knowsAbout.length >= 5, 'knowsAbout has 5+ topics'));
+        results.push(check(org.founder && org.founder.hasCredential, 'founder has bar credentials'));
+        results.push(check(org.founder && org.founder.alumniOf, 'founder has education'));
+        results.push(check(org.email === 'hans.riefkohl@riefkohllaw.com', 'email is correct'));
+        results.push(check(org.address && org.address.streetAddress.indexOf('273') > -1, 'address is 273 Ponce de León'));
+        results.push(check(org.hasOfferCatalog, 'hasOfferCatalog present'));
+        results.push(check(org.areaServed && org.areaServed.length === 2, 'areaServed includes PR and US'));
+        results.push(check(org.potentialAction, 'potentialAction (ReserveAction) present'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/act-60-tax-incentives',
+    name: 'Act 60 Tax Incentives (Practice Area)',
+    expectedTypes: ['LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var svc = findSchema(schemas, function(s) { return s.serviceType === 'Tax Incentive Advisory'; });
+      results.push(check(svc, 'Practice-area LegalService schema present'));
+      if (svc) {
+        results.push(check(svc.name === 'Act 60 Tax Incentives Advisory', 'correct service name'));
+        results.push(check(svc.provider && svc.provider['@id'], 'provider references org @id'));
+        results.push(check(svc.url === 'https://www.riefkohllaw.com/act-60-tax-incentives', 'correct URL'));
+        results.push(check(svc.availableChannel, 'availableChannel present'));
+      }
+      /* Org schema should also be present */
+      var org = findSchema(schemas, function(s) { return s.legalName === 'Riefkohl LLC'; });
+      results.push(check(org, 'Organization schema also present'));
+      return results;
+    }
+  },
+  {
+    path: '/puerto-rico-trusts',
+    name: 'Puerto Rico Trusts (Practice Area)',
+    expectedTypes: ['LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var svc = findSchema(schemas, function(s) { return s.serviceType === 'Trust Formation & Administration'; });
+      results.push(check(svc, 'Trust LegalService schema present'));
+      if (svc) {
+        results.push(check(svc.description.indexOf('Law 219-2012') > -1, 'description references Law 219-2012'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/estate-planning',
+    name: 'Estate Planning (Practice Area)',
+    expectedTypes: ['LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var svc = findSchema(schemas, function(s) { return s.serviceType === 'Estate Planning'; });
+      results.push(check(svc, 'Estate Planning LegalService schema present'));
+      if (svc) {
+        results.push(check(svc.description.indexOf('legítima') > -1, 'description references forced heirship'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/business-formation',
+    name: 'Business Formation (Practice Area)',
+    expectedTypes: ['LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var svc = findSchema(schemas, function(s) { return s.serviceType === 'Business Formation'; });
+      results.push(check(svc, 'Business Formation LegalService schema present'));
+      return results;
+    }
+  },
+  {
+    path: '/government-contracts',
+    name: 'Government Contracts (Practice Area)',
+    expectedTypes: ['LegalService'],
+    checks: function(schemas) {
+      var results = [];
+      var svc = findSchema(schemas, function(s) { return s.serviceType === 'Government Contracts Advisory'; });
+      results.push(check(svc, 'Government Contracts LegalService schema present'));
+      return results;
+    }
+  },
+  {
+    path: '/blog/accura-v-usa',
+    name: 'Blog Post (English)',
+    expectedTypes: ['BlogPosting'],
+    mockDOM: function() {
+      setMeta('og:title', 'Accura v. USA — Government Contract Dispute Analysis');
+      setMeta('description', 'Analysis of Accura v. USA, a key government contracts case.');
+      setMeta('og:image', 'https://images.squarespace-cdn.com/content/v1/test/image.jpg');
+      var h1 = document.createElement('h1'); h1.textContent = 'Accura v. USA'; document.body.appendChild(h1);
+      var time = document.createElement('time'); time.setAttribute('datetime', '2026-03-15'); time.className = 'blog-date'; document.body.appendChild(time);
+    },
+    checks: function(schemas) {
+      var results = [];
+      var art = findSchema(schemas, function(s) { return s['@type'] === 'BlogPosting'; });
+      results.push(check(art, 'BlogPosting schema present'));
+      if (art) {
+        results.push(check(art.headline, 'headline present'));
+        results.push(check(art.author && art.author.name === 'Hans E. Riefkohl', 'author is Hans'));
+        results.push(check(art.publisher && art.publisher['@id'], 'publisher references firm @id'));
+        results.push(check(art.inLanguage === 'en', 'language is en'));
+        results.push(check(art.url === 'https://www.riefkohllaw.com/blog/accura-v-usa', 'URL correct'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/resources/trust-vs-will-puerto-rico',
+    name: 'Resource Article (English)',
+    expectedTypes: ['Article'],
+    mockDOM: function() {
+      setMeta('og:title', 'Trust vs. Will in Puerto Rico — Which Is Right for You?');
+      setMeta('description', 'Compare trusts and wills in Puerto Rico. Learn about forced heirship, probate, and asset protection.');
+    },
+    checks: function(schemas) {
+      var results = [];
+      var art = findSchema(schemas, function(s) { return s['@type'] === 'Article'; });
+      results.push(check(art, 'Article schema present (not BlogPosting)'));
+      if (art) {
+        results.push(check(art.inLanguage === 'en', 'language is en'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/resources/fideicomiso-irrevocable-puerto-rico',
+    name: 'Resource Article (Spanish)',
+    expectedTypes: ['Article'],
+    mockDOM: function() {
+      setMeta('og:title', 'Fideicomiso Irrevocable en Puerto Rico');
+      setMeta('description', 'Guía completa sobre fideicomisos irrevocables en Puerto Rico.');
+    },
+    checks: function(schemas) {
+      var results = [];
+      var art = findSchema(schemas, function(s) { return s['@type'] === 'Article'; });
+      results.push(check(art, 'Article schema present'));
+      /* This path does not contain 'espanol' or 'recursos-', so language defaults to 'en' */
+      return results;
+    }
+  },
+  {
+    path: '/act-60-resource-center',
+    name: 'Act 60 Resource Center (FAQ Extraction)',
+    expectedTypes: [],
+    mockDOM: function() {
+      /* Simulate FAQ content with H3 questions */
+      var container = document.createElement('div');
+      container.innerHTML =
+        '<h3>What is Act 60?</h3>' +
+        '<p>Act 60 is the Puerto Rico Incentives Code of 2019, which consolidates former Acts 20 and 22.</p>' +
+        '<h3>How do I qualify for Act 60 benefits?</h3>' +
+        '<p>You must become a bona fide resident of Puerto Rico by satisfying the presence test, tax home test, and closer connection test under IRC §937.</p>' +
+        '<h3>What tax rate does Act 60 offer?</h3>' +
+        '<p>Export service businesses can receive a 4% fixed corporate income tax rate under Chapter 3.</p>';
+      document.body.appendChild(container);
+    },
+    checks: function(schemas) {
+      var results = [];
+      var faq = findSchema(schemas, function(s) { return s['@type'] === 'FAQPage'; });
+      results.push(check(faq, 'FAQPage schema dynamically extracted'));
+      if (faq) {
+        results.push(check(faq.mainEntity && faq.mainEntity.length >= 2, 'at least 2 Q&A pairs extracted'));
+        results.push(check(faq.mainEntity[0].name.indexOf('?') > -1, 'question text includes ?'));
+        results.push(check(faq.mainEntity[0].acceptedAnswer.text.length > 10, 'answer has substantive text'));
+      }
+      return results;
+    }
+  },
+  {
+    path: '/services',
+    name: 'Services Page (no practice-area LegalService)',
+    expectedTypes: [],
+    checks: function(schemas) {
+      var results = [];
+      /* Services page should NOT get a practice-area LegalService */
+      var svc = findSchema(schemas, function(s) { return s.serviceType; });
+      results.push(check(!svc, 'no practice-area LegalService on /services (correct — handled by seo-fixes.js)'));
+      /* But should get org schema */
+      var org = findSchema(schemas, function(s) { return s.legalName === 'Riefkohl LLC'; });
+      results.push(check(org, 'Organization schema present'));
+      return results;
+    }
+  },
+  {
+    path: '/blog/category/Act+60+Tax+Incentives',
+    name: 'Blog Category Page (no Article schema)',
+    expectedTypes: [],
+    checks: function(schemas) {
+      var results = [];
+      var art = findSchema(schemas, function(s) { return s['@type'] === 'BlogPosting' || s['@type'] === 'Article'; });
+      results.push(check(!art, 'no Article/BlogPosting on category pages (correct)'));
+      return results;
+    }
+  }
+];
+
+/* ===== Helpers ===== */
+function findSchema(schemas, predicate) {
+  for (var i = 0; i < schemas.length; i++) {
+    if (predicate(schemas[i])) return schemas[i];
+  }
+  return null;
+}
+
+function check(condition, label) {
+  return { pass: !!condition, label: label };
+}
+
+function setMeta(nameOrProp, content) {
+  var attr = nameOrProp.indexOf('og:') === 0 ? 'property' : 'name';
+  var el = document.querySelector('meta[' + attr + '="' + nameOrProp + '"]');
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, nameOrProp);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
+}
+
+function clearMockDOM() {
+  /* Remove injected JSON-LD */
+  var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (var i = 0; i < scripts.length; i++) scripts[i].remove();
+  /* Remove mock elements */
+  document.querySelectorAll('h1, h3, time, .mock-content').forEach(function(el) { el.remove(); });
+  /* Remove mock meta */
+  ['og:title', 'description', 'og:image', 'article:published_time', 'article:modified_time'].forEach(function(n) {
+    var attr = n.indexOf('og:') === 0 || n.indexOf('article:') === 0 ? 'property' : 'name';
+    var el = document.querySelector('meta[' + attr + '="' + n + '"]');
+    if (el) el.remove();
+  });
+}
+
+/* ===== Run a single test ===== */
+function runTest(test) {
+  clearMockDOM();
+
+  /* Override window.location.pathname */
+  var originalPath = Object.getOwnPropertyDescriptor(window, 'location');
+
+  /* We can't override location, so we patch the script's PATH variable.
+     We'll re-execute the schema script in a controlled way. */
+
+  /* Build a sandboxed version of the script */
+  var scriptSrc = schemaScriptSource.replace(
+    "var PATH = window.location.pathname.replace(/\\/+$/, '') || '/';",
+    "var PATH = '" + test.path + "';"
+  );
+
+  /* Set up mock DOM if needed */
+  if (test.mockDOM) test.mockDOM();
+
+  /* Execute */
+  try {
+    var fn = new Function(scriptSrc);
+    fn();
+  } catch(e) {
+    return { name: test.name, path: test.path, error: e.message, schemas: [], results: [] };
+  }
+
+  /* Collect generated schemas */
+  var schemas = [];
+  var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+  for (var i = 0; i < scripts.length; i++) {
+    try { schemas.push(JSON.parse(scripts[i].textContent)); } catch(e) {}
+  }
+
+  /* Run checks */
+  var results = test.checks(schemas);
+
+  return { name: test.name, path: test.path, schemas: schemas, results: results };
+}
+
+/* ===== Render results ===== */
+function renderResult(result) {
+  var html = '<div class="test-case">';
+  html += '<h3>' + result.name + '</h3>';
+  html += '<div class="path">' + result.path + '</div>';
+
+  if (result.error) {
+    html += '<div class="result"><span class="fail">ERROR:</span> ' + result.error + '</div>';
+  }
+
+  for (var i = 0; i < result.results.length; i++) {
+    var r = result.results[i];
+    html += '<div class="result">' +
+      (r.pass ? '<span class="pass">PASS</span>' : '<span class="fail">FAIL</span>') +
+      ' — ' + r.label + '</div>';
+  }
+
+  if (result.schemas.length > 0) {
+    html += '<h3 style="margin-top:10px">Generated JSON-LD (' + result.schemas.length + ' block' + (result.schemas.length > 1 ? 's' : '') + ')</h3>';
+    for (var s = 0; s < result.schemas.length; s++) {
+      html += '<div class="schema-block">' + JSON.stringify(result.schemas[s], null, 2) + '</div>';
+    }
+  }
+
+  html += '</div>';
+  return html;
+}
+
+function clearResults() {
+  document.getElementById('results').innerHTML = '';
+  document.getElementById('summary').style.display = 'none';
+  clearMockDOM();
+}
+
+/* ===== Global: schema script source (loaded inline) ===== */
+var schemaScriptSource = '';
+
+function loadSchemaScript(callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '../js/schema-markup.js', true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      /* Remove the IIFE wrapper so we can re-execute with patched PATH */
+      var src = xhr.responseText;
+      /* Strip outer IIFE: (function() { ... })(); */
+      src = src.replace(/^\s*\(function\s*\(\)\s*\{/, '').replace(/\}\)\(\);\s*$/, '');
+      schemaScriptSource = src;
+      callback();
+    } else {
+      document.getElementById('results').innerHTML = '<div class="test-case"><span class="fail">Failed to load schema-markup.js: HTTP ' + xhr.status + '</span></div>';
+    }
+  };
+  xhr.onerror = function() {
+    document.getElementById('results').innerHTML = '<div class="test-case"><span class="fail">Failed to load schema-markup.js (network error). Run via a local server.</span></div>';
+  };
+  xhr.send();
+}
+
+function runAllTests() {
+  clearResults();
+
+  loadSchemaScript(function() {
+    var resultsHTML = '';
+    var totalPass = 0;
+    var totalFail = 0;
+
+    for (var i = 0; i < TEST_PATHS.length; i++) {
+      var result = runTest(TEST_PATHS[i]);
+      resultsHTML += renderResult(result);
+
+      for (var r = 0; r < result.results.length; r++) {
+        if (result.results[r].pass) totalPass++;
+        else totalFail++;
+      }
+      if (result.error) totalFail++;
+    }
+
+    document.getElementById('results').innerHTML = resultsHTML;
+    document.getElementById('summary').style.display = 'block';
+    document.getElementById('summaryText').innerHTML =
+      totalPass + ' passed, ' + totalFail + ' failed out of ' + (totalPass + totalFail) + ' checks across ' + TEST_PATHS.length + ' pages';
+    document.getElementById('summaryText').className = totalFail === 0 ? 'pass' : 'fail';
+  });
+}
+</script>
+
+</body>
+</html>

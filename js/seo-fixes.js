@@ -103,6 +103,38 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Yes. An irrevocable trust established under Puerto Rico Law 219-2012 can provide significant asset protection. Once assets are properly transferred to an irrevocable trust, they are generally beyond the reach of the grantor\'s personal creditors, subject to fraudulent transfer limitations. The trust must be properly structured and funded to achieve this protection.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much does it cost to set up a trust in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico trust costs vary by complexity. A basic irrevocable trust typically costs $3,000\u2013$7,500 in attorney fees, plus notarial execution fees ($300\u2013$2,000) and ODIN registration ($50\u2013$100). More complex structures\u2014multi-generational trusts, asset protection trusts, or trusts integrated with Act 60 planning\u2014can range from $10,000 to $35,000+. Riefkohl Law provides flat-fee quotes before work begins.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is forced heirship (leg\u00edtima) and how does it affect my trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico\u2019s forced heirship rules (leg\u00edtima) under the 2020 Civil Code reserve one-half of the estate for forced heirs\u2014children and the surviving spouse share equally. An irrevocable trust can work alongside these rules, but the trust must be structured so that it does not circumvent the leg\u00edtima. Proper planning with a Puerto Rico trust attorney ensures your trust respects forced heirship while achieving your estate planning goals.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I move my mainland trust to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It depends. Puerto Rico enacted Section 45147 of the Trust Act to facilitate trust migrations, but mainland common-law trusts and Puerto Rico civil-law trusts differ in fundamental ways. A mainland revocable trust may not receive the same protections under PR law. In many cases, it is more effective to create a new Puerto Rico irrevocable trust and fund it with mainland assets rather than attempting a direct migration. An attorney experienced in both systems can evaluate your specific situation.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I need a Puerto Rico trust if I already have an Act 60 decree?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A trust is not required for Act 60, but it is strongly recommended for estate planning. Without a trust, your Puerto Rico assets pass through probate under civil law, subject to forced heirship. Act 60 decree holders with IRI (Individual Resident Investor) status can establish revocable trusts under PR law\u2014an option not available to non-decree holders. A properly structured trust can protect assets, avoid probate, and preserve Act 60 tax benefits for the next generation.'
+          }
         }
       ]
     }
@@ -327,7 +359,36 @@ var SEO = {
   '/puerto-rico-estate-planning-nrnc-classification': {
     h1: 'Estate Planning for Non-Residents with Puerto Rico Assets',
     meta: 'Estate planning guide for non-residents with Puerto Rico assets. NRNC classification, tax implications, and trust strategies for mainland investors.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is NRNC classification in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'NRNC stands for Non-Resident Non-Citizen of Puerto Rico. Under Puerto Rico tax law, U.S. mainland residents who own property or earn income in Puerto Rico are classified as NRNCs. This classification determines how their Puerto Rico-source income is taxed and what estate planning obligations apply to their PR assets upon death.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do non-residents need estate planning for Puerto Rico property?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. If you own real property, business interests, or other assets in Puerto Rico, those assets are subject to Puerto Rico\u2019s forced heirship (leg\u00edtima) rules and probate process upon death\u2014regardless of where you live. Without proper planning, your PR assets may be distributed according to Puerto Rico civil law rather than your mainland estate plan. A Puerto Rico trust or dual-will strategy can ensure your wishes are carried out.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a mainland resident create a Puerto Rico trust for their PR assets?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. A mainland resident (NRNC) can establish an irrevocable trust under Puerto Rico Law 219-2012 to hold their PR assets. This avoids Puerto Rico probate, provides asset protection, and allows the grantor to plan around forced heirship rules. However, NRNCs cannot create revocable trusts under PR law\u2014that option is generally limited to PR residents and Act 60 decree holders.'
+          }
+        }
+      ]
+    }
   },
   /* Spanish pages */
   '/espanol': {
@@ -448,12 +509,70 @@ var SEO = {
   '/act-60-income-sourcing-rules-puerto-rico': {
     h1: 'Act 60 Income Sourcing Rules — Puerto Rico vs. U.S. Source Income',
     meta: 'Income sourcing rules for Act 60 investors. How the IRS classifies Puerto Rico vs. U.S. source income and why it matters for your decree benefits.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How does the IRS determine if income is Puerto Rico-source or U.S.-source?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The IRS uses IRC \u00a7\u00a7861\u2013865 and Treas. Reg. \u00a71.937-2 to classify income by source. For personal services, the source is where the work is performed (working-days allocation). For capital gains on personal property, the source is the seller\u2019s tax home. For interest, dividends, rents, and royalties, different rules apply depending on the payor and asset location. Only Puerto Rico-source income qualifies for Act 60 benefits.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the 10-year lookback rule for Act 60 capital gains?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Under Treas. Reg. \u00a71.937-2(f), capital gains on assets you owned before becoming a bona fide Puerto Rico resident are not treated as PR-source income for federal tax purposes. If you sell an asset within 10 years of establishing PR residency, the pre-move appreciation is subject to federal capital gains tax. You may elect to split-source the gain using the possession holding period method.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I work remotely for mainland clients and still qualify for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, but where you physically perform the work determines the income source. Services income is sourced to where the work is done, not where the client is located. If you work from Puerto Rico serving mainland clients, that income is generally PR-source. However, days spent working on the mainland create U.S.-source income. Tracking working days meticulously is essential for compliance.'
+          }
+        }
+      ]
+    }
   },
   '/act-60-compliance-requirements-audit-triggers': {
     h1: 'Act 60 Compliance Requirements & Audit Triggers',
     meta: 'Act 60 compliance checklist and common IRS audit triggers. Annual reporting, charitable donations, property requirements, and red flags to avoid.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What are the annual compliance requirements for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Act 60 decree holders must file an annual report with DDEC, make a required charitable donation to approved Puerto Rico nonprofits (typically $10,000/year for individual investors), purchase a primary residence within two years of the decree effective date, and file Puerto Rico and federal tax returns. Failure to comply can result in decree revocation and retroactive loss of benefits.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What triggers an IRS audit of Act 60 decree holders?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Common audit triggers include: large capital gains reported as exempt on Form 8898, maintaining a home in a former state, spending significant time on the mainland, inconsistent travel records, high-value cryptocurrency dispositions, income sourcing positions that shift income to PR, and failure to file Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession). The IRS has a dedicated compliance campaign (Campaign 685) targeting Act 60 holders.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can my Act 60 decree be revoked?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. DDEC can revoke your decree for non-compliance with its terms\u2014such as failing to make charitable donations, not purchasing a residence, or not filing annual reports. The IRS can independently determine you are not a bona fide PR resident, which retroactively disqualifies your income from Act 60 benefits. Both outcomes result in owing federal taxes on previously exempt income, plus interest and potential penalties.'
+          }
+        }
+      ]
+    }
   },
   '/act-60-working-days-allocation-services-income-sourcing': {
     h1: 'Act 60 Working Days Allocation — Services Income Sourcing',
@@ -483,7 +602,36 @@ var SEO = {
   '/act-60-residency-compliance-checklist-reference-tables': {
     h1: 'Act 60 Residency Compliance Checklist & Reference Tables',
     meta: 'Comprehensive Act 60 compliance checklist with reference tables. Presence days tracking, documentation requirements, and deadline calendar.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How many days do I need to spend in Puerto Rico for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'To satisfy the bona fide residence test under IRC \u00a7937, you must meet one of five alternative presence tests. The most common is being physically present in Puerto Rico for at least 183 days during the tax year. Alternatives include a 549-day/3-year rolling average, a 90-day U.S. limitation test, an earned income limitation test, and a no-significant-connection standard. You must also maintain your tax home in PR and demonstrate a closer connection to PR than to any other jurisdiction.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What documentation should I keep to prove Act 60 residency?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Maintain a daily presence log with supporting evidence: flight records, credit card statements showing PR purchases, gym check-ins, medical appointments, utility bills, vehicle registration, voter registration, PR driver\u2019s license, and club or religious organization memberships. The IRS evaluates the totality of circumstances, so the more ties to Puerto Rico you can document\u2014and the fewer ties to your former state\u2014the stronger your position.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens if I spend too many days outside Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'If you fail the presence test, you may not qualify as a bona fide PR resident for that tax year, meaning your income loses Act 60 benefits and is subject to full federal taxation. Even one bad year can trigger an IRS audit that examines multiple prior years. Track your days proactively throughout the year\u2014not just at tax time\u2014so you can adjust travel plans before crossing a threshold.'
+          }
+        }
+      ]
+    }
   },
 
   /* ---- Resource Subpages (9 EN + 9 ES) ---- */
@@ -577,7 +725,36 @@ var SEO = {
   '/resources/what-is-puerto-rico-trust': {
     h1: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',
     meta: 'Considering a living trust in Puerto Rico? Learn how PR trusts differ from mainland trusts, why they offer stronger asset protection, and what Act 60 investors need to know. Attorney guide.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is a fideicomiso under Puerto Rico law?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A fideicomiso (Puerto Rico trust) under Law 219-2012 is an autonomous estate\u2014a separate legal patrimony\u2014not a fiduciary relationship as in common-law states. A grantor (fideicomitente) transfers assets to a trustee (fiduciario) who manages them for designated beneficiaries (fideicomisarios). This civil-law structure provides distinct advantages in asset protection and estate planning.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How is a Puerto Rico trust different from a mainland U.S. trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico trusts are governed by civil law (Law 219-2012), not the Uniform Trust Code. Key differences: PR trusts are irrevocable by default, the trust is treated as an autonomous estate rather than a fiduciary relationship, forced heirship (leg\u00edtima) rules apply, and the trust can exist for up to 1,000 years. These differences create planning opportunities\u2014and traps\u2014that require an attorney experienced in both systems.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can Act 60 decree holders create revocable trusts in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Act 60 Individual Resident Investor (IRI) decree holders are one of the few categories permitted to establish revocable trusts under Puerto Rico law. For most other grantors, Puerto Rico trusts are irrevocable by default. This special provision makes trust planning particularly flexible for Act 60 participants.'
+          }
+        }
+      ]
+    }
   },
   '/resources/act-60-trust-planning': {
     h1: 'Trust Planning for Act 60 Investors: Mainland vs. Puerto Rico Trusts',
@@ -592,7 +769,36 @@ var SEO = {
   '/resources/avoiding-probate-legitima': {
     h1: 'Avoiding Probate in Puerto Rico: Trusts and the Leg\u00edtima',
     meta: 'How to avoid forced heirship and probate in Puerto Rico using trusts. Learn what the leg\u00edtima means for your estate and how to plan around it. Free strategy call.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How do I avoid probate in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The most effective way to avoid probate in Puerto Rico is to transfer assets into an irrevocable trust under Law 219-2012 during your lifetime. Assets held in a properly funded trust pass directly to beneficiaries without going through the probate court. Other partial strategies include joint ownership and beneficiary designations on financial accounts, but a trust provides the most comprehensive probate avoidance.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the leg\u00edtima and can I avoid it with a trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The leg\u00edtima (forced heirship) under Puerto Rico\u2019s 2020 Civil Code reserves one-half of your estate for forced heirs\u2014children and the surviving spouse share equally. You cannot use a trust to circumvent the leg\u00edtima. However, with proper planning, a trust can satisfy the leg\u00edtima while still giving you significant control over how and when heirs receive their share, including spendthrift protections and staggered distributions.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How long does probate take in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico probate can take 1\u20133 years or longer, depending on the complexity of the estate, whether the will is contested, and court backlogs. Estates with real property, multiple heirs, or assets in both Puerto Rico and the mainland often experience longer timelines. A trust-based estate plan can transfer assets to beneficiaries in weeks rather than years.'
+          }
+        }
+      ]
+    }
   },
   '/resources/asset-protection-trusts-pr': {
     h1: 'Asset Protection Trusts Under Puerto Rico\u2019s Trust Act',
@@ -622,7 +828,36 @@ var SEO = {
   '/resources/trust-costs-puerto-rico': {
     h1: 'Trust Costs in Puerto Rico: Creation, Administration & Termination',
     meta: 'How much does a living trust cost in Puerto Rico? Full breakdown: attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, and hidden costs most firms don\u2019t disclose.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How much does it cost to create a trust in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Attorney fees for creating a Puerto Rico trust typically range from $1,500 for a simple irrevocable trust to $35,000+ for complex multi-generational or Act 60-integrated structures. Additional costs include notarial execution fees ($300\u2013$2,000), ODIN registration ($50\u2013$100), and any title transfer fees for real property. Riefkohl Law provides flat-fee quotes upfront.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the ongoing costs of maintaining a Puerto Rico trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Annual trust administration costs include trustee fees (professional trustees typically charge 0.5%\u20131.5% of trust assets), annual tax return preparation ($500\u2013$3,000), and legal review or amendment fees as needed. Self-administered trusts avoid trustee fees but require the trustee to manage compliance, record-keeping, and tax filings.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are there hidden costs when setting up a Puerto Rico trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Common overlooked costs include: property appraisal fees when transferring real estate into the trust, CRIM property tax reassessment risk, title insurance updates, and annual compliance costs. For Act 60 holders, there may also be costs for coordinating the trust with your decree structure. Ask your attorney for a comprehensive cost estimate that includes these ancillary expenses.'
+          }
+        }
+      ]
+    }
   },
   '/resources/fiduciary-duties-trustees': {
     h1: 'Fiduciary Duties Under Puerto Rico Trust Law',
@@ -647,7 +882,36 @@ var SEO = {
   '/resources/mainland-trust-to-puerto-rico': {
     h1: 'Bringing Your Mainland Trust to Puerto Rico: A Guide for Act 60 Holders',
     meta: 'What Section 45147 protects (and doesn\u2019t) when you bring a mainland trust to PR. Governing law risks, civil law gaps, and practical steps.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can I transfer my mainland revocable trust to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'You can change the governing law of a mainland trust to Puerto Rico using Section 45147 of the Trust Act, but this does not automatically make it a Puerto Rico trust with full civil-law protections. Mainland revocable trusts may lose key features or face enforcement gaps under PR\u2019s civil law framework. In many cases, creating a new Puerto Rico irrevocable trust and funding it with mainland assets is more effective than migrating an existing trust.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is Section 45147 of the Puerto Rico Trust Act?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Section 45147 of Law 219-2012 allows trusts created under other jurisdictions to change their governing law to Puerto Rico. It preserves the validity of the trust instrument and its terms, but it does not override Puerto Rico\u2019s forced heirship rules or fill gaps where mainland trust concepts (like the Uniform Trust Code) have no civil-law equivalent. An attorney experienced in both systems should review any proposed migration.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Should Act 60 holders keep their mainland trust or create a new PR trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It depends on your goals. Keeping a mainland trust is simpler but may not provide Puerto Rico\u2019s asset protection benefits or integrate well with your Act 60 decree. A new PR irrevocable trust offers stronger creditor protection, probate avoidance under civil law, and better alignment with Act 60 planning\u2014but requires transferring assets and incurring setup costs. Many Act 60 holders maintain their mainland trust for mainland assets and create a separate PR trust for Puerto Rico assets.'
+          }
+        }
+      ]
+    }
   },
 
   /* ---- Act 60 Tax Incentives Subpages ---- */

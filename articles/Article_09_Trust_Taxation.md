@@ -172,6 +172,6 @@ For the successful Individual Resident Investor in 2026, the following strategic
 
 **3. Comply with Foreign Trust Filings:** The safer approach remains treating Puerto Rico trusts as "foreign" for Form 3520 and 3520-A purposes. The potential 35% and 5% penalties far outweigh any administrative savings from non-filing.
 
-**4. Integrate Charitable Floor Planning:** With the new 0.5% federal charitable floor and the increased $15,000 mandatory PR donation, investors should consider bunching strategies or Donor Advised Funds to optimize the after-tax cost of their required philanthropy.
+**4. Integrate Charitable Floor Planning:** With the new 0.5% federal charitable floor and the $10,000 mandatory PR charitable donation (plus $5,000 annual report fee), investors should consider bunching strategies or Donor Advised Funds to optimize the after-tax cost of their required philanthropy.
 
 The 2026 environment offers a generational opportunity for wealth preservation within a U.S.-protected legal system, but it demands a level of legal and accounting rigor that is commensurate with the substantial tax savings available. The transition to the 4% regime for new applicants marks the institutionalization of Puerto Rico as a sophisticated global wealth destination, shielded by federal law and stabilized by local statutory extensions through 2055.

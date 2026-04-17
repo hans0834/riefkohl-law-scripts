@@ -203,7 +203,7 @@ ART09-026|Article_09|Act 76-2017|PR abolished estate and gift tax for transfers 
 ART09-027|Article_09|Step-Up vs. Carryover|Federal: step-up to FMV under IRC §1014; PR: carryover basis under Act 76-2017|Tax Rate|Critical|Both|EN|No
 ART09-028|Article_09|Estate Return|PR requires filing Informative Return (Model SC 2800 C) within 12 months of decedent's death|Filing Deadline|High|PR|EN|No
 ART09-029|Article_09|Act 65-2025|Act 65-2025 streamlined filing deadlines — revocable/grantor trusts must file Form 480.8F by March 31|Filing Deadline|High|PR|EN|Yes
-ART09-030|Article_09|OBBBA Charitable|New 0.5% federal charitable floor and increased $15,000 mandatory PR donation|Financial Claim|High|Both|EN|Yes
+ART09-030|Article_09|OBBBA Charitable|New 0.5% federal charitable floor and $10,000 mandatory PR donation (plus $5,000 annual report fee)|Financial Claim|High|Both|EN|Yes
 ART09-031|Article_09|IRS Policy Shift|Starting end of 2024, IRS began reviewing reasonable cause statements before assessing penalties|Procedural Claim|High|Federal|EN|Yes
 ART09-032|Article_09|GAO 2025|GAO recommended enhanced audit activity in late 2025|Procedural Claim|Medium|Federal|EN|Yes
 

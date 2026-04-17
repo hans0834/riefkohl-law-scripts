@@ -450,11 +450,11 @@ function fixComplianceCharitableDonation() {
   var allP = document.querySelectorAll('.sqs-html-content p, .sqs-code-container p');
   for (var i = 0; i < allP.length; i++) {
     var p = allP[i];
-    /* Fix compliance article — update amount to reflect HB 505 ($15K total, $7,500 child poverty) */
+    /* Fix compliance article — clarify CECFL allocation ($10K total, $5K child poverty) */
     if (p.textContent.indexOf('$5,000 directed to a qualifying Puerto Rico nonprofit organization') >= 0) {
       p.innerHTML = p.innerHTML.replace(
         'at least $5,000 directed to a qualifying Puerto Rico nonprofit organization',
-        'at least $7,500 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
+        'at least $5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
       );
     }
   }
@@ -465,18 +465,18 @@ function fixComplianceCharitableDonation() {
     for (var j = 0; j < allEls.length; j++) {
       var el = allEls[j];
       var elText = el.textContent;
-      /* Pattern: "...donation of $10,000 to qualifying Puerto Rico nonprofits" */
+      /* Pattern: "...donation of $10,000 to qualifying Puerto Rico nonprofits" — add CECFL detail */
       if (elText.indexOf('$10,000 to qualifying') >= 0) {
         el.innerHTML = el.innerHTML.replace(
           /(?:charitable )?donation of \$10,000 to qualifying Puerto Rico nonprofits\.?/,
-          'charitable donation of $15,000 (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty).'
+          'charitable donation of $10,000 (at least $5,000 to CECFL-approved organizations focused on eradicating child poverty).'
         );
       }
-      /* Pattern: "$10,000 annual charitable donations" — stop at comma or period */
+      /* Pattern: "$10,000 annual charitable donations" — add CECFL detail */
       if (elText.indexOf('$10,000 annual charitable donation') >= 0) {
         el.innerHTML = el.innerHTML.replace(
           /\$10,000 annual charitable donations?/,
-          '$15,000 annual charitable donation (at least $7,500 to CECFL-approved organizations focused on eradicating child poverty)'
+          '$10,000 annual charitable donation (at least $5,000 to CECFL-approved organizations focused on eradicating child poverty)'
         );
       }
     }
@@ -715,28 +715,14 @@ function fixFourPercentAllResidentsClaim() {
 }
 
 /* ================================================
-   18. UPDATE CHARITABLE DONATION $10K → $15K (HB 505)
-   AND ADD CONSANGUINITY/AFFINITY RESTRICTIONS
-   Reality: HB 505 raised from $10,000 to $15,000.
-   Donations cannot go to entities controlled by
-   relatives within 4th degree consanguinity /
+   18. ADD CHARITABLE DONATION RESTRICTION NOTE
+   Reality: Annual donation is $10,000 (at least $5,000
+   to CECFL child-poverty orgs). Separate $5,000 annual
+   report fee. Donations cannot go to entities controlled
+   by relatives within 4th degree consanguinity /
    2nd degree affinity.
    ================================================ */
 function updateCharitableDonationHB505() {
-  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-  while (walker.nextNode()) {
-    var node = walker.currentNode;
-    if (isInsideInjectedElement(node)) continue;
-    var text = node.nodeValue;
-
-    /* Update $10,000 -> $15,000 in charitable donation context only */
-    if (text.indexOf('$10,000') >= 0 &&
-        (text.indexOf('charitable') >= 0 || text.indexOf('donation') >= 0) &&
-        text.indexOf('report fee') < 0 && text.indexOf('application fee') < 0) {
-      node.nodeValue = text.replace(/\$10,000/g, '$15,000');
-    }
-  }
-
   /* Add restriction note after charitable donation list items or paragraphs */
   if (path !== '/act-60-tax-incentives' && path !== '/act-60-compliance-requirements-audit-triggers') return;
   if (document.getElementById('rl-donation-restrictions-note')) return;
@@ -744,14 +730,14 @@ function updateCharitableDonationHB505() {
   var elements = document.querySelectorAll('.sqs-html-content li, .sqs-html-content p, .sqs-code-container li, .sqs-code-container p');
   for (var i = 0; i < elements.length; i++) {
     var el = elements[i];
-    if ((el.textContent.indexOf('$15,000') >= 0 || el.textContent.indexOf('charitable') >= 0) &&
+    if ((el.textContent.indexOf('$10,000') >= 0 || el.textContent.indexOf('charitable') >= 0) &&
         el.textContent.indexOf('donation') >= 0) {
       /* Check if note already exists */
       if (el.parentNode.querySelector('#rl-donation-restrictions-note')) return;
       var note = document.createElement('p');
       note.id = 'rl-donation-restrictions-note';
       note.style.cssText = 'margin:6px 0 14px;padding:10px 14px;background:#fdf6ec;border-left:3px solid #e67e22;border-radius:0 4px 4px 0;font-size:.82rem;color:#7d4e00;line-height:1.5;';
-      note.innerHTML = '<strong>Donation restrictions:</strong> At least half of the required donation must go to CECFL-approved organizations dedicated to <strong>eradicating child poverty</strong> in Puerto Rico. Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity. (Updated to $15,000 under Act 38-2026, effective for applications filed after December 31, 2026.)';
+      note.innerHTML = '<strong>Donation restrictions:</strong> At least half of the $10,000 annual donation must go to CECFL-approved organizations dedicated to <strong>eradicating child poverty</strong> in Puerto Rico. Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity. In addition to the donation, decree holders pay a <strong>$5,000 annual report fee</strong>.';
       el.parentNode.insertBefore(note, el.nextSibling);
       return;
     }
@@ -835,7 +821,7 @@ function addFeeDisclosure() {
     + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Application fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$1,000</strong></td></tr>'
     + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Entity registration</td><td style="padding:6px 10px;">$250</td><td style="padding:6px 10px;">$150</td></tr>'
     + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Annual report fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$500</strong></td></tr>'
-    + '<tr><td style="padding:6px 10px;">Annual charitable donation</td><td style="padding:6px 10px;">$15,000</td><td style="padding:6px 10px;">N/A</td></tr>'
+    + '<tr><td style="padding:6px 10px;">Annual charitable donation</td><td style="padding:6px 10px;">$10,000</td><td style="padding:6px 10px;">N/A</td></tr>'
     + '</tbody></table>'
     + '<p style="margin:8px 0 0;font-size:.8rem;color:#6c757d;"><em>Fees are subject to change. Contact our office for current fee schedules and a complete cost analysis.</em></p>';
 

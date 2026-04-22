@@ -2799,3 +2799,514 @@ header.header {
   .rl-signup-inline .rl-signup-form { flex-direction: column; }
   .rl-signup-inline .rl-signup-btn { width: 100%; }
 }
+
+
+/* ============================================================
+   POLISH SWEEP — unified tokens, contrast, button/form/footer refinement
+   Source: src/polish-sweep.html | Module: css/polish-sweep.css
+   ============================================================ */
+/* ============================================================
+   1. CANONICAL DESIGN TOKENS
+   ============================================================ */
+:root {
+  --rl-navy:        #1a2033;
+  --rl-navy-mid:    #243047;
+  --rl-navy-light:  #2d3b56;
+  --rl-gold:        #bfa35d;
+  --rl-gold-dark:   #a68c42;
+  --rl-gold-pale:   rgba(191,163,93,.08);
+  --rl-gold-glow:   rgba(191,163,93,.18);
+  --rl-cream:       #f9f9fb;
+  --rl-warm-100:    #f5f5f8;
+  --rl-warm-200:    #e8e9ee;
+  --rl-warm-400:    #a8a298;
+  --rl-warm-600:    #706b62;
+  --rl-warm-800:    #3d3a35;
+  --rl-white:       #fff;
+  --rl-focus:       rgba(191,163,93,.35);
+  --rl-r:           10px;
+  --rl-r-sm:        6px;
+}
+
+/* ============================================================
+   2. DARK-SECTION CONTRAST — kill dark-on-dark everywhere
+   ============================================================ */
+[data-section-theme="dark"],
+[data-section-theme="dark-bold"],
+.section-background--dark,
+.sqs-background--dark,
+.dark-bold,
+.dark {
+  color: var(--rl-white);
+}
+
+[data-section-theme="dark"] h1, [data-section-theme="dark"] h2,
+[data-section-theme="dark"] h3, [data-section-theme="dark"] h4,
+[data-section-theme="dark"] h5, [data-section-theme="dark"] h6,
+[data-section-theme="dark-bold"] h1, [data-section-theme="dark-bold"] h2,
+[data-section-theme="dark-bold"] h3, [data-section-theme="dark-bold"] h4,
+[data-section-theme="dark-bold"] h5, [data-section-theme="dark-bold"] h6,
+.section-background--dark h1, .section-background--dark h2,
+.section-background--dark h3, .section-background--dark h4,
+.section-background--dark h5, .section-background--dark h6,
+.dark-bold h1, .dark-bold h2, .dark-bold h3, .dark-bold h4,
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: var(--rl-white) !important;
+  font-style: normal !important;
+}
+
+[data-section-theme="dark"] p,
+[data-section-theme="dark"] li,
+[data-section-theme="dark"] .sqs-block-html,
+[data-section-theme="dark"] .sqs-html-content,
+[data-section-theme="dark-bold"] p,
+[data-section-theme="dark-bold"] li,
+[data-section-theme="dark-bold"] .sqs-block-html,
+[data-section-theme="dark-bold"] .sqs-html-content,
+.section-background--dark p,
+.section-background--dark li,
+.dark-bold p,
+.dark-bold li,
+.dark p,
+.dark li {
+  color: rgba(255,255,255,.82) !important;
+}
+
+[data-section-theme="dark"] strong,
+[data-section-theme="dark-bold"] strong,
+.section-background--dark strong,
+.dark-bold strong {
+  color: var(--rl-white) !important;
+}
+
+/* ============================================================
+   3. PHONE & EMAIL LINKS — context-aware
+   ============================================================ */
+a[href^="tel:"] {
+  color: var(--rl-navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+a[href^="tel:"]:hover {
+  color: var(--rl-gold-dark);
+}
+[data-section-theme="dark"] a[href^="tel:"],
+[data-section-theme="dark-bold"] a[href^="tel:"],
+.section-background--dark a[href^="tel:"],
+.dark-bold a[href^="tel:"],
+#footer-sections a[href^="tel:"],
+footer.sections a[href^="tel:"],
+.rl-rd-cta-section a[href^="tel:"] {
+  color: var(--rl-gold) !important;
+}
+
+a[href^="mailto:"] {
+  color: var(--rl-gold-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+[data-section-theme="dark"] a[href^="mailto:"],
+[data-section-theme="dark-bold"] a[href^="mailto:"],
+.section-background--dark a[href^="mailto:"],
+#footer-sections a[href^="mailto:"],
+footer.sections a[href^="mailto:"] {
+  color: var(--rl-gold) !important;
+}
+
+/* ============================================================
+   4. SQUARESPACE BUTTONS — unified, refined
+   ============================================================ */
+.sqs-block-button-container .sqs-button-element--primary,
+.sqs-block-button-container .sqs-block-button-element--primary,
+.sqs-button-element--primary {
+  background-color: var(--rl-gold) !important;
+  color: var(--rl-white) !important;
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  padding: 14px 32px !important;
+  border-radius: var(--rl-r) !important;
+  border: none !important;
+  transition: background .25s ease, transform .2s ease, box-shadow .25s ease !important;
+}
+.sqs-button-element--primary:hover {
+  background-color: var(--rl-gold-dark) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 20px rgba(26,32,51,.15) !important;
+}
+
+.sqs-button-element--secondary,
+.sqs-block-button-container .sqs-block-button-element--secondary {
+  background-color: transparent !important;
+  color: var(--rl-navy) !important;
+  border: 2px solid var(--rl-warm-200) !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+  padding: 12px 28px !important;
+  border-radius: var(--rl-r) !important;
+  transition: border-color .25s, background .25s, color .25s !important;
+}
+.sqs-button-element--secondary:hover {
+  border-color: var(--rl-gold) !important;
+  background-color: var(--rl-gold-pale) !important;
+  color: var(--rl-navy) !important;
+}
+
+/* Buttons inside dark sections */
+[data-section-theme="dark"] .sqs-button-element--secondary,
+[data-section-theme="dark-bold"] .sqs-button-element--secondary,
+.section-background--dark .sqs-button-element--secondary,
+.dark-bold .sqs-button-element--secondary {
+  color: var(--rl-white) !important;
+  border-color: rgba(255,255,255,.28) !important;
+}
+[data-section-theme="dark"] .sqs-button-element--secondary:hover,
+[data-section-theme="dark-bold"] .sqs-button-element--secondary:hover {
+  border-color: var(--rl-gold) !important;
+  background-color: rgba(255,255,255,.06) !important;
+  color: var(--rl-white) !important;
+}
+
+/* Tertiary / link-style button */
+.sqs-button-element--tertiary {
+  color: var(--rl-gold-dark) !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+  font-size: .82rem !important;
+  padding: 6px 0 !important;
+  border-bottom: 2px solid var(--rl-gold) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  transition: color .2s, border-color .2s !important;
+}
+.sqs-button-element--tertiary:hover {
+  color: var(--rl-navy) !important;
+  border-bottom-color: var(--rl-navy) !important;
+}
+
+/* ============================================================
+   5. FORM FIELDS — visible borders, clear focus, never dark-on-dark
+   ============================================================ */
+.form-wrapper .form-item input[type="text"],
+.form-wrapper .form-item input[type="email"],
+.form-wrapper .form-item input[type="tel"],
+.form-wrapper .form-item input[type="number"],
+.form-wrapper .form-item input[type="url"],
+.form-wrapper .form-item textarea,
+.form-wrapper .form-item select,
+.newsletter-form-field-wrapper input {
+  background-color: var(--rl-white) !important;
+  color: var(--rl-warm-800) !important;
+  border: 1.5px solid var(--rl-warm-200) !important;
+  border-radius: var(--rl-r-sm) !important;
+  padding: 12px 14px !important;
+  font-size: .95rem !important;
+  font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif) !important;
+  box-shadow: none !important;
+  transition: border-color .2s, box-shadow .2s !important;
+}
+
+.form-wrapper .form-item input:focus,
+.form-wrapper .form-item textarea:focus,
+.form-wrapper .form-item select:focus,
+.newsletter-form-field-wrapper input:focus {
+  border-color: var(--rl-gold) !important;
+  box-shadow: 0 0 0 3px var(--rl-focus) !important;
+  outline: none !important;
+}
+
+.form-wrapper input::placeholder,
+.form-wrapper textarea::placeholder,
+.newsletter-form-field-wrapper input::placeholder {
+  color: var(--rl-warm-400) !important;
+  opacity: 1 !important;
+}
+
+.form-wrapper .title,
+.form-wrapper .description,
+.form-wrapper label {
+  color: var(--rl-warm-800) !important;
+}
+.form-wrapper label .title {
+  font-weight: 600 !important;
+}
+
+/* Forms on dark sections — white labels, soft gray descriptions */
+[data-section-theme="dark"] .form-wrapper label,
+[data-section-theme="dark"] .form-wrapper .title,
+[data-section-theme="dark-bold"] .form-wrapper label,
+[data-section-theme="dark-bold"] .form-wrapper .title,
+.section-background--dark .form-wrapper label,
+.dark-bold .form-wrapper label,
+#footer-sections .form-wrapper label,
+footer.sections .form-wrapper label {
+  color: var(--rl-white) !important;
+}
+[data-section-theme="dark"] .form-wrapper .description,
+[data-section-theme="dark-bold"] .form-wrapper .description,
+.section-background--dark .form-wrapper .description,
+.dark-bold .form-wrapper .description,
+#footer-sections .form-wrapper .description,
+footer.sections .form-wrapper .description {
+  color: rgba(255,255,255,.65) !important;
+}
+
+/* Newsletter polish */
+.sqs-block-newsletter .newsletter-form-button,
+.newsletter-form-button {
+  background-color: var(--rl-gold) !important;
+  color: var(--rl-white) !important;
+  border-radius: var(--rl-r-sm) !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  padding: 12px 26px !important;
+  transition: background .25s !important;
+  border: none !important;
+}
+.sqs-block-newsletter .newsletter-form-button:hover,
+.newsletter-form-button:hover {
+  background-color: var(--rl-gold-dark) !important;
+}
+
+/* ============================================================
+   6. HEADER NAV — consistent, readable
+   ============================================================ */
+.header-nav-item a,
+.header-nav-folder-title,
+.header-menu-nav-item a {
+  color: var(--rl-navy);
+  font-weight: 500;
+  letter-spacing: .01em;
+  transition: color .2s;
+}
+.header-nav-item a:hover,
+.header-nav-item--active a,
+.header-menu-nav-item a:hover {
+  color: var(--rl-gold-dark);
+}
+
+/* Mobile menu: white text on dark overlay */
+.header-menu[data-theme="dark"] .header-menu-nav-item a,
+.header-menu[data-theme="dark-bold"] .header-menu-nav-item a,
+.header-menu--open .header-menu-nav-item a {
+  color: var(--rl-white) !important;
+}
+.header-menu[data-theme="dark"] .header-menu-nav-item a:hover,
+.header-menu--open .header-menu-nav-item a:hover {
+  color: var(--rl-gold) !important;
+}
+.burger-inner .top-bun,
+.burger-inner .patty,
+.burger-inner .bottom-bun {
+  background-color: var(--rl-navy) !important;
+}
+.header-menu[data-theme="dark"] .burger-inner .top-bun,
+.header-menu[data-theme="dark"] .burger-inner .patty,
+.header-menu[data-theme="dark"] .burger-inner .bottom-bun,
+.header-menu--open .burger-inner .top-bun,
+.header-menu--open .burger-inner .patty,
+.header-menu--open .burger-inner .bottom-bun {
+  background-color: var(--rl-white) !important;
+}
+
+/* ============================================================
+   7. FOOTER — consistent dark navy, readable links
+   ============================================================ */
+#footer-sections,
+footer.sections,
+.footer {
+  background-color: var(--rl-navy);
+  color: rgba(255,255,255,.78);
+}
+#footer-sections .sqs-html-content p,
+#footer-sections .sqs-html-content li,
+#footer-sections .sqs-html-content span,
+footer.sections .sqs-html-content p,
+footer.sections .sqs-html-content li {
+  color: rgba(255,255,255,.78) !important;
+}
+#footer-sections h1, #footer-sections h2, #footer-sections h3, #footer-sections h4,
+footer.sections h1, footer.sections h2, footer.sections h3, footer.sections h4 {
+  color: var(--rl-white) !important;
+}
+#footer-sections a:not([href^="tel:"]):not([href^="mailto:"]):not(.sqs-button-element--primary):not(.sqs-button-element--secondary),
+footer.sections a:not([href^="tel:"]):not([href^="mailto:"]):not(.sqs-button-element--primary):not(.sqs-button-element--secondary) {
+  color: rgba(255,255,255,.78) !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(191,163,93,.35);
+  transition: color .2s, border-color .2s;
+}
+#footer-sections a:hover,
+footer.sections a:hover {
+  color: var(--rl-gold) !important;
+  border-bottom-color: var(--rl-gold) !important;
+}
+
+/* Footer social icons */
+#footer-sections .sqs-svg-icon--social use,
+footer.sections .sqs-svg-icon--social use {
+  fill: rgba(255,255,255,.78) !important;
+  transition: fill .2s;
+}
+#footer-sections .sqs-svg-icon--social:hover use,
+footer.sections .sqs-svg-icon--social:hover use {
+  fill: var(--rl-gold) !important;
+}
+
+/* ============================================================
+   8. LINKS IN BODY COPY — gold-dark on light, gold on dark
+   ============================================================ */
+.sqs-html-content a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary):not(.sqs-button-element--tertiary):not(.rl-rd-cta-btn):not(.rl-rd-cta-secondary),
+.sqs-block-html a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary):not(.sqs-button-element--tertiary):not(.rl-rd-cta-btn):not(.rl-rd-cta-secondary) {
+  color: var(--rl-gold-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color .2s;
+}
+.sqs-html-content a:hover,
+.sqs-block-html a:hover {
+  color: var(--rl-navy);
+}
+
+[data-section-theme="dark"] .sqs-html-content a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary),
+[data-section-theme="dark-bold"] .sqs-html-content a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary),
+.section-background--dark .sqs-html-content a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary),
+.dark-bold .sqs-html-content a:not(.sqs-button-element--primary):not(.sqs-button-element--secondary) {
+  color: var(--rl-gold) !important;
+}
+[data-section-theme="dark"] .sqs-html-content a:hover,
+[data-section-theme="dark-bold"] .sqs-html-content a:hover {
+  color: var(--rl-white) !important;
+}
+
+/* ============================================================
+   9. TYPOGRAPHY REFINEMENT — hierarchy through scale, not bold
+   ============================================================ */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  letter-spacing: -.015em;
+  line-height: 1.22;
+  color: var(--rl-navy);
+}
+body h1 { letter-spacing: -.025em; font-weight: 700; }
+body h2 { letter-spacing: -.02em;  font-weight: 700; }
+body h3 { font-weight: 600; }
+body h4 { font-weight: 600; letter-spacing: -.01em; }
+
+body p {
+  line-height: 1.7;
+}
+
+/* Italic styling — subtle, not slanted headings */
+em, i { font-style: italic; }
+h1 em, h2 em, h3 em, h4 em {
+  font-style: normal;
+  color: var(--rl-gold-dark);
+}
+
+/* Blockquote — gold accent, closer to peer firms' testimonial style */
+blockquote {
+  border-left: 3px solid var(--rl-gold);
+  padding: 6px 0 6px 24px;
+  margin: 28px 0;
+  font-style: normal;
+  color: var(--rl-warm-800);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+[data-section-theme="dark"] blockquote,
+[data-section-theme="dark-bold"] blockquote {
+  color: var(--rl-white) !important;
+  border-left-color: var(--rl-gold) !important;
+}
+
+/* HR — subtle gold-accented divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--rl-warm-200), transparent);
+  margin: 40px 0;
+}
+[data-section-theme="dark"] hr,
+[data-section-theme="dark-bold"] hr {
+  background: linear-gradient(to right, transparent, rgba(255,255,255,.18), transparent);
+}
+
+/* ============================================================
+   10. IMAGE & CARD POLISH
+   ============================================================ */
+.sqs-block-image .sqs-image-shape-container-element {
+  border-radius: var(--rl-r);
+  overflow: hidden;
+}
+
+/* Accent bar under section headings that have one */
+.sqs-html-content h2:not([class]),
+.sqs-block-html h2:not([class]) {
+  position: relative;
+}
+
+/* ============================================================
+   11. ACCESSIBILITY — focus ring + selection
+   ============================================================ */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--rl-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--rl-gold);
+  color: var(--rl-navy);
+}
+
+/* ============================================================
+   12. SMOOTH SCROLL + REDUCED MOTION
+   ============================================================ */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ============================================================
+   13. COOKIE BANNER / COOKIE PROMPT — brand consistency
+   ============================================================ */
+.sqs-cookie-banner-v2 {
+  background-color: var(--rl-navy) !important;
+  color: rgba(255,255,255,.85) !important;
+}
+.sqs-cookie-banner-v2 a {
+  color: var(--rl-gold) !important;
+}
+.sqs-cookie-banner-v2-accept {
+  background-color: var(--rl-gold) !important;
+  color: var(--rl-white) !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+}
+
+/* ============================================================
+   14. ANNOUNCEMENT BAR / PROMO STRIP
+   ============================================================ */
+.sqs-announcement-bar-dropzone {
+  background-color: var(--rl-navy) !important;
+}
+.sqs-announcement-bar-dropzone p,
+.sqs-announcement-bar-dropzone a {
+  color: var(--rl-white) !important;
+}
+.sqs-announcement-bar-dropzone a:hover {
+  color: var(--rl-gold) !important;
+}

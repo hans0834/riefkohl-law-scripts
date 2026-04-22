@@ -3310,3 +3310,190 @@ html { scroll-behavior: smooth; }
 .sqs-announcement-bar-dropzone a:hover {
   color: var(--rl-gold) !important;
 }
+
+
+/* ==== Polish Sweep v2 additions (WhatsApp, footer hr, gaps, CTA, newsletter) ==== */
+/* ============================================================
+   15. WHATSAPP FLOATING BUTTON — missing CSS caused full-size SVG
+   ============================================================ */
+.rl-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  z-index: 90;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .25s, background-color .2s;
+}
+.rl-whatsapp:hover {
+  background-color: #1fba57;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.28);
+}
+.rl-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  display: block;
+}
+/* Avoid stacking with the mobile sticky CTA bar */
+@media (max-width: 640px) {
+  .rl-whatsapp {
+    bottom: 80px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+  .rl-whatsapp svg { width: 26px; height: 26px; }
+}
+
+/* ============================================================
+   16. SUPPRESS POLISH HR INSIDE FOOTER / STICKY / SIGNUP CHROME
+   ============================================================ */
+#footer-sections hr,
+footer.sections hr,
+.footer hr,
+.rl-footer-signup hr,
+.rl-slide-cta hr,
+.rl-call-banner hr {
+  display: none !important;
+}
+
+/* ============================================================
+   17. AGGRESSIVE EMPTY-SECTION COLLAPSE
+   ============================================================ */
+body.homepage .page-section.rl-section-collapsed,
+body .page-section.rl-section-collapsed {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+body .page-section.rl-section-collapsed .section-background,
+body .page-section.rl-section-collapsed .content-wrapper,
+body .page-section.rl-section-collapsed > * {
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+}
+
+/* Prevent adjacent sections with no visible content from stacking their padding */
+body.homepage .page-section:empty,
+body.homepage .page-section .content-wrapper:empty {
+  display: none !important;
+}
+
+/* ============================================================
+   18. HERO PRIMARY CTA — more commanding, peer-firm weight
+   ============================================================ */
+.rl-rd-cta-btn,
+a.rl-rd-cta-btn,
+.rl-rd-hero .rl-rd-cta-btn,
+.rl-rd-cta-section .rl-rd-cta-btn {
+  font-size: 1rem !important;
+  padding: 18px 40px !important;
+  letter-spacing: .08em !important;
+  box-shadow: 0 6px 18px rgba(191,163,93,.25);
+}
+.rl-rd-cta-btn:hover {
+  box-shadow: 0 10px 24px rgba(191,163,93,.35) !important;
+}
+@media (max-width: 640px) {
+  .rl-rd-cta-btn,
+  a.rl-rd-cta-btn {
+    font-size: .9rem !important;
+    padding: 15px 28px !important;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   19. NEWSLETTER "STAY INFORMED" INLINE BLOCK — give it frame & weight
+   ============================================================ */
+.sqs-block-newsletter {
+  background: var(--rl-cream);
+  border: 1px solid var(--rl-warm-200);
+  border-radius: var(--rl-r);
+  padding: 36px 32px !important;
+  max-width: 720px;
+  margin: 32px auto !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.sqs-block-newsletter .newsletter-form-header-title,
+.sqs-block-newsletter h2 {
+  font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
+  font-size: 1.5rem !important;
+  color: var(--rl-navy) !important;
+  margin: 0 0 10px !important;
+  letter-spacing: -.015em;
+}
+.sqs-block-newsletter .newsletter-form-header-description,
+.sqs-block-newsletter p {
+  color: var(--rl-warm-600) !important;
+  font-size: .95rem !important;
+  line-height: 1.6;
+  margin: 0 0 20px !important;
+}
+.sqs-block-newsletter .newsletter-form-body {
+  gap: 10px;
+}
+.sqs-block-newsletter .newsletter-form-field-wrapper {
+  margin-bottom: 12px;
+}
+.sqs-block-newsletter .newsletter-form-footnote {
+  font-size: .78rem !important;
+  color: var(--rl-warm-400) !important;
+  margin-top: 12px !important;
+}
+
+/* ============================================================
+   20. ANNOUNCEMENT BAR TIGHTENING — uppercase, padded, readable
+   ============================================================ */
+.sqs-announcement-bar-dropzone {
+  padding: 10px 20px !important;
+  font-size: .82rem !important;
+  letter-spacing: .01em;
+}
+.sqs-announcement-bar-dropzone p {
+  margin: 0 !important;
+  color: var(--rl-white) !important;
+  line-height: 1.4;
+}
+.sqs-announcement-bar-dropzone a {
+  border-bottom: 1px solid rgba(191,163,93,.5);
+  padding-bottom: 1px;
+}
+
+/* ============================================================
+   21. ACT 60 BANNER SECTION — remove arbitrary vertical gap
+   ============================================================ */
+body.homepage .page-section[data-section-theme="dark"],
+body.homepage .page-section[data-section-theme="dark-bold"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+body.homepage .page-section[data-section-theme="dark"] + .page-section,
+body.homepage .page-section + .page-section[data-section-theme="dark"] {
+  margin-top: 0 !important;
+}
+
+/* ============================================================
+   22. LOGO / HEADER CLEANUP — remove any stray bg on logo wrapper
+   ============================================================ */
+.header-title-logo,
+.header-title-logo a,
+.header-title-text,
+.header-title-text a {
+  background-color: transparent !important;
+}

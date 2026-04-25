@@ -240,13 +240,20 @@ function injectInlineCTA() {
     '<div style="flex:1 1 320px;min-width:0;">' + badgeHtml + headHtml + descHtml + '</div>' +
     btnHtml;
 
-  /* Insert after the first H1's containing section, or fallback to top of article */
+  /* Insert between the hero section and the first content section.
+   * Strategy: find the article's direct-child sections, place the box
+   * BEFORE the second section. This puts it after the hero (with the H1)
+   * and ahead of the first content body, where research-traffic visitors
+   * see it before they decide to keep reading or bounce. */
   var article = document.querySelector('article');
   if (!article) return;
-  var h1 = article.querySelector('h1');
-  var anchor = h1 ? (h1.closest('section') || h1.parentElement) : null;
-  if (anchor && anchor.parentElement) {
-    anchor.parentElement.insertBefore(box, anchor.nextSibling);
+  var sections = Array.from(article.children).filter(function(c) {
+    return c.tagName === 'SECTION';
+  });
+  if (sections.length >= 2) {
+    sections[1].parentElement.insertBefore(box, sections[1]);
+  } else if (sections.length === 1) {
+    sections[0].parentElement.insertBefore(box, sections[0].nextSibling);
   } else {
     article.insertBefore(box, article.firstChild);
   }

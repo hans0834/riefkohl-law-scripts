@@ -240,22 +240,24 @@ function injectInlineCTA() {
     '<div style="flex:1 1 320px;min-width:0;">' + badgeHtml + headHtml + descHtml + '</div>' +
     btnHtml;
 
-  /* Insert between the hero section and the first content section.
-   * Strategy: find the article's direct-child sections, place the box
-   * BEFORE the second section. This puts it after the hero (with the H1)
-   * and ahead of the first content body, where research-traffic visitors
-   * see it before they decide to keep reading or bounce. */
-  var article = document.querySelector('article');
-  if (!article) return;
-  var sections = Array.from(article.children).filter(function(c) {
-    return c.tagName === 'SECTION';
-  });
-  if (sections.length >= 2) {
-    sections[1].parentElement.insertBefore(box, sections[1]);
-  } else if (sections.length === 1) {
-    sections[0].parentElement.insertBefore(box, sections[0].nextSibling);
+  /* Squarespace fluid-engine pages render the entire body inside a single
+   * <section> containing a CSS-grid .fluid-engine div. Inserting a sibling
+   * of fe-blocks inside the grid would break the grid-area layout, so we
+   * insert the magnet INTO the .content wrapper, immediately after the
+   * .fluid-engine. That puts it visually after the page body and before
+   * the rl-crosslinks (which are appended to the same .content). */
+  var content = document.querySelector('article .content-wrapper > .content') ||
+                document.querySelector('article .content');
+  if (!content) {
+    var article = document.querySelector('article');
+    if (article) article.insertBefore(box, article.firstChild);
+    return;
+  }
+  var fluidEngine = content.querySelector('.fluid-engine');
+  if (fluidEngine && fluidEngine.parentElement === content) {
+    content.insertBefore(box, fluidEngine.nextSibling);
   } else {
-    article.insertBefore(box, article.firstChild);
+    content.appendChild(box);
   }
 }
 

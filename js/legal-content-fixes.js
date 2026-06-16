@@ -967,6 +967,51 @@ function addTrustIrrevocabilityNotice() {
 }
 
 /* ================================================
+   25. FIRM NAME — "Riefkohl LLC" → "Riefkohl Law"
+   The site should refer to the firm as "Riefkohl Law"
+   everywhere. Remove the "d/b/a" / "trade name of"
+   constructions and any standalone "Riefkohl LLC".
+   Runs site-wide on Squarespace-native text.
+   Replacements are ordered: the longer d/b/a phrases
+   must run before the standalone catch-all.
+   ================================================ */
+function fixFirmLegalName() {
+  var REPLACEMENTS = [
+    /* Footer call-to-action block */
+    [/Riefkohl LLC\s+doing business as\s*\(d\/b\/a\)\s*Riefkohl Law/g, 'Riefkohl Law'],
+    /* Page disclaimer ("Riefkohl Law is a trade name of Riefkohl LLC.") */
+    [/Riefkohl Law is a trade name of Riefkohl LLC/g, 'Riefkohl Law'],
+    /* Any other "d/b/a" construction, in case wording varies */
+    [/Riefkohl LLC\s*,?\s*(?:doing business as|d\/b\/a)\s*\(?d?\/?b?\/?a?\)?\s*Riefkohl Law/g, 'Riefkohl Law'],
+    /* Standalone catch-all — must run last */
+    [/Riefkohl LLC/g, 'Riefkohl Law']
+  ];
+
+  function applyReplacements(str) {
+    var out = str;
+    for (var r = 0; r < REPLACEMENTS.length; r++) {
+      if (out.indexOf('Riefkohl LLC') < 0) break;
+      out = out.replace(REPLACEMENTS[r][0], REPLACEMENTS[r][1]);
+    }
+    return out;
+  }
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    if (node.nodeValue.indexOf('Riefkohl LLC') < 0) continue;
+    var parentTag = node.parentNode && node.parentNode.tagName;
+    if (parentTag === 'SCRIPT' || parentTag === 'STYLE') continue;
+    node.nodeValue = applyReplacements(node.nodeValue);
+  }
+
+  /* Fix the document title if it carries the old name */
+  if (document.title && document.title.indexOf('Riefkohl LLC') >= 0) {
+    document.title = applyReplacements(document.title);
+  }
+}
+
+/* ================================================
    CLEANUP: Fix double-word artifacts from replacements
    ================================================ */
 function cleanupDoubleWords() {
@@ -1015,6 +1060,7 @@ function runLegalFixes() {
   fixEmploymentRequirements();
   fixDecreeDuration();
   addTrustIrrevocabilityNotice();
+  fixFirmLegalName();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

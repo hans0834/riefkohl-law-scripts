@@ -53,7 +53,7 @@ function injectOrganizationSchema() {
   for (var i = 0; i < scripts.length; i++) {
     try {
       var data = JSON.parse(scripts[i].textContent);
-      if (data.legalName === 'Riefkohl LLC') return; /* Already enhanced */
+      if (data.legalName === 'Riefkohl Law') return; /* Already enhanced */
     } catch(e) {}
   }
 
@@ -62,7 +62,7 @@ function injectOrganizationSchema() {
     '@type': ['Attorney', 'LegalService'],
     '@id': SITE_URL + '/#firm',
     'name': 'Riefkohl Law',
-    'legalName': 'Riefkohl LLC',
+    'legalName': 'Riefkohl Law',
     'alternateName': 'Riefkohl Law Offices',
     'url': SITE_URL,
     'telephone': '+1-787-236-1657',

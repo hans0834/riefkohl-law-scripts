@@ -63,10 +63,10 @@ function injectOrganizationSchema() {
     '@id': SITE_URL + '/#firm',
     'name': 'Riefkohl Law',
     'legalName': 'Riefkohl Law',
-    'alternateName': 'Riefkohl Law Offices',
+    'alternateName': 'Riefkohl Law',
     'url': SITE_URL,
     'telephone': '+1-787-236-1657',
-    'email': 'hans.riefkohl@riefkohllaw.com',
+    'email': 'hans@riefkohllaw.com',
     'description': 'Puerto Rico law firm specializing in trusts and estate planning, Act 60 tax incentives, corporate law, and bankruptcy. Bilingual attorney licensed in PR, DC, and federal courts.',
     'address': {
       '@type': 'PostalAddress',

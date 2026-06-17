@@ -1,7 +1,7 @@
 # Riefkohl Law — Consolidated Deployment Checklist
 
-**Last updated:** March 19, 2026 (Session 13)
-**Status:** All code and content ready. Most scripts are live via GitHub Pages. Remaining items are owner-action only.
+**Last updated:** April 13, 2026 (Session 14)
+**Status:** All 44 blog posts published. All 16 Trust Law Series pages live and rendering. CPA referral + pricing pages created (need content). Remaining items are owner-action only.
 
 ---
 
@@ -57,42 +57,15 @@ Visitor loads riefkohllaw.com
 - [ ] **CRITICAL:** This is the ONLY thing that should be in the Code Injection Header
 - [ ] Verify: view page source and confirm scripts load from `hans0834.github.io`
 
-### A2. Create 15 blank Squarespace pages for Trust Law articles
-Create each page under `/resources/` with these exact slugs. The article content is injected automatically by `articles-inject.js`.
+### ~~A2. Create 15 blank Squarespace pages for Trust Law articles~~ ✅ DONE
+All 16 pages exist and are published under "Not Linked" with correct slugs (`resources/what-is-puerto-rico-trust`, etc.). Article content is injected by `articles-inject.js` — verified live on April 13, 2026.
 
-- [ ] `what-is-puerto-rico-trust` (Part 1)
-- [ ] `types-of-trusts` (Part 2)
-- [ ] `act-60-trust-planning` (Part 3)
-- [ ] `modifying-irrevocable-trusts` (Part 4)
-- [ ] `avoiding-probate-legitima` (Part 5)
-- [ ] `asset-protection-trusts-pr` (Part 6)
-- [ ] `special-needs-trusts-medicaid` (Part 7)
-- [ ] `ilits-and-slats` (Part 8)
-- [ ] `trust-taxation-act-60` (Part 9)
-- [ ] `landmark-trust-cases` (Part 10)
-- [ ] `trust-costs-puerto-rico` (Part 11)
-- [ ] `fiduciary-duties-trustees` (Part 12)
-- [ ] `family-trust-pitfalls` (Part 13)
-- [ ] `foreign-trust-trap` (Supplement)
-- [ ] `mainland-trust-to-puerto-rico` (Supplement)
-- [ ] `act-38-2026-trust-planning` (Supplement — Act 38-2026 Special Report)
+### A3. CPA referral landing page
+- [x] Page created at `/cpa-referral` (exists, enabled)
+- [ ] **Needs content:** Page is blank — content injection not yet configured. Either add content via `articles-inject.js` or build the page in Squarespace editor.
 
-### A3. Create CPA referral landing page
-- [ ] Create a blank Squarespace page at `/cpa-referral`
-- [ ] Content is injected automatically by `articles-inject.js`
-- [ ] This page is the destination for CPA-referred visitors (via UTM links shared with CPA partners)
-
-### A4. Import new blog posts (CPA Bridge Content — March 2026)
-Import the following blog posts to Squarespace (via WXR XML or manual creation):
-- [ ] `act-38-2026-estate-plan-EN.md` → slug: `act-38-2026-estate-plan`
-- [ ] `act-38-2026-plan-sucesoral-ES.md` → slug: `act-38-2026-plan-sucesoral`
-- [ ] `cpa-bridge-trust-advice.md` → slug: `cpa-bridge-trust-advice`
-- [ ] `cpa-bridge-irs-audit-attorney.md` → slug: `cpa-bridge-irs-audit-attorney`
-- [ ] `cpa-bridge-legal-checklist.md` → slug: `cpa-bridge-legal-checklist`
-- [ ] `cpa-bridge-decree-succession.md` → slug: `cpa-bridge-decree-succession`
-- [ ] `cpa-bridge-property-purchase.md` → slug: `cpa-bridge-property-purchase`
-- [ ] `cpa-bridge-trust-advice-ES.md` → slug: `cpa-bridge-trust-advice-es`
-- [ ] `cpa-bridge-legal-checklist-ES.md` → slug: `cpa-bridge-legal-checklist-es`
+### ~~A4. Import new blog posts (CPA Bridge Content — March 2026)~~ ✅ DONE (Session 14)
+All 9 CPA bridge posts published to Squarespace via API on April 13, 2026.
 
 ### A5. CPA referral outreach (manual, owner-action)
 - [ ] Send outreach email to Tom Duffy CPA (template: `cpa-referral-outreach-duffy.md`)
@@ -116,15 +89,8 @@ Import the following blog posts to Squarespace (via WXR XML or manual creation):
 - [ ] When available, follow action items in `section-6060-03-monitoring.md`
 - [ ] Flip `SHOW_CERTIFIED_BADGE = true` in `homepage-services.js` once credential is obtained
 
-### A8. Import Round 2 blog posts (IRS Audit Defense + Content Gap posts)
-- [ ] `irs-audit-triggers-act60.md` → slug: `irs-audit-triggers-act60`
-- [ ] `irs-audit-process-act60.md` → slug: `irs-audit-process-act60`
-- [ ] `audit-proof-presence-test-act60.md` → slug: `audit-proof-presence-test-act60`
-- [ ] `act60-divorce-family-law.md` → slug: `act60-divorce-family-law`
-- [ ] `leaving-puerto-rico-exit-planning.md` → slug: `leaving-puerto-rico-exit-planning`
-- [ ] `act60-crypto-digital-assets.md` → slug: `act60-crypto-digital-assets`
-- [ ] `build-act60-advisory-team.md` → slug: `build-act60-advisory-team`
-- [ ] `act60-vs-international-alternatives.md` → slug: `act60-vs-international-alternatives`
+### ~~A8. Import Round 2 blog posts (IRS Audit Defense + Content Gap posts)~~ ✅ DONE (Session 14)
+All 8 Round 2 posts published to Squarespace via API on April 13, 2026.
 
 ### A9. Create pricing page in Squarespace
 - [ ] Create blank Squarespace page at `/pricing`
@@ -174,67 +140,19 @@ Import the following blog posts to Squarespace (via WXR XML or manual creation):
 
 ## Part B: Blog Post Publishing
 
-### B1. Publish 10 original blog posts (from `blog-posts/`)
-See `blog-publishing-guide.md` for step-by-step Squarespace publishing instructions.
+### ~~B1. Publish 10 original blog posts (from `blog-posts/`)~~ ✅ DONE (Session 14)
+All 10 original blog posts published to Squarespace via API on April 13, 2026.
 
-English posts:
-- [ ] `01-act60-estate-planning-mistakes.md` *(updated Session 13: IRC §937 three-test clarification)*
-- [ ] `02-trust-vs-will-puerto-rico.md`
-- [ ] `03-irs-scrutiny-act60.md`
-- [ ] `04-forced-heirship-estate-plan.md`
-- [ ] `05-asset-protection-irrevocable-trusts.md`
-- [ ] `06-pillar-complete-guide-puerto-rico-trusts.md`
+### ~~B2. Publish 22 case law blog posts (from `blog-posts/March 15 2026/`)~~ ✅ DONE (Session 14)
+All 22 publishable case law posts (6 category summaries + 16 individual cases) published to Squarespace via API on April 13, 2026.
 
-Spanish posts:
-- [ ] `07-fideicomiso-irrevocable-puerto-rico.md`
-- [ ] `08-planificacion-sucesoral-puerto-rico.md`
-- [ ] `09-ley-60-guia-inversionistas.md`
-- [ ] `10-declaratoria-de-herederos-puerto-rico.md`
+**NOT PUBLISHED** (placeholder case holdings — need Westlaw research first):
+- Trust Property Disputes - Summaries.md — 8/8 cases placeholder templates
+- Breach of Fiduciary Duty - Summaries.md — 8/11 cases placeholder text
+- Procedural Beneficiary & Liquidation - Summaries.md — 6/9 cases placeholder text
 
-### B2. Publish 22 case law blog posts (from `blog-posts/March 15 2026/`)
-**Recommended cadence:** 1–2 posts per day over 3–6 weeks to avoid Google's "content dump" signal.
-
-**DO NOT PUBLISH** these 3 posts (placeholder case holdings — need Westlaw research first):
-- ~~Trust Property Disputes - Summaries.md~~ — 8/8 cases placeholder templates
-- ~~Breach of Fiduciary Duty - Summaries.md~~ — 8/11 cases placeholder text
-- ~~Procedural Beneficiary & Liquidation - Summaries.md~~ — 6/9 cases placeholder text
-
-Category summaries ready to publish (6 posts — English):
-- [ ] Banking & Insurance Disputes - Summaries.md
-- [ ] Public & Governmental Trust Governance - Summaries.md
-- [ ] Standalone Cases - Summaries.md
-- [ ] Testamentary & Succession Disputes - Summaries.md
-- [ ] Trust Validity Challenges - Summaries.md
-- [ ] Trust in Family Law & Trustee Removal - Summaries.md
-
-Individual case posts (16 posts — non-PR cases with customized CTAs):
-- [ ] alevras-cga-associates-v-brewster-jr.md
-- [ ] american-health-law-assn-v-estate-of-cunningham.md
-- [ ] andersen-estate-eileen-andersen-pr.md
-- [ ] antero-resources-v-pike-case-08.md
-- [ ] chaires-v-champion-realty.md
-- [ ] commonwealth-v-valenti.md
-- [ ] estate-of-wallace-lucas-sr.md
-- [ ] in-re-el-a-minor-ch-v-jn.md
-- [ ] in-re-kirton-morris-v-housing-authority.md
-- [ ] integrated-health-services-v-estate-of-desantis.md
-- [ ] mcarthur-as-pr-of-estate-of-clarence-maurice-logan-jr.md
-- [ ] murphy-dependent-of-harold-r-murphy.md
-- [ ] parra-v-rapid-casting-rapid-american-corp.md
-- [ ] pereira-v-pereira.md
-- [ ] shabani-v-burton-trustee.md
-- [ ] williams-as-successor-pr-of-estate-of-adams-shirer.md
-
-### B3. Publish 9 Spanish translations of category summaries
-Publish alongside or shortly after the English versions. Same 3 DO NOT PUBLISH exclusions apply.
-
-Ready to publish (6 posts):
-- [ ] Banking & Insurance Disputes - Summaries-es.md
-- [ ] Public & Governmental Trust Governance - Summaries-es.md
-- [ ] Standalone Cases - Summaries-es.md
-- [ ] Testamentary & Succession Disputes - Summaries-es.md
-- [ ] Trust Validity Challenges - Summaries-es.md
-- [ ] Trust in Family Law & Trustee Removal - Summaries-es.md
+### ~~B3. Publish 6 Spanish translations of category summaries~~ ✅ DONE (Session 14)
+All 6 publishable Spanish category summaries published to Squarespace via API on April 13, 2026.
 
 ---
 

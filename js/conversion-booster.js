@@ -882,7 +882,8 @@ function run() {
   try {
     createCallBanner();
     createStickyBar();
-    injectLocalBusinessSchema();
+    /* injectLocalBusinessSchema(); — firm entity centralized in schema-markup.js (@id .../#firm)
+       to avoid duplicate/conflicting LegalService schemas. */
     injectUrgencyBanner();
     injectAct60Hero();
     injectAct60MidCTA();

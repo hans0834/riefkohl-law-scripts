@@ -120,7 +120,7 @@
       {url: '/blog/trust-validity-challenges-puerto-rico', title: 'Trust Validity Challenges in Puerto Rico'},
       {url: '/blog/trust-property-disputes-puerto-rico', title: 'Trust Property Disputes in Puerto Rico'},
       {url: '/blog/family-law-trusts-trustee-removal-puerto-rico', title: 'Family Law Trusts & Trustee Removal'},
-      {url: '/resources/what-is-a-puerto-rico-trust', title: 'What Is a Puerto Rico Trust? (Article Series)'}
+      {url: '/resources/what-is-puerto-rico-trust', title: 'What Is a Puerto Rico Trust? (Article Series)'}
     ],
     'estate-planning': [
       {url: '/blog/how-forced-heirship-affects-your-estate-plan-in-puerto-rico', title: 'How Forced Heirship Affects Your Estate Plan'},
@@ -135,7 +135,7 @@
       {url: '/blog/irs-scrutiny-of-act-60-decree-holders-what-you-need-to-know-2026', title: 'IRS Scrutiny of Act 60 Decree Holders in 2026'},
       {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'Complete Guide to Puerto Rico Trusts'},
       {url: '/act-60-resource-center', title: 'Act 60 Resource Center'},
-      {url: '/resources/trust-planning-act-60-investors', title: 'Trust Planning for Act 60 Investors (Article Series)'}
+      {url: '/resources/act-60-trust-planning', title: 'Trust Planning for Act 60 Investors (Article Series)'}
     ],
     'business-law': [
       {url: '/blog/buslaw-01-llc-fiduciary-duties-deadlock-dissolution', title: 'LLC Fiduciary Duties & Deadlock Dissolution'},

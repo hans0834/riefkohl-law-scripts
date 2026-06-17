@@ -100,10 +100,6 @@ var breadcrumbs = {
     { name: 'Inicio', url: '/espanol' },
     { name: 'Agendar Cita', url: '/espanol-cita' }
   ],
-  '/espanol-blog': [
-    { name: 'Inicio', url: '/espanol' },
-    { name: 'Blog Legal', url: '/espanol-blog' }
-  ],
   '/espanol-corporativo': [
     { name: 'Inicio', url: '/espanol' },
     { name: 'Servicios', url: '/espanol-servicios' },
@@ -113,11 +109,6 @@ var breadcrumbs = {
     { name: 'Inicio', url: '/espanol' },
     { name: 'Servicios', url: '/espanol-servicios' },
     { name: 'Quiebras', url: '/espanol-quiebras' }
-  ],
-  '/corporate': [
-    { name: 'Home', url: '/' },
-    { name: 'Services', url: '/services' },
-    { name: 'Corporate & Transactional', url: '/corporate' }
   ],
 
   /* Act 60 Resource Center subpages */

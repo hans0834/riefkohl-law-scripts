@@ -1930,7 +1930,8 @@ function runFixes() {
   fixMeta();
   fixCanonical();
   injectFAQSchema();
-  injectAttorneySchema();
+  /* injectAttorneySchema(); — firm entity centralized in schema-markup.js (@id .../#firm)
+     to avoid duplicate/conflicting Attorney+LegalService schemas. */
   injectPersonSchema();
   injectWebSiteSchema();
   fixOpenGraphAndTwitter();
@@ -1970,16 +1971,10 @@ if (document.readyState === 'loading') {
    ================================================ */
 
 /* Blog post pairs */
+/* NOTE: The 9 case-law trust-dispute "-es" Spanish counterparts were removed because
+   those Squarespace pages do not yet exist (they returned 404). Pointing hreflang at
+   404 pages hurts SEO. Re-add each pair here once the Spanish page is published. */
 var HREFLANG_PAIRS = [
-  ['banking-insurance-trust-disputes-puerto-rico', 'banking-insurance-trust-disputes-puerto-rico-es'],
-  ['breach-fiduciary-duty-trust-cases-puerto-rico', 'breach-fiduciary-duty-trust-cases-puerto-rico-es'],
-  ['trust-beneficiary-rights-liquidation-puerto-rico', 'trust-beneficiary-rights-liquidation-puerto-rico-es'],
-  ['public-government-trust-governance-puerto-rico', 'public-government-trust-governance-puerto-rico-es'],
-  ['notable-trust-law-cases-puerto-rico', 'notable-trust-law-cases-puerto-rico-es'],
-  ['testamentary-trust-succession-disputes-puerto-rico', 'testamentary-trust-succession-disputes-puerto-rico-es'],
-  ['trust-property-disputes-puerto-rico', 'trust-property-disputes-puerto-rico-es'],
-  ['trust-validity-challenges-puerto-rico', 'trust-validity-challenges-puerto-rico-es'],
-  ['family-law-trusts-trustee-removal-puerto-rico', 'family-law-trusts-trustee-removal-puerto-rico-es'],
   /* CPA bridge posts (Act 38-2026 + CPA content) */
   ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
   ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
@@ -1994,7 +1989,7 @@ var CORE_HREFLANG_PAIRS = [
   ['/contact', '/espanol-contacto'],
   ['/puerto-rico-trusts', '/espanol-fideicomisos'],
   ['/calendly', '/espanol-cita'],
-  ['/blog', '/espanol-blog'],
+  /* ['/blog', '/espanol-blog'] removed — /espanol-blog page does not exist (404). */
   ['/act-60-tax-incentives', '/espanol-ley-60'],
   ['/resources', '/recursos-es']
 ];

@@ -782,8 +782,6 @@ var PAGES = {
 
   +'<div class="rl-sub-cta"><p><strong>Need help preparing for your Act 52 compliance certification?</strong></p><p>We coordinate with your CPA to ensure you\u2019re ready before the deadline.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
   }
-}
-
 },
 
 '/resources/act-60-decree-comparison': {

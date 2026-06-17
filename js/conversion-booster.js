@@ -273,7 +273,7 @@ function injectUrgencyBanner() {
   banner.className = 'rl-urgency-banner';
   banner.setAttribute('role', 'alert');
   banner.innerHTML =
-    '<span class="rl-urgency-icon">\u23F1</span>' +
+    '<span class="rl-urgency-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg></span>' +
     '<span><strong>Act 60 Alert:</strong> 0% capital gains rate for Individual Investors ends December 31, 2026. New decrees from 2027 receive 4% rate. ' +
     '<a href="/act-60-tax-incentives">Learn more \u2192</a></span>';
 
@@ -311,7 +311,7 @@ function injectAct60Hero() {
       '</div>' +
       '<a href="' + bookUrl + '" class="rl-act60-hero-cta">Book Your Free Act 60 Strategy Call</a>' +
       '<p class="rl-act60-hero-secondary">Or call <a href="' + PHONE_TEL + '">' + PHONE + '</a></p>' +
-      '<div class="rl-act60-hero-urgency">\u23F1 0% IRI capital gains rate ends Dec 31, 2026 \u2014 4% rate applies to new decrees from 2027. Act now.</div>' +
+      '<div class="rl-act60-hero-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> 0% IRI capital gains rate ends Dec 31, 2026 \u2014 4% rate applies to new decrees from 2027. Act now.</div>' +
     '</div>';
 
   // Insert after the call banner, before page content
@@ -588,7 +588,7 @@ function injectExitPopup() {
       '<h3>Before You Go\u2014</h3>' +
       '<p>The 0% capital gains rate expires December 31, 2026. A 15-minute call is all it takes to find out if you qualify and start the process.</p>' +
       '<a href="' + bookUrl + '" class="rl-exit-cta">Book Your Free Strategy Call</a>' +
-      '<span class="rl-exit-urgency">\u23F1 New decrees from 2027 receive 4% rate</span>' +
+      '<span class="rl-exit-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> New decrees from 2027 receive 4% rate</span>' +
     '</div>';
 
   document.body.appendChild(overlay);

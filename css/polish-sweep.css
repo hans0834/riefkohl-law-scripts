@@ -48,6 +48,15 @@
   font-style: normal !important;
 }
 
+/* Injected custom dark-background components (not Squarespace section themes).
+   Squarespace's theme sets heading color with !important, beating our non-important
+   inline color:#fff and rendering these light-on-dark headings invisible. Force white. */
+.rl-footer-signup h4,
+.rl-slide-cta h4,
+.rl-article-hub h2 {
+  color: var(--rl-white) !important;
+}
+
 [data-section-theme="dark"] p,
 [data-section-theme="dark"] li,
 [data-section-theme="dark"] .sqs-block-html,

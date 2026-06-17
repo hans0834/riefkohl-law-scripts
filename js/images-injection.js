@@ -25,7 +25,10 @@ function makeImg(src, alt, w, h) {
   var img = document.createElement('img');
   img.src = src;
   img.alt = alt;
-  img.loading = 'lazy';
+  // eager, not lazy: these are a handful of branded illustrations on key pages.
+  // Native lazy-loading on dynamically-injected cards frequently never fired,
+  // leaving practice-area cards with blank image boxes.
+  img.loading = 'eager';
   img.decoding = 'async';
   if (w) img.width = w;
   if (h) img.height = h;

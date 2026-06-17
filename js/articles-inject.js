@@ -3062,9 +3062,10 @@ function injectArticleHub() {
     
     cat.cards.forEach(function(card) {
       html += '<div class="rl-card">'
-        + '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">'
-        + '<span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">' + (card.part === 'Guide' ? 'GUIDE' : 'PART ' + card.part) + '</span>'
-        + '</div>'
+        // Numbered "PART N" badges were dropped: the series is grouped thematically,
+        // not read 1->N in order, so sequential numbers looked broken. The non-numeric
+        // "GUIDE" tag is kept to distinguish supplementary guides from core articles.
+        + (card.part === 'Guide' ? '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">GUIDE</span></div>' : '')
         + '<h3>' + card.title + '</h3>'
         + '<p>' + card.desc + '</p>'
         + '<a href="' + card.url + '">Read article \u2192</a>'

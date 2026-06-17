@@ -1,7 +1,6 @@
 /* Riefkohl Law — Auto-Injected Newsletter Bar + Blog Lead Magnets */
 /* Source: email-signup-form.html */
-/* NOTE: Replace YOUR_FORM_ACTION_URL with your email provider's form action URL */
-/* RECOMMENDED: MailerLite (free up to 1,000 subscribers) */
+/* Signup CTAs link to lead-magnet PDF downloads and the booking page (no form POST). */
 
 (function(){
 'use strict';

@@ -3319,7 +3319,7 @@ html { scroll-behavior: smooth; }
 .rl-whatsapp {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 24px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -3344,11 +3344,11 @@ html { scroll-behavior: smooth; }
   fill: #fff;
   display: block;
 }
-/* Avoid stacking with the mobile sticky CTA bar */
+/* Bottom-left placement avoids the slide-in CTA, back-to-top, and mobile sticky CTA (all bottom-right). */
 @media (max-width: 640px) {
   .rl-whatsapp {
     bottom: 80px;
-    right: 16px;
+    left: 16px;
     width: 50px;
     height: 50px;
   }

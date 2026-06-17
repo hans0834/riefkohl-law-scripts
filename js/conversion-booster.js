@@ -93,7 +93,7 @@ function injectLocalBusinessSchema() {
     'description': 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, business formation, and government contracts.',
     'url': 'https://www.riefkohllaw.com',
     'telephone': '+1-787-236-1657',
-    'email': 'info@riefkohllaw.com',
+    'email': 'hans@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': '273 Ponce de Leon Ave.',
@@ -704,7 +704,7 @@ function injectPersonaPages() {
         'Must satisfy one of five presence tests (most common: 183+ days/year)',
         'Must establish a "closer connection" to PR than the U.S. or any foreign country',
         'Capital gains must accrue after relocation date',
-        'Annual charitable donation required ($10K pre-2027 / $15K post-2026 applicants)',
+        'Annual charitable donation required ($10,000/year), plus a separate $5,000 annual report fee',
         'Must purchase PR primary residence within 2 years of decree (may hold individually, jointly, or via trust; post-2026 applicants must register in PR Property Registry)',
         'Pre-move capital gains remain subject to federal tax under 10-year lookback (Treas. Reg. \u00a71.937-2(f))'
       ],

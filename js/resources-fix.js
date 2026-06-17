@@ -549,6 +549,103 @@ var PAGES = {
   }
 },
 
+'/resources/bona-fide-residency-puerto-rico': {
+  title: 'Puerto Rico Bona Fide Residency & the Source-of-Income Rules',
+  subtitle: 'A plain-English guide to the three residency tests under IRC \xa7937 and how income sourcing determines what an Act 60 decree actually saves you.',
+  content: function(){return ''
+  +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
+
+  +'<p style="font-size:.85rem;color:#706b62;">General informational introduction, current as of June 2026. For educational purposes only \u2014 not legal or tax advice, and not a substitute for advice from qualified counsel about your specific facts.</p>'
+
+  +'<p>If you are considering relocating to Puerto Rico to take advantage of Act 60, there is a threshold question that matters more than the decree itself: <strong>are you a \u201cbona fide resident\u201d of Puerto Rico for federal tax purposes?</strong> The Act 60 decree is a Puerto Rico instrument that fixes your <em>Commonwealth</em> tax treatment. The far larger federal benefit \u2014 excluding Puerto Rico-source income from your U.S. return \u2014 comes from a separate set of Internal Revenue Code provisions and depends entirely on qualifying as a bona fide resident under <strong>IRC \xa7937</strong>. Get residency wrong and the federal exclusion disappears, no matter what your decree says.</p>'
+
+  +'<p>This guide explains the two-layer framework, the three residency tests every applicant must satisfy, and the source-of-income rules that decide how much of your income the exclusion actually reaches. It is written for prospective Act 60 applicants and the advisors who serve them.</p>'
+
+  +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:18px 22px;margin:26px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-weight:700;color:#1a2033;">The short version</p><ul style="margin:0;padding:0 0 0 18px;font-size:.9rem;"><li><strong>Residency is the gateway.</strong> Without bona fide residency, the federal \xa7933 exclusion does not apply at all.</li><li><strong>Three tests, every year.</strong> You must pass the presence test, the tax home test, and the closer connection test \u2014 all of them, for the same taxable year.</li><li><strong>Sourcing decides the payoff.</strong> U.S.-corporate dividends and U.S.-payor interest stay U.S.-source and remain federally taxable even after a perfect move.</li><li><strong>Document everything.</strong> Keep a contemporaneous day count and connection records, and file Form 8898 when you begin or end residency.</li></ul></div>'
+
+  +'<h2>1. Why Bona Fide Residency Matters: A Two-Layer Framework</h2>'
+  +'<p>A United States citizen is taxed on worldwide income regardless of where they live. Moving to a U.S. territory does not, by itself, change that. The federal benefit comes from a narrow set of Code provisions \u2014 IRC \xa7\xa7931\u2013937, and, for Puerto Rico, the income exclusion of <strong>IRC \xa7933</strong> \u2014 that remove certain territory-source income from federal gross income, but <em>only</em> for an individual who qualifies as a bona fide resident of the territory.</p>'
+  +'<p>Bona fide residency is therefore the gateway. Without it, the federal exclusion does not apply at all, and a Puerto Rico Act 60 decree confers only Commonwealth-level benefits. The provisions reach five territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands (Treas. Reg. \xa71.937-1(a)(2)(i)).</p>'
+  +'<p>Two structural features matter throughout. <strong>First, residency is tested year by year.</strong> Qualifying one year does not lock in any other. <strong>Second, it is essentially binary</strong> \u2014 a taxpayer either is or is not a bona fide resident for the taxable year (subject to a limited year-of-move rule, discussed below). Only natural persons can qualify; corporations, partnerships, trusts, and estates cannot (Treas. Reg. \xa71.937-1(b)(3)).</p>'
+
+  +'<h2>2. The Three Tests at a Glance</h2>'
+  +'<p>IRC \xa7937(a) and Treas. Reg. \xa71.937-1 impose three requirements, <strong>all of which must be satisfied for the same taxable year</strong>: (1) the presence test, (2) the tax home test, and (3) the closer connection test. The presence test is mechanical day-counting; the tax home and closer connection tests are qualitative and overlap heavily with one another. Failing any single test means the individual is not a bona fide resident for that year \u2014 and forfeits the federal exclusion for that year.</p>'
+
+  +'<h2>3. The Presence Test (Treas. Reg. \xa71.937-1(c))</h2>'
+  +'<p>A U.S. citizen or resident alien satisfies the presence test for a year by meeting <strong>any one of five alternatives</strong>:</p>'
+  +'<ol><li>Present in Puerto Rico for at least <strong>183 days</strong> during the taxable year (the standard test, and the cleanest profile).</li>'
+  +'<li>Present in the territory at least <strong>549 days over the three-year period</strong> of the current and two preceding years, with at least 60 days in the territory in each of those three years.</li>'
+  +'<li>Present in the United States <strong>no more than 90 days</strong> during the taxable year.</li>'
+  +'<li>Had no more than <strong>$3,000 of U.S. earned income</strong> (the figure in \xa7861(a)(3)(B); \u201cearned income\u201d per \xa71.911-3(b)) and spent more days in the territory than in the United States.</li>'
+  +'<li>Had <strong>no \u201csignificant connection\u201d</strong> to the United States during the taxable year.</li></ol>'
+
+  +'<h3>How days are counted</h3>'
+  +'<p>You are present in Puerto Rico on any day you are physically there at any time, and present in the U.S. on any day you are physically in the U.S. at any time. A day spent in <em>both</em> the U.S. and Puerto Rico counts as a <strong>territory day</strong>. Several U.S. days do not count against you \u2014 days as a student, qualifying medical-treatment days, transit days of under 24 hours between two foreign points, days competing as a professional athlete in a charitable event, and days serving as an elected or appointed territorial official. Conversely, days spent outside Puerto Rico to receive (or to accompany a parent, spouse, or child receiving) qualifying medical treatment, and days lost to a federally declared major disaster or mandatory evacuation, are counted as <strong>territory presence</strong> \u2014 subject to specific documentation requirements (Treas. Reg. \xa71.937-1(c)(3)\u2013(4)).</p>'
+
+  +'<h3>What counts as a \u201csignificant connection\u201d (alternative 5)</h3>'
+  +'<p>A taxpayer has a significant connection to the U.S. if they have (a) a permanent home in the U.S., (b) current U.S. voter registration, or (c) a spouse or minor child (under 18) whose principal place of abode is in the U.S. (with narrow custody and student exceptions). A property rented out to others is generally <em>not</em> a \u201cpermanent home\u201d unless the taxpayer also uses it as a residence (Treas. Reg. \xa71.937-1(c)(5)). Nonresident aliens use a different rule, substituting substantial-presence principles applied to the territory (\xa71.937-1(c)(2)).</p>'
+
+  +'<h3>What compliance looks like</h3>'
+  +'<p>Keep a <strong>contemporaneous travel log and day count</strong>; retain boarding passes, calendars, and travel records. If you rely on medical or disaster days, assemble the physician certification and supporting records the regulation requires and be prepared to produce them within 30 days of an IRS request.</p>'
+
+  +'<h2>4. The Tax Home Test (Treas. Reg. \xa71.937-1(d))</h2>'
+  +'<p>You must <strong>not have a tax home outside Puerto Rico during any part of the taxable year</strong>. \u201cTax home\u201d uses the principles of \xa7911(d)(3): it is your regular or principal place of business. If there is no such place \u2014 because of the nature of the business, or because you are not carrying on a trade or business \u2014 the tax home is your regular place of abode in a real and substantial sense. In practice, a worker or business owner generally needs their principal place of business in Puerto Rico, while a retiree or passive investor needs their main home there.</p>'
+  +'<p>Note the <strong>\u201cany part of the year\u201d standard</strong> \u2014 this is stricter than the presence test, which is measured over the whole year. Limited exceptions exist for seafarers and for disregarded student/government-official days, and the year-of-move rule relaxes the full-year requirement for the transition year. Compliance means genuinely locating the principal place of business in Puerto Rico (office, clients, where the work is actually performed) or, for non-business individuals, making the island the true center of home life.</p>'
+
+  +'<h2>5. The Closer Connection Test (Treas. Reg. \xa71.937-1(e))</h2>'
+  +'<p>You must <strong>not have a closer connection to the United States or a foreign country than to Puerto Rico during any part of the year</strong>. This applies the factors of \xa77701(b)(3)(B)(ii) and Treas. Reg. \xa7301.7701(b)-2(d): the location of your permanent home; the location of your family; the location of personal belongings such as cars and furniture; social, political, cultural, and religious affiliations; business activities (other than those constituting the tax home); the jurisdiction that issued your driver\u2019s license; where you are registered to vote; and the jurisdiction listed as your residence on official forms.</p>'
+  +'<p>The comparison is Puerto Rico against the <em>aggregate</em> of your U.S. and foreign connections, and it is a <strong>totality-of-the-circumstances test</strong> \u2014 no single factor controls. The regulation\u2019s own Example 7 (a taxpayer who relocates but keeps his family, home, driver\u2019s license, voter registration, and banking on the mainland) shows how readily this test fails even when the person spends real time on the island. Compliance means moving the indicia of life to Puerto Rico: driver\u2019s license, voter registration, family, vehicles and belongings, bank and professional and religious affiliations, and mailing address.</p>'
+
+  +'<h2>6. How the Presence-Test Alternatives Affect the Other Two Tests</h2>'
+  +'<p>This is the central planning point, and where most prospective applicants are misled. Because there are five ways to clear the presence test, a taxpayer can technically satisfy presence while spending <strong>fewer than 183 days</strong> in Puerto Rico \u2014 even substantial time off-island. But the tax home and closer connection tests must <em>still</em> be met for the entire year, and the very facts that let someone use a non-183-day alternative frequently create tax-home and closer-connection problems:</p>'
+  +'<ul><li><strong>Alternative 3 (\u226490 U.S. days)</strong> leaves room for large amounts of time in foreign countries or in the territory. That is fine for presence, but if the off-island time reflects a business or a home elsewhere, the tax home or closer connection test can fail.</li>'
+  +'<li><strong>Alternative 4 (&lt;$3,000 U.S. earned income + more territory days than U.S. days)</strong> is illustrated by the regulation\u2019s Example 2: a retiree with only 175 territory days, a U.S. vacation home, and more than 90 U.S. days flunks the 183-day count yet meets presence under alternative 4. She must still independently clear tax home and closer connection \u2014 and that U.S. vacation home is exactly the kind of fact that threatens the closer connection test.</li>'
+  +'<li><strong>Alternative 5 (no significant connection)</strong> is defeated by a U.S. permanent home, U.S. voter registration, or a minor child living stateside. Those same facts are also strong evidence of a closer U.S. connection \u2014 so a single fact can sink two tests at once.</li>'
+  +'<li><strong>Alternative 2 (549 days over three years)</strong> can let a low-presence year (as few as 60 territory days) qualify on presence, but a 60-day year is very hard to reconcile with having one\u2019s tax home and closest connections in Puerto Rico.</li></ul>'
+  +'<p><strong>Bottom line:</strong> the presence test is the floor, not the finish line. Whichever alternative you use, you must independently satisfy the tax home and closer connection tests for the whole year, and choosing an alternative that tolerates more time or more ties off-island raises your risk under the other two tests. The cleanest profile remains <strong>183-plus territory days with home, business, family, and personal indicia all genuinely relocated.</strong></p>'
+
+  +'<h2>7. The Year of the Move (Treas. Reg. \xa71.937-1(f))</h2>'
+  +'<p>A special transition rule can treat a person as a bona fide resident for the part of the year following a move (Puerto Rico has its own variant for the year of departure). It generally requires that the individual was not a resident in the three preceding years, satisfied the tax home and closer connection tests for the last 183 days of the move year, and is a resident for the three following years. The rule should never be assumed \u2014 it must be checked against your actual move timeline.</p>'
+
+  +'<h2>8. The General Source-of-Income Rules</h2>'
+  +'<p>Once residency is established, the next question is which income is <strong>territory-source</strong> (eligible for the exclusion or the Act 60 rate) and which remains <strong>U.S.-source</strong> (still federally taxable). IRC \xa7937(b) and Treas. Reg. \xa71.937-2 apply the ordinary U.S. source rules of \xa7\xa7861\u2013865 to Puerto Rico, generally by substituting the territory for \u201cthe United States.\u201d Two overlays are critical: (i) the <strong>U.S.-income rule</strong> \u2014 income that is U.S.-source or U.S.-effectively-connected under \xa7\xa7861\u2013865 can never be territory-source (\xa7937(b)(2); Treas. Reg. \xa71.937-2(c)); and (ii) an <strong>anti-conduit rule</strong> plus a cap that prevents a resident from generating more territory-source income than a similarly situated nonresident would have U.S.-source income.</p>'
+  +'<p>The principal categories:</p>'
+  +'<ul><li><strong>Capital gains \u2014 residence of the seller.</strong> Gain on the sale of personal property, including securities, is sourced to the seller\u2019s residence (\xa7865(a)). A bona fide Puerto Rico resident\u2019s gains are therefore generally territory-source. <em>Caveat:</em> appreciation that built up <em>before</em> the move, on assets held before the move, is generally treated as U.S.-source even if sold afterward, unless a special mark-to-market election is made (Treas. Reg. \xa71.937-2(f) \u2014 the \u201c10-year lookback\u201d).</li>'
+  +'<li><strong>Interest \u2014 residence of the payor.</strong> Interest is sourced to the residence of the obligor that pays it, not the recipient (\xa7861(a)(1)). Interest paid by a U.S. person or U.S. corporation is generally U.S.-source regardless of where the recipient lives.</li>'
+  +'<li><strong>Dividends \u2014 where the paying entity is organized.</strong> Dividends are sourced to the place of incorporation of the paying corporation (\xa7861(a)(2)). A dividend from a U.S. (e.g., Delaware) corporation is U.S.-source no matter where the shareholder resides; relocating does not convert U.S. corporate dividends into territory income. <strong>This is the single most common point of client confusion.</strong></li>'
+  +'<li><strong>Real property \u2014 where it is located.</strong> Income from real property \u2014 both rents and gain on sale \u2014 is sourced to where the property is located (\xa7861(a)(4)\u2013(5)). Puerto Rico real estate produces territory income; mainland real estate produces U.S. income.</li>'
+  +'<li><strong>Personal services \u2014 where performed.</strong> Compensation is sourced to where the services are physically performed (\xa7861(a)(3)). Work done in Puerto Rico is territory-source; work done on the mainland is U.S.-source \u2014 which is why mainland working days matter.</li></ul>'
+  +'<p><strong>Practical upshot:</strong> a portfolio of U.S.-corporate dividends and U.S.-issuer interest generally remains U.S.-source and federally taxable even after a successful move. The exclusion and the Act 60 rate bite hardest on territory-source capital gains (on assets acquired <em>after</em> the move), territory-source services, and territory-source business income.</p>'
+
+  +'<h2>9. Practical Takeaways</h2>'
+  +'<ul><li>All three tests must be met <strong>every year</strong>; the cleanest facts are 183-plus territory days plus genuine relocation of home, business, family, and personal indicia.</li>'
+  +'<li>The presence test is mechanical; the <strong>tax home and closer connection tests are where most disputes and audit risk arise.</strong></li>'
+  +'<li>Source rules \u2014 not residency alone \u2014 determine how much income actually benefits. U.S.-corporate dividends and U.S.-payor interest stay U.S.-source.</li>'
+  +'<li>File <strong>Form 8898</strong> to notify the IRS when beginning or ending bona fide residency (\xa7937(c)), and maintain day-count and connection records contemporaneously.</li></ul>'
+
+  +'<h2>Frequently Asked Questions</h2>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is a bona fide resident of Puerto Rico for federal tax purposes?</button>'
+  +'<div class="rl-faq-a"><p>A bona fide resident is an individual who satisfies all three tests of IRC \xa7937 for the taxable year: the presence test, the tax home test, and the closer connection test. Only natural persons can qualify \u2014 corporations, partnerships, trusts, and estates cannot. Bona fide residency is the gateway to the federal income exclusion under IRC \xa7933.</p></div></div>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Do I have to spend 183 days a year in Puerto Rico to qualify for Act 60?</button>'
+  +'<div class="rl-faq-a"><p>Not strictly for the presence test \u2014 it has five alternatives, and some allow fewer than 183 territory days. But you must still independently satisfy the tax home and closer connection tests for the entire year, and spending substantial time off-island makes those harder to meet. The cleanest profile remains 183-plus days in Puerto Rico with your home, business, and family genuinely relocated.</p></div></div>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Does Act 60 make my U.S. dividends and interest tax-free?</button>'
+  +'<div class="rl-faq-a"><p>Generally no. Dividends are sourced to where the paying corporation is incorporated, so a dividend from a U.S. (e.g., Delaware) corporation stays U.S.-source and federally taxable no matter where you live. Interest is sourced to the residence of the payor, so interest from a U.S. issuer also stays U.S.-source. The exclusion and the Act 60 rate apply mainly to Puerto Rico-source capital gains on post-move assets, Puerto Rico-source services, and Puerto Rico-source business income.</p></div></div>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What happens to capital gains on assets I owned before moving to Puerto Rico?</button>'
+  +'<div class="rl-faq-a"><p>Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and remains subject to federal capital gains tax even if you sell after the move \u2014 the \u201c10-year lookback\u201d under Treas. Reg. \xa71.937-2(f). Only post-move appreciation is generally territory-source. A special mark-to-market election may change the result; this should be planned before you sell.</p></div></div>'
+  +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What records do I need to prove bona fide residency?</button>'
+  +'<div class="rl-faq-a"><p>Keep a contemporaneous travel log and day count, plus boarding passes, calendars, and travel records. Move the indicia of your life to Puerto Rico \u2014 driver\u2019s license, voter registration, family, vehicles, bank and professional affiliations, and mailing address. File Form 8898 when you begin or end residency. If you rely on medical or disaster days, keep the physician certification and supporting records the regulation requires.</p></div></div>'
+
+  +'<h2>Related Resources</h2>'
+  +'<ul><li><a href="/resources/act-38-2026-hb-505">Act 38-2026 (HB 505): What Changed for Act 60 Investors</a> \u2014 the new 4% rate, grandfathering, and the federal 10-year lookback.</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement &amp; Campaign 685</a> \u2014 how residency and sourcing claims are audited and prosecuted.</li>'
+  +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA &amp; Form 8898</a> \u2014 the filings that survive your move.</li>'
+  +'<li><a href="/resources-act60">Estate Planning for Act 60 Decree Holders</a> \u2014 coordinating residency with your estate plan.</li></ul>'
+
+  +'<div class="rl-sub-cta"><p><strong>Planning a move to Puerto Rico under Act 60?</strong></p><p>We help prospective applicants structure their residency and sourcing position before they move \u2014 with the protection of attorney-client privilege. Get it right the first year.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  }
+},
+
+
 '/resources/act-38-2026-hb-505': {
   title: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
   subtitle: 'The most significant changes to Act 60 since the program\u2019s creation.',
@@ -558,7 +655,7 @@ var PAGES = {
   +'<p style="font-size:.85rem;color:#706b62;">Content current as of April 2026. Tax law is subject to change. This page is for informational purposes only and does not constitute legal advice or create an attorney-client relationship. Consult qualified counsel before acting.</p>'
 
   +'<h2>Overview</h2>'
-  +'<p>On January 12, 2026, Puerto Rico enacted Act 38-2026 (originally House Bill 505), the most significant amendment to the Act 60 Individual Resident Investor (IRI) program since its creation as Act 22-2012. The law changes the preferential tax rate for new applicants, extends the program\u2019s lifespan, and introduces new requirements\u2014while grandfathering existing decree holders.</p>'
+  +'<p>In March 2026, Puerto Rico enacted Act 38-2026 (originally House Bill 505), the most significant amendment to the Act 60 Individual Resident Investor (IRI) program since its creation as Act 22-2012. The law changes the preferential tax rate for new applicants, extends the program\u2019s lifespan, and introduces new requirements\u2014while grandfathering existing decree holders.</p>'
 
   +'<h2>Key Changes</h2>'
   +'<h3>New 4% Tax Rate for Post-2026 Applicants</h3>'
@@ -575,7 +672,7 @@ var PAGES = {
   +'<p><strong>Critical federal limitation:</strong> Capital gains on investment property owned before establishing bona fide PR residency are subject to the federal 10-year lookback rule under <strong>Treas. Reg. \u00a71.937-2(f)</strong>. Under this rule, gains on pre-move assets are not treated as Puerto Rico-source income for federal tax purposes and remain subject to U.S. federal capital gains tax. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024); CCM 202538025.</p>'
 
   +'<h3>Annual Charitable Donation Requirement</h3>'
-  +'<p>All decree holders must make a <strong>$10,000 annual charitable donation</strong>\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CECFL (Comit\u00e9 Especial sobre Fondos Legislativos para Impacto Comunitario), plus $5,000 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01.</p>'
+  +'<p>All decree holders must make a <strong>$10,000 annual charitable donation</strong>\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CECFL (Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario), plus $5,000 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01.</p>'
   +'<p>In addition, decree holders pay a <strong>$5,000 annual report fee</strong>, bringing the total annual obligation to $15,000.</p>'
   +'<p><strong>Important:</strong> Qualifying nonprofit organizations cannot be controlled by the decree holder or their family members. Donations must be made annually as a condition of maintaining the decree.</p>'
 
@@ -747,7 +844,7 @@ var PAGES = {
   +'<h3>Typical AUP procedures include verification of:</h3>'
   +'<ul><li><strong>Physical presence in Puerto Rico</strong>\u2014travel records, utility bills, lease or mortgage documents</li>'
   +'<li><strong>Tax filing compliance</strong>\u2014timely filing of Puerto Rico and federal returns</li>'
-  +'<li><strong>Donation requirements</strong>\u2014proof of qualifying donations to Puerto Rico nonprofits, properly allocated between CEFCL-listed organizations and other qualifying nonprofits (see <a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> for amounts by decree era)</li>'
+  +'<li><strong>Donation requirements</strong>\u2014proof of qualifying donations to Puerto Rico nonprofits, properly allocated between CECFL-listed organizations and other qualifying nonprofits (see <a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> for amounts by decree era)</li>'
   +'<li><strong>Employment requirements</strong>\u2014for applicable decrees, proof of job creation or maintenance</li>'
   +'<li><strong>Annual report filing</strong>\u2014confirmation of timely annual report submission to DDEC</li></ul>'
 
@@ -805,7 +902,7 @@ var PAGES = {
   +'</tr></thead>'
   +'<tbody>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Capital Gains Rate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">4%</td></tr>'
-  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CEFCL + $5K qualifying nonprofits)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$15,000 ($7.5K CEFCL + $7.5K qualifying nonprofits)</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits)</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Property Purchase</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years; must register in PR Property Registry</td></tr>'
   +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">1 FTE if revenue >$3M</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Biennial Compliance Certificate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required (Act 52-2022 applies retroactively)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td></tr>'
@@ -852,8 +949,7 @@ var PAGES = {
   +'<li><strong>Act 188-2024 AUP Report</strong>\u2014an alternative to the standard biennial compliance certificate for qualifying decree holders. Consult counsel to determine eligibility.</li></ul>'
 
   +'<h2>Annual Charitable Donation</h2>'
-  +'<ul><li><strong>Pre-2027 applicants:</strong> $10,000/year ($5K CEFCL + $5K qualifying nonprofits)</li>'
-  +'<li><strong>Post-2026 applicants:</strong> $15,000/year ($7.5K CEFCL + $7.5K qualifying nonprofits)</li>'
+  +'<ul><li><strong>All decree holders:</strong> $10,000/year ($5K CECFL + $5K qualifying nonprofits). The donation requirement is unchanged by Act 38-2026; it is separate from the $5,000 annual report fee.</li>'
   +'<li>Organizations cannot be controlled by the decree holder or family members</li>'
   +'<li>Retain all donation receipts for AUP verification</li></ul>'
 
@@ -989,6 +1085,7 @@ function injectResourceCards() {
       heading: 'Act 60 Tax Incentives',
       icon: '\u2600\uFE0F',
       cards: [
+        { title: 'Bona Fide Residency & Source-of-Income Rules', desc: 'The foundation of every Act 60 plan: the three residency tests under IRC \xa7937 (presence, tax home, closer connection) and how income sourcing decides what the exclusion actually saves you.', url: '/resources/bona-fide-residency-puerto-rico', featured: true },
         { title: 'Act 38-2026 (HB 505): What Changed', desc: 'The most significant changes to Act 60 since the program\u2019s creation \u2014 new 4% rate, grandfathering, $5K annual report fee, 2055 extension.', url: '/resources/act-38-2026-hb-505', featured: true },
         { title: 'IRS Enforcement & Campaign 685', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
         { title: 'Why Hire a Law Firm for Act 60', desc: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 what CPAs cannot provide.', url: '/resources/why-law-firm-act-60' },

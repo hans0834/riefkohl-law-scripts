@@ -454,7 +454,7 @@ function fixComplianceCharitableDonation() {
     if (p.textContent.indexOf('$5,000 directed to a qualifying Puerto Rico nonprofit organization') >= 0) {
       p.innerHTML = p.innerHTML.replace(
         'at least $5,000 directed to a qualifying Puerto Rico nonprofit organization',
-        'at least $5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
+        'at least $5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
       );
     }
   }

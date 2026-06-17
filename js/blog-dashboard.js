@@ -2,8 +2,9 @@
 // BUILD: Generated from blog-dashboard.html. Edit that file, then regenerate this.
 
 (function(){
-var path=window.location.pathname;
-if(path.indexOf('/blog')!==0||path.length>5&&path.charAt(5)==='/')return;
+var path=window.location.pathname.replace(/\/+$/,'')||'/';
+// Run only on the blog index (/blog), not individual posts (/blog/<slug>). Trailing slash normalized above.
+if(path!=='/blog')return;
 // Inject template into DOM so getElementById works
 var _tplEl = document.createElement("script");
 _tplEl.type = "text/html";

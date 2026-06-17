@@ -3097,6 +3097,10 @@ function injectArticleSchema() {
   var page = ARTICLES[path];
   if (!page) return;
 
+  /* Guard: run() may fire multiple times via MutationObserver before .rl-sub exists.
+     Only inject the Article schema once to avoid duplicate JSON-LD. */
+  if (document.querySelector('script[data-rl-article-schema]')) return;
+
   /* Per-article publication dates */
   var articleDates = {
     '/resources/what-is-puerto-rico-trust': ['2026-03-10', '2026-03-10'],
@@ -3145,6 +3149,7 @@ function injectArticleSchema() {
 
   var script = document.createElement('script');
   script.type = 'application/ld+json';
+  script.setAttribute('data-rl-article-schema', '1');
   script.textContent = JSON.stringify(schema);
   document.head.appendChild(script);
 }

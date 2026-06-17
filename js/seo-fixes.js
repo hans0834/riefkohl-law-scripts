@@ -915,6 +915,48 @@ var SEO = {
   },
 
   /* ---- Act 60 Tax Incentives Subpages ---- */
+  '/resources/bona-fide-residency-puerto-rico': {
+    h1: 'Puerto Rico Bona Fide Residency & the Source-of-Income Rules: An Act 60 Guide',
+    meta: 'How to qualify as a bona fide resident of Puerto Rico for Act 60: the IRC \xa7937 presence, tax home, and closer connection tests, the 183-day rule, and the income-sourcing rules that decide what the \xa7933 exclusion actually saves.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is a bona fide resident of Puerto Rico for federal tax purposes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A bona fide resident is an individual who satisfies all three tests of IRC \xa7937 for the taxable year: the presence test, the tax home test, and the closer connection test. Only natural persons can qualify. Bona fide residency is the gateway to the federal income exclusion under IRC \xa7933.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I have to spend 183 days a year in Puerto Rico to qualify for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not strictly for the presence test, which has five alternatives, some allowing fewer than 183 territory days. But you must still satisfy the tax home and closer connection tests for the entire year, and time off-island makes those harder to meet. The cleanest profile is 183-plus days in Puerto Rico with home, business, and family genuinely relocated.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Act 60 make my U.S. dividends and interest tax-free?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally no. Dividends are sourced to where the paying corporation is incorporated, so a dividend from a U.S. corporation stays U.S.-source and federally taxable. Interest is sourced to the residence of the payor. The exclusion and the Act 60 rate apply mainly to Puerto Rico-source capital gains on post-move assets, services, and business income.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens to capital gains on assets I owned before moving to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and stays subject to federal capital gains tax even if you sell after the move (the 10-year lookback under Treas. Reg. \xa71.937-2(f)). A special mark-to-market election may change the result and should be planned before any sale.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/act-38-2026-hb-505': {
     h1: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
     meta: 'Act 38-2026 (HB 505) analysis: 4% rate for post-2026 applicants, grandfathering provisions, $10K donation + $5K annual report fee, 6-year non-residency requirement, DDEC fees, federal 10-year lookback, program extension to 2055.',
@@ -2110,7 +2152,7 @@ injectHreflang();
         + '<div class="rl-404-links">'
         + '<a href="/espanol">Inicio</a>'
         + '<a href="/espanol-servicios">Servicios</a>'
-        + '<a href="/espanol-blog">Blog Legal</a>'
+        + '<a href="/blog">Blog Legal</a>'
         + '<a href="/recursos-es">Recursos</a>'
         + '<a href="/espanol-contacto">Contacto</a>'
         + '<a href="/espanol-cita">Agendar Cita</a>'

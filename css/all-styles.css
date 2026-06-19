@@ -1255,6 +1255,13 @@ article:has(.rl-sub) {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+/* Remove the large default section padding/min-height above native Code-block
+   resource content (the .rl-sub has its own 40px top padding). */
+.page-section:has(.rl-sub) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
 /* When .rl-sub is migrated into a native Squarespace Code block, free the
    fluid-engine grid cell to span the full row and auto-size its height
    (otherwise it renders as a tiny/narrow column). Scoped via :has() so it

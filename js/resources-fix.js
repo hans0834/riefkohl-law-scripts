@@ -3,6 +3,14 @@
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
 
+/* Skip inside the Squarespace editor/admin preview (page is rendered in an
+   iframe and/or served from the *.squarespace.com admin domain) so the real,
+   native page content is editable. The live site (riefkohllaw.com, top-level
+   window) is unaffected — this only changes the editing experience. This lets
+   us migrate a page's content to a native Code block, after which the existing
+   `.rl-sub` guard in injectSubpage() keeps the live script from re-injecting. */
+if (window.self !== window.top || location.hostname.indexOf('squarespace.com') !== -1) return;
+
 /* ============================================
    RESOURCE SUBPAGE CONTENT INJECTION
    ============================================ */

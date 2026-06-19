@@ -175,7 +175,7 @@ var SEO = {
   },
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
-    meta: 'Is the 4% Act 60 tax rate right for your business? Puerto Rico attorney explains export services decrees, individual investor benefits, compliance traps, and IRS audit risks. Free strategy call with a bilingual PR-licensed lawyer.',
+    meta: 'Puerto Rico attorney on Act 60: the 4% export-services rate, individual investor decrees, compliance traps, and IRS audit risks. Free bilingual strategy call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -724,7 +724,7 @@ var SEO = {
   /* ---- Trust Law Article Series (14 articles) ---- */
   '/resources/what-is-puerto-rico-trust': {
     h1: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',
-    meta: 'Considering a living trust in Puerto Rico? Learn how PR trusts differ from mainland trusts, why they offer stronger asset protection, and what Act 60 investors need to know. Attorney guide.',
+    meta: 'How Puerto Rico trusts differ from mainland trusts, why they offer stronger asset protection, and what Act 60 investors need to know. A PR attorney’s guide.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -827,7 +827,7 @@ var SEO = {
   },
   '/resources/trust-costs-puerto-rico': {
     h1: 'Trust Costs in Puerto Rico: Creation, Administration & Termination',
-    meta: 'How much does a living trust cost in Puerto Rico? Full breakdown: attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, and hidden costs most firms don\u2019t disclose.',
+    meta: 'What a living trust costs in Puerto Rico: attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, and the hidden costs most firms don\u2019t disclose.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -871,7 +871,7 @@ var SEO = {
   },
   '/resources/complete-guide-puerto-rico-trusts': {
     h1: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012',
-    meta: 'Everything you need to know about Puerto Rico trusts: how they work, who needs one, costs, tax implications, and how they differ from mainland trusts. Written by a PR-licensed attorney.',
+    meta: 'A PR-licensed attorney on Puerto Rico trusts: how they work, who needs one, costs, tax implications, and how they differ from mainland trusts.',
     schema: null
   },
   '/resources/foreign-trust-trap': {
@@ -917,7 +917,7 @@ var SEO = {
   /* ---- Act 60 Tax Incentives Subpages ---- */
   '/resources/bona-fide-residency-puerto-rico': {
     h1: 'Puerto Rico Bona Fide Residency & the Source-of-Income Rules: An Act 60 Guide',
-    meta: 'How to qualify as a bona fide resident of Puerto Rico for Act 60: the IRC \xa7937 presence, tax home, and closer connection tests, the 183-day rule, and the income-sourcing rules that decide what the \xa7933 exclusion actually saves.',
+    meta: 'How to qualify as a bona fide resident of Puerto Rico for Act 60: the IRC \xa7937 presence, tax-home, and closer-connection tests, the 183-day rule, and \xa7933 sourcing.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -959,7 +959,7 @@ var SEO = {
   },
   '/resources/act-38-2026-hb-505': {
     h1: 'Act 38-2026 (HB 505): What Changed for Act 60 Investors',
-    meta: 'Act 38-2026 (HB 505) analysis: 4% rate for post-2026 applicants, grandfathering provisions, $10K donation + $5K annual report fee, 6-year non-residency requirement, DDEC fees, federal 10-year lookback, program extension to 2055.',
+    meta: 'Act 38-2026 (HB 505): the 4% rate for post-2026 applicants, the $10K donation + $5K report fee, the 6-year non-residency rule, and program extension to 2055.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -1024,7 +1024,7 @@ var SEO = {
   },
   '/resources/compliance-certificate-act-52': {
     h1: 'Compliance Certificates & Agreed-Upon Procedures Under Act 52-2022',
-    meta: 'Act 52-2022 requires biennial compliance certification for all Act 60 decree holders. CPA/Compliance Professional requirement, AUP engagements, Act 188-2024 alternative, and consequences of non-compliance.',
+    meta: 'Act 52-2022 requires biennial compliance certification for Act 60 decree holders: the CPA/AUP requirement, the Act 188-2024 alternative, and non-compliance risks.',
     schema: null
   },
   '/resources/act-60-decree-comparison': {

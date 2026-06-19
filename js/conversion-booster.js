@@ -525,17 +525,12 @@ function injectAct60Sections() {
       '<p>We practice Puerto Rico law from Puerto Rico. We file with DDEC in person. We know the local tax office, the courts, and the compliance landscape because we work in it every day\u2014not from a satellite office 1,500 miles away.</p>' +
     '</div>';
 
-  // --- LEAD MAGNET / EMAIL CAPTURE (#15) ---
-  container.innerHTML +=
-    '<div class="rl-act60-lead-magnet">' +
-      '<h3>Free: The 2026 Act 60 Compliance Checklist</h3>' +
-      '<p>Residency requirements, reporting deadlines, and the documentation you need to keep your decree in good standing\u2014in one printable checklist.</p>' +
-      '<div class="rl-act60-lead-magnet-form">' +
-        '<input type="email" placeholder="Enter your email" aria-label="Email address for checklist download" />' +
-        '<button type="button">Send Checklist</button>' +
-      '</div>' +
-      '<p class="rl-act60-lead-magnet-privacy">No spam. Unsubscribe anytime.</p>' +
-    '</div>';
+  // --- LEAD MAGNET (#15) ---
+  // The downloadable Act 60 checklist is delivered by email-signup.js's inline
+  // CTA on this page (working PDF download + lead_magnet_download tracking).
+  // A duplicate email box previously lived here with no submit handler \u2014 it
+  // captured nothing and misled visitors, so it was removed. To add real email
+  // capture, wire a provider-backed form here instead of a dead <input>.
 
   // Insert all sections before the footer, after main content
   var footer = document.querySelector('footer') || document.querySelector('.footer-inside');
@@ -636,7 +631,21 @@ function injectWhatsApp() {
 
   // WhatsApp business number — same as office phone
   var waNumber = '17872361657';
-  var waText = encodeURIComponent('Hi, I\'m interested in learning more about Act 60 tax incentives in Puerto Rico.');
+  // Context-aware opener so the prefilled message matches the page topic
+  // (previously hardcoded to Act 60 on every page, including the firm's
+  // highest-revenue trust/estate pages).
+  var path = (location.pathname || '').toLowerCase();
+  var waMsg;
+  if (/trust|estate|fideicomiso|sucesoral|heir|herede|probate|legitima|will/.test(path)) {
+    waMsg = 'Hi, I\'d like to talk about trusts and estate planning in Puerto Rico.';
+  } else if (/act-60|act60|ley-60|ley60|residency|export-services/.test(path)) {
+    waMsg = 'Hi, I\'m interested in learning more about Act 60 tax incentives in Puerto Rico.';
+  } else if (/business|formation|corporate|llc/.test(path)) {
+    waMsg = 'Hi, I\'d like to talk about forming or structuring a business in Puerto Rico.';
+  } else {
+    waMsg = 'Hi, I\'d like to schedule a consultation with Riefkohl Law.';
+  }
+  var waText = encodeURIComponent(waMsg);
 
   var btn = document.createElement('a');
   btn.className = 'rl-whatsapp';

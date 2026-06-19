@@ -9,20 +9,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N2G4Z9D8');
 
-/* Google Analytics 4 (gtag.js) — Measurement ID G-WEZLH46NNX */
-/* Loads GA4 directly so pageviews collect immediately, and the conversion */
-/* events below reach GA4 via the gtag() fallback in trackEvent() (the GTM */
-/* container GTM-N2G4Z9D8 is empty, so there is no double-counting). */
-(function(){
-  var s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WEZLH46NNX';
-  document.head.appendChild(s);
-})();
-window.dataLayer = window.dataLayer || [];
-function gtag(){ dataLayer.push(arguments); }
-gtag('js', new Date());
-gtag('config', 'G-WEZLH46NNX');
+/* GA4 (G-WEZLH46NNX) is configured INSIDE the GTM container GTM-N2G4Z9D8:
+   a Google Tag fires the page_view, and a GA4 Event tag forwards the
+   dataLayer events pushed by trackEvent() below. Do NOT load gtag.js or
+   define a gtag() function here — that would activate the (intentionally
+   dead) gtag fallback in trackEvent() and double-count every event, and
+   add a second page_view source. Keep tag management in GTM. */
 
 /* Conversion Event Tracking */
 (function(){

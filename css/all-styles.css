@@ -1255,6 +1255,21 @@ article:has(.rl-sub) {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+/* When .rl-sub is migrated into a native Squarespace Code block, free the
+   fluid-engine grid cell to span the full row and auto-size its height
+   (otherwise it renders as a tiny/narrow column). Scoped via :has() so it
+   only affects native migrated pages, never the JS-injected ones. */
+.fluid-engine:has(.rl-sub) {
+  grid-template-rows: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.fe-block:has(.rl-sub) {
+  grid-column: 1 / -1 !important;
+  grid-row: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
 .rl-sub {
   max-width: 800px;
   margin: 0 auto;

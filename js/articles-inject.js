@@ -6,6 +6,12 @@ var path = window.location.pathname.replace(/\/$/,'');
 /* Early exit: only run on /resources pages to avoid wasting CPU on other pages */
 if (path.indexOf('/resources') !== 0) return;
 
+/* Skip inside the Squarespace editor/admin preview (iframe and/or *.squarespace.com)
+   so native page content is editable; the live site (riefkohllaw.com, top-level)
+   is unaffected. Once a page has native '.rl-sub' content, injectArticle()'s
+   existing '.rl-sub' guard prevents re-injection (no duplication). */
+if (window.self !== window.top || location.hostname.indexOf('squarespace.com') !== -1) return;
+
 var ARTICLES = {
 '/resources/what-is-puerto-rico-trust': {
   title: 'What Is a Puerto Rico Trust? A Guide for Act 60 Investors',

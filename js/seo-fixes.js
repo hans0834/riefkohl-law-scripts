@@ -803,17 +803,152 @@ var SEO = {
   '/resources/asset-protection-trusts-pr': {
     h1: 'Asset Protection Trusts Under Puerto Rico\u2019s Trust Act',
     meta: 'Puerto Rico\u2019s autonomous estate doctrine offers distinctive asset protection advantages over mainland DAPTs. Learn the three-layer creditor protection structure.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can a Puerto Rico trust protect my assets from creditors?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Under the Puerto Rico Trust Act (Act 219-2012), a trust is a separate legal person with its own autonomous patrimony, so trust property is no longer part of the settlor\'s or beneficiary\'s estate. Combined with creditor rights limitations and spendthrift provisions, this structure creates formidable barriers to creditor claims. Protection is qualified, however, not absolute.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are Puerto Rico trusts revocable or irrevocable?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Under the PR Trust Act, all Puerto Rico trusts are irrevocable by default. The only exception is for Act 60 Individual Resident Investor decree holders, who may establish revocable trusts under the Incentives Code. A proposed bill (P. del S. 773) would add a broader revocable trust category, but it passed the Senate in January 2026 and, as of March 2026, still awaits House approval and has not been enacted.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is a self-settled asset protection trust valid in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico has no self-settled asset protection trust (DAPT-equivalent) statute like the roughly 20 US states that authorize them. Instead, self-settled trusts rely on general trust law and the autonomous estate doctrine, and they face scrutiny under Acci\u00f3n Pauliana, the civil law doctrine that lets creditors challenge transfers made to defraud them. To reduce this exposure, fund the trust well in advance of any creditor conflict, while you remain solvent, and limit the powers you retain.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the strongest type of Puerto Rico trust for asset protection?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A pure discretionary trust offers the maximum protection, followed by spendthrift trusts and then support trusts. In a discretionary trust, the trustee has sole and absolute discretion over distributions, so the beneficiary has only an expectancy rather than an enforceable right, leaving a creditor nothing to garnish or attach. Strong spendthrift language combined with the autonomous estate doctrine reinforces this barrier.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the limits of asset protection with a Puerto Rico trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Protection is qualified, not absolute. Once the trustee distributes cash or property to a beneficiary, that amount enters the beneficiary\'s personal estate and is reachable by their creditors. In addition, support obligations such as alimony or child support can pierce spendthrift restrictions, trust income may be considered when calculating spousal support, and trust assets funded with community property receive weaker divorce protection than those funded with separate property.'
+          }
+        }
+      ]
+    }
   },
   '/resources/special-needs-trusts-medicaid': {
     h1: 'Special Needs Trusts and Medicaid Planning in Puerto Rico',
     meta: 'Special needs trusts in Puerto Rico: Medicaid\u2019s any-circumstances test, first-party vs. third-party SNTs, and why PR\u2019s Plan Vital changes everything.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Does Puerto Rico Medicaid cover nursing home costs?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Puerto Rico\'s Medicaid program (Plan Vital) does not cover nursing facility services for adults. This fundamentally changes Medicaid planning compared to the mainland, because the main reason for special needs trust planning in Puerto Rico is protecting Medicaid medical coverage and the modest AABD cash benefit rather than nursing home eligibility.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the difference between a first-party and third-party special needs trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A first-party (self-settled) special needs trust is funded with the disabled beneficiary\'s own assets, requires the beneficiary to be under age 65 when created, and must repay the state for Medicaid benefits at the beneficiary\'s death. A third-party special needs trust is funded with someone else\'s assets, has no age restriction and no Medicaid payback, so remaining assets pass to family remainder beneficiaries instead of the state. This makes third-party trusts far more flexible for Act 60 families.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I keep Medicaid benefits if a relative leaves money to a disabled family member?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, if the funds are placed in a properly drafted special needs trust. The key principle is that trust distributions must supplement public benefits, not replace them, so the beneficiary should not receive large lump sums directly. Instead, the trustee pays vendors directly for items Medicaid does not cover, such as dental work, glasses, therapy, education, and adaptive equipment.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the Medicaid lookback period and how is the penalty calculated?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Any transfer of assets for less than fair market value within 60 months before applying for Medicaid can trigger a penalty period of ineligibility, calculated by dividing the total amount transferred by the average monthly nursing home cost. However, because Puerto Rico Medicaid does not cover nursing facility services, this penalty calculation is largely inapplicable in practice, and multiple sources describe the lookback as effectively dormant in Puerto Rico.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are revocable living trusts allowed in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally no. Under Puerto Rico Law 219-2012, trusts are irrevocable by default, and all trusts must be executed by public deed (escritura p\u00fablica) and registered in the Special Registry of Trusts. The only exception is for Act 60 IRI decree holders, who may create revocable trusts under the Incentives Code, so revocable living trusts as understood on the mainland generally cannot be created in Puerto Rico.'
+          }
+        }
+      ]
+    }
   },
   '/resources/ilits-and-slats': {
     h1: 'ILITs and SLATs: Advanced Trust Planning for Puerto Rico Residents',
     meta: 'Irrevocable life insurance trusts and spousal lifetime access trusts for Act 60 investors. Estate tax reduction with PR-specific integration.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What is an ILIT and how does it reduce estate taxes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'An Irrevocable Life Insurance Trust (ILIT) is a trust set up to own and control life insurance policies so the death benefit stays out of your taxable estate. Under IRC \u00a72042(2), if the insured holds no incidents of ownership in the policy, the death benefit does not count toward the taxable estate. For example, keeping a $5 million policy out of the estate saves $2 million in federal tax at the 40% rate.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the three-year rule for life insurance trusts?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Under IRC \u00a72035(a), any policy transferred within three years of the insured\'s death is pulled back into the taxable estate, even if all incidents of ownership were released. This is a strict look-back rule with no exceptions for gifts or charitable transfers. The practical solution is to establish and fund the ILIT first, then apply for the policy in the ILIT\'s name so the insured never owns it personally.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is a SLAT and why do married couples use it?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A Spousal Lifetime Access Trust (SLAT) is an irrevocable trust where one spouse transfers assets for the benefit of the other spouse (and usually children) during their lifetime. It removes both the transferred assets and all future appreciation from the grantor\'s taxable estate, while the family keeps indirect access through the non-grantor spouse. For instance, a $5 million portfolio that grows to $15 million only uses $5 million of lifetime exemption, with the $10 million of appreciation escaping estate tax.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Why shouldn\'t spouses create identical SLATs for each other?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Creating mirror-image trusts triggers the Reciprocal Trust Doctrine from Estate of Grace, 395 U.S. 316 (1969). If spouses each create irrevocable trusts for the other with roughly equal value and timing, the IRS can disregard both trusts and include the assets in both spouses\' taxable estates. To avoid this, couples should use different structures, trustees, beneficiaries, funding amounts, and timing rather than true mirror-image SLATs.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How does Puerto Rico law affect ILIT and SLAT planning?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico trust law makes trusts irrevocable by default (32 L.P.R.A. \u00a73352a), which aligns with the irrevocability these trusts require, and its separate juridical personality creates an asset-protection barrier against creditors. PR law also permits a trust protector and beneficiary-initiated modification rights that can add flexibility without destroying estate tax benefits if exercised independently of the grantor. Couples should also analyze how the leg\u00edtima, which requires one-half of the estate to pass to forced heirs under the 2020 Civil Code, interacts with SLAT planning.'
+          }
+        }
+      ]
+    }
   },
   '/resources/trust-taxation-act-60': {
     h1: 'Trust Taxation for Act 60 Investors: A 2026 Regulatory Perspective',
@@ -862,12 +997,438 @@ var SEO = {
   '/resources/fiduciary-duties-trustees': {
     h1: 'Fiduciary Duties Under Puerto Rico Trust Law',
     meta: 'Is your trustee meeting their legal obligations? 16 statutory duties under Puerto Rico\u2019s Trust Act, when trustees can be removed, and real case examples.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What duties does a trustee owe me under Puerto Rico trust law?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puerto Rico\'s trust framework establishes five core fiduciary duties: the duty of loyalty, the duty of care, the duty to inform, the duty of impartiality, and the investment duty. The duty of loyalty requires the trustee to act solely in the beneficiaries\' interests and is absolute, meaning it cannot be waived by an exculpatory clause or trust amendment. The duty of care holds the trustee to a prudent person standard of reasonable care, skill, and caution.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a trustee in Puerto Rico engage in self-dealing with trust assets?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Self-dealing is prohibited under the duty of loyalty. A trustee cannot sell trust property to itself or entities it controls, purchase trust assets at favorable terms, enter contracts with undisclosed personal interests, or divert trust opportunities to personal accounts. The trustee must disclose conflicts proactively, and any clause purporting to permit self-dealing is void against public policy unless expressly authorized by statute.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How often must a Puerto Rico trustee provide accountings to beneficiaries?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The duty to inform requires the trustee to keep beneficiaries informed and provide timely, accurate accountings, with quarterly reports required at minimum. Annual reports must be filed by February 28 under Regulation 7839, issued by the Office of the Commissioner of Financial Institutions (OCIF). This duty to account is affirmative, so the beneficiary need not request it, and the trustee cannot avoid disclosure by claiming no loss occurred.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I remove my trustee in Puerto Rico if they fail to do their job?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Removal is limited to three exhaustive statutory grounds: incompatible personal interests, misappropriation or fraudulent or negligent administration, and incapacity. Courts treat removal as an extraordinary remedy with a higher bar than the bar for damages, so mere failure to account without evidence of actual misappropriation or manifest negligence may not satisfy the standard. You must file a petition in court rather than removing a trustee by letter, and standing is limited to the settlor during lifetime, any beneficiary, or the Attorney General.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a trust document protect my trustee from all liability with an exculpation clause?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Exculpation clauses are strictly construed against the trustee, and certain fundamental duties cannot be waived. These clauses do not protect against breach of the duty of loyalty, breach of the duty of impartiality, or willful misconduct or gross negligence. To be effective at all, any exculpation clause must be conspicuous, in plain language, and specifically reference the duty being modified.'
+          }
+        }
+      ]
+    }
   },
   '/resources/family-trust-pitfalls': {
     h1: 'Family Trust Pitfalls: When Good Intentions Go Wrong',
     meta: '10 specific pitfalls that have destroyed family trusts in Puerto Rico courts. Case illustrations and surgical solutions for each.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can I name myself or my child as the only trustee of a Puerto Rico family trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Naming the primary beneficiary as the sole trustee creates an immediate conflict of interest, because that person controls distributions to themselves while other beneficiaries get little oversight. In the Fideicomiso Caro Delui case, the oldest child held 99% of the interest and served as sole trustee, and the trust corpus fell from $1.3 million to $447,000 amid self-dealing and excessive compensation. A safer approach is an independent professional trustee, or a co-trustee structure with explicit conflict-of-interest provisions and a mandatory independent annual audit.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I have to use a notary to amend a trust or change trustees in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. In Puerto Rico, trust amendments must be executed by notarial deed (escritura p\u00fablica), and informal letters, emails, or oral instructions are void. In the Crespo Rivera case, a mother used a notarized letter rather than a full public deed to remove a trustee, and the court held the letter insufficient, voiding all the deeds the new trustee later executed. Removing or appointing a trustee requires a separate notarial deed, recorded at the property registry when real property is involved.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens if a Puerto Rico trust is not registered with the ODIN trust registry?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Registration with the ODIN Special Trust Registry (Registro de Fideicomisos) under Act 219-2012 is absolute and mandatory for all trusts, including testamentary trusts. In Allio v. Santiago Chard\u00f3n, 2026 TSPR 13, the Puerto Rico Supreme Court declared a testamentary trust entirely null and void because the registration requirements were not strictly followed, defeating the testator\'s intent. Simply mentioning a desire to create a trust in a will is legally insufficient without immediate, simultaneous registration.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I leave my Puerto Rico estate to only some of my children or exclude a spouse through a trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No, because Puerto Rico\'s Civil Code protects forced heirs through the leg\u00edtima, which is 50% of the estate divided equally among descendants and the surviving spouse, and these rights cannot be waived. In Rodr\u00edguez Toro, a court voided trust donations and ordered restitution after a parent funded a trust for second-marriage children while excluding adult children from a first marriage. Under the 2020 Civil Code, the surviving spouse is a first-order forced heir with a preferential right to the family residence.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does getting divorced automatically remove my ex-spouse from my trust in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Divorce does not automatically terminate a spouse\'s interest in a trust, so the trust must be reviewed and amended after the divorce. In Gil Ense\u00f1at v. Marini Rom\u00e1n, a husband assumed divorce ended his ex-wife\'s interest, but the trust still named her as a primary beneficiary, leading to disputes over spousal support and a five-year challenge after his death. The fix is to expressly remove the ex-spouse from all beneficiary and trustee roles by notarial deed and update related beneficiary designations.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/asset-protection-irrevocable-trusts': {
+    h1: 'Puerto Rico Asset Protection Trusts Under Law 219-2012',
+    meta: 'Learn how irrevocable trusts under Puerto Rico\'s Law 219-2012 protect your assets from creditors, lawsuits, and divorce. Schedule a free strategy call.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How do irrevocable trusts protect assets in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'When you transfer assets into an irrevocable trust, the trustee holds legal title, so assets you no longer own cannot be seized by your creditors. Protection depends on three key requirements: irrevocability, an independent trustee who is not the settlor or spouse, and a completed transfer where assets are actually retitled in the trust\'s name. Law 219-2012 provides a modern trust statute with strong creditor protections based on the autonomous estate doctrine.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What can a Puerto Rico irrevocable trust protect against?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'An irrevocable trust can protect against tort judgments such as car accidents and malpractice, business liabilities even if the corporate veil is pierced, and professional liability. With spendthrift provisions, it can also shield against creditor claims directed at beneficiaries. It may protect against divorce if the trust is established before marriage or before proceedings begin.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What can\'t an irrevocable trust protect against?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'An irrevocable trust cannot protect against fraudulent transfers, since transfers made to defraud existing creditors can be voided. It also cannot shield assets from federal tax liens, because IRS collection powers can reach trust assets in certain cases. Pre-existing obligations such as child support, alimony, and prior court orders remain enforceable as well.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'When should I set up an asset protection trust in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Timing is the most important variable, and you should establish your trust before any claim arises. Transferring assets after a lawsuit is filed is almost certainly a fraudulent transfer that can be voided. The lesson is to establish your asset protection trust while the sun is shining.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/fideicomiso-irrevocable-puerto-rico': {
+    h1: 'Fideicomiso Irrevocable en Puerto Rico: Gu\u00eda Ley 219-2012',
+    meta: 'Descubre c\u00f3mo un fideicomiso irrevocable bajo la Ley 219-2012 protege tus activos, reduce contribuciones y ordena tu planificaci\u00f3n sucesoral en Puerto Rico.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es un fideicomiso irrevocable en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Es un acuerdo legal donde el fideicomitente transfiere activos a un fiduciario, quien los administra en beneficio de los fideicomisarios. Una vez creado, no puede modificarse ni revocarse unilateralmente, y esa cesi\u00f3n de control es lo que le da su poder de protecci\u00f3n de activos, beneficios contributivos y planificaci\u00f3n sucesoral.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 cambi\u00f3 con la Ley 219-2012 para los fideicomisos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Antes de 2012, Puerto Rico carec\u00eda de un estatuto integral de fideicomisos. La Ley 219-2012 cre\u00f3 un marco legal moderno con reconocimiento pleno ante los tribunales, flexibilidad en la estructura, separaci\u00f3n patrimonial y compatibilidad con el derecho civil.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfUn fideicomiso irrevocable protege mis activos de los acreedores?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'S\u00ed. Los activos transferidos constituyen un patrimonio separado, por lo que los acreedores personales no pueden reclamarlos. La excepci\u00f3n son las transferencias fraudulentas, es decir, las realizadas cuando ya era insolvente o con la intenci\u00f3n de defraudar a los acreedores.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfPuede un fideicomiso irrevocable evitar la leg\u00edtima de mis hijos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Un fideicomiso no puede eludir la leg\u00edtima. Sin embargo, ofrece flexibilidad: puede proveer para el c\u00f3nyuge mientras preserva los derechos de los hijos, utilizar la mitad de libre disposici\u00f3n y estructurar distribuciones para proteger a herederos j\u00f3venes.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/declaratoria-de-herederos-puerto-rico': {
+    h1: 'Declaratoria de Herederos en Puerto Rico: Gu\u00eda del Proceso',
+    meta: 'Conozca el proceso de declaratoria de herederos en Puerto Rico: pasos, plazos, requisitos del tribunal y c\u00f3mo evitarlo con un fideicomiso.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es la declaratoria de herederos en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Es un procedimiento judicial mediante el cual un tribunal identifica a los herederos legales, establece la proporci\u00f3n en que heredan y autoriza la transferencia de bienes. Sin esta resoluci\u00f3n, las instituciones financieras no liberar\u00e1n cuentas y el Registro de la Propiedad no inscribir\u00e1 transferencias.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1nto tiempo toma el proceso de declaratoria de herederos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Un caso simple suele tomar de 6 a 12 meses, mientras que un caso moderado toma de 12 a 18 meses. Un caso complejo puede extenderse desde 18 meses hasta varios a\u00f1os, dependiendo de las circunstancias.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 documentos se necesitan para presentar la demanda?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La demanda se presenta ante el Tribunal de Primera Instancia y debe incluir el certificado de defunci\u00f3n, el testamento, un inventario de bienes y certificaciones del CRIM y de Hacienda. Tambi\u00e9n se requiere localizar el testamento consultando el \u00edndice del Colegio de Notarios.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfC\u00f3mo puedo evitar la declaratoria de herederos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Puede evitarla con un fideicomiso, que permite que los activos pasen directamente a los beneficiarios en semanas en lugar de meses. Tambi\u00e9n ayudan las designaciones de beneficiarios en p\u00f3lizas de seguro, cuentas de retiro y cuentas POD/TOD, idealmente como parte de una planificaci\u00f3n integral con un testamento como red de seguridad.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/planificacion-sucesoral-puerto-rico': {
+    h1: 'Planificaci\u00f3n Sucesoral en Puerto Rico: Gu\u00eda Completa',
+    meta: 'Conozca testamentos, la leg\u00edtima, fideicomisos y poderes legales bajo el C\u00f3digo Civil de Puerto Rico (Ley 55-2020). Proteja a su familia con un plan s\u00f3lido.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 tipos de testamento se reconocen en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Bajo el C\u00f3digo Civil actual (Ley 55-2020), Puerto Rico reconoce dos tipos de testamento: el testamento abierto, otorgado ante notario, y el testamento ol\u00f3grafo, escrito a mano. El testamento abierto ya no requiere testigos obligatoriamente bajo el Art. 1644, salvo que lo solicite el testador o el notario. El testamento cerrado fue eliminado por la Ley 55-2020.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es la leg\u00edtima y puedo desheredar a un hijo en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La leg\u00edtima es la mitad de su patrimonio que el C\u00f3digo Civil (Ley 55-2020) reserva para sus herederos forzosos: sus hijos y su c\u00f3nyuge sobreviviente, quienes la comparten en partes iguales. No puede desheredar a un hijo excepto en circunstancias muy limitadas.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfPara qu\u00e9 sirve un fideicomiso en la planificaci\u00f3n sucesoral?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Los fideicomisos bajo la Ley 219-2012 evitan la declaratoria de herederos y proporcionan planificaci\u00f3n de incapacidad. Tambi\u00e9n protegen sus activos y mantienen la privacidad de su patrimonio.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfPor qu\u00e9 necesito un poder general duradero?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Un poder general duradero autoriza a alguien de su confianza a manejar sus asuntos financieros si usted queda incapacitado. Sin este documento, su familia tendr\u00eda que solicitar la tutela judicial para poder actuar en su nombre.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/ley-60-guia-inversionistas': {
+    h1: 'Ley 60 en Puerto Rico: Gu\u00eda para Inversionistas',
+    meta: 'Gu\u00eda de Ley 60 para inversionistas en Puerto Rico: requisitos de residencia bona fide, beneficios contributivos, proceso ante el DDEC y errores comunes.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1les son los requisitos de residencia para cualificar bajo la Ley 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Debe cumplir simult\u00e1neamente las tres pruebas de residente bona fide bajo el IRC \u00a7937: la prueba de presencia f\u00edsica (al menos 183 d\u00edas en Puerto Rico durante el a\u00f1o contributivo), la prueba de hogar contributivo (su lugar principal de actividad econ\u00f3mica debe estar en PR) y la prueba de conexi\u00f3n m\u00e1s estrecha. Los 183 d\u00edas por s\u00ed solos no son suficientes, y el incumplimiento de cualquiera de las tres pruebas puede resultar en la descalificaci\u00f3n de su residencia.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 beneficios contributivos ofrece la Ley 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Entre los beneficios clave est\u00e1n la exenci\u00f3n sobre ganancias de capital acumuladas despu\u00e9s de establecer residencia, la exenci\u00f3n sobre intereses y dividendos de fuentes dentro de Puerto Rico, una tasa de 4% sobre servicios de exportaci\u00f3n (Cap\u00edtulo 3) y la exenci\u00f3n de contribuciones federales sobre ingreso de fuente puertorrique\u00f1a bajo el IRC \u00a7933. Los beneficios espec\u00edficos dependen de los t\u00e9rminos del decreto, la fecha de solicitud y la legislaci\u00f3n vigente.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfLa Ley 60 elimina el impuesto sobre el caudal relicto?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Los beneficios de la Ley 60 no se extienden al impuesto sobre caudal relicto, por lo que su patrimonio sigue sujeto al impuesto federal. Adem\u00e1s, Puerto Rico tiene reglas de herencia forzosa que no existen en los estados continentales. Un fideicomiso irrevocable puede ayudar a reducir su patrimonio imponible.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfC\u00f3mo es el proceso de solicitud de la Ley 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Primero debe establecer residencia bona fide en Puerto Rico mediante propiedad, licencia de conducir, registro de votante y cuentas bancarias. Luego se prepara y presenta la solicitud ante el DDEC, cuya revisi\u00f3n y aprobaci\u00f3n puede tomar varios meses. Tras la aprobaci\u00f3n, debe cumplir continuamente con las obligaciones del decreto, como informes anuales, donaci\u00f3n caritativa y la compra de propiedad residencial dentro del plazo establecido.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/que-es-un-fideicomiso-en-puerto-rico': {
+    h1: '\u00bfQu\u00e9 es un fideicomiso en Puerto Rico?',
+    meta: 'Qu\u00e9 es un fideicomiso de Puerto Rico, el patrimonio aut\u00f3nomo y en qu\u00e9 se diferencia de un fideicomiso del territorio continental. Gu\u00eda para inversionistas de la Ley 60.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es un fideicomiso en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Bajo la Ley 219-2012, un fideicomiso de Puerto Rico es un patrimonio aut\u00f3nomo: una persona jur\u00eddica separada con sus propios derechos y obligaciones, no solo una relaci\u00f3n fiduciaria. Cuando la escritura se otorga ante notario y se inscribe en el Registro Especial de Fideicomisos, el fideicomiso cobra existencia como entidad independiente que puede poseer propiedad, demandar y ser demandada.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfEn qu\u00e9 se diferencia de un fideicomiso del territorio continental?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'En el territorio continental, un fideicomiso es esencialmente una relaci\u00f3n en la que el fiduciario tiene el t\u00edtulo en beneficio del fideicomisario. En Puerto Rico, el fideicomiso es una persona jur\u00eddica separada, y la propiedad no pertenece al fideicomitente, al fiduciario ni al fideicomisario, sino al fideicomiso mismo. Esa separaci\u00f3n estructural es el fundamento de la protecci\u00f3n de activos de Puerto Rico.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfSon revocables los fideicomisos de Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Por defecto, todos los fideicomisos de Puerto Rico son irrevocables. La \u00fanica excepci\u00f3n son los titulares de decreto como Inversionistas Residentes Individuales (IRI) de la Ley 60, que pueden establecer fideicomisos revocables bajo el C\u00f3digo de Incentivos. No obstante, el fideicomitente s\u00ed puede reservarse amplios derechos de modificaci\u00f3n bajo el \u00a73352h.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfPor qu\u00e9 importa el patrimonio aut\u00f3nomo para la protecci\u00f3n de activos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Como la propiedad pertenece al fideicomiso mismo y no a ning\u00fan individuo, los acreedores del fideicomitente, del fiduciario o del fideicomisario generalmente no pueden alcanzar los activos del fideicomiso, salvo seg\u00fan lo disponga expresamente la ley. Esta barrera estructural ofrece una protecci\u00f3n a nivel de entidad que no tiene equivalente en las jurisdicciones del territorio continental.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico': {
+    h1: 'C\u00f3mo evitar el proceso sucesorio en Puerto Rico',
+    meta: 'C\u00f3mo los fideicomisos evitan el proceso sucesorio en Puerto Rico respetando la leg\u00edtima (herencia forzosa). Gu\u00eda de planificaci\u00f3n patrimonial para la Ley 60.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfPuedo usar un fideicomiso para evitar el proceso sucesorio en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'S\u00ed. Los bienes mantenidos en un fideicomiso debidamente dotado pasan a los beneficiarios sin pasar por el proceso sucesorio supervisado por el tribunal. Para los inversionistas de la Ley 60, esto a menudo es aconsejable, pero cualquier estrategia debe respetar la leg\u00edtima, ya que ning\u00fan fideicomiso puede anular los derechos de herencia forzosa.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es la leg\u00edtima y puede un fideicomiso eludirla?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La leg\u00edtima es la porci\u00f3n del caudal hereditario que la ley reserva para los herederos forzosos: los descendientes, los ascendientes (si no hay descendientes) y el c\u00f3nyuge sup\u00e9rstite. Ning\u00fan fideicomiso, testamento u otro instrumento puede prevalecer sobre estas protecciones; el Tribunal Supremo lo ha confirmado y los tribunales han anulado donaciones a fideicomisos que invad\u00edan la leg\u00edtima.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfReduce un fideicomiso la leg\u00edtima de mis herederos forzosos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La leg\u00edtima se calcula con base en el caudal hereditario total, incluidos los bienes mantenidos en fideicomiso. Transferir bienes a un fideicomiso no reduce la leg\u00edtima: solo cambia c\u00f3mo reciben su porci\u00f3n los herederos forzosos, no si la reciben. El C\u00f3digo Civil de 2020 estableci\u00f3 un per\u00edodo de colaci\u00f3n de diez a\u00f1os para las donaciones.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es la cautela socini?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La cautela socini es una cl\u00e1usula que ofrece a los herederos forzosos una elecci\u00f3n: recibir la leg\u00edtima estricta de forma \u00edntegra y libre de condiciones, o recibir un beneficio mayor a trav\u00e9s del fideicomiso pero sujeto a las condiciones del testador. Es un mecanismo v\u00e1lido y reconocido en Puerto Rico para integrar la planificaci\u00f3n con fideicomisos y la herencia forzosa.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico': {
+    h1: '\u00bfCu\u00e1nto cuesta un fideicomiso en Puerto Rico?',
+    meta: 'Costos reales de crear, administrar y extinguir un fideicomiso en Puerto Rico: honorarios de abogado, aranceles notariales, inscripci\u00f3n y gastos anuales. Precios transparentes.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1nto cuesta crear un fideicomiso en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Los honorarios de abogado var\u00edan seg\u00fan la complejidad: desde $1,500\u2013$3,500 para un fideicomiso inter vivos sencillo hasta $7,500\u2013$15,000 o m\u00e1s para estructuras complejas. A esto se suman los aranceles notariales ($200\u2013$800), la inscripci\u00f3n en el Registro de la Propiedad si hay bienes inmuebles y los sellos de ODIN. Riefkohl Law ofrece precios de honorario fijo.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1les son los costos anuales de administrar un fideicomiso?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La administraci\u00f3n anual escala con el tama\u00f1o de los activos. Los fiduciarios institucionales suelen cobrar entre 0.5% y 1.5% de los activos bajo administraci\u00f3n, m\u00e1s cargos por transacci\u00f3n. A esto se a\u00f1aden el cumplimiento e informes (aproximadamente $2,000\u2013$5,000) y la preparaci\u00f3n de planillas contributivas. Un fiduciario individual puede costar menos, pero conlleva otros riesgos.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1nto cuesta extinguir un fideicomiso?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'La extinci\u00f3n de un fideicomiso t\u00edpico con bienes inmuebles suele costar entre $4,500 y $15,000, incluyendo la escritura de extinci\u00f3n o cuenta final, los aranceles notariales y registrales, las planillas contributivas finales y la contabilidad final a los beneficiarios.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfEs m\u00e1s caro tener un fideicomiso o pasar por el proceso sucesorio?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'El proceso sucesorio puede consumir entre el 6% y el 13% del valor del caudal en costos judiciales, honorarios y demoras de 12 a 36 meses, sin los beneficios de protecci\u00f3n de activos ni privacidad. En la mayor\u00eda de los casos, crear y administrar un fideicomiso resulta m\u00e1s econ\u00f3mico a lo largo de la vida que la alternativa del proceso sucesorio.'
+          }
+        }
+      ]
+    }
   },
   '/resources/complete-guide-puerto-rico-trusts': {
     h1: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012',

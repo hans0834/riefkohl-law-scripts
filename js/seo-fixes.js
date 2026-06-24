@@ -2594,7 +2594,12 @@ var CORE_HREFLANG_PAIRS = [
   ['/calendly', '/espanol-cita'],
   /* ['/blog', '/espanol-blog'] removed — /espanol-blog page does not exist (404). */
   ['/act-60-tax-incentives', '/espanol-ley-60'],
-  ['/resources', '/recursos-es']
+  ['/resources', '/recursos-es'],
+  /* Trust resource EN↔ES pairs — added Jun 24 2026 once the 3 Spanish pages were
+     created & published at these /resources/ slugs (native crawlable content). */
+  ['/resources/what-is-puerto-rico-trust', '/resources/que-es-un-fideicomiso-en-puerto-rico'],
+  ['/resources/avoiding-probate-legitima', '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico'],
+  ['/resources/trust-costs-puerto-rico', '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico']
 ];
 
 function injectHreflang() {

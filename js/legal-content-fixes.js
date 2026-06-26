@@ -583,7 +583,7 @@ function fixAct60ExemptionPercentages() {
    mentioning "tax home" or "three tests."
    ================================================ */
 function clarify183DayPresenceTest() {
-  var act60Pages = ['/act-60-tax-incentives', '/resources/act-60-guide', '/resources/ley-60-guia-inversionistas'];
+  var act60Pages = ['/act-60-tax-incentives', '/resources/ley-60-guia-inversionistas'];
   var isAct60 = false;
   for (var t = 0; t < act60Pages.length; t++) {
     if (path === act60Pages[t]) { isAct60 = true; break; }

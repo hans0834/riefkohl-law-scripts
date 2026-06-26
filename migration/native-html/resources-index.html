@@ -1,0 +1,135 @@
+<!-- Riefkohl Law — Native crawlable Resources hub for /resources
+     PURPOSE: The /resources page is ~86 words of raw HTML; its Trust Law Series
+     links were JS-injected (injectArticleHub in articles-inject.js) and therefore
+     absent from the HTML Googlebot indexes. Pasting this block into a Squarespace
+     Code block on /resources puts real <a href> links to all 14 Trust Law articles
+     + 2 cornerstone guides into the raw HTML, creating a crawlable internal-link
+     hub into the highest-revenue (trust/estate-planning) cluster.
+     DE-DUP: this block carries class "rl-article-hub". articles-inject.js already
+     early-returns when document.querySelector('.rl-article-hub') exists, so the
+     JS-rendered series hub auto-suppresses — the page shows this native hub only,
+     with no visual duplication. Styling reuses the site-wide .rl-grid/.rl-card
+     classes in all-styles.css, so it matches the rest of the page. -->
+<div class="rl-article-hub" style="max-width:1140px;margin:48px auto 12px;padding:0 28px;">
+
+  <div style="background:linear-gradient(160deg,#1a2033 0%,#243047 100%);padding:36px 32px;border-radius:10px;text-align:center;margin-bottom:32px;">
+    <p style="color:#bfa35d;font-weight:700;font-size:.9rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;">In-Depth Article Series</p>
+    <h2 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.6rem;font-weight:700;color:#fff;margin:0 0 10px;letter-spacing:-.02em;">Puerto Rico Trust Law for Act 60 Investors</h2>
+    <p style="color:rgba(255,255,255,.55);font-size:.92rem;max-width:560px;margin:0 auto;">A practitioner-grade series covering everything from trust fundamentals to advanced tax planning. Written by Hans Riefkohl for investors who want to understand the law, not just follow instructions.</p>
+  </div>
+
+  <!-- Cornerstone guides: start-here pillars -->
+  <h3 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.15rem;font-weight:700;color:#1a2033;margin:28px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">&#11088; Start Here &mdash; Cornerstone Guides</h3>
+  <p style="font-size:.88rem;color:#706b62;margin:0 0 14px;">The two foundational guides every trust and Act 60 plan begins with.</p>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">GUIDE</span></div>
+      <h3>The Complete Guide to Puerto Rico Trusts</h3>
+      <p>How trusts work under Law 219-2012 &mdash; formation, the autonomous estate, tax treatment, and when a trust beats a will.</p>
+      <a href="/resources/complete-guide-puerto-rico-trusts">Read the guide &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">GUIDE</span></div>
+      <h3>Bona Fide Residency &amp; Source-of-Income Rules</h3>
+      <p>The foundation of every Act 60 plan: the three residency tests under IRC &sect;937 (presence, tax home, closer connection) and how income sourcing decides what the exclusion actually saves you.</p>
+      <a href="/resources/bona-fide-residency-puerto-rico">Read the guide &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Trust Foundations -->
+  <h3 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.15rem;font-weight:700;color:#1a2033;margin:28px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">&#127963;&#65039; Trust Foundations</h3>
+  <p style="font-size:.88rem;color:#706b62;margin:0 0 14px;">Start here to understand how Puerto Rico trusts work and why they differ from mainland trusts.</p>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <h3>What Is a Puerto Rico Trust?</h3>
+      <p>The autonomous estate concept, Law 219-2012, and why PR trusts are fundamentally different from mainland trusts.</p>
+      <a href="/resources/what-is-puerto-rico-trust">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Trust Planning for Act 60 Investors</h3>
+      <p>Maintain your mainland revocable trust or create a new PR irrevocable trust? The central decision framework.</p>
+      <a href="/resources/act-60-trust-planning">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">GUIDE</span></div>
+      <h3>Bringing Your Mainland Trust to PR</h3>
+      <p>What Section 45147 protects, what it doesn&rsquo;t, and how to avoid the civil law gap.</p>
+      <a href="/resources/mainland-trust-to-puerto-rico">Read article &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Trust Types & Strategies -->
+  <h3 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.15rem;font-weight:700;color:#1a2033;margin:28px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">&#128737;&#65039; Trust Types &amp; Strategies</h3>
+  <p style="font-size:.88rem;color:#706b62;margin:0 0 14px;">Deep dives into specific trust structures and when to use them.</p>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <h3>Modifying Irrevocable Trusts</h3>
+      <p>Four statutory mechanisms for adapting trusts that were designed to be permanent.</p>
+      <a href="/resources/modifying-irrevocable-trusts">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Asset Protection Trusts</h3>
+      <p>The autonomous estate doctrine and three-layer creditor protection structure.</p>
+      <a href="/resources/asset-protection-trusts-pr">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Special Needs Trusts &amp; Medicaid</h3>
+      <p>SNTs, Medicaid planning, and the unique PR context where nursing facility coverage doesn&rsquo;t exist.</p>
+      <a href="/resources/special-needs-trusts-medicaid">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>ILITs and SLATs</h3>
+      <p>Advanced estate tax reduction for high-net-worth Act 60 couples through irrevocable life insurance and spousal access trusts.</p>
+      <a href="/resources/ilits-and-slats">Read article &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Legal & Tax Framework -->
+  <h3 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.15rem;font-weight:700;color:#1a2033;margin:28px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">&#9878;&#65039; Legal &amp; Tax Framework</h3>
+  <p style="font-size:.88rem;color:#706b62;margin:0 0 14px;">The legal rules, tax implications, and case law that shape trust planning.</p>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <h3>Avoiding Probate &amp; Leg&iacute;tima</h3>
+      <p>How to structure trusts that bypass probate while fully respecting forced heirship.</p>
+      <a href="/resources/avoiding-probate-legitima">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Trust Taxation</h3>
+      <p>Federal grantor trust rules, the three-layer analysis, HB 505, and the OBBBA&rsquo;s impact.</p>
+      <a href="/resources/trust-taxation-act-60">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Landmark Trust Cases</h3>
+      <p>Sixteen essential PR court decisions from 1957 to 2025 that define how trusts actually work.</p>
+      <a href="/resources/landmark-trust-cases">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Fiduciary Duties</h3>
+      <p>What your trustee owes you: the five core duties, liability framework, and removal standards.</p>
+      <a href="/resources/fiduciary-duties-trustees">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="background:#bfa35d;color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;">GUIDE</span></div>
+      <h3>The Foreign Trust Trap</h3>
+      <p>Why moving to Puerto Rico can accidentally convert your domestic trust into a foreign trust for IRS purposes.</p>
+      <a href="/resources/foreign-trust-trap">Read article &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Practical Guides -->
+  <h3 style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.15rem;font-weight:700;color:#1a2033;margin:28px 0 6px;padding-bottom:6px;border-bottom:2px solid rgba(191,163,93,.2);">&#128202; Practical Guides</h3>
+  <p style="font-size:.88rem;color:#706b62;margin:0 0 14px;">Real-world costs, common mistakes, and how to avoid them.</p>
+  <div class="rl-grid">
+    <div class="rl-card">
+      <h3>Trust Costs in Puerto Rico</h3>
+      <p>A transparent breakdown of creation, administration, and termination fees &mdash; from $1,500 simple trusts to $35,000+ complex structures.</p>
+      <a href="/resources/trust-costs-puerto-rico">Read article &rarr;</a>
+    </div>
+    <div class="rl-card">
+      <h3>Family Trust Pitfalls</h3>
+      <p>Ten specific mistakes that have destroyed family trusts in PR courts, with case illustrations and surgical solutions.</p>
+      <a href="/resources/family-trust-pitfalls">Read article &rarr;</a>
+    </div>
+  </div>
+
+</div>

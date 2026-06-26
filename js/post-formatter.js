@@ -128,7 +128,7 @@
       {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'Complete Guide to Puerto Rico Trusts'},
       {url: '/blog/testamentary-trust-succession-disputes-puerto-rico', title: 'Testamentary & Succession Disputes'},
       {url: '/blog/trust-beneficiary-rights-liquidation-puerto-rico', title: 'Trust Beneficiary Rights & Liquidation'},
-      {url: '/resources/avoiding-probate-forced-heirship', title: 'Avoiding Probate & Forced Heirship (Article Series)'}
+      {url: '/resources/avoiding-probate-legitima', title: 'Avoiding Probate & Forced Heirship (Article Series)'}
     ],
     'act-60': [
       {url: '/blog/5-critical-mistakes-act-60-decree-holders-make-with-estate-planning', title: '5 Critical Mistakes Act 60 Decree Holders Make'},

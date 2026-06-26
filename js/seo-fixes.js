@@ -2350,6 +2350,28 @@ function fixOpenGraphAndTwitter() {
   setMeta('twitter:card', 'summary_large_image');
   setMeta('twitter:title', pageTitle);
   if (pageDesc) setMeta('twitter:description', pageDesc);
+
+  /* OG:image hardening. Squarespace's global social-sharing image is served over
+     insecure http:// (mixed content), which causes LinkedIn / Facebook / WhatsApp
+     to drop the preview card entirely. Upgrade any http:// social image to https://
+     so the card renders, and mirror it into twitter:image for the large card.
+     NOTE: the underlying image is a small 480x480 email signature — a proper
+     1200x630 branded card should be uploaded in Squarespace > Marketing >
+     Social Sharing; this code only guarantees the URL is https. */
+  function upgradeSocialImg(selector) {
+    var el = document.querySelector(selector);
+    if (!el) return null;
+    var val = el.getAttribute('content') || '';
+    if (val.indexOf('http://') === 0) {
+      val = 'https://' + val.slice('http://'.length);
+      el.setAttribute('content', val);
+    }
+    return val || null;
+  }
+  upgradeSocialImg('meta[property="og:image:secure_url"]');
+  upgradeSocialImg('meta[property="og:image:url"]');
+  var ogImg = upgradeSocialImg('meta[property="og:image"]');
+  if (ogImg) setMeta('twitter:image', ogImg);
 }
 
 /* ================================================

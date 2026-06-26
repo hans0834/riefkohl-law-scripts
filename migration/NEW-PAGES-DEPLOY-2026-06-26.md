@@ -1,4 +1,9 @@
-# Deploy: 3 New Act 60 Pages (from the IRI Planning Guide) — 2026-06-26
+# Deploy: 9 New Act 60 Pages (from the IRI Planning Guide) — 2026-06-26
+
+> ✅ **DEPLOYED & VERIFIED LIVE (2026-06-26).** Code pushed to `main` (commit 6b7a24b); all 9 Squarespace pages created (native HTML pasted into Code blocks) and confirmed serving HTTP 200 with crawlable `.rl-sub` content at `https://www.riefkohllaw.com/resources/{slug}`. The two interactive widgets (calculator, quiz) have their scripts live. This doc is retained as the deployment record. Remaining open items are content/legal refinements (below), not deployment steps.
+
+---
+
 
 Three **net-new** native pages, written to convert deadline-driven HNW traffic. Unlike the migration runbook (which moves *existing* JS-injected pages to native HTML), these slugs **do not exist yet** — a blank Squarespace page must be created at each before pasting.
 

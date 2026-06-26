@@ -1564,7 +1564,7 @@ var SEO = {
           'name': 'Do I have to move to Puerto Rico by December 31, 2026?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No. The December 31, 2026 cutoff is a filing deadline, not a moving deadline. To seek the legacy 0% regime, a complete Act 60 application must be filed with the DDEC by year-end. In appropriate cases an application may even be filed before you physically relocate, based on a sworn statement of intent, though the tax benefits still require establishing bona fide Puerto Rico residency.'
+            'text': 'No. The December 31, 2026 cutoff is a filing deadline, not a moving deadline. To seek the legacy 0% regime, a complete Act 60 application must be filed with the DDEC by year-end. You can file before you physically relocate, based on a sworn statement of intent to become a bona fide Puerto Rico resident, though the tax benefits still require establishing bona fide Puerto Rico residency.'
           }
         },
         {
@@ -1658,7 +1658,7 @@ var SEO = {
           'name': '¿Tengo que mudarme a Puerto Rico para el 31 de diciembre de 2026?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No. La fecha límite del 31 de diciembre de 2026 es una fecha de radicación, no de mudanza. Lo que debe hacerse para fin de año es radicar una solicitud completa ante el DDEC para procurar el régimen heredado de 0%. En casos apropiados, una solicitud puede incluso radicarse antes de reubicarse físicamente, sobre la base de una declaración jurada de intención, aunque los beneficios aún requieren establecer la residencia bona fide de Puerto Rico.'
+            'text': 'No. La fecha límite del 31 de diciembre de 2026 es una fecha de radicación, no de mudanza. Lo que debe hacerse para fin de año es radicar una solicitud completa ante el DDEC para procurar el régimen heredado de 0%. Usted puede radicar antes de reubicarse físicamente, sobre la base de una declaración jurada de intención, aunque los beneficios aún requieren establecer la residencia bona fide de Puerto Rico.'
           }
         },
         {

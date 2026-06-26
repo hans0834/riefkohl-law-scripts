@@ -1,0 +1,143 @@
+<div class="rl-sub">
+<div class="rl-sub-hero">
+<h1>Act 60 Savings Calculator: 0% (File by Dec 31, 2026) vs. 4% (2027+)</h1>
+<p>Estimate what the December 31, 2026 filing deadline could be worth to you. An estimate, not tax advice.</p>
+</div>
+<a href="/resources" class="rl-back">&larr; Back to Resources</a>
+<p style="font-size:.85rem;color:#706b62;">Content current as of June 2026. This tool is a simplified illustration for general educational purposes only. It does not constitute legal or tax advice, does not account for your full facts, and does not create an attorney-client relationship. Actual outcomes depend on bona fide residency, income sourcing, asset history, timing, and applicable law.</p>
+<p style="font-size:.9rem;color:#2b2a27;"><strong>Remember:</strong> it is the date you <em>file</em> a complete application &mdash; not your move date &mdash; that sets your rate. Keep proof of timely filing.</p>
+
+<div class="r60calc">
+  <style>
+    .r60calc{--gold:#a68c42;--ink:#2b2a27;--muted:#706b62;--line:#e8e9ee;--bg:#f6f4ef;font-family:inherit;color:var(--ink);max-width:760px;margin:8px 0 4px;}
+    .r60calc *{box-sizing:border-box;}
+    .r60calc .r60-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+    .r60calc .r60-field{display:flex;flex-direction:column;gap:6px;}
+    .r60calc label{font-weight:600;font-size:.95rem;}
+    .r60calc .r60-help{font-size:.82rem;color:var(--muted);line-height:1.45;}
+    .r60calc .r60-inwrap{position:relative;display:flex;align-items:center;}
+    .r60calc .r60-pre{position:absolute;left:12px;color:var(--muted);font-size:1rem;pointer-events:none;}
+    .r60calc input[type=number]{width:100%;padding:12px 14px 12px 26px;font-size:1.05rem;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);}
+    .r60calc input.r60-nopre{padding-left:14px;}
+    .r60calc input[type=number]:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+    .r60calc .r60-note{background:#fbf7ec;border:1px solid #ecdfbb;border-radius:8px;padding:10px 14px;font-size:.84rem;color:#6b5d36;line-height:1.5;}
+    .r60calc .r60-results{margin-top:22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+    .r60calc .r60-rrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);}
+    .r60calc .r60-rrow:last-child{border-bottom:0;}
+    .r60calc .r60-rlabel{font-size:.95rem;color:var(--muted);}
+    .r60calc .r60-rval{font-size:1.15rem;font-weight:700;white-space:nowrap;}
+    .r60calc .r60-hero-row{background:var(--bg);}
+    .r60calc .r60-hero-row .r60-rlabel{color:var(--ink);font-weight:600;}
+    .r60calc .r60-hero-row .r60-rval{font-size:1.7rem;color:var(--gold);}
+    .r60calc .r60-sub{font-size:.8rem;color:var(--muted);margin-top:2px;}
+    .r60calc .r60-context{margin-top:16px;font-size:.9rem;color:var(--muted);line-height:1.55;}
+    .r60calc .r60-context strong{color:var(--ink);}
+    .r60calc details{margin-top:14px;border:1px solid var(--line);border-radius:8px;padding:0 14px;}
+    .r60calc summary{cursor:pointer;padding:12px 0;font-weight:600;font-size:.92rem;}
+    .r60calc .r60-cmp{display:flex;align-items:center;gap:8px;padding:0 0 14px;flex-wrap:wrap;}
+    .r60calc .r60-cmp input{width:90px;padding:8px 10px;border:1px solid var(--line);border-radius:6px;}
+    @media(min-width:620px){.r60calc .r60-grid{grid-template-columns:1fr 1fr;}.r60calc .r60-span2{grid-column:1/-1;}}
+  </style>
+
+  <div class="r60-grid">
+    <div class="r60-field">
+      <label for="r60-passive">Annual passive income after you move</label>
+      <span class="r60-help" id="r60-passive-help">Qualifying Puerto Rico interest &amp; dividends you expect <em>each year</em> after becoming a resident.</span>
+      <div class="r60-inwrap"><span class="r60-pre">$</span><input id="r60-passive" type="number" min="0" step="1000" inputmode="numeric" value="100000" aria-describedby="r60-passive-help"></div>
+    </div>
+
+    <div class="r60-field">
+      <label for="r60-years">Years you expect to hold the decree</label>
+      <span class="r60-help" id="r60-years-help">How many years you expect to earn that income under the decree.</span>
+      <div class="r60-inwrap"><input id="r60-years" class="r60-nopre" type="number" min="1" max="30" step="1" inputmode="numeric" value="10" aria-describedby="r60-years-help"></div>
+    </div>
+
+    <div class="r60-field r60-span2">
+      <label for="r60-gain">Post-move capital gain you expect to realize</label>
+      <span class="r60-help" id="r60-gain-help">A one-time/total figure for gains you expect to realize while a resident.</span>
+      <div class="r60-inwrap"><span class="r60-pre">$</span><input id="r60-gain" type="number" min="0" step="10000" inputmode="numeric" value="1000000" aria-describedby="r60-gain-help"></div>
+    </div>
+
+    <div class="r60-note r60-span2">
+      <strong>Enter only <u>post-move</u> appreciation.</strong> Gains that built up <em>before</em> you became a Puerto Rico resident generally remain U.S.-taxable under the federal 10-year lookback rule and are <em>not</em> eligible for the 0%/4% rate. Separating pre-move from post-move gain requires dated valuations as of your residency start date.
+    </div>
+  </div>
+
+  <div class="r60-results" aria-live="polite">
+    <div class="r60-rrow">
+      <span class="r60-rlabel">Puerto Rico tax if you <strong>file by Dec 31, 2026</strong> (0% legacy)</span>
+      <span class="r60-rval" id="r60-out-legacy">$0</span>
+    </div>
+    <div class="r60-rrow">
+      <span class="r60-rlabel">Puerto Rico tax if you <strong>file in 2027+</strong> (4% new regime)</span>
+      <span class="r60-rval" id="r60-out-new">$0</span>
+    </div>
+    <div class="r60-rrow r60-hero-row">
+      <span>
+        <span class="r60-rlabel">Difference in Puerto Rico income tax from filing on time</span>
+        <div class="r60-sub">= the 0% vs. 4% rate difference on covered income &mdash; before program fees and the annual contribution</div>
+      </span>
+      <span class="r60-rval" id="r60-out-save">$0</span>
+    </div>
+  </div>
+
+  <p class="r60-context">
+    <strong>Horizon matters.</strong> Legacy 0% benefits currently run through December 31, 2035; the 4% regime runs through December 31, 2055. These figures assume your income and gains are realized while your benefits are in effect. If you expect to realize gains after 2035, the comparison is more nuanced &mdash; that is part of what a modeling session works through.
+  </p>
+
+  <details>
+    <summary>Compare to having no decree at all (illustrative)</summary>
+    <div class="r60-cmp">
+      <label for="r60-fedrate" style="font-weight:600;">Assumed blended tax rate without the program (ask your CPA):</label>
+      <span class="r60-inwrap"><input id="r60-fedrate" type="number" min="0" max="60" step="0.1" value="23.8"></span><span>%</span>
+    </div>
+    <p class="r60-context" style="margin-top:0;">Without the program, this income could face roughly <span aria-live="polite"><strong id="r60-out-nodecree">$0</strong></span> in tax (plus any state tax that would otherwise apply), applying the single blended rate above to all of it. This is a rough upper-bound illustration only: interest, dividends, and gains are taxed at different rates, federal treatment depends on bona fide residency and sourcing, and some U.S.-source income remains federally taxable even with a decree.</p>
+  </details>
+
+  <script>
+  (function(){
+    var ids=['r60-passive','r60-years','r60-gain','r60-fedrate'];
+    function num(id){var v=parseFloat(document.getElementById(id).value);return isFinite(v)&&v>0?v:0;}
+    function fmt(n){return '$'+Math.round(n).toLocaleString('en-US');}
+    function calc(){
+      var passive=num('r60-passive'), years=num('r60-years')||1, gain=num('r60-gain'), rate=num('r60-fedrate');
+      var base=passive*years+gain;
+      var newRegime=base*0.04;
+      document.getElementById('r60-out-legacy').textContent=fmt(0);
+      document.getElementById('r60-out-new').textContent=fmt(newRegime);
+      document.getElementById('r60-out-save').textContent=fmt(newRegime);
+      document.getElementById('r60-out-nodecree').textContent=fmt(base*(rate/100));
+    }
+    ids.forEach(function(id){var el=document.getElementById(id);if(el){el.addEventListener('input',calc);}});
+    calc();
+  })();
+  </script>
+</div>
+
+<h2>How to read this estimate</h2>
+<p>The number that matters most for the deadline decision is the middle row. It is, in broad terms, the difference in <strong>Puerto Rico income tax</strong> &mdash; before the program's own fees and the annual charitable contribution &mdash; between filing a complete application on or before December 31, 2026 and filing in 2027 or later. The "file by 2026" column is 0% because the legacy regime applies a 0% Puerto Rico rate to qualifying interest, dividends, and post-move capital gains; it is not a measure of your total net benefit, which also reflects the program's costs.</p>
+<p>Two cautions this tool deliberately builds in:</p>
+<ul>
+<li><strong>Only post-move gain counts.</strong> The 0%/4% rate applies to appreciation that accrues <em>after</em> you become a resident. Pre-move appreciation generally stays U.S.-taxable. See <a href="/resources/pre-move-post-move-appreciation">Pre-Move vs. Post-Move Appreciation</a>.</li>
+<li><strong>Puerto Rico tax is only one layer.</strong> A decree does not automatically eliminate U.S. federal tax. U.S.-source income and CFC inclusions can remain federally taxable. See <a href="/resources/act-60-gilti-subpart-f-cfc-business-owners">Does Act 60 Eliminate GILTI/Subpart F?</a> and <a href="/resources/federal-reporting-act-60">Federal Reporting Obligations</a>.</li>
+</ul>
+<p>For the rules behind the deadline itself, see <a href="/resources/act-60-filing-date-vs-move-date-deadline">Act 60 Deadline: Move by 2026 or Just File?</a></p>
+
+<h2>Frequently Asked Questions</h2>
+<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How accurate is this calculator?</button>
+<div class="rl-faq-a"><p>It is a simplified illustration, not a tax projection. It applies a flat 0% (legacy) or 4% (new regime) Puerto Rico rate to the covered income and post-move gains you enter. It does not separate your pre-move from post-move gain, model federal tax, account for the $10,000 annual donation and fees, or address timing across the 2035/2055 horizons. A real benefits projection requires your full facts.</p></div></div>
+<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Why doesn't it count gains that already built up before I move?</button>
+<div class="rl-faq-a"><p>Because those gains generally are not eligible for the 0%/4% rate. Under the federal 10-year lookback rule, appreciation that accrued before you established Puerto Rico residency typically remains U.S.-taxable. Counting it as 0%-eligible would overstate your savings &mdash; and create real compliance risk. Dated valuations as of your residency start date are how the pre-/post-move line is drawn.</p></div></div>
+<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Is the 4% regime a bad outcome?</button>
+<div class="rl-faq-a"><p>No &mdash; 4% is a Puerto Rico rate that, for qualifying income of a bona fide resident, can be far lower than the U.S. rate that would otherwise apply, and the new regime runs through 2055, a longer horizon than the legacy 2035 sunset. But on a large near-term gain, the 0%-versus-4% difference is real money, which is why the December 31, 2026 filing date is worth evaluating now.</p></div></div>
+
+<div class="rl-sub-cta">
+<p><strong>Want a real projection on your actual numbers?</strong></p>
+<p>We run an eligibility and tax-impact diagnostic &mdash; separating pre-move from post-move gains, mapping each income source, and confirming whether a complete application can be filed before December 31, 2026.</p>
+<a href="/calendly">Book a Free Strategy Call</a>
+</div>
+
+<div class="rl-sub-disclaimer" style="margin-top:32px;padding-top:20px;border-top:1px solid #e8e9ee;font-size:.78rem;color:#706b62;line-height:1.5;text-align:center;">
+<p>This calculator is a simplified educational illustration and does not constitute legal or tax advice, a tax opinion, or a guarantee of any result. It does not reflect federal tax, program fees, the annual charitable contribution, or your specific facts. Tax outcomes depend on bona fide residency, income sourcing, asset history, timing, and applicable law, all of which change. No attorney-client relationship is formed by using this tool. For advice specific to your situation, <a href="/calendly" style="color:#a68c42;">schedule a consultation</a>.</p>
+</div>
+</div>

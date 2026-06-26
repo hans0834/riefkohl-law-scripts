@@ -1095,6 +1095,14 @@ function injectResourceCards() {
       cards: [
         { title: 'Bona Fide Residency & Source-of-Income Rules', desc: 'The foundation of every Act 60 plan: the three residency tests under IRC \xa7937 (presence, tax home, closer connection) and how income sourcing decides what the exclusion actually saves you.', url: '/resources/bona-fide-residency-puerto-rico', featured: true },
         { title: 'Act 38-2026 (HB 505): What Changed', desc: 'The most significant changes to Act 60 since the program\u2019s creation \u2014 new 4% rate, grandfathering, $5K annual report fee, 2055 extension.', url: '/resources/act-38-2026-hb-505', featured: true },
+        { title: 'Deadline: Move by Dec 31, 2026, or Just File?', desc: 'Under Act 38-2026, your filing date \u2014 not your move date \u2014 preserves the 0% rate. What 2027 movers must do before year-end.', url: '/resources/act-60-filing-date-vs-move-date-deadline', featured: true },
+        { title: 'Act 60 Savings Calculator: 0% vs. 4%', desc: 'Estimate what filing your Act 60 application by December 31, 2026 (0%) instead of in 2027 (4%) could be worth on your numbers.', url: '/resources/act-60-savings-calculator', featured: true },
+        { title: 'Does Act 60 Eliminate GILTI & Subpart F?', desc: 'No \u2014 a bona fide PR resident is still a U.S. shareholder. Why \xa7933 doesn\u2019t shelter CFC inclusions, and what business owners must plan for.', url: '/resources/act-60-gilti-subpart-f-cfc-business-owners' },
+        { title: 'Leaving California for Puerto Rico', desc: 'Surviving an FTB residency audit: trailing RSU/option income, the 546-day safe-harbor limits, and how to sever California domicile.', url: '/resources/leaving-california-for-puerto-rico' },
+        { title: 'Leaving New York for Puerto Rico', desc: 'The 183-day statutory-residency trap, the permanent-place-of-abode rule, and why the 548-day safe harbor likely will not rescue a PR move.', url: '/resources/leaving-new-york-for-puerto-rico' },
+        { title: 'Act 60 Eligibility Quiz', desc: 'A 2-minute self-check on whether Puerto Rico’s tax decree fits your move and income. Educational only — not an eligibility determination.', url: '/resources/act-60-eligibility-quiz', featured: true },
+        { title: 'Who Should NOT Move to PR for Act 60', desc: 'Seven red flags that mean Act 60 may be expensive, audit-prone, and disappointing — and how to tell before you relocate.', url: '/resources/act-60-who-should-not-apply' },
+        { title: 'What Act 60 Really Costs — Is It Worth It?', desc: 'The all-in budget (roughly a $15K/year floor) and the break-even math: how much you need to make for the decree to pay off.', url: '/resources/act-60-true-cost-is-it-worth-it' },
         { title: 'IRS Enforcement & Campaign 685', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
         { title: 'Why Hire a Law Firm for Act 60', desc: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 what CPAs cannot provide.', url: '/resources/why-law-firm-act-60' },
         { title: 'Compliance Certificates & AUP', desc: 'Act 52-2022 biennial compliance certification, agreed-upon procedures, and what happens if you don\u2019t renew.', url: '/resources/compliance-certificate-act-52' },
@@ -1111,7 +1119,8 @@ function injectResourceCards() {
       cards: [
         { title: 'Fideicomiso Irrevocable en Puerto Rico', desc: 'Gu\u00EDa completa sobre fideicomisos irrevocables bajo la Ley 219-2012. Protecci\u00F3n de activos, beneficios contributivos y planificaci\u00F3n sucesoral.', url: '/resources/fideicomiso-irrevocable-puerto-rico', lang: 'es' },
         { title: 'Planificaci\u00F3n Sucesoral en Puerto Rico', desc: 'Todo lo que necesita saber sobre planificaci\u00F3n sucesoral en Puerto Rico. Leg\u00EDtima, testamentos, fideicomisos, poderes y directivas de salud.', url: '/resources/planificacion-sucesoral-puerto-rico', lang: 'es' },
-        { title: 'Declaratoria de Herederos', desc: 'El proceso de declaratoria de herederos en Puerto Rico paso a paso. Requisitos, plazos, costos y c\u00F3mo evitarlo.', url: '/resources/declaratoria-de-herederos-puerto-rico', lang: 'es' }
+        { title: 'Declaratoria de Herederos', desc: 'El proceso de declaratoria de herederos en Puerto Rico paso a paso. Requisitos, plazos, costos y c\u00F3mo evitarlo.', url: '/resources/declaratoria-de-herederos-puerto-rico', lang: 'es' },
+        { title: 'Fecha l\u00EDmite Ley 60: \u00BFMudarse en 2026 o solo radicar?', desc: 'Bajo la Ley 38-2026, la fecha de radicaci\u00F3n \u2014no la de mudanza\u2014 preserva la tasa de 0%. Qu\u00E9 deben hacer quienes se mudan en 2027 antes de fin de a\u00F1o.', url: '/resources/ley-60-fecha-limite-2026', lang: 'es', featured: true }
       ]
     }
   ];

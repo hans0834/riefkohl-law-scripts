@@ -1552,6 +1552,296 @@ var SEO = {
       ]
     }
   },
+  '/resources/act-60-filing-date-vs-move-date-deadline': {
+    h1: 'Act 60 Deadline: Move by December 31, 2026, or Just File?',
+    meta: 'Under Act 38-2026, your Act 60 filing date (not your move date) preserves the 0% rate. What the December 31, 2026 deadline actually requires of 2027 movers.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Do I have to move to Puerto Rico by December 31, 2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. The December 31, 2026 cutoff is a filing deadline, not a moving deadline. To seek the legacy 0% regime, a complete Act 60 application must be filed with the DDEC by year-end. In appropriate cases an application may even be filed before you physically relocate, based on a sworn statement of intent, though the tax benefits still require establishing bona fide Puerto Rico residency.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens if I file my Act 60 application on or after January 1, 2027?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Your application generally falls under the new 4% regime through December 31, 2055 instead of the legacy 0% regime, and two added requirements attach: a rolling six-year non-residency look-back and recordation of your Puerto Rico residence in the Property Registry within two years.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does the decree approval date affect my Act 60 tax rate?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. The filing date controls the rate. DDEC approval may come months later; the decree takes effect when you accept it under oath, and its benefits apply to qualifying income that accrues after you have established bona fide Puerto Rico residency. Retain proof of a timely, complete filing.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-gilti-subpart-f-cfc-business-owners': {
+    h1: 'Does Act 60 Eliminate GILTI & Subpart F Tax?',
+    meta: 'No. A Puerto Rico Act 60 decree does not switch off GILTI or Subpart F on your CFC, and IRC §933 does not shelter it. What business owners must plan for.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'If I move to Puerto Rico under Act 60, is my foreign company’s income tax-free?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not automatically. If the company is a controlled foreign corporation and you are a U.S. shareholder, Subpart F and GILTI (revised and renamed Net CFC Tested Income for 2026) can tax certain earnings to you currently at the federal level. An Act 60 decree sets your Puerto Rico rate; it does not eliminate the federal inclusion, and IRC §933 does not shelter it.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does IRC §933 cover my CFC income after I move to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Section 933 excludes Puerto Rico-source income from U.S. federal tax for a bona fide resident. A Subpart F or GILTI/NCTI inclusion is generally not Puerto Rico-source income, so §933 does not exclude it. The inclusion remains federally taxable independent of your decree.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can restructuring my company fix a GILTI or Subpart F problem?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Often, but it depends on your facts. Moving genuine operations into a properly established Puerto Rico entity can change the analysis, while a paper move that leaves the CFC offshore generally does not. Unwinding or relocating a foreign company can itself trigger U.S. tax and should be modeled with counsel and your CPA first.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-savings-calculator': {
+    h1: 'Act 60 Savings Calculator: 0% vs. 4% Filing Deadline',
+    meta: 'Free calculator: estimate the Puerto Rico tax difference between filing your Act 60 application by December 31, 2026 (0%) versus in 2027 (4%). Not tax advice.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How accurate is the Act 60 savings calculator?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It is a simplified illustration, not a tax projection. It applies a flat 0% (legacy) or 4% (new regime) Puerto Rico rate to the covered income and post-move gains you enter. It does not separate pre-move from post-move gains, model federal tax, or account for program fees and the annual charitable contribution.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Why doesn’t the calculator count gains that built up before I move?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Because pre-move appreciation generally is not eligible for the 0%/4% rate. Under the federal 10-year lookback rule, gains that accrued before you established Puerto Rico residency typically remain U.S.-taxable. Dated valuations as of your residency start date separate pre-move from post-move gain.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/ley-60-fecha-limite-2026': {
+    h1: 'Fecha límite de la Ley 60: ¿Mudarse en 2026 o solo radicar?',
+    meta: 'Bajo la Ley 38-2026, la fecha de radicación —no la de mudanza— preserva la tasa de 0%. Qué exige la fecha límite del 31 de diciembre de 2026.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Tengo que mudarme a Puerto Rico para el 31 de diciembre de 2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La fecha límite del 31 de diciembre de 2026 es una fecha de radicación, no de mudanza. Lo que debe hacerse para fin de año es radicar una solicitud completa ante el DDEC para procurar el régimen heredado de 0%. En casos apropiados, una solicitud puede incluso radicarse antes de reubicarse físicamente, sobre la base de una declaración jurada de intención, aunque los beneficios aún requieren establecer la residencia bona fide de Puerto Rico.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué pasa si radico en o después del 1 de enero de 2027?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Por lo general, su solicitud queda bajo el nuevo régimen de 4% (hasta el 31 de diciembre de 2055) en lugar del régimen heredado de 0%, y se añaden dos requisitos: un periodo móvil de no residencia de seis años y la inscripción de su residencia en el Registro de la Propiedad dentro de dos años.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿La fecha de aprobación del decreto afecta mi tasa?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La fecha de radicación determina la tasa. La aprobación del DDEC puede llegar meses después; los beneficios aplican al ingreso cualificado que se acumule después de haber establecido la residencia bona fide de Puerto Rico. Conserve la evidencia de una radicación oportuna y completa.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/leaving-california-for-puerto-rico': {
+    h1: 'Leaving California for Puerto Rico: Surviving an FTB Residency Audit',
+    meta: 'Moving from California to Puerto Rico for Act 60? California can still tax trailing RSUs, options, and CA-source income — and presumes you stayed a resident.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'If I become a Puerto Rico resident, does California automatically stop taxing me?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Puerto Rico residency for federal purposes and California residency for state purposes are separate determinations under different tests. California taxes you as a resident as long as California remains your domicile and your absence is treated as temporary or transitory, and even after you clearly become a nonresident it can still tax your California-source income.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can California still tax my RSUs or stock options after I move to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally yes, for the portion attributable to California work. RSUs and nonstatutory options earned for services in California are sourced by a workday allocation, and California taxes that California-source portion even if you are a nonresident when the award vests or you exercise.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does the 546-day safe harbor make me a California nonresident automatically?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Often not, for Act 60 movers. It requires being absent under an employment-related contract for at least 546 consecutive days, and does not apply if either spouse has more than $200,000 of intangible income in a taxable year the contract is in effect, or if the principal purpose of the absence is to avoid California tax. Retirees, traders, and pure investors generally are not under a qualifying employment contract at all.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/leaving-new-york-for-puerto-rico': {
+    h1: 'Leaving New York for Puerto Rico: The 183-Day Statutory-Residency Trap',
+    meta: 'Moving from New York to Puerto Rico for Act 60? NY’s 183-day statutory-residency test and the 548-day safe harbor can still tax you. How to sever NY domicile.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'If I move to Puerto Rico but keep my New York apartment, can New York still tax me?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Potentially yes. Even if you genuinely change your domicile to Puerto Rico, keeping a New York apartment you can use at will may be treated as a permanent place of abode. If you also spend more than 183 days in New York during the year, you can be taxed as a statutory resident on your worldwide income.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does the 548-day foreign-country safe harbor work for a move to Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Almost certainly not. Puerto Rico is a U.S. territory and possession, not a foreign country, so time spent there generally should not count toward the 548-day rule’s foreign-presence requirement. Plan to rely on a genuine change of domicile, not the 548-day rule, and confirm with New York counsel.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'If I become a New York nonresident, do I stop owing New York tax entirely?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Even a true nonresident owes New York tax on New York-source income under Tax Law Section 631, such as wages for services performed in New York, income from a New York business, and gains from New York real property. The move year is filed as a part-year return, and New York City residency is determined separately from the state.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-who-should-not-apply': {
+    h1: 'Who Should NOT Move to Puerto Rico for Act 60: 7 Red Flags',
+    meta: 'Act 60 rewards a genuine move. 7 red flags that mean Puerto Rico’s tax decree may not be worth it — and how to tell before you relocate.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Is Act 60 a scam or too good to be true?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Act 60 is a real, statutory Puerto Rico incentive program, but it is widely oversold. The decree delivers a genuine Puerto Rico tax benefit only for someone who truly relocates and meets the federal bona fide residency tests; it does not eliminate U.S. federal tax, shelter pre-move gains, or reward a paper move.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I get Act 60 benefits without really living in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. The benefits depend on becoming and remaining a bona fide Puerto Rico resident under IRC 937 — generally 183 or more days a year, a Puerto Rico tax home, and a closer connection to Puerto Rico than to the mainland. A mailbox, a part-time condo, or a decree on paper will not survive IRS or state scrutiny.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'I am mostly retired — is Act 60 worth it for me?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It depends on your income. Retirement income and deferred compensation are often not covered by the decree, because they generally trace to services performed before the move. If your income is mainly a pension, the decree may shelter little of it; a large taxable portfolio or large post-move gains can change the analysis.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-true-cost-is-it-worth-it': {
+    h1: 'What Act 60 Really Costs — and Whether It’s Worth It',
+    meta: 'What does Act 60 cost per year, and is it worth it? The all-in budget (roughly a $15K/year floor) and the break-even math for Puerto Rico’s tax decree.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'How much does Act 60 cost per year?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Once past the first year, the recurring government floor is roughly $15,000 a year — a $5,000 annual report fee plus a $10,000 charitable contribution split 50/50 between two qualifying Puerto Rico nonprofits (one a child-poverty organization) — plus a biennial compliance certificate and your legal and CPA fees. On top of that are the one-time application fee, the required Puerto Rico home purchase within two years, and your cost of living. Figures are set by regulation and confirmed at filing.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much do you need to make for Act 60 to be worth it?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'There is no single number; it depends on your income type and the timing of your gains. As a rough floor, the program’s roughly $15,000 annual cost means you generally need enough qualifying investment income or post-move capital gains that the Puerto Rico tax saved clearly exceeds it. Income that is mostly U.S.-source wages or retirement usually does not clear the bar. A tax-impact diagnostic answers this for your facts.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is Act 60 worth it for capital gains?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It can be, but only for gains that accrue after you become a bona fide Puerto Rico resident. Appreciation that built up before the move generally remains U.S.-taxable under the federal 10-year lookback rule. The biggest wins are for people expecting large future gains who establish residency first and realize the gain afterward.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-eligibility-quiz': {
+    h1: 'Act 60 Eligibility Quiz: Is Puerto Rico’s Tax Decree Right for You?',
+    meta: 'Free 2-minute Act 60 self-check: is Puerto Rico’s tax decree a fit for your move and income? Educational only — not a legal eligibility determination.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Does this quiz tell me if I qualify for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. It is an educational self-check that flags whether Act 60 is likely a good fit and what to look into next. Legal eligibility for an Act 60 decree depends on your specific facts — including bona fide residency, the prior-residency look-back, and income sourcing — and can only be determined through a fact-specific review with qualified counsel.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What makes someone a good candidate for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally, someone who can genuinely relocate to Puerto Rico (living there 183 or more days a year with their home and family on the island), whose income is substantially investment income or who expects significant capital gains to accrue after the move, and who is prepared to maintain the annual residency, donation, and reporting obligations.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/irs-enforcement-act-60': {
     h1: 'IRS Enforcement of Act 60: Campaign 685, Criminal Prosecutions & Compliance Risks',
     meta: 'IRS Compliance Campaign 685 targets Act 60 decree holders. Learn about criminal prosecutions, GAO reports, and why you need attorney-client privilege.',
@@ -2621,7 +2911,9 @@ var CORE_HREFLANG_PAIRS = [
      created & published at these /resources/ slugs (native crawlable content). */
   ['/resources/what-is-puerto-rico-trust', '/resources/que-es-un-fideicomiso-en-puerto-rico'],
   ['/resources/avoiding-probate-legitima', '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico'],
-  ['/resources/trust-costs-puerto-rico', '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico']
+  ['/resources/trust-costs-puerto-rico', '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico'],
+  /* Act 60 deadline EN↔ES pair — added Jun 26 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
+  ['/resources/act-60-filing-date-vs-move-date-deadline', '/resources/ley-60-fecha-limite-2026']
 ];
 
 function injectHreflang() {

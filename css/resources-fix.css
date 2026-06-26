@@ -202,6 +202,35 @@ article:has(.rl-sub) {
   padding-bottom: 0 !important;
   min-height: 0 !important;
 }
+/* Same full-width treatment for the native /resources hub index block
+   (.rl-article-hub) — kept in sync with all-styles.css. */
+.page-section:has(.rl-article-hub),
+.content-wrapper:has(.rl-article-hub),
+.sqs-layout:has(.rl-article-hub),
+.sqs-block:has(.rl-article-hub),
+.sqs-block-content:has(.rl-article-hub),
+article:has(.rl-article-hub) {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.page-section:has(.rl-article-hub) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+.fluid-engine:has(.rl-article-hub) {
+  grid-template-rows: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+.fe-block:has(.rl-article-hub) {
+  grid-column: 1 / -1 !important;
+  grid-row: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
 .rl-sub {
   max-width: 800px;
   margin: 0 auto;

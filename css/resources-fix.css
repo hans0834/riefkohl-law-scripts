@@ -231,6 +231,12 @@ article:has(.rl-article-hub) {
   height: auto !important;
   min-height: 0 !important;
 }
+/* Stack the native hub's section and the JS-injected .rl-rc (hero + Act 60
+   cards) vertically, hub last — kept in sync with all-styles.css. */
+.content-wrapper:has(.rl-article-hub) {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
 .rl-sub {
   max-width: 800px;
   margin: 0 auto;

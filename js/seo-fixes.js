@@ -2394,10 +2394,18 @@ function fixMeta() {
 
 /* ================================================
    3. ADD SELF-REFERENCING CANONICAL TAGS
+   (with overrides for stale duplicate posts)
    ================================================ */
+/* Stale duplicate posts canonicalize to the kept version */
+var CANONICAL_OVERRIDES = {
+  '/blog/mun-de-aguada-v-w-construction-2': '/blog/mun-de-aguada-v-w-construction-3'
+};
+
 function fixCanonical() {
   var canonical = document.querySelector('link[rel="canonical"]');
-  var url = 'https://www.riefkohllaw.com' + window.location.pathname.replace(/\/$/, '');
+  var p = window.location.pathname.replace(/\/$/, '');
+  if (CANONICAL_OVERRIDES[p]) p = CANONICAL_OVERRIDES[p];
+  var url = 'https://www.riefkohllaw.com' + p;
   if (url === 'https://www.riefkohllaw.com') url = 'https://www.riefkohllaw.com/';
 
   if (canonical) {

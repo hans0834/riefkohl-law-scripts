@@ -1235,6 +1235,23 @@ function addBookingQualifier() {
 }
 
 /* ================================================
+   32. HIDE DUPLICATE BLOG CARD (/blog)
+   Two published posts share the title "Supremo error...
+   (Parte 1)": /blog/mun-de-aguada-v-w-construction-2 (a
+   thin raw-import duplicate) and -3 (the full, formatted
+   version). Hide the -2 card on the hub; the canonical
+   override in seo-fixes.js points -2 at -3 for search.
+   ================================================ */
+function hideDuplicateBlogCard() {
+  if (path !== '/blog') return;
+  var links = document.querySelectorAll('a[href$="mun-de-aguada-v-w-construction-2"]');
+  for (var i = 0; i < links.length; i++) {
+    var card = links[i].closest('article.hentry') || links[i].closest('article') || links[i].closest('.blog-item, li');
+    if (card) card.style.display = 'none';
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -1275,6 +1292,8 @@ function runLegalFixes() {
   addTrustNRNCTransferTaxNote();
   /* Booking page "Free Consultation" scope clarifier */
   addBookingQualifier();
+  /* Hide duplicate Aguada blog card on the hub */
+  hideDuplicateBlogCard();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

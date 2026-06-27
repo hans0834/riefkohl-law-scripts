@@ -18,6 +18,8 @@
   12. Act 60 disclaimer: 6-year prior residency restriction
   13. Act 60 municipal/property tax exemption percentages (75%→50%, 60%→70%)
   14. 183-day presence test: clarify all three IRC §937 tests required
+  26. Declaratoria de herederos: notarial route + "demanda"→"petición" (/blog/declaratoria-de-herederos-puerto-rico)
+  27. Ley 60 (ES): federal vs. PR tax clarifier on "100% de exención" figures (/espanol-ley-60)
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1029,6 +1031,95 @@ function cleanupDoubleWords() {
 }
 
 /* ================================================
+   26. DECLARATORIA DE HEREDEROS — NOTARIAL ROUTE
+   (/blog/declaratoria-de-herederos-puerto-rico)
+   Reality: An intestate declaratoria de herederos can be
+   obtained NOTARIALLY (acta de notoriedad) under the Ley de
+   Asuntos No Contenciosos Ante Notario (Ley 282-1999) when
+   the heirs are of age and in agreement. The judicial route
+   is a PETICIÓN of voluntary jurisdiction (jurisdicción
+   voluntaria), not a contested "demanda". The article
+   presented the process as exclusively judicial and called
+   the filing a "demanda".
+   ================================================ */
+function fixDeclaratoriaNotarial() {
+  if (path !== '/blog/declaratoria-de-herederos-puerto-rico') return;
+
+  /* Paragraph-level rewrites for the two "exclusively judicial" sentences.
+     Matched on stable ASCII substrings so whitespace/dash variants don't break it. */
+  var blocks = document.querySelectorAll('p');
+  for (var i = 0; i < blocks.length; i++) {
+    var p = blocks[i];
+    var txt = p.textContent || '';
+
+    /* Intro: "...La ley requiere un proceso judicial — la declaratoria de herederos — para..." */
+    if (txt.indexOf('no pueden simplemente tomar posesi') >= 0 &&
+        txt.indexOf('requiere un proceso judicial') >= 0) {
+      p.innerHTML = 'Cuando una persona fallece en Puerto Rico, sus herederos no pueden simplemente tomar posesión de sus bienes. La declaratoria de herederos es el proceso legal —que puede tramitarse por vía notarial o judicial— para determinar legalmente quiénes son los herederos, en qué proporción heredan y autorizar la transferencia de los bienes del difunto.';
+      continue;
+    }
+
+    /* Definition: "...es un procedimiento judicial mediante el cual un tribunal de Puerto Rico emite una resolución que:" */
+    if (txt.indexOf('es un procedimiento judicial mediante el cual un tribunal') >= 0) {
+      p.innerHTML = 'La declaratoria de herederos es un procedimiento —notarial o judicial— mediante el cual se emite una resolución judicial o un acta notarial de notoriedad que:';
+
+      /* Insert a route-clarification note immediately after this paragraph */
+      if (!document.getElementById('rl-declaratoria-notarial-note')) {
+        var note = document.createElement('div');
+        note.id = 'rl-declaratoria-notarial-note';
+        note.style.cssText = 'margin:14px 0;padding:14px 18px;background:#f0f5fb;border:1px solid #c9dcef;border-left:4px solid #1a3a5c;border-radius:4px;font-size:.9rem;color:#23425f;line-height:1.6;';
+        note.innerHTML = '<strong>Vía notarial vs. judicial:</strong> Cuando todos los herederos son mayores de edad y están de acuerdo, la declaratoria de herederos puede otorgarse ante notario mediante un <em>acta de notoriedad</em> (Ley de Asuntos No Contenciosos Ante Notario, Ley Núm. 282-1999), sin acudir al tribunal. La vía judicial es necesaria cuando hay desacuerdo entre los herederos, herederos menores o incapacitados, o herederos no localizados. Los pasos descritos a continuación corresponden a la vía judicial.';
+        p.parentNode.insertBefore(note, p.nextSibling);
+      }
+      continue;
+    }
+  }
+
+  /* "demanda" → "petición" (the filing is a petición de jurisdicción voluntaria) */
+  var DEM = [
+    ['Presentar la demanda de declaratoria', 'Presentar la petición de declaratoria'],
+    ['presenta una demanda ante el Tribunal', 'presenta una petición ante el Tribunal'],
+    ['La demanda incluye', 'La petición incluye']
+  ];
+  var nodes = document.querySelectorAll('h1, h2, h3, h4, p, li');
+  for (var k = 0; k < nodes.length; k++) {
+    var el = nodes[k];
+    for (var d = 0; d < DEM.length; d++) {
+      if (el.textContent.indexOf(DEM[d][0]) >= 0) {
+        el.innerHTML = el.innerHTML.split(DEM[d][0]).join(DEM[d][1]);
+      }
+    }
+  }
+}
+
+/* ================================================
+   27. LEY 60 (ES) — FEDERAL vs. PR TAX CLARIFIER
+   (/espanol-ley-60)
+   Reality: The "100% de exención" figures are Puerto Rico
+   income-tax benefits. Federally, a bona fide PR resident
+   excludes ONLY Puerto Rico–source income (IRC §933);
+   U.S.-source dividends/interest, and pre-residency
+   appreciation, remain subject to U.S. federal tax.
+   ================================================ */
+function addLey60FederalClarifierES() {
+  if (path !== '/espanol-ley-60') return;
+  if (document.getElementById('rl-ley60-federal-note')) return;
+
+  var els = document.querySelectorAll('p, li');
+  for (var i = 0; i < els.length; i++) {
+    var t = els[i].textContent || '';
+    if (t.indexOf('dividendos e intereses') >= 0 && t.indexOf('residente bona fide') >= 0) {
+      var note = document.createElement('p');
+      note.id = 'rl-ley60-federal-note';
+      note.style.cssText = 'margin:10px 0 16px;padding:12px 16px;background:#f0f5fb;border-left:3px solid #1a3a5c;border-radius:0 4px 4px 0;font-size:.84rem;color:#23425f;line-height:1.55;';
+      note.innerHTML = '<strong>Nota sobre impuestos federales:</strong> Estas exenciones del 100% aplican al <strong>impuesto sobre ingresos de Puerto Rico</strong> bajo el decreto de Ley 60. A nivel federal, un residente bona fide de Puerto Rico excluye únicamente el ingreso de <strong>fuente de Puerto Rico</strong> (Sección 933 del Código de Rentas Internas federal); los dividendos e intereses de fuente estadounidense, y la apreciación acumulada antes de establecer residencia, permanecen sujetos a impuesto federal.';
+      els[i].parentNode.insertBefore(note, els[i].nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -1061,6 +1152,9 @@ function runLegalFixes() {
   fixDecreeDuration();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
+  /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */
+  fixDeclaratoriaNotarial();
+  addLey60FederalClarifierES();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

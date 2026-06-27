@@ -22,7 +22,8 @@
   27. Ley 60 (ES): federal vs. PR tax clarifier on "100% de exención" figures (/espanol-ley-60)
   28. Soften unsubstantiated advertising superlatives ("Expert"/"Expertise"/"trusted counsel"/"Sophisticated"/"caliber"/"extraordinarios") — site-wide
   29. Trusts page: NRNC U.S. transfer-tax caveat on estate/gift/dynasty-trust claims (/puerto-rico-trusts)
-  30. Site-wide footer disclaimer (attorney advertising / not legal advice / no attorney-client relationship) — bilingual
+  31. Booking page (/calendly): "Free Consultation" rename + scope clarifier
+      (NB: a site-wide footer "Legal Disclaimer" already exists via another script — no #30 needed)
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1196,31 +1197,6 @@ function addTrustNRNCTransferTaxNote() {
 }
 
 /* ================================================
-   30. SITE-WIDE FOOTER DISCLAIMER (all pages)
-   Reality: The site marketed legal services and solicited
-   consultations with no "attorney advertising / not legal
-   advice / no attorney-client relationship" notice anywhere.
-   Appends a concise bilingual disclaimer to the global footer.
-   ================================================ */
-function addSiteDisclaimer() {
-  if (document.getElementById('rl-site-disclaimer')) return;
-
-  var footer = document.querySelector('footer#footer-sections')
-    || document.querySelector('[data-footer-sections]')
-    || document.querySelector('footer.sections')
-    || document.querySelector('footer');
-  if (!footer) return;
-
-  var d = document.createElement('div');
-  d.id = 'rl-site-disclaimer';
-  d.style.cssText = 'max-width:1000px;margin:0 auto;padding:18px 24px 30px;font-size:.72rem;line-height:1.5;color:#8a8f98;text-align:center;';
-  d.innerHTML = 'Attorney advertising. The information on this website is general and is not legal or tax advice; it does not create an attorney-client relationship, which is formed only through a signed engagement agreement. Prior results do not guarantee a similar outcome.'
-    + '<br><span style="display:inline-block;margin-top:6px;">Publicidad de abogado. La información en este sitio es de carácter general y no constituye asesoría legal ni fiscal; no crea una relación abogado-cliente, la cual se establece únicamente mediante un acuerdo de representación firmado. Resultados anteriores no garantizan un resultado similar.</span>';
-
-  footer.appendChild(d);
-}
-
-/* ================================================
    31. BOOKING PAGE — "FREE CONSULTATION" SCOPE (/calendly)
    Reality: A "Free Strategy Call" with no scope/qualifier
    can imply free substantive legal advice. Rename the page
@@ -1294,10 +1270,9 @@ function runLegalFixes() {
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */
   fixDeclaratoriaNotarial();
   addLey60FederalClarifierES();
-  /* Advertising language, trusts NRNC caveat, site-wide disclaimer */
+  /* Advertising language + trusts NRNC caveat */
   softenAdvertisingLanguage();
   addTrustNRNCTransferTaxNote();
-  addSiteDisclaimer();
   /* Booking page "Free Consultation" scope clarifier */
   addBookingQualifier();
 }

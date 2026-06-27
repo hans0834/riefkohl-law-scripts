@@ -20,6 +20,9 @@
   14. 183-day presence test: clarify all three IRC §937 tests required
   26. Declaratoria de herederos: notarial route + "demanda"→"petición" (/blog/declaratoria-de-herederos-puerto-rico)
   27. Ley 60 (ES): federal vs. PR tax clarifier on "100% de exención" figures (/espanol-ley-60)
+  28. Soften unsubstantiated advertising superlatives ("Expert"/"Expertise"/"trusted counsel"/"Sophisticated"/"caliber"/"extraordinarios") — site-wide
+  29. Trusts page: NRNC U.S. transfer-tax caveat on estate/gift/dynasty-trust claims (/puerto-rico-trusts)
+  30. Site-wide footer disclaimer (attorney advertising / not legal advice / no attorney-client relationship) — bilingual
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1120,6 +1123,104 @@ function addLey60FederalClarifierES() {
 }
 
 /* ================================================
+   28. SOFTEN ADVERTISING SUPERLATIVES (site-wide)
+   Reality: PR's Cánones de Ética Profesional and the
+   spirit of ABA Model Rule 7.1/7.4 disfavor "expert"/
+   "specialist" self-designations and unsubstantiated
+   superlatives. Reframe around verifiable experience.
+   ================================================ */
+function softenAdvertisingLanguage() {
+  var REPL = [
+    ['Big-Firm Expertise', 'Big-Firm Experience'],
+    ['Puerto Rico’s trusted counsel', 'Puerto Rico counsel'],
+    ["Puerto Rico's trusted counsel", 'Puerto Rico counsel'],
+    ['Expert Act 60 guidance', 'Experienced Act 60 guidance'],
+    ['expert legal guidance', 'experienced legal guidance'],
+    ['Sophisticated Legal Counsel', 'Experienced Legal Counsel'],
+    ['the caliber of counsel your business and family demand', 'experienced counsel for your business and family'],
+    ['incentivos contributivos extraordinarios', 'incentivos contributivos significativos']
+  ];
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var parentTag = node.parentNode && node.parentNode.tagName;
+    if (parentTag === 'SCRIPT' || parentTag === 'STYLE') continue;
+    if (isInsideInjectedElement(node)) continue;
+    var text = node.nodeValue, orig = text;
+    for (var r = 0; r < REPL.length; r++) {
+      if (text.indexOf(REPL[r][0]) >= 0) text = text.split(REPL[r][0]).join(REPL[r][1]);
+    }
+    if (text !== orig) node.nodeValue = text;
+  }
+}
+
+/* ================================================
+   29. TRUSTS PAGE — NRNC U.S. TRANSFER-TAX CAVEAT
+   (/puerto-rico-trusts)
+   Reality: A U.S. citizen domiciled in Puerto Rico is
+   generally a "non-resident, not a citizen" (NRNC) for
+   U.S. federal estate/gift tax (IRC §2209): federal tax
+   reaches only U.S.-situs assets, with a ~$60,000 exemption
+   equivalent (IRC §2102(b)). PR-situs assets fall outside.
+   So generic estate/gift/dynasty "transfer-tax savings"
+   may not apply to a typical PR-resident client; and
+   Ley 219-2012 caps trust duration (no perpetual dynasty).
+   ================================================ */
+function addTrustNRNCTransferTaxNote() {
+  if (path !== '/puerto-rico-trusts') return;
+  if (document.getElementById('rl-trust-nrnc-note')) return;
+
+  var htmlContent = document.querySelector('.sqs-html-content');
+  if (!htmlContent) return;
+
+  var notice = document.createElement('div');
+  notice.id = 'rl-trust-nrnc-note';
+  notice.style.cssText = 'margin:24px 0;padding:18px 22px;background:#f5f0ff;border:1px solid #d4c5f0;border-left:4px solid #7c3aed;border-radius:4px;font-size:.88rem;color:#3b1f6e;line-height:1.6;';
+  notice.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">A Note on Transfer Taxes for Puerto Rico Residents</p>'
+    + '<p style="margin:0 0 6px;">The estate-, gift-, and "dynasty"-trust transfer-tax advantages described above are most relevant to clients who hold <strong>U.S.-situs assets</strong> or are otherwise subject to U.S. federal transfer tax. A U.S. citizen who is a bona fide <strong>domiciliary of Puerto Rico</strong> is generally treated as a <em>non-resident, not a citizen</em> (NRNC) for U.S. federal estate and gift tax (IRC §2209). Federal estate tax then reaches only U.S.-situs assets, with a unified credit equivalent to roughly a <strong>$60,000</strong> exemption (IRC §2102(b)) rather than the multimillion-dollar exemption available to U.S. domiciliaries — while Puerto Rico-situs assets generally fall outside the U.S. estate tax base.</p>'
+    + '<p style="margin:0 0 6px;">In addition, Puerto Rico’s Trust Act (Ley 219-2012) imposes a maximum statutory duration on trusts, so a perpetual, common-law-style “dynasty trust” is not available in Puerto Rico the way it is in some U.S. states.</p>'
+    + '<p style="margin:0;">Whether — and how — these strategies benefit you depends on your residency, the situs of your assets, and your beneficiaries’ residency. <a href="/calendly" style="color:#5b21b6;text-decoration:underline;">Schedule a consultation</a> for an analysis of your specific situation.</p>';
+
+  var headings = htmlContent.querySelectorAll('h2, h3');
+  var anchors = ['trust planning for act 60', 'private interest foundation', 'trust administration', 'funding your', 'frequently asked'];
+  for (var a = 0; a < anchors.length; a++) {
+    for (var i = 0; i < headings.length; i++) {
+      if (headings[i].textContent.trim().toLowerCase().indexOf(anchors[a]) >= 0) {
+        headings[i].parentNode.insertBefore(notice, headings[i]);
+        return;
+      }
+    }
+  }
+  htmlContent.appendChild(notice);
+}
+
+/* ================================================
+   30. SITE-WIDE FOOTER DISCLAIMER (all pages)
+   Reality: The site marketed legal services and solicited
+   consultations with no "attorney advertising / not legal
+   advice / no attorney-client relationship" notice anywhere.
+   Appends a concise bilingual disclaimer to the global footer.
+   ================================================ */
+function addSiteDisclaimer() {
+  if (document.getElementById('rl-site-disclaimer')) return;
+
+  var footer = document.querySelector('footer#footer-sections')
+    || document.querySelector('[data-footer-sections]')
+    || document.querySelector('footer.sections')
+    || document.querySelector('footer');
+  if (!footer) return;
+
+  var d = document.createElement('div');
+  d.id = 'rl-site-disclaimer';
+  d.style.cssText = 'max-width:1000px;margin:0 auto;padding:18px 24px 30px;font-size:.72rem;line-height:1.5;color:#8a8f98;text-align:center;';
+  d.innerHTML = 'Attorney advertising. The information on this website is general and is not legal or tax advice; it does not create an attorney-client relationship, which is formed only through a signed engagement agreement. Prior results do not guarantee a similar outcome.'
+    + '<br><span style="display:inline-block;margin-top:6px;">Publicidad de abogado. La información en este sitio es de carácter general y no constituye asesoría legal ni fiscal; no crea una relación abogado-cliente, la cual se establece únicamente mediante un acuerdo de representación firmado. Resultados anteriores no garantizan un resultado similar.</span>';
+
+  footer.appendChild(d);
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -1155,6 +1256,10 @@ function runLegalFixes() {
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */
   fixDeclaratoriaNotarial();
   addLey60FederalClarifierES();
+  /* Advertising language, trusts NRNC caveat, site-wide disclaimer */
+  softenAdvertisingLanguage();
+  addTrustNRNCTransferTaxNote();
+  addSiteDisclaimer();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

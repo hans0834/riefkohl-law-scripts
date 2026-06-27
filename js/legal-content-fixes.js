@@ -1221,6 +1221,44 @@ function addSiteDisclaimer() {
 }
 
 /* ================================================
+   31. BOOKING PAGE — "FREE CONSULTATION" SCOPE (/calendly)
+   Reality: A "Free Strategy Call" with no scope/qualifier
+   can imply free substantive legal advice. Rename the page
+   heading to "Free Consultation" and add a clarifier that
+   the call does not create an attorney-client relationship.
+   (Tracked CTA buttons are left unchanged.)
+   ================================================ */
+function addBookingQualifier() {
+  if (path !== '/calendly') return;
+
+  /* Rename the heading "Schedule Your Free Strategy Call" -> "...Free Consultation" */
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    var parentTag = node.parentNode && node.parentNode.tagName;
+    if (parentTag === 'SCRIPT' || parentTag === 'STYLE' || parentTag === 'A' || parentTag === 'BUTTON') continue;
+    if (node.nodeValue.indexOf('Schedule Your Free Strategy Call') >= 0) {
+      node.nodeValue = node.nodeValue.replace('Schedule Your Free Strategy Call', 'Schedule Your Free Consultation');
+    }
+  }
+
+  /* Add a scope clarifier after the "No obligation..." line */
+  if (document.getElementById('rl-booking-qualifier')) return;
+  var els = document.querySelectorAll('p, h2, h3');
+  for (var i = 0; i < els.length; i++) {
+    var t = els[i].textContent || '';
+    if (t.indexOf('No obligation') >= 0 && t.indexOf('clarity on your next step') >= 0) {
+      var note = document.createElement('p');
+      note.id = 'rl-booking-qualifier';
+      note.style.cssText = 'margin:10px auto 0;max-width:640px;font-size:.8rem;color:#6c757d;line-height:1.5;';
+      note.innerHTML = 'This free 15-minute call is an initial consultation to understand your situation and outline possible next steps. It does not create an attorney-client relationship and is not legal advice; any representation begins only with a signed engagement agreement.';
+      els[i].parentNode.insertBefore(note, els[i].nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -1260,6 +1298,8 @@ function runLegalFixes() {
   softenAdvertisingLanguage();
   addTrustNRNCTransferTaxNote();
   addSiteDisclaimer();
+  /* Booking page "Free Consultation" scope clarifier */
+  addBookingQualifier();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

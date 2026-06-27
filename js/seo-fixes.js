@@ -175,7 +175,8 @@ var SEO = {
   },
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
-    meta: 'Puerto Rico attorney on Act 60: the 4% export-services rate, individual investor decrees, compliance traps, and IRS audit risks. Free bilingual strategy call.',
+    title: 'Puerto Rico Act 60: 4% Rate & Investor Decrees | Riefkohl Law',
+    meta: 'PR attorney on Act 60: the 4% corporate tax rate, 0% capital-gains investor decrees (deadline Dec 31, 2026), and bona-fide residency rules. Free strategy call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -2361,7 +2362,17 @@ function fixH1() {
 function fixMeta() {
   var path = window.location.pathname.replace(/\/$/, '') || '/';
   var config = SEO[path];
-  if (!config || !config.meta) return;
+  if (!config) return;
+
+  /* Override the SERP <title> when an explicit title is provided. Squarespace
+     otherwise appends the site name to a title that already contains it,
+     producing "... | Riefkohl Law — Riefkohl Law". Setting document.title here
+     gives Googlebot (which renders JS) the clean, CTR-tuned title. */
+  if (config.title) {
+    document.title = config.title;
+  }
+
+  if (!config.meta) return;
 
   /* Update or create meta description */
   var metaDesc = document.querySelector('meta[name="description"]');

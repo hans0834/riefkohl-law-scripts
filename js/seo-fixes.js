@@ -260,6 +260,14 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Yes. Capital gains from cryptocurrency, NFTs, and other digital assets can qualify for Act 60 Chapter 2 benefits, but only gains that accrue after you become a bona fide Puerto Rico resident. Pre-move appreciation remains subject to federal capital gains tax under the 10-year lookback rule (Treas. Reg. \u00a71.937-2(f))\u2014gains on assets owned before establishing PR residency are not treated as Puerto Rico-source income for federal purposes. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024). The IRS pays close attention to crypto holders claiming Act 60 benefits, making proper cost basis tracking and residency documentation critical.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does the Act 60 4% corporate tax rate apply to export services and software development companies?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Under Act 60 Chapter 3, Puerto Rico export-services businesses — including software development, SaaS, IT consulting, and other technology companies that serve clients located outside Puerto Rico — can qualify for a 4% corporate income tax rate, plus a 100% Puerto Rico income tax exemption on distributions of qualifying earnings to bona fide PR-resident shareholders. At least 80% of the entity\'s revenue must come from clients outside Puerto Rico. Software and technology firms are among the most common Act 60 export-services applicants. Consult an attorney to confirm your activities qualify and to structure the decree correctly.'
+          }
         }
       ]
     }
@@ -462,8 +470,8 @@ var SEO = {
     }
   },
   '/espanol-ley-60': {
-    h1: 'Incentivos Contributivos Ley 60 — Asesoria Legal en Puerto Rico',
-    meta: 'Abogado de Ley 60 en Puerto Rico. Servicios de exportacion, inversionistas individuales, cumplimiento y planificacion para relocalizados.',
+    h1: 'Ley 60 de Puerto Rico (Ley 60-2019) — Incentivos Contributivos y Asesoría Legal',
+    meta: 'Abogado de la Ley 60 de Puerto Rico (Ley 60-2019 / Código de Incentivos de 2019): requisitos, servicios de exportación, inversionistas individuales y cumplimiento. Consulta gratis.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

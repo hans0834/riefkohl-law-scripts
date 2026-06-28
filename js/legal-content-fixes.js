@@ -24,6 +24,8 @@
   29. Trusts page: NRNC U.S. transfer-tax caveat on estate/gift/dynasty-trust claims (/puerto-rico-trusts)
   31. Booking page (/calendly): "Free Consultation" rename + scope clarifier
       (NB: a site-wide footer "Legal Disclaimer" already exists via another script — no #30 needed)
+  32. Hide duplicate Aguada blog card on /blog hub (canonical override lives in seo-fixes.js)
+  33. Ley 60 (ES): three §937 residency-tests note + homepage trusts-card softening (#28 list)
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1139,7 +1141,9 @@ function softenAdvertisingLanguage() {
     ['expert legal guidance', 'experienced legal guidance'],
     ['Sophisticated Legal Counsel', 'Experienced Legal Counsel'],
     ['the caliber of counsel your business and family demand', 'experienced counsel for your business and family'],
-    ['incentivos contributivos extraordinarios', 'incentivos contributivos significativos']
+    ['incentivos contributivos extraordinarios', 'incentivos contributivos significativos'],
+    /* Homepage practice card — drop the "across generations" dynasty implication and soften the absolute claim */
+    ['Tax-efficient irrevocable trusts that preserve wealth across generations', 'Tax-efficient irrevocable trusts that help preserve family wealth']
   ];
 
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -1252,6 +1256,31 @@ function hideDuplicateBlogCard() {
 }
 
 /* ================================================
+   33. LEY 60 (ES) — THREE §937 RESIDENCY TESTS (/espanol-ley-60)
+   Reality: Bona fide residency requires THREE tests
+   (presence, tax home, closer connection), and 183 days
+   is only one way to satisfy the presence test. Mirrors the
+   clarification the English Act 60 page already carries.
+   ================================================ */
+function addLey60ThreeTestsES() {
+  if (path !== '/espanol-ley-60') return;
+  if (document.getElementById('rl-ley60-3tests-note')) return;
+
+  var els = document.querySelectorAll('p, li');
+  for (var i = 0; i < els.length; i++) {
+    var t = els[i].textContent || '';
+    if (t.indexOf('183 días o más de presencia física en Puerto Rico') >= 0) {
+      var note = document.createElement('p');
+      note.id = 'rl-ley60-3tests-note';
+      note.style.cssText = 'margin:10px 0 16px;padding:12px 16px;background:#f0f5fb;border-left:3px solid #1a3a5c;border-radius:0 4px 4px 0;font-size:.84rem;color:#23425f;line-height:1.55;';
+      note.innerHTML = '<strong>Las tres pruebas de residencia bona fide:</strong> Bajo la Sección 937 del Código de Rentas Internas federal, la residencia bona fide exige cumplir <strong>tres</strong> pruebas, no solo los 183 días: (1) la <strong>prueba de presencia</strong>; (2) la <strong>prueba de hogar contributivo</strong> (<em>tax home</em>) —su principal lugar de negocios o empleo debe estar en Puerto Rico—; y (3) la <strong>prueba de conexión más estrecha</strong> (<em>closer connection</em>) —sus vínculos deben ser más estrechos con Puerto Rico que con EE. UU. o cualquier país extranjero. Además, los 183 días son solo una de varias formas de satisfacer la prueba de presencia.';
+      els[i].parentNode.insertBefore(note, els[i].nextSibling);
+      return;
+    }
+  }
+}
+
+/* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
 function runLegalFixes() {
@@ -1294,6 +1323,8 @@ function runLegalFixes() {
   addBookingQualifier();
   /* Hide duplicate Aguada blog card on the hub */
   hideDuplicateBlogCard();
+  /* Ley 60 ES: three §937 residency tests note */
+  addLey60ThreeTestsES();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

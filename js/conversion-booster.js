@@ -71,6 +71,22 @@ function createStickyBar() {
   document.body.appendChild(bar);
 }
 
+/* ===== 2b. PERSISTENT DESKTOP "BOOK A CONSULTATION" CTA ===== */
+/* Always-visible booking button on desktop (mobile uses the sticky bar). */
+function createDesktopBookButton() {
+  if (document.querySelector('.rl-desktop-book')) return;
+
+  var label = IS_ES ? 'Agende una consulta gratis' : 'Book a Free Consultation';
+  var bookUrl = IS_ES ? '/espanol-cita' : BOOK_URL;
+
+  var a = document.createElement('a');
+  a.className = 'rl-desktop-book';
+  a.href = bookUrl;
+  a.setAttribute('aria-label', label);
+  a.innerHTML = CALENDAR_SVG + '<span>' + label + '</span>';
+  document.body.appendChild(a);
+}
+
 /* ===== 3. LOCALBUSINESS SCHEMA ===== */
 function injectLocalBusinessSchema() {
   // Only inject on key pages, not every blog post
@@ -891,6 +907,7 @@ function run() {
   try {
     createCallBanner();
     createStickyBar();
+    createDesktopBookButton();
     /* injectLocalBusinessSchema(); — firm entity centralized in schema-markup.js (@id .../#firm)
        to avoid duplicate/conflicting LegalService schemas. */
     injectUrgencyBanner();

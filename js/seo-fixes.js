@@ -1809,6 +1809,176 @@ var SEO = {
       ]
     }
   },
+  '/resources/estate-planning-act-60-relocatees': {
+    h1: 'Estate Planning for Act 60 Relocatees',
+    meta: 'Your mainland estate plan doesn’t work in Puerto Rico. The 5 risks Act 60 relocatees face — forced heirship, unrecognized trusts, no decree succession — and how to fix them.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'I already have a trust from my mainland attorney. Do I need a new one?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not necessarily, but you almost certainly need a Puerto Rico trust to work alongside it. Your mainland trust was not designed for Puerto Rico’s civil-law system and likely does not account for forced heirship, community property, or Law 219-2012. A dual-trust architecture often works best: the mainland trust handles non-PR assets and a new Puerto Rico trust handles PR-situs assets.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can I disinherit my children under Puerto Rico law?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Under the 2020 Civil Code, one-half of your estate is reserved for your forced heirs (children and surviving spouse). You keep full control over the other half (libre disposición), and there are legitimate strategies to maximize flexibility within the system. For assets located outside Puerto Rico, the forced-heirship rules may not apply.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens to my Act 60 benefits if I die?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Your Act 60 decree is personal and does not transfer automatically to anyone. Income earned after your death is not covered by your decree. With a business-succession plan, appropriate entity structuring, and instructions for your family, your heirs can apply for their own decree or restructure operations to maintain tax-efficient treatment.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/do-you-still-owe-us-taxes-in-puerto-rico': {
+    h1: 'Do You Still Owe U.S. Taxes If You Move to Puerto Rico?',
+    meta: 'Moving to Puerto Rico changes your federal taxes — it doesn’t end them. What IRC Section 933 excludes, what you still owe, and why you keep filing with the IRS.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'If I move to Puerto Rico, do I still have to file a U.S. federal tax return?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Usually, yes. A bona fide Puerto Rico resident whose income is entirely Puerto Rico-source may not need to file a Form 1040, but the moment you have any non-PR-source income — mainland wages, U.S. rentals, pre-move gains, certain business income — a federal return is generally required. In the year you move, you also file Form 8898 to report becoming a bona fide resident of a U.S. possession.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does Act 60 eliminate my U.S. federal taxes?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Act 60 is a Puerto Rico tax benefit. The federal exclusion comes from IRC Section 933 and reaches only Puerto Rico-source income, and only while you are a bona fide resident. U.S.-source income, most foreign income, self-employment tax, GILTI and Subpart F inclusions, and federal estate tax all remain. Act 60 lowers the Puerto Rico tax; Section 933 removes the federal tax on PR-source income.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'I am self-employed with a Puerto Rico business — do I owe Social Security and Medicare tax?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally yes. Section 933 excludes Puerto Rico-source income from federal income tax, but it does not exclude it from federal self-employment (SECA) tax. A self-employed bona fide Puerto Rico resident typically still owes Social Security and Medicare tax on net self-employment earnings. How you are structured — sole proprietor versus a corporation paying a reasonable salary — changes the analysis.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/pagas-impuestos-federales-en-puerto-rico': {
+    h1: '¿Todavía Paga Impuestos Federales de EE. UU. si se Muda a Puerto Rico?',
+    meta: 'Mudarse a Puerto Rico cambia sus impuestos federales — no los elimina. Qué excluye el IRC Sección 933, qué sigue debiendo y por qué continúa radicando ante el IRS.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Si me mudo a Puerto Rico, ¿todavía tengo que radicar una planilla federal de EE. UU.?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Usualmente, sí. Un residente bona fide de Puerto Rico cuyo ingreso sea enteramente de fuente puertorriqueña quizás no necesite radicar un Formulario 1040, pero en cuanto tenga cualquier ingreso que no sea de fuente de PR — salarios del continente, alquileres en EE. UU., ganancias pre-mudanza, cierto ingreso de negocio — por lo general se requiere una planilla federal. En el año de la mudanza también radica el Formulario 8898.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿La Ley 60 elimina mis impuestos federales de EE. UU.?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La Ley 60 es un beneficio contributivo de Puerto Rico. La exclusión federal proviene del IRC Sección 933 y solo alcanza el ingreso de fuente puertorriqueña, y solo mientras usted sea residente bona fide. El ingreso de fuente estadounidense, la mayoría del ingreso extranjero, la contribución por cuenta propia, las inclusiones de GILTI y Subpart F, y el impuesto federal sobre caudal relicto permanecen.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Trabajo por cuenta propia con un negocio en Puerto Rico — ¿debo Seguro Social y Medicare?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Por lo general, sí. La Sección 933 excluye el ingreso de fuente puertorriqueña del impuesto federal sobre ingresos, pero no de la contribución federal por cuenta propia. Un residente bona fide de Puerto Rico que trabaja por cuenta propia normalmente sigue debiendo Seguro Social y Medicare sobre su ingreso neto. Cómo esté estructurado cambia el análisis.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/act-60-requirements': {
+    h1: 'Act 60 Requirements 2026: The Complete Eligibility Checklist',
+    meta: 'Every requirement to qualify for and keep an Act 60 decree in 2026 — bona fide residency, the deadline, the home purchase, the $10K donation, and annual reporting.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'What are the main requirements to qualify for Act 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'For the Individual Resident Investor decree: become and remain a bona fide Puerto Rico resident under IRC Section 937 (the presence, tax-home, and closer-connection tests), buy a Puerto Rico principal residence within two years, make a $10,000 annual charitable donation beginning in the second year, file an annual report with a $5,000 fee, and obtain a biennial compliance certificate. The Export Services decree adds business-substance and export requirements, and your U.S. federal filing obligations continue throughout.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How many days do I need to spend in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Generally at least 183 days a year in Puerto Rico under the presence test — but that is only one of three tests. You also need your tax home and your closer connection in Puerto Rico. There are alternative day-count safe harbors, but relying on them without the tax-home and closer-connection tests is risky, and any part of a day can count differently when a former high-tax state audits your departure.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I have to buy a house in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'For the Individual Resident Investor decree, yes — you must purchase a Puerto Rico principal residence within two years of obtaining the decree, from an unrelated seller, held personally or in a qualifying trust (not through an LLC). It must be your actual principal residence. The Export Services business decree does not carry this personal-residence requirement.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/requisitos-ley-60': {
+    h1: 'Requisitos de la Ley 60 en 2026: La Lista Completa de Elegibilidad',
+    meta: 'Todos los requisitos para cualificar y conservar un decreto de Ley 60 en 2026 — residencia bona fide, fecha límite, compra de vivienda, donación e informes anuales.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Cuáles son los requisitos principales para cualificar bajo la Ley 60?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Para el decreto de Inversionista Residente Individual: convertirse y mantenerse como residente bona fide de Puerto Rico bajo el IRC Sección 937 (las pruebas de presencia, hogar contributivo y conexión más estrecha), comprar una residencia principal en Puerto Rico dentro de dos años, hacer una donación caritativa anual de $10,000 a partir del segundo año, radicar un informe anual con un cargo de $5,000 y obtener un certificado de cumplimiento bienal. El decreto de Servicios de Exportación añade requisitos de sustancia y exportación.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuántos días debo pasar en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Por lo general, al menos 183 días al año en Puerto Rico bajo la prueba de presencia — pero esa es solo una de tres pruebas. También necesita su hogar contributivo y su conexión más estrecha en Puerto Rico. Existen días alternos de refugio seguro, pero depender de ellos sin cumplir las otras dos pruebas es arriesgado, y cualquier parte de un día puede contarse distinto cuando su antiguo estado audita su salida.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Tengo que comprar una casa en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Para el decreto de Inversionista Residente Individual, sí — debe comprar una residencia principal en Puerto Rico dentro de dos años de obtener el decreto, a un vendedor no relacionado, poseída personalmente o en un fideicomiso cualificado (no mediante una LLC). Debe ser su residencia principal real. El decreto de Servicios de Exportación de negocio no conlleva este requisito.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/act-60-who-should-not-apply': {
     h1: 'Who Should NOT Move to Puerto Rico for Act 60: 7 Red Flags',
     meta: 'Act 60 rewards a genuine move. 7 red flags that mean Puerto Rico’s tax decree may not be worth it — and how to tell before you relocate.',
@@ -2992,7 +3162,10 @@ var CORE_HREFLANG_PAIRS = [
   ['/resources/avoiding-probate-legitima', '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico'],
   ['/resources/trust-costs-puerto-rico', '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico'],
   /* Act 60 deadline EN↔ES pair — added Jun 26 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
-  ['/resources/act-60-filing-date-vs-move-date-deadline', '/resources/ley-60-fecha-limite-2026']
+  ['/resources/act-60-filing-date-vs-move-date-deadline', '/resources/ley-60-fecha-limite-2026'],
+  /* Act 60 requirements pillar + "still owe US taxes" EN↔ES pairs — added Jul 2026; publish BOTH pages of each pair together so hreflang never points at a 404. */
+  ['/resources/act-60-requirements', '/resources/requisitos-ley-60'],
+  ['/resources/do-you-still-owe-us-taxes-in-puerto-rico', '/resources/pagas-impuestos-federales-en-puerto-rico']
 ];
 
 function injectHreflang() {

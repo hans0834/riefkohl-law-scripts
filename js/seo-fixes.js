@@ -332,7 +332,8 @@ var SEO = {
   },
   '/business-formation': {
     h1: 'Puerto Rico Business Formation — LLC, Corp & Startup Services',
-    meta: 'Puerto Rico business formation attorney. LLC, corporation, and startup legal services. Flat-fee pricing. Bilingual counsel. Free strategy call.',
+    title: 'Puerto Rico LLC Formation — Business Attorney | Riefkohl Law',
+    meta: 'Form your Puerto Rico LLC or corporation with a flat-fee business attorney: entity selection, Certificate of Organization, EIN & registered agent. Free strategy call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -359,6 +360,14 @@ var SEO = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes. Puerto Rico requires every business entity to maintain a registered agent with a physical address in Puerto Rico for service of process. A registered agent receives legal documents and official correspondence on behalf of the business. Your attorney can serve as your registered agent or help you designate one.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much does it cost to form an LLC in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Riefkohl Law forms Puerto Rico LLCs on a flat fee, typically $2,500 to $10,000 depending on complexity — covering entity selection, the Certificate of Organization, a customized operating agreement, EIN, and registered-agent setup. The Puerto Rico Department of State filing fee (around $250) and any annual-report fees are separate. You receive a fixed quote before work begins.'
           }
         }
       ]

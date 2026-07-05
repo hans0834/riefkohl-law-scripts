@@ -100,8 +100,10 @@ function injectOrganizationSchema() {
     ],
     'knowsLanguage': ['en', 'es'],
     'sameAs': [
+      'https://www.google.com/maps?cid=3671070211869856657',
       'https://www.linkedin.com/in/riefkohl'
     ],
+    'hasMap': 'https://www.google.com/maps?cid=3671070211869856657',
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
       'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

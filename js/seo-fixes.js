@@ -194,6 +194,22 @@ var SEO = {
         },
         {
           '@type': 'Question',
+          'name': 'Does the Act 60 4% corporate tax rate apply to software and SaaS companies?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Under Act 60 Chapter 3, Puerto Rico export-services businesses — including software development, SaaS, IT consulting, and other technology firms that serve clients located outside Puerto Rico — can qualify for a 4% fixed corporate income tax rate, plus a 100% Puerto Rico income tax exemption on distributions of qualifying earnings to bona fide PR-resident shareholders. Software and technology companies are among the most common Act 60 export-services applicants. An attorney can confirm whether your specific activities qualify.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What qualifies as an export service under Act 60 Chapter 3?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Export services are services performed from Puerto Rico for clients located outside Puerto Rico. Common qualifying activities include software development, IT and cloud services, consulting, research and development, marketing, and investment management. The service generally cannot have a nexus to the local Puerto Rico market, and at least 80% of the entity\'s gross revenue must come from clients outside Puerto Rico. An attorney can confirm whether your specific activities qualify.'
+          }
+        },
+        {
+          '@type': 'Question',
           'name': 'How do I qualify for Act 60 individual investor benefits?',
           'acceptedAnswer': {
             '@type': 'Answer',
@@ -322,7 +338,18 @@ var SEO = {
     h1: 'Act 60 Individual Investor — Capital Gains Tax Benefits in Puerto Rico',
     title: 'Act 60 Investor Decree — 0% Capital Gains | Riefkohl Law',
     meta: 'Act 60 Chapter 2 for individual investors: 0% capital gains, file your decree before the Dec 31, 2026 deadline, residency compliance & IRS defense. Free call.',
-    schema: null
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        { '@type': 'Question', 'name': 'What tax benefits does the Act 60 Individual Investor decree provide?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As a bona fide Puerto Rico resident holding an Act 60 Chapter 2 (Individual Resident Investor) decree, you can receive a 0% Puerto Rico tax rate on capital gains, interest, and dividends that accrue after you establish residency. Decrees granted from 2027 onward carry a 4% rate on capital gains instead of 0%. The benefits apply only to gains that accrue after your move — not to appreciation built up before you relocated.' } },
+        { '@type': 'Question', 'name': 'Is there a deadline to apply for the Act 60 investor decree?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Act 38-2026 extended the Act 60 program through 2055, so the incentive is not expiring. But the headline 0% capital-gains rate applies to decrees issued through December 31, 2026; decrees granted in 2027 and later carry a 4% rate. If locking in the 0% rate matters to your plan, the decree should be applied for and issued before year-end 2026.' } },
+        { '@type': 'Question', 'name': 'How do I qualify as a bona fide Puerto Rico resident?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'You must satisfy three tests under IRC Section 937: the presence test (most commonly at least 183 days in Puerto Rico during the year), the tax-home test (your main place of business is in Puerto Rico), and the closer-connection test (stronger ties to Puerto Rico than to the U.S. mainland or any foreign country). Your decree benefits depend on maintaining bona fide residency every year.' } },
+        { '@type': 'Question', 'name': 'Do my existing pre-move capital gains qualify for the 0% rate?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Generally no. The Puerto Rico exemption applies to gains that accrue after you become a bona fide resident. Appreciation built up before your move remains subject to U.S. federal tax, and gains realized within 10 years of becoming a resident are subject to federal tax under the source rules (Treas. Reg. Section 1.937-2(f)). Timing the sale and documenting your basis at the move date are critical.' } },
+        { '@type': 'Question', 'name': 'What are the ongoing obligations of an Act 60 investor decree?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Investor decree holders must make an annual charitable donation ($10,000 per year to approved Puerto Rico nonprofits), pay a separate annual filing/report fee ($5,000), purchase a primary residence in Puerto Rico within two years of the decree, file an annual compliance report with the DDEC, and maintain bona fide residency. Missing these obligations can put the decree at risk of revocation.' } },
+        { '@type': 'Question', 'name': 'Do Act 60 investors also need a Puerto Rico estate plan?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Puerto Rico is a civil-law jurisdiction with forced heirship (the legítima) that can override a mainland will, and your mainland trust may not be recognized once you change your domicile. Your Act 60 decree is also personal and does not pass to your heirs. Pairing your decree with a Puerto Rico–compliant estate plan protects both your wealth and your tax benefits.' } }
+      ]
+    }
   },
   '/act-60-crypto-investor': {
     h1: 'Act 60 for Cryptocurrency — Puerto Rico Crypto Tax Benefits',
@@ -1839,6 +1866,73 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Your Act 60 decree is personal and does not transfer automatically to anyone. Income earned after your death is not covered by your decree. With a business-succession plan, appropriate entity structuring, and instructions for your family, your heirs can apply for their own decree or restructure operations to maintain tax-efficient treatment.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I really need both an Act 60 attorney and an estate-planning attorney?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'You need both skill sets — but not necessarily two firms. The problem with splitting the work is that a mainland estate attorney does not practice Puerto Rico civil law, and a pure Act 60 tax advisor does not draft trusts or wills. We handle both under one roof and one engagement, so your decree, residency, entity structure, and estate plan are designed to work together rather than contradict each other.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much does it cost to bundle Act 60 planning with a Puerto Rico estate plan?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'We quote flat fees after a free initial call, not hourly billing. A Puerto Rico trust-based estate plan runs $7,500–$15,000 and a will-based plan $3,500–$6,000; Act 60 decree work is scoped separately based on whether you pursue the Individual Resident Investor or Export Services chapter. Handled together, they are coordinated as one engagement so you are not paying two firms to duplicate the same residency and asset analysis.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/planificacion-sucesoral-ley-60-nuevos-residentes': {
+    h1: 'Planificación Sucesoral para Nuevos Residentes bajo la Ley 60',
+    title: 'Planificación Sucesoral Ley 60 Puerto Rico | Riefkohl Law',
+    meta: 'El plan patrimonial continental no funciona en Puerto Rico: los 5 riesgos de la Ley 60 (legítima, fideicomisos, sucesión del decreto) y cómo resolverlos.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Ya tengo un fideicomiso de mi abogado en el continente. ¿Necesito uno nuevo?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No necesariamente, pero es casi seguro que necesita un fideicomiso de Puerto Rico que funcione junto a él. Su fideicomiso continental no fue diseñado para el sistema de derecho civil de Puerto Rico y probablemente no contempla la legítima, los bienes gananciales ni la Ley 219-2012. A menudo lo mejor es una arquitectura de doble fideicomiso: el continental maneja los bienes fuera de Puerto Rico y uno nuevo de Puerto Rico maneja los bienes con situs en la isla.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Puedo desheredar a mis hijos bajo el derecho de Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Bajo el Código Civil de 2020, la mitad de su caudal está reservada para sus herederos forzosos (hijos y cónyuge supérstite). Usted conserva pleno control sobre la otra mitad (libre disposición), y existen estrategias legítimas para maximizar la flexibilidad dentro del sistema. Para los bienes ubicados fuera de Puerto Rico, las reglas de legítima podrían no aplicar.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué pasa con mis beneficios de la Ley 60 si fallezco?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Su decreto de la Ley 60 es personal y no se transfiere automáticamente a nadie. El ingreso generado después de su muerte no está cubierto por su decreto. Con la planificación adecuada —un plan de sucesión del negocio, una estructura de entidad apropiada e instrucciones para su familia— sus herederos pueden solicitar su propio decreto o reestructurar las operaciones para mantener un trato contributivo eficiente.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Realmente necesito un abogado de la Ley 60 y otro de planificación patrimonial?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Necesita ambas competencias, pero no necesariamente dos bufetes. Un abogado patrimonial del continente no ejerce el derecho civil de Puerto Rico, y un asesor contributivo puro de la Ley 60 no redacta fideicomisos ni testamentos. Nosotros manejamos ambos bajo un mismo techo y un mismo encargo, de modo que su decreto, su residencia, la estructura de su entidad y su plan patrimonial se diseñan para funcionar juntos en lugar de contradecirse.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuánto cuesta combinar la planificación de la Ley 60 con un plan patrimonial de Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Cotizamos honorarios fijos tras una llamada inicial gratuita, no facturación por hora. Un plan patrimonial de Puerto Rico basado en fideicomiso cuesta $7,500–$15,000 y uno basado en testamento $3,500–$6,000; el trabajo del decreto de la Ley 60 se cotiza aparte. Cuando se manejan juntos, se coordinan como un solo encargo para que no pague a dos bufetes por duplicar el mismo análisis de residencia y de bienes.'
+          }
         }
       ]
     }
@@ -3165,7 +3259,9 @@ var CORE_HREFLANG_PAIRS = [
   ['/resources/act-60-filing-date-vs-move-date-deadline', '/resources/ley-60-fecha-limite-2026'],
   /* Act 60 requirements pillar + "still owe US taxes" EN↔ES pairs — added Jul 2026; publish BOTH pages of each pair together so hreflang never points at a 404. */
   ['/resources/act-60-requirements', '/resources/requisitos-ley-60'],
-  ['/resources/do-you-still-owe-us-taxes-in-puerto-rico', '/resources/pagas-impuestos-federales-en-puerto-rico']
+  ['/resources/do-you-still-owe-us-taxes-in-puerto-rico', '/resources/pagas-impuestos-federales-en-puerto-rico'],
+  /* Act 60 + estate-planning bundle EN↔ES pair — added Jul 5 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
+  ['/resources/estate-planning-act-60-relocatees', '/resources/planificacion-sucesoral-ley-60-nuevos-residentes']
 ];
 
 function injectHreflang() {

@@ -27,7 +27,8 @@
 var SEO = {
   '/': {
     h1: 'Puerto Rico Law Firm — Trusts, Estate Planning & Business Law',
-    meta: 'Puerto Rico law firm focused on trusts, estate planning, Act 60 tax incentives, and business law. Free strategy call. (787) 236-1657.',
+    title: 'Puerto Rico Trusts, Estate Planning & Act 60 Attorney | Riefkohl Law',
+    meta: 'Puerto Rico attorney for trusts, estate planning, and Act 60 tax incentives. Flat-fee pricing, bilingual service, free strategy call. (787) 236-1657.',
     schema: null
   },
   '/services': {
@@ -67,7 +68,8 @@ var SEO = {
   },
   '/puerto-rico-trusts': {
     h1: 'Puerto Rico Trust Attorney — Fideicomisos & Asset Protection',
-    meta: 'Puerto Rico trust attorney focused on irrevocable trusts under Law 219-2012, asset protection, and fiduciary services. Free consultation.',
+    title: 'Puerto Rico Trust Attorney — Asset Protection Trusts | Riefkohl Law',
+    meta: 'Puerto Rico trust attorney: irrevocable trusts under Law 219-2012, asset protection, and flat-fee fideicomiso setup. Free consultation — (787) 236-1657.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -141,6 +143,7 @@ var SEO = {
   },
   '/estate-planning': {
     h1: 'Estate Planning Attorney in Puerto Rico',
+    title: 'Puerto Rico Estate Planning Attorney \u2014 Trusts & Wills | Riefkohl Law',
     meta: 'How to protect your assets and avoid forced heirship in Puerto Rico. Trusts, wills, probate avoidance, and Act 60 estate strategies. Bilingual attorney \u2014 free consultation.',
     schema: {
       '@context': 'https://schema.org',
@@ -176,7 +179,7 @@ var SEO = {
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
     title: 'Puerto Rico Act 60: 4% Rate & Investor Decrees | Riefkohl Law',
-    meta: 'PR attorney on Act 60: the 4% corporate tax rate, 0% capital-gains investor decrees (deadline Dec 31, 2026), and bona-fide residency rules. Free strategy call.',
+    meta: 'PR attorney on Act 60: 4% corporate tax for export services & software, 0% capital-gains investor decrees (Dec 31, 2026 deadline), and residency rules. Free call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -274,17 +277,57 @@ var SEO = {
   },
   '/act-60-export-services': {
     h1: 'Act 60 Export Services — 4% Corporate Tax Rate in Puerto Rico',
-    meta: 'Puerto Rico Act 60 Chapter 3 attorney for export services businesses. 4% corporate tax, 100% distribution exemption. Application filing, compliance, and IRS defense. Free strategy call.',
-    schema: null
+    title: 'Act 60 Export Services: 4% Tax for Software & SaaS | Riefkohl Law',
+    meta: 'Puerto Rico Act 60 Chapter 3 for export services, software, SaaS & IT firms: 4% corporate tax, 100% distribution exemption, filing, compliance & IRS defense. Free call.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Does the Act 60 4% corporate tax rate apply to software and SaaS companies?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Under Act 60 Chapter 3, Puerto Rico export-services businesses — including software development, SaaS, IT consulting, and other technology firms that serve clients located outside Puerto Rico — can qualify for a 4% corporate income tax rate, plus a 100% Puerto Rico income tax exemption on distributions of qualifying earnings to bona fide PR-resident shareholders. Software and technology companies are among the most common Act 60 export-services applicants.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What qualifies as an export service under Act 60 Chapter 3?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Export services are services performed from Puerto Rico for clients located outside Puerto Rico. Common qualifying activities include software development, IT and cloud services, consulting, research and development, marketing, investment management, and other professional services. The service generally cannot have a nexus to the local Puerto Rico market. An attorney can confirm whether your specific activities qualify.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What is the 80% rule for Act 60 export services?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'To hold a Chapter 3 export-services decree, at least 80% of the entity\'s gross revenue must come from clients located outside Puerto Rico. Businesses that also serve local Puerto Rico clients must monitor this threshold, because falling below 80% can jeopardize the decree. Proper structuring and bookkeeping help ensure ongoing compliance.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How much does an Act 60 export services decree cost?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 Chapter 3 export-services decrees, typically ranging from $5,000 to $7,500 for the application, with annual compliance reviews from $2,500 to $4,000. All fees are quoted upfront before work begins. Government filing fees and annual reports are billed separately.'
+          }
+        }
+      ]
+    }
   },
   '/act-60-individual-investor': {
     h1: 'Act 60 Individual Investor — Capital Gains Tax Benefits in Puerto Rico',
-    meta: 'Puerto Rico Act 60 Chapter 2 attorney for individual investors. 0% capital gains (through 2026), residency compliance, state departure planning. Free strategy call.',
+    title: 'Act 60 Investor Decree — 0% Capital Gains | Riefkohl Law',
+    meta: 'Act 60 Chapter 2 for individual investors: 0% capital gains, file your decree before the Dec 31, 2026 deadline, residency compliance & IRS defense. Free call.',
     schema: null
   },
   '/act-60-crypto-investor': {
     h1: 'Act 60 for Cryptocurrency — Puerto Rico Crypto Tax Benefits',
-    meta: 'Puerto Rico Act 60 attorney for crypto investors. Capital gains benefits for Bitcoin, Ethereum, and digital assets. Residency structuring, cost basis tracking, IRS defense. Free call.',
+    title: 'Act 60 Crypto Tax — 0% Gains on Bitcoin & Crypto | Riefkohl Law',
+    meta: 'Puerto Rico Act 60 attorney for crypto investors: capital-gains benefits on Bitcoin, Ethereum & digital assets, residency structuring, cost-basis tracking & IRS defense. Free call.',
     schema: null
   },
   '/business-formation': {

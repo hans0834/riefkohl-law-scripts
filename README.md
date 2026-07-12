@@ -28,8 +28,8 @@ docs/                  Documentation, audits, strategies
   session-handoffs/    Per-session handoff memos
 tools/                 Python build scripts and utilities
 data/                  JSON metadata, Squarespace XML imports
-media/                 Illustrations, logo, PDFs (Git LFS for images)
-files/                 PDFs served via GitHub Pages
+media/                 Illustrations, logo (Git LFS — NOT servable via Pages)
+files/                 Publicly served assets (PDFs, images) — never LFS
 ```
 
 ## JavaScript Modules (load order)

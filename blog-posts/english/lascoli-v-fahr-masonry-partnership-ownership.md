@@ -7,7 +7,7 @@
 - **Category:** Business Law, Case Analysis
 - **Tags:** contract-law, partnership-law, business-formation, case-analysis, employment-law, equity-compensation, pennsylvania
 - **Internal links:** /business-formation, /resources, /blog/handler-v-centerview-partner-vs-employee
-- **PDF attachment:** lascoli-v-fahr-masonry-2026.pdf (Lascoli v. Thomas A. Fahr Masonry Contractors, 2026 PA Super 59)
+- **PDF attachment:** https://hans0834.github.io/riefkohl-law-scripts/files/lascoli-v-fahr-masonry-2026.pdf (Lascoli v. Thomas A. Fahr Masonry Contractors, 2026 PA Super 59 — hosted in `files/`, NOT `media/`: LFS breaks Pages serving)
 
 ---
 

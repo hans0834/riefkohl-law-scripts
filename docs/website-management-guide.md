@@ -74,8 +74,8 @@ riefkohl-law-scripts/
 │   └── session-handoffs/        Per-session handoff memos
 ├── tools/                       Python build scripts
 ├── data/                        JSON metadata, Squarespace XML imports
-├── media/                       Illustrations, logo, PDFs
-├── files/                       PDFs served via GitHub Pages
+├── media/                       Illustrations, logo (Git LFS — not servable via Pages)
+├── files/                       Publicly served assets (PDFs, images) — never LFS
 │
 ├── README.md                    Project overview
 ├── DEPLOYMENT.md                Safety rules and deployment workflow

@@ -6,3 +6,6 @@
 *.webp filter=lfs diff=lfs merge=lfs -text
 *.ico filter=lfs diff=lfs merge=lfs -text
 media/** filter=lfs diff=lfs merge=lfs -text
+
+# files/ is served raw by GitHub Pages — never LFS (LFS pointers break Pages serving)
+files/** -filter -diff -merge -text

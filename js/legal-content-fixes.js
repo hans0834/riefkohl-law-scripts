@@ -233,6 +233,23 @@ function fixHourlyBillingSurprises() {
 }
 
 /* ================================================
+   4c. CONSULTATION DURATION: "15-minute" -> "30-minute" (site-wide)
+   Owner directive (July 2026): the free consultation is 30 minutes.
+   The /calendly (Book an Appointment) page's native text block still
+   reads "complimentary 15-minute consultation"; scrub any stray
+   "15-minute" in body copy so it matches the 30-minute Calendly event.
+   ================================================ */
+function fixConsultationDuration() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    if (node.nodeValue.indexOf('15-minute') >= 0) {
+      node.nodeValue = node.nodeValue.replace(/15-minute/g, '30-minute');
+    }
+  }
+}
+
+/* ================================================
    5. NOTARIAL TARIFF DISCLAIMER (/services)
    Reality: PR Arancel Notarial mandates fixed minimum
    fees for notarial acts that cannot be waived or bundled.
@@ -1308,6 +1325,7 @@ function runLegalFixes() {
   addTrustRegistryDisclosure();
   fixZeroHourlyBilling();
   fixHourlyBillingSurprises();
+  fixConsultationDuration();
   addNotarialTariffDisclaimer();
   fixForcedHeirship();
   fixThreePortionSystem();

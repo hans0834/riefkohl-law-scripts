@@ -336,7 +336,12 @@ function injectArticleSchema() {
 var FAQ_SCAN_PAGES = [
   '/act-60-resource-center',
   '/resources-faq',
-  '/recursos-preguntas-frecuentes'
+  '/recursos-preguntas-frecuentes',
+  /* Trust/estate pillar pages with an on-page FAQ section (auto-generates FAQPage once the
+     deepened body is live; the question-word heuristic ignores non-FAQ h3 headings). */
+  '/resources/complete-guide-puerto-rico-trusts',
+  '/resources/trust-vs-will-puerto-rico',
+  '/resources/forced-heirship-estate-plan'
 ];
 
 function extractFAQsFromDOM() {

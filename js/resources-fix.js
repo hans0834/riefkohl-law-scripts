@@ -1078,7 +1078,7 @@ function injectResourceCards() {
       cards: [
         { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts' },
         { title: 'Trust vs. Will in Puerto Rico', desc: 'A side-by-side comparison of wills and trusts under Puerto Rico law, including costs, probate, privacy, and which is right for your situation.', url: '/resources/trust-vs-will-puerto-rico' },
-        { title: 'Asset Protection with Irrevocable Trusts', desc: 'How irrevocable trusts under Ley 219-2012 protect your assets from creditors, lawsuits, and estate taxes.', url: '/resources/asset-protection-irrevocable-trusts' }
+        { title: 'Asset Protection Trusts', desc: 'How Puerto Rico’s autonomous-estate doctrine shields assets from creditors, lawsuits, and judgments under the PR Trust Act (Ley 219-2012) — the protective structure, its limits, and the case law.', url: '/resources/asset-protection-trusts-pr' }
       ]
     },
     {

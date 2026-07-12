@@ -1519,8 +1519,18 @@ var SEO = {
     }
   },
   '/resources/complete-guide-puerto-rico-trusts': {
-    h1: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012',
-    meta: 'A PR-licensed attorney on Puerto Rico trusts: how they work, who needs one, costs, tax implications, and how they differ from mainland trusts.',
+    h1: 'The Complete Guide to Puerto Rico Trusts',
+    meta: 'Puerto Rico trusts explained: how they work under Law 219-2012, the types available, what they cost, and how they avoid probate and forced-heirship traps.',
+    schema: null
+  },
+  '/resources/trust-vs-will-puerto-rico': {
+    h1: 'Trust vs. Will in Puerto Rico: Which One Do You Need?',
+    meta: 'Trust vs. will in Puerto Rico: how each works, what each costs, the forced-heirship rules that bind both, and when you need both. A clear side-by-side.',
+    schema: null
+  },
+  '/resources/forced-heirship-estate-plan': {
+    h1: 'Forced Heirship in Puerto Rico: What Your Mainland Will and Trust Miss',
+    meta: 'Moved to Puerto Rico? Forced heirship (the legítima) can override your mainland will or trust. What changes, who your forced heirs are, and how to fix it.',
     schema: null
   },
   '/resources/foreign-trust-trap': {
@@ -2722,7 +2732,9 @@ function fixMeta() {
    ================================================ */
 /* Stale duplicate posts canonicalize to the kept version */
 var CANONICAL_OVERRIDES = {
-  '/blog/mun-de-aguada-v-w-construction-2': '/blog/mun-de-aguada-v-w-construction-3'
+  '/blog/mun-de-aguada-v-w-construction-2': '/blog/mun-de-aguada-v-w-construction-3',
+  /* Thin asset-protection stub consolidates into the 4,300-word authority page (Part 5). */
+  '/resources/asset-protection-irrevocable-trusts': '/resources/asset-protection-trusts-pr'
 };
 
 function fixCanonical() {

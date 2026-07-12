@@ -216,6 +216,23 @@ function fixZeroHourlyBilling() {
 }
 
 /* ================================================
+   4b. "NO HOURLY BILLING SURPRISES" -> "NO HOURLY BILLING" (site-wide)
+   Owner directive (July 2026): remove absolute/guarantee-style flat-fee
+   language such as "no surprises". Scrubs any remaining instance in
+   pasted native pages (trust-costs, avoiding-probate-legitima) and any
+   injected content, without requiring a Squarespace re-paste.
+   ================================================ */
+function fixHourlyBillingSurprises() {
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    if (node.nodeValue.indexOf('hourly billing surprises') >= 0) {
+      node.nodeValue = node.nodeValue.replace(/hourly billing surprises/gi, 'hourly billing');
+    }
+  }
+}
+
+/* ================================================
    5. NOTARIAL TARIFF DISCLAIMER (/services)
    Reality: PR Arancel Notarial mandates fixed minimum
    fees for notarial acts that cannot be waived or bundled.
@@ -1290,6 +1307,7 @@ function runLegalFixes() {
   qualifyAct60Claims();
   addTrustRegistryDisclosure();
   fixZeroHourlyBilling();
+  fixHourlyBillingSurprises();
   addNotarialTariffDisclaimer();
   fixForcedHeirship();
   fixThreePortionSystem();

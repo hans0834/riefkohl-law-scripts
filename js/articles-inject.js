@@ -644,7 +644,7 @@ var ARTICLES = {
   +'<p><strong>Include arbitration clauses.</strong> Mandatory arbitration for non-leg\u00edtima disputes (trust interpretation, trustee conduct, distribution timing) saves time, money, and family privacy.</p>'
   +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Continue Reading:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/complete-guide-puerto-rico-trusts" style="color:#a68c42;">The Complete Guide to Puerto Rico Trusts</a> \u2014 The full overview of trust planning under Puerto Rico law</li><li><a href="/resources/trust-costs-puerto-rico" style="color:#a68c42;">Trust Costs in Puerto Rico</a> \u2014 What to expect in fees, taxes, and ongoing expenses</li><li><a href="/resources/what-is-puerto-rico-trust" style="color:#a68c42;">What Is a Puerto Rico Trust?</a> \u2014 The autonomous estate concept explained</li><li><a href="/resources/asset-protection-trusts-pr" style="color:#a68c42;">Asset Protection Trusts</a> \u2014 How the autonomous estate doctrine provides creditor protection</li></ul></div>'
   +'<p><em>This article is for educational purposes only and does not constitute legal advice. For guidance specific to your situation, please contact Riefkohl Law.</em></p>'
-  +'<div class="rl-sub-cta"><p><strong>Protecting your estate from forced heirship requires a properly structured Puerto Rico trust.</strong></p><p>Book a flat-fee trust consultation\u2014no hourly billing surprises.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  +'<div class="rl-sub-cta"><p><strong>Protecting your estate from forced heirship requires a properly structured Puerto Rico trust.</strong></p><p>Book a flat-fee trust consultation\u2014no hourly billing.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
   }
 },
 
@@ -1919,7 +1919,7 @@ var ARTICLES = {
   +'</ul>'
   +'<p><strong>Net comparative cost: Trust creation and administration typically <em>saves</em> money vs. the alternative</strong></p>'
 
-  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Want a cost estimate for your specific situation?</strong></p><p>We provide flat-fee trust creation with transparent pricing\u2014no hourly billing surprises. A 30-minute call is all it takes to get a clear picture.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Want a cost estimate for your specific situation?</strong></p><p>We provide flat-fee trust creation with transparent pricing\u2014no hourly billing. A 30-minute call is all it takes to get a clear picture.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
 
   +'<h2>8. Arbitration Cost Savings: A Strategic Alternative to Litigation</h2>'
   +'<p>As covered in <a href="/resources/landmark-trust-cases">Article 9 of this series</a>, Puerto Rico trusts can incorporate arbitration provisions, yielding substantial cost savings when disputes arise.</p>'

@@ -1113,7 +1113,7 @@ function injectResourceCards() {
         { title: 'Act 60 Requirements 2026: Complete Checklist', desc: 'Every requirement to qualify for and keep an Act 60 decree in 2026 \u2014 bona fide residency, the deadline, the home purchase, the $10K donation, and annual reporting \u2014 in one place, with links to every detail.', url: '/resources/act-60-requirements', featured: true },
         { title: 'Do You Still Owe U.S. Taxes in Puerto Rico?', desc: 'Moving to Puerto Rico changes your federal taxes \u2014 it doesn\u2019t end them. What IRC \xa7933 excludes, what you still owe, and why you keep filing with the IRS.', url: '/resources/do-you-still-owe-us-taxes-in-puerto-rico' },
         { title: 'Estate Planning for Act 60 Relocatees', desc: 'Your mainland estate plan doesn\u2019t work in Puerto Rico. Forced heirship, unrecognized trusts, and no decree succession \u2014 the five risks Act 60 relocatees face and how to fix them.', url: '/resources/estate-planning-act-60-relocatees' },
-        { title: 'Ley 60: Gu\u00EDa para Inversionistas', desc: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.', url: '/resources/ley-60-guia-inversionistas', lang: 'es' }
+        { title: 'Ley 60: Gu\u00EDa para Inversionistas', desc: 'Gu\u00EDa completa de Ley 60 para inversionistas individuales. Requisitos de residencia, beneficios contributivos y errores comunes.', url: '/blog/ley-60-guia-inversionistas-puerto-rico', lang: 'es' }
       ]
     },
     {

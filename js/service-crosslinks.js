@@ -37,7 +37,7 @@
     "/espanol-ley-60": [
       {href:"/espanol-fideicomisos",text:"Fideicomisos en Puerto Rico",desc:"Protección patrimonial y fideicomisos bajo la Ley 219-2012"},
       {href:"/espanol-corporativo",text:"Servicios corporativos",desc:"Estructura jurídica para empresas bajo el Capítulo 3 de la Ley 60"},
-      {href:"/blog/ley-60-guia-inversionistas",text:"Guía Ley 60 para inversionistas",desc:"Análisis del Capítulo 2 y errores frecuentes de cumplimiento"},
+      {href:"/blog/ley-60-guia-inversionistas-puerto-rico",text:"Guía Ley 60 para inversionistas",desc:"Análisis del Capítulo 2 y errores frecuentes de cumplimiento"},
       {href:"/blog/tag/espanol",text:"Más artículos en español",desc:"Fideicomisos, sucesiones, Ley 60 y derecho corporativo"}
     ],
     "/espanol-fideicomisos": [

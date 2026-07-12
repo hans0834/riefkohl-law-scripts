@@ -161,10 +161,10 @@
       {url: '/blog/testamentary-trust-succession-disputes-puerto-rico', title: 'Testamentary & Succession Disputes'}
     ],
     'fideicomisos': [
-      {url: '/blog/fideicomiso-irrevocable-en-puerto-rico-guia-completa-bajo-la-ley-219-2012', title: 'Fideicomiso Irrevocable en Puerto Rico'},
-      {url: '/blog/planificacion-sucesoral-en-puerto-rico-lo-que-todo-residente-debe-saber', title: 'Planificaci\u00f3n Sucesoral en Puerto Rico'},
-      {url: '/blog/proceso-de-declaratoria-de-herederos-en-puerto-rico', title: 'Declaratoria de Herederos en Puerto Rico'},
-      {url: '/blog/ley-60-guia-para-inversionistas-individuales-que-se-mudan-a-puerto-rico', title: 'Ley 60: Gu\u00eda para Inversionistas'},
+      {url: '/blog/fideicomiso-irrevocable-puerto-rico-ley-219', title: 'Fideicomiso Irrevocable en Puerto Rico'},
+      {url: '/blog/planificacion-sucesoral-puerto-rico', title: 'Planificaci\u00f3n Sucesoral en Puerto Rico'},
+      {url: '/blog/declaratoria-de-herederos-puerto-rico', title: 'Declaratoria de Herederos en Puerto Rico'},
+      {url: '/blog/ley-60-guia-inversionistas-puerto-rico', title: 'Ley 60: Gu\u00eda para Inversionistas'},
       {url: '/blog/banking-insurance-trust-disputes-puerto-rico-es', title: 'Disputas Bancarias y de Seguros'},
       {url: '/blog/trust-validity-challenges-puerto-rico-es', title: 'Impugnaciones de Validez de Fideicomisos'}
     ]

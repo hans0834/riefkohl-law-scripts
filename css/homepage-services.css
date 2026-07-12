@@ -821,3 +821,8 @@ body.homepage .page-section.rl-section-collapsed .content-wrapper {
     transition: none !important;
   }
 }
+.rl-diff-accent-img{display:none!important}
+.rl-act60-inner{background:linear-gradient(135deg,#16213E 0%,#22315C 100%)!important}
+.rl-act60-inner h2{color:#F5F1E8!important}
+.rl-act60-inner p{color:rgba(245,241,232,.88)!important}
+@media(min-width:768px){.fe-block:has(.sqs-block-newsletter){grid-column:8/18!important}}

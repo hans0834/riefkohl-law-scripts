@@ -433,3 +433,21 @@ header.header {
   .rl-desktop-book { transition: none; }
   .rl-desktop-book:hover, .rl-desktop-book:focus-visible { transform: none; }
 }
+
+/* ===================================================================
+   Jul 12 2026 homepage/site polish
+   - Urgency banner: premium navy strip (was unstyled raw text)
+   - Accent (bark/concrete) image removed for minimalism
+   - Act 60 banner: navy gradient (was off-palette light blue)
+   - Newsletter block centered on desktop
+   - Footer: navy background (content was white-on-white/invisible)
+   =================================================================== */
+.rl-urgency-banner{display:block;max-width:1160px;margin:0 auto 10px;background:#16213E;color:#F5F1E8;text-align:center;padding:10px 22px;font-size:.83rem;line-height:1.5;border-radius:6px;box-sizing:border-box}
+.rl-urgency-banner a{color:#D4B96A;text-decoration:underline;text-underline-offset:2px}
+.rl-urgency-banner .rl-urgency-icon{color:#D4B96A}
+/* Footer completion: navy background (content was white-on-white/invisible) */
+#footer-sections{background:#16213E}
+#footer-sections .section-background{background:#16213E!important}
+#footer-sections .page-section{background:#16213E!important}
+#footer-sections .sqs-block-button-element--small{border-color:#BFA35D!important;color:#F5F1E8!important}
+#footer-sections hr{background:#BFA35D;opacity:.45}

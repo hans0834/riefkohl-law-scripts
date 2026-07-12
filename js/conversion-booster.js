@@ -304,14 +304,21 @@ function injectUrgencyBanner() {
     '<span><strong>Act 60 Alert:</strong> 0% capital gains rate for Individual Investors ends December 31, 2026. New decrees from 2027 receive 4% rate. ' +
     '<a href="/act-60-tax-incentives">Learn more \u2192</a></span>';
 
-  // Insert after the call banner
-  var callBanner = document.querySelector('.rl-call-banner');
-  if (callBanner && callBanner.nextSibling) {
-    callBanner.parentNode.insertBefore(banner, callBanner.nextSibling);
+  // Insert at the top of the first content section so it clears the
+  // absolutely-positioned site header at every viewport width. (Inserting
+  // next to the call banner rendered it underneath the logo.)
+  var firstContent = document.querySelector('#sections .page-section .content-wrapper');
+  if (firstContent) {
+    firstContent.insertBefore(banner, firstContent.firstChild);
   } else {
-    var header = document.querySelector('header') || document.querySelector('.header');
-    if (header && header.nextSibling) {
-      header.parentNode.insertBefore(banner, header.nextSibling);
+    var callBanner = document.querySelector('.rl-call-banner');
+    if (callBanner && callBanner.nextSibling) {
+      callBanner.parentNode.insertBefore(banner, callBanner.nextSibling);
+    } else {
+      var header = document.querySelector('header') || document.querySelector('.header');
+      if (header && header.nextSibling) {
+        header.parentNode.insertBefore(banner, header.nextSibling);
+      }
     }
   }
 }

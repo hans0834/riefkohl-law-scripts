@@ -664,36 +664,18 @@ function transformTrustPricing(htmlDiv) {
   // Build section heading
   var heading = el('h2', 'rl-rd-section-heading', 'Estate Planning & Puerto Rico Trusts');
 
-  // Build tier grid
-  var grid = el('div', 'rl-rd-tier-grid');
-  tiers.forEach(function(tier, idx) {
-    var card = el('div', 'rl-rd-tier-card' + (idx === 1 ? ' rl-rd-popular' : ''));
-    var maxItems = idx < 2 ? 5 : 4; // Show fewer items on higher tiers to keep cards balanced
-    var displayItems = tier.includes.slice(0, maxItems);
-    var moreCount = tier.includes.length - maxItems;
-
-    var html = '';
-    if (idx === 1) html += '<div class="rl-rd-popular-badge">Most Popular</div>';
-    html += '<div class="rl-rd-tier-label">' + escHtml(tier.label) + '</div>';
-    html += '<h3>' + escHtml(tier.name) + '</h3>';
-    // Hardcoded "From" prices — these are the canonical display prices
-    // and must not depend on Squarespace editor content
-    var TIER_PRICES = ['From $1,875', 'From $3,000', 'From $4,500', 'From $7,500'];
-    var priceDisplay = TIER_PRICES[idx] || tier.price;
-    html += '<div class="rl-rd-price">' + escHtml(priceDisplay) + '</div>';
-    html += '<ul>';
-    displayItems.forEach(function(item) {
-      html += '<li>' + escHtml(item) + '</li>';
-    });
-    if (moreCount > 0) {
-      html += '<li style="color:var(--rl-gold-dark);font-weight:600">+ ' + moreCount + ' more included</li>';
-    }
-    html += '</ul>';
-    html += '<a class="rl-rd-tier-cta" href="/calendly">Get Started</a>';
-
-    card.innerHTML = html;
-    grid.appendChild(card);
-  });
+  // Single flat-fee starting-price statement (replaces the per-tier pricing grid).
+  // Representative-example framing: the actual fee is scoped per matter.
+  var grid = el('div', 'rl-rd-price-statement');
+  grid.setAttribute('style', 'max-width:560px;margin:32px auto 40px;padding:0 20px;');
+  grid.innerHTML =
+    '<div class="rl-rd-tier-card" style="text-align:center;align-items:center;">' +
+      '<div class="rl-rd-tier-label">Flat-Fee Pricing</div>' +
+      '<h3 style="min-height:auto;">Puerto Rico Trusts &amp; Estate Planning</h3>' +
+      '<div class="rl-rd-price" style="width:100%;font-size:1.6rem;">Flat fees from $1,800</div>' +
+      '<p style="font-size:.82rem;color:var(--rl-warm-600);line-height:1.55;margin:0 0 18px;">The prices shown are representative examples that reflect what many engagements look like. The fee for each matter is determined based on your specific circumstances.</p>' +
+      '<a class="rl-rd-tier-cta" href="/calendly" style="width:100%;box-sizing:border-box;">Book a Consultation</a>' +
+    '</div>';
 
   // Insert after trust header area
   var insertPoint = kids[trustHeaderIdx];

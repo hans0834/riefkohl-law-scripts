@@ -454,23 +454,14 @@ function injectAct60Sections() {
   container.innerHTML +=
     '<h2 class="rl-act60-section-title">Transparent, Flat-Fee Pricing</h2>' +
     '<p class="rl-act60-section-subtitle">No hourly billing. Clear flat-fee pricing discussed up front.</p>' +
-    '<div class="rl-act60-pricing">' +
-      '<div class="rl-act60-price-card">' +
-        '<h4>Decree Application</h4>' +
-        '<div class="rl-act60-price-amount">$5,000\u2013$7,500</div>' +
-        '<p>Complete application preparation, filing, and follow-up with DDEC</p>' +
+    '<div class="rl-act60-pricing" style="max-width:560px;margin:24px auto 0;">' +
+      '<div class="rl-act60-price-card" style="background:var(--rl-white,#fff);border:1.5px solid var(--rl-warm-200,#e7e2d8);border-radius:var(--rl-r,10px);padding:28px 24px;text-align:center;">' +
+        '<h4 style="font-size:1rem;color:var(--rl-navy,#1a2033);margin:0 0 12px;">Act 60 Decree Application &amp; Advisory</h4>' +
+        '<div class="rl-act60-price-amount" style="font-family:var(--heading-font-font-family,Georgia,serif);font-size:1.6rem;font-weight:700;color:var(--rl-gold-dark,#a3842f);margin:0 0 12px;">Flat fees from $1,700</div>' +
+        '<p style="font-size:.85rem;color:var(--rl-warm-600,#5b5647);line-height:1.5;margin:0;">Excludes U.S. residency and income-sourcing tax advice, which are scoped and quoted separately.</p>' +
       '</div>' +
-      '<div class="rl-act60-price-card">' +
-        '<h4>Annual Compliance Review</h4>' +
-        '<div class="rl-act60-price-amount">$2,500\u2013$4,000</div>' +
-        '<p>Yearly reporting, residency audit, and compliance verification</p>' +
-      '</div>' +
-      '<div class="rl-act60-price-card">' +
-        '<h4>IRS Audit Defense</h4>' +
-        '<div class="rl-act60-price-amount">$15,000+</div>' +
-        '<p>Full representation before IRS on Act 60 income sourcing and residency challenges</p>' +
-      '</div>' +
-    '</div>';
+    '</div>' +
+    '<p class="rl-act60-price-disclaimer" style="max-width:560px;margin:16px auto 0;text-align:center;font-size:.82rem;color:var(--rl-warm-600,#5b5647);line-height:1.55;">The prices shown are representative examples that reflect what many engagements look like. The fee for each matter is determined based on your specific circumstances.</p>';
 
   // --- COUNTDOWN TIMER (#18) + RATE COMPARISON (#19) ---
   container.innerHTML +=

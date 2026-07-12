@@ -143,8 +143,8 @@ riefkohl-law-scripts/               244 files total
 │   └── session-handoffs/            Per-session handoff memos
 ├── tools/                           6 Python scripts
 ├── data/                            JSON metadata + Squarespace XML imports
-├── media/                           Illustrations (LFS), logo, PDFs
-├── files/                           PDFs served via GitHub Pages
+├── media/                           Illustrations, logo (Git LFS — NOT servable via Pages)
+├── files/                           Publicly served assets (PDFs, images) — never LFS
 ├── DEPLOYMENT.md                    Safety rules and deployment workflow
 ├── SETUP-GUIDE.md                   One-time setup instructions
 ├── README.md                        Project overview

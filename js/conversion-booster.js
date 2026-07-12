@@ -307,7 +307,7 @@ function injectUrgencyBanner() {
   // Insert at the top of the first content section so it clears the
   // absolutely-positioned site header at every viewport width. (Inserting
   // next to the call banner rendered it underneath the logo.)
-  var firstContent = document.querySelector('#sections .page-section .content-wrapper');
+  var firstContent = document.querySelector('#sections .page-section .sqs-html-content');
   if (firstContent) {
     firstContent.insertBefore(banner, firstContent.firstChild);
   } else {

@@ -111,7 +111,7 @@ var SEO = {
           'name': 'How much does it cost to set up a trust in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trust costs vary by complexity. A basic irrevocable trust typically costs $3,000\u2013$7,500 in attorney fees, plus notarial execution fees ($300\u2013$2,000) and ODIN registration ($50\u2013$100). More complex structures\u2014multi-generational trusts, asset protection trusts, or trusts integrated with Act 60 planning\u2014can range from $10,000 to $35,000+. Riefkohl Law provides flat-fee quotes before work begins.'
+            'text': 'Puerto Rico trust costs vary by complexity. At Riefkohl Law, attorney fees for a trust start at a flat $1,800 and increase for more complex structures\u2014multi-generational trusts, asset protection trusts, or trusts integrated with Act 60 planning. These figures are representative examples of what many engagements look like; the fee for each matter is determined by your specific circumstances. Separate third-party costs apply, including notarial execution fees ($300\u2013$2,000) and ODIN registration ($50\u2013$100). You receive a flat-fee quote before work begins.'
           }
         },
         {
@@ -261,7 +261,7 @@ var SEO = {
           'name': 'How much does an Act 60 lawyer cost in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 services. Decree applications typically range from $5,000 to $7,500, annual compliance reviews from $2,500 to $4,000, and IRS audit defense starts at $15,000 depending on complexity. All fees are quoted upfront before work begins — no hourly billing or hidden charges.'
+            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 services. Decree application and advisory work starts at a flat $1,700, excluding U.S. residency and income-sourcing tax advice, which are scoped and quoted separately. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. Ongoing compliance and IRS audit defense are quoted separately. All fees are quoted upfront before work begins — no hourly billing or hidden charges.'
           }
         },
         {
@@ -328,7 +328,7 @@ var SEO = {
           'name': 'How much does an Act 60 export services decree cost?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 Chapter 3 export-services decrees, typically ranging from $5,000 to $7,500 for the application, with annual compliance reviews from $2,500 to $4,000. All fees are quoted upfront before work begins. Government filing fees and annual reports are billed separately.'
+            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 Chapter 3 export-services decrees. Decree application and advisory work starts at a flat $1,700, excluding U.S. residency and income-sourcing tax advice, which are scoped and quoted separately. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. All fees are quoted upfront before work begins. Government filing fees, annual reports, and ongoing compliance are billed separately.'
           }
         }
       ]
@@ -1050,7 +1050,7 @@ var SEO = {
   },
   '/resources/trust-costs-puerto-rico': {
     h1: 'Trust Costs in Puerto Rico: Creation, Administration & Termination',
-    meta: 'What a living trust costs in Puerto Rico: attorney fees ($1,500\u2013$35,000+), notarial fees, ODIN registration, and the hidden costs most firms don\u2019t disclose.',
+    meta: 'What a Puerto Rico living trust costs: flat-fee attorney pricing from $1,800, plus notarial fees, ODIN registration, and the costs most firms don\u2019t disclose.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -1060,7 +1060,7 @@ var SEO = {
           'name': 'How much does it cost to create a trust in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Attorney fees for creating a Puerto Rico trust typically range from $1,500 for a simple irrevocable trust to $35,000+ for complex multi-generational or Act 60-integrated structures. Additional costs include notarial execution fees ($300\u2013$2,000), ODIN registration ($50\u2013$100), and any title transfer fees for real property. Riefkohl Law provides flat-fee quotes upfront.'
+            'text': 'At Riefkohl Law, attorney fees for creating a Puerto Rico trust start at a flat $1,800 for a straightforward irrevocable trust and increase for complex multi-generational or Act 60-integrated structures. These figures are representative examples of what many engagements look like; the fee for each matter is determined by your specific circumstances. Additional third-party costs include notarial execution fees ($300\u2013$2,000), ODIN registration ($50\u2013$100), and any title transfer fees for real property. You receive a flat-fee quote before work begins.'
           }
         },
         {
@@ -1488,7 +1488,7 @@ var SEO = {
           'name': '\u00bfCu\u00e1nto cuesta crear un fideicomiso en Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Los honorarios de abogado var\u00edan seg\u00fan la complejidad: desde $1,500\u2013$3,500 para un fideicomiso inter vivos sencillo hasta $7,500\u2013$15,000 o m\u00e1s para estructuras complejas. A esto se suman los aranceles notariales ($200\u2013$800), la inscripci\u00f3n en el Registro de la Propiedad si hay bienes inmuebles y los sellos de ODIN. Riefkohl Law ofrece precios de honorario fijo.'
+            'text': 'En Riefkohl Law, los honorarios de abogado comienzan en una tarifa fija de $1,800 para un fideicomiso sencillo y aumentan seg\u00fan la complejidad de la estructura (fideicomisos multigeneracionales, de protecci\u00f3n de activos o integrados con la Ley 60). Estas cifras son ejemplos representativos de lo que reflejan muchos encargos; el honorario de cada caso se determina seg\u00fan sus circunstancias particulares. A esto se suman costos de terceros: los aranceles notariales ($200\u2013$800), la inscripci\u00f3n en el Registro de la Propiedad si hay bienes inmuebles y los sellos de ODIN.'
           }
         },
         {
@@ -1890,7 +1890,7 @@ var SEO = {
           'name': 'How much does it cost to bundle Act 60 planning with a Puerto Rico estate plan?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'We quote flat fees after a free initial call, not hourly billing. A Puerto Rico trust-based estate plan runs $7,500–$15,000 and a will-based plan $3,500–$6,000; Act 60 decree work is scoped separately based on whether you pursue the Individual Resident Investor or Export Services chapter. Handled together, they are coordinated as one engagement so you are not paying two firms to duplicate the same residency and asset analysis.'
+            'text': 'We quote flat fees after a free initial call, not hourly billing. A Puerto Rico trust-based estate plan starts at $1,800, with a will-based plan as a lower-cost alternative; Act 60 decree work starts at $1,700 (excluding U.S. residency and income-sourcing tax advice, which are scoped separately) and depends on whether you pursue the Individual Resident Investor or Export Services chapter. These are representative examples of what many engagements look like; the fee for each matter is determined by your specific circumstances. Handled together, they are coordinated as one engagement so you are not paying two firms to duplicate the same residency and asset analysis.'
           }
         }
       ]
@@ -1941,7 +1941,7 @@ var SEO = {
           'name': '¿Cuánto cuesta combinar la planificación de la Ley 60 con un plan patrimonial de Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Cotizamos honorarios fijos tras una llamada inicial gratuita, no facturación por hora. Un plan patrimonial de Puerto Rico basado en fideicomiso cuesta $7,500–$15,000 y uno basado en testamento $3,500–$6,000; el trabajo del decreto de la Ley 60 se cotiza aparte. Cuando se manejan juntos, se coordinan como un solo encargo para que no pague a dos bufetes por duplicar el mismo análisis de residencia y de bienes.'
+            'text': 'Cotizamos honorarios fijos tras una llamada inicial gratuita, no facturación por hora. Un plan patrimonial de Puerto Rico basado en fideicomiso comienza en $1,800, y uno basado en testamento es una alternativa de menor costo; el trabajo del decreto de la Ley 60 comienza en $1,700 (excluyendo la asesoría sobre residencia en EE. UU. y sobre la tributación por fuente del ingreso, que se cotizan aparte). Estas cifras son ejemplos representativos de lo que reflejan muchos encargos; el honorario de cada caso se determina según sus circunstancias particulares. Cuando se manejan juntos, se coordinan como un solo encargo para que no pague a dos bufetes por duplicar el mismo análisis de residencia y de bienes.'
           }
         }
       ]

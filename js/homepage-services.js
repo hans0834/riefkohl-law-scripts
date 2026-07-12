@@ -569,7 +569,7 @@ function transformServicesHero(htmlDiv) {
 
 /* ----- Trust Pricing Tiers ----- */
 function transformTrustPricing(htmlDiv) {
-  if (qs('.rl-rd-tier-grid')) return;
+  if (qs('.rl-rd-price-statement')) return;
 
   var kids = Array.from(htmlDiv.children);
 

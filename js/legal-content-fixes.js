@@ -1231,7 +1231,7 @@ function addBookingQualifier() {
       var note = document.createElement('p');
       note.id = 'rl-booking-qualifier';
       note.style.cssText = 'margin:10px auto 0;max-width:640px;font-size:.8rem;color:#6c757d;line-height:1.5;';
-      note.innerHTML = 'This free 15-minute call is an initial consultation to understand your situation and outline possible next steps. It does not create an attorney-client relationship and is not legal advice; any representation begins only with a signed engagement agreement.';
+      note.innerHTML = 'This free 30-minute call is an initial consultation to understand your situation and outline possible next steps. It does not create an attorney-client relationship and is not legal advice; any representation begins only with a signed engagement agreement.';
       els[i].parentNode.insertBefore(note, els[i].nextSibling);
       return;
     }

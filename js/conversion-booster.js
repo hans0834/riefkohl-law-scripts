@@ -237,13 +237,13 @@ function injectPageCTAs() {
     },
     '/about': {
       heading: 'Ready to Discuss Your Legal Needs?',
-      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014flat fee, no surprises.',
+      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014with clear flat-fee pricing for most matters.',
       btn: 'Book Your Free Strategy Call',
       secondary: 'Or call (787) 236-1657'
     },
     '/about-us': {
       heading: 'Ready to Discuss Your Legal Needs?',
-      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014flat fee, no surprises.',
+      body: 'Schedule a free 30-minute strategy call. We\'ll review your situation, answer your questions, and outline a clear path forward\u2014with clear flat-fee pricing for most matters.',
       btn: 'Book Your Free Strategy Call',
       secondary: 'Or call (787) 236-1657'
     },
@@ -334,7 +334,7 @@ function injectAct60Hero() {
         '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Decree Application Prepared & Filed</div>' +
         '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Income Sourcing Structured for IRS Scrutiny</div>' +
         '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Annual Compliance Handled</div>' +
-        '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Flat-Fee Pricing \u2014 No Surprises</div>' +
+        '<div class="rl-act60-hero-benefit"><span class="rl-act60-hero-benefit-icon">\u2713</span> Clear Flat-Fee Pricing</div>' +
       '</div>' +
       '<a href="' + bookUrl + '" class="rl-act60-hero-cta">Book Your Free Act 60 Strategy Call</a>' +
       '<p class="rl-act60-hero-secondary">Or call <a href="' + PHONE_TEL + '">' + PHONE + '</a></p>' +
@@ -374,7 +374,7 @@ function injectAct60MidCTA() {
     midCta.className = 'rl-mid-cta';
     midCta.innerHTML =
       '<h3>Not Sure Which Act 60 Program Fits Your Situation?</h3>' +
-      '<p>Chapter 3 for export businesses (4% corporate rate) or Chapter 2 for individual investors (capital gains benefits)\u2014a 15-minute call will clarify your best path.</p>' +
+      '<p>Chapter 3 for export businesses (4% corporate rate) or Chapter 2 for individual investors (capital gains benefits)\u2014a 30-minute call will clarify your best path.</p>' +
       '<a href="' + bookUrl + '">Get Your Free Eligibility Assessment</a>';
 
     // Insert before the Chapter 2 heading (or its parent block)
@@ -453,7 +453,7 @@ function injectAct60Sections() {
   // --- PRICING (#10) ---
   container.innerHTML +=
     '<h2 class="rl-act60-section-title">Transparent, Flat-Fee Pricing</h2>' +
-    '<p class="rl-act60-section-subtitle">No hourly billing. No surprises. You know the cost before we begin.</p>' +
+    '<p class="rl-act60-section-subtitle">No hourly billing. Clear flat-fee pricing discussed up front.</p>' +
     '<div class="rl-act60-pricing">' +
       '<div class="rl-act60-price-card">' +
         '<h4>Decree Application</h4>' +
@@ -608,7 +608,7 @@ function injectExitPopup() {
     '<div class="rl-exit-popup">' +
       '<button class="rl-exit-close" aria-label="Close">\u00D7</button>' +
       '<h3>Before You Go\u2014</h3>' +
-      '<p>The 0% capital gains rate expires December 31, 2026. A 15-minute call is all it takes to find out if you qualify and start the process.</p>' +
+      '<p>The 0% capital gains rate expires December 31, 2026. A 30-minute call is all it takes to find out if you qualify and start the process.</p>' +
       '<a href="' + bookUrl + '" class="rl-exit-cta">Book Your Free Strategy Call</a>' +
       '<span class="rl-exit-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> New decrees from 2027 receive 4% rate</span>' +
     '</div>';
@@ -731,7 +731,7 @@ function injectPersonaPages() {
         'Must not have had prior Act 20/22/60 revocation'
       ],
       ctaHeading: 'Does Your Business Qualify?',
-      ctaBody: 'Most service businesses with non-PR clients are eligible. A 15-minute call will confirm your eligibility and outline the application process.',
+      ctaBody: 'Most service businesses with non-PR clients are eligible. A 30-minute call will confirm your eligibility and outline the application process.',
       ctaBtn: 'Book Your Free Export Services Consultation'
     },
     '/act-60-individual-investor': {

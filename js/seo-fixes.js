@@ -2625,7 +2625,7 @@ var SEO = {
           'name': 'Why does Riefkohl Law use flat-fee pricing?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Flat-fee pricing aligns our incentives with yours. You know the full cost upfront before any work begins, so there are no surprises or escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
+            'text': 'Flat-fee pricing aligns our incentives with yours. For most matters you know the cost up front before work begins — no escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
           }
         },
         {

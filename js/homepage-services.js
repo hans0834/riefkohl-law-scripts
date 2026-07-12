@@ -98,7 +98,7 @@ function transformHero(htmlDiv, sec) {
   var hero = el('div', 'rl-rd-hero');
 
   // Visual headline: client-benefit-focused (SEO H1 is set separately by seo-fixes.js)
-  var heroH1 = el('h1', '', 'Protect Your Family\u2019s Wealth with a Puerto Rico Trust \u2014 Flat Fee, No Surprises');
+  var heroH1 = el('h1', '', 'Protect Your Family\u2019s Wealth with a Puerto Rico Trust \u2014 Clear Flat-Fee Pricing');
   hero.appendChild(heroH1);
 
   var heroP = el('p', '', 'Estate planning, irrevocable trusts, Act\u00A060 advisory, and business law from a DLA\u00A0Piper\u2013trained attorney in San Juan. Your first consultation is free.');
@@ -110,7 +110,7 @@ function transformHero(htmlDiv, sec) {
   // Primary CTA
   var ctaLink = el('a', 'rl-rd-cta-btn');
   ctaLink.href = '/calendly';
-  ctaLink.textContent = 'Get Your Free 15-Minute Case Review';
+  ctaLink.textContent = 'Get Your Free 30-Minute Case Review';
   ctaWrap.appendChild(ctaLink);
 
   // Secondary CTA — lower commitment
@@ -276,12 +276,12 @@ function transformHowItWorks(htmlDiv) {
     {
       num: '1',
       title: 'Book Your Free Call',
-      desc: 'Schedule a 15-minute consultation. Tell us what you need \u2014 we\u2019ll listen and assess your options.'
+      desc: 'Schedule a free 30-minute consultation. Tell us what you need \u2014 we\u2019ll listen and assess your options.'
     },
     {
       num: '2',
       title: 'Get Your Custom Plan',
-      desc: 'We\u2019ll outline your options, timeline, and exact flat-fee cost. No surprises, no hourly billing.'
+      desc: 'We\u2019ll outline your options, timeline, and a clear flat-fee quote for most matters. No hourly billing.'
     },
     {
       num: '3',
@@ -508,7 +508,7 @@ function transformCtaSection(htmlDiv) {
   var cta = el('div', 'rl-rd-cta-section');
   cta.innerHTML =
     '<h2 style="color:#fff !important">Ready to Protect What You\u2019ve Built?</h2>' +
-    '<p style="color:rgba(255,255,255,.92) !important">Whether you\u2019re planning your estate, forming a business, or relocating to Puerto Rico, we\u2019re here to help \u2014 with clear pricing and no surprises.</p>' +
+    '<p style="color:rgba(255,255,255,.92) !important">Whether you\u2019re planning your estate, forming a business, or relocating to Puerto Rico, we\u2019re here to help \u2014 with clear pricing discussed up front.</p>' +
     '<a class="rl-rd-cta-btn" href="/calendly">Get Your Free Case Review</a>' +
     '<p style="color:rgba(255,255,255,.92) !important;font-size:.9rem;margin-top:14px;">Or call: <a href="tel:+17872361657" style="color:#bfa35d;font-weight:600;">(787) 236-1657</a></p>';
 
@@ -874,7 +874,7 @@ function injectFlatFeeComparison(htmlDiv) {
     '<div class="rl-compare-row">' +
       '<div class="rl-compare-feature">Budget certainty</div>' +
       '<div class="rl-compare-them"><span class="rl-compare-x">\u2717</span> Invoices vary month to month</div>' +
-      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> One price, no surprises</div>' +
+      '<div class="rl-compare-us"><span class="rl-compare-check">\u2713</span> Clear flat-fee pricing</div>' +
     '</div>' +
     '<div class="rl-compare-row">' +
       '<div class="rl-compare-feature">Technology</div>' +

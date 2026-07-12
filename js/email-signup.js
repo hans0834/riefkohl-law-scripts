@@ -1,6 +1,7 @@
 /* Riefkohl Law — Auto-Injected Newsletter Bar + Blog Lead Magnets */
 /* Source: email-signup-form.html */
-/* Signup CTAs link to lead-magnet PDF downloads and the booking page (no form POST). */
+/* Magnet CTAs route to the eligibility quiz, booking, or a Mailchimp */
+/* subscribe form once MAILCHIMP_ACTION_URL is set (else booking link). */
 
 (function(){
 'use strict';
@@ -10,77 +11,86 @@ var IS_ES = PATH.indexOf('/espanol') === 0 || PATH.indexOf('/recursos-') === 0;
 var IS_ACT60_PAGE = PATH.indexOf('/act-60') > -1 || PATH.indexOf('/ley-60') > -1 || PATH.indexOf('/cpa-referral') > -1;
 var IS_CPA_REF = typeof window.rlIsCpaReferral === 'function' && window.rlIsCpaReferral();
 
+/* ===== EMAIL CAPTURE (Mailchimp) =====
+ * Paste the Mailchimp embedded-form action URL between the quotes to turn the
+ * newsletter CTAs (the non-PDF magnets) into a real subscribe form. Leave it
+ * empty ('') to keep the current booking-link fallback. The URL looks like:
+ *   https://riefkohllaw.us21.list-manage.com/subscribe/post?u=XXXX&id=YYYY
+ * (Mailchimp > Audience > Signup forms > Embedded form > copy the <form action>.)
+ * On submit the form pushes an `email_signup_submit` event to the dataLayer,
+ * which the live GTM container already forwards to GA4 — no GTM change needed.
+ */
+var MAILCHIMP_ACTION_URL = '';
+
 /* ===== LEAD MAGNET CONFIGURATION ===== */
 /* Select the most relevant lead magnet based on page context and referral source */
-/* Magnets with a download_url deliver a PDF directly. Magnets without route to booking. */
-var PDF_BASE = 'https://hans0834.github.io/riefkohl-law-scripts/files';
+/* Magnets with a link_url route there (e.g. the eligibility quiz); others route to booking. */
 var LEAD_MAGNETS = {
   /* Act 60 Tax Incentives — top SEO landing page, eligibility-focused */
   eligibility: {
-    heading_en: 'Free PDF: The Act 60 Eligibility Checklist',
-    heading_es: 'PDF Gratuito: Lista de Verificación de Elegibilidad para la Ley 60',
-    desc_en: 'A 4-page screening tool covering bona fide PR residency, Chapter 2 vs Chapter 3, and the disqualifiers that stop applications cold. Read it before you book a call.',
-    desc_es: 'Herramienta de evaluación de 4 páginas: residencia bona fide en PR, Capítulo 2 vs Capítulo 3, y los factores que descalifican aplicaciones. Léala antes de coordinar consulta.',
-    badge_en: 'Free PDF',
-    badge_es: 'PDF Gratuito',
-    btn_en: 'Download the Checklist (PDF)',
-    btn_es: 'Descargar la Lista (PDF)',
-    download_url: PDF_BASE + '/act60-eligibility-checklist.pdf'
+    heading_en: 'Are You Actually Eligible for Act 60?',
+    heading_es: '¿Es Realmente Elegible para la Ley 60?',
+    desc_en: 'Bona fide PR residency, Chapter 2 vs Chapter 3, and the disqualifiers that stop applications cold — find out where you stand in five minutes, before you book a call.',
+    desc_es: 'Residencia bona fide en PR, Capítulo 2 vs Capítulo 3, y los factores que descalifican solicitudes — descubra dónde está parado en cinco minutos, antes de coordinar consulta.',
+    badge_en: 'Act 60',
+    badge_es: 'Ley 60',
+    btn_en: 'Take the Eligibility Quiz',
+    btn_es: 'Tomar la Evaluación de Elegibilidad',
+    link_url: '/resources/act-60-eligibility-quiz'
   },
   /* CPA-referred visitors on any page */
   cpa: {
-    heading_en: 'Free Guide: What Your Act 60 CPA Can\'t Do For You',
-    heading_es: 'Guía Gratuita: Lo Que Su Contador de Ley 60 No Puede Hacer Por Usted',
+    heading_en: 'What Your Act 60 CPA Can\'t Do For You',
+    heading_es: 'Lo Que Su Contador de Ley 60 No Puede Hacer Por Usted',
     desc_en: 'The 6 legal needs every Act 60 decree holder has — that only an attorney can address. Trusts, forced heirship, decree succession, and more.',
     desc_es: 'Las 6 necesidades legales que todo decreto Ley 60 tiene — que solo un abogado puede atender.',
     badge_en: 'CPA Clients',
     badge_es: 'Clientes CPA',
-    btn_en: 'Get the Guide',
-    btn_es: 'Obtener la Guía'
+    btn_en: 'Book a Free Strategy Call',
+    btn_es: 'Agendar Consulta Gratis'
   },
   /* Act 38-2026 / other Act 60 pages (resource center, residency test, etc.) */
   act38: {
-    heading_en: 'Free Checklist: 7 Estate Planning Steps After the 2055 Extension',
-    heading_es: 'Lista de Verificación: 7 Pasos de Planificación Sucesoral Tras la Extensión al 2055',
-    desc_en: 'Act 38-2026 extended Act 60 to 2055. Is your estate plan ready for a 30-year horizon? Get the checklist.',
-    desc_es: 'La Ley 38-2026 extendió la Ley 60 hasta 2055. ¿Está listo su plan sucesoral para un horizonte de 30 años?',
+    heading_en: 'Estate Planning After the 2055 Extension',
+    heading_es: 'Planificación Sucesoral Tras la Extensión al 2055',
+    desc_en: 'Act 38-2026 extended Act 60 to 2055. Is your estate plan ready for a 30-year horizon? Review it with an attorney in a free strategy call.',
+    desc_es: 'La Ley 38-2026 extendió la Ley 60 hasta 2055. ¿Está listo su plan sucesoral para un horizonte de 30 años? Revíselo con un abogado en una consulta gratuita.',
     badge_en: 'Act 38-2026',
     badge_es: 'Ley 38-2026',
-    btn_en: 'Get the Checklist',
-    btn_es: 'Obtener la Lista'
+    btn_en: 'Book a Free Strategy Call',
+    btn_es: 'Agendar Consulta Gratis'
   },
   /* Pre-move checklist for homepage and general pages */
   premove: {
-    heading_en: 'Free: The Pre-Move Puerto Rico Legal Checklist',
-    heading_es: 'Gratis: Lista Legal Pre-Mudanza a Puerto Rico',
-    desc_en: '12 legal steps to complete before, during, and after your move to PR. Don\'t leave your estate plan, business structure, or compliance to chance.',
-    desc_es: '12 pasos legales para completar antes, durante y después de su mudanza a PR.',
+    heading_en: 'Moving to Puerto Rico? Plan the Legal Side First',
+    heading_es: '¿Se Muda a Puerto Rico? Planifique lo Legal Primero',
+    desc_en: 'There are legal steps before, during, and after your move — estate plan, business structure, compliance. Walk through yours in a free 30-minute strategy call.',
+    desc_es: 'Hay pasos legales antes, durante y después de su mudanza — plan sucesoral, estructura de negocio y cumplimiento. Repáselos en una consulta gratuita de 30 minutos.',
     badge_en: 'Moving to PR?',
     badge_es: '¿Mudándose a PR?',
-    btn_en: 'Get the Checklist',
-    btn_es: 'Obtener la Lista'
+    btn_en: 'Book a Free Strategy Call',
+    btn_es: 'Agendar Consulta Gratis'
   },
   /* Default trust planning checklist */
   default: {
-    heading_en: 'Free: Puerto Rico Trust Planning Checklist',
-    heading_es: 'Descarga Gratuita: Lista de Verificación para Fideicomisos en Puerto Rico',
-    desc_en: '7 essential steps to take before meeting with an estate planning attorney. Get the checklist and receive weekly Puerto Rico legal insights.',
-    desc_es: '7 pasos esenciales antes de reunirse con un abogado de planificación patrimonial. Obtenga la lista y reciba estrategias legales semanales sobre Puerto Rico.',
-    badge_en: 'Free Download',
-    badge_es: 'Guía Gratuita',
-    btn_en: 'Get the Checklist',
-    btn_es: 'Obtener la Lista'
+    heading_en: 'Puerto Rico Legal Insights, Weekly',
+    heading_es: 'Estrategias Legales de Puerto Rico, Cada Semana',
+    desc_en: 'Estate planning, trusts, and Act 60 strategies — practical Puerto Rico legal insights each week. Prefer to talk? Your first strategy call is free.',
+    desc_es: 'Planificación patrimonial, fideicomisos y Ley 60 — estrategias prácticas cada semana. ¿Prefiere hablar? Su primera consulta es gratis.',
+    badge_en: 'Newsletter',
+    badge_es: 'Boletín',
+    btn_en: 'Book a Free Strategy Call',
+    btn_es: 'Agendar Consulta Gratis'
   }
 };
 
 var IS_HOMEPAGE = PATH === '/' || PATH === '/espanol';
-/* English Act 60 landing page: gets the downloadable eligibility checklist PDF.
- * /espanol-ley-60 is intentionally excluded — Spanish PDF version is a future item. */
+/* English Act 60 landing page: gets the eligibility-quiz inline CTA. */
 var IS_ACT60_LANDING = PATH === '/act-60-tax-incentives';
 
 function getLeadMagnet() {
   if (IS_CPA_REF) return LEAD_MAGNETS.cpa;
-  /* Top Act 60 landing pages get the eligibility checklist (downloadable PDF) */
+  /* Top Act 60 landing page gets the eligibility-quiz magnet */
   if (IS_ACT60_LANDING) return LEAD_MAGNETS.eligibility;
   if (IS_ACT60_PAGE) return LEAD_MAGNETS.act38;
   if (IS_HOMEPAGE) return LEAD_MAGNETS.premove;
@@ -88,15 +98,15 @@ function getLeadMagnet() {
 }
 
 /* Resolve the action button for a magnet:
- *  - If magnet has download_url → button downloads the PDF (target=_blank, GTM event).
+ *  - If magnet has link_url → button routes there (e.g. the eligibility quiz).
  *  - Otherwise → button routes to the booking page.
  */
 function getMagnetCTA(magnet) {
-  if (magnet.download_url) {
+  if (magnet.link_url) {
     return {
-      url: magnet.download_url,
-      text: IS_ES ? (magnet.btn_es || 'Descargar') : (magnet.btn_en || 'Download'),
-      isDownload: true
+      url: magnet.link_url,
+      text: IS_ES ? (magnet.btn_es || 'Ver más') : (magnet.btn_en || 'Learn more'),
+      isDownload: false
     };
   }
   return {
@@ -104,6 +114,74 @@ function getMagnetCTA(magnet) {
     text: IS_ES ? 'Agendar Consulta Gratis' : 'Book a Free Strategy Call',
     isDownload: false
   };
+}
+
+/* ===== REAL EMAIL CAPTURE (Mailchimp) ===== */
+
+/* True when this magnet is a newsletter offer (no PDF) AND a provider URL is set. */
+function emailCaptureEnabled(magnet) {
+  return !magnet.link_url && !!MAILCHIMP_ACTION_URL;
+}
+
+/* Markup for the subscribe form. Reuses the existing .rl-signup-* CSS classes. */
+function signupFormHtml() {
+  var ph = IS_ES ? 'Su correo electrónico' : 'Your email address';
+  var btn = IS_ES ? 'Suscribirse' : 'Subscribe';
+  var ok = IS_ES
+    ? '¡Gracias! Revise su correo para confirmar la suscripción.'
+    : 'Thanks! Check your inbox to confirm your subscription.';
+  var priv = IS_ES ? 'Sin spam. Cancele cuando quiera.' : 'No spam. Unsubscribe anytime.';
+  /* action is set so the form still posts if JS fails; the handler intercepts it. */
+  return '<form class="rl-signup-form" action="' + MAILCHIMP_ACTION_URL.replace(/&amp;/g, '&') + '" method="post" target="_blank" novalidate>' +
+           '<input type="email" name="EMAIL" class="rl-signup-input" placeholder="' + ph + '" required aria-label="' + ph + '">' +
+           '<button type="submit" class="rl-signup-btn">' + btn + '</button>' +
+         '</form>' +
+         '<div class="rl-signup-success" role="status" style="display:none;">' + ok + '</div>' +
+         '<p class="rl-signup-privacy">' + priv + '</p>';
+}
+
+/* Attach the submit handler to a .rl-signup-form inside `scope`. */
+function wireSignupForm(scope) {
+  var form = scope.querySelector('.rl-signup-form');
+  if (!form) return;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var input = form.querySelector('input[type="email"]');
+    var email = input ? input.value.trim() : '';
+    if (!email) return;
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
+
+    /* GA4 conversion event (GTM "CE - conversion events" trigger forwards it). */
+    if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+      window.dataLayer.push({
+        event: 'email_signup_submit',
+        page_path: PATH,
+        lang: IS_ES ? 'es' : 'en'
+      });
+    }
+
+    /* Mailchimp accepts a cross-origin no-cors POST; we can't read the response,
+     * so we optimistically show success. Honeypot field name is b_<u>_<id>,
+     * derived from the action URL — bots that fill it are rejected. */
+    var url = MAILCHIMP_ACTION_URL.replace(/&amp;/g, '&');
+    var u = '', id = '', qs = (url.split('?')[1] || '');
+    qs.split('&').forEach(function(p) {
+      var kv = p.split('=');
+      if (kv[0] === 'u') u = kv[1];
+      if (kv[0] === 'id') id = kv[1];
+    });
+    var fd = new FormData();
+    fd.append('EMAIL', email);
+    if (u && id) fd.append('b_' + u + '_' + id, '');
+
+    var done = function() {
+      form.style.display = 'none';
+      var okEl = scope.querySelector('.rl-signup-success');
+      if (okEl) okEl.style.display = 'block';
+    };
+    fetch(url, { method: 'POST', body: fd, mode: 'no-cors' }).then(done).catch(done);
+  });
 }
 
 /* ===== FOOTER NEWSLETTER BAR (injected site-wide) ===== */
@@ -117,15 +195,17 @@ function injectFooterSignup() {
 
   var bar = document.createElement('div');
   bar.className = 'rl-footer-signup';
-  var btnAttrs = cta.isDownload
-    ? ' target="_blank" rel="noopener" download data-lead-download="act60-eligibility-checklist"'
-    : '';
+  var btnAttrs = '';
+  /* Newsletter magnets become a real subscribe form; link magnets stay a plain link. */
+  var ctaBlock = emailCaptureEnabled(magnet)
+    ? signupFormHtml()
+    : '<a href="' + cta.url + '"' + btnAttrs + ' class="rl-signup-btn rl-signup-cta-link">' + cta.text + '</a>';
   bar.innerHTML =
     '<div class="rl-footer-signup-inner">' +
       '<div class="rl-footer-signup-badge">' + (IS_ES ? magnet.badge_es : magnet.badge_en) + '</div>' +
       '<h4>' + heading + '</h4>' +
       '<p>' + desc + '</p>' +
-      '<a href="' + cta.url + '"' + btnAttrs + ' class="rl-signup-btn rl-signup-cta-link">' + cta.text + '</a>' +
+      ctaBlock +
     '</div>';
 
   // Insert before footer or at end of body
@@ -135,6 +215,8 @@ function injectFooterSignup() {
   } else {
     document.body.appendChild(bar);
   }
+
+  wireSignupForm(bar);
 }
 
 /* ===== SCROLL-TRIGGERED SLIDE-IN CTA (appears once per session) ===== */
@@ -149,23 +231,26 @@ function injectSlideInCTA() {
   var heading = IS_ES ? magnet.heading_es : magnet.heading_en;
   var desc = IS_ES ? magnet.desc_es : magnet.desc_en;
   var dismissText = IS_ES ? 'No gracias' : 'No thanks';
-  var btnAttrs = cta.isDownload
-    ? ' target="_blank" rel="noopener" download data-lead-download="act60-eligibility-checklist"'
-    : '';
+  var btnAttrs = '';
 
   var popup = document.createElement('div');
   popup.className = 'rl-slide-cta';
   popup.setAttribute('role', 'dialog');
   popup.setAttribute('aria-label', IS_ES ? 'Recurso gratuito' : 'Free resource');
+  var slideCta = emailCaptureEnabled(magnet)
+    ? signupFormHtml()
+    : '<a href="' + cta.url + '"' + btnAttrs + ' class="rl-slide-cta-btn">' + cta.text + '</a>';
   popup.innerHTML =
     '<button class="rl-slide-cta-close" aria-label="Close">&times;</button>' +
     '<div class="rl-slide-cta-badge">' + (IS_ES ? magnet.badge_es : magnet.badge_en) + '</div>' +
     '<h4>' + heading + '</h4>' +
     '<p>' + desc + '</p>' +
-    '<a href="' + cta.url + '"' + btnAttrs + ' class="rl-slide-cta-btn">' + cta.text + '</a>' +
+    slideCta +
     '<button class="rl-slide-cta-dismiss">' + dismissText + '</button>';
 
   document.body.appendChild(popup);
+
+  wireSignupForm(popup);
 
   function dismiss() {
     popup.classList.remove('rl-slide-cta-visible');
@@ -197,17 +282,17 @@ function injectSlideInCTA() {
 }
 
 /* ===== INLINE CTA (Act 60 landing pages only) =====
- * Inserts a prominent download block inside the page body, after the
- * intro/hero, to give research-traffic visitors a low-commitment offer
+ * Inserts a prominent eligibility-quiz block inside the page body, after
+ * the intro/hero, to give research-traffic visitors a low-commitment offer
  * before they bounce. Only runs when getLeadMagnet() returns a magnet
- * with a download_url, on /act-60-tax-incentives or /espanol-ley-60.
+ * with a link_url, on /act-60-tax-incentives.
  */
 function injectInlineCTA() {
   if (!IS_ACT60_LANDING) return;
   if (document.querySelector('.rl-inline-magnet')) return;
 
   var magnet = getLeadMagnet();
-  if (!magnet.download_url) return;
+  if (!magnet.link_url) return;
   var cta = getMagnetCTA(magnet);
   var heading = IS_ES ? magnet.heading_es : magnet.heading_en;
   var desc = IS_ES ? magnet.desc_es : magnet.desc_en;
@@ -226,14 +311,13 @@ function injectInlineCTA() {
   var headHtml = '<h3 style="margin:0 0 8px;font-size:1.35rem;font-weight:700;color:#fff;line-height:1.25;">' + heading + '</h3>';
   var descHtml = '<p style="margin:0 0 0;font-size:.95rem;line-height:1.5;color:#d8d2bf;">' + desc + '</p>';
 
-  var btnHtml = '<a href="' + cta.url + '" target="_blank" rel="noopener" download ' +
-    'data-lead-download="act60-eligibility-checklist" ' +
+  var btnHtml = '<a href="' + cta.url + '" ' +
     'style="flex:0 0 auto;display:inline-block;padding:14px 24px;background:#bfa35d;color:#1a2033;' +
     'font-weight:700;font-size:.95rem;text-decoration:none;border-radius:8px;white-space:nowrap;' +
     'transition:transform .2s,box-shadow .2s;" ' +
     'onmouseenter="this.style.transform=\'translateY(-1px)\';this.style.boxShadow=\'0 6px 16px rgba(191,163,93,.35)\'" ' +
     'onmouseleave="this.style.transform=\'\';this.style.boxShadow=\'\'">' +
-    '↓ ' + cta.text + '</a>';
+    cta.text + '</a>';
 
   box.innerHTML =
     '<div style="flex:1 1 320px;min-width:0;">' + badgeHtml + headHtml + descHtml + '</div>' +
@@ -260,28 +344,12 @@ function injectInlineCTA() {
   }
 }
 
-/* ===== Track downloads via GTM dataLayer (set by gtm-tracking.js) ===== */
-function attachDownloadTracking() {
-  document.addEventListener('click', function(e) {
-    var a = e.target.closest && e.target.closest('a[data-lead-download]');
-    if (!a) return;
-    if (window.dataLayer && typeof window.dataLayer.push === 'function') {
-      window.dataLayer.push({
-        event: 'lead_magnet_download',
-        magnet: a.getAttribute('data-lead-download') || 'unknown',
-        page_path: PATH
-      });
-    }
-  });
-}
-
 /* ===== BOOT ===== */
 function run() {
   try {
     injectFooterSignup();
     injectSlideInCTA();
     injectInlineCTA();
-    attachDownloadTracking();
   } catch(e) {
     console.error('[rl-email-signup]', e);
   }

@@ -72,8 +72,8 @@
       es: { h: '\u00bfTiene Decreto de Ley 60? Proteja Sus Beneficios.', p: 'Errores en la planificaci\u00f3n sucesoral pueden poner en riesgo sus beneficios de Ley 60. Hable con un abogado que entiende ambas \u00e1reas.' }
     },
     'default': {
-      en: { h: 'Need Legal Guidance?', p: 'Get personalized advice from a DLA Piper\u2013trained attorney in San Juan. Your first consultation is free \u2014 flat fee, no surprises.' },
-      es: { h: '\u00bfNecesita Asesor\u00eda Legal?', p: 'Obtenga asesoramiento personalizado de un abogado en San Juan. Su primera consulta es gratis \u2014 tarifa fija, sin sorpresas.' }
+      en: { h: 'Need Legal Guidance?', p: 'Get personalized advice from a DLA Piper\u2013trained attorney in San Juan. Your first consultation is free \u2014 clear flat-fee pricing for most matters.' },
+      es: { h: '\u00bfNecesita Asesor\u00eda Legal?', p: 'Obtenga asesoramiento personalizado de un abogado en San Juan. Su primera consulta es gratis \u2014 tarifa fija clara para la mayor\u00eda de los casos.' }
     }
   };
 

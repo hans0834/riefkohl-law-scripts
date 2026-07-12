@@ -2641,7 +2641,6 @@ var SEO = {
 
   /* ---- Session 15: Enmiendas a fideicomisos pre-2012 (Ley 219) ---- */
   '/blog/enmiendas-fideicomiso-pre-2012-ley-219': {
-    title: '¿Qué Ley Rige un Fideicomiso Pre-2012 que se Enmienda Hoy? | Riefkohl Law',
     h1: '¿Qué ley rige un fideicomiso constituido antes de 2012 que se enmienda hoy?',
     meta: '¿Aplica la Ley 219-2012 a la enmienda de un fideicomiso creado antes de 2012? Los tribunales de Puerto Rico están divididos. Análisis y sentencia completa (PDF).',
     schema: {

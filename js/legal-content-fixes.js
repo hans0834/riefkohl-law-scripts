@@ -1363,6 +1363,57 @@ function fixSpanishBookingCta() {
   }
 }
 
+/* ================================================
+   /espanol-cita: FLATTEN THE MANGLED "DESPUÉS DE
+   COORDINAR SU CONSULTA" NUMBERED LIST
+   The native text block nests each successive step in
+   a child <ol start="2"/"3"/"4"> and traps the closing
+   copy — including the "Dé el primer paso" <h2> — inside
+   list items, so the heading renders as list item 6-8.
+   Editor-side repair is unsafe (the page editor's paste
+   normalizes away both the list and the small-text
+   style), so restructure the rendered DOM instead:
+   steps 1-4 become one flat list; the closing copy is
+   lifted out below it. Idempotent — bails once the <ol>
+   after the heading has no nested <ol>.
+   ================================================ */
+function fixEspanolCitaListNesting() {
+  if (window.location.pathname !== '/espanol-cita') return;
+  var h2s = document.querySelectorAll('.sqs-html-content h2');
+  var ol = null;
+  for (var i = 0; i < h2s.length; i++) {
+    if (h2s[i].textContent.indexOf('Después de coordinar su consulta') >= 0) {
+      var next = h2s[i].nextElementSibling;
+      if (next && next.tagName === 'OL') ol = next;
+      break;
+    }
+  }
+  if (!ol || !ol.querySelector('ol')) return;
+  var frags = Array.prototype.slice.call(ol.querySelectorAll('p, h2'));
+  var stepLead = /^(Recibirá|El Lcdo\. Riefkohl le contactará|Conversaremos|Si decide proceder)/;
+  var flat = document.createElement('ol');
+  flat.setAttribute('data-rte-list', 'default');
+  var trailing = [];
+  for (var j = 0; j < frags.length; j++) {
+    var el = frags[j];
+    if (el.tagName === 'P' && !el.textContent.trim()) continue;
+    if (el.tagName === 'P' && stepLead.test(el.textContent.trim())) {
+      var li = document.createElement('li');
+      li.appendChild(el);
+      flat.appendChild(li);
+    } else {
+      trailing.push(el);
+    }
+  }
+  ol.parentNode.insertBefore(flat, ol);
+  var ref = flat;
+  for (var k = 0; k < trailing.length; k++) {
+    ref.insertAdjacentElement('afterend', trailing[k]);
+    ref = trailing[k];
+  }
+  ol.parentNode.removeChild(ol);
+}
+
 function runLegalFixes() {
   fixULLCA();
   addAct60Disclaimer();
@@ -1411,6 +1462,8 @@ function runLegalFixes() {
   fixHeaderInjectionOverlap();
   /* Spanish booking CTA text */
   fixSpanishBookingCta();
+  /* /espanol-cita: flatten the mangled numbered list */
+  fixEspanolCitaListNesting();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

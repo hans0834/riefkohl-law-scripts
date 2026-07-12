@@ -49,6 +49,8 @@ Businesses contemplating equity-based compensation arrangements — whether stru
 
 **[Read the full opinion (PDF)](https://storage.courtlistener.com/pdf/2026/03/25/lascoli_a._v._thomas_a._fahr_masonry.pdf)**
 
+[Embed: https://hans0834.github.io/riefkohl-law-scripts/files/lascoli-v-fahr-masonry-2026.pdf — added to the live post Jul 12 2026 as a Code block (`rl-pdf-embed` object, 9 pages), inserted between the opinion link and the disclaimer]
+
 ---
 
 *This post is for informational purposes only and does not constitute legal advice. For questions about contract formation, partnership agreements, or business disputes, [contact Riefkohl Law](/contact).*

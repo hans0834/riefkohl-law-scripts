@@ -57,7 +57,7 @@ var ICONS={
 var CFG={
   API:'/blog',FMT:'?format=json',PG_SZ:20,INIT_SHOW:12,MORE:12,DEBOUNCE:300,
   FETCH_DELAY:120,MAX_RETRIES:5,EXCERPT_MAX:250,
-  CACHE_KEY:'rl_bd_v5',CACHE_TTL:30*60*1000,CACHE_MAX:4*1024*1024,
+  CACHE_KEY:'rl_bd_v6',CACHE_TTL:30*60*1000,CACHE_MAX:4*1024*1024,
   ES_TAGS:['espa\u00f1ol','español'],ES_CATS:['Cobro de Dinero','Hogar Seguro','Fideicomisos','Planificaci\u00f3n Sucesoral','Ley 60','Incentivos Contributivos'],
   CATS:[
     {k:'Trusts',l:'Trusts & Fideicomisos',i:ICONS.shield,s:['Trusts','Fideicomisos','Trust Law','Trust Law Controversies']},
@@ -95,7 +95,10 @@ function strip(h){if(!_stripEl)_stripEl=document.createElement('div');_stripEl.i
    as literal "A&amp;E". Uses a textarea so tags are never parsed as HTML. Render code
    re-escapes via esc(), so this is idempotent for normally-encoded titles. */
 var _decEl;
-function dec(h){if(!_decEl)_decEl=document.createElement('textarea');_decEl.innerHTML=String(h);var t=_decEl.value;_decEl.value='';return t}
+/* NOTE: read textContent, not value — assigning .value='' sets the textarea's
+   "dirty value" flag, after which innerHTML writes no longer update .value and
+   every subsequent call returns '' (this blanked all card titles after the first). */
+function dec(h){if(!_decEl)_decEl=document.createElement('textarea');_decEl.innerHTML=String(h);var t=_decEl.textContent;_decEl.textContent='';return t}
 function fmtDate(ts){var d=new Date(ts),m=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return m[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear()}
 
 /* DATA */

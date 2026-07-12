@@ -1314,6 +1314,41 @@ function addLey60ThreeTestsES() {
   }
 }
 
+function fixHeaderInjectionOverlap() {
+  /* The Squarespace header is transparent + position:absolute, so elements
+     injected at the top of the document flow (homepage urgency banner, blog
+     post breadcrumbs) can render underneath the logo at widths where they
+     wrap taller than the gap above it. Push each one below the header's
+     footprint — only when it actually overlaps. */
+  var header = document.querySelector('header.header') || document.querySelector('header');
+  if (!header) return;
+
+  function adjust() {
+    if (getComputedStyle(header).position !== 'absolute') return;
+    var headerBottom = header.offsetTop + header.offsetHeight;
+    ['.rl-urgency-banner', 'nav.rl-breadcrumb'].forEach(function(sel) {
+      var el = document.querySelector(sel);
+      if (!el) return;
+      el.style.marginTop = '';
+      var top = el.getBoundingClientRect().top + window.pageYOffset;
+      if (top < headerBottom) {
+        el.style.marginTop = Math.ceil(headerBottom - top) + 'px';
+      }
+    });
+  }
+
+  adjust();
+  if (!window.__rlHeaderOverlapBound) {
+    window.__rlHeaderOverlapBound = true;
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(adjust, 150);
+    });
+    setTimeout(adjust, 2500);
+  }
+}
+
 /* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
@@ -1361,6 +1396,8 @@ function runLegalFixes() {
   hideDuplicateBlogCard();
   /* Ley 60 ES: three §937 residency tests note */
   addLey60ThreeTestsES();
+  /* Top-injected elements vs. the transparent absolute header */
+  fixHeaderInjectionOverlap();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

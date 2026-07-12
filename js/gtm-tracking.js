@@ -168,6 +168,29 @@ function trackCalendlyPageView() {
   }
 }
 
+/* ===== TRACK COMPLETED CALENDLY BOOKINGS (final conversion) ===== */
+function setupCalendlyBookingTracking() {
+  var bookingFired = false;
+
+  /* Calendly's embed widget notifies the parent window via postMessage.
+     Docs: https://calendly.com/help/advanced-calendly-embed-for-developers
+     Registered on every page — inert unless a Calendly widget is present
+     (/calendly, /espanol-cita). */
+  window.addEventListener('message', function(e) {
+    // STRICT origin check — only accept messages from Calendly itself
+    if (e.origin !== 'https://calendly.com') return;
+    if (!e.data || e.data.event !== 'calendly.event_scheduled') return;
+    if (bookingFired) return; // guard: fire once per page load
+    bookingFired = true;
+
+    trackEvent('booking_completed', {
+      event_category: 'conversion',
+      event_label: window.location.pathname,
+      page_path: window.location.pathname
+    });
+  });
+}
+
 /* ===== UTM / REFERRAL ATTRIBUTION ===== */
 function setupUtmTracking() {
   var params = new URLSearchParams(window.location.search);
@@ -329,6 +352,7 @@ function run() {
     setupScrollTracking();
     setupTimeTracking();
     trackCalendlyPageView();
+    setupCalendlyBookingTracking();
     setupBlogEngagement();
   } catch(e) {
     console.error('[rl-tracking]', e);

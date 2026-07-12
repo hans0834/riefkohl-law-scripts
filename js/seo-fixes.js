@@ -38,6 +38,7 @@ var SEO = {
   },
   '/about': {
     h1: 'About Hans E. Riefkohl — Founder & Managing Attorney',
+    title: 'About Hans Riefkohl — Puerto Rico Attorney | Riefkohl Law',
     meta: 'Attorney Hans Riefkohl brings experience from DLA Piper, LUMA Energy, and the federal courts to his Puerto Rico trusts, estate planning, and corporate law practice.',
     schema: null
   },
@@ -48,6 +49,7 @@ var SEO = {
   },
   '/contact': {
     h1: 'Contact Riefkohl Law in San Juan, Puerto Rico',
+    title: 'Contact a Puerto Rico Attorney — San Juan | Riefkohl Law',
     meta: 'Contact Riefkohl Law in San Juan, PR. Call (787) 236-1657 or book a free strategy call for estate planning, trusts, and business law.',
     schema: null
   },
@@ -63,12 +65,13 @@ var SEO = {
   },
   '/calendly': {
     h1: 'Schedule a Free Legal Consultation',
+    title: 'Schedule a Free 30-Minute Consultation | Riefkohl Law',
     meta: 'Book a complimentary strategy call with Riefkohl Law. Discuss your Puerto Rico trust, estate plan, or business matter. No obligation.',
     schema: null
   },
   '/puerto-rico-trusts': {
     h1: 'Puerto Rico Trust Attorney — Fideicomisos & Asset Protection',
-    title: 'Puerto Rico Trust Attorney — Asset Protection Trusts | Riefkohl Law',
+    title: 'Puerto Rico Trust Attorney — Fideicomisos | Riefkohl Law',
     meta: 'Puerto Rico trust attorney: irrevocable trusts under Law 219-2012, asset protection, and flat-fee fideicomiso setup. Free consultation — (787) 236-1657.',
     schema: {
       '@context': 'https://schema.org',
@@ -143,7 +146,7 @@ var SEO = {
   },
   '/estate-planning': {
     h1: 'Estate Planning Attorney in Puerto Rico',
-    title: 'Puerto Rico Estate Planning Attorney \u2014 Trusts & Wills | Riefkohl Law',
+    title: 'Puerto Rico Estate Planning & Wills Attorney | Riefkohl Law',
     meta: 'How to protect your assets and avoid forced heirship in Puerto Rico. Trusts, wills, probate avoidance, and Act 60 estate strategies. Bilingual attorney \u2014 free consultation.',
     schema: {
       '@context': 'https://schema.org',
@@ -293,7 +296,7 @@ var SEO = {
   },
   '/act-60-export-services': {
     h1: 'Act 60 Export Services — 4% Corporate Tax Rate in Puerto Rico',
-    title: 'Act 60 Export Services: 4% Tax for Software & SaaS | Riefkohl Law',
+    title: 'Act 60 Export Services — 4% Puerto Rico Tax | Riefkohl Law',
     meta: 'Puerto Rico Act 60 Chapter 3 for export services, software, SaaS & IT firms: 4% corporate tax, 100% distribution exemption, filing, compliance & IRS defense. Free call.',
     schema: {
       '@context': 'https://schema.org',
@@ -481,6 +484,7 @@ var SEO = {
   /* Spanish pages */
   '/espanol': {
     h1: 'Bufete de Abogados en Puerto Rico — Fideicomisos, Sucesiones y Derecho Corporativo',
+    title: 'Abogado en Puerto Rico — Fideicomisos, Ley 60 | Riefkohl Law',
     meta: 'Bufete de abogados en San Juan, PR. Fideicomisos, planificacion sucesoral, Ley 60, formacion de empresas y contratos gubernamentales. (787) 236-1657.',
     schema: null
   },
@@ -516,6 +520,7 @@ var SEO = {
   },
   '/espanol-fideicomisos': {
     h1: 'Abogado de Fideicomisos en Puerto Rico — Ley 219-2012',
+    title: 'Abogado de Fideicomisos en Puerto Rico | Riefkohl Law',
     meta: 'Abogado de fideicomisos en Puerto Rico. Fideicomisos irrevocables bajo Ley 219-2012, proteccion de activos y planificacion sucesoral. Consulta gratis.',
     schema: {
       '@context': 'https://schema.org',
@@ -586,11 +591,13 @@ var SEO = {
   /* ---- Act 60 Resource Center Subpages (10 pages) ---- */
   '/act-60-resource-center': {
     h1: 'Act 60 Resource Center — Puerto Rico Tax Incentives Guide',
+    title: 'Act 60 Resource Center — Guides & Tools | Riefkohl Law',
     meta: 'Comprehensive Act 60 resource center. Residency tests, income sourcing, compliance, audit triggers, and planning guides for Puerto Rico relocators.',
     schema: null
   },
   '/act-60-federal-residency-test-puerto-rico': {
     h1: 'Act 60 Federal Residency Test — Bona Fide PR Resident Requirements',
+    title: 'Act 60 Presence & Closer Connection Tests | Riefkohl Law',
     meta: 'Federal residency test for Act 60 decree holders. Presence test, tax home test, closer connection test, and safe harbor rules for Puerto Rico.',
     schema: null
   },
@@ -890,6 +897,7 @@ var SEO = {
   },
   '/resources/asset-protection-trusts-pr': {
     h1: 'Asset Protection Trusts Under Puerto Rico\u2019s Trust Act',
+    title: 'Asset Protection Trusts in Puerto Rico | Riefkohl Law',
     meta: 'Puerto Rico\u2019s autonomous estate doctrine offers distinctive asset protection advantages over mainland DAPTs. Learn the three-layer creditor protection structure.',
     schema: {
       '@context': 'https://schema.org',
@@ -1520,16 +1528,19 @@ var SEO = {
   },
   '/resources/complete-guide-puerto-rico-trusts': {
     h1: 'The Complete Guide to Puerto Rico Trusts',
+    title: 'Puerto Rico Trusts: The Complete Guide | Riefkohl Law',
     meta: 'Puerto Rico trusts explained: how they work under Law 219-2012, the types available, what they cost, and how they avoid probate and forced-heirship traps.',
     schema: null
   },
   '/resources/trust-vs-will-puerto-rico': {
     h1: 'Trust vs. Will in Puerto Rico: Which One Do You Need?',
+    title: 'Trust vs. Will in Puerto Rico | Riefkohl Law',
     meta: 'Trust vs. will in Puerto Rico: how each works, what each costs, the forced-heirship rules that bind both, and when you need both. A clear side-by-side.',
     schema: null
   },
   '/resources/forced-heirship-estate-plan': {
     h1: 'Forced Heirship in Puerto Rico: What Your Mainland Will and Trust Miss',
+    title: 'Forced Heirship & Your Mainland Estate Plan | Riefkohl Law',
     meta: 'Moved to Puerto Rico? Forced heirship (the legítima) can override your mainland will or trust. What changes, who your forced heirs are, and how to fix it.',
     schema: null
   },
@@ -1575,8 +1586,9 @@ var SEO = {
 
   /* ---- Act 60 Tax Incentives Subpages ---- */
   '/resources/bona-fide-residency-puerto-rico': {
+    title: 'Bona Fide Resident of Puerto Rico: IRS Rules | Riefkohl Law',
     h1: 'Puerto Rico Bona Fide Residency & the Source-of-Income Rules: An Act 60 Guide',
-    meta: 'How to qualify as a bona fide resident of Puerto Rico for Act 60: the IRC \xa7937 presence, tax-home, and closer-connection tests, the 183-day rule, and \xa7933 sourcing.',
+    meta: 'IRS rules for bona fide residents of Puerto Rico: the \xa7937 presence test (183 days + 4 alternatives), tax home test, and closer connection test, explained.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -1848,6 +1860,7 @@ var SEO = {
   },
   '/resources/estate-planning-act-60-relocatees': {
     h1: 'Estate Planning for Act 60 Relocatees',
+    title: 'Estate Planning for Act 60 Relocatees | Riefkohl Law',
     meta: 'Your mainland estate plan doesn’t work in Puerto Rico. The 5 risks Act 60 relocatees face — forced heirship, unrecognized trusts, no decree succession — and how to fix them.',
     schema: {
       '@context': 'https://schema.org',
@@ -1949,6 +1962,7 @@ var SEO = {
   },
   '/resources/do-you-still-owe-us-taxes-in-puerto-rico': {
     h1: 'Do You Still Owe U.S. Taxes If You Move to Puerto Rico?',
+    title: 'Do You Still Owe US Taxes in Puerto Rico? | Riefkohl Law',
     meta: 'Moving to Puerto Rico changes your federal taxes — it doesn’t end them. What IRC Section 933 excludes, what you still owe, and why you keep filing with the IRS.',
     schema: {
       '@context': 'https://schema.org',
@@ -1983,6 +1997,7 @@ var SEO = {
   },
   '/resources/pagas-impuestos-federales-en-puerto-rico': {
     h1: '¿Todavía Paga Impuestos Federales de EE. UU. si se Muda a Puerto Rico?',
+    title: '¿Paga Impuestos Federales en Puerto Rico? | Riefkohl Law',
     meta: 'Mudarse a Puerto Rico cambia sus impuestos federales — no los elimina. Qué excluye el IRC Sección 933, qué sigue debiendo y por qué continúa radicando ante el IRS.',
     schema: {
       '@context': 'https://schema.org',
@@ -2017,6 +2032,7 @@ var SEO = {
   },
   '/resources/act-60-requirements': {
     h1: 'Act 60 Requirements 2026: The Complete Eligibility Checklist',
+    title: 'Act 60 Requirements 2026 — Full Checklist | Riefkohl Law',
     meta: 'Every requirement to qualify for and keep an Act 60 decree in 2026 — bona fide residency, the deadline, the home purchase, the $10K donation, and annual reporting.',
     schema: {
       '@context': 'https://schema.org',
@@ -2051,6 +2067,7 @@ var SEO = {
   },
   '/resources/requisitos-ley-60': {
     h1: 'Requisitos de la Ley 60 en 2026: La Lista Completa de Elegibilidad',
+    title: 'Requisitos de la Ley 60 en 2026 | Riefkohl Law',
     meta: 'Todos los requisitos para cualificar y conservar un decreto de Ley 60 en 2026 — residencia bona fide, fecha límite, compra de vivienda, donación e informes anuales.',
     schema: {
       '@context': 'https://schema.org',

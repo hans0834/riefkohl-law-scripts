@@ -695,98 +695,13 @@ function injectWhatsApp() {
 
 /* ===== 11. ACT 60 PERSONA LANDING PAGES (#20) ===== */
 function injectPersonaPages() {
-  var pages = {
-    '/act-60-export-services': {
-      badge: 'Act 60 Chapter 3',
-      h1: 'Export Services in Puerto Rico: 4% Corporate Tax Rate',
-      subtitle: 'Consulting, SaaS, technology, and professional services firms that serve clients outside Puerto Rico may qualify for a 4% corporate tax rate with 100% PR income tax exemption on distributions to bona fide PR resident shareholders. At least 80% of revenue must come from clients outside Puerto Rico.',
-      benefits: [
-        'Corporate income taxed at 4% (vs. 21% federal)',
-        '100% PR income tax exemption on dividends to BFR shareholders',
-        'No municipal tax on eligible income',
-        'Decree valid through 2055'
-      ],
-      whoFor: [
-        'Software and technology companies',
-        'Management consulting firms',
-        'Marketing, design, and creative agencies',
-        'Financial advisory and accounting firms',
-        'Engineering and architecture firms',
-        'Any service business with clients outside PR'
-      ],
-      requirements: [
-        'Services must be rendered to clients outside Puerto Rico',
-        'Businesses over $3M revenue must create at least one local job within two years',
-        'Annual charitable donation required (amount varies by application date)',
-        'Must file annual compliance report with DDEC',
-        'Must not have had prior Act 20/22/60 revocation'
-      ],
-      ctaHeading: 'Does Your Business Qualify?',
-      ctaBody: 'Most service businesses with non-PR clients are eligible. A 30-minute call will confirm your eligibility and outline the application process.',
-      ctaBtn: 'Book Your Free Export Services Consultation'
-    },
-    '/act-60-individual-investor': {
-      badge: 'Act 60 Chapter 2',
-      h1: 'Individual Investor Relocation: Capital Gains Benefits in Puerto Rico',
-      subtitle: 'Individuals who become bona fide residents of Puerto Rico can enjoy preferential tax rates on capital gains, interest, and dividends earned after relocating.',
-      benefits: [
-        '0% on capital gains (decrees through 2026)',
-        '4% on capital gains (decrees from 2027)',
-        '100% exemption on PR-source interest and dividends',
-        'No state income tax on qualifying income'
-      ],
-      whoFor: [
-        'High-net-worth investors and traders',
-        'Cryptocurrency and digital asset holders',
-        'Real estate investors with appreciation gains',
-        'Retired professionals with investment portfolios',
-        'Business owners planning a liquidity event',
-        'Anyone with significant unrealized capital gains'
-      ],
-      requirements: [
-        'Must become a bona fide Puerto Rico resident',
-        'Must satisfy one of five presence tests (most common: 183+ days/year)',
-        'Must establish a "closer connection" to PR than the U.S. or any foreign country',
-        'Capital gains must accrue after relocation date',
-        'Annual charitable donation required ($10,000/year), plus a separate $5,000 annual report fee',
-        'Must purchase PR primary residence within 2 years of decree (may hold individually, jointly, or via trust; post-2026 applicants must register in PR Property Registry)',
-        'Pre-move capital gains remain subject to federal tax under 10-year lookback (Treas. Reg. \u00a71.937-2(f))'
-      ],
-      ctaHeading: 'Ready to Explore Your Relocation?',
-      ctaBody: 'Every investor\u2019s situation is different\u2014prior state departure, residency timing, and estate planning all matter. Start with a free strategy call.',
-      ctaBtn: 'Book Your Free Investor Relocation Call'
-    },
-    '/act-60-crypto-investor': {
-      badge: 'Act 60 for Crypto',
-      h1: 'Cryptocurrency Tax Benefits Under Puerto Rico Act 60',
-      subtitle: 'Puerto Rico\u2019s Act 60 Chapter 2 provides preferential tax rates on capital gains from cryptocurrency and digital assets\u2014but only if you structure the move correctly.',
-      benefits: [
-        '0% on crypto gains accrued after relocation (through 2026 decrees)',
-        '4% rate for decrees granted 2027+',
-        'No federal capital gains tax on PR-source gains',
-        'Applies to Bitcoin, Ethereum, altcoins, NFTs, and DeFi'
-      ],
-      whoFor: [
-        'Long-term crypto holders with significant unrealized gains',
-        'Active crypto traders and DeFi participants',
-        'NFT creators and collectors',
-        'Web3 founders planning token liquidity events',
-        'Mining and staking operations',
-        'Crypto fund managers'
-      ],
-      requirements: [
-        'Must become bona fide PR resident BEFORE selling/exchanging',
-        'Gains accrued before relocation remain federally taxable',
-        'Must demonstrate "closer connection" to PR than the U.S. or any foreign country',
-        'Prior state may challenge departure\u2014documentation is critical',
-        'IRS actively scrutinizes crypto + Act 60 returns',
-        'Cost basis tracking must be maintained for pre/post-move split'
-      ],
-      ctaHeading: 'The IRS Is Watching Crypto + Act 60 Closely',
-      ctaBody: 'Crypto relocators face extra scrutiny on residency, cost basis allocation, and pre-move vs. post-move gain splits. Don\u2019t wing it\u2014get proper counsel before you sell.',
-      ctaBtn: 'Book Your Free Crypto Tax Strategy Call'
-    }
-  };
+  // The three Act 60 persona landing pages that used to live here were
+  // removed: their URLs 404 and will not be built (decision on record --
+  // /act-60-tax-incentives owns that topic cluster). The empty map makes
+  // this function a safe no-op (the config lookup below returns undefined)
+  // and stops persona content from being injected into Squarespace's 404
+  // page shell.
+  var pages = {};
 
   var config = pages[PATH];
   if (!config) return;

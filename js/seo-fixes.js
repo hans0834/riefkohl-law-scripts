@@ -2622,6 +2622,34 @@ var SEO = {
     schema: null
   },
 
+  /* ---- Session 15: Enmiendas a fideicomisos pre-2012 (Ley 219) ---- */
+  '/blog/enmiendas-fideicomiso-pre-2012-ley-219': {
+    title: '¿Qué Ley Rige un Fideicomiso Pre-2012 que se Enmienda Hoy? | Riefkohl Law',
+    h1: '¿Qué ley rige un fideicomiso constituido antes de 2012 que se enmienda hoy?',
+    meta: '¿Aplica la Ley 219-2012 a la enmienda de un fideicomiso creado antes de 2012? Los tribunales de Puerto Rico están divididos. Análisis y sentencia completa (PDF).',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Aplica la Ley 219-2012 a un fideicomiso constituido antes de 2012?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'La Ley 219-2012 dispuso vigencia inmediata (Art. 76) pero guardó silencio sobre los fideicomisos preexistentes. El Tribunal de Apelaciones ha resuelto que no les aplica (KLCE202400164), pero el TPI de San Juan ha resuelto que sí les aplica cuando se enmiendan después de 2012. El Tribunal Supremo aún no ha resuelto la controversia.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué ley rige una enmienda hecha hoy a un fideicomiso pre-2012?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Existen dos posturas: que la enmienda se rige por la ley vigente al otorgamiento del fideicomiso (Código Civil de 1930), porque una enmienda no es una novación extintiva; o que se rige por la Ley 219-2012, porque es la única ley vigente que puede autorizar el acto nuevo. Ante la incertidumbre, la práctica prudente es redactar la enmienda de modo que sea válida bajo ambos regímenes.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuáles son las diferencias prácticas entre la Ley 219-2012 y el Código Civil de 1930?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Las principales: la Ley 219 impone un término máximo de 75 años, permite terminación judicial por frustración de propósitos, codifica deberes fiduciarios de lealtad, información e inversionista prudente, y reconoce el fideicomiso como patrimonio autónomo con personalidad jurídica plena. Bajo el Código Civil de 1930, el fiduciario solo respondía por descuido voluntario o negligencia manifiesta.' }
+        }
+      ]
+    }
+  },
+
   /* ---- Pricing Page ---- */
   '/pricing': {
     h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',

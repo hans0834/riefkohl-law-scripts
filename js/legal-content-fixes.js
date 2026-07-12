@@ -1352,27 +1352,6 @@ function fixHeaderInjectionOverlap() {
 /* ================================================
    EXECUTE ALL LEGAL CONTENT FIXES
    ================================================ */
-function addBonaFideReciprocalLink() {
-  /* Reciprocal cross-link for the bona-fide cluster consolidation: the
-     federal-residency-test page links to the cornerstone natively; this adds
-     the cornerstone -> federal-test link until it can be pasted natively
-     (source of truth: migration/native-html/bona-fide-residency-puerto-rico.html). */
-  if (window.location.pathname !== '/resources/bona-fide-residency-puerto-rico') return;
-  if (document.querySelector('a[href="/act-60-federal-residency-test-puerto-rico"]')) return;
-  var headings = document.querySelectorAll('h2');
-  for (var i = 0; i < headings.length; i++) {
-    if (headings[i].textContent.trim() === 'Related Resources') {
-      var ul = headings[i].nextElementSibling;
-      while (ul && ul.tagName !== 'UL') ul = ul.nextElementSibling;
-      if (!ul) return;
-      var li = document.createElement('li');
-      li.innerHTML = '<a href="/act-60-federal-residency-test-puerto-rico">The Three-Part Federal Residency Test Every Act 60 Decree Holder Must Pass</a> — a focused compliance briefing on the presence, tax home, and closer connection tests, with the year-of-move safe harbor.';
-      ul.insertBefore(li, ul.firstChild);
-      return;
-    }
-  }
-}
-
 function fixSpanishBookingCta() {
   /* /espanol-cita: the native CTA button still carries English text. */
   if (window.location.pathname !== '/espanol-cita') return;
@@ -1430,8 +1409,7 @@ function runLegalFixes() {
   addLey60ThreeTestsES();
   /* Top-injected elements vs. the transparent absolute header */
   fixHeaderInjectionOverlap();
-  /* Bona-fide cluster reciprocal link + Spanish booking CTA text */
-  addBonaFideReciprocalLink();
+  /* Spanish booking CTA text */
   fixSpanishBookingCta();
 }
 

@@ -21,6 +21,15 @@
 (function(){
 'use strict';
 
+/* Module-scope current path. The content-correction functions near the bottom of
+   this file (fixAct60ExemptionPercentages, fixNRNCClassification, fixCorporateTaxRate,
+   fixAdvertisingLanguage) reference `path` without declaring it. Without this
+   declaration they threw ReferenceError on every page load, which aborted the rest
+   of the module — killing injectHreflang(), both runFixes() retry timers, and all
+   four legal content corrections. Functions that declare their own `var path`
+   simply shadow this one, so their behaviour is unchanged. */
+var path = window.location.pathname.replace(/\/$/, '') || '/';
+
 /* ================================================
    PAGE-SPECIFIC SEO CONFIGURATION
    ================================================ */
@@ -182,7 +191,7 @@ var SEO = {
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
     title: 'Puerto Rico Act 60: 4% Rate & Investor Decrees | Riefkohl Law',
-    meta: 'PR attorney on Act 60: 4% corporate tax for export services & software, 0% capital-gains investor decrees (Dec 31, 2026 deadline), and residency rules. Free call.',
+    meta: 'Do you qualify for Act 60? Apply by Dec 31, 2026 to lock the 0% capital-gains rate — 4% after. San Juan attorney, free 30-minute call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -3259,11 +3268,23 @@ function runFixes() {
   injectDisclaimer();
   secureExternalLinks();
 
-  /* Squarespace page content corrections (A1, A4, A6, B9) */
-  fixAct60ExemptionPercentages();
-  fixNRNCClassification();
-  fixCorporateTaxRate();
-  fixAdvertisingLanguage();
+  /* Squarespace page content corrections (A1, A4, A6, B9).
+     Isolated: these run last, so an exception here used to propagate out of
+     runFixes() and abort everything after it in the module (hreflang, retry
+     timers). Each is independent, so failure of one must not stop the others. */
+  var corrections = [
+    fixAct60ExemptionPercentages,
+    fixNRNCClassification,
+    fixCorporateTaxRate,
+    fixAdvertisingLanguage
+  ];
+  for (var c = 0; c < corrections.length; c++) {
+    try { corrections[c](); } catch (err) {
+      if (window.console && console.warn) {
+        console.warn('[seo-fixes] content correction failed:', corrections[c].name, err);
+      }
+    }
+  }
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

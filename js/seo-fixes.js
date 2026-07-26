@@ -166,7 +166,7 @@ var SEO = {
           'name': 'What is forced heirship in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Forced heirship (legitima) under Puerto Rico\'s Civil Code (Ley 55-2020) reserves one-half of the estate for forced heirs — children and the surviving spouse, who share the legitima equally. The remaining half can be distributed freely. This system provides more flexibility than the prior three-thirds rule, which reserved two-thirds.'
+            'text': 'Forced heirship (legitima) under Puerto Rico\'s Civil Code (Ley 55-2020) reserves one-half of the estate for forced heirs — children and the surviving spouse, who share the legitima equally. The remaining half can be distributed freely. This is more flexible than the rule under the prior 1930 Civil Code, which divided the estate into thirds and left only one-third freely disposable.'
           }
         },
         {
@@ -408,6 +408,22 @@ var SEO = {
             '@type': 'Answer',
             'text': 'Riefkohl Law forms Puerto Rico LLCs on a flat fee, typically $2,500 to $10,000 depending on complexity — covering entity selection, the Certificate of Organization, a customized operating agreement, EIN, and registered-agent setup. The Puerto Rico Department of State filing fee (around $250) and any annual-report fees are separate. You receive a fixed quote before work begins.'
           }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a non-resident form a business in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Puerto Rico imposes no residency requirement to form or own a business entity, so a non-resident can organize an LLC or corporation on the island. Every entity must maintain a registered agent with a physical Puerto Rico address. Note that the individual Act 60 tax benefits are a separate matter and do require you to become a bona fide Puerto Rico resident.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the tax advantages of forming a business in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A qualifying export-services business can obtain an Act 60 Chapter 3 decree providing a 4% fixed corporate income tax rate, a 100% exemption on distributions of earnings and profits, a 50% exemption on municipal license taxes, and a 75% exemption on personal and real property taxes. Eligibility depends on serving clients located outside Puerto Rico and meeting the conditions of the decree.'
+          }
         }
       ]
     }
@@ -441,6 +457,22 @@ var SEO = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes. Both Puerto Rico and federal procurement systems include set-aside programs for small businesses, including HUBZone, 8(a), and woman-owned small business preferences. Puerto Rico also has local preference provisions under Law 73-2019. An attorney experienced in government contracts can help you navigate registration, certification, and the proposal process.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How do I register to bid on government contracts in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Federal contracts require registration in the System for Award Management (SAM.gov) and a Unique Entity ID (UEI), which replaced the DUNS number, along with the NAICS codes for your industry. For Puerto Rico Commonwealth contracts, suppliers register with the General Services Administration (Administracion de Servicios Generales) and must hold a current Registro Unico de Licitadores certification, together with tax and municipal clearance certificates.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What compliance requirements apply to government contractors in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Federal awards require compliance with the Federal Acquisition Regulation (FAR) and agency supplements, including Buy American Act provisions and Davis-Bacon prevailing wage requirements on construction contracts. Commonwealth contracts are governed by Law 73-2019 and require current tax clearances. Puerto Rico also requires that government contracts be registered with the Office of the Comptroller, and an unregistered contract is generally unenforceable against the government.'
           }
         }
       ]
@@ -2815,17 +2847,32 @@ function injectFAQSchema() {
   var config = SEO[path];
   if (!config || !config.schema) return;
 
-  /* Check if FAQ schema already exists */
+  /* The SEO map here is the single source of truth for FAQ content: it is the
+     version that gets reviewed, repriced, and legally corrected. This used to
+     bail out when any FAQPage already existed, which meant a FAQPage pasted
+     into a page's own header injection silently suppressed ours — on five money
+     pages that shipped an obsolete forced-heirship rule (two-thirds rather than
+     the one-half set by Ley 55-2020), superseded prices, and a wrong municipal
+     exemption percentage to Google.
+
+     So: remove any FAQPage we did not author, then inject ours. Guard against
+     re-injecting our own on the second runFixes() pass (idempotency is required
+     — see the note at the corrections loop). */
+  var ours = null;
   var existing = document.querySelectorAll('script[type="application/ld+json"]');
   for (var i = 0; i < existing.length; i++) {
-    try {
-      var data = JSON.parse(existing[i].textContent);
-      if (data['@type'] === 'FAQPage') return; /* Already present */
-    } catch(e) {}
+    var data;
+    try { data = JSON.parse(existing[i].textContent); } catch (e) { continue; }
+    if (!data || data['@type'] !== 'FAQPage') continue;
+    if (existing[i].getAttribute('data-rl-faq') === '1') { ours = existing[i]; continue; }
+    /* A FAQPage from the Squarespace page source — stale by definition. */
+    if (existing[i].parentNode) existing[i].parentNode.removeChild(existing[i]);
   }
+  if (ours) return; /* already injected on an earlier pass */
 
   var script = document.createElement('script');
   script.type = 'application/ld+json';
+  script.setAttribute('data-rl-faq', '1');
   script.textContent = JSON.stringify(config.schema);
   document.head.appendChild(script);
 }

@@ -3157,31 +3157,18 @@ function secureExternalLinks() {
    cannot be changed via code injection alone.
    ================================================ */
 
-/* A1: Municipal license tax 75%→50%, Property tax 60%→75% */
-function fixAct60ExemptionPercentages() {
-  var targets = ['/act-60-tax-incentives', '/business-formation', '/act-60-export-services', '/act-60-individual-investor'];
-  var isTarget = false;
-  for (var t = 0; t < targets.length; t++) {
-    if (path === targets[t]) { isTarget = true; break; }
-  }
-  if (path.indexOf('/blog/') === 0) isTarget = true;
-  if (!isTarget) return;
-
-  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-  while (walker.nextNode()) {
-    var node = walker.currentNode;
-    var text = node.nodeValue;
-    /* Fix "75% exemption on municipal" -> "50% exemption on municipal" */
-    if (text.indexOf('75%') >= 0 && (text.indexOf('municipal') >= 0 || text.indexOf('patente') >= 0)) {
-      node.nodeValue = text.replace(/75%/g, '50%');
-    }
-    /* Fix "60% exemption on...property" -> "75% exemption on...property" (Spanish pages had transposition) */
-    text = node.nodeValue;
-    if (text.indexOf('60%') >= 0 && (text.indexOf('property') >= 0 || text.indexOf('propiedad') >= 0)) {
-      node.nodeValue = text.replace(/60%/g, '75%');
-    }
-  }
-}
+/* A1: Act 60 municipal/property tax exemption percentages.
+   REMOVED — this was a duplicate of fixAct60ExemptionPercentages() in
+   js/legal-content-fixes.js (#13), and this copy was NOT idempotent: its
+   rules used unanchored global replaces, so on a second pass the corrected
+   property figure ("75% ... property") re-matched the municipal rule's
+   `indexOf('75%') && indexOf('municipal')` guard within the same text node
+   and was wrongly rewritten to 50%. Harmless only while this whole module
+   was dead; once the module ran to completion the 800ms retry corrupted a
+   statutory figure on /act-60-tax-incentives.
+   The legal-content-fixes.js version uses proximity-anchored regexes
+   (`75%([\s\w]{0,40})(municipal|patente)`) and is idempotent, so it alone
+   owns this correction. Correct values: municipal 50%, property 75%. */
 
 /* A4: NRNC estate/gift tax — fix "born in" to domicile-based */
 function fixNRNCClassification() {
@@ -3272,8 +3259,11 @@ function runFixes() {
      Isolated: these run last, so an exception here used to propagate out of
      runFixes() and abort everything after it in the module (hreflang, retry
      timers). Each is independent, so failure of one must not stop the others. */
+  /* NB: the Act 60 exemption-percentage correction is deliberately absent —
+     legal-content-fixes.js (#13) owns it. See the note above. Every function
+     listed here must stay idempotent, because runFixes() is called again
+     800ms later. */
   var corrections = [
-    fixAct60ExemptionPercentages,
     fixNRNCClassification,
     fixCorporateTaxRate,
     fixAdvertisingLanguage

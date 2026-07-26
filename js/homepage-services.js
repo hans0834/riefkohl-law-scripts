@@ -3,6 +3,8 @@
 // Must load AFTER seo-fixes.html
 
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 'use strict';
 
 var PATH = window.location.pathname.replace(/\/+$/, '') || '/';

@@ -42,6 +42,8 @@
 
 /* Preconnect hints — start DNS/TLS early for key external resources */
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
   var hints = [
     { rel: 'preconnect', href: 'https://images.squarespace-cdn.com' },
     { rel: 'preconnect', href: 'https://www.googletagmanager.com' },
@@ -60,6 +62,8 @@
 })();
 
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 'use strict';
 
 /* Module-scope current path. The content-correction functions near the bottom of

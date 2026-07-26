@@ -3,6 +3,8 @@
 /* Updated to match navy/gold design system */
 
 (function() {
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
   var pages = {
     "/estate-planning": [
       {href:"/puerto-rico-trusts",text:"Puerto Rico Trusts",desc:"Asset protection & fideicomisos under Law 219-2012"},

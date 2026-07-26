@@ -3,6 +3,8 @@
 // Must load AFTER homepage-services-redesign.html
 
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 'use strict';
 
 var SITE = 'https://images.squarespace-cdn.com/content/6341e033d606ac41fb5ed5de/';

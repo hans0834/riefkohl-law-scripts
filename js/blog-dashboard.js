@@ -2,6 +2,8 @@
 // BUILD: Generated from blog-dashboard.html. Edit that file, then regenerate this.
 
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 var path=window.location.pathname.replace(/\/+$/,'')||'/';
 // Run only on the blog index (/blog), not individual posts (/blog/<slug>). Trailing slash normalized above.
 if(path!=='/blog')return;
@@ -35,6 +37,8 @@ function deploy(){
     if(hH>50)dashboard.style.paddingTop=hH+'px';
   }
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 'use strict';
 
 /* SVG icons (stroke-based, 24x24 viewBox) */

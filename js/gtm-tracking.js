@@ -2,12 +2,27 @@
 /* Source: gtm-conversion-tracking.html */
 /* Google Tag Manager — Container ID: GTM-N2G4Z9D8 */
 
-/* Google Tag Manager */
+/* EDITOR GUARD: true when we are inside the Squarespace editor, which renders the
+   site in a same-origin iframe whose top frame sits under /config. Fails open —
+   any error (e.g. a genuinely cross-origin embed) means "not the editor". */
+function rlInSquarespaceEditor() {
+  try {
+    if (window.self === window.top) return false;
+    return window.top.location.pathname.indexOf('/config') === 0;
+  } catch (e) {
+    return false;
+  }
+}
+
+/* Google Tag Manager — deliberately NOT loaded inside the Squarespace editor, so
+   admin editing sessions stop firing page_view and inflating GA4/Direct traffic. */
+if (!rlInSquarespaceEditor()) {
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N2G4Z9D8');
+}
 
 /* GA4 (G-WEZLH46NNX) is configured INSIDE the GTM container GTM-N2G4Z9D8:
    a Google Tag fires the page_view, and a GA4 Event tag forwards the
@@ -18,6 +33,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 /* Conversion Event Tracking */
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
 'use strict';
 
 window.dataLayer = window.dataLayer || [];

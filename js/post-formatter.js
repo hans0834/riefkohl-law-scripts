@@ -2,6 +2,8 @@
 // Enhances blog posts with proper heading structure, styling, CTAs, and related posts
 // Runs on individual blog post pages only
 (function(){
+/* EDITOR GUARD: never run inside the Squarespace editor (same-origin frame under /config). Fails open. */
+try { if (window.self !== window.top && window.top.location.pathname.indexOf('/config') === 0) return; } catch (e) {}
   'use strict';
 
   // Only run on individual blog post pages (not the blog listing)

@@ -236,7 +236,11 @@ var SEO = {
   '/act-60-tax-incentives': {
     h1: 'Act 60 Tax Incentives — 4% Corporate Rate & Individual Investor Decrees in Puerto Rico',
     title: 'Puerto Rico Act 60: 4% Rate & Investor Decrees | Riefkohl Law',
-    meta: 'Do you qualify for Act 60? Apply by Dec 31, 2026 to lock the 0% capital-gains rate — 4% after. San Juan attorney, free 30-minute call.',
+    // 2026-08-02: rewritten for CTR. The page's impressions come mostly from the
+    // export-services / software 4%-corporate cluster, but the old meta led with
+    // individual-investor capital gains — a query/snippet mismatch (3,424 impr, 0.4% CTR).
+    // Title left unchanged: it lifted reach/rank in late June and is still settling.
+    meta: 'Puerto Rico Act 60: 4% corporate rate for export-services and software firms, 0% capital gains if you file by Dec 31, 2026. Do you qualify? Free call.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -2338,6 +2342,51 @@ var SEO = {
   },
 
   /* ---- Session 7: Case Law Blog Posts (9 Category Summaries) ---- */
+  // 2026-08-02: the site's single best organic page (41 clicks / 2,065 impr / 2.0% CTR
+  // / pos 5.8 in the week of Jul 25-31) had NO entry here at all — no controlled title,
+  // meta or schema. Added to capture the cost/"gratis" intent in the query cluster.
+  '/blog/declaratoria-de-herederos-puerto-rico': {
+    title: 'Declaratoria de Herederos PR: Costos y Pasos | Riefkohl Law',
+    meta: 'Cuánto cuesta, cuánto tarda y cómo funciona la declaratoria de herederos en Puerto Rico — paso a paso, y cómo evitarla con un fideicomiso. Llamada gratis.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Cuánto cuesta una declaratoria de herederos en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'El costo depende menos del valor de la herencia que del estado de los documentos del difunto: un caso con testamento, una sola propiedad con título limpio y herederos de acuerdo cuesta una fracción de lo que cuesta un caso intestado con propiedades sin inscribir o disputas familiares. El total se compone de los honorarios de abogado — la única partida negociable, y que en Riefkohl Law se cotiza por tarifa fija — más costos de terceros que nadie puede evitar: sellos y aranceles del tribunal, publicación de edictos, certificaciones del Registro Demográfico, CRIM y Hacienda, estudios de título y, si aplica, tasaciones y contribuciones sobre caudal relicto.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Existe la declaratoria de herederos gratis?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Es un procedimiento judicial y los aranceles del tribunal, la publicación de edictos y las certificaciones tienen costo aunque usted se represente por derecho propio. Si sus ingresos son limitados, puede solicitar al tribunal la exención del pago de aranceles por indigencia, y organizaciones de servicios legales sin fines de lucro en Puerto Rico atienden casos de sucesiones para personas que cualifican. Intentar el proceso sin abogado para ahorrar honorarios suele salir más caro si el Registro de la Propiedad rechaza la resolución y hay que empezar de nuevo.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuánto tarda una declaratoria de herederos en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Un caso simple — testamento claro, pocos bienes y herederos de acuerdo — toma de 6 a 12 meses. Un caso moderado, con varias propiedades o asuntos por resolver, toma de 12 a 18 meses. Un caso complejo — sin testamento, con múltiples herederos, disputas, propiedades en varias jurisdicciones o deudas significativas — puede tomar desde 18 meses hasta varios años.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cómo se puede evitar la declaratoria de herederos?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Un fideicomiso bajo la Ley 219-2012 transfiere los bienes a sus herederos sin pasar por el tribunal, y se prepara por tarifa fija desde $1,800 para una estructura sencilla — cifra que es un ejemplo representativo de un encargo típico; el honorario de cada caso se determina según sus circunstancias. Otras herramientas incluyen designar beneficiarios directamente en cuentas y pólizas, y la planificación sucesoral integral. Frente a la declaratoria, evitar el proceso ahorra de 6 a 18 meses de espera y mantiene el patrimonio fuera del expediente judicial público.'
+          }
+        }
+      ]
+    }
+  },
   '/blog/banking-insurance-trust-disputes-puerto-rico': {
     h1: 'Banking & Insurance Trust Disputes in Puerto Rico — Case Analysis',
     meta: 'Puerto Rico case law on banking and insurance trust disputes. Court rulings on surety bonds, fraudulent transfers, mortgage foreclosure, and trust assets.',
@@ -2799,7 +2848,7 @@ function fixH1() {
 
   /* Find the blog dashboard hero title (the duplicate H1) */
   var heroH1 = document.querySelector('.rl-bd-hero-title');
-  if (heroH1) {
+  if (heroH1 && config.h1) {
     heroH1.textContent = config.h1;
   }
 
@@ -2953,7 +3002,7 @@ function fixImageAlts() {
     } else {
       /* Generic contextual alt based on page */
       var config = SEO[path];
-      if (config) {
+      if (config && config.h1) {
         img.setAttribute('alt', config.h1);
       }
     }
@@ -3085,7 +3134,10 @@ function injectPersonSchema() {
 function fixOpenGraphAndTwitter() {
   var path = window.location.pathname.replace(/\/$/, '') || '/';
   var config = SEO[path];
-  var pageTitle = config ? config.h1 : document.title.split('—')[0].split('|')[0].trim();
+  /* Entries may set `title` without an `h1` (e.g. live blog posts whose H1 we do not
+     want to touch), so fall back rather than emitting og:title="undefined". */
+  var fallbackTitle = document.title.split('—')[0].split('|')[0].trim();
+  var pageTitle = (config && (config.h1 || config.title)) || fallbackTitle;
   var pageDesc = config ? config.meta : '';
   var isBlogPost = path.indexOf('/blog/') === 0;
   var pageType = isBlogPost ? 'article' : 'website';

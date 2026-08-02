@@ -119,16 +119,35 @@ Factores que prolongan el proceso:
 - Carga de trabajo del tribunal
 - Complejidad del inventario de bienes
 
-## Costos del proceso
+## ¿Cuánto cuesta una declaratoria de herederos?
 
-Los costos incluyen:
+Es la primera pregunta que hace casi toda familia, y la respuesta honesta es que el costo depende menos del valor de la herencia que de **cuán ordenados estén los papeles del difunto**. Un caso con testamento, una sola propiedad con título limpio y herederos de acuerdo cuesta una fracción de lo que cuesta un caso sin testamento, con una casa heredada que nunca se inscribió y tres hermanos que no se hablan.
 
-- **Honorarios de abogado:** Variable según la complejidad; generalmente se cobra un porcentaje del valor de la sucesión o una tarifa fija
-- **Costos judiciales:** Sellos y aranceles del tribunal
-- **Publicación de edictos:** Costos de publicación en periódicos
-- **Certificaciones:** Certificados de defunción, registros de propiedad, certificaciones de CRIM y Hacienda
-- **Tasación de bienes:** Si es necesario determinar el valor justo de mercado de propiedades u otros activos
-- **Contribuciones sobre caudal relicto:** Puerto Rico y federal, si el patrimonio excede las exenciones aplicables
+El costo total se compone de dos cosas muy distintas:
+
+**1. Honorarios de abogado.** Es la partida más grande y la única negociable. Algunos abogados cobran un porcentaje del caudal; otros cobramos **tarifa fija**, de modo que usted sepa la cifra completa antes de empezar y no reciba sorpresas si el caso se alarga. Pida siempre la cotización por escrito y pregunte específicamente qué pasa si surge una complicación: ahí es donde los presupuestos abiertos se disparan.
+
+**2. Costos de terceros que nadie puede evitar.** No son honorarios y no van al abogado:
+
+- **Sellos y aranceles del tribunal** para la presentación de la petición
+- **Publicación de edictos** en un periódico de circulación general
+- **Certificaciones:** certificado de defunción del Registro Demográfico, certificación negativa de testamento, certificaciones del CRIM y de Hacienda, y estudios de título en el Registro de la Propiedad
+- **Tasación de bienes**, si hay que fijar el valor justo de mercado de propiedades
+- **Contribuciones sobre caudal relicto**, estatales o federales, solo si el patrimonio excede las exenciones aplicables
+
+### ¿Existe la declaratoria de herederos gratis?
+
+No. Es un procedimiento judicial y los aranceles del tribunal, la publicación de edictos y las certificaciones tienen costo aunque usted se represente por derecho propio. Si sus ingresos son limitados, puede solicitar al tribunal la exención del pago de aranceles por indigencia, y organizaciones de servicios legales sin fines de lucro en Puerto Rico atienden casos de sucesiones para personas que cualifican. Pero "gratis" en el sentido de que el proceso no cueste nada no existe.
+
+Cuidado con una economía falsa muy común: intentar el proceso sin abogado para ahorrar honorarios y terminar con una resolución que el Registro de la Propiedad rechaza, lo que obliga a empezar de nuevo y a pagar dos veces.
+
+### La comparación que realmente importa
+
+El dato decisivo no es cuánto cuesta la declaratoria, sino que **es evitable casi en su totalidad**. Un [fideicomiso bajo la Ley 219-2012](/resources/que-es-un-fideicomiso-en-puerto-rico) transfiere los bienes a sus herederos sin pasar por el tribunal, y en Riefkohl Law se prepara por **tarifa fija desde $1,800** para una estructura sencilla, con el precio en la mano antes de empezar. Esa cifra es un ejemplo representativo de lo que refleja un encargo típico; el honorario de cada caso se determina según sus circunstancias.
+
+Frente a eso, la declaratoria añade de 6 a 18 meses de espera, honorarios que se pagan en el peor momento posible para la familia, y un expediente judicial público. Consulte los [costos detallados de un fideicomiso](/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico) para comparar ambos caminos con números.
+
+Si ya falleció un familiar y necesita saber qué costaría su caso en particular, [pida una llamada de 30 minutos sin costo](/calendly) y le damos una cotización de tarifa fija.
 
 ## Complicaciones comunes
 

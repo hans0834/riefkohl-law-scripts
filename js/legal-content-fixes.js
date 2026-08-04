@@ -1015,12 +1015,15 @@ var ACT153_NOTICE_PAGES = [
   '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico',
   '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico',
   '/resources/planificacion-sucesoral-puerto-rico',
-  '/resources/planificacion-sucesoral-ley-60-nuevos-residentes'
+  '/resources/planificacion-sucesoral-ley-60-nuevos-residentes',
+  '/blog/cpa-bridge-trust-advice',
+  '/blog/cpa-bridge-trust-advice-es'
 ];
 
 /* Spanish-language pages get the Spanish notice. */
 var ACT153_ES_PAGES = [
   '/espanol-fideicomisos',
+  '/blog/cpa-bridge-trust-advice-es',
   '/resources/que-es-un-fideicomiso-en-puerto-rico',
   '/resources/fideicomiso-irrevocable-puerto-rico',
   '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico',
@@ -1126,7 +1129,18 @@ var IRREVOCABILITY_PROSE_FIXES = [
   ['Bajo la Ley de Fideicomisos, todos los fideicomisos de Puerto Rico son irrevocables.',
    'Bajo la Ley de Fideicomisos antes de la Ley 153-2026, todos los fideicomisos de Puerto Rico eran irrevocables. La Ley 153-2026 invirti\u00f3 esa presunci\u00f3n a partir del 30 de enero de 2027.'],
   ['los fideicomisos en Puerto Rico son irrevocables por defecto.',
-   'los fideicomisos en Puerto Rico fueron irrevocables por defecto hasta que la Ley 153-2026 entr\u00f3 en vigor el 30 de enero de 2027, que invirti\u00f3 la presunci\u00f3n.']
+   'los fideicomisos en Puerto Rico fueron irrevocables por defecto hasta que la Ley 153-2026 entr\u00f3 en vigor el 30 de enero de 2027, que invirti\u00f3 la presunci\u00f3n.'],
+  /* CPA-bridge blog posts (published). The Squarespace rich-text editor rejects a
+     programmatic body replacement, so these are corrected in the DOM. Both told the
+     reader Puerto Rico is the OPPOSITE of the mainland \u2014 now exactly backwards. */
+  ['Trusts in Puerto Rico are irrevocable by default.',
+   'Revocability is the default in Puerto Rico \u2014 as of January 30, 2027.'],
+  ['Unlike many mainland jurisdictions where trusts are presumed revocable unless stated otherwise, Puerto Rico law presumes irrevocability. This is a critical distinction. If the trust instrument does not explicitly reserve the right to revoke or amend, the grantor loses control of the assets permanently.',
+   'Act 153-2026 reversed the rule that had governed since 2012, bringing Puerto Rico in line with most mainland jurisdictions: a deed that says nothing about revocability is now presumed revocable. This is a critical distinction, and it now cuts the other way. If your goal is asset protection, the deed must state irrevocability expressly \u2014 while the settlor keeps the power to revoke, creditors can reach the trust assets as if the trust did not exist.'],
+  ['Los fideicomisos en Puerto Rico son irrevocables por defecto.',
+   'En Puerto Rico la revocabilidad es la norma supletoria \u2014 desde el 30 de enero de 2027.'],
+  ['A diferencia de muchas jurisdicciones continentales donde los fideicomisos se presumen revocables a menos que se establezca lo contrario, la ley de Puerto Rico presume la irrevocabilidad. Esta es una distinci\u00f3n cr\u00edtica. Si el instrumento del fideicomiso no reserva expl\u00edcitamente el derecho a revocar o enmendar, el fideicomitente pierde el control de los activos permanentemente.',
+   'La Ley 153-2026 invirti\u00f3 la regla vigente desde 2012 y aline\u00f3 a Puerto Rico con la mayor\u00eda de las jurisdicciones continentales: la escritura que nada diga sobre revocabilidad se presume revocable. La distinci\u00f3n sigue siendo cr\u00edtica, pero ahora corta al rev\u00e9s. Si busca protecci\u00f3n de activos, la escritura debe declarar la irrevocabilidad expresamente \u2014 mientras el fideicomitente conserve la facultad de revocar, sus acreedores pueden alcanzar los bienes como si el fideicomiso no existiera.'],
 ];
 
 function fixStaleIrrevocabilityProse() {

@@ -1632,7 +1632,7 @@ var SEO = {
   '/resources/revocable-trusts-puerto-rico': {
     h1: 'Revocable Trusts in Puerto Rico: What Act 153-2026 Changes',
     title: 'Revocable Trusts in Puerto Rico: Act 153-2026 | Riefkohl Law',
-    meta: 'Act 153-2026 legalizes revocable trusts in Puerto Rico effective Jan 30, 2027, and flips the presumption: silence now means revocable. What changes, and what to do first.',
+    meta: 'Act 153-2026 legalizes revocable trusts in Puerto Rico on Jan 30, 2027 and flips the presumption: silence now means revocable. What changes, what to review.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

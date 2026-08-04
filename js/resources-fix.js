@@ -5,6 +5,12 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
 'use strict';
 var path = window.location.pathname.replace(/\/$/,'');
 
+/* Act 153-2026 cornerstone pages — FLIP TO true once
+   /resources/revocable-trusts-puerto-rico and
+   /resources/fideicomisos-revocables-puerto-rico exist in Squarespace.
+   Same flag lives in js/legal-content-fixes.js — flip both together. */
+var ACT153_PAGES_LIVE = false;
+
 /* Skip inside the Squarespace editor/admin preview (page is rendered in an
    iframe and/or served from the *.squarespace.com admin domain) so the real,
    native page content is editable. The live site (riefkohllaw.com, top-level
@@ -1078,7 +1084,8 @@ function injectResourceCards() {
       heading: 'Trusts & Asset Protection',
       icon: '\uD83D\uDEE1\uFE0F',
       cards: [
-        { title: 'Revocable Trusts: What Act 153-2026 Changes', desc: 'Act 153-2026 legalizes the revocable trust in Puerto Rico effective January 30, 2027 and reverses the irrevocability presumption \u2014 what changes, who it affects, and what to review before it takes effect.', url: '/resources/revocable-trusts-puerto-rico' },
+        /* Act 153-2026 cornerstone. Gated on ACT153_PAGES_LIVE (top of file) so the
+           hub never links at a 404 before the Squarespace page exists. */
         { title: 'Complete Guide to Puerto Rico Trusts', desc: 'Everything you need to know about trusts under the Puerto Rico Trust Act (Ley 219-2012) \u2014 types, benefits, and how they work within the civil law system.', url: '/resources/complete-guide-puerto-rico-trusts' },
         { title: 'Trust vs. Will in Puerto Rico', desc: 'A side-by-side comparison of wills and trusts under Puerto Rico law, including costs, probate, privacy, and which is right for your situation.', url: '/resources/trust-vs-will-puerto-rico' },
         { title: 'Asset Protection Trusts', desc: 'How Puerto Rico’s autonomous-estate doctrine shields assets from creditors, lawsuits, and judgments under the PR Trust Act (Ley 219-2012) — the protective structure, its limits, and the case law.', url: '/resources/asset-protection-trusts-pr' }
@@ -1132,6 +1139,15 @@ function injectResourceCards() {
       ]
     }
   ];
+
+  /* Lead the trusts group with the Act 153-2026 cornerstone once it is published. */
+  if (ACT153_PAGES_LIVE) {
+    sections[0].cards.unshift({
+      title: 'Revocable Trusts: What Act 153-2026 Changes',
+      desc: 'Act 153-2026 legalizes the revocable trust in Puerto Rico effective January 30, 2027 and reverses the irrevocability presumption — what changes, who it affects, and what to review before it takes effect.',
+      url: '/resources/revocable-trusts-puerto-rico'
+    });
+  }
 
   var html = '<div class="rl-extra-cards">';
 

@@ -3645,3 +3645,12 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 #footer-sections .sqs-block-button-element--small{border-color:#BFA35D!important;color:#F5F1E8!important}
 #footer-sections hr{background:#BFA35D;opacity:.45}
 
+/* Squarespace gives a newly added Fluid Engine Code block a percentage
+   padding-top (aspect-ratio space reservation). On the native /resources
+   bodies that renders as ~270px of blank space above the hero — visible on
+   the Act 153-2026 pages created Aug 4 2026. Our wrappers set their own
+   spacing, so drop it wherever a code block wraps one. */
+.sqs-code-container:has(> .rl-sub),
+.sqs-code-container:has(> .rl-article-hub) {
+  padding-top: 0 !important;
+}

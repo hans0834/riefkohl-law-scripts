@@ -461,3 +461,13 @@ article:has(.rl-article-hub) {
   .rl-rc .rl-card-featured { flex-direction: column !important; padding: 24px 20px !important; gap: 16px !important; }
   .rl-rc .rl-extra-cards > div:nth-child(even) { margin: 0 -16px !important; padding: 24px 0 !important; }
 }
+
+/* Squarespace gives a newly added Fluid Engine Code block a percentage
+   padding-top (aspect-ratio space reservation). On the native /resources
+   bodies that renders as ~270px of blank space above the hero — visible on
+   the Act 153-2026 pages created Aug 4 2026. Our wrappers set their own
+   spacing, so drop it wherever a code block wraps one. */
+.sqs-code-container:has(> .rl-sub),
+.sqs-code-container:has(> .rl-article-hub) {
+  padding-top: 0 !important;
+}

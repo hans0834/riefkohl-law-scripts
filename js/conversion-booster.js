@@ -309,7 +309,10 @@ function injectUrgencyBanner() {
   // Insert at the top of the first content section so it clears the
   // absolutely-positioned site header at every viewport width. (Inserting
   // next to the call banner rendered it underneath the logo.)
-  var firstContent = document.querySelector('#sections .page-section .sqs-html-content');
+  // Squarespace renamed the sections container (#sections -> article#page-regions),
+  // so match on .page-section alone — anchoring on the old id silently dropped the
+  // banner into the fallback branch, where it overlapped the logo.
+  var firstContent = document.querySelector('.page-section .sqs-html-content');
   if (firstContent) {
     firstContent.insertBefore(banner, firstContent.firstChild);
   } else {

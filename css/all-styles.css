@@ -1351,6 +1351,20 @@ article:has(.rl-article-hub) {
   margin: 0 auto !important;
   line-height: 1.55 !important;
 }
+
+/* Inline emphasis inside the dark hero must not fall back to the body colour.
+   Squarespace's base rule paints em/strong #2d2d2d, which is invisible on the
+   navy hero — caught on /resources/revocable-trusts-puerto-rico (Aug 4 2026). */
+.rl-sub .rl-sub-hero p em,
+.rl-sub .rl-sub-hero p strong,
+.rl-sub .rl-sub-hero p b,
+.rl-sub .rl-sub-hero p i {
+  color: inherit !important;
+}
+.rl-sub .rl-sub-hero h1 em,
+.rl-sub .rl-sub-hero h1 strong {
+  color: inherit !important;
+}
 .rl-sub h2 {
   font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif);
   font-size: 1.3rem;

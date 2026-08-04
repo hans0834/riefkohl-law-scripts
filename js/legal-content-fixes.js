@@ -1006,6 +1006,7 @@ var ACT153_NOTICE_PAGES = [
   '/resources/fiduciary-duties-trustees',
   '/resources/trust-taxation-act-60',
   '/resources/trust-costs-puerto-rico',
+  '/resources/special-needs-trusts-medicaid',
   '/resources/estate-planning-act-60-relocatees',
   '/resources/avoiding-probate-legitima',
   /* Spanish */
@@ -1039,8 +1040,14 @@ function addTrustIrrevocabilityNotice() {
 
   if (document.getElementById('rl-act153-notice')) return;
 
+  /* The native /resources pages live in a Code block, NOT an .sqs-html-content
+     block — on those pages .sqs-html-content is an unrelated stub near the page
+     footer, so scoping the search to it dropped the notice ~9,500px down, below
+     the whole article. Anchor on .rl-sub (the native wrapper) first and fall back
+     to .sqs-html-content only for ordinary Squarespace pages. */
+  var sub = document.querySelector('.rl-sub');
   var htmlContent = document.querySelector('.sqs-html-content');
-  if (!htmlContent) return;
+  if (!sub && !htmlContent) return;
 
   var isES = ACT153_ES_PAGES.indexOf(path) >= 0;
 
@@ -1064,13 +1071,81 @@ function addTrustIrrevocabilityNotice() {
           : '<p style="margin:0;"><a href="/calendly" style="color:#8b5e00;text-decoration:underline;">Schedule a consultation</a> to review your instrument before it takes effect.</p>');
   }
 
-  /* Native /resources pages open with .rl-sub-hero \u2014 sit just under it, above the
-     body copy. Everything else: top of the content block. */
-  var hero = htmlContent.querySelector('.rl-sub-hero');
-  if (hero && hero.parentNode) {
-    hero.parentNode.insertBefore(notice, hero.nextSibling);
-  } else {
-    htmlContent.insertBefore(notice, htmlContent.firstChild);
+  /* Native page: drop it above the first body heading, i.e. below the hero, the
+     back-link and the "current as of" line \u2014 the first thing read before any of
+     the stale copy. Ordinary page: top of the content block. */
+  if (sub) {
+    var firstH2 = sub.querySelector('h2');
+    if (firstH2) {
+      sub.insertBefore(notice, firstH2);
+      return;
+    }
+    var hero = sub.querySelector('.rl-sub-hero');
+    if (hero && hero.parentNode) {
+      hero.parentNode.insertBefore(notice, hero.nextSibling);
+      return;
+    }
+    sub.insertBefore(notice, sub.firstChild);
+    return;
+  }
+  htmlContent.insertBefore(notice, htmlContent.firstChild);
+}
+
+/* ================================================
+   24b. CORRECT THE SUPERSEDED IRREVOCABILITY PROSE
+   The banner above warns that the rule changed, but the
+   body copy still states the old rule as fact \u2014 and on the
+   pages in schema-markup.js's FAQ_SCAN_PAGES that prose is
+   scraped into FAQPage structured data, so Google is being
+   fed the superseded rule as an answer. Verified live on
+   /resources/trust-vs-will-puerto-rico.
+
+   These are exact sentences from the native page bodies.
+   Rewriting them here fixes the visible page and the
+   extracted schema together; legal-content-fixes.js is
+   module 14 and schema-markup.js is module 15, so this runs
+   first. Re-pasting the corrected native HTML later makes
+   these no-ops \u2014 they simply stop matching.
+   ================================================ */
+var IRREVOCABILITY_PROSE_FIXES = [
+  ['all Puerto Rico trusts are irrevocable by default.',
+   'Puerto Rico trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027; a deed silent on revocability is now presumed revocable.'],
+  ['all trusts are irrevocable by default',
+   'trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027'],
+  ['trusts are irrevocable by default.',
+   'trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027, which reversed the presumption.'],
+  ['Under Law 219-2012 all trusts are irrevocable, though you can reserve broad modification rights under \u00a73352h.',
+   'Under Law 219-2012 all trusts were irrevocable, but Act 153-2026 reversed that on January 30, 2027: a deed silent on revocability is now presumed revocable, and any settlor may create a revocable trust.'],
+  ['Under the Puerto Rico Trust Act (Ley 219-2012), all trusts are irrevocable\u2014with one exception',
+   'Under the Puerto Rico Trust Act (Ley 219-2012), all trusts were irrevocable until Act 153-2026 took effect on January 30, 2027\u2014with one earlier exception'],
+  ['The Fundamental Rule: All Puerto Rico Trusts Are Irrevocable',
+   'The Former Rule: All Puerto Rico Trusts Were Irrevocable (changed by Act 153-2026)'],
+  ['Under the Trust Act, all Puerto Rico trusts are irrevocable.',
+   'Under the Trust Act as it stood before Act 153-2026, all Puerto Rico trusts were irrevocable. Act 153-2026 reversed that presumption effective January 30, 2027.'],
+  /* Spanish */
+  ['Bajo la Ley de Fideicomisos, todos los fideicomisos de Puerto Rico son irrevocables.',
+   'Bajo la Ley de Fideicomisos antes de la Ley 153-2026, todos los fideicomisos de Puerto Rico eran irrevocables. La Ley 153-2026 invirti\u00f3 esa presunci\u00f3n a partir del 30 de enero de 2027.'],
+  ['los fideicomisos en Puerto Rico son irrevocables por defecto.',
+   'los fideicomisos en Puerto Rico fueron irrevocables por defecto hasta que la Ley 153-2026 entr\u00f3 en vigor el 30 de enero de 2027, que invirti\u00f3 la presunci\u00f3n.']
+];
+
+function fixStaleIrrevocabilityProse() {
+  if (path === '/resources/revocable-trusts-puerto-rico') return;
+  if (path === '/resources/fideicomisos-revocables-puerto-rico') return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  for (var i = 0; i < nodes.length; i++) {
+    var node = nodes[i];
+    if (isInsideInjectedElement(node)) continue;   /* never rewrite our own banner */
+    for (var j = 0; j < IRREVOCABILITY_PROSE_FIXES.length; j++) {
+      var find = IRREVOCABILITY_PROSE_FIXES[j][0];
+      if (node.nodeValue.indexOf(find) >= 0) {
+        node.nodeValue = node.nodeValue.split(find).join(IRREVOCABILITY_PROSE_FIXES[j][1]);
+      }
+    }
   }
 }
 
@@ -1510,6 +1585,9 @@ function runLegalFixes() {
   fixCryptoOversimplification();
   fixEmploymentRequirements();
   fixDecreeDuration();
+  /* Correct the superseded prose BEFORE schema-markup.js (module 15) scrapes
+     the page's FAQ answers into FAQPage structured data. */
+  fixStaleIrrevocabilityProse();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

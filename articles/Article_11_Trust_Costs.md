@@ -27,7 +27,7 @@ The single largest creation cost is legal drafting, and fees vary dramatically b
 
 **Estimated fee ranges (approximate; verify current rates with your attorney):**
 - **Simple inter vivos trust** (single beneficiary, straightforward assets, no special provisions): $1,500–$3,500
-- **Standard revocable living trust** (Note: Under Law 219-2012, trusts in Puerto Rico are irrevocable by default. Revocable trusts are available only to Act 60 decree holders under the special carve-out at 13 LPRA §10854a(b). Absent an express provision in the constitutive deed, the trust is presumed irrevocable.) (multiple beneficiaries, real property, modest complexity): $3,500–$7,500
+- **Standard revocable living trust** (Note: since Act 153-2026 took effect on January 30, 2027, any settlor may create a revocable trust and a silent deed is presumed revocable. Revocable trusts are available only to Act 60 decree holders under the special carve-out at 13 LPRA §10854a(b). Absent an express provision in the constitutive deed, the trust is presumed irrevocable.) (multiple beneficiaries, real property, modest complexity): $3,500–$7,500
 - **Complex multi-beneficiary trust** (generation-skipping provisions, multiple jurisdictions, trust protector, §3352h calibration): $7,500–$15,000+
 - **Testamentary trust** (will-embedded, Puerto Rico execution): $2,000–$5,000
 - **ILIT/SLAT** (Irrevocable Life Insurance Trust or Spousal Lifetime Access Trust, Puerto Rico situs): $5,000–$12,000

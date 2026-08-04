@@ -8,9 +8,9 @@ One of the first questions Act 60 investors ask after relocating to Puerto Rico 
 
 Puerto Rico does not have revocable trusts. Every trust created under Puerto Rico law is irrevocable. But that fact, standing alone, is misleading. Puerto Rico's irrevocable trusts can be *modified* in ways that give the grantor some of the flexibility as a mainland revocable trust — without the ability to collapse the trust entirely. Understanding this distinction, and choosing between maintaining your mainland trust and creating a new Puerto Rico trust, is the central planning decision for Act 60 investors.
 
-## The Fundamental Rule: All Puerto Rico Trusts Are Irrevocable
+## The Rule That Changed: Revocability Is Now the Default
 
-Under both the original 1928 Act and the current Puerto Rico Trust Act (Ley 219-2012), the grantor may not reserve the right to revoke a trust.[^1] This is not a default rule that can be overridden by the trust instrument — it is a mandatory provision of Puerto Rico law.
+From the 1928 Act through January 29, 2027, the grantor could not reserve the right to revoke a trust. Act 153-2026 changed that on January 30, 2027: a trust may now be revocable or irrevocable as the deed expressly provides, and silence means revocable.[^1] This is not a default rule that can be overridden by the trust instrument — it is a mandatory provision of Puerto Rico law.
 
 For mainland transplants accustomed to the revocable living trust as the default estate planning vehicle, this is a significant adjustment. On the mainland, revocable trusts dominate because they offer maximum flexibility: the grantor can amend, revoke, or terminate the trust at any time during life, making it essentially a transparent extension of the grantor's own estate. Only at the grantor's death does the revocable trust become irrevocable.
 
@@ -122,7 +122,7 @@ Based on the statutory framework and the considerations above, Act 60 investors 
 
 ### Footnotes
 
-[^1]: PR Trust Act §3352h (reservation of rights). The grantor may reserve the right to modify trust terms, substitute trustees, add or remove beneficiaries, and exercise any other rights not contrary to law — but may NOT reserve the right to revoke.
+[^1]: PR Trust Act §3352h (reservation of rights). The grantor may reserve the right to modify trust terms, substitute trustees, add or remove beneficiaries, and exercise any other rights not contrary to law — but may not reserve the right to revoke within a trust that has been declared irrevocable.
 
 [^2]: PR Trust Act §3351 (defining the fideicomiso as an autonomous estate with full juridical personality); *Fideicomiso El Puente GNR*, 2024 WL 2313130 (confirming post-2012 trusts have independent legal personality).
 

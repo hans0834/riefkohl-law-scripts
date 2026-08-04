@@ -49,7 +49,7 @@ Law 219-2012 defines a trust as an *autonomous estate* (patrimonio autonomo) —
 
 - Trust property in Puerto Rico belongs to the trust itself, not to the trustor, trustee, or beneficiary. This creates a level of asset protection that mainland trusts cannot replicate.
 - The trust has its own legal identity and can hold property, enter contracts, and sue or be sued in its own name.
-- Puerto Rico trusts are irrevocable by default. The trustor cannot reserve the right to revoke unless the trust instrument specifically permits it. Act 60 decree holders have a statutory exception under Section 45147(b) that allows revocable trusts, but this must be properly structured.
+- Puerto Rico trusts are presumed revocable unless the deed says otherwise (Act 153-2026, effective January 30, 2027); irrevocability must be declared expressly. The trustor cannot reserve the right to revoke unless the trust instrument specifically permits it. Act 60 decree holders have a statutory exception under Section 45147(b) that allows revocable trusts, but this must be properly structured.
 
 **What your CPA cannot do here:**
 

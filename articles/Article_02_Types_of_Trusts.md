@@ -68,7 +68,7 @@ Special needs trusts (also called supplemental needs trusts) are designed to pro
 
 Puerto Rico's trust framework supports both first-party special needs trusts (funded with the beneficiary's own assets, typically from a personal injury settlement or inheritance) and third-party special needs trusts (funded by family members). The trust's spendthrift provisions and the autonomous estate structure provide strong protection against creditors and benefit disqualification.
 
-The key planning distinction in Puerto Rico: because all trusts are irrevocable, there is no risk of the trust being treated as a countable resource due to a retained revocation power. However, practitioners must ensure that the trust terms comply with both Puerto Rico law and federal Medicaid/SSI requirements, which operate independently.
+The key planning distinction in Puerto Rico: because a properly drafted trust here declares itself irrevocable, there is no risk of it being treated as a countable resource due to a retained revocation power — but since Act 153-2026 that declaration must be express, as a silent deed is now presumed revocable. However, practitioners must ensure that the trust terms comply with both Puerto Rico law and federal Medicaid/SSI requirements, which operate independently.
 
 For detailed analysis, see [Article 7: Special Needs Trusts and Medicaid Planning in Puerto Rico](/resources/special-needs-trusts-medicaid).
 

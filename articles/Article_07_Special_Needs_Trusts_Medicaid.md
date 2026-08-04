@@ -32,7 +32,7 @@ Let's break down how different trust structures are treated:
 
 If you fund a revocable living trust during your lifetime and retain the power to revoke it, the entire trust corpus is countable as your resource for Medicaid purposes. From Medicaid's perspective, you haven't transferred these assets at all—you still control them.
 
-***PR-Specific Note:** Under Puerto Rico Law 219-2012, trusts are irrevocable by default. Revocable living trusts as understood on the mainland---the foundational estate planning tool of mainland practice---cannot be created in Puerto Rico. This section describes mainland Medicaid rules that have limited applicability in PR.*
+***PR-Specific Note:** Since Act 153-2026 took effect on January 30, 2027, a Puerto Rico trust is presumed revocable unless the deed says otherwise. For special-needs planning that default is the wrong one — a third-party irrevocable trust remains the tool, and the deed must declare it expressly. Revocable living trusts as understood on the mainland---the foundational estate planning tool of mainland practice---cannot be created in Puerto Rico. This section describes mainland Medicaid rules that have limited applicability in PR.*
 
 ### Irrevocable Trusts with Discretionary Distributions to Applicant
 

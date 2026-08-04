@@ -24,7 +24,7 @@ Los fideicomisos en Puerto Rico están regidos por la Ley 219-2012, conocida com
 
 Esto es lo que necesita saber sobre el marco legal:
 
-**Los fideicomisos en Puerto Rico son irrevocables por defecto.** A diferencia de muchas jurisdicciones continentales donde los fideicomisos se presumen revocables a menos que se establezca lo contrario, la ley de Puerto Rico presume la irrevocabilidad. Esta es una distinción crítica. Si el instrumento del fideicomiso no reserva explícitamente el derecho a revocar o enmendar, el fideicomitente pierde el control de los activos permanentemente.
+**En Puerto Rico la revocabilidad es la norma supletoria — desde el 30 de enero de 2027.** A diferencia de muchas jurisdicciones continentales donde los fideicomisos se presumen revocables a menos que se establezca lo contrario, la ley de Puerto Rico presume la irrevocabilidad. Esta es una distinción crítica. Si el instrumento del fideicomiso no reserva explícitamente el derecho a revocar o enmendar, el fideicomitente pierde el control de los activos permanentemente.
 
 **El fideicomiso debe crearse mediante un instrumento escrito.** Los fideicomisos orales no son reconocidos. El documento del fideicomiso debe identificar al fideicomitente, al fiduciario, los beneficiarios, la propiedad del fideicomiso y su propósito.
 

@@ -23,7 +23,7 @@ Thank you for downloading [LEAD_MAGNET_TITLE]. Here is your copy:
 
 While you review it, here is one thing that catches most people off guard about Puerto Rico estate planning:
 
-**Puerto Rico trusts are irrevocable by default.** Under Law 219-2012, the grantor cannot reserve the right to revoke a trust — with one important exception: Act 60 Individual Resident Investor decree holders can create revocable trusts under Section 45147(b). If you relocated from the mainland with a revocable trust, it may not function as intended under Puerto Rico's civil law system. The good news: Puerto Rico's irrevocable trusts can be structured with significant flexibility — including the power to amend terms, change trustees, and add or remove beneficiaries.
+**Puerto Rico trusts are presumed revocable as of January 30, 2027 (Act 153-2026).** Under Law 219-2012, the grantor cannot reserve the right to revoke a trust — with one important exception: Act 60 Individual Resident Investor decree holders can create revocable trusts under Section 45147(b). If you relocated from the mainland with a revocable trust, it may not function as intended under Puerto Rico's civil law system. The good news: Puerto Rico's irrevocable trusts can be structured with significant flexibility — including the power to amend terms, change trustees, and add or remove beneficiaries.
 
 This is the kind of nuance that matters when your planning crosses jurisdictions. Over the next couple of weeks, I will share a few more insights that I think you will find valuable.
 
@@ -122,7 +122,7 @@ Hi [FIRST_NAME],
 
 Over the past two weeks, I have shared some of the key concepts in Puerto Rico trust and estate planning:
 
-- Why PR trusts are irrevocable by default (and why that is actually an advantage)
+- Why irrevocability must now be declared expressly (Act 153-2026 made revocable the default on January 30, 2027) and when it is still the right choice
 - How the autonomous estate concept creates distinctive asset protection advantages
 - What recent court cases mean for your planning
 - What the process and costs actually look like

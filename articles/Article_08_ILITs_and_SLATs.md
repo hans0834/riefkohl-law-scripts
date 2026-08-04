@@ -65,7 +65,7 @@ When an Act 60 investor relocates to Puerto Rico with an existing mainland ILIT,
 
 For *new* ILITs created after relocation, a Puerto Rico trust provides additional structural advantages:
 
-1. **Irrevocability as default:** PR trust law makes trusts irrevocable by default (32 L.P.R.A. § 3352a). This aligns naturally with the ILIT requirement—the grantor cannot reverse course, further reducing IRS scrutiny.
+1. **Irrevocability must be declared:** since Act 153-2026 took effect on January 30, 2027, a PR trust deed silent on revocability is presumed revocable. This aligns naturally with the ILIT requirement—the grantor cannot reverse course, further reducing IRS scrutiny.
 
 2. **Autonomous estate:** The PR trust's separate juridical personality creates a legal barrier between trust assets and grantor creditors. This strengthens the protective layer, particularly valuable if the grantor has professional liability exposure (physicians, attorneys, business owners).
 
@@ -224,7 +224,7 @@ For a high-net-worth married couple relocating to Puerto Rico under Act 60, a la
 
 1. **Primary PR-domiciled irrevocable trust with autonomous estate structure**
    - Established after relocation (to maximize PR tax benefits)
-   - Governed by 32 L.P.R.A. § 3352a (irrevocable by default)
+   - Governed by the Puerto Rico Trust Act, with irrevocability declared expressly in the deed (required since Act 153-2026)
    - Includes both spouses as beneficiaries (with spouse-favoring distribution hierarchy)
    - Autonomous estate classification under PR law
 
@@ -269,7 +269,7 @@ If the couple wishes to remove specific assets from the taxable estate while pre
 
 ### Irrevocability as Structural Advantage
 
-The Puerto Rico Trust Act (32 L.P.R.A. § 3352a) makes trusts irrevocable by default unless the trust document explicitly provides otherwise. This aligns with federal estate tax requirements and removes any risk that a court might find the grantor retained power to modify, thereby invalidating estate tax benefits. The default irrevocability is a feature, not a limitation.
+The Puerto Rico Trust Act (32 L.P.R.A. § 3352a) governed before Act 153-2026; from January 30, 2027 the presumption runs the other way and irrevocability must be stated in the deed. This aligns with federal estate tax requirements and removes any risk that a court might find the grantor retained power to modify, thereby invalidating estate tax benefits. The default irrevocability is a feature, not a limitation.
 
 ### §3352h Modification Rights and Tax Flexibility
 

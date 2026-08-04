@@ -24,7 +24,7 @@ Puerto Rico trusts are governed by Law 219-2012, known as the Ley de Fideicomiso
 
 Here is what you need to know about the legal framework:
 
-**Trusts in Puerto Rico are irrevocable by default.** Unlike many mainland jurisdictions where trusts are presumed revocable unless stated otherwise, Puerto Rico law presumes irrevocability. This is a critical distinction. If the trust instrument does not explicitly reserve the right to revoke or amend, the grantor loses control of the assets permanently.
+**Revocability is the default in Puerto Rico — as of January 30, 2027.** Unlike many mainland jurisdictions where trusts are presumed revocable unless stated otherwise, Puerto Rico law presumes irrevocability. This is a critical distinction. If the trust instrument does not explicitly reserve the right to revoke or amend, the grantor loses control of the assets permanently.
 
 **The trust must be created by a written instrument.** Oral trusts are not recognized. The trust document must identify the grantor, the trustee, the beneficiaries, the trust property, and the purpose of the trust.
 

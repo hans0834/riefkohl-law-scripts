@@ -1058,14 +1058,14 @@ function addTrustIrrevocabilityNotice() {
   if (isES) {
     notice.innerHTML =
       '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Actualizaci\u00f3n legislativa &mdash; Ley 153-2026 (vigente el 30 de enero de 2027)</p>'
-      + '<p style="margin:0 0 6px;">La <strong>Ley 153-2026</strong>, firmada el 30 de julio de 2026, reconoce expresamente el <strong>fideicomiso revocable</strong> en Puerto Rico e <strong>invierte la presunci\u00f3n</strong> de la Ley 219-2012. Desde el 30 de enero de 2027, la escritura que nada diga sobre revocabilidad se presume <em>revocable</em>. Parte de esta p\u00e1gina describe la norma anterior.</p>'
+      + '<p style="margin:0 0 6px;">La <strong>Ley 153-2026</strong>, firmada el 30 de julio de 2026, reconoce expresamente el <strong>fideicomiso revocable</strong> en Puerto Rico e <strong>invierte la presunci\u00f3n</strong> de la Ley 219-2012. Desde el 30 de enero de 2027, la escritura que nada diga sobre revocabilidad se presume <em>revocable</em>. Todo instrumento otorgado bajo la norma anterior merece una revisi\u00f3n.</p>'
       + (ACT153_PAGES_LIVE
           ? '<p style="margin:0;"><a href="/resources/fideicomisos-revocables-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Lea qu\u00e9 cambia con la Ley 153-2026</a> o <a href="/espanol-cita" style="color:#8b5e00;text-decoration:underline;">agende una consulta</a> para revisar su instrumento antes de que entre en vigor.</p>'
           : '<p style="margin:0;"><a href="/espanol-cita" style="color:#8b5e00;text-decoration:underline;">Agende una consulta</a> para revisar su instrumento antes de que entre en vigor.</p>');
   } else {
     notice.innerHTML =
       '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Law change &mdash; Act 153-2026, effective January 30, 2027</p>'
-      + '<p style="margin:0 0 6px;"><strong>Act 153-2026</strong>, signed July 30, 2026, expressly recognizes the <strong>revocable trust</strong> in Puerto Rico and <strong>reverses the presumption</strong> set by Law 219-2012. From January 30, 2027, a trust deed that says nothing about revocability is presumed <em>revocable</em>. Parts of this page describe the earlier rule.</p>'
+      + '<p style="margin:0 0 6px;"><strong>Act 153-2026</strong>, signed July 30, 2026, expressly recognizes the <strong>revocable trust</strong> in Puerto Rico and <strong>reverses the presumption</strong> set by Law 219-2012. From January 30, 2027, a trust deed that says nothing about revocability is presumed <em>revocable</em>. Any instrument drafted under the earlier rule is worth a review.</p>'
       + (ACT153_PAGES_LIVE
           ? '<p style="margin:0;"><a href="/resources/revocable-trusts-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Read what Act 153-2026 changes</a>, or <a href="/calendly" style="color:#8b5e00;text-decoration:underline;">schedule a consultation</a> to review your instrument before it takes effect.</p>'
           : '<p style="margin:0;"><a href="/calendly" style="color:#8b5e00;text-decoration:underline;">Schedule a consultation</a> to review your instrument before it takes effect.</p>');

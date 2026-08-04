@@ -326,6 +326,14 @@ function injectUrgencyBanner() {
       }
     }
   }
+
+  // Inside .sqs-html-content, Squarespace's own body-link rule carries
+  // !important at a higher specificity than anything we can reasonably write,
+  // and would render the link navy-on-navy. Pin it on the element instead.
+  var links = banner.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].style.setProperty('color', '#D4B96A', 'important');
+  }
 }
 
 /* ===== 6. ACT 60 ABOVE-THE-FOLD HERO ===== */

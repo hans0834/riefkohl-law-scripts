@@ -443,7 +443,9 @@ header.header {
    - Footer: navy background (content was white-on-white/invisible)
    =================================================================== */
 .rl-urgency-banner{display:block;max-width:1160px;margin:0 auto 10px;background:#16213E;color:#F5F1E8;text-align:center;padding:10px 22px;font-size:.83rem;line-height:1.5;border-radius:6px;box-sizing:border-box}
-.rl-urgency-banner a{color:#D4B96A;text-decoration:underline;text-underline-offset:2px}
+/* !important: the banner now sits inside .sqs-html-content, where Squarespace's
+   own body-link colour (navy) would otherwise win and go navy-on-navy. */
+.rl-urgency-banner a,.rl-urgency-banner a:hover{color:#D4B96A!important;text-decoration:underline;text-underline-offset:2px}
 .rl-urgency-banner .rl-urgency-icon{color:#D4B96A}
 /* Footer completion: navy background (content was white-on-white/invisible) */
 #footer-sections{background:#16213E}

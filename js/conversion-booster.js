@@ -807,6 +807,9 @@ function autoLinkAct60() {
         var tag = parent.tagName;
         if (tag === 'A' || tag === 'BUTTON' || tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
         if (parent.closest('a')) return NodeFilter.FILTER_REJECT;
+        // The urgency banner lives inside .sqs-html-content and already links
+        // to the Act 60 page — don't turn its own headline into a second link.
+        if (parent.closest('.rl-urgency-banner')) return NodeFilter.FILTER_REJECT;
         if (/Act\s*60/i.test(node.textContent)) return NodeFilter.FILTER_ACCEPT;
         return NodeFilter.FILTER_REJECT;
       }

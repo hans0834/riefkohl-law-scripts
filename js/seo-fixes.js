@@ -144,7 +144,7 @@ var SEO = {
           'name': 'How do Puerto Rico trusts differ from U.S. mainland trusts?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trusts operate under a civil law framework (Law 219-2012) rather than common law. Key differences include: trusts are irrevocable by default, forced heirship rules may affect trust planning, and Puerto Rico trusts can offer unique asset protection and tax planning advantages for both residents and Act 60 decree holders.'
+            'text': 'Puerto Rico trusts operate under a civil law framework (Law 219-2012) rather than common law. Key differences include: forced heirship (the legítima) constrains trust planning, the trust is an autonomous estate rather than a fiduciary relationship, and Puerto Rico trusts can offer distinct asset protection and tax planning advantages for residents and Act 60 decree holders. Revocability also works differently: trusts were irrevocable by default through January 29, 2027, but under Act 153-2026 a trust is presumed revocable from January 30, 2027 unless the deed expressly says otherwise.'
           }
         },
         {
@@ -629,7 +629,7 @@ var SEO = {
           'name': '\u00bfC\u00f3mo se diferencian los fideicomisos de Puerto Rico de los del continente?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Los fideicomisos de Puerto Rico operan bajo un marco de derecho civil (Ley 219-2012) en lugar del derecho com\u00fan. Las diferencias clave incluyen: los fideicomisos son irrevocables por defecto, las reglas de leg\u00edtima pueden afectar la planificaci\u00f3n del fideicomiso, y los fideicomisos de PR pueden ofrecer ventajas \u00fanicas de protecci\u00f3n de activos y planificaci\u00f3n contributiva.'
+            'text': 'Los fideicomisos de Puerto Rico operan bajo un marco de derecho civil (Ley 219-2012) en lugar del derecho com\u00fan. Las diferencias clave incluyen: la leg\u00edtima condiciona la planificaci\u00f3n, el fideicomiso es un patrimonio aut\u00f3nomo y no una relaci\u00f3n fiduciaria, y ofrece ventajas propias de protecci\u00f3n de activos y planificaci\u00f3n contributiva. La revocabilidad tambi\u00e9n cambia: los fideicomisos fueron irrevocables por defecto hasta el 29 de enero de 2027, pero bajo la Ley 153-2026 se presumen revocables desde el 30 de enero de 2027 salvo que la escritura disponga expresamente lo contrario.'
           }
         },
         {
@@ -927,7 +927,7 @@ var SEO = {
           'name': 'How is a Puerto Rico trust different from a mainland U.S. trust?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trusts are governed by civil law (Law 219-2012), not the Uniform Trust Code. Key differences: PR trusts are irrevocable by default, the trust is treated as an autonomous estate rather than a fiduciary relationship, forced heirship (leg\u00edtima) rules apply, and the trust can exist for up to 1,000 years. These differences create planning opportunities\u2014and traps\u2014that require an attorney experienced in both systems.'
+            'text': 'Puerto Rico trusts are governed by civil law (Law 219-2012, as amended by Act 153-2026), not the Uniform Trust Code. Key differences: the trust is treated as an autonomous estate rather than a fiduciary relationship, forced heirship (leg\u00edtima) rules apply, and irrevocable trusts are subject to statutory duration limits. Revocability flipped on January 30, 2027: PR trusts were irrevocable by default until then, and are presumed revocable after unless the deed expressly provides otherwise. These differences create planning opportunities\u2014and traps\u2014that require an attorney experienced in both systems.'
           }
         },
         {
@@ -935,7 +935,7 @@ var SEO = {
           'name': 'Can Act 60 decree holders create revocable trusts in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. Act 60 Individual Resident Investor (IRI) decree holders are one of the few categories permitted to establish revocable trusts under Puerto Rico law. For most other grantors, Puerto Rico trusts are irrevocable by default. This special provision makes trust planning particularly flexible for Act 60 participants.'
+            'text': 'Yes. Act 60 Individual Resident Investor (IRI) decree holders have been able to establish revocable trusts since 2014 under the Incentives Code, when no other grantor could. Act 153-2026 ends that exclusivity: effective January 30, 2027, any settlor may create a revocable trust in Puerto Rico. Decree holders should review how the new default rules on creditor reach-through, fiduciary duties, and Registry recording affect their existing structures.'
           }
         }
       ]
@@ -1006,7 +1006,7 @@ var SEO = {
           'name': 'Are Puerto Rico trusts revocable or irrevocable?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Under the PR Trust Act, all Puerto Rico trusts are irrevocable by default. The only exception is for Act 60 Individual Resident Investor decree holders, who may establish revocable trusts under the Incentives Code. A proposed bill (P. del S. 773) would add a broader revocable trust category, but it passed the Senate in January 2026 and, as of March 2026, still awaits House approval and has not been enacted.'
+            'text': 'That changed with Act 153-2026, which the Governor signed on July 30, 2026 and which takes effect January 30, 2027. Under the prior rule, all Puerto Rico trusts were irrevocable by default and only Act 60 Individual Resident Investor decree holders could create revocable trusts. From January 30, 2027, any settlor may create one, and a deed that says nothing about revocability is presumed revocable. The Act carries no transition provision for trusts executed before that date.'
           }
         },
         {
@@ -1080,7 +1080,7 @@ var SEO = {
           'name': 'Are revocable living trusts allowed in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Generally no. Under Puerto Rico Law 219-2012, trusts are irrevocable by default, and all trusts must be executed by public deed (escritura p\u00fablica) and registered in the Special Registry of Trusts. The only exception is for Act 60 IRI decree holders, who may create revocable trusts under the Incentives Code, so revocable living trusts as understood on the mainland generally cannot be created in Puerto Rico.'
+            'text': 'Yes, as of January 30, 2027. Act 153-2026 expressly recognizes the revocable trust in Puerto Rico law and reverses the old presumption, so a deed silent on revocability is now presumed revocable. Before that date, only Act 60 IRI decree holders could create one. Puerto Rico formalities still apply: the trust must be executed by public deed (escritura p\u00fablica) and recorded in the Registry of Trusts, and amendments or revocations must be recorded within ten days to bind third parties.'
           }
         }
       ]
@@ -1130,7 +1130,7 @@ var SEO = {
           'name': 'How does Puerto Rico law affect ILIT and SLAT planning?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trust law makes trusts irrevocable by default (32 L.P.R.A. \u00a73352a), which aligns with the irrevocability these trusts require, and its separate juridical personality creates an asset-protection barrier against creditors. PR law also permits a trust protector and beneficiary-initiated modification rights that can add flexibility without destroying estate tax benefits if exercised independently of the grantor. Couples should also analyze how the leg\u00edtima, which requires one-half of the estate to pass to forced heirs under the 2020 Civil Code, interacts with SLAT planning.'
+            'text': 'ILITs and SLATs depend on irrevocability, and under Act 153-2026 irrevocability must now be stated expressly: from January 30, 2027 a Puerto Rico trust deed that is silent is presumed revocable, and any asset subject to a retained power to revoke or withdraw can be reached by the settlor\'s creditors as if the trust did not exist. Drafted correctly as irrevocable, a Puerto Rico trust\'s separate juridical personality still creates an asset-protection barrier against creditors. PR law also permits a trust protector and beneficiary-initiated modification rights that can add flexibility without destroying estate tax benefits if exercised independently of the grantor. Couples should also analyze how the leg\u00edtima, which requires one-half of the estate to pass to forced heirs under the 2020 Civil Code, interacts with SLAT planning.'
           }
         }
       ]
@@ -1518,7 +1518,7 @@ var SEO = {
           'name': '\u00bfSon revocables los fideicomisos de Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Por defecto, todos los fideicomisos de Puerto Rico son irrevocables. La \u00fanica excepci\u00f3n son los titulares de decreto como Inversionistas Residentes Individuales (IRI) de la Ley 60, que pueden establecer fideicomisos revocables bajo el C\u00f3digo de Incentivos. No obstante, el fideicomitente s\u00ed puede reservarse amplios derechos de modificaci\u00f3n bajo el \u00a73352h.'
+            'text': 'Desde el 30 de enero de 2027, s\u00ed. La Ley 153-2026, firmada el 30 de julio de 2026, reconoce expresamente el fideicomiso revocable e invierte la presunci\u00f3n: la escritura que nada diga sobre revocabilidad se presume revocable. Hasta esa fecha todos los fideicomisos eran irrevocables por defecto, salvo los de titulares de decreto IRI de la Ley 60 bajo el C\u00f3digo de Incentivos. La Ley no contiene disposici\u00f3n transitoria para los fideicomisos ya otorgados.'
           }
         },
         {
@@ -1621,6 +1621,163 @@ var SEO = {
     title: 'Puerto Rico Trusts: The Complete Guide | Riefkohl Law',
     meta: 'Puerto Rico trusts explained: how they work under Law 219-2012, the types available, what they cost, and how they avoid probate and forced-heirship traps.',
     schema: null
+  },
+  /* ============================================================
+     ACT 153-2026 REVOCABLE TRUSTS — EN/ES cornerstone pair.
+     Added Aug 4 2026. Act 153-2026 was signed Jul 30 2026 and takes
+     effect Jan 30 2027; it reverses the irrevocability presumption of
+     Law 219-2012. Publish BOTH /resources pages together so the
+     hreflang pair below never points at a 404.
+     ============================================================ */
+  '/resources/revocable-trusts-puerto-rico': {
+    h1: 'Revocable Trusts in Puerto Rico: What Act 153-2026 Changes',
+    title: 'Revocable Trusts in Puerto Rico: Act 153-2026 | Riefkohl Law',
+    meta: 'Act 153-2026 legalizes revocable trusts in Puerto Rico effective Jan 30, 2027, and flips the presumption: silence now means revocable. What changes, and what to do first.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Are revocable trusts legal in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Act 153-2026, signed July 30, 2026 and effective January 30, 2027, expressly recognizes the revocable trust in Puerto Rico\'s general trust law. Before that date, only Act 60 Individual Resident Investor decree holders could create one, under the Incentives Code. From January 30, 2027, any settlor may.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'When does Act 153-2026 take effect?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'January 30, 2027. The Governor of Puerto Rico signed it on July 30, 2026. It amends 44 articles of the Puerto Rico Trust Act (Law 219-2012).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens if my Puerto Rico trust deed does not say whether it is revocable?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'For trusts constituted from January 30, 2027, silence means the trust is presumed revocable, unless the deed\'s own clauses clearly show an intent that it be irrevocable. Under the prior rule the opposite was true. Act 153-2026 contains no transition provision for trusts executed before that date, so existing deeds should not be assumed to be recharacterized — but they should be reviewed.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does a revocable trust protect assets from creditors in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No, not while the power to revoke survives. Under Act 153-2026, assets that remain subject to the settlor\'s power of revocation or withdrawal can be reached by the settlor\'s creditors as if the trust did not exist. Retitling real property into the trust does not change that. A revocable trust is a management and succession tool; asset protection generally requires an irrevocable structure.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a revocable trust override forced heirship in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Act 153-2026 keeps the prohibition on any trust, revocable or irrevocable, that encumbers the forced share (legítima). The one exception preserved in Article 10 allows a trust over the forced portion for descendants or forced heirs who are minors or incapacitated, where they are named the sole beneficiaries of income and principal.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Who does the trustee owe duties to in a Puerto Rico revocable trust?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The settlor, exclusively, while the settlor retains legal capacity and the power to revoke, unless the trust instrument provides otherwise. Beneficiaries hold expectant interests rather than enforceable rights until the trust becomes irrevocable through conversion, death, or a judicially decreed incapacity.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How is a revocable trust revoked in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'By public deed. If the trust instrument prescribes a method for revocation or amendment, that method is exclusive. Every amendment or revocation must be notified and recorded in the Registry of Trusts within ten days of execution, and it produces effects against third parties only once recorded.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens to a revocable trust when the settlor dies or becomes incapacitated?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It subsists until the settlor\'s death, or until the settlor loses legal capacity over their property and person by judicial decree, unless the deed provides otherwise. At that point the trust becomes irrevocable and the beneficiaries\' interests consolidate. Because the statutory default keys to a judicial determination, the instrument should define incapacity and set its own workable procedure.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Do I need to redo my existing Puerto Rico trust because of Act 153-2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not automatically. The Act carries no transition provision, and the new presumption should not be assumed to recharacterize deeds executed under the prior law. The reason to review is different: if a plan depends on irrevocability, that should now be stated expressly, and incapacity provisions drafted against the old defaults may no longer produce the intended result.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/fideicomisos-revocables-puerto-rico': {
+    h1: 'Fideicomisos revocables en Puerto Rico: qué cambia con la Ley 153-2026',
+    title: 'Fideicomisos Revocables en PR: Ley 153-2026 | Riefkohl Law',
+    meta: 'La Ley 153-2026 reconoce el fideicomiso revocable en Puerto Rico desde el 30 de enero de 2027 e invierte la presunción: el silencio ahora significa revocable.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Son legales los fideicomisos revocables en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí. La Ley 153-2026, firmada el 30 de julio de 2026 y vigente el 30 de enero de 2027, reconoce expresamente el fideicomiso revocable en el derecho general de fideicomisos. Antes de esa fecha solo podían constituirlo los titulares de decreto de Individuo Residente Inversionista de la Ley 60. Desde el 30 de enero de 2027 puede hacerlo cualquier fideicomitente.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuándo entra en vigor la Ley 153-2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'El 30 de enero de 2027. Fue firmada el 30 de julio de 2026 y enmienda 44 artículos de la Ley de Fideicomisos de Puerto Rico (Ley 219-2012).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué pasa si mi escritura de fideicomiso no dice si es revocable?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'En los fideicomisos constituidos desde el 30 de enero de 2027, el silencio implica que se presume revocable, salvo que de las propias cláusulas se desprenda claramente la intención de que sea irrevocable. Bajo la norma anterior ocurría lo contrario. La Ley no contiene disposición transitoria para escrituras anteriores, por lo que no debe asumirse que queden recalificadas, pero sí conviene revisarlas.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Protege un fideicomiso revocable los bienes frente a los acreedores?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No, mientras subsista la facultad de revocar. Bajo la Ley 153-2026, los bienes que permanezcan sujetos a la facultad de revocación o retiro pueden ser alcanzados por los acreedores del fideicomitente como si el fideicomiso no existiera. Inscribir un inmueble a nombre del fideicomiso no lo evita. La protección de activos requiere, por lo general, una estructura irrevocable.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Puede un fideicomiso revocable dejar sin efecto la legítima?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La Ley 153-2026 mantiene la prohibición de todo fideicomiso, revocable o irrevocable, que grave la legítima. La única excepción conservada en el Artículo 10 permite constituirlo sobre la porción legítima a favor de descendientes o legitimarios menores o incapacitados, siempre que sean los únicos beneficiarios de la renta y del capital.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cómo se revoca un fideicomiso en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Mediante escritura pública. Si el instrumento dispone un método para revocarlo o enmendarlo, ese método es exclusivo. Toda enmienda o revocación debe notificarse e inscribirse en el Registro de Fideicomisos dentro de diez días del otorgamiento, y solo surte efectos frente a terceros desde su inscripción.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Tengo que rehacer mi fideicomiso por la Ley 153-2026?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No automáticamente. La Ley no trae disposición transitoria y no debe asumirse que la nueva presunción recalifique escrituras otorgadas bajo la ley anterior. La razón para revisarlo es otra: si el plan depende de la irrevocabilidad, ahora conviene decirlo expresamente, y las cláusulas de incapacidad redactadas contra las normas supletorias anteriores pueden ya no producir el resultado buscado.'
+          }
+        }
+      ]
+    }
   },
   '/resources/trust-vs-will-puerto-rico': {
     h1: 'Trust vs. Will in Puerto Rico: Which One Do You Need?',
@@ -3472,7 +3629,9 @@ var CORE_HREFLANG_PAIRS = [
   ['/resources/act-60-requirements', '/resources/requisitos-ley-60'],
   ['/resources/do-you-still-owe-us-taxes-in-puerto-rico', '/resources/pagas-impuestos-federales-en-puerto-rico'],
   /* Act 60 + estate-planning bundle EN↔ES pair — added Jul 5 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
-  ['/resources/estate-planning-act-60-relocatees', '/resources/planificacion-sucesoral-ley-60-nuevos-residentes']
+  ['/resources/estate-planning-act-60-relocatees', '/resources/planificacion-sucesoral-ley-60-nuevos-residentes'],
+  /* Act 153-2026 revocable trusts EN↔ES pair — added Aug 4 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
+  ['/resources/revocable-trusts-puerto-rico', '/resources/fideicomisos-revocables-puerto-rico']
 ];
 
 function injectHreflang() {

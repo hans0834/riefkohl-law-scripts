@@ -20,6 +20,9 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
   12. Act 60 disclaimer: 6-year prior residency restriction
   13. Act 60 municipal/property tax exemption percentages (75%→50%, 60%→70%)
   14. 183-day presence test: clarify all three IRC §937 tests required
+  24. Act 153-2026 law-change notice across the trust cluster — the revocability
+      presumption flips on Jan 30 2027, so every page still asserting
+      "irrevocable by default" carries a dated callout to the new cornerstone
   26. Declaratoria de herederos: notarial route + "demanda"→"petición" (/blog/declaratoria-de-herederos-puerto-rico)
   27. Ley 60 (ES): federal vs. PR tax clarifier on "100% de exención" figures (/espanol-ley-60)
   28. Soften unsubstantiated advertising superlatives ("Expert"/"Expertise"/"trusted counsel"/"Sophisticated"/"caliber"/"extraordinarios") — site-wide
@@ -960,53 +963,101 @@ function fixDecreeDuration() {
 }
 
 /* ================================================
-   24. SURFACE PR TRUST IRREVOCABILITY ON ESTATE PLANNING
-   Reality: Under PR Law 219-2012, trusts are irrevocable
-   by default. This critical fact is buried in resource
-   articles but absent from /estate-planning.
+   24. ACT 153-2026 LAW-CHANGE NOTICE (trust cluster)
+   Was: "PR trusts are irrevocable by default" on
+   /estate-planning. Act 153-2026 \u2014 signed Jul 30 2026,
+   effective Jan 30 2027 \u2014 reverses that presumption, so
+   the old notice became affirmatively wrong and the whole
+   trust cluster still asserts the pre-2026 rule in its
+   native body copy.
+
+   Rather than re-paste a dozen native pages, this stamps a
+   dated law-change callout on every page in the cluster and
+   points readers at the new cornerstone. Body copy on those
+   pages is corrected on its own schedule; this guarantees no
+   visitor (or crawler, or LLM) reads the stale rule without
+   also reading that it changed.
    ================================================ */
+
+/* Exact paths carrying the old irrevocable-by-default rule. */
+var ACT153_NOTICE_PAGES = [
+  '/estate-planning',
+  '/puerto-rico-trusts',
+  '/espanol-fideicomisos',
+  '/resources/complete-guide-puerto-rico-trusts',
+  '/resources/what-is-puerto-rico-trust',
+  '/resources/trust-vs-will-puerto-rico',
+  '/resources/asset-protection-trusts-pr',
+  '/resources/asset-protection-irrevocable-trusts',
+  '/resources/modifying-irrevocable-trusts',
+  '/resources/act-60-trust-planning',
+  '/resources/mainland-trust-to-puerto-rico',
+  '/resources/ilits-and-slats',
+  '/resources/family-trust-pitfalls',
+  '/resources/fiduciary-duties-trustees',
+  '/resources/trust-taxation-act-60',
+  '/resources/trust-costs-puerto-rico',
+  '/resources/estate-planning-act-60-relocatees',
+  '/resources/avoiding-probate-legitima',
+  /* Spanish */
+  '/resources/que-es-un-fideicomiso-en-puerto-rico',
+  '/resources/fideicomiso-irrevocable-puerto-rico',
+  '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico',
+  '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico',
+  '/resources/planificacion-sucesoral-puerto-rico',
+  '/resources/planificacion-sucesoral-ley-60-nuevos-residentes'
+];
+
+/* Spanish-language pages get the Spanish notice. */
+var ACT153_ES_PAGES = [
+  '/espanol-fideicomisos',
+  '/resources/que-es-un-fideicomiso-en-puerto-rico',
+  '/resources/fideicomiso-irrevocable-puerto-rico',
+  '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico',
+  '/resources/como-evitar-el-proceso-sucesorio-en-puerto-rico',
+  '/resources/planificacion-sucesoral-puerto-rico',
+  '/resources/planificacion-sucesoral-ley-60-nuevos-residentes'
+];
+
 function addTrustIrrevocabilityNotice() {
-  if (path !== '/estate-planning') return;
-  if (document.getElementById('rl-trust-irrevocability-notice')) return;
+  /* Never on the two pages that are themselves about Act 153-2026. */
+  if (path === '/resources/revocable-trusts-puerto-rico') return;
+  if (path === '/resources/fideicomisos-revocables-puerto-rico') return;
+
+  var applies = ACT153_NOTICE_PAGES.indexOf(path) >= 0 ||
+                path.indexOf('/resources/trust-law-series/') === 0;
+  if (!applies) return;
+
+  if (document.getElementById('rl-act153-notice')) return;
 
   var htmlContent = document.querySelector('.sqs-html-content');
   if (!htmlContent) return;
 
-  /* Find the trusts section or a heading mentioning trusts */
-  var headings = htmlContent.querySelectorAll('h2, h3');
-  var insertBefore = null;
-  for (var i = 0; i < headings.length; i++) {
-    var hText = headings[i].textContent.toLowerCase();
-    if (hText.indexOf('trust') >= 0 || hText.indexOf('fideicomiso') >= 0) {
-      /* Insert after the first paragraph following this heading */
-      var sibling = headings[i].nextElementSibling;
-      while (sibling && sibling.tagName === 'P') {
-        sibling = sibling.nextElementSibling;
-      }
-      insertBefore = sibling || headings[i].nextElementSibling;
-      break;
-    }
-  }
+  var isES = ACT153_ES_PAGES.indexOf(path) >= 0;
 
   var notice = document.createElement('div');
-  notice.id = 'rl-trust-irrevocability-notice';
-  notice.style.cssText = 'margin:20px 0;padding:16px 20px;background:#fff8f0;border:1px solid #f0d4a8;border-left:4px solid #d4870e;border-radius:4px;font-size:.86rem;color:#5a3e00;line-height:1.6;';
-  notice.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.92rem;">Puerto Rico Trusts Are Irrevocable by Default</p>'
-    + '<p style="margin:0 0 6px;">Under the Puerto Rico Trust Act (Ley 219-2012), trusts are <strong>irrevocable by default</strong> unless the trust instrument expressly reserves the grantor\u2019s right to revoke or modify. This is a critical distinction from many mainland states, where revocable trusts are the norm.</p>'
-    + '<p style="margin:0;">For clients relocating from the mainland, this means existing mainland trust structures may not function as expected under Puerto Rico law. <a href="/resources/what-is-puerto-rico-trust" style="color:#8b5e00;text-decoration:underline;">Learn more about PR trust fundamentals</a> or <a href="/calendly" style="color:#8b5e00;text-decoration:underline;">schedule a consultation</a> to review your existing trust arrangements.</p>';
+  notice.id = 'rl-act153-notice';
+  notice.style.cssText = 'margin:24px 0;padding:18px 22px;background:#fff8f0;border:1px solid #f0d4a8;border-left:4px solid #d4870e;border-radius:4px;font-size:.88rem;color:#5a3e00;line-height:1.6;';
 
-  if (insertBefore) {
-    insertBefore.parentNode.insertBefore(notice, insertBefore);
+  if (isES) {
+    notice.innerHTML =
+      '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Actualizaci\u00f3n legislativa &mdash; Ley 153-2026 (vigente el 30 de enero de 2027)</p>'
+      + '<p style="margin:0 0 6px;">La <strong>Ley 153-2026</strong>, firmada el 30 de julio de 2026, reconoce expresamente el <strong>fideicomiso revocable</strong> en Puerto Rico e <strong>invierte la presunci\u00f3n</strong> de la Ley 219-2012. Desde el 30 de enero de 2027, la escritura que nada diga sobre revocabilidad se presume <em>revocable</em>. Parte de esta p\u00e1gina describe la norma anterior.</p>'
+      + '<p style="margin:0;"><a href="/resources/fideicomisos-revocables-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Lea qu\u00e9 cambia con la Ley 153-2026</a> o <a href="/espanol-cita" style="color:#8b5e00;text-decoration:underline;">agende una consulta</a> para revisar su instrumento antes de que entre en vigor.</p>';
   } else {
-    /* Fallback: insert before FAQ or CTA section */
-    var allH = htmlContent.querySelectorAll('h2');
-    for (var j = 0; j < allH.length; j++) {
-      if (allH[j].textContent.toLowerCase().indexOf('frequently') >= 0 || allH[j].textContent.toLowerCase().indexOf('contact') >= 0) {
-        htmlContent.insertBefore(notice, allH[j]);
-        return;
-      }
-    }
-    htmlContent.appendChild(notice);
+    notice.innerHTML =
+      '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Law change &mdash; Act 153-2026, effective January 30, 2027</p>'
+      + '<p style="margin:0 0 6px;"><strong>Act 153-2026</strong>, signed July 30, 2026, expressly recognizes the <strong>revocable trust</strong> in Puerto Rico and <strong>reverses the presumption</strong> set by Law 219-2012. From January 30, 2027, a trust deed that says nothing about revocability is presumed <em>revocable</em>. Parts of this page describe the earlier rule.</p>'
+      + '<p style="margin:0;"><a href="/resources/revocable-trusts-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Read what Act 153-2026 changes</a>, or <a href="/calendly" style="color:#8b5e00;text-decoration:underline;">schedule a consultation</a> to review your instrument before it takes effect.</p>';
+  }
+
+  /* Native /resources pages open with .rl-sub-hero \u2014 sit just under it, above the
+     body copy. Everything else: top of the content block. */
+  var hero = htmlContent.querySelector('.rl-sub-hero');
+  if (hero && hero.parentNode) {
+    hero.parentNode.insertBefore(notice, hero.nextSibling);
+  } else {
+    htmlContent.insertBefore(notice, htmlContent.firstChild);
   }
 }
 

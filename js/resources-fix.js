@@ -9,7 +9,7 @@ var path = window.location.pathname.replace(/\/$/,'');
    /resources/revocable-trusts-puerto-rico and
    /resources/fideicomisos-revocables-puerto-rico exist in Squarespace.
    Same flag lives in js/legal-content-fixes.js — flip both together. */
-var ACT153_PAGES_LIVE = false;
+var ACT153_PAGES_LIVE = true;
 
 /* Skip inside the Squarespace editor/admin preview (page is rendered in an
    iframe and/or served from the *.squarespace.com admin domain) so the real,

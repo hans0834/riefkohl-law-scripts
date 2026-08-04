@@ -986,7 +986,7 @@ function fixDecreeDuration() {
    in js/resources-fix.js (ACT153_PAGES_LIVE) — flip both together.
    While false the notice still runs: the law change is true regardless, and a
    reader of stale copy should see it. Only the deep link is withheld. */
-var ACT153_PAGES_LIVE = false;
+var ACT153_PAGES_LIVE = true;
 
 /* Exact paths carrying the old irrevocable-by-default rule. */
 var ACT153_NOTICE_PAGES = [

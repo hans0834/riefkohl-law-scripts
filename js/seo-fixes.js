@@ -3604,7 +3604,9 @@ var HREFLANG_PAIRS = [
   /* CPA bridge posts (Act 38-2026 + CPA content) */
   ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
   ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
-  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
+  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es'],
+  /* Act 153-2026 client alert EN↔ES — added Aug 4 2026. Both published together. */
+  ['puerto-rico-authorizes-revocable-trusts', 'ley-153-2026-fideicomiso-revocable']
 ];
 
 /* Core page pairs (non-blog) */

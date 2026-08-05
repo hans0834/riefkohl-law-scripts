@@ -1172,10 +1172,16 @@ var TRUST_SERVICE_SCOPE_FIXES = [
   /* /services — flat-fee tier inclusion line */
   ['Standard irrevocable trust',
    'Standard trust (revocable or irrevocable)'],
+  /* /resources/why-law-firm-act-60 — native Code-block body. Already corrected in
+     migration/native-html/, so a future re-paste turns this into a no-op. */
+  ['involves irrevocable trust formation',
+   'involves revocable or irrevocable trust formation'],
 ];
 
+var TRUST_SERVICE_SCOPE_PATHS = ['/', '/services', '/pricing', '/resources/why-law-firm-act-60'];
+
 function fixTrustServiceScope() {
-  if (path !== '/' && path !== '/services' && path !== '/pricing') return;
+  if (TRUST_SERVICE_SCOPE_PATHS.indexOf(path) === -1) return;
 
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
   var nodes = [];

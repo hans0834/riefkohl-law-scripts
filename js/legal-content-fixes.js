@@ -1223,6 +1223,29 @@ function fixTrustServiceScope() {
    element children at all, so anything holding an image, a <br> line break, an
    embed or a button is left exactly as it is.
    ================================================ */
+/* ================================================
+   24e. STALE ACT 60 PRICE (Spanish page)
+   /espanol-ley-60 still shows "desde $5,000", the figure the July 2026
+   reprice replaced with $1,700 everywhere else — including the English
+   /services list and the FAQ schema. Left alone it contradicts the English
+   site. The English fix lives in homepage-services.js because the price
+   there is scraped into a card; this page renders its native text directly,
+   so it is corrected here instead.
+   ================================================ */
+function fixStaleAct60PriceES() {
+  if (path !== '/espanol-ley-60') return;
+  var find = 'Servicios de Ley 60 desde $5,000';
+  var repl = 'Servicios de Ley 60 desde $1,700';
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (var i = 0; i < nodes.length; i++) {
+    if (nodes[i].nodeValue.indexOf(find) >= 0) {
+      nodes[i].nodeValue = nodes[i].nodeValue.split(find).join(repl);
+    }
+  }
+}
+
 function collapseEmptyParagraphs() {
   var ps = document.querySelectorAll(
     '.sqs-html-content p, .sqs-block-content p, .rl-sub p'
@@ -1699,6 +1722,8 @@ function runLegalFixes() {
   fixTrustServiceScope();
   /* Blank RTE spacer paragraphs — a major source of the site's excess whitespace */
   collapseEmptyParagraphs();
+  /* Spanish Ley 60 page still quoted the pre-reprice $5,000 */
+  fixStaleAct60PriceES();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

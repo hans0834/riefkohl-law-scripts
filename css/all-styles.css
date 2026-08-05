@@ -3656,3 +3656,38 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 .sqs-code-container:has(> .rl-article-hub) {
   padding-top: 0 !important;
 }
+
+/* ===================================================================
+   BRAND HEADER BAND (Aug 4 2026)
+   The firm's logo is green-on-blue with a white wordmark, so it cannot
+   sit on the default white header. Paint the header in the logo's own
+   blue (#5CB8FF, sampled from Picture1.png) — the logo's background
+   block then blends into the band — and flip the nav to white for
+   contrast. Scoped to the site header only.
+   =================================================================== */
+.header,
+.header .header-announcement-bar-wrapper {
+  background-color: #5CB8FF !important;
+}
+.header .header-nav-item a,
+.header .header-nav-folder-title,
+.header .header-title-text a,
+.header .header-actions a,
+.header .header-display-desktop a {
+  color: #ffffff !important;
+}
+.header .header-nav-item--active a {
+  border-bottom-color: #ffffff !important;
+}
+.header .header-actions .icon,
+.header .header-actions svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+.header .header-burger-btn .burger-line {
+  background-color: #ffffff !important;
+}
+/* The open mobile menu keeps its own dark panel, so leave that alone. */
+.header--menu-open .header-menu-nav-wrapper {
+  background-color: #1a2033 !important;
+}

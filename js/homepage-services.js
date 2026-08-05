@@ -686,8 +686,38 @@ function transformTrustPricing(htmlDiv) {
 }
 
 /* ----- Service Categories (Non-Trust) ----- */
+/* The /services page body still carries prices that were superseded by the
+   July 2026 reprice. Correct them in the native text BEFORE the cards are
+   parsed, so the rendered price badge and the underlying (display:none but
+   still crawlable) paragraph agree.
+
+   Matched on the full service name so nothing else moves — "Starting at $5,000"
+   on its own also belongs to Creditor Representation in Bankruptcy, which is
+   still $5,000. Re-typing the line in the Squarespace editor makes this a
+   no-op; it simply stops matching. */
+var STALE_SERVICE_PRICES = [
+  ['Act 60 Tax Incentive Services \u2014 Starting at $5,000',
+   'Act 60 Tax Incentive Services \u2014 Starting at $1,700']
+];
+
+function fixStaleServicePrices(htmlDiv) {
+  var walker = document.createTreeWalker(htmlDiv, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (var i = 0; i < nodes.length; i++) {
+    for (var j = 0; j < STALE_SERVICE_PRICES.length; j++) {
+      var find = STALE_SERVICE_PRICES[j][0];
+      if (nodes[i].nodeValue.indexOf(find) >= 0) {
+        nodes[i].nodeValue = nodes[i].nodeValue.split(find).join(STALE_SERVICE_PRICES[j][1]);
+      }
+    }
+  }
+}
+
 function transformServiceCategories(htmlDiv) {
   if (qs('.rl-rd-svc-section')) return;
+
+  fixStaleServicePrices(htmlDiv);
 
   var kids = Array.from(htmlDiv.children);
 

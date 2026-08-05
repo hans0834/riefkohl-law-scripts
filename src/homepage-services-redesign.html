@@ -1259,8 +1259,29 @@ function transformTrustPricing(htmlDiv) {
 }
 
 /* ----- Service Categories (Non-Trust) ----- */
+var STALE_SERVICE_PRICES = [
+  ['Act 60 Tax Incentive Services \u2014 Starting at $5,000',
+   'Act 60 Tax Incentive Services \u2014 Starting at $1,700']
+];
+
+function fixStaleServicePrices(htmlDiv) {
+  var walker = document.createTreeWalker(htmlDiv, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (var i = 0; i < nodes.length; i++) {
+    for (var j = 0; j < STALE_SERVICE_PRICES.length; j++) {
+      var find = STALE_SERVICE_PRICES[j][0];
+      if (nodes[i].nodeValue.indexOf(find) >= 0) {
+        nodes[i].nodeValue = nodes[i].nodeValue.split(find).join(STALE_SERVICE_PRICES[j][1]);
+      }
+    }
+  }
+}
+
 function transformServiceCategories(htmlDiv) {
   if (qs('.rl-rd-svc-section')) return;
+
+  fixStaleServicePrices(htmlDiv);
 
   var kids = Array.from(htmlDiv.children);
 

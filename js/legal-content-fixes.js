@@ -1176,9 +1176,18 @@ var TRUST_SERVICE_SCOPE_FIXES = [
      migration/native-html/, so a future re-paste turns this into a no-op. */
   ['involves irrevocable trust formation',
    'involves revocable or irrevocable trust formation'],
+  /* Spanish — /espanol intro (mirror of the homepage paragraph above) */
+  ['planificación sucesoral, fideicomisos irrevocables y protección de activos',
+   'planificación sucesoral, fideicomisos revocables e irrevocables y protección de activos'],
+  /* Spanish — /espanol-servicios estate planning blurb */
+  ['Desde testamentos hasta fideicomisos irrevocables bajo la Ley 219',
+   'Desde testamentos hasta fideicomisos revocables e irrevocables bajo la Ley 219'],
 ];
 
-var TRUST_SERVICE_SCOPE_PATHS = ['/', '/services', '/pricing', '/resources/why-law-firm-act-60'];
+var TRUST_SERVICE_SCOPE_PATHS = [
+  '/', '/services', '/pricing', '/resources/why-law-firm-act-60',
+  '/espanol', '/espanol-servicios'
+];
 
 function fixTrustServiceScope() {
   if (TRUST_SERVICE_SCOPE_PATHS.indexOf(path) === -1) return;

@@ -1224,24 +1224,60 @@ function fixTrustServiceScope() {
    embed or a button is left exactly as it is.
    ================================================ */
 /* ================================================
-   24e. STALE ACT 60 PRICE (Spanish page)
-   /espanol-ley-60 still shows "desde $5,000", the figure the July 2026
-   reprice replaced with $1,700 everywhere else — including the English
-   /services list and the FAQ schema. Left alone it contradicts the English
-   site. The English fix lives in homepage-services.js because the price
-   there is scraped into a card; this page renders its native text directly,
-   so it is corrected here instead.
+   24e. SUPERSEDED PRICES ON THE SPANISH PAGES
+   The Spanish pages were never updated when prices changed, so they still
+   quote figures the English site abandoned: Act 60 at $5,000 (repriced to
+   $1,700 in July 2026) and entity formation at $1,500/$2,000 (repriced to
+   $500). Left alone the two languages contradict each other.
+
+   Matched by LABEL, not by amount, and the replacement is confined to the
+   text nodes of the matched block. That matters here: on /espanol-servicios
+   "Representación de acreedores" is ALSO "Desde $5,000" and is unchanged, so
+   a bare amount-for-amount swap would have quietly cut the bankruptcy fee.
+
+   The English equivalents live in homepage-services.js, because there the
+   price is scraped into a card before it is displayed. Re-typing any of these
+   lines in the Squarespace editor turns the matching rule into a no-op.
    ================================================ */
-function fixStaleAct60PriceES() {
-  if (path !== '/espanol-ley-60') return;
-  var find = 'Servicios de Ley 60 desde $5,000';
-  var repl = 'Servicios de Ley 60 desde $1,700';
-  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-  var nodes = [];
-  while (walker.nextNode()) nodes.push(walker.currentNode);
-  for (var i = 0; i < nodes.length; i++) {
-    if (nodes[i].nodeValue.indexOf(find) >= 0) {
-      nodes[i].nodeValue = nodes[i].nodeValue.split(find).join(repl);
+var ES_PRICE_FIXES = [
+  /* /espanol-servicios */
+  { path: '/espanol-servicios', label: /Organizaci\u00f3n de LLC/i,           from: '$1,500', to: '$500' },
+  { path: '/espanol-servicios', label: /Constituci\u00f3n de corporaci\u00f3n/i, from: '$2,000', to: '$500' },
+  { path: '/espanol-servicios', label: /Servicios de Ley 60/i,               from: '$5,000', to: '$1,700' },
+  /* the Ley 60 compliance block states its price as a bare "Precio:" line */
+  { path: '/espanol-servicios', label: /Precio:[\s\S]*evaluaci\u00f3n de cumplimiento/i, from: '$5,000', to: '$1,700' },
+  /* /espanol-corporativo */
+  { path: '/espanol-corporativo', label: /Separa sus bienes personales/i,     from: '$1,500', to: '$500' },
+  { path: '/espanol-corporativo', label: /Tasas contributivas del 18\.5/i,    from: '$2,000', to: '$500' },
+  /* /espanol-ley-60 */
+  { path: '/espanol-ley-60', label: /Servicios de Ley 60 desde/i,            from: '$5,000', to: '$1,700' }
+];
+
+function fixStalePricesES() {
+  var rules = [];
+  for (var r = 0; r < ES_PRICE_FIXES.length; r++) {
+    if (ES_PRICE_FIXES[r].path === path) rules.push(ES_PRICE_FIXES[r]);
+  }
+  if (!rules.length) return;
+
+  var blocks = document.querySelectorAll('p, li, h2, h3, h4, strong, span, div');
+  for (var i = 0; i < rules.length; i++) {
+    var rule = rules[i];
+    for (var b = 0; b < blocks.length; b++) {
+      var block = blocks[b];
+      var text = block.textContent || '';
+      if (!rule.label.test(text)) continue;
+      if (text.indexOf(rule.from) === -1) continue;
+      /* Only rewrite the block's OWN text nodes, so a matching ancestor cannot
+         reach across into a sibling service's price. */
+      var kids = block.childNodes, changed = false;
+      for (var k = 0; k < kids.length; k++) {
+        if (kids[k].nodeType !== 3) continue;
+        if (kids[k].nodeValue.indexOf(rule.from) === -1) continue;
+        kids[k].nodeValue = kids[k].nodeValue.split(rule.from).join(rule.to);
+        changed = true;
+      }
+      if (changed) break;   /* innermost match wins; done with this rule */
     }
   }
 }
@@ -1722,8 +1758,8 @@ function runLegalFixes() {
   fixTrustServiceScope();
   /* Blank RTE spacer paragraphs — a major source of the site's excess whitespace */
   collapseEmptyParagraphs();
-  /* Spanish Ley 60 page still quoted the pre-reprice $5,000 */
-  fixStaleAct60PriceES();
+  /* Spanish pages still quoted superseded Act 60 and formation prices */
+  fixStalePricesES();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

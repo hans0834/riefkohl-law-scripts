@@ -9,6 +9,10 @@
   --rl-navy-mid: #243047;
   --rl-gold: #bfa35d;
   --rl-gold-dark: #a68c42;
+  /* Gold for TEXT on light surfaces. --rl-gold is 2.44:1 on white, which fails
+     AA badly; this is the same hue dark enough to reach 4.63:1. Never use it as
+     a fill — for gold backgrounds keep --rl-gold and put navy text on top. */
+  --rl-gold-text: #8a7233;
   --rl-gold-pale: rgba(191,163,93,.08);
   --rl-cream: #f9f9fb;
   --rl-white: #fff;
@@ -80,7 +84,10 @@
   margin-top: 12px !important;
 }
 .rl-rd-hero-phone a {
-  color: var(--rl-gold-dark);
+  /* Rendered as #bfa35d on white — 2.44:1. The real source was the shared
+     a[href*="tel:"] rules above, now on --rl-gold-text; this restates it so the
+     hero line matches regardless of which of those selectors wins. */
+  color: var(--rl-gold-text) !important;
   font-weight: 600;
   text-decoration: none;
 }
@@ -442,7 +449,7 @@ body .rl-rd-cta-section a[href^="tel"],
 .sqs-block-content a[href*="tel:"],
 .sqs-html-content a[href*="tel:"],
 .page-section .content-wrapper a[href*="tel:"] {
-  color: var(--rl-gold) !important;
+  color: var(--rl-gold-text) !important;
   text-decoration: underline !important;
   text-underline-offset: 2px;
 }

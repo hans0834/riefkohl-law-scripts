@@ -131,6 +131,10 @@ article.h-entry {
   --rl-navy-mid: #243047;
   --rl-gold: #bfa35d;
   --rl-gold-dark: #a68c42;
+  /* Gold for TEXT on light surfaces. --rl-gold is 2.44:1 on white, which fails
+     AA badly; this is the same hue dark enough to reach 4.63:1. Never use it as
+     a fill — for gold backgrounds keep --rl-gold and put navy text on top. */
+  --rl-gold-text: #8a7233;
   --rl-gold-pale: rgba(191,163,93,.08);
   --rl-cream: #f9f9fb;
   --rl-white: #fff;
@@ -202,7 +206,10 @@ article.h-entry {
   margin-top: 12px !important;
 }
 .rl-rd-hero-phone a {
-  color: var(--rl-gold-dark);
+  /* Rendered as #bfa35d on white — 2.44:1. The real source was the shared
+     a[href*="tel:"] rules above, now on --rl-gold-text; this restates it so the
+     hero line matches regardless of which of those selectors wins. */
+  color: var(--rl-gold-text) !important;
   font-weight: 600;
   text-decoration: none;
 }
@@ -564,7 +571,7 @@ body .rl-rd-cta-section a[href^="tel"],
 .sqs-block-content a[href*="tel:"],
 .sqs-html-content a[href*="tel:"],
 .page-section .content-wrapper a[href*="tel:"] {
-  color: var(--rl-gold) !important;
+  color: var(--rl-gold-text) !important;
   text-decoration: underline !important;
   text-underline-offset: 2px;
 }
@@ -1515,7 +1522,7 @@ article:has(.rl-article-hub) {
   font-weight: 700; color: #1a2033; font-size: .95rem; margin-bottom: 4px;
 }
 .rl-sub .rl-step-desc { font-size: .88rem; color: #706b62; }
-.rl-sub .rl-step-time { font-size: .78rem; color: #a8a298; font-style: italic; margin-top: 2px; }
+.rl-sub .rl-step-time { font-size: .78rem; color: #767065; font-style: italic; margin-top: 2px; }
 
 /* Case card */
 .rl-sub .rl-case-card {
@@ -1609,7 +1616,7 @@ article:has(.rl-article-hub) {
 
 /* style id="rl-bd-css" */
 /* === BASE === */
-#rl-blog-dashboard{--navy:#1a2033;--navy-mid:#243047;--navy-light:#2d3b56;--gold:#bfa35d;--gold-dark:#a68c42;--gold-pale:rgba(191,163,93,.08);--gold-glow:rgba(191,163,93,.18);--cream:#f9f9fb;--warm-100:#f5f5f8;--warm-200:#e8e9ee;--warm-400:#a8a298;--warm-600:#706b62;--warm-800:#3d3a35;--white:#fff;--font-h:var(--heading-font-font-family,Georgia,"Times New Roman",serif);--font-b:var(--body-font-font-family,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif);--r:10px;--r-sm:6px;--r-pill:100px;--shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 12px 32px rgba(0,0,0,.12);--ease:cubic-bezier(.4,0,.2,1);--max-w:1140px;font-family:var(--font-b);color:var(--warm-800);line-height:1.65;-webkit-font-smoothing:antialiased}
+#rl-blog-dashboard{--navy:#1a2033;--navy-mid:#243047;--navy-light:#2d3b56;--gold:#bfa35d;--gold-dark:#a68c42;--gold-pale:rgba(191,163,93,.08);--gold-glow:rgba(191,163,93,.18);--cream:#f9f9fb;--warm-100:#f5f5f8;--warm-200:#e8e9ee;--warm-400:#767065;--warm-600:#706b62;--warm-800:#3d3a35;--white:#fff;--font-h:var(--heading-font-font-family,Georgia,"Times New Roman",serif);--font-b:var(--body-font-font-family,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif);--r:10px;--r-sm:6px;--r-pill:100px;--shadow-sm:0 1px 3px rgba(0,0,0,.06);--shadow:0 4px 12px rgba(0,0,0,.08);--shadow-lg:0 12px 32px rgba(0,0,0,.12);--ease:cubic-bezier(.4,0,.2,1);--max-w:1140px;font-family:var(--font-b);color:var(--warm-800);line-height:1.65;-webkit-font-smoothing:antialiased}
 :where(#rl-blog-dashboard) *,:where(#rl-blog-dashboard) *::before,:where(#rl-blog-dashboard) *::after{box-sizing:border-box;margin:0;padding:0}
 :where(#rl-blog-dashboard) button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;font-size:inherit}
 :where(#rl-blog-dashboard) a{color:inherit;text-decoration:none}
@@ -1836,7 +1843,7 @@ mark.rl-bd-hl{background:var(--gold-glow);color:var(--navy);padding:0 2px;border
   background: rgba(191,163,93,.06);
 }
 .rl-series-nav li a .part-num {
-  color: #a68c42;
+  color: #8a7233;
   font-size: .78rem;
   display: block;
   margin-bottom: 2px;
@@ -2281,10 +2288,21 @@ h3.rl-auto-heading {
   }
 }
 
-/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav ===== */
+/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav =====
+   z-index alone never fixed this: the banner sits at 999 and wins regardless.
+   The real problem is geometry. The Squarespace header is position:absolute
+   with top:0 and every ancestor is static, so it resolves against the initial
+   containing block and lands at the very top of the document — underneath the
+   call banner, hiding ~12.6px of the logo artwork.
+
+   --rl-callbar-h is published by syncCallBannerOffset() in conversion-booster.js
+   and re-measured on resize, because the banner is shorter under 767px. The
+   fallback of 0px keeps the header where it was if that script never runs.
+   Page content needs no adjustment: it is in normal flow below the banner. */
 #header,
 header.header {
   z-index: 100;
+  top: var(--rl-callbar-h, 0px);
 }
 
 /* ===== STICKY MOBILE CTA BAR ===== */
@@ -2953,12 +2971,13 @@ header.header {
   --rl-navy-light:  #2d3b56;
   --rl-gold:        #bfa35d;
   --rl-gold-dark:   #a68c42;
+  --rl-gold-text:   #8a7233;
   --rl-gold-pale:   rgba(191,163,93,.08);
   --rl-gold-glow:   rgba(191,163,93,.18);
   --rl-cream:       #f9f9fb;
   --rl-warm-100:    #f5f5f8;
   --rl-warm-200:    #e8e9ee;
-  --rl-warm-400:    #a8a298;
+  --rl-warm-400:    #767065;
   --rl-warm-600:    #706b62;
   --rl-warm-800:    #3d3a35;
   --rl-white:       #fff;
@@ -3036,7 +3055,7 @@ a[href^="tel:"] {
   text-decoration: none;
 }
 a[href^="tel:"]:hover {
-  color: var(--rl-gold-dark);
+  color: var(--rl-gold-text);
 }
 [data-section-theme="dark"] a[href^="tel:"],
 [data-section-theme="dark-bold"] a[href^="tel:"],
@@ -3068,7 +3087,7 @@ footer.sections a[href^="mailto:"] {
 .sqs-block-button-container .sqs-block-button-element--primary,
 .sqs-button-element--primary {
   background-color: var(--rl-gold) !important;
-  color: var(--rl-white) !important;
+  color: var(--rl-navy) !important;
   font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
   font-weight: 700 !important;
   letter-spacing: .06em !important;
@@ -3205,7 +3224,7 @@ footer.sections .form-wrapper .description {
 .sqs-block-newsletter .newsletter-form-button,
 .newsletter-form-button {
   background-color: var(--rl-gold) !important;
-  color: var(--rl-white) !important;
+  color: var(--rl-navy) !important;
   border-radius: var(--rl-r-sm) !important;
   font-weight: 700 !important;
   letter-spacing: .06em !important;
@@ -3440,7 +3459,7 @@ html { scroll-behavior: smooth; }
 }
 .sqs-cookie-banner-v2-accept {
   background-color: var(--rl-gold) !important;
-  color: var(--rl-white) !important;
+  color: var(--rl-navy) !important;
   font-weight: 700 !important;
   letter-spacing: .04em !important;
 }
@@ -3778,4 +3797,32 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 }
 .header .header-nav {
   margin-top: 12px !important;
+}
+
+/* ===== AUTO-LINKED "Act 60" =====
+   autoLinkAct60() in conversion-booster.js wraps the first "Act 60" of a
+   container in a link. Its inline colour was losing to Squarespace's own
+   !important link rules, which rendered it #1a1a2e — on the navy .rl-sub-hero
+   that is a 1.16 contrast ratio, i.e. invisible. State the colour here with a
+   weight that wins, and set -webkit-text-fill-color too: the theme sets that
+   property on headings and it overrides `color` when painting text. */
+a.rl-act60-link,
+.sqs-html-content a.rl-act60-link,
+.sqs-block-content a.rl-act60-link,
+.rl-sub a.rl-act60-link {
+  color: #a8873c !important;
+  -webkit-text-fill-color: #a8873c !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+/* On the dark surfaces (hero bands, CTA panels, the Act 60 banner) the same
+   gold is too dim — lift it so it reads against navy. */
+.rl-sub-hero a.rl-act60-link,
+.rl-rd-cta-section a.rl-act60-link,
+.rl-act60-banner a.rl-act60-link,
+.rl-footer-signup a.rl-act60-link,
+.rl-urgency-banner a.rl-act60-link,
+[data-section-theme="dark"] a.rl-act60-link {
+  color: #d9bf7a !important;
+  -webkit-text-fill-color: #d9bf7a !important;
 }

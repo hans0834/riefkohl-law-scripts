@@ -56,10 +56,21 @@
   }
 }
 
-/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav ===== */
+/* ===== HEADER OFFSET — prevent banner from overlapping logo/nav =====
+   z-index alone never fixed this: the banner sits at 999 and wins regardless.
+   The real problem is geometry. The Squarespace header is position:absolute
+   with top:0 and every ancestor is static, so it resolves against the initial
+   containing block and lands at the very top of the document — underneath the
+   call banner, hiding ~12.6px of the logo artwork.
+
+   --rl-callbar-h is published by syncCallBannerOffset() in conversion-booster.js
+   and re-measured on resize, because the banner is shorter under 767px. The
+   fallback of 0px keeps the header where it was if that script never runs.
+   Page content needs no adjustment: it is in normal flow below the banner. */
 #header,
 header.header {
   z-index: 100;
+  top: var(--rl-callbar-h, 0px);
 }
 
 /* ===== STICKY MOBILE CTA BAR ===== */
@@ -453,3 +464,31 @@ header.header {
 #footer-sections .page-section{background:#16213E!important}
 #footer-sections .sqs-block-button-element--small{border-color:#BFA35D!important;color:#F5F1E8!important}
 #footer-sections hr{background:#BFA35D;opacity:.45}
+
+/* ===== AUTO-LINKED "Act 60" =====
+   autoLinkAct60() in conversion-booster.js wraps the first "Act 60" of a
+   container in a link. Its inline colour was losing to Squarespace's own
+   !important link rules, which rendered it #1a1a2e — on the navy .rl-sub-hero
+   that is a 1.16 contrast ratio, i.e. invisible. State the colour here with a
+   weight that wins, and set -webkit-text-fill-color too: the theme sets that
+   property on headings and it overrides `color` when painting text. */
+a.rl-act60-link,
+.sqs-html-content a.rl-act60-link,
+.sqs-block-content a.rl-act60-link,
+.rl-sub a.rl-act60-link {
+  color: #a8873c !important;
+  -webkit-text-fill-color: #a8873c !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+/* On the dark surfaces (hero bands, CTA panels, the Act 60 banner) the same
+   gold is too dim — lift it so it reads against navy. */
+.rl-sub-hero a.rl-act60-link,
+.rl-rd-cta-section a.rl-act60-link,
+.rl-act60-banner a.rl-act60-link,
+.rl-footer-signup a.rl-act60-link,
+.rl-urgency-banner a.rl-act60-link,
+[data-section-theme="dark"] a.rl-act60-link {
+  color: #d9bf7a !important;
+  -webkit-text-fill-color: #d9bf7a !important;
+}

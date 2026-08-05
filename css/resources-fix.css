@@ -372,7 +372,7 @@ article:has(.rl-article-hub) {
   font-weight: 700; color: #1a2033; font-size: .95rem; margin-bottom: 4px;
 }
 .rl-sub .rl-step-desc { font-size: .88rem; color: #706b62; }
-.rl-sub .rl-step-time { font-size: .78rem; color: #a8a298; font-style: italic; margin-top: 2px; }
+.rl-sub .rl-step-time { font-size: .78rem; color: #767065; font-style: italic; margin-top: 2px; }
 
 /* Case card */
 .rl-sub .rl-case-card {

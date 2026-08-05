@@ -44,6 +44,25 @@ function createCallBanner() {
   } else {
     document.body.insertBefore(banner, document.body.firstChild);
   }
+
+  syncCallBannerOffset();
+}
+
+/* ===== 1b. KEEP THE HEADER CLEAR OF THE CALL BANNER =====
+   The Squarespace header is position:absolute with top:0, and every one of its
+   ancestors is static, so it resolves against the initial containing block —
+   i.e. the very top of the document, ignoring the banner we just inserted above
+   it in the flow. The banner (z-index 999) therefore paints over the top of the
+   logo: measured at 12.6px of the artwork hidden at 1280px wide.
+
+   Page content is unaffected because it is in normal flow below the banner, so
+   only the header needs moving. Its height is published as a custom property
+   and applied in CSS, because the banner's height changes with the viewport
+   (the CTA text is hidden and the padding shrinks under 767px). */
+function syncCallBannerOffset() {
+  var banner = document.querySelector('.rl-call-banner');
+  var h = banner ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+  document.documentElement.style.setProperty('--rl-callbar-h', h + 'px');
 }
 
 /* ===== 2. STICKY MOBILE CTA BAR ===== */
@@ -815,6 +834,12 @@ function autoLinkAct60() {
         var tag = parent.tagName;
         if (tag === 'A' || tag === 'BUTTON' || tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
         if (parent.closest('a')) return NodeFilter.FILTER_REJECT;
+        /* Headings were always meant to be excluded, but only the parent tag was
+           being checked, so "Act 60" inside a hero <h1> still got linked — and on
+           the navy .rl-sub-hero it rendered at a 1.16 contrast ratio, effectively
+           invisible. Linking a phrase inside a page's own H1 is also poor practice
+           in its own right. Skip every heading level, at any nesting depth. */
+        if (parent.closest('h1, h2, h3, h4, h5, h6')) return NodeFilter.FILTER_REJECT;
         // The urgency banner lives inside .sqs-html-content and already links
         // to the Act 60 page — don't turn its own headline into a second link.
         if (parent.closest('.rl-urgency-banner')) return NodeFilter.FILTER_REJECT;
@@ -838,7 +863,12 @@ function autoLinkAct60() {
       var link = document.createElement('a');
       link.href = '/act-60-tax-incentives';
       link.textContent = linkText;
-      link.style.cssText = 'color:#bfa35d;text-decoration:underline;font-weight:600;';
+      /* The inline colour here loses to Squarespace's own !important link rules
+         in some containers, which is how this link ended up dark-on-dark. Carry a
+         class as well so all-styles.css can state the colour with enough weight
+         to survive, and vary it by surface. */
+      link.className = 'rl-act60-link';
+      link.style.cssText = 'text-decoration:underline;font-weight:600;';
       var afterNode = document.createTextNode(after);
 
       var parent = node.parentNode;
@@ -879,6 +909,20 @@ function run() {
     autoLinkAct60();
   } catch(e) {
     console.error('[rl-conversion]', e);
+  }
+}
+
+/* The banner wraps differently across breakpoints, so re-measure on resize. */
+if (!window.__rlCallBarBound) {
+  window.__rlCallBarBound = true;
+  var callBarTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(callBarTimer);
+    callBarTimer = setTimeout(syncCallBannerOffset, 150);
+  });
+  /* Webfonts can land after first paint and change the banner's height. */
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncCallBannerOffset);
   }
 }
 

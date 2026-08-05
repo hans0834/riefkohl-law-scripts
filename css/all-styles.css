@@ -3691,3 +3691,17 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 .header--menu-open .header-menu-nav-wrapper {
   background-color: #1a2033 !important;
 }
+
+/* Squarespace's burger uses .top-bun/.patty/.bottom-bun, not .burger-line —
+   the earlier rule never matched, leaving a navy icon on the blue band. */
+.header .burger-inner .top-bun,
+.header .burger-inner .patty,
+.header .burger-inner .bottom-bun {
+  background-color: #ffffff !important;
+}
+/* The open mobile menu only paints .header-menu-nav-wrapper, so the strip
+   above the links and everything below them stayed transparent and the page
+   showed through. Paint the whole overlay. */
+.header--menu-open .header-menu {
+  background-color: #1a2033 !important;
+}

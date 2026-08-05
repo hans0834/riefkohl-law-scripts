@@ -103,7 +103,7 @@ function transformHero(htmlDiv, sec) {
   var heroH1 = el('h1', '', 'Protect Your Family\u2019s Wealth with a Puerto Rico Trust \u2014 Clear Flat-Fee Pricing');
   hero.appendChild(heroH1);
 
-  var heroP = el('p', '', 'Estate planning, irrevocable trusts, Act\u00A060 advisory, and business law from a DLA\u00A0Piper\u2013trained attorney in San Juan. Your first consultation is free.');
+  var heroP = el('p', '', 'Estate planning, revocable and irrevocable trusts, Act\u00A060 advisory, and business law from a DLA\u00A0Piper\u2013trained attorney in San Juan. Your first consultation is free.');
   hero.appendChild(heroP);
 
   // Add CTA buttons container

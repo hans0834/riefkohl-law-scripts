@@ -1143,6 +1143,59 @@ var IRREVOCABILITY_PROSE_FIXES = [
    'La Ley 153-2026 invirti\u00f3 la regla vigente desde 2012 y aline\u00f3 a Puerto Rico con la mayor\u00eda de las jurisdicciones continentales: la escritura que nada diga sobre revocabilidad se presume revocable. La distinci\u00f3n sigue siendo cr\u00edtica, pero ahora corta al rev\u00e9s. Si busca protecci\u00f3n de activos, la escritura debe declarar la irrevocabilidad expresamente \u2014 mientras el fideicomitente conserve la facultad de revocar, sus acreedores pueden alcanzar los bienes como si el fideicomiso no existiera.'],
 ];
 
+/* ================================================
+   24c. BROADEN THE TRUST SERVICE COPY
+   The homepage and /services describe the practice as
+   "irrevocable trusts" only. The firm drafts both, and
+   since Act 153-2026 the revocable trust is squarely part
+   of Puerto Rico practice — so the old wording now
+   under-describes the offering and reads as a limit.
+
+   These are exact strings from the native Squarespace
+   bodies. Re-typing them in the CMS makes these no-ops.
+   ================================================ */
+var TRUST_SERVICE_SCOPE_FIXES = [
+  /* Homepage — hidden intro paragraph (still crawlable) */
+  ['estate planning, irrevocable trusts, and asset protection',
+   'estate planning, revocable and irrevocable trusts, and asset protection'],
+  /* Homepage — practice card, scraped from the native H3 by homepage-services.js
+     (module 4) before this runs. Also drops the "across generations" dynasty
+     implication that softenAdvertisingLanguage() used to handle. */
+  ['Tax-efficient irrevocable trusts that preserve wealth across generations',
+   'Tax-efficient revocable and irrevocable trusts that help preserve family wealth'],
+  /* /services — intro paragraph */
+  ['structuring an irrevocable trust',
+   'structuring a revocable or irrevocable trust'],
+  /* /services — practice area description */
+  ['We structure irrevocable trusts, asset protection trusts, and special needs trusts',
+   'We structure revocable and irrevocable trusts, asset protection trusts, and special needs trusts'],
+  /* /services — flat-fee tier inclusion line */
+  ['Standard irrevocable trust',
+   'Standard trust (revocable or irrevocable)'],
+];
+
+function fixTrustServiceScope() {
+  if (path !== '/' && path !== '/services' && path !== '/pricing') return;
+
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  for (var i = 0; i < nodes.length; i++) {
+    var node = nodes[i];
+    var parentTag = node.parentNode && node.parentNode.tagName;
+    if (parentTag === 'SCRIPT' || parentTag === 'STYLE') continue;
+    var text = node.nodeValue, orig = text;
+    for (var j = 0; j < TRUST_SERVICE_SCOPE_FIXES.length; j++) {
+      var find = TRUST_SERVICE_SCOPE_FIXES[j][0];
+      if (text.indexOf(find) >= 0) {
+        text = text.split(find).join(TRUST_SERVICE_SCOPE_FIXES[j][1]);
+      }
+    }
+    if (text !== orig) node.nodeValue = text;
+  }
+}
+
 function fixStaleIrrevocabilityProse() {
   if (path === '/resources/revocable-trusts-puerto-rico') return;
   if (path === '/resources/fideicomisos-revocables-puerto-rico') return;
@@ -1330,9 +1383,9 @@ function softenAdvertisingLanguage() {
     ['expert legal guidance', 'experienced legal guidance'],
     ['Sophisticated Legal Counsel', 'Experienced Legal Counsel'],
     ['the caliber of counsel your business and family demand', 'experienced counsel for your business and family'],
-    ['incentivos contributivos extraordinarios', 'incentivos contributivos significativos'],
-    /* Homepage practice card — drop the "across generations" dynasty implication and soften the absolute claim */
-    ['Tax-efficient irrevocable trusts that preserve wealth across generations', 'Tax-efficient irrevocable trusts that help preserve family wealth']
+    ['incentivos contributivos extraordinarios', 'incentivos contributivos significativos']
+    /* The homepage practice card ("...preserve wealth across generations") is handled
+       by fixTrustServiceScope() above, which also widens it to both trust types. */
   ];
 
   var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
@@ -1602,6 +1655,8 @@ function runLegalFixes() {
   /* Correct the superseded prose BEFORE schema-markup.js (module 15) scrapes
      the page's FAQ answers into FAQPage structured data. */
   fixStaleIrrevocabilityProse();
+  /* Homepage/services copy said "irrevocable trusts" only — the firm drafts both */
+  fixTrustServiceScope();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

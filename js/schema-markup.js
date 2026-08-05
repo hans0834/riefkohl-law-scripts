@@ -172,7 +172,7 @@ var PRACTICE_AREAS = {
   '/puerto-rico-trusts': {
     name: 'Puerto Rico Trusts — Fideicomisos',
     serviceType: 'Trust Formation & Administration',
-    description: 'Formation and administration of irrevocable trusts under Puerto Rico Law 219-2012 (Trust Act). Asset protection trusts, special needs trusts, ILITs, SLATs, and fiduciary services.'
+    description: 'Formation and administration of revocable and irrevocable trusts under Puerto Rico Law 219-2012 (Trust Act, as amended by Act 153-2026). Asset protection trusts, special needs trusts, ILITs, SLATs, and fiduciary services.'
   },
   '/estate-planning': {
     name: 'Puerto Rico Estate Planning',

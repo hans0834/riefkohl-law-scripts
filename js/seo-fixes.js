@@ -126,7 +126,7 @@ var SEO = {
   '/puerto-rico-trusts': {
     h1: 'Puerto Rico Trust Attorney — Fideicomisos & Asset Protection',
     title: 'Puerto Rico Trust Attorney — Fideicomisos | Riefkohl Law',
-    meta: 'Puerto Rico trust attorney: irrevocable trusts under Law 219-2012, asset protection, and flat-fee fideicomiso setup. Free consultation — (787) 236-1657.',
+    meta: 'Puerto Rico trust attorney: revocable and irrevocable trusts under Law 219-2012, asset protection, and flat-fee fideicomiso setup. Free consultation.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -611,7 +611,7 @@ var SEO = {
   '/espanol-fideicomisos': {
     h1: 'Abogado de Fideicomisos en Puerto Rico — Ley 219-2012',
     title: 'Abogado de Fideicomisos en Puerto Rico | Riefkohl Law',
-    meta: 'Abogado de fideicomisos en Puerto Rico. Fideicomisos irrevocables bajo Ley 219-2012, proteccion de activos y planificacion sucesoral. Consulta gratis.',
+    meta: 'Abogado de fideicomisos en PR. Fideicomisos revocables e irrevocables bajo Ley 219-2012, proteccion de activos y planificacion sucesoral. Consulta gratis.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

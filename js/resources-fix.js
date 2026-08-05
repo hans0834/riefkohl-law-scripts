@@ -810,7 +810,7 @@ var PAGES = {
   +'<p>Most Act 60 strategies require proper entity formation:</p>'
   +'<ul><li><strong>Export Services (Chapter 3) companies</strong> must meet substance requirements, have genuine PR operations, and maintain compliant intercompany agreements</li>'
   +'<li><strong>Holding companies</strong> for investment assets require careful structuring to avoid IRS recharacterization</li>'
-  +'<li><strong>Trust planning</strong> under Puerto Rico\u2019s Trust Act (Ley 219-2012) involves irrevocable trust formation, trustee selection, and coordination with the Act 60 decree</li></ul>'
+  +'<li><strong>Trust planning</strong> under Puerto Rico\u2019s Trust Act (Ley 219-2012) involves revocable or irrevocable trust formation, trustee selection, and coordination with the Act 60 decree</li></ul>'
   +'<p>Entity formation and governance are fundamentally legal activities\u2014they require legal opinions, operating agreements, and corporate resolutions that CPAs are not licensed to prepare.</p>'
 
   +'<h2>Decree Application & Negotiation</h2>'

@@ -750,19 +750,20 @@ body .rl-rd-cta-section a[href^="tel"],
 @media (max-width: 767px) {
   .rl-rd-hero h1 { font-size: 1.7rem; }
   .rl-rd-hero p { font-size: 1rem; }
-  .rl-rd-hero { padding: 32px 16px 28px; }
+  .rl-rd-hero { padding: 20px 16px 24px; }
   .rl-rd-credentials-bar { gap: 6px 4px; padding: 12px 14px; }
   .rl-cred-sep { display: none; }
   .rl-cred-item { font-size: .72rem; }
-  .rl-rd-trust-metrics { gap: 20px; padding: 24px 16px; flex-wrap: wrap; }
+  .rl-rd-trust-metrics { gap: 20px; padding: 18px 16px; flex-wrap: wrap; }
   .rl-trust-metric-num { font-size: 1.3rem; }
   .rl-rd-cta-secondary { font-size: .82rem; padding: 8px 18px; }
-  .rl-rd-section-heading { font-size: 1.4rem; margin-top: 40px; }
+  .rl-rd-section-heading { font-size: 1.4rem; }
+  h2.rl-rd-section-heading { margin-top: 26px !important; }
   .rl-rd-cards-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
   .rl-rd-diff-grid { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
   .rl-rd-how-it-works { grid-template-columns: 1fr; padding: 0 16px; gap: 14px; }
   .rl-rd-tier-grid { grid-template-columns: 1fr; padding: 0 16px; }
-  .rl-rd-cta-section { margin: 32px 16px 40px; padding: 36px 20px; }
+  .rl-rd-cta-section { margin: 24px 16px 28px; padding: 28px 20px; }
   .rl-rd-cta-section h2 { font-size: 1.3rem; }
   .rl-rd-cta-btn { padding: 14px 28px; font-size: .85rem; }
   .rl-rd-svc-section { padding: 0 16px; }

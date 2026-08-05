@@ -3705,3 +3705,14 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 .header--menu-open .header-menu {
   background-color: #1a2033 !important;
 }
+
+/* Tighten the header band: Squarespace's default 24.32px top/bottom padding
+   plus a 38.4px logo→nav gap left far too much dead blue around the text
+   (271px band for ~164px of content). */
+.header .header-announcement-bar-wrapper {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+}
+.header .header-nav {
+  margin-top: 12px !important;
+}

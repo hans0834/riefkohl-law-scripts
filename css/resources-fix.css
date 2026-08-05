@@ -240,7 +240,7 @@ article:has(.rl-article-hub) {
 .rl-sub {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 28px 60px;
+  padding: 20px 28px 40px;
   font-family: var(--body-font-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif);
   color: #3d3a35;
   line-height: 1.7;
@@ -250,10 +250,10 @@ article:has(.rl-article-hub) {
 }
 .rl-sub .rl-sub-hero {
   background: linear-gradient(160deg, #1a2033 0%, #243047 100%) !important;
-  padding: 44px 32px !important;
+  padding: 28px 32px !important;
   border-radius: 10px !important;
   text-align: center !important;
-  margin-bottom: 36px !important;
+  margin-bottom: 26px !important;
 }
 .rl-sub .rl-sub-hero h1 {
   font-family: var(--heading-font-font-family, Georgia, "Times New Roman", serif) !important;
@@ -452,7 +452,7 @@ article:has(.rl-article-hub) {
 
 @media (max-width: 767px) {
   .rl-sub { padding: 24px 16px 40px; }
-  .rl-sub .rl-sub-hero { padding: 32px 20px; }
+  .rl-sub .rl-sub-hero { padding: 22px 20px; }
   .rl-sub .rl-sub-hero h1 { font-size: 1.4rem !important; color: #fff !important; }
   .rl-sub h2 { font-size: 1.1rem; }
   .rl-sub .rl-glossary-table { font-size: .82rem; }

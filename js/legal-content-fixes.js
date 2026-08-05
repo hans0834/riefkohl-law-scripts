@@ -1211,6 +1211,31 @@ function fixTrustServiceScope() {
   }
 }
 
+/* ================================================
+   24d. COLLAPSE WHITESPACE-ONLY SPACER PARAGRAPHS
+   The rich-text editor leaves blank <p> elements behind; each renders a full
+   line box plus margins (~63px) and pages accumulate several, which is a large
+   part of why the site reads as over-spaced. all-styles.css handles the ones
+   that match p:empty; a paragraph holding a single space or &nbsp; does not
+   match that selector and can only be found by reading its text.
+
+   Deliberately conservative: a paragraph is only collapsed when it has no
+   element children at all, so anything holding an image, a <br> line break, an
+   embed or a button is left exactly as it is.
+   ================================================ */
+function collapseEmptyParagraphs() {
+  var ps = document.querySelectorAll(
+    '.sqs-html-content p, .sqs-block-content p, .rl-sub p'
+  );
+  for (var i = 0; i < ps.length; i++) {
+    var p = ps[i];
+    if (p.children.length) continue;                 /* holds <br>, <img>, … */
+    if ((p.textContent || '').replace(/ /g, ' ').trim()) continue;
+    if (p.style.display === 'none') continue;        /* already collapsed */
+    p.style.display = 'none';
+  }
+}
+
 function fixStaleIrrevocabilityProse() {
   if (path === '/resources/revocable-trusts-puerto-rico') return;
   if (path === '/resources/fideicomisos-revocables-puerto-rico') return;
@@ -1672,6 +1697,8 @@ function runLegalFixes() {
   fixStaleIrrevocabilityProse();
   /* Homepage/services copy said "irrevocable trusts" only — the firm drafts both */
   fixTrustServiceScope();
+  /* Blank RTE spacer paragraphs — a major source of the site's excess whitespace */
+  collapseEmptyParagraphs();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

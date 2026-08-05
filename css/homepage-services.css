@@ -29,7 +29,7 @@
   text-align: center;
   max-width: 760px;
   margin: 0 auto;
-  padding: 48px 24px 40px;
+  padding: 16px 24px 28px;
 }
 .rl-rd-hero h1 {
   font-size: 2.4rem;
@@ -126,8 +126,8 @@
   justify-content: center;
   gap: 40px;
   max-width: var(--rl-max-w);
-  margin: 0 auto 20px;
-  padding: 32px 28px;
+  margin: 0 auto 16px;
+  padding: 22px 28px;
 }
 .rl-trust-metric {
   text-align: center;
@@ -175,7 +175,7 @@
   text-align: center;
   font-size: 1.8rem;
   color: var(--rl-navy);
-  margin: 56px auto 12px;
+  margin: 30px auto 12px;
   padding: 0 24px;
   max-width: var(--rl-max-w);
   position: relative;
@@ -196,7 +196,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: var(--rl-max-w);
-  margin: 32px auto 48px;
+  margin: 20px auto 28px;
   padding: 0 28px;
 }
 .rl-rd-card {
@@ -254,7 +254,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   max-width: var(--rl-max-w);
-  margin: 32px auto 48px;
+  margin: 20px auto 28px;
   padding: 0 28px;
 }
 .rl-rd-step-item {
@@ -303,7 +303,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   max-width: var(--rl-max-w);
-  margin: 32px auto 48px;
+  margin: 20px auto 28px;
   padding: 0 28px;
 }
 .rl-rd-diff-item {
@@ -404,8 +404,8 @@
 .rl-rd-cta-section {
   text-align: center;
   max-width: 640px;
-  margin: 40px auto 48px;
-  padding: 48px 24px;
+  margin: 28px auto 32px;
+  padding: 36px 24px;
   background: var(--rl-navy);
   border-radius: var(--rl-r);
   color: var(--rl-white);
@@ -799,11 +799,14 @@ body .page-section + .page-section {
 }
 body.homepage .page-section .content-wrapper,
 body .page-section .content-wrapper {
-  padding-top: 24px !important;
-  padding-bottom: 24px !important;
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
+/* The first section already sits below the absolute header's full height
+   (Squarespace adds that clearance as inline padding-top), so it needs almost
+   no padding of its own — 48px here read as a dead band under the logo. */
 body.homepage .page-section:first-child .content-wrapper {
-  padding-top: 48px !important;
+  padding-top: 8px !important;
 }
 /* Collapse sections flagged as empty by JS */
 body.homepage .page-section.rl-section-collapsed {
@@ -815,6 +818,65 @@ body.homepage .page-section.rl-section-collapsed .content-wrapper {
   padding: 0 !important;
   min-height: 0 !important;
 }
+
+/* ===== HEADING RHYTHM (site-wide) =====
+   The Squarespace theme sets top-margin-only heading rhythm with !important:
+   h2 = 2.5rem (42.5px at the 17px root) and h1/h3/h4 = 2rem (34px), with
+   margin-bottom 0. On dense legal pages that reads as a large void above every
+   text block, and because the theme rule carries !important it also overrides
+   the tighter values our own modules already ask for.
+
+   Two deliberate constraints:
+   1. The child combinator. Only headings that are direct children of a content
+      container are body copy. Headings nested inside a component (a card, the
+      .rl-sub-hero, .rl-series-nav) have their own spacing — several are zeroed
+      on purpose — and a descendant selector would clobber them.
+   2. .rl-sub keeps the values resources-fix.css already specifies (32/24); the
+      fix there is only to let those win over the theme, not to re-design them.
+*/
+.sqs-html-content > h1,
+.sqs-block-content > h1 { margin-top: 20px !important; }
+
+.sqs-html-content > h2,
+.sqs-block-content > h2 { margin-top: 28px !important; }
+
+.sqs-html-content > h3,
+.sqs-block-content > h3 { margin-top: 22px !important; }
+
+.sqs-html-content > h4,
+.sqs-block-content > h4 { margin-top: 18px !important; }
+
+/* Native /resources Code-block pages: restate resources-fix.css's own values
+   with the weight needed to beat the theme's !important. */
+.rl-sub > h2 { margin-top: 32px !important; }
+.rl-sub > h3 { margin-top: 24px !important; }
+.rl-sub > h4 { margin-top: 20px !important; }
+
+/* A heading that opens its container needs no leading gap — the container's
+   own padding already provides it. */
+.sqs-html-content > :first-child,
+.sqs-block-content > :first-child,
+.rl-sub > :first-child,
+.rl-sub-hero > :first-child { margin-top: 0 !important; }
+
+/* Our own centred section headings set their margin in the component rule
+   above; restate it here with element+class so the theme's h2 !important
+   does not win. Keep this value in step with .rl-rd-section-heading. */
+h2.rl-rd-section-heading { margin-top: 30px !important; }
+/* The bio/testimonial variants carry inline margin overrides — respect them. */
+.rl-rd-bio-text h2.rl-rd-section-heading { margin-top: 0 !important; }
+
+/* ===== EMPTY SPACER PARAGRAPHS =====
+   The Squarespace rich-text editor leaves behind blank <p> elements that each
+   render a full 29px line box plus 17px margins — roughly 63px of dead space
+   apiece, and pages accumulate several. Collapse the truly empty ones.
+   NB: do NOT match on [data-rte-preserve-empty] alone — that attribute is also
+   present on paragraphs that DO carry text. Whitespace-only paragraphs (which
+   :empty cannot match) are handled by collapseEmptyParagraphs() in
+   legal-content-fixes.js. */
+.sqs-html-content p:empty,
+.sqs-block-content p:empty,
+.rl-sub p:empty { display: none !important; }
 
 @media (prefers-reduced-motion: reduce) {
   .rl-rd-card, .rl-rd-tier-card, .rl-rd-svc-card, .rl-rd-diff-item, .rl-rd-cta-btn, .rl-rd-card-arrow, .rl-rd-cta-secondary {

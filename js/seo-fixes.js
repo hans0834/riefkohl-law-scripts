@@ -455,7 +455,7 @@ var SEO = {
           'name': 'How much does it cost to form an LLC in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Riefkohl Law forms Puerto Rico LLCs on a flat fee, typically $2,500 to $10,000 depending on complexity — covering entity selection, the Certificate of Organization, a customized operating agreement, EIN, and registered-agent setup. The Puerto Rico Department of State filing fee (around $250) and any annual-report fees are separate. You receive a fixed quote before work begins.'
+            'text': 'Riefkohl Law forms Puerto Rico LLCs on a flat fee starting at $500 and increasing with complexity — covering entity selection, the Certificate of Organization, a customized operating agreement, EIN, and registered-agent setup. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. The Puerto Rico Department of State filing fee (around $250) and any annual-report fees are separate. You receive a fixed quote before work begins.'
           }
         },
         {

@@ -519,8 +519,13 @@ function fixComplianceCharitableDonation() {
           'charitable donation of $10,000 (at least $5,000 to CECFL-approved organizations focused on eradicating child poverty).'
         );
       }
-      /* Pattern: "$10,000 annual charitable donations" — add CECFL detail */
-      if (elText.indexOf('$10,000 annual charitable donation') >= 0) {
+      /* Pattern: "$10,000 annual charitable donations" — add CECFL detail.
+         runLegalFixes() runs twice (DOMContentLoaded + a 1s re-run for dynamic
+         content). Unlike the branch above, this replacement leaves its own
+         trigger string intact, so without the CECFL guard the second pass
+         appended the parenthetical a second time. */
+      if (elText.indexOf('$10,000 annual charitable donation') >= 0 &&
+          elText.indexOf('CECFL') < 0) {
         el.innerHTML = el.innerHTML.replace(
           /\$10,000 annual charitable donations?/,
           '$10,000 annual charitable donation (at least $5,000 to CECFL-approved organizations focused on eradicating child poverty)'
@@ -809,7 +814,10 @@ function addPreMoveCapitalGainsNote() {
       var note = document.createElement('div');
       note.id = 'rl-premove-gains-note';
       note.style.cssText = 'margin:12px 0 18px;padding:16px 20px;background:#f5f0ff;border:1px solid #d4c5f0;border-left:4px solid #7c3aed;border-radius:4px;font-size:.86rem;color:#3b1f6e;line-height:1.6;';
-      note.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.92rem;">What About Pre-Move Capital Gains?</p>'
+      /* qualifyAct60Claims() stamps a "*" onto the "100% tax exemption on
+         capital gains" line directly above this box. Carry the marker into the
+         heading so the asterisk resolves to something instead of dangling. */
+      note.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.92rem;">* What About Pre-Move Capital Gains?</p>'
         + '<p style="margin:0 0 6px;">The 0% (or 4% for post-2026 applicants) exemption applies <strong>only to gains accrued after</strong> you become a bona fide Puerto Rico resident. Appreciation that occurred <strong>before</strong> your move is treated differently:</p>'
         + '<ul style="margin:6px 0;padding:0 0 0 20px;">'
         + '<li style="margin:0 0 4px;"><strong>Realized within 10 years of residency:</strong> Subject to U.S. federal capital gains tax rates</li>'
@@ -922,10 +930,15 @@ function fixEmploymentRequirements() {
     if (isInsideInjectedElement(node)) continue;
     var text = node.nodeValue;
 
+    /* The source sentence wraps this phrase in its own parenthetical inside a
+       running list ("...hire a minimum number of employees (typically ...),
+       maintain adequate substance..."). The replacement must therefore stay a
+       single parenthetical clause: no nested parentheses and no sentence break,
+       both of which previously garbled the sentence. */
     if (text.indexOf('at least one full-time employee in addition to the owner') >= 0) {
       node.nodeValue = text.replace(
         'at least one full-time employee in addition to the owner within the first two years',
-        'at least one full-time Puerto Rico\u2013resident employee (which may include the business owner). Businesses with annual gross income exceeding $3 million have higher employment thresholds; industrial incentive grantees must maintain at least three employees'
+        'at least one full-time Puerto Rico\u2013resident employee, who may be the business owner; businesses with annual gross income over $3 million face higher employment thresholds, and industrial incentive grantees must maintain at least three'
       );
     }
 

@@ -3604,9 +3604,11 @@ var HREFLANG_PAIRS = [
   /* CPA bridge posts (Act 38-2026 + CPA content) */
   ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
   ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
-  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es'],
-  /* Act 153-2026 client alert EN↔ES — added Aug 4 2026. Both published together. */
-  ['puerto-rico-authorizes-revocable-trusts', 'ley-153-2026-fideicomiso-revocable']
+  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
+  /* Act 153-2026 client alert EN↔ES pair removed Aug 9 2026: both posts were
+     retired to Draft and 301'd into the /resources guides, which now carry the
+     canonical EN↔ES pair below. Pointing hreflang at a redirect is as bad as
+     pointing it at a 404. */
 ];
 
 /* Core page pairs (non-blog) */

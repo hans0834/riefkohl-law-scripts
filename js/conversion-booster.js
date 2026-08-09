@@ -889,83 +889,8 @@ function updateStickyCTA() {
   if (bookBtn) bookBtn.textContent = 'Book Act 60 Call';
 }
 
-/* ===== 15. CROSS-LINK THE DECLARATORIA POST TO THE ACT 153 TRUST PAGE =====
-   /blog/declaratoria-de-herederos-puerto-rico is the site's highest-traffic
-   page (~44 organic clicks/week) and its "Fideicomisos" section already tells
-   readers a trust avoids probate — but it links to /puerto-rico-trusts and
-   /resources, never to the Act 153 revocable-trust page, which is the freshest
-   and best-converting page on the site. Link the word "revocable" where the
-   post first uses it.
-
-   \b keeps this off the "revocable" inside "irrevocable": that occurrence is
-   preceded by a word character, so the boundary does not match there.
-
-   Ideally an editorial link in the post body. Done here because the post is
-   not reachable without changing the account's login method — replace with a
-   native link when the Squarespace side is available. */
-var TRUST_CROSSLINK = {
-  path: '/blog/declaratoria-de-herederos-puerto-rico',
-  pattern: /\brevocable\b/i,
-  href: '/resources/fideicomisos-revocables-puerto-rico',
-  title: 'Fideicomisos revocables en Puerto Rico y la Ley 153-2026'
-};
-
-function crossLinkTrustPage() {
-  if (PATH !== TRUST_CROSSLINK.path) return;
-
-  var containers = document.querySelectorAll('.blog-item-content-wrapper, .entry-content, .sqs-html-content');
-  if (!containers.length) return;
-
-  var linked = false;
-
-  Array.prototype.forEach.call(containers, function(container) {
-    if (linked) return;
-    if (container.getAttribute('data-trust-linked')) return;
-    container.setAttribute('data-trust-linked', '1');
-
-    var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
-      acceptNode: function(node) {
-        var parent = node.parentElement;
-        if (!parent) return NodeFilter.FILTER_REJECT;
-        var tag = parent.tagName;
-        if (tag === 'A' || tag === 'BUTTON' || tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
-        if (parent.closest('a')) return NodeFilter.FILTER_REJECT;
-        if (parent.closest('h1, h2, h3, h4, h5, h6')) return NodeFilter.FILTER_REJECT;
-        return TRUST_CROSSLINK.pattern.test(node.textContent)
-          ? NodeFilter.FILTER_ACCEPT
-          : NodeFilter.FILTER_REJECT;
-      }
-    });
-
-    var node;
-    while (!linked && (node = walker.nextNode())) {
-      var match = node.textContent.match(TRUST_CROSSLINK.pattern);
-      if (!match) continue;
-
-      var idx = match.index;
-      var link = document.createElement('a');
-      link.href = TRUST_CROSSLINK.href;
-      link.textContent = match[0];
-      link.title = TRUST_CROSSLINK.title;
-      link.className = 'rl-inline-link';
-
-      var parent = node.parentNode;
-      parent.insertBefore(document.createTextNode(node.textContent.substring(0, idx)), node);
-      parent.insertBefore(link, node);
-      parent.insertBefore(document.createTextNode(node.textContent.substring(idx + match[0].length)), node);
-      parent.removeChild(node);
-
-      linked = true;
-    }
-  });
-}
-
 /* ===== BOOT ===== */
 function run() {
-  /* Its own try: a throw here must not cost the page its call banner and
-     sticky CTA, and a throw anywhere else must not cost it the cross-link. */
-  try { crossLinkTrustPage(); } catch(e) { console.error('[rl-conversion] crosslink', e); }
-
   try {
     createCallBanner();
     createStickyBar();

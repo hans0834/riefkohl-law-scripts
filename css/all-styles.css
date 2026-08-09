@@ -4192,11 +4192,20 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
    !important link rules, which rendered it #1a1a2e — on the navy .rl-sub-hero
    that is a 1.16 contrast ratio, i.e. invisible. State the colour here with a
    weight that wins, and set -webkit-text-fill-color too: the theme sets that
-   property on headings and it overrides `color` when painting text. */
+   property on headings and it overrides `color` when painting text.
+
+   rl-inline-link is the same treatment for other auto-inserted body links
+   (e.g. the trust cross-link on the declaratoria post); it shares the rules
+   because the problem it solves — Squarespace's !important link colours — is
+   identical. */
 a.rl-act60-link,
+a.rl-inline-link,
 .sqs-html-content a.rl-act60-link,
+.sqs-html-content a.rl-inline-link,
 .sqs-block-content a.rl-act60-link,
-.rl-sub a.rl-act60-link {
+.sqs-block-content a.rl-inline-link,
+.rl-sub a.rl-act60-link,
+.rl-sub a.rl-inline-link {
   color: #a8873c !important;
   -webkit-text-fill-color: #a8873c !important;
   text-decoration: underline !important;
@@ -4205,11 +4214,17 @@ a.rl-act60-link,
 /* On the dark surfaces (hero bands, CTA panels, the Act 60 banner) the same
    gold is too dim — lift it so it reads against navy. */
 .rl-sub-hero a.rl-act60-link,
+.rl-sub-hero a.rl-inline-link,
 .rl-rd-cta-section a.rl-act60-link,
+.rl-rd-cta-section a.rl-inline-link,
 .rl-act60-banner a.rl-act60-link,
+.rl-act60-banner a.rl-inline-link,
 .rl-footer-signup a.rl-act60-link,
+.rl-footer-signup a.rl-inline-link,
 .rl-urgency-banner a.rl-act60-link,
-[data-section-theme="dark"] a.rl-act60-link {
+.rl-urgency-banner a.rl-inline-link,
+[data-section-theme="dark"] a.rl-act60-link,
+[data-section-theme="dark"] a.rl-inline-link {
   color: #d9bf7a !important;
   -webkit-text-fill-color: #d9bf7a !important;
 }

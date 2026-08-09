@@ -889,8 +889,125 @@ function updateStickyCTA() {
   if (bookBtn) bookBtn.textContent = 'Book Act 60 Call';
 }
 
+/* ===== 14. SEND THE CALENDLY EMBED STRAIGHT TO THE EVENT =====
+   The Code Blocks on /calendly and /espanol-cita both embed the bare profile
+   URL (calendly.com/hans-riefkohl-riefkohllaw). A profile URL renders a menu of
+   event types — and there is exactly one, "Free 30-Minute Strategy Call" — so
+   every visitor pays a click to pick the only option before any calendar loads.
+   Appending the event slug drops them straight onto the booking calendar.
+
+   Belongs in the Squarespace Code Block itself; done here because the block is
+   not reachable without changing the account's login method. Remove this once
+   the two blocks carry the /new-meeting URL directly. */
+var CALENDLY_PROFILE = 'https://calendly.com/hans-riefkohl-riefkohllaw';
+var CALENDLY_EVENT = CALENDLY_PROFILE + '/new-meeting';
+
+function pointCalendlyAtEvent() {
+  var widgets = document.querySelectorAll('.calendly-inline-widget[data-url]');
+
+  Array.prototype.forEach.call(widgets, function(el) {
+    var url = el.getAttribute('data-url') || '';
+
+    /* Only rewrite the bare profile — leave anything already pointing at an
+       event (or carrying its own params) alone. */
+    var base = url.split('?')[0].replace(/\/+$/, '');
+    if (base !== CALENDLY_PROFILE) return;
+
+    var query = url.indexOf('?') > -1 ? url.slice(url.indexOf('?')) : '';
+    el.setAttribute('data-url', CALENDLY_EVENT + query);
+
+    /* widget.js is async: if it has not run yet it will read the value we just
+       wrote and there is nothing else to do. If it already built an iframe off
+       the profile URL, tear that down and re-initialise on the event URL. */
+    if (!el.querySelector('iframe')) return;
+    if (!window.Calendly || typeof window.Calendly.initInlineWidget !== 'function') return;
+
+    el.innerHTML = '';
+    window.Calendly.initInlineWidget({
+      url: CALENDLY_EVENT + query,
+      parentElement: el
+    });
+  });
+}
+
+/* ===== 15. CROSS-LINK THE DECLARATORIA POST TO THE ACT 153 TRUST PAGE =====
+   /blog/declaratoria-de-herederos-puerto-rico is the site's highest-traffic
+   page (~44 organic clicks/week) and its "Fideicomisos" section already tells
+   readers a trust avoids probate — but it links to /puerto-rico-trusts and
+   /resources, never to the Act 153 revocable-trust page, which is the freshest
+   and best-converting page on the site. Link the word "revocable" where the
+   post first uses it.
+
+   \b keeps this off the "revocable" inside "irrevocable": that occurrence is
+   preceded by a word character, so the boundary does not match there.
+
+   Ideally an editorial link in the post body. Done here because the post is
+   not reachable without changing the account's login method — replace with a
+   native link when the Squarespace side is available. */
+var TRUST_CROSSLINK = {
+  path: '/blog/declaratoria-de-herederos-puerto-rico',
+  pattern: /\brevocable\b/i,
+  href: '/resources/fideicomisos-revocables-puerto-rico',
+  title: 'Fideicomisos revocables en Puerto Rico y la Ley 153-2026'
+};
+
+function crossLinkTrustPage() {
+  if (PATH !== TRUST_CROSSLINK.path) return;
+
+  var containers = document.querySelectorAll('.blog-item-content-wrapper, .entry-content, .sqs-html-content');
+  if (!containers.length) return;
+
+  var linked = false;
+
+  Array.prototype.forEach.call(containers, function(container) {
+    if (linked) return;
+    if (container.getAttribute('data-trust-linked')) return;
+    container.setAttribute('data-trust-linked', '1');
+
+    var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node) {
+        var parent = node.parentElement;
+        if (!parent) return NodeFilter.FILTER_REJECT;
+        var tag = parent.tagName;
+        if (tag === 'A' || tag === 'BUTTON' || tag === 'SCRIPT' || tag === 'STYLE') return NodeFilter.FILTER_REJECT;
+        if (parent.closest('a')) return NodeFilter.FILTER_REJECT;
+        if (parent.closest('h1, h2, h3, h4, h5, h6')) return NodeFilter.FILTER_REJECT;
+        return TRUST_CROSSLINK.pattern.test(node.textContent)
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    var node;
+    while (!linked && (node = walker.nextNode())) {
+      var match = node.textContent.match(TRUST_CROSSLINK.pattern);
+      if (!match) continue;
+
+      var idx = match.index;
+      var link = document.createElement('a');
+      link.href = TRUST_CROSSLINK.href;
+      link.textContent = match[0];
+      link.title = TRUST_CROSSLINK.title;
+      link.className = 'rl-inline-link';
+
+      var parent = node.parentNode;
+      parent.insertBefore(document.createTextNode(node.textContent.substring(0, idx)), node);
+      parent.insertBefore(link, node);
+      parent.insertBefore(document.createTextNode(node.textContent.substring(idx + match[0].length)), node);
+      parent.removeChild(node);
+
+      linked = true;
+    }
+  });
+}
+
 /* ===== BOOT ===== */
 function run() {
+  /* Its own try: a throw here must not cost the booking page its call banner
+     and sticky CTA, and a throw anywhere else must not cost it the fix. */
+  try { pointCalendlyAtEvent(); } catch(e) { console.error('[rl-conversion] calendly', e); }
+  try { crossLinkTrustPage(); } catch(e) { console.error('[rl-conversion] crosslink', e); }
+
   try {
     createCallBanner();
     createStickyBar();

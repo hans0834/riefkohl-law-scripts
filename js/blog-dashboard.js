@@ -93,7 +93,22 @@ var _escMap={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return _escMap[c]})}
 function escRx(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
 var _stripEl;
-function strip(h){if(!_stripEl)_stripEl=document.createElement('div');_stripEl.innerHTML=h;var t=(_stripEl.textContent||_stripEl.innerText||'').trim();_stripEl.innerHTML='';return t}
+/* Squarespace's text-highlight feature stores its config in a
+   <script class="TextAttributes-props" type="application/json"> element INSIDE the
+   post body. textContent returns the text of script/style elements too, so without
+   removing them first a post that uses a highlight yields an excerpt reading
+   [ { "shape": "underline", "isFront": false, ... — the raw JSON, on the card.
+   Assigning innerHTML never executes scripts, so this only concerns their text.
+   Whitespace is collapsed because the body markup is pretty-printed across lines. */
+function strip(h){
+  if(!_stripEl)_stripEl=document.createElement('div');
+  _stripEl.innerHTML=h;
+  var junk=_stripEl.querySelectorAll('script,style,noscript,template');
+  for(var i=0;i<junk.length;i++){junk[i].parentNode.removeChild(junk[i])}
+  var t=(_stripEl.textContent||_stripEl.innerText||'').replace(/\s+/g,' ').trim();
+  _stripEl.innerHTML='';
+  return t
+}
 /* Decode HTML entities in a plain-text string. Some imported post titles are stored
    double-encoded (e.g. "A&amp;E ..." instead of "A&E ..."); without this they render
    as literal "A&amp;E". Uses a textarea so tags are never parsed as HTML. Render code

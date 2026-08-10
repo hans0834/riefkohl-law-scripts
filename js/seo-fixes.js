@@ -3642,6 +3642,15 @@ function injectHreflang() {
   var path = window.location.pathname.replace(/\/$/, '') || '/';
   var base = 'https://www.riefkohllaw.com';
 
+  /* Server-side tags win. As of Aug 2026 the CORE_HREFLANG_PAIRS pages carry their
+     hreflang cluster in Squarespace's per-page Header Code Injection, so the tags are
+     in the served HTML where Google reads them at crawl time rather than only after
+     this script runs. Bail out if they are already present — emitting a second,
+     identical set from JS is at best noise and at worst a conflicting signal.
+     This function remains the only mechanism for the /blog/ pairs, which have no
+     per-page injection field in Squarespace. */
+  if (document.querySelector('link[rel="alternate"][hreflang]')) return;
+
   /* Check blog post pairs */
   var slug = path.replace(/^\/blog\//, '');
   if (path.indexOf('/blog/') === 0) {
@@ -3680,6 +3689,46 @@ function addHreflangLinks(enUrl, esUrl) {
 }
 
 injectHreflang();
+
+/* ================================================
+   12b. DOCUMENT LANGUAGE ON SPANISH PAGES
+   ================================================
+   Squarespace emits <html lang="en-US"> site-wide from the single site-language
+   setting, so every Spanish page claims to be English. That misleads screen
+   readers (wrong pronunciation rules and voice) and is a weak negative signal to
+   search engines. The attribute sits on <html>, above <head>, so no injection can
+   make it correct in the served markup — the earliest available correction is a
+   script. The CORE_HREFLANG_PAIRS pages also set this from their per-page Header
+   Code Injection, which runs at parse time; this pass is the fallback for Spanish
+   pages that have no injection field, chiefly /blog/ posts.
+
+   Deliberately explicit rather than pattern-matched: guessing from the URL would
+   mislabel English pages that happen to carry a Spanish legal term (legitima,
+   declaratoria), and a wrong lang is worse than a stale one. Add new Spanish
+   pages to the pair lists above and they are picked up here automatically. */
+function setDocumentLanguage() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var isSpanish = false;
+  var i;
+
+  for (i = 0; i < CORE_HREFLANG_PAIRS.length; i++) {
+    if (path === CORE_HREFLANG_PAIRS[i][1]) { isSpanish = true; break; }
+  }
+
+  if (!isSpanish && path.indexOf('/blog/') === 0) {
+    var slug = path.replace(/^\/blog\//, '');
+    for (i = 0; i < HREFLANG_PAIRS.length; i++) {
+      if (slug === HREFLANG_PAIRS[i][1]) { isSpanish = true; break; }
+    }
+  }
+
+  /* Spanish sections with no registered English counterpart. */
+  if (!isSpanish && /^\/(espanol|recursos-es)/.test(path)) isSpanish = true;
+
+  if (isSpanish) document.documentElement.lang = 'es';
+}
+
+setDocumentLanguage();
 
 // ── Remove incorrect S Corporation Election section from business formation blog post ──
 (function removeSCorpContent() {

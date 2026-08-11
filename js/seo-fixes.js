@@ -2958,6 +2958,84 @@ var SEO = {
     }
   },
 
+  /* ---- Trust vs. legítima before the Supreme Court — EN↔ES pair added Aug 11 2026.
+         Source: Petition for Certiorari filed Jun 29 2026 (Báez Vallecillo v. Vientós
+         Pacheco), from TA2026CE00539 / TA2026CE00540 (consolidated), TPI SJ2023CV10261.
+         PDF: files/peticion-certiorari-fideicomiso-legitima-2026.pdf
+         FAQ answers below mirror the on-page FAQ section verbatim in substance —
+         keep them in sync if either post body is edited. ---- */
+  '/blog/can-a-trust-disinherit-children-puerto-rico': {
+    h1: 'Can a Trust Cut Children Out of an Inheritance in Puerto Rico?',
+    meta: 'A Puerto Rico court held trust assets fell outside the estate — and outside forced heirship. The Supreme Court is weighing it. What it means for your plan.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Can a trust disinherit children in Puerto Rico?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'As a general rule, no. The legítima reserves half the estate for forced heirs, and lifetime gifts — including gifts made through a trust — are subject to computation, collation, and reduction when they impair it. The question now before the Supreme Court of Puerto Rico is whether Section 2022.01(b)(3) of the Internal Revenue Code creates an exception to that rule.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What exactly does Section 2022.01(b)(3) of the Puerto Rico Internal Revenue Code say?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'That property transferred to a Puerto Rico trust whose trustee is not the decedent is not included in the gross estate — but only if the trust does not terminate on the decedent’s death and the assets do not have to be collated to comply with the Civil Code. That second condition was added during the legislative process on Act 9-2017, at the Department of Justice’s request, precisely to keep the provision from being used to cut out a forced heir.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'How far back are lifetime gifts counted against the legítima?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Article 1788 of the 2020 Puerto Rico Civil Code limits collation and imputation to gifts made within the ten years preceding death. The same article excludes ordinary outlays for support, education, and medical care from the computation.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does a mainland revocable trust avoid Puerto Rico forced heirship?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Not for assets with a Puerto Rico situs. Where the trust was drafted does not change the succession rules that apply to property on the island, which is why plans brought from the mainland usually need to be reviewed rather than simply carried over.' }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does this dispute affect retirement-plan trusts?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Under the legislative history of Act 9-2017, retirement-plan trusts are exactly what the exclusion was meant to protect: the measure harmonized local law with the federal ERISA framework so those funds could pass directly to beneficiaries without going through succession. The dispute is whether the exclusion reaches beyond that context.' }
+        }
+      ]
+    }
+  },
+
+  '/blog/fideicomiso-legitima-colacion-tribunal-supremo': {
+    h1: '¿Puede un fideicomiso dejar a unos hijos fuera de la herencia?',
+    meta: 'Un TPI excluyó del caudal relicto activos transferidos a fideicomisos y el caso está ante el Tribunal Supremo. Qué dice la Sección 2022.01(b)(3) y qué hacer.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Puede un fideicomiso dejar a unos hijos fuera de la herencia en Puerto Rico?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Como regla general, no. La legítima reserva a los herederos forzosos la mitad del caudal, y las liberalidades hechas en vida — incluidas las hechas mediante fideicomiso — están sujetas a computación, colación y reducción cuando la afectan. La pregunta que el Tribunal Supremo tiene ante sí es si la Sección 2022.01(b)(3) del Código de Rentas Internas crea una excepción a esa regla.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué dice exactamente la Sección 2022.01(b)(3) del Código de Rentas Internas?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Que la propiedad transferida a un fideicomiso de Puerto Rico cuyo fiduciario no es el causante no se incluye en el caudal relicto bruto, pero solo si el fideicomiso no termina por la muerte del causante y los activos no tienen que ser colacionados para cumplir con el Código Civil. Esa segunda condición se añadió durante el trámite legislativo de la Ley 9-2017, a solicitud del Departamento de Justicia, precisamente para evitar que la disposición sirviera para preterir a un legitimario.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Cuántos años hacia atrás se miran las donaciones para la legítima?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'El Artículo 1788 del Código Civil de 2020 limita la colación y la imputación a las donaciones hechas dentro de los diez años anteriores a la muerte del causante. El mismo artículo excluye del cómputo los desembolsos ordinarios de alimentos, educación y asistencia médica.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Afecta esta controversia a los fideicomisos de plan de retiro?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'Según el historial legislativo de la Ley 9-2017, los fideicomisos de plan de retiro son precisamente lo que la exclusión buscaba proteger: la medida armonizó el ordenamiento local con el marco federal de ERISA para que esos fondos pasaran directamente a los beneficiarios sin atravesar el proceso sucesorio. La discusión es si esa exclusión se extiende más allá de ese contexto.' }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué debe hacer un heredero mientras el Tribunal Supremo decide?',
+          'acceptedAnswer': { '@type': 'Answer', 'text': 'No asumir que lo transferido se perdió. Procede pedir el detalle completo de las transferencias hechas en los diez años anteriores al fallecimiento, verificar si el cuaderno particional las omite, e impugnar oportunamente antes de que la partición avance sobre una premisa jurídica que aún está en disputa. Los plazos importan tanto como el argumento.' }
+        }
+      ]
+    }
+  },
+
   /* ---- Pricing Page ---- */
   '/pricing': {
     h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
@@ -3604,7 +3682,10 @@ var HREFLANG_PAIRS = [
   /* CPA bridge posts (Act 38-2026 + CPA content) */
   ['act-38-2026-estate-plan', 'act-38-2026-plan-sucesoral'],
   ['cpa-bridge-trust-advice', 'cpa-bridge-trust-advice-es'],
-  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es']
+  ['cpa-bridge-legal-checklist', 'cpa-bridge-legal-checklist-es'],
+  /* Trust vs. legítima analysis EN↔ES pair — added Aug 11 2026. Both posts were
+     published together before this line shipped, so neither side is a 404. */
+  ['can-a-trust-disinherit-children-puerto-rico', 'fideicomiso-legitima-colacion-tribunal-supremo']
   /* Act 153-2026 client alert EN↔ES pair removed Aug 9 2026: both posts were
      retired to Draft and 301'd into the /resources guides, which now carry the
      canonical EN↔ES pair below. Pointing hreflang at a redirect is as bad as

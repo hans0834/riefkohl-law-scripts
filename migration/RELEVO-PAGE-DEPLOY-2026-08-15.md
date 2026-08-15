@@ -1,6 +1,8 @@
 # Deploy: Relevo de Hacienda page — 2026-08-15
 
-New Spanish resources page (drafted, NOT yet deployed). Source of truth:
+**STATUS: DEPLOYED + VERIFIED LIVE 2026-08-15.** Page live at
+`/resources/relevo-de-hacienda-puerto-rico` (native SEO title/desc set, body pasted,
+hub card live, GSC indexing requested). Source of truth:
 `migration/native-html/relevo-de-hacienda-puerto-rico.html`
 
 **Target URL:** `/resources/relevo-de-hacienda-puerto-rico`

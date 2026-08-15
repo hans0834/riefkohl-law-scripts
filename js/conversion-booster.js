@@ -312,18 +312,50 @@ function injectPageCTAs() {
   }
 }
 
-/* ===== 5. HOMEPAGE URGENCY BANNER ===== */
+/* ===== 5. SITEWIDE TWO-CLOCK URGENCY BANNER (EN+ES) ===== */
 function injectUrgencyBanner() {
-  if (PATH !== '/' && PATH !== '' && PATH !== '/home') return;
+  /* Skip conversion-critical and utility pages where the banner would distract. */
+  if (/^\/(review|resena|calendly|espanol-cita|cart|checkout|search)(\/|$)/.test(PATH)) return;
   if (document.querySelector('.rl-urgency-banner')) return;
+
+  /* Dismissed within the last 14 days? Stay hidden. */
+  try {
+    var dismissedAt = parseInt(localStorage.getItem('rlUrgency2Dismissed') || '0', 10);
+    if (dismissedAt && (Date.now() - dismissedAt) < 14 * 24 * 60 * 60 * 1000) return;
+  } catch (e) {}
+
+  /* Spanish page detection: the global IS_ES prefixes plus Spanish slugs used by
+     resource pages and blog posts (Sessions 4/7 slugs are Spanish words). */
+  var esSlug = /(espanol|recursos-|ley-60|ley-38|fideicomiso|declaratoria|herederos|sucesor|sucesion|testamento|herencia|impuestos|planificacion|relevo|enmiendas|requisitos-ley|guia|cuanto-cuesta|como-|que-es|pagas-|legitima|colacion|capitulaciones)/.test(PATH);
+  var es = IS_ES || esSlug;
+
+  var copyEN =
+    '<span><strong>Two deadlines:</strong> file for Act 60 by <strong>Dec 31, 2026</strong> to lock the legacy 0% rate ' +
+    '(<a href="/resources/act-60-filing-date-vs-move-date-deadline">details</a>) \u00b7 ' +
+    'Puerto Rico\u2019s new trust law takes effect <strong>Jan 30, 2027</strong> ' +
+    '(<a href="/resources/revocable-trusts-puerto-rico">what changes</a>)</span>';
+  var copyES =
+    '<span><strong>Dos fechas clave:</strong> radique su solicitud de Ley 60 antes del <strong>31 de diciembre de 2026</strong> para asegurar la tasa de 0% ' +
+    '(<a href="/resources/ley-60-fecha-limite-2026">detalles</a>) \u00b7 ' +
+    'La nueva ley de fideicomisos entra en vigor el <strong>30 de enero de 2027</strong> ' +
+    '(<a href="/resources/fideicomisos-revocables-puerto-rico">qu\u00e9 cambia</a>)</span>';
 
   var banner = document.createElement('div');
   banner.className = 'rl-urgency-banner';
-  banner.setAttribute('role', 'alert');
+  banner.setAttribute('role', 'region');
+  banner.setAttribute('aria-label', es ? 'Fechas l\u00edmite legales' : 'Legal deadlines');
+  banner.style.position = 'relative';
+  banner.style.paddingRight = '38px';
   banner.innerHTML =
     '<span class="rl-urgency-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg></span>' +
-    '<span><strong>Act 60 Alert:</strong> 0% capital gains rate for Individual Investors ends December 31, 2026. New decrees from 2027 receive 4% rate. ' +
-    '<a href="/act-60-tax-incentives">Learn more \u2192</a></span>';
+    (es ? copyES : copyEN) +
+    '<button type="button" class="rl-urgency-close" aria-label="' + (es ? 'Cerrar aviso' : 'Dismiss notice') + '" ' +
+    'style="position:absolute;top:50%;right:8px;transform:translateY(-50%);background:none;border:0;color:#F5F1E8;cursor:pointer;font-size:17px;line-height:1;padding:6px 8px;opacity:.75">\u00d7</button>';
+
+  banner.querySelector('.rl-urgency-close').addEventListener('click', function () {
+    try { localStorage.setItem('rlUrgency2Dismissed', String(Date.now())); } catch (e) {}
+    if (banner.parentNode) banner.parentNode.removeChild(banner);
+  });
 
   // Insert at the top of the first content section so it clears the
   // absolutely-positioned site header at every viewport width. (Inserting
@@ -331,7 +363,11 @@ function injectUrgencyBanner() {
   // Squarespace renamed the sections container (#sections -> article#page-regions),
   // so match on .page-section alone — anchoring on the old id silently dropped the
   // banner into the fallback branch, where it overlapped the logo.
-  var firstContent = document.querySelector('.page-section .sqs-html-content');
+  // Blog posts have no .page-section wrapper — target the post body instead,
+  // where the banner sits below the post header and clears the site header too.
+  var firstContent = document.querySelector('.page-section .sqs-html-content') ||
+                     document.querySelector('.blog-item-content-wrapper') ||
+                     document.querySelector('article .entry-content');
   if (firstContent) {
     firstContent.insertBefore(banner, firstContent.firstChild);
   } else {

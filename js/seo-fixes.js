@@ -125,7 +125,7 @@ var SEO = {
   },
   '/puerto-rico-trusts': {
     h1: 'Puerto Rico Trust Attorney — Fideicomisos & Asset Protection',
-    title: 'Puerto Rico Trust Attorney — Fideicomisos | Riefkohl Law',
+    title: 'Puerto Rico Trust Attorney — Living Trusts & Fideicomisos — Riefkohl Law',
     meta: 'Puerto Rico trust attorney: revocable and irrevocable trusts under Law 219-2012, asset protection, and flat-fee fideicomiso setup. Free consultation.',
     schema: {
       '@context': 'https://schema.org',

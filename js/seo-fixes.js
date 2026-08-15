@@ -1666,6 +1666,106 @@ var SEO = {
       ]
     }
   },
+  '/resources/capitulaciones-matrimoniales-puerto-rico': {
+    title: 'Capitulaciones Matrimoniales en Puerto Rico: Guía 2026',
+    meta: 'Capitulaciones pre y post-nupciales en Puerto Rico: sociedad de gananciales, requisitos de validez, legítima y sucesión empresarial bajo el Código de 2020.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '¿Qué son las capitulaciones matrimoniales en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Son el contrato mediante el cual los cónyuges o futuros contrayentes escogen el régimen económico de su matrimonio: qué bienes son de cada quien, quién administra qué y cómo se reparte todo al divorcio o a la muerte. Si no se otorgan, aplica automáticamente la sociedad legal de gananciales (Arts. 488-489 del Código Civil de 2020).'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Se pueden firmar capitulaciones después del matrimonio?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Sí. Desde la Ley 62-2018, hoy Artículo 491 del Código Civil de 2020, los cónyuges pueden estipular, modificar o sustituir el régimen económico en cualquier momento, antes o después de la boda, sin homologación judicial. Frente a terceros, el acuerdo solo surte efectos una vez anotado en el Registro de Capitulaciones Matrimoniales.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué requisitos deben cumplir las capitulaciones para ser válidas?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Deben otorgarse en escritura pública ante notario; sin escritura pública no hay acuerdo (Art. 499; López Torres v. González Vázquez, 151 D.P.R. 225 (2000)). Además, para que surtan efectos frente a terceros deben anotarse en el Registro de Capitulaciones Matrimoniales, y en el Registro de la Propiedad si afectan inmuebles.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Pueden las capitulaciones eliminar la legítima del cónyuge?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. La renuncia anticipada a la legítima es ineficaz (Art. 1627) y la legítima no puede gravarse con condiciones ni cargas (Art. 1626). Las capitulaciones definen y reducen la masa sobre la que opera la legítima — la mitad ganancial no es herencia — pero no eliminan la condición de legitimario del cónyuge supérstite.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '¿Qué pasa con el régimen matrimonial si nos mudamos a Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Si los cónyuges establecen domicilio común en otra jurisdicción por cinco (5) años o más, el régimen económico pasa a ser el de esa jurisdicción, salvo pacto en contrario y sin perjudicar derechos de terceros (Art. 43 del Código Civil de 2020). La mudanza puede cambiar el régimen sin que nadie firme nada.'
+          }
+        }
+      ]
+    }
+  },
+  '/resources/prenuptial-postnuptial-agreements-puerto-rico': {
+    title: 'Prenuptial & Postnuptial Agreements in Puerto Rico',
+    meta: 'Puerto Rico is community property by default — and moving here can change your marital regime. Prenups, postnups, forced heirship, and the 5-year rule.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Is Puerto Rico a community property jurisdiction?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes, by default. Spouses who do not choose another regime fall automatically under the sociedad legal de gananciales, a community property regime, from the moment of the marriage (Arts. 488-489, Civil Code of 2020). Earnings of both spouses are community property, and so are the dividends, interest, and rent produced by separate property during the marriage.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Are postnuptial agreements valid in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Yes. Since Act 62-2018, now Article 491 of the Civil Code of 2020, spouses may adopt, modify, or replace their marital property regime at any time, before or during the marriage, with no court approval required. The agreement must be executed as a public deed and recorded in the Marital Agreements Registry to bind third parties.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Is my U.S. prenup valid in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not automatically. Its content is judged under the law of the conjugal domicile (Art. 44), and agreements executed in Puerto Rico must be public deeds — the Supreme Court voided a premarital agreement signed as a private document before a Maryland notary (López Torres v. González Vázquez, 151 D.P.R. 225 (2000)). Have a mainland prenup reviewed rather than assuming it carries over.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Can a prenup waive the surviving spouse’s inheritance rights in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. The surviving spouse is a forced heir under the Civil Code of 2020, and an advance waiver of the forced share (legítima) is ineffective (Art. 1627); the forced share also cannot be encumbered with conditions (Art. 1626). A marital agreement can define and shrink the estate the forced-heirship rules operate on, but it cannot eliminate the spouse’s forced share.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Does moving to Puerto Rico change my marital property regime?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'It can. If spouses establish a common domicile in a new jurisdiction for five (5) years or more, their marital property regime becomes that of the new jurisdiction unless they agree otherwise, without prejudice to third-party rights (Art. 43, Civil Code of 2020). Relocating couples with appreciated assets, trusts, or businesses should address this early.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico': {
     h1: '\u00bfCu\u00e1nto cuesta un fideicomiso en Puerto Rico?',
     meta: 'Costos reales de crear, administrar y extinguir un fideicomiso en Puerto Rico: honorarios de abogado, aranceles notariales, inscripci\u00f3n y gastos anuales. Precios transparentes.',
@@ -3816,7 +3916,9 @@ var CORE_HREFLANG_PAIRS = [
   /* Act 60 + estate-planning bundle EN↔ES pair — added Jul 5 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
   ['/resources/estate-planning-act-60-relocatees', '/resources/planificacion-sucesoral-ley-60-nuevos-residentes'],
   /* Act 153-2026 revocable trusts EN↔ES pair — added Aug 4 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
-  ['/resources/revocable-trusts-puerto-rico', '/resources/fideicomisos-revocables-puerto-rico']
+  ['/resources/revocable-trusts-puerto-rico', '/resources/fideicomisos-revocables-puerto-rico'],
+  /* Capitulaciones / prenup-postnup EN↔ES pair — added Aug 15 2026; publish BOTH /resources pages together so hreflang never points at a 404. */
+  ['/resources/prenuptial-postnuptial-agreements-puerto-rico', '/resources/capitulaciones-matrimoniales-puerto-rico']
 ];
 
 function injectHreflang() {

@@ -1574,6 +1574,56 @@ var SEO = {
       ]
     }
   },
+  '/resources/relevo-de-hacienda-puerto-rico': {
+    title: 'Relevo de Hacienda en Puerto Rico: Gu\u00eda Paso a Paso',
+    meta: 'C\u00f3mo obtener el relevo de Hacienda (Certificado de Cancelaci\u00f3n de Gravamen) para una herencia en Puerto Rico: Modelo SC 2800-C, SURI, plazos y fianzas.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 es el relevo de Hacienda en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Es el Certificado de Cancelaci\u00f3n de Gravamen (Relevo de Herencia) que expide el Departamento de Hacienda. La Secci\u00f3n 2054.01 del C\u00f3digo de Rentas Internas impone autom\u00e1ticamente un gravamen a favor del Gobierno sobre todos los bienes del caudal relicto; los bancos y el Registro de la Propiedad exigen el relevo antes de liberar cuentas o inscribir traspasos.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfTodav\u00eda se paga contribuci\u00f3n sobre herencias en Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No. Desde la Ley 76-2017, los bienes de causantes fallecidos despu\u00e9s del 31 de diciembre de 2017 no pagan contribuci\u00f3n sobre el caudal relicto, sean o no residentes de Puerto Rico. Pero la Planilla Informativa de Caudal Relicto (Modelo SC 2800-C) y el relevo siguen siendo obligatorios para poder transferir los bienes.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfCu\u00e1nto tiempo hay para radicar la planilla de caudal relicto?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'El administrador del caudal debe rendir la Planilla Informativa bajo juramento dentro de los doce (12) meses siguientes a la fecha del fallecimiento, conforme a la Secci\u00f3n 2051.01(e) del C\u00f3digo. La radicaci\u00f3n se hace electr\u00f3nicamente a trav\u00e9s de SURI.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfPuede el banco liberar dinero antes del relevo?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'S\u00ed, una cantidad limitada: hasta $15,000 o el 25% del total de los fondos, la cantidad que sea mayor, sin exigir el certificado de cancelaci\u00f3n de gravamen. El resto queda retenido hasta presentar el relevo.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': '\u00bfQu\u00e9 pasa si el fallecido ten\u00eda deudas con Hacienda o el CRIM?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'No procede el relevo ordinario. Si las deudas est\u00e1n bajo revisi\u00f3n administrativa o judicial, puede solicitarse un Relevo de Herencia Condicionado prestando una fianza del 125% de la deuda tasada. Alternativamente, una Autorizaci\u00f3n Condicionada permite vender una partida espec\u00edfica si la propiedad restante vale al menos el doble de lo adeudado.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/cuanto-cuesta-un-fideicomiso-en-puerto-rico': {
     h1: '\u00bfCu\u00e1nto cuesta un fideicomiso en Puerto Rico?',
     meta: 'Costos reales de crear, administrar y extinguir un fideicomiso en Puerto Rico: honorarios de abogado, aranceles notariales, inscripci\u00f3n y gastos anuales. Precios transparentes.',

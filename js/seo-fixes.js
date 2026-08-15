@@ -1574,6 +1574,48 @@ var SEO = {
       ]
     }
   },
+  '/resources/llc-vs-corporation-puerto-rico': {
+    title: 'LLC vs. Corporation in Puerto Rico: How to Choose',
+    meta: 'LLC or corporation in Puerto Rico? Liability, the LLC corporate-tax default under Sec. 1010.01, pass-through elections, Act 60 fit, fees and annual compliance.',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      'mainEntity': [
+        {
+          '@type': 'Question',
+          'name': 'Is a Puerto Rico LLC taxed as a pass-through entity?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Not by default. Under Section 1010.01 of the Puerto Rico Internal Revenue Code, an LLC is taxed as a corporation unless it files a timely election with Hacienda for pass-through treatment. For U.S. federal purposes a Puerto Rico LLC also defaults to corporate treatment and needs a Form 8832 election to change that. The two elections are separate and must be coordinated.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'Which entity is better for an Act 60 export-services business?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Usually a corporation, or an LLC that keeps its default corporate treatment. The Act 60 export-services decree applies a fixed 4% rate at the entity level, and distributions of decree income to shareholders who are bona fide Puerto Rico residents are 100% exempt from Puerto Rico tax. A pass-through election generally works against that structure.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What are the annual compliance costs for a Puerto Rico LLC vs. a corporation?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'A corporation files an annual report with the Department of State by April 15 with a $150 fee, disclosing officers and business volume, with financial statements — audited by a Puerto Rico-licensed CPA once volume exceeds $3 million. An LLC files no annual report; it pays a flat $250 annual fee with basic identifying information. Both must maintain a registered agent, renew the municipal patente, and file the applicable Hacienda returns.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What does it cost to form an LLC or corporation in Puerto Rico?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'The Department of State filing fee is $250 for an LLC certificate of formation; corporate incorporation fees start around $150 and scale with authorized capital. Add the EIN (free), Hacienda/SURI merchant registration, CRIM registration, the municipal license (patente), and legal fees. Most formations complete in two to four weeks.'
+          }
+        }
+      ]
+    }
+  },
   '/resources/relevo-de-hacienda-puerto-rico': {
     title: 'Relevo de Hacienda en Puerto Rico: Gu\u00eda Paso a Paso',
     meta: 'C\u00f3mo obtener el relevo de Hacienda (Certificado de Cancelaci\u00f3n de Gravamen) para una herencia en Puerto Rico: Modelo SC 2800-C, SURI, plazos y fianzas.',
@@ -1896,6 +1938,14 @@ var SEO = {
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'A bona fide resident is an individual who satisfies all three tests of IRC \xa7937 for the taxable year: the presence test, the tax home test, and the closer connection test. Only natural persons can qualify. Bona fide residency is the gateway to the federal income exclusion under IRC \xa7933.'
+          }
+        },
+        {
+          '@type': 'Question',
+          'name': 'What happens if I fail one of the residency tests?',
+          'acceptedAnswer': {
+            '@type': 'Answer',
+            'text': 'Failing any one of the three tests means you were not a bona fide resident for that year. The IRS will disallow every \xa7933 exclusion claimed for the year, resulting in full federal tax on the previously excluded income plus interest and potential penalties. Residency is tested year by year, and IRS enforcement in this area is active.'
           }
         },
         {

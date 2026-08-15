@@ -288,9 +288,11 @@ function addNotarialTariffDisclaimer() {
     }
   }
 
-  /* Fallback: find the "Riefkohl Law is a trade name" disclaimer and insert before it */
+  /* Fallback: find the page disclaimer and insert before it. (Matched on the
+     "Admitted to practice" clause — the "trade name of Riefkohl LLC" phrasing
+     was removed from the /services source Aug 15 2026.) */
   for (var j = allParagraphs.length - 1; j >= 0; j--) {
-    if (allParagraphs[j].textContent.indexOf('Riefkohl Law is a trade name') >= 0) {
+    if (allParagraphs[j].textContent.indexOf('Admitted to practice in Puerto Rico') >= 0) {
       allParagraphs[j].parentNode.insertBefore(notice, allParagraphs[j]);
       return;
     }

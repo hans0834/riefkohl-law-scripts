@@ -569,7 +569,16 @@ function transformServicesHero(htmlDiv) {
   htmlDiv.insertBefore(hero, htmlDiv.firstChild);
 }
 
-/* ----- Trust Pricing Tiers ----- */
+/* ----- Trust Pricing (flat fee) -----
+   The four-tier pricing grid ($7,500–$50,000+) was removed from the /services
+   source in the Squarespace editor on Aug 15 2026; the native, crawlable copy
+   now carries the flat-fee statement itself. Like fixStaleServicePrices below,
+   this transform rewrites no dollar amounts — it only restyles the native copy
+   into the price card, and the price/disclaimer strings are parsed from the
+   page so the rendered card cannot diverge from the crawlable source again.
+   Matching is on text, not tags, because the page editor may flatten pasted
+   headings. If the native copy changes shape, this is a no-op and the native
+   copy renders as-is. */
 function transformTrustPricing(htmlDiv) {
   if (qs('.rl-rd-price-statement')) return;
 
@@ -585,75 +594,27 @@ function transformTrustPricing(htmlDiv) {
   }
   if (trustHeaderIdx === -1) return;
 
-  // Parse tiers: look for H3s starting with "Tier"
-  var tiers = [];
-  var currentTier = null;
-
-  for (var j = trustHeaderIdx; j < kids.length; j++) {
+  // Collect the native flat-fee section: everything up to the next category.
+  var section = [];
+  var priceText = '';
+  var disclaimerText = '';
+  for (var j = trustHeaderIdx + 1; j < kids.length; j++) {
     var child = kids[j];
     var text = child.textContent.trim();
-
-    // Stop when we hit non-trust content
-    if (text.indexOf('Business Formation') > -1 && child.tagName === 'P' && tiers.length > 0) break;
-    if (text === 'Not sure which trust structure is right for you? Schedule a consultation and we will help you determine the best fit.') {
-      // This is the consultation note after tiers
-      child.style.display = 'none';
-      continue;
-    }
-
-    if (child.tagName === 'H3' && text.indexOf('Tier') > -1) {
-      // New tier
-      if (currentTier) tiers.push(currentTier);
-      // Parse "Tier N: Name"
-      var tierParts = text.split(':');
-      currentTier = {
-        label: tierParts[0].trim(),
-        name: tierParts.length > 1 ? tierParts[1].trim() : text,
-        price: '',
-        includes: [],
-        excludes: []
-      };
-      child.style.display = 'none';
-      continue;
-    }
-
-    if (currentTier) {
-      // Price line — match "$X", "From $X", "$X - $Y", etc.
-      if (child.tagName === 'P' && text.match(/\$[\d,]+/)) {
-        currentTier.price = text;
-        child.style.display = 'none';
-        continue;
-      }
-      // "Includes:" or "Includes everything in Tier X, plus:" or "For:"
-      if (child.tagName === 'P' && (text.indexOf('Includes') > -1 || text === 'For:')) {
-        child.style.display = 'none';
-        continue;
-      }
-      // "Excludes:" label
-      if (child.tagName === 'P' && text === 'Excludes:') {
-        child.style.display = 'none';
-        continue;
-      }
-      // UL with items
-      if (child.tagName === 'UL') {
-        var items = qsa('li', child);
-        items.forEach(function(li) {
-          currentTier.includes.push(li.textContent.trim());
-        });
-        child.style.display = 'none';
-        continue;
-      }
-      // Empty paragraphs
-      if (child.tagName === 'P' && text.length === 0) {
-        child.style.display = 'none';
-        continue;
-      }
+    if (text.indexOf('Business Formation') > -1) break;
+    section.push(child);
+    if (!priceText && /^Flat fees from \$[\d,]+$/.test(text)) {
+      priceText = text;
+    } else if (!disclaimerText && text.indexOf('representative examples') > -1) {
+      disclaimerText = text;
     }
   }
-  if (currentTier) tiers.push(currentTier);
-  if (tiers.length === 0) return;
+  if (!priceText) return; // Source changed shape — leave the native copy visible.
 
-  // Hide the trust header and the H1 above it
+  // Hide the native section. The "Not sure which trust structure" paragraph
+  // stays in the DOM (display:none) as the anchor for the notarial-tariff
+  // notice inserted by legal-content-fixes.js.
+  section.forEach(function(node) { node.style.display = 'none'; });
   kids[trustHeaderIdx].style.display = 'none';
   // Also hide the H1 "Puerto Rico Legal Services & Transparent Pricing"
   for (var h = 0; h < kids.length; h++) {
@@ -663,19 +624,16 @@ function transformTrustPricing(htmlDiv) {
     }
   }
 
-  // Build section heading
+  // Build section heading + card from the parsed native copy.
   var heading = el('h2', 'rl-rd-section-heading', 'Estate Planning & Puerto Rico Trusts');
-
-  // Single flat-fee starting-price statement (replaces the per-tier pricing grid).
-  // Representative-example framing: the actual fee is scoped per matter.
   var grid = el('div', 'rl-rd-price-statement');
   grid.setAttribute('style', 'max-width:560px;margin:32px auto 40px;padding:0 20px;');
   grid.innerHTML =
     '<div class="rl-rd-tier-card" style="text-align:center;align-items:center;">' +
       '<div class="rl-rd-tier-label">Flat-Fee Pricing</div>' +
       '<h3 style="min-height:auto;">Puerto Rico Trusts &amp; Estate Planning</h3>' +
-      '<div class="rl-rd-price" style="width:100%;font-size:1.6rem;">Flat fees from $1,800</div>' +
-      '<p style="font-size:.82rem;color:var(--rl-warm-600);line-height:1.55;margin:0 0 18px;">The prices shown are representative examples that reflect what many engagements look like. The fee for each matter is determined based on your specific circumstances.</p>' +
+      '<div class="rl-rd-price" style="width:100%;font-size:1.6rem;">' + escHtml(priceText) + '</div>' +
+      (disclaimerText ? '<p style="font-size:.82rem;color:var(--rl-warm-600);line-height:1.55;margin:0 0 18px;">' + escHtml(disclaimerText) + '</p>' : '') +
       '<a class="rl-rd-tier-cta" href="/calendly" style="width:100%;box-sizing:border-box;">Book a Consultation</a>' +
     '</div>';
 
@@ -934,8 +892,9 @@ function transformServicesDisclaimer(htmlDiv) {
       continue;
     }
 
-    // Disclaimer paragraph
-    if (child.tagName === 'P' && text.indexOf('Riefkohl Law is a trade name') > -1) {
+    // Disclaimer paragraph ("trade name of Riefkohl LLC" was removed from the
+    // source Aug 15 2026 per branding policy, so match the stable clause)
+    if (child.tagName === 'P' && text.indexOf('Admitted to practice in Puerto Rico') > -1) {
       var disc = el('div', 'rl-rd-disclaimer', escHtml(text));
       child.style.display = 'none';
       child.parentNode.insertBefore(disc, child.nextSibling);

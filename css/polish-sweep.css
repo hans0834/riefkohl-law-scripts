@@ -711,3 +711,14 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
     margin: 0 auto;
   }
 }
+
+/* Companion to the layout repair above: the same page's five sections all
+   carry a ~66vh min-height, so after linearizing the grids each section
+   floats its short content in a tall band of dead space. Hug the content
+   instead, with even padding for rhythm. Same scope, same lifetime. */
+@media (min-width: 768px) {
+  #collection-69a88d72b514630585c9603d main .page-section {
+    min-height: auto !important;
+    padding: 40px 0 !important;
+  }
+}

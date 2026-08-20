@@ -4013,6 +4013,131 @@ function setDocumentLanguage() {
 
 setDocumentLanguage();
 
+/* ================================================
+   12c. LANGUAGE TOGGLE + SPANISH NAV LOCALIZATION
+   ================================================
+   Added 2026-08-20. The Spanish half of the site (/espanol*, /recursos-es,
+   the /recursos-* subpages and the ES /resources guides) was reachable only
+   through hreflang tags, which no human ever sees — the header offered no
+   way to switch languages, and on Spanish pages the nav itself still pointed
+   at the ENGLISH pages, dropping Spanish readers back into English content.
+
+   Two fixes, both here because this file already owns the EN↔ES pair data:
+   1. Every page gets an "Español" / "English" item appended to the header
+      nav (desktop + burger menu) linking to this page's counterpart from
+      CORE_HREFLANG_PAIRS / HREFLANG_PAIRS, falling back to the language
+      hub (/espanol going in, / coming back).
+   2. On Spanish pages the stock nav links are rewritten to their Spanish
+      equivalents (Inicio, Servicios, Recursos, …) so a Spanish visitor can
+      move through the site without being bounced back into English.
+
+   Squarespace renders the nav server-side and does not re-render it after
+   load, so a one-shot DOM pass at DOMContentLoaded is sufficient. Guarded
+   by the .rl-lang-toggle marker so re-entry cannot duplicate items. */
+function localizeNavigation() {
+  var path = window.location.pathname.replace(/\/$/, '') || '/';
+  var i;
+
+  /* This page's counterpart in the other language, if it has one. */
+  var toEs = null, toEn = null;
+  for (i = 0; i < CORE_HREFLANG_PAIRS.length; i++) {
+    if (path === CORE_HREFLANG_PAIRS[i][0]) toEs = CORE_HREFLANG_PAIRS[i][1];
+    if (path === CORE_HREFLANG_PAIRS[i][1]) toEn = CORE_HREFLANG_PAIRS[i][0];
+  }
+  if (path.indexOf('/blog/') === 0) {
+    var slug = path.replace(/^\/blog\//, '');
+    for (i = 0; i < HREFLANG_PAIRS.length; i++) {
+      if (slug === HREFLANG_PAIRS[i][0]) toEs = '/blog/' + HREFLANG_PAIRS[i][1];
+      if (slug === HREFLANG_PAIRS[i][1]) toEn = '/blog/' + HREFLANG_PAIRS[i][0];
+    }
+  }
+
+  /* Same test as setDocumentLanguage(), widened by the <html lang> that it
+     (or a page's per-page header injection, which runs at parse time) has
+     already set — that covers Spanish pages outside the pair lists, e.g.
+     /resources/planificacion-sucesoral-puerto-rico. */
+  var isSpanish = !!toEn ||
+    /^\/(espanol|recursos-)/.test(path) ||
+    (document.documentElement.lang || '').toLowerCase().indexOf('es') === 0;
+
+  var href = isSpanish ? (toEn || '/') : (toEs || '/espanol');
+  var label = isSpanish ? 'English' : 'Español';
+  var langCode = isSpanish ? 'en' : 'es';
+  var aria = isSpanish ? 'Read this site in English' : 'Ver el sitio en español';
+
+  function apply() {
+    /* 1 — desktop nav (Squarespace renders two copies of the list) */
+    var lists = document.querySelectorAll('.header-nav-list');
+    for (var d = 0; d < lists.length; d++) {
+      if (lists[d].querySelector('.rl-lang-toggle')) continue;
+      var item = document.createElement('div');
+      item.className = 'header-nav-item header-nav-item--collection rl-lang-toggle';
+      var a = document.createElement('a');
+      a.href = href;
+      a.setAttribute('hreflang', langCode);
+      a.setAttribute('lang', langCode);
+      a.setAttribute('aria-label', aria);
+      a.textContent = label;
+      item.appendChild(a);
+      lists[d].appendChild(item);
+    }
+
+    /* 2 — burger menu: same item shape Squarespace uses */
+    var mItems = document.querySelectorAll('.header-menu-nav-item');
+    if (mItems.length) {
+      var parent = mItems[mItems.length - 1].parentNode;
+      if (!parent.querySelector('.rl-lang-toggle')) {
+        var mi = document.createElement('div');
+        mi.className = 'container header-menu-nav-item rl-lang-toggle';
+        var ma = document.createElement('a');
+        ma.href = href;
+        ma.setAttribute('hreflang', langCode);
+        ma.setAttribute('lang', langCode);
+        ma.setAttribute('aria-label', aria);
+        var mc = document.createElement('div');
+        mc.className = 'header-menu-nav-item-content';
+        mc.textContent = label;
+        ma.appendChild(mc);
+        mi.appendChild(ma);
+        parent.appendChild(mi);
+      }
+    }
+
+    /* 3 — Spanish pages: point the stock nav at the Spanish pages.
+       '/blog' is left alone — there is no Spanish blog index; the blog's
+       own bilingual filter (blog-dashboard.js) handles language there. */
+    if (!isSpanish) return;
+    var ES_NAV = {
+      '/':          { href: '/espanol',                label: 'Inicio' },
+      '/services':  { href: '/espanol-servicios',      label: 'Servicios' },
+      '/resources': { href: '/recursos-es',            label: 'Recursos' },
+      '/calendly':  { href: '/espanol-cita',           label: 'Agendar Cita' },
+      '/about':     { href: '/espanol-sobre-nosotros', label: 'Nosotros' },
+      '/contact':   { href: '/espanol-contacto',       label: 'Contacto' }
+    };
+    var links = document.querySelectorAll('.header-nav-item a, .header-menu-nav-item a');
+    for (var l = 0; l < links.length; l++) {
+      if (links[l].closest && links[l].closest('.rl-lang-toggle')) continue;
+      var rawHref = links[l].getAttribute('href');
+      if (!rawHref) continue;
+      var cur = rawHref.replace(/\/$/, '') || '/';
+      var map = ES_NAV[cur];
+      if (!map) continue;
+      links[l].setAttribute('href', map.href);
+      var content = links[l].querySelector('.header-menu-nav-item-content');
+      (content || links[l]).textContent = map.label;
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', apply);
+  } else {
+    apply();
+  }
+}
+
+localizeNavigation();
+
 // ── Remove incorrect S Corporation Election section from business formation blog post ──
 (function removeSCorpContent() {
   if (window.location.pathname !== '/blog/how-to-form-a-company-in-puerto-rico-llc-corporation-amp-act-60-structures') return;

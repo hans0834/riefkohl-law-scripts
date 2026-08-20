@@ -120,3 +120,15 @@ article.h-entry {
   font-weight: 600;
   text-decoration: underline;
 }
+
+/* ===== LANGUAGE TOGGLE (header nav) =====
+   Injected by localizeNavigation() in seo-fixes.js. Kept in sync with the
+   copy of this rule in all-styles.css (the only stylesheet actually loaded). */
+.header-nav-item.rl-lang-toggle a {
+  white-space: nowrap;
+}
+.header-nav-list .rl-lang-toggle a::before {
+  content: "\00B7";
+  margin-right: 0.9em;
+  opacity: 0.55;
+}

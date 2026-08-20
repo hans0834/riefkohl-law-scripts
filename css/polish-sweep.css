@@ -698,3 +698,16 @@ body.homepage .page-section + .page-section[data-section-theme="dark"] {
 .header-title-text a {
   background-color: transparent !important;
 }
+
+/* ===== /espanol-servicios: DESKTOP LAYOUT REPAIR (2026-08-20) =====
+   Kept in sync with the copy of this rule in all-styles.css (the only
+   stylesheet actually loaded). See that copy for the full rationale. */
+@media (min-width: 768px) {
+  #collection-69a88d72b514630585c9603d main .fluid-engine {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}

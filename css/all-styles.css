@@ -4213,3 +4213,37 @@ a.rl-act60-link,
   color: #d9bf7a !important;
   -webkit-text-fill-color: #d9bf7a !important;
 }
+
+/* ===== LANGUAGE TOGGLE (header nav) =====
+   Injected by localizeNavigation() in seo-fixes.js: an "Español"/"English"
+   item appended to the desktop nav and burger menu. It inherits the theme's
+   nav-item styling via its classes; the rules here only keep the label on
+   one line and set it slightly apart so it reads as a utility, not as an
+   eighth section of the site. (Mirrored in seo-fixes.css.) */
+.header-nav-item.rl-lang-toggle a {
+  white-space: nowrap;
+}
+.header-nav-list .rl-lang-toggle a::before {
+  content: "\00B7";
+  margin-right: 0.9em;
+  opacity: 0.55;
+}
+
+/* ===== /espanol-servicios: DESKTOP LAYOUT REPAIR (2026-08-20) =====
+   The page's five fluid-engine sections were laid out only on the narrow
+   grid: on desktop every block computes to the same ~389px column against
+   the left edge (block rects measured left:38 width:389 at a 1280px
+   viewport) and the right two-thirds of every section is dead space.
+   Rather than hand-dragging five grids in the editor, linearize them:
+   stack the blocks in DOM order as one centered column with a readable
+   measure. Scoped hard to this page's collection id; delete this rule if
+   the page is ever re-laid-out natively. (Mirrored in polish-sweep.css.) */
+@media (min-width: 768px) {
+  #collection-69a88d72b514630585c9603d main .fluid-engine {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}

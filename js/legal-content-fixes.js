@@ -31,6 +31,9 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       (NB: a site-wide footer "Legal Disclaimer" already exists via another script — no #30 needed)
   32. Hide duplicate Aguada blog card on /blog hub (canonical override lives in seo-fixes.js)
   33. Ley 60 (ES): three §937 residency-tests note + homepage trusts-card softening (#28 list)
+  34. Servicios (ES): full refresh of the stale trust-tier pricing block ($7,500–$50,000
+      "Niveles" vs. the July 2026 "from $1,800" reprice) + hourly-billing contradiction
+      (/espanol-servicios) — stopgap until the page body is re-typed at source
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1297,6 +1300,68 @@ function fixStalePricesES() {
   }
 }
 
+/* ================================================
+   34. /espanol-servicios: STALE CONTENT REFRESH (2026-08-20)
+   The page still carried the ORIGINAL trust pricing — four "Nivel" tiers
+   from $7,500 to $50,000+ — while the English /services page has said
+   "Flat fees from $1,800" since the July 2026 reprice, and an intro that
+   promised "No cobramos por hora" while /services offers hourly
+   arrangements (the same contradiction fix #4 removed from /about).
+
+   This is a client-side STOPGAP: the real fix is re-typing the page body in
+   the Squarespace editor (blocked on an editor login when this shipped — the
+   tier prices sit in the crawlable source HTML until then). Both passes
+   match only the stale source text, so once the source is fixed they become
+   no-ops and this function should then be deleted, along with the
+   /espanol-servicios entries in ES_PRICE_FIXES above.
+   ================================================ */
+function refreshEsServiciosStaleContent() {
+  if (path !== '/espanol-servicios') return;
+
+  /* Pass 1 — replace the whole trust-tier block. Matching on 'Nivel 1'
+     makes this idempotent: the replacement no longer contains it. */
+  var contents = document.querySelectorAll('.sqs-block-html .sqs-html-content');
+  for (var i = 0; i < contents.length; i++) {
+    var el = contents[i];
+    var t = el.textContent || '';
+    if (t.indexOf('Nivel 1') === -1 || t.indexOf('Fideicomiso') === -1) continue;
+    el.innerHTML =
+      '<h2>Fideicomisos y planificación sucesoral</h2>' +
+      '<p>Proteja a su familia y su patrimonio con estructuras sucesorales a la medida. Desde testamentos hasta fideicomisos revocables e irrevocables bajo la Ley 219-2012, le ayudamos a planificar con claridad — tomando en cuenta la legítima, la sociedad legal de gananciales y las particularidades del derecho civil puertorriqueño.</p>' +
+      '<h3>Tarifas fijas desde $1,800</h3>' +
+      '<p>Los precios indicados son ejemplos representativos de lo que cuestan muchos de nuestros casos; el honorario de cada asunto se determina según sus circunstancias particulares. Cada plan incluye reuniones con el Lcdo. Riefkohl, la redacción de todos los documentos, el otorgamiento ante notario y orientación sobre los próximos pasos.</p>' +
+      '<p><strong>Nota sobre aranceles notariales:</strong> las tarifas fijas cubren la consulta legal, el diseño de la estructura y la preparación de documentos. La otorgación de escrituras públicas está sujeta a aranceles notariales fijados por ley, así como a sellos de rentas internas y sellos notariales — estos cargos no pueden dispensarse ni descontarse y se facturan por separado como desembolsos requeridos.</p>' +
+      '<p>¿No está seguro de qué estructura le conviene? <a href="/espanol-fideicomisos">Conozca más sobre los fideicomisos en Puerto Rico</a> o <a href="/espanol-cita">coordine una consulta gratuita</a> y le ayudamos a determinar la mejor opción.</p>';
+    break;
+  }
+
+  /* Pass 2 — intro copy: hourly-billing contradiction + free consultation.
+     Plain text-node swaps; both match only the superseded sentences. (The
+     closing CTA block's "Coordine una consulta con el Lcdo. Riefkohl para
+     evaluar su situación y conocer sus opciones." does NOT match the second
+     pattern — different casing and no period after "situación".) */
+  var INTRO_FIXES = [
+    ['No cobramos por hora ni le damos sorpresas al final del proceso. Antes de comenzar, usted sabe exactamente cuánto cuesta y qué incluye.',
+     'La mayoría de nuestros asuntos se manejan a tarifa fija — usted conoce el costo antes de comenzar, sin sorpresas al final del proceso. También ofrecemos arreglos por hora cuando el asunto lo amerita.'],
+    ['coordine una consulta con el Lcdo. Riefkohl para evaluar su situación.',
+     'coordine una consulta gratuita con el Lcdo. Riefkohl para evaluar su situación.']
+  ];
+  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  var nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  for (var n = 0; n < nodes.length; n++) {
+    var parentTag = nodes[n].parentNode && nodes[n].parentNode.tagName;
+    if (parentTag === 'SCRIPT' || parentTag === 'STYLE') continue;
+    var text = nodes[n].nodeValue, orig = text;
+    for (var f = 0; f < INTRO_FIXES.length; f++) {
+      if (text.indexOf(INTRO_FIXES[f][0]) >= 0) {
+        text = text.split(INTRO_FIXES[f][0]).join(INTRO_FIXES[f][1]);
+      }
+    }
+    if (text !== orig) nodes[n].nodeValue = text;
+  }
+}
+
 function collapseEmptyParagraphs() {
   var ps = document.querySelectorAll(
     '.sqs-html-content p, .sqs-block-content p, .rl-sub p'
@@ -1775,6 +1840,8 @@ function runLegalFixes() {
   collapseEmptyParagraphs();
   /* Spanish pages still quoted superseded Act 60 and formation prices */
   fixStalePricesES();
+  /* /espanol-servicios: stale trust-tier pricing + hourly-billing contradiction */
+  refreshEsServiciosStaleContent();
   addTrustIrrevocabilityNotice();
   fixFirmLegalName();
   /* Declaratoria notarial route + Ley 60 ES federal/PR tax clarifier */

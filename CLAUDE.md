@@ -38,7 +38,7 @@ Squarespace serves the page shell. The Code Injection Header (Settings > Advance
 | 9 | `js/breadcrumb-schema.js` | BreadcrumbList structured data (JSON-LD) | Runs on all pages |
 | 10 | `js/post-formatter.js` | Auto-formats imported case law blog posts | Runs on `/blog/*` posts |
 | 11 | `js/conversion-booster.js` | Click-to-call banner, sticky mobile CTA, LocalBusiness schema | `PHONE`: `(787) 236-1657`, `BOOK_URL`: `/calendly` |
-| 12 | `js/email-signup.js` | Newsletter signup bar + inline lead magnets | **Needs setup:** replace `YOUR_FORM_ACTION_URL` with email provider form URL |
+| 12 | `js/email-signup.js` | Newsletter signup bar + inline lead magnets | **Needs setup:** paste the Mailchimp embedded-form URL into `MAILCHIMP_ACTION_URL` (top of file) to turn newsletter CTAs into a real subscribe form; empty = booking-link fallback. PDF magnets always download. |
 | 13 | `js/service-crosslinks.js` | Related services links at bottom of service pages | Runs on service pages |
 | 14 | `js/legal-content-fixes.js` | Statutory corrections (forced heirship, OBBBA, Act 60 exemption %, NR/NC classification, corporate tax rate, advertising language) | Runs on all pages, applies targeted DOM corrections |
 | 15 | `js/schema-markup.js` | Enhanced Organization schema, practice-area LegalService, Article/BlogPosting, dynamic FAQ extraction | Runs on all pages; additive to existing schema in seo-fixes.js and conversion-booster.js |

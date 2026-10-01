@@ -621,7 +621,7 @@ ws6.cell(row=ts_row+1, column=1, value=f"{ts_count} statements flagged as time-s
 # ============================================================
 # SAVE
 # ============================================================
-output_path = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
+output_path = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
 wb.save(output_path)
 print(f"Database saved to: {output_path}")
 print(f"Total live site statements: {len(live_statements)}")

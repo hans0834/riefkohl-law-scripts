@@ -401,7 +401,7 @@ ws7.cell(row=r, column=1, value=f"Time-Sensitive Claims: {ts} ({ts/len(all_state
 ws7.cell(row=r+1, column=1, value=f"Statements needing immediate action: {contradictions}").font = Font(bold=True, color="FF0000")
 
 # Save
-out = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
+out = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
 wb.save(out)
 print(f"Saved: {out}")
 print(f"Total: {len(all_statements)} | Live: {len(live)} | Local: {len(local)}")

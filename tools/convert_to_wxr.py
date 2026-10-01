@@ -9,9 +9,9 @@ import re
 import html
 from collections import OrderedDict
 
-POSTS_DIR = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/blog-posts/March 15 2026"
-SEO_FILE = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/seo-fixes.html"
-OUTPUT_FILE = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/squarespace-import.xml"
+POSTS_DIR = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/blog-posts/March 15 2026"
+SEO_FILE = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/seo-fixes.html"
+OUTPUT_FILE = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/squarespace-import.xml"
 
 def parse_seo_fixes(filepath):
     """Extract slug -> h1 mapping from seo-fixes.html."""

@@ -21,7 +21,7 @@ Three **net-new** native pages, written to convert deadline-driven HNW traffic. 
 
 ## ⚠ VERIFY BEFORE PUBLISHING (attorney sign-off)
 1. ✅ **RESOLVED — Legacy look-back window.** Confirmed by HR (2026-06-26): the legacy window is the fixed **Jan 17, 2006 – Jan 17, 2012** (filings on/before Dec 31, 2026); it becomes a **rolling 6-year** look-back for filings on/after Jan 1, 2027. The "15-year" figure in `legal-content-fixes.js` refers to **decree duration**, not a look-back — no conflict. The deadline page now states the precise dates.
-2. **Pre-move filing on a sworn statement of intent** (deadline page) — framed as "subject to current DDEC practice." HR to confirm whether DDEC currently accepts a complete IRI application filed before physical relocation on a sworn statement of intent; if yes, the page can state it plainly rather than hedged.
+2. ✅ **RESOLVED — Pre-move filing.** HR confirmed (2026-06-26) DDEC accepts a complete IRI application filed before physical relocation on a sworn statement of intent. Un-hedged on both deadline pages (EN + ES, body + FAQ) and the FAQPage schema; redeployed and verified live. (Benefits-still-require-bona-fide-residency caveat kept.)
 3. **GILTI/NCTI** (business-owner page) — the page deliberately states **no precise federal rate** and flags OBBBA's 2026 revision/NCTI rename as "confirm with your CPA." Confirm the rename framing matches your house style.
 
 ## Steps

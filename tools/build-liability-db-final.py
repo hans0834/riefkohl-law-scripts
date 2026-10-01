@@ -474,7 +474,7 @@ ws8.cell(row=r3,column=1,value=f"Time-Sensitive: {ts} ({ts/len(all_stmts)*100:.1
 ws8.cell(row=r3+1,column=1,value=f"Case Citations: {sum(1 for sd in all_stmts if sd[5]=='Case Citation')}").font=Font(bold=True)
 ws8.cell(row=r3+2,column=1,value=f"Contradictions/Must-Fix: {contradictions}").font=Font(bold=True, color="FF0000")
 
-out = "/Users/hansriefkohl/Downloads/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
+out = "/Volumes/SanDisk SSD/Claude Code/Riefkohl Law updates/liability-statement-database.xlsx"
 wb.save(out)
 print(f"Saved: {out}")
 print(f"Total: {len(all_stmts)} (Live: {n_live} | Local/SEO/Email: {n_local} | Articles: {n_art})")

@@ -676,7 +676,27 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
     }, { passive: true });
   }
 
+  // Show the publication year on post pages. Squarespace 7.1 prints the post date
+  // as "Sep 25" with no year; the year comes from the page's datePublished meta.
+  // Also gives the <time> element a valid ISO datetime. Idempotent.
+  function addYearToPostDate() {
+    var meta = document.querySelector('meta[itemprop="datePublished"]');
+    var iso = meta ? (meta.getAttribute('content') || '') : '';
+    var year = iso.slice(0, 4);
+    if (!/^\d{4}$/.test(year)) return;
+    var els = document.querySelectorAll('time.blog-meta-item--date');
+    for (var i = 0; i < els.length; i++) {
+      var t = els[i];
+      var target = t.querySelector('span') || t;
+      var txt = (target.textContent || '').trim();
+      if (!txt || /\d{4}/.test(txt)) continue;
+      target.textContent = /^[A-Za-z]{3,9}\.? \d{1,2}$/.test(txt) ? txt + ', ' + year : txt + ' ' + year;
+      if (/^\d{4}-\d{2}-\d{2}/.test(iso)) t.setAttribute('datetime', iso.slice(0, 10));
+    }
+  }
+
   ready(function() {
+    addYearToPostDate();
     // Run formatter
     formatPost();
     initProgressBar();

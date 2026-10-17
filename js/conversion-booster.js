@@ -276,7 +276,7 @@ function injectPageCTAs() {
     },
     '/services': {
       heading: 'Let\'s Find the Right Service for You',
-      body: 'Not sure where to start? A 30-minute strategy call will help us understand your needs and recommend the best approach\u2014flat fee, no hourly billing.',
+      body: 'Not sure where to start? A 30-minute strategy call will help us understand your needs and recommend the best approach\u2014with clear flat-fee pricing for most matters.',
       btn: 'Book Your Free Strategy Call',
       secondary: 'Or call (787) 236-1657'
     }

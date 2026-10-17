@@ -1078,15 +1078,15 @@ function addTrustIrrevocabilityNotice() {
 
   if (isES) {
     notice.innerHTML =
-      '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Actualizaci\u00f3n legislativa &mdash; Ley 153-2026 (vigente el 30 de enero de 2027)</p>'
-      + '<p style="margin:0 0 6px;">La <strong>Ley 153-2026</strong>, firmada el 30 de julio de 2026, reconoce expresamente el <strong>fideicomiso revocable</strong> en Puerto Rico e <strong>invierte la presunci\u00f3n</strong> de la Ley 219-2012. Desde el 30 de enero de 2027, la escritura que nada diga sobre revocabilidad se presume <em>revocable</em>. Todo instrumento otorgado bajo la norma anterior merece una revisi\u00f3n.</p>'
+      '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Actualizaci\u00f3n legislativa &mdash; Ley 153-2026 (vigente a partir del 30 de enero de 2027)</p>'
+      + '<p style="margin:0 0 6px;">La <strong>Ley 153-2026</strong>, firmada el 30 de julio de 2026, reconoce expresamente el <strong>fideicomiso revocable</strong> en Puerto Rico e <strong>invierte la presunci\u00f3n</strong> de la Ley 219-2012. A partir del 30 de enero de 2027, la escritura que nada diga sobre revocabilidad se presumir\u00e1 <em>revocable</em>. Todo instrumento otorgado bajo la norma actual merece una revisi\u00f3n antes de esa fecha.</p>'
       + (ACT153_PAGES_LIVE
           ? '<p style="margin:0;"><a href="/resources/fideicomisos-revocables-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Lea qu\u00e9 cambia con la Ley 153-2026</a> o <a href="/espanol-cita" style="color:#8b5e00;text-decoration:underline;">agende una consulta</a> para revisar su instrumento antes de que entre en vigor.</p>'
           : '<p style="margin:0;"><a href="/espanol-cita" style="color:#8b5e00;text-decoration:underline;">Agende una consulta</a> para revisar su instrumento antes de que entre en vigor.</p>');
   } else {
     notice.innerHTML =
       '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Law change &mdash; Act 153-2026, effective January 30, 2027</p>'
-      + '<p style="margin:0 0 6px;"><strong>Act 153-2026</strong>, signed July 30, 2026, expressly recognizes the <strong>revocable trust</strong> in Puerto Rico and <strong>reverses the presumption</strong> set by Law 219-2012. From January 30, 2027, a trust deed that says nothing about revocability is presumed <em>revocable</em>. Any instrument drafted under the earlier rule is worth a review.</p>'
+      + '<p style="margin:0 0 6px;"><strong>Act 153-2026</strong>, signed July 30, 2026, expressly recognizes the <strong>revocable trust</strong> in Puerto Rico and <strong>reverses the presumption</strong> set by Law 219-2012. From January 30, 2027, a trust deed that says nothing about revocability will be presumed <em>revocable</em>. Any instrument drafted under the current rule is worth a review before then.</p>'
       + (ACT153_PAGES_LIVE
           ? '<p style="margin:0;"><a href="/resources/revocable-trusts-puerto-rico" style="color:#8b5e00;text-decoration:underline;">Read what Act 153-2026 changes</a>, or <a href="/calendly" style="color:#8b5e00;text-decoration:underline;">schedule a consultation</a> to review your instrument before it takes effect.</p>'
           : '<p style="margin:0;"><a href="/calendly" style="color:#8b5e00;text-decoration:underline;">Schedule a consultation</a> to review your instrument before it takes effect.</p>');
@@ -1113,52 +1113,54 @@ function addTrustIrrevocabilityNotice() {
 }
 
 /* ================================================
-   24b. CORRECT THE SUPERSEDED IRREVOCABILITY PROSE
-   The banner above warns that the rule changed, but the
-   body copy still states the old rule as fact \u2014 and on the
-   pages in schema-markup.js's FAQ_SCAN_PAGES that prose is
-   scraped into FAQPage structured data, so Google is being
-   fed the superseded rule as an answer. Verified live on
-   /resources/trust-vs-will-puerto-rico.
+   24b. STATE THE ACT 153-2026 CHANGE IN THE RIGHT TENSE
+   Act 153-2026 was signed July 30, 2026 and takes effect
+   January 30, 2027. Until then the irrevocability rule IS
+   current law, so body copy that states it is not wrong --
+   it should just say the rule is about to change.
+   (Oct 2026: the earlier replacements in this list said the
+   Act "took effect" and that silent deeds "are now presumed
+   revocable", which was premature. They now use the future
+   tense, matching the corrected native pages.)
 
-   These are exact sentences from the native page bodies.
-   Rewriting them here fixes the visible page and the
-   extracted schema together; legal-content-fixes.js is
-   module 14 and schema-markup.js is module 15, so this runs
-   first. Re-pasting the corrected native HTML later makes
-   these no-ops \u2014 they simply stop matching.
+   These are exact sentences from page bodies. Rewriting
+   them here fixes the visible page and the extracted
+   schema together; legal-content-fixes.js is module 14 and
+   schema-markup.js is module 15, so this runs first. The
+   corrected native pages no longer contain these sentences,
+   so there these rules are no-ops. Revisit after
+   January 30, 2027.
    ================================================ */
 var IRREVOCABILITY_PROSE_FIXES = [
   ['all Puerto Rico trusts are irrevocable by default.',
-   'Puerto Rico trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027; a deed silent on revocability is now presumed revocable.'],
+   'Puerto Rico trusts are irrevocable by default until Act 153-2026 takes effect on January 30, 2027; from that date, a deed silent on revocability will be presumed revocable.'],
   ['all trusts are irrevocable by default',
-   'trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027'],
+   'trusts are irrevocable by default until Act 153-2026 takes effect on January 30, 2027'],
   ['trusts are irrevocable by default.',
-   'trusts were irrevocable by default until Act 153-2026 took effect on January 30, 2027, which reversed the presumption.'],
+   'trusts are irrevocable by default until Act 153-2026 takes effect on January 30, 2027 and reverses the presumption.'],
   ['Under Law 219-2012 all trusts are irrevocable, though you can reserve broad modification rights under \u00a73352h.',
-   'Under Law 219-2012 all trusts were irrevocable, but Act 153-2026 reversed that on January 30, 2027: a deed silent on revocability is now presumed revocable, and any settlor may create a revocable trust.'],
+   'Under Law 219-2012 trusts are irrevocable (Act 60 Individual Resident Investor decree holders excepted), though you can reserve broad modification rights under \u00a73352h. Act 153-2026 reverses that on January 30, 2027: from that date, a deed silent on revocability will be presumed revocable, and any settlor may create a revocable trust.'],
   ['Under the Puerto Rico Trust Act (Ley 219-2012), all trusts are irrevocable\u2014with one exception',
-   'Under the Puerto Rico Trust Act (Ley 219-2012), all trusts were irrevocable until Act 153-2026 took effect on January 30, 2027\u2014with one earlier exception'],
+   'Under the Puerto Rico Trust Act (Ley 219-2012), all trusts are irrevocable until Act 153-2026 takes effect on January 30, 2027\u2014with one exception'],
   ['The Fundamental Rule: All Puerto Rico Trusts Are Irrevocable',
-   'The Former Rule: All Puerto Rico Trusts Were Irrevocable (changed by Act 153-2026)'],
+   'The Current Rule: Puerto Rico Trusts Are Irrevocable (Until Act 153-2026 Takes Effect on January 30, 2027)'],
   ['Under the Trust Act, all Puerto Rico trusts are irrevocable.',
-   'Under the Trust Act as it stood before Act 153-2026, all Puerto Rico trusts were irrevocable. Act 153-2026 reversed that presumption effective January 30, 2027.'],
+   'Under the Trust Act as it stands until January 30, 2027, Puerto Rico trusts are irrevocable. Act 153-2026 reverses that presumption effective January 30, 2027.'],
   /* Spanish */
   ['Bajo la Ley de Fideicomisos, todos los fideicomisos de Puerto Rico son irrevocables.',
-   'Bajo la Ley de Fideicomisos antes de la Ley 153-2026, todos los fideicomisos de Puerto Rico eran irrevocables. La Ley 153-2026 invirti\u00f3 esa presunci\u00f3n a partir del 30 de enero de 2027.'],
+   'Bajo la Ley de Fideicomisos, los fideicomisos de Puerto Rico son irrevocables hasta que la Ley 153-2026 entre en vigor el 30 de enero de 2027, fecha en que se invierte esa presunci\u00f3n.'],
   ['los fideicomisos en Puerto Rico son irrevocables por defecto.',
-   'los fideicomisos en Puerto Rico fueron irrevocables por defecto hasta que la Ley 153-2026 entr\u00f3 en vigor el 30 de enero de 2027, que invirti\u00f3 la presunci\u00f3n.'],
-  /* CPA-bridge blog posts (published). The Squarespace rich-text editor rejects a
-     programmatic body replacement, so these are corrected in the DOM. Both told the
-     reader Puerto Rico is the OPPOSITE of the mainland \u2014 now exactly backwards. */
+   'los fideicomisos en Puerto Rico son irrevocables por defecto hasta que la Ley 153-2026 entre en vigor el 30 de enero de 2027 e invierta la presunci\u00f3n.'],
+  /* CPA-bridge blog posts. Their native bodies were corrected in Oct 2026, so
+     these no longer match there; kept, in the right tense, for any other copy. */
   ['Trusts in Puerto Rico are irrevocable by default.',
-   'Revocability is the default in Puerto Rico \u2014 as of January 30, 2027.'],
+   'Trusts in Puerto Rico are irrevocable by default until January 30, 2027, when Act 153-2026 makes revocability the default.'],
   ['Unlike many mainland jurisdictions where trusts are presumed revocable unless stated otherwise, Puerto Rico law presumes irrevocability. This is a critical distinction. If the trust instrument does not explicitly reserve the right to revoke or amend, the grantor loses control of the assets permanently.',
-   'Act 153-2026 reversed the rule that had governed since 2012, bringing Puerto Rico in line with most mainland jurisdictions: a deed that says nothing about revocability is now presumed revocable. This is a critical distinction, and it now cuts the other way. If your goal is asset protection, the deed must state irrevocability expressly \u2014 while the settlor keeps the power to revoke, creditors can reach the trust assets as if the trust did not exist.'],
+   'Unlike many mainland jurisdictions, Puerto Rico law presumes irrevocability until Act 153-2026 takes effect on January 30, 2027; from that date, a deed that says nothing about revocability will be presumed revocable. This is a critical distinction either way. Until then, a deed that does not expressly reserve the right to revoke or amend leaves the grantor without control of the assets; after that date, a settlor who wants asset protection must state irrevocability expressly \u2014 while the settlor keeps the power to revoke, creditors can reach the trust assets as if the trust did not exist.'],
   ['Los fideicomisos en Puerto Rico son irrevocables por defecto.',
-   'En Puerto Rico la revocabilidad es la norma supletoria \u2014 desde el 30 de enero de 2027.'],
+   'Los fideicomisos en Puerto Rico son irrevocables por defecto hasta el 30 de enero de 2027, cuando la Ley 153-2026 convierte la revocabilidad en la norma supletoria.'],
   ['A diferencia de muchas jurisdicciones continentales donde los fideicomisos se presumen revocables a menos que se establezca lo contrario, la ley de Puerto Rico presume la irrevocabilidad. Esta es una distinci\u00f3n cr\u00edtica. Si el instrumento del fideicomiso no reserva expl\u00edcitamente el derecho a revocar o enmendar, el fideicomitente pierde el control de los activos permanentemente.',
-   'La Ley 153-2026 invirti\u00f3 la regla vigente desde 2012 y aline\u00f3 a Puerto Rico con la mayor\u00eda de las jurisdicciones continentales: la escritura que nada diga sobre revocabilidad se presume revocable. La distinci\u00f3n sigue siendo cr\u00edtica, pero ahora corta al rev\u00e9s. Si busca protecci\u00f3n de activos, la escritura debe declarar la irrevocabilidad expresamente \u2014 mientras el fideicomitente conserve la facultad de revocar, sus acreedores pueden alcanzar los bienes como si el fideicomiso no existiera.'],
+   'A diferencia de muchas jurisdicciones continentales, la ley de Puerto Rico presume la irrevocabilidad hasta que la Ley 153-2026 entre en vigor el 30 de enero de 2027; a partir de esa fecha, la escritura que nada diga sobre revocabilidad se presumir\u00e1 revocable. La distinci\u00f3n es cr\u00edtica en ambos casos. Hasta entonces, si la escritura no reserva expresamente el derecho a revocar o enmendar, el fideicomitente pierde el control de los activos; despu\u00e9s, quien busque protecci\u00f3n de activos debe declarar la irrevocabilidad expresamente \u2014 mientras el fideicomitente conserve la facultad de revocar, sus acreedores pueden alcanzar los bienes como si el fideicomiso no existiera.'],
 ];
 
 /* ================================================

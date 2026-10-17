@@ -144,7 +144,7 @@ var SEO = {
           'name': 'How do Puerto Rico trusts differ from U.S. mainland trusts?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trusts operate under a civil law framework (Law 219-2012) rather than common law. Key differences include: forced heirship (the legítima) constrains trust planning, the trust is an autonomous estate rather than a fiduciary relationship, and Puerto Rico trusts can offer distinct asset protection and tax planning advantages for residents and Act 60 decree holders. Revocability also works differently: trusts were irrevocable by default through January 29, 2027, but under Act 153-2026 a trust is presumed revocable from January 30, 2027 unless the deed expressly says otherwise.'
+            'text': 'Puerto Rico trusts operate under a civil law framework (Law 219-2012) rather than common law. Key differences include: forced heirship (the legítima) constrains trust planning, the trust is an autonomous estate rather than a fiduciary relationship, and Puerto Rico trusts can offer distinct asset protection and tax planning advantages for residents and Act 60 decree holders. Revocability is also changing: trusts are irrevocable by default through January 29, 2027, but under Act 153-2026 a trust will be presumed revocable from January 30, 2027 unless the deed expressly says otherwise.'
           }
         },
         {
@@ -629,7 +629,7 @@ var SEO = {
           'name': '\u00bfC\u00f3mo se diferencian los fideicomisos de Puerto Rico de los del continente?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Los fideicomisos de Puerto Rico operan bajo un marco de derecho civil (Ley 219-2012) en lugar del derecho com\u00fan. Las diferencias clave incluyen: la leg\u00edtima condiciona la planificaci\u00f3n, el fideicomiso es un patrimonio aut\u00f3nomo y no una relaci\u00f3n fiduciaria, y ofrece ventajas propias de protecci\u00f3n de activos y planificaci\u00f3n contributiva. La revocabilidad tambi\u00e9n cambia: los fideicomisos fueron irrevocables por defecto hasta el 29 de enero de 2027, pero bajo la Ley 153-2026 se presumen revocables desde el 30 de enero de 2027 salvo que la escritura disponga expresamente lo contrario.'
+            'text': 'Los fideicomisos de Puerto Rico operan bajo un marco de derecho civil (Ley 219-2012) en lugar del derecho com\u00fan. Las diferencias clave incluyen: la leg\u00edtima condiciona la planificaci\u00f3n, el fideicomiso es un patrimonio aut\u00f3nomo y no una relaci\u00f3n fiduciaria, y ofrece ventajas propias de protecci\u00f3n de activos y planificaci\u00f3n contributiva. La revocabilidad tambi\u00e9n est\u00e1 cambiando: los fideicomisos son irrevocables por defecto hasta el 29 de enero de 2027, pero bajo la Ley 153-2026 se presumir\u00e1n revocables a partir del 30 de enero de 2027 salvo que la escritura disponga expresamente lo contrario.'
           }
         },
         {
@@ -927,7 +927,7 @@ var SEO = {
           'name': 'How is a Puerto Rico trust different from a mainland U.S. trust?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Puerto Rico trusts are governed by civil law (Law 219-2012, as amended by Act 153-2026), not the Uniform Trust Code. Key differences: the trust is treated as an autonomous estate rather than a fiduciary relationship, forced heirship (leg\u00edtima) rules apply, and irrevocable trusts are subject to statutory duration limits. Revocability flipped on January 30, 2027: PR trusts were irrevocable by default until then, and are presumed revocable after unless the deed expressly provides otherwise. These differences create planning opportunities\u2014and traps\u2014that require an attorney experienced in both systems.'
+            'text': 'Puerto Rico trusts are governed by civil law (Law 219-2012, as amended by Act 153-2026), not the Uniform Trust Code. Key differences: the trust is treated as an autonomous estate rather than a fiduciary relationship, forced heirship (leg\u00edtima) rules apply, and irrevocable trusts are subject to statutory duration limits. Revocability flips on January 30, 2027: PR trusts are irrevocable by default until then, and will be presumed revocable after that date unless the deed expressly provides otherwise. These differences create planning opportunities\u2014and traps\u2014that require an attorney experienced in both systems.'
           }
         },
         {
@@ -1006,7 +1006,7 @@ var SEO = {
           'name': 'Are Puerto Rico trusts revocable or irrevocable?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'That changed with Act 153-2026, which the Governor signed on July 30, 2026 and which takes effect January 30, 2027. Under the prior rule, all Puerto Rico trusts were irrevocable by default and only Act 60 Individual Resident Investor decree holders could create revocable trusts. From January 30, 2027, any settlor may create one, and a deed that says nothing about revocability is presumed revocable. The Act carries no transition provision for trusts executed before that date.'
+            'text': 'That is changing with Act 153-2026, which the Governor signed on July 30, 2026 and which takes effect January 30, 2027. Until then, Puerto Rico trusts are irrevocable by default and only Act 60 Individual Resident Investor decree holders can create revocable trusts. From January 30, 2027, any settlor may create one, and a deed that says nothing about revocability will be presumed revocable. The Act carries no transition provision for trusts executed before that date.'
           }
         },
         {
@@ -1080,7 +1080,7 @@ var SEO = {
           'name': 'Are revocable living trusts allowed in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes, as of January 30, 2027. Act 153-2026 expressly recognizes the revocable trust in Puerto Rico law and reverses the old presumption, so a deed silent on revocability is now presumed revocable. Before that date, only Act 60 IRI decree holders could create one. Puerto Rico formalities still apply: the trust must be executed by public deed (escritura p\u00fablica) and recorded in the Registry of Trusts, and amendments or revocations must be recorded within ten days to bind third parties.'
+            'text': 'Yes, from January 30, 2027. Act 153-2026 expressly recognizes the revocable trust in Puerto Rico law and reverses the old presumption, so from that date a deed silent on revocability will be presumed revocable. Until then, only Act 60 IRI decree holders can create one. Puerto Rico formalities still apply: the trust must be executed by public deed (escritura p\u00fablica) and recorded in the Registry of Trusts, and amendments or revocations must be recorded within ten days to bind third parties.'
           }
         }
       ]
@@ -1130,7 +1130,7 @@ var SEO = {
           'name': 'How does Puerto Rico law affect ILIT and SLAT planning?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'ILITs and SLATs depend on irrevocability, and under Act 153-2026 irrevocability must now be stated expressly: from January 30, 2027 a Puerto Rico trust deed that is silent is presumed revocable, and any asset subject to a retained power to revoke or withdraw can be reached by the settlor\'s creditors as if the trust did not exist. Drafted correctly as irrevocable, a Puerto Rico trust\'s separate juridical personality still creates an asset-protection barrier against creditors. PR law also permits a trust protector and beneficiary-initiated modification rights that can add flexibility without destroying estate tax benefits if exercised independently of the grantor. Couples should also analyze how the leg\u00edtima, which requires one-half of the estate to pass to forced heirs under the 2020 Civil Code, interacts with SLAT planning.'
+            'text': 'ILITs and SLATs depend on irrevocability, and under Act 153-2026 irrevocability must be stated expressly: from January 30, 2027 a Puerto Rico trust deed that is silent will be presumed revocable, and any asset subject to a retained power to revoke or withdraw can be reached by the settlor\'s creditors as if the trust did not exist. Drafted correctly as irrevocable, a Puerto Rico trust\'s separate juridical personality still creates an asset-protection barrier against creditors. PR law also lets a trust advisor (consultor; Art. 43, 32 L.P.R.A. \u00a7 3353i) amend the terms for tax or legal changes, and lets the settlor reserve modification powers for a third party (Art. 15, \u00a7 3352h); for a SLAT, any power the grantor keeps can matter for estate tax. Couples should also analyze how the leg\u00edtima, which requires one-half of the estate to pass to forced heirs under the 2020 Civil Code, interacts with SLAT planning.'
           }
         }
       ]
@@ -1274,7 +1274,7 @@ var SEO = {
           'name': 'Does getting divorced automatically remove my ex-spouse from my trust in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No. Divorce does not automatically terminate a spouse\'s interest in a trust, so the trust must be reviewed and amended after the divorce. In Gil Ense\u00f1at v. Marini Rom\u00e1n, a husband assumed divorce ended his ex-wife\'s interest, but the trust still named her as a primary beneficiary, leading to disputes over spousal support and a five-year challenge after his death. The fix is to expressly remove the ex-spouse from all beneficiary and trustee roles by notarial deed and update related beneficiary designations.'
+            'text': 'No. Divorce does not automatically terminate a spouse\'s interest in a trust, so the trust must be reviewed and amended after the divorce. The fix is to expressly remove the ex-spouse from all beneficiary and trustee roles by notarial deed and update related beneficiary designations.'
           }
         }
       ]
@@ -1518,7 +1518,7 @@ var SEO = {
           'name': '\u00bfSon revocables los fideicomisos de Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Desde el 30 de enero de 2027, s\u00ed. La Ley 153-2026, firmada el 30 de julio de 2026, reconoce expresamente el fideicomiso revocable e invierte la presunci\u00f3n: la escritura que nada diga sobre revocabilidad se presume revocable. Hasta esa fecha todos los fideicomisos eran irrevocables por defecto, salvo los de titulares de decreto IRI de la Ley 60 bajo el C\u00f3digo de Incentivos. La Ley no contiene disposici\u00f3n transitoria para los fideicomisos ya otorgados.'
+            'text': 'A partir del 30 de enero de 2027, s\u00ed. La Ley 153-2026, firmada el 30 de julio de 2026, reconoce expresamente el fideicomiso revocable e invierte la presunci\u00f3n: desde esa fecha, la escritura que nada diga sobre revocabilidad se presumir\u00e1 revocable. Hasta entonces, todos los fideicomisos son irrevocables por defecto, salvo los de titulares de decreto IRI de la Ley 60 bajo el C\u00f3digo de Incentivos. La Ley no contiene disposici\u00f3n transitoria para los fideicomisos ya otorgados.'
           }
         },
         {
@@ -1834,7 +1834,7 @@ var SEO = {
           'name': 'Are revocable trusts legal in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. Act 153-2026, signed July 30, 2026 and effective January 30, 2027, expressly recognizes the revocable trust in Puerto Rico\'s general trust law. Before that date, only Act 60 Individual Resident Investor decree holders could create one, under the Incentives Code. From January 30, 2027, any settlor may.'
+            'text': 'Yes. Act 153-2026, signed July 30, 2026 and effective January 30, 2027, expressly recognizes the revocable trust in Puerto Rico\'s general trust law. Until that date, only Act 60 Individual Resident Investor decree holders can create one, under the Incentives Code. From January 30, 2027, any settlor may.'
           }
         },
         {
@@ -1907,7 +1907,7 @@ var SEO = {
   '/resources/fideicomisos-revocables-puerto-rico': {
     h1: 'Fideicomisos revocables en Puerto Rico: qué cambia con la Ley 153-2026',
     title: 'Fideicomisos Revocables en PR: Ley 153-2026 | Riefkohl Law',
-    meta: 'La Ley 153-2026 reconoce el fideicomiso revocable en Puerto Rico desde el 30 de enero de 2027 e invierte la presunción: el silencio ahora significa revocable.',
+    meta: 'La Ley 153-2026 reconoce el fideicomiso revocable en Puerto Rico a partir del 30 de enero de 2027 e invierte la presunción: desde entonces, el silencio significará revocable.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -1917,7 +1917,7 @@ var SEO = {
           'name': '¿Son legales los fideicomisos revocables en Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Sí. La Ley 153-2026, firmada el 30 de julio de 2026 y vigente el 30 de enero de 2027, reconoce expresamente el fideicomiso revocable en el derecho general de fideicomisos. Antes de esa fecha solo podían constituirlo los titulares de decreto de Individuo Residente Inversionista de la Ley 60. Desde el 30 de enero de 2027 puede hacerlo cualquier fideicomitente.'
+            'text': 'Sí, a partir del 30 de enero de 2027. La Ley 153-2026, firmada el 30 de julio de 2026 y vigente desde esa fecha, reconoce expresamente el fideicomiso revocable en el derecho general de fideicomisos. Hasta entonces solo pueden constituirlo los titulares de decreto de Individuo Residente Inversionista de la Ley 60. A partir del 30 de enero de 2027 podrá hacerlo cualquier fideicomitente.'
           }
         },
         {
@@ -2593,7 +2593,7 @@ var SEO = {
           'name': 'How much does Act 60 cost per year?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Once past the first year, the recurring government floor is roughly $15,000 a year — a $5,000 annual report fee plus a $10,000 charitable contribution split 50/50 between two qualifying Puerto Rico nonprofits (one a child-poverty organization) — plus a biennial compliance certificate and your legal and CPA fees. On top of that are the one-time application fee, the required Puerto Rico home purchase within two years, and your cost of living. Figures are set by regulation and confirmed at filing.'
+            'text': 'Once past the first year, the recurring government floor is roughly $15,000 a year — a $5,000 annual report fee plus a $10,000 charitable contribution (at least $5,000 to nonprofits on the official child-poverty list, $2,500 to another qualifying Puerto Rico nonprofit and $2,500 to the Fondo Especial para la Igualdad Social) — plus a biennial compliance certificate and your legal and CPA fees. On top of that are the one-time application fee, the required Puerto Rico home purchase within two years, and your cost of living. Figures are set by regulation and confirmed at filing.'
           }
         },
         {
@@ -2851,68 +2851,68 @@ var SEO = {
     schema: null
   },
   '/blog/american-health-law-assn-v-estate-of-cunningham': {
-    h1: 'American Health Law Assn v. Estate of Cunningham — Case Analysis',
-    meta: 'Federal court case analysis on health law association claims against decedent estate. Trust and estate litigation implications.',
+    h1: 'AHLA v. Estate of Cunningham — Immunity from Suit vs. Liability',
+    meta: 'Arkansas Court of Appeals dismisses AHLA\u2019s interlocutory appeal: statutory immunity from civil damages is immunity from liability, not from suit.',
     schema: null
   },
   '/blog/andersen-estate-eileen-andersen-pr': {
-    h1: 'Andersen Estate — Puerto Rico Estate Administration Case',
-    meta: 'Puerto Rico estate administration case involving Eileen Andersen. Court rulings on probate procedures and estate management.',
+    h1: 'Andersen Estate v. FPL — Expert Testimony in Wrongful Death Cases',
+    meta: 'Florida\u2019s Third DCA affirms the jury verdict in a wrongful death action against Florida Power & Light, upholding the jury\u2019s weighing of expert testimony.',
     schema: null
   },
   '/blog/antero-resources-v-pike-case-08': {
-    h1: 'Antero Resources v. Pike — Trust and Resource Dispute Analysis',
-    meta: 'Federal court case on trust and resource disputes. Analysis of trust obligations in natural resource and property contexts.',
+    h1: 'Antero v. Pike: Actual Notice Is Not Required to Oust a Cotenant\'s Mineral Interest',
+    meta: 'West Virginia\u2019s Intermediate Court of Appeals holds that a stranger with a deed to the whole tract may oust a non-conveying cotenant without actual notice.',
     schema: null
   },
   '/blog/chaires-v-champion-realty': {
-    h1: 'Chaires v. Champion Realty — Trust Property and Real Estate Case',
-    meta: 'Court analysis of trust property dispute involving real estate. Trustee obligations and property transfer in trust contexts.',
+    h1: 'Chaires v. Champion Realty — Real Estate Disclosure Duty and Property Fraud',
+    meta: 'Maryland appellate court affirms summary judgment for the real estate agents: only the buyer\u2019s broker owed a duty to disclose the septic system defect.',
     schema: null
   },
   '/blog/commonwealth-v-valenti': {
-    h1: 'Commonwealth v. Valenti — Government Trust and Regulatory Case',
-    meta: 'Court decision on government and trust regulatory matters. Analysis of Commonwealth authority over trust administration.',
+    h1: 'Commonwealth v. Valenti — Abuse Prevention Order Violation',
+    meta: 'Massachusetts Appeals Court affirms a conviction for violating a no-contact abuse prevention order by mailing a letter during a family court dispute.',
     schema: null
   },
   '/blog/estate-of-wallace-lucas-sr': {
-    h1: 'Estate of Wallace Lucas Sr. — Estate Administration and Trust Case',
-    meta: 'Court analysis of estate administration involving trust assets. Rulings on personal representative duties and estate management.',
+    h1: 'Estate of Lucas v. PCF — Medical Malpractice Nominal Defendant Requirement',
+    meta: 'Louisiana appellate court affirms dismissal of an estate\u2019s claim against the Patient Compensation Fund for failing to keep a nominal defendant.',
     schema: null
   },
   '/blog/in-re-el-a-minor-ch-v-jn': {
-    h1: 'In Re E.L., a Minor — Trust Beneficiary Rights for Minors',
-    meta: 'Court ruling on minor beneficiary rights in trust administration. Guardianship, trust protections, and best interest standards.',
+    h1: 'In re E.L. — ICWA Inquiry Requirements in Adoption Cases',
+    meta: 'California Court of Appeal conditionally reverses an adoption order for inadequate inquiry into the child\u2019s possible Indian ancestry under ICWA.',
     schema: null
   },
   '/blog/in-re-kirton-morris-v-housing-authority': {
-    h1: 'In Re Kirton: Morris v. Housing Authority — Trust and Housing Case',
-    meta: 'Court analysis of trust and housing authority dispute. Public housing, trust assets, and beneficiary eligibility considerations.',
+    h1: 'In re Kirton — Estate Turnover Stay Pending Quiet Title Action',
+    meta: 'New York\u2019s Appellate Division affirms a stay of an estate turnover proceeding pending a quiet title action over the decedent\u2019s Brooklyn property.',
     schema: null
   },
   '/blog/integrated-health-services-v-estate-of-desantis': {
-    h1: 'Integrated Health Services v. Estate of DeSantis — Case Analysis',
-    meta: 'Federal court case on health services claims against decedent estate. Trust implications for healthcare providers and estates.',
+    h1: 'Integrated Health v. Estate of DeSantis — Nonsignatory Arbitration',
+    meta: 'Florida\u2019s Second DCA holds that a nonsignatory former nursing home owner may compel arbitration under broad contract language and equitable estoppel.',
     schema: null
   },
   '/blog/mcarthur-as-pr-of-estate-of-clarence-maurice-logan-jr': {
-    h1: 'McArthur v. Estate of Logan Jr. — Personal Representative Duties',
-    meta: 'Court ruling on personal representative duties in estate administration. Fiduciary obligations and estate management standards.',
+    h1: 'McArthur v. Concord Hotel — Wrongful Death Appeal Dismissed',
+    meta: 'Texas Court of Appeals dismisses a wrongful death appeal against hotel companies for want of prosecution after the appellant failed to file a brief.',
     schema: null
   },
   '/blog/murphy-dependent-of-harold-r-murphy': {
-    h1: 'Murphy — Dependent Benefits and Estate Claims Case Analysis',
-    meta: 'Court analysis of dependent benefits claims involving estate of Harold R. Murphy. Beneficiary rights and dependency determinations.',
+    h1: 'Murphy v. St. Gobain — Workers Comp Asbestos Death Claim',
+    meta: 'West Virginia\u2019s Supreme Court affirms denial of workers\u2019 compensation dependent benefits in an asbestos death claim, deferring to the Board of Review.',
     schema: null
   },
   '/blog/parra-v-rapid-casting-rapid-american-corp': {
-    h1: 'Parra v. Rapid Casting — Corporate Trust and Liability Case',
-    meta: 'Court analysis of corporate trust and liability dispute. Trust obligations in corporate contexts and successor liability.',
+    h1: 'Parra v. Rapid Casting — Asbestos Claim Dismissed for Inactivity',
+    meta: 'Mississippi Court of Appeals affirms dismissal of an asbestos wrongful death claim for lack of prosecution after nine years of inactivity.',
     schema: null
   },
   '/blog/pereira-v-pereira': {
-    h1: 'Pereira v. Pereira — Family Trust Dispute Case Analysis',
-    meta: 'Court ruling on family trust dispute involving competing beneficiary claims. Trust interpretation and family law implications.',
+    h1: 'Pereira v. Pereira — Child Support Contempt Affirmed',
+    meta: 'Massachusetts Appeals Court affirms a contempt finding against a former wife for unpaid child support and rejects retroactive relief from the arrears.',
     schema: null
   },
   '/blog/shabani-v-burton-trustee': {
@@ -2921,8 +2921,8 @@ var SEO = {
     schema: null
   },
   '/blog/williams-as-successor-pr-of-estate-of-adams-shirer': {
-    h1: 'Williams v. Estate of Adams-Shirer \u2014 Successor PR Duties',
-    meta: 'Court analysis of successor personal representative duties in estate administration. Fiduciary standards and estate management.',
+    h1: 'Williams v. Leesburg Hospital — Daubert Expert Exclusion in Wrongful Death',
+    meta: 'Florida\u2019s Fifth DCA affirms exclusion of an estate\u2019s causation experts under Daubert and summary judgment in a medical malpractice wrongful death case.',
     schema: null
   },
 

@@ -283,7 +283,7 @@ function transformHowItWorks(htmlDiv) {
     {
       num: '2',
       title: 'Get Your Custom Plan',
-      desc: 'We\u2019ll outline your options, timeline, and a clear flat-fee quote for most matters. No hourly billing.'
+      desc: 'We\u2019ll outline your options, timeline, and a clear flat-fee quote for most matters.'
     },
     {
       num: '3',

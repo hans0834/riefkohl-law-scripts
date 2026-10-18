@@ -62,7 +62,7 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
   // Context-aware CTA blocks based on post category
   var CTA_CONFIGS = {
     'trusts': {
-      en: { h: 'Considering a Puerto Rico Trust?', p: 'Find out how a fideicomiso can protect your assets, reduce taxes, and bypass probate. Your first consultation is free \u2014 flat fee, no hourly billing.' },
+      en: { h: 'Considering a Puerto Rico Trust?', p: 'Find out how a fideicomiso can protect your assets, reduce taxes, and bypass probate. Your first consultation is free \u2014 flat-fee pricing.' },
       es: { h: '\u00bfConsidera un Fideicomiso en Puerto Rico?', p: 'Descubra c\u00f3mo un fideicomiso puede proteger sus activos, reducir impuestos y evitar la sucesi\u00f3n testamentaria. Su primera consulta es gratis.' }
     },
     'estate-planning': {

@@ -452,7 +452,7 @@ var PAGES = {
   +'<li>Puerto Rico income tax depends on trust situs, residency, and income source</li>'
   +'<li>Irrevocable trust assets generally removed from federal taxable estate</li>'
   +'<li>Federal estate tax exemption of $15M per individual (made permanent by the One Big Beautiful Bill Act with inflation indexing)</li></ul>'
-  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Ready to start planning your Puerto Rico trust?</strong></p><p>A 30-minute strategy call will help you understand which trust type fits your situation. Flat-fee pricing, no hourly billing.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
+  +'<div class="rl-sub-cta" style="margin:36px 0 !important;"><p><strong>Ready to start planning your Puerto Rico trust?</strong></p><p>A 30-minute strategy call will help you understand which trust type fits your situation. Flat-fee pricing.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
   +'<h2>Common Mistakes</h2>'
   +'<ul><li>Failing to fund the trust after creation</li><li>Choosing the wrong trustee</li><li>Ignoring forced heirship</li><li>Retaining too much control (undermines asset protection)</li><li>Not updating the trust after life changes</li><li>Using a mainland trust without Puerto Rico review</li></ul>'
   +'<div style="background:#f8f6f0;border-left:4px solid #bfa35d;padding:16px 20px;margin:24px 0;border-radius:0 8px 8px 0;"><p style="margin:0 0 8px;font-size:.88rem;"><strong>Go deeper with our Trust Law Series:</strong></p><ul style="margin:0;padding:0 0 0 18px;font-size:.85rem;"><li><a href="/resources/what-is-puerto-rico-trust" style="color:#a68c42;">What Is a Puerto Rico Trust?</a> \u2014 The autonomous estate concept</li><li><a href="/resources/act-60-trust-planning" style="color:#a68c42;">Trust Planning for Act 60 Investors</a> \u2014 Mainland vs. PR trust decision</li><li><a href="/resources/trust-costs-puerto-rico" style="color:#a68c42;">Trust Costs</a> \u2014 Transparent pricing breakdown</li><li><a href="/resources/modifying-irrevocable-trusts" style="color:#a68c42;">Modifying &amp; Decanting Irrevocable Trusts</a> \u2014 When and how changes are possible</li><li><a href="/resources/special-needs-trusts-medicaid" style="color:#a68c42;">Special Needs Trusts &amp; Medicaid</a> \u2014 Protecting beneficiaries with disabilities</li><li><a href="/resources/ilits-and-slats" style="color:#a68c42;">ILITs and SLATs</a> \u2014 Advanced insurance and spousal trust strategies</li></ul></div>'
@@ -679,16 +679,16 @@ var PAGES = {
   +'<p><strong>Important:</strong> The decree guarantees the Puerto Rico tax treatment for its duration. However, the separate federal tax exclusion under IRC \u00a7933 depends on maintaining bona fide resident (BFR) status under IRC \u00a7937 and proper income sourcing. Federal tax treatment is not guaranteed by the decree and remains subject to IRS examination and potential legislative change.</p>'
 
   +'<h3>Grandfathering of Existing Decree Holders</h3>'
-  +'<p>Existing decree holders are <strong>fully grandfathered</strong> under their current terms and retain the 0% rate for the duration of their decree. Applications pending or filed before December 31, 2026 also qualify for the grandfathered 0% rate.</p>'
+  +'<p>Existing decree holders are <strong>fully grandfathered</strong> under their current terms and retain the 0% rate for the duration of their decree, through tax year 2035. Applications filed by December 31, 2026, including those still pending, also qualify for the grandfathered 0% rate.</p>'
 
   +'<h3>Program Extension to 2055</h3>'
-  +'<p>Act 38-2026 extends the IRI program through <strong>December 31, 2055</strong>, from the prior 2035 sunset date. This provides long-term certainty for both existing and future decree holders.</p>'
+  +'<p>Act 38-2026 extends the IRI program through <strong>December 31, 2055</strong>, from the prior 2035 sunset date. The extension applies to decrees under the new 4% regime; decrees from applications filed by December 31, 2026 keep the 0% rate through tax year 2035.</p>'
 
   +'<h3>Federal 10-Year Lookback Rule</h3>'
   +'<p><strong>Critical federal limitation:</strong> Capital gains on investment property owned before establishing bona fide PR residency are subject to the federal 10-year lookback rule under <strong>Treas. Reg. \u00a71.937-2(f)</strong>. Under this rule, gains on pre-move assets are not treated as Puerto Rico-source income for federal tax purposes and remain subject to U.S. federal capital gains tax. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024); CCM 202538025.</p>'
 
   +'<h3>Annual Charitable Donation Requirement</h3>'
-  +'<p>All decree holders must make a <strong>$10,000 annual charitable donation</strong>\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CECFL (Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario), plus $5,000 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01.</p>'
+  +'<p>All decree holders must make a <strong>$10,000 annual charitable donation</strong>\u2014at least $5,000 to organizations focused on eradicating child poverty as listed by the CECFL (Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario), $2,500 to other qualifying Puerto Rico nonprofits under PR IRC \u00a71101.01, and $2,500 to the Fondo Especial para la Igualdad Social (Act 32-2024; DDEC requires proof of the Fund contribution starting in 2026).</p>'
   +'<p>In addition, decree holders pay a <strong>$5,000 annual report fee</strong>, bringing the total annual obligation to $15,000.</p>'
   +'<p><strong>Important:</strong> Qualifying nonprofit organizations cannot be controlled by the decree holder or their family members. Donations must be made annually as a condition of maintaining the decree.</p>'
 
@@ -701,30 +701,30 @@ var PAGES = {
   +'<h2>What This Means for Current Decree Holders</h2>'
   +'<ul><li><strong>No change to your 0% rate</strong>\u2014existing decrees are grandfathered</li>'
   +'<li><strong>No change to your $10,000 donation obligation or $5,000 annual report fee</strong></li>'
-  +'<li><strong>Program extended to 2055</strong>\u2014your decree\u2019s longevity is more secure</li>'
+  +'<li><strong>Program extended to 2055</strong>\u2014for decrees under the new 4% regime; your 0% decree runs through tax year 2035</li>'
   +'<li><strong>Compliance obligations unchanged</strong>\u2014continue meeting residency, reporting, and Act 52 certification requirements</li></ul>'
 
   +'<h2>What This Means for Prospective Applicants</h2>'
-  +'<ul><li><strong>Apply before December 31, 2026</strong> to lock in the 0% rate</li>'
+  +'<ul><li><strong>Apply by December 31, 2026</strong> to lock in the 0% rate</li>'
   +'<li><strong>After 2026:</strong> the 4% rate still represents a significant tax benefit compared to mainland capital gains rates of 20\u201323.8%</li>'
   +'<li><strong>Plan for the $10,000 donation, $5,000 annual report fee, and employment requirements</strong> when budgeting your relocation</li>'
-  +'<li><strong>Note the donation allocation:</strong> $5,000 to CECFL-listed organizations + $5,000 to qualifying PR nonprofits (not controlled by you or your family)</li></ul>'
+  +'<li><strong>Note the donation allocation:</strong> $5,000 to CECFL-listed organizations + $2,500 to qualifying PR nonprofits (not controlled by you or your family) + $2,500 to the Fondo Especial para la Igualdad Social</li></ul>'
 
   +'<h2>Frequently Asked Questions</h2>'
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What is the new tax rate under Act 38-2026?</button>'
   +'<div class="rl-faq-a"><p>Applications filed on or after January 1, 2027 will be subject to a 4% preferential tax rate on post-residency capital gains, interest, and dividends. The 0% rate is available only for applications submitted on or before December 31, 2026.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Are existing Act 60 decree holders affected?</button>'
-  +'<div class="rl-faq-a"><p>No. Existing decree holders are grandfathered under their current terms and retain the 0% rate and $10,000 donation requirement. Applications filed before December 31, 2026 also qualify for the grandfathered terms.</p></div></div>'
+  +'<div class="rl-faq-a"><p>No. Existing decree holders are grandfathered under their current terms and retain the 0% rate (through tax year 2035) and the $10,000 donation requirement. Applications filed by December 31, 2026 also qualify for the grandfathered terms.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">How long is the Act 60 program extended?</button>'
-  +'<div class="rl-faq-a"><p>Act 38-2026 extends the Individual Resident Investor program through December 31, 2055, from the prior 2035 sunset date.</p></div></div>'
+  +'<div class="rl-faq-a"><p>Act 38-2026 extends the Individual Resident Investor program through December 31, 2055, from the prior 2035 sunset date. The 2055 horizon applies to decrees under the new 4% regime; decrees from applications filed by December 31, 2026 keep the 0% rate through tax year 2035.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What are the DDEC application and filing fees?</button>'
   +'<div class="rl-faq-a"><p>The DDEC charges: (1) a <strong>$5,005 application fee</strong> at the time of filing; (2) a <strong>$105 acceptance fee</strong> upon decree grant; and (3) an <strong>annual compliance filing fee of $5,000+</strong> thereafter. These are material costs that should be factored into your relocation budget in addition to legal and CPA fees.</p></div></div>'
 
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Should I apply before December 31, 2026?</button>'
-  +'<div class="rl-faq-a"><p>If you are seriously considering relocating to Puerto Rico under Act 60, filing your application before December 31, 2026 locks in the 0% rate. However, the decree application process involves establishing bona fide residency, structuring entities, and compliance planning\u2014start early to ensure your application is filed on time.</p></div></div>'
+  +'<div class="rl-faq-a"><p>If you are seriously considering relocating to Puerto Rico under Act 60, filing your application by December 31, 2026 locks in the 0% rate. However, the decree application process involves establishing bona fide residency, structuring entities, and compliance planning\u2014start early to ensure your application is filed on time.</p></div></div>'
 
   +'<h2>Related Resources</h2>'
   +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 side-by-side comparison of pre-2020, 2020\u20132025, and post-2026 decree requirements</li>'
@@ -918,7 +918,7 @@ var PAGES = {
   +'</tr></thead>'
   +'<tbody>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Capital Gains Rate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">4%</td></tr>'
-  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits)</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits through 2025; from 2026, $5K CECFL + $2.5K qualifying nonprofit + $2.5K Fondo Especial para la Igualdad Social)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $2.5K qualifying nonprofit + $2.5K Fondo Especial para la Igualdad Social)</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Property Purchase</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years; must register in PR Property Registry</td></tr>'
   +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">1 FTE if revenue >$3M</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Biennial Compliance Certificate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required (Act 52-2022 applies retroactively)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td></tr>'
@@ -956,7 +956,7 @@ var PAGES = {
   +'<ul><li><strong>DDEC Annual Report</strong>\u2014due annually as specified by your decree or DDEC directive. Includes compliance attestation and payment of the annual filing fee. Act 65-2025 introduced streamlined filing deadlines; verify your cohort\u2019s specific date with DDEC.</li>'
   +'<li><strong>Puerto Rico Tax Return (Form 482)</strong>\u2014due April 15 (extensions available). Must report all PR-source income.</li>'
   +'<li><strong>Federal Tax Return (Form 1040)</strong>\u2014due April 15 (extensions available). BFRs must file and report worldwide income with proper sourcing.</li>'
-  +'<li><strong>Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession)</strong>\u2014due with your federal return for the year you establish or terminate PR residency. <strong>Penalty: $1,000 for failure to file.</strong></li>'
+  +'<li><strong>Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession)</strong>\u2014due with your federal return for the year you establish or terminate PR residency, if your worldwide gross income that year is more than $75,000. <strong>Penalty: $1,000 for failure to file.</strong></li>'
   +'<li><strong>FBAR (FinCEN Form 114)</strong>\u2014due April 15 (auto-extension to October 15) if aggregate foreign financial accounts exceed $10,000 at any point during the year. PR BFRs remain U.S. persons for reporting purposes.</li>'
   +'<li><strong>FATCA (Form 8938)</strong>\u2014due with your federal return if specified foreign financial asset thresholds are met.</li></ul>'
 
@@ -965,7 +965,7 @@ var PAGES = {
   +'<li><strong>Act 188-2024 AUP Report</strong>\u2014an alternative to the standard biennial compliance certificate for qualifying decree holders. Consult counsel to determine eligibility.</li></ul>'
 
   +'<h2>Annual Charitable Donation</h2>'
-  +'<ul><li><strong>All decree holders:</strong> $10,000/year ($5K CECFL + $5K qualifying nonprofits). The donation requirement is unchanged by Act 38-2026; it is separate from the $5,000 annual report fee.</li>'
+  +'<ul><li><strong>All decree holders:</strong> $10,000/year ($5K CECFL + $2.5K qualifying nonprofit + $2.5K Fondo Especial para la Igualdad Social, under Act 32-2024; DDEC requires proof of the Fund contribution starting in 2026). The donation requirement is unchanged by Act 38-2026; it is separate from the $5,000 annual report fee.</li>'
   +'<li>Organizations cannot be controlled by the decree holder or family members</li>'
   +'<li>Retain all donation receipts for AUP verification</li></ul>'
 
@@ -1005,7 +1005,7 @@ var PAGES = {
   +'<p>Investments in passive foreign investment companies (PFICs) are subject to punitive federal tax treatment unless a qualifying fund election (QEF) or mark-to-market election is made. Act 60 decree holders with foreign mutual funds, hedge funds, or investment entities must evaluate PFIC classification carefully.</p>'
 
   +'<h2>Form 8898</h2>'
-  +'<p>Individuals who begin or end bona fide residence in Puerto Rico must file Form 8898 with their federal return for the year of the change. <strong>Failure to file carries a $1,000 penalty.</strong></p>'
+  +'<p>Individuals who begin or end bona fide residence in Puerto Rico must file Form 8898 with their federal return for the year of the change if their worldwide gross income for that year is more than $75,000. <strong>Failure to file carries a $1,000 penalty.</strong></p>'
 
   +'<h2>Key Takeaway</h2>'
   +'<p>Act 60 reduces your Puerto Rico tax burden on qualifying income. It does not reduce your federal reporting obligations. Failure to comply with FBAR, FATCA, CFC/PFIC, or Form 8898 requirements can result in severe penalties\u2014even criminal prosecution\u2014independent of your decree status.</p>'

@@ -322,7 +322,7 @@ var SEO = {
           'name': 'How much does an Act 60 lawyer cost in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 services. Decree application and advisory work starts at a flat $1,700, excluding U.S. residency and income-sourcing tax advice, which are scoped and quoted separately. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. Ongoing compliance and IRS audit defense are quoted separately. All fees are quoted upfront before work begins — no hourly billing or hidden charges.'
+            'text': 'Riefkohl Law offers flat-fee pricing for Act 60 services. Decree application and advisory work starts at a flat $1,700, excluding U.S. residency and income-sourcing tax advice, which are scoped and quoted separately. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. Ongoing compliance and IRS audit defense are quoted separately. Fees are quoted up front, before work begins.'
           }
         },
         {
@@ -1258,7 +1258,7 @@ var SEO = {
           'name': 'What happens if a Puerto Rico trust is not registered with the ODIN trust registry?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Registration with the ODIN Special Trust Registry (Registro de Fideicomisos) under Act 219-2012 is absolute and mandatory for all trusts, including testamentary trusts. In Allio v. Santiago Chard\u00f3n, 2026 TSPR 13, the Puerto Rico Supreme Court declared a testamentary trust entirely null and void because the registration requirements were not strictly followed, defeating the testator\'s intent. Simply mentioning a desire to create a trust in a will is legally insufficient without immediate, simultaneous registration.'
+            'text': 'Every trust constituted in Puerto Rico, including a trust created in a will, must be registered in the Special Registry of Trusts that ODIN maintains, on pain of nullity (Act 219-2012, Art. 5). In Allio v. Santiago Chard\u00f3n, 2026 TSPR 13, the Puerto Rico Supreme Court held that two trusts expressly created in a Puerto Rico will were void because they were never registered. The notary who executes a trust must notify ODIN within the first ten days of the following month.'
           }
         },
         {
@@ -2095,7 +2095,7 @@ var SEO = {
           'name': 'Are existing Act 60 decree holders affected by Act 38-2026?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No. Existing decree holders are grandfathered under their current terms and retain the 0% rate. Applications filed before December 31, 2026 also qualify for the grandfathered 0% rate.'
+            'text': 'No. Existing decree holders are grandfathered under their current terms and retain the 0% rate through tax year 2035. Applications filed by December 31, 2026 also qualify for the grandfathered 0% rate.'
           }
         },
         {
@@ -2350,7 +2350,7 @@ var SEO = {
           'name': 'How much does it cost to bundle Act 60 planning with a Puerto Rico estate plan?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'We quote flat fees after a free initial call, not hourly billing. A Puerto Rico trust-based estate plan starts at $1,800, with a will-based plan as a lower-cost alternative; Act 60 decree work starts at $1,700 (excluding U.S. residency and income-sourcing tax advice, which are scoped separately) and depends on whether you pursue the Individual Resident Investor or Export Services chapter. These are representative examples of what many engagements look like; the fee for each matter is determined by your specific circumstances. Handled together, they are coordinated as one engagement so you are not paying two firms to duplicate the same residency and asset analysis.'
+            'text': 'We quote flat fees after a free initial call. A Puerto Rico trust-based estate plan starts at $1,800, with a will-based plan as a lower-cost alternative; Act 60 decree work starts at $1,700 (excluding U.S. residency and income-sourcing tax advice, which are scoped separately) and depends on whether you pursue the Individual Resident Investor or Export Services chapter. These are representative examples of what many engagements look like; the fee for each matter is determined by your specific circumstances. Handled together, they are coordinated as one engagement so you are not paying two firms to duplicate the same residency and asset analysis.'
           }
         }
       ]
@@ -2401,7 +2401,7 @@ var SEO = {
           'name': '¿Cuánto cuesta combinar la planificación de la Ley 60 con un plan patrimonial de Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Cotizamos honorarios fijos tras una llamada inicial gratuita, no facturación por hora. Un plan patrimonial de Puerto Rico basado en fideicomiso comienza en $1,800, y uno basado en testamento es una alternativa de menor costo; el trabajo del decreto de la Ley 60 comienza en $1,700 (excluyendo la asesoría sobre residencia en EE. UU. y sobre la tributación por fuente del ingreso, que se cotizan aparte). Estas cifras son ejemplos representativos de lo que reflejan muchos encargos; el honorario de cada caso se determina según sus circunstancias particulares. Cuando se manejan juntos, se coordinan como un solo encargo para que no pague a dos bufetes por duplicar el mismo análisis de residencia y de bienes.'
+            'text': 'Cotizamos honorarios fijos tras una llamada inicial gratuita. Un plan patrimonial de Puerto Rico basado en fideicomiso comienza en $1,800, y uno basado en testamento es una alternativa de menor costo; el trabajo del decreto de la Ley 60 comienza en $1,700 (excluyendo la asesoría sobre residencia en EE. UU. y sobre la tributación por fuente del ingreso, que se cotizan aparte). Estas cifras son ejemplos representativos de lo que reflejan muchos encargos; el honorario de cada caso se determina según sus circunstancias particulares. Cuando se manejan juntos, se coordinan como un solo encargo para que no pague a dos bufetes por duplicar el mismo análisis de residencia y de bienes.'
           }
         }
       ]
@@ -3231,42 +3231,6 @@ var SEO = {
           '@type': 'Question',
           'name': '¿Qué debe hacer un heredero mientras el Tribunal Supremo decide?',
           'acceptedAnswer': { '@type': 'Answer', 'text': 'No asumir que lo transferido se perdió. Procede pedir el detalle completo de las transferencias hechas en los diez años anteriores al fallecimiento, verificar si el cuaderno particional las omite, e impugnar oportunamente antes de que la partición avance sobre una premisa jurídica que aún está en disputa. Los plazos importan tanto como el argumento.' }
-        }
-      ]
-    }
-  },
-
-  /* ---- Pricing Page ---- */
-  '/pricing': {
-    h1: 'Transparent Flat-Fee Pricing — No Hourly Billing',
-    meta: 'Riefkohl Law offers flat-fee pricing for all services. Trusts, estate planning, Act 60 advisory, and business formation. Know your investment upfront.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        {
-          '@type': 'Question',
-          'name': 'Why does Riefkohl Law use flat-fee pricing?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Flat-fee pricing aligns our incentives with yours. For most matters you know the cost up front before work begins — no escalating hourly bills. This model encourages efficiency and gives you budget certainty for your legal needs.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'Is the initial consultation really free?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'Yes. Your first strategy call with Attorney Riefkohl is completely free with no obligation. We use this call to understand your situation, explain your options, and provide a specific flat-fee quote if you decide to proceed.'
-          }
-        },
-        {
-          '@type': 'Question',
-          'name': 'What payment methods do you accept?',
-          'acceptedAnswer': {
-            '@type': 'Answer',
-            'text': 'We accept credit cards, bank transfers (ACH), checks, and wire transfers. Payment plans are available for larger engagements. The flat fee is typically collected at the start of the engagement.'
-          }
         }
       ]
     }

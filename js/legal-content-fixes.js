@@ -224,23 +224,6 @@ function fixZeroHourlyBilling() {
 }
 
 /* ================================================
-   4b. "NO HOURLY BILLING SURPRISES" -> "NO HOURLY BILLING" (site-wide)
-   Owner directive (July 2026): remove absolute/guarantee-style flat-fee
-   language such as "no surprises". Scrubs any remaining instance in
-   pasted native pages (trust-costs, avoiding-probate-legitima) and any
-   injected content, without requiring a Squarespace re-paste.
-   ================================================ */
-function fixHourlyBillingSurprises() {
-  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-  while (walker.nextNode()) {
-    var node = walker.currentNode;
-    if (node.nodeValue.indexOf('hourly billing surprises') >= 0) {
-      node.nodeValue = node.nodeValue.replace(/hourly billing surprises/gi, 'hourly billing');
-    }
-  }
-}
-
-/* ================================================
    4c. CONSULTATION DURATION: "15-minute" -> "30-minute" (site-wide)
    Owner directive (July 2026): the free consultation is 30 minutes.
    The /calendly (Book an Appointment) page's native text block still
@@ -1744,7 +1727,6 @@ function runLegalFixes() {
   qualifyAct60Claims();
   addTrustRegistryDisclosure();
   fixZeroHourlyBilling();
-  fixHourlyBillingSurprises();
   fixConsultationDuration();
   addNotarialTariffDisclaimer();
   fixForcedHeirship();

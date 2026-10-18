@@ -528,7 +528,7 @@ function injectAct60Sections() {
   // --- PRICING (#10) ---
   container.innerHTML +=
     '<h2 class="rl-act60-section-title">Transparent, Flat-Fee Pricing</h2>' +
-    '<p class="rl-act60-section-subtitle">No hourly billing. Clear flat-fee pricing discussed up front.</p>' +
+    '<p class="rl-act60-section-subtitle">Clear flat-fee pricing for most matters, discussed up front.</p>' +
     '<div class="rl-act60-pricing" style="max-width:560px;margin:24px auto 0;">' +
       '<div class="rl-act60-price-card" style="background:var(--rl-white,#fff);border:1.5px solid var(--rl-warm-200,#e7e2d8);border-radius:var(--rl-r,10px);padding:28px 24px;text-align:center;">' +
         '<h4 style="font-size:1rem;color:var(--rl-navy,#1a2033);margin:0 0 12px;">Act 60 Decree Application &amp; Advisory</h4>' +

@@ -34,7 +34,7 @@ Squarespace serves the page shell. The Code Injection Header (Settings > Advance
 | 5 | `js/images-injection.js` | Branded illustration images | Runs on `/`, `/services` |
 | 6 | `js/resources-fix.js` | Resources page subpages, Act 60 content, cross-links to articles, glossary | Runs on `/resources` and `/resources/*` subpaths |
 | 7 | `js/blog-dashboard.js` | Blog filtering, search, bilingual toggle | Runs on `/blog` |
-| 8 | `js/articles-inject.js` | 15-article Trust Law Series | Runs on `/resources/trust-law-series/*` — requires blank Squarespace pages at correct slugs |
+| 8 | `js/blog-noindex.js` | Noindex list for out-of-scope blog posts (loaded last in the live header) | `articles-inject.js` was retired on Oct. 18, 2026 and moved to `archive/`; do not reload it |
 | 9 | `js/breadcrumb-schema.js` | BreadcrumbList structured data (JSON-LD) | Runs on all pages |
 | 10 | `js/post-formatter.js` | Auto-formats imported case law blog posts | Runs on `/blog/*` posts |
 | 11 | `js/conversion-booster.js` | Click-to-call banner, sticky mobile CTA, LocalBusiness schema | `PHONE`: `(787) 236-1657`, `BOOK_URL`: `/calendly` |

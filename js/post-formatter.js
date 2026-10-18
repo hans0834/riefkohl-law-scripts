@@ -117,10 +117,8 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'The Complete Guide to Puerto Rico Trusts Under Law 219-2012'},
       {url: '/blog/puerto-rico-asset-protection-how-irrevocable-trusts-shield-your-wealth', title: 'How Irrevocable Trusts Shield Your Wealth'},
       {url: '/blog/puerto-rico-trust-vs-will-which-do-you-need', title: 'Puerto Rico Trust vs. Will: Which Do You Need?'},
-      {url: '/blog/banking-insurance-trust-disputes-puerto-rico', title: 'Banking & Insurance Trust Disputes in Puerto Rico'},
       {url: '/blog/breach-fiduciary-duty-trust-cases-puerto-rico', title: 'Breach of Fiduciary Duty Cases in Puerto Rico'},
       {url: '/blog/trust-validity-challenges-puerto-rico', title: 'Trust Validity Challenges in Puerto Rico'},
-      {url: '/blog/family-law-trusts-trustee-removal-puerto-rico', title: 'Family Law Trusts & Trustee Removal'},
       {url: '/resources/what-is-puerto-rico-trust', title: 'What Is a Puerto Rico Trust? (Article Series)'}
     ],
     'estate-planning': [
@@ -128,7 +126,6 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       {url: '/blog/puerto-rico-trust-vs-will-which-do-you-need', title: 'Puerto Rico Trust vs. Will: Which Do You Need?'},
       {url: '/blog/the-complete-guide-to-puerto-rico-trusts-under-law-219-2012', title: 'Complete Guide to Puerto Rico Trusts'},
       {url: '/blog/testamentary-trust-succession-disputes-puerto-rico', title: 'Testamentary & Succession Disputes'},
-      {url: '/blog/trust-beneficiary-rights-liquidation-puerto-rico', title: 'Trust Beneficiary Rights & Liquidation'},
       {url: '/resources/avoiding-probate-legitima', title: 'Avoiding Probate & Forced Heirship (Article Series)'}
     ],
     'act-60': [
@@ -150,8 +147,7 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       {url: '/blog/prlaw-01-private-operator-exemption', title: 'Private Operator Exemption from Procurement Law'},
       {url: '/blog/prlaw-02-bankruptcy-related-to-jurisdiction', title: 'Bankruptcy Related-To Jurisdiction'},
       {url: '/blog/prlaw-05-dual-tracking-protections', title: 'Dual-Tracking Protections'},
-      {url: '/blog/prlaw-08-federal-district-court-jurisdiction', title: 'Federal District Court Jurisdiction'},
-      {url: '/blog/public-government-trust-governance-puerto-rico', title: 'Public & Government Trust Governance'}
+      {url: '/blog/prlaw-08-federal-district-court-jurisdiction', title: 'Federal District Court Jurisdiction'}
     ],
     'wills-estates': [
       {url: '/blog/how-forced-heirship-affects-your-estate-plan-in-puerto-rico', title: 'How Forced Heirship Affects Your Estate Plan'},
@@ -166,7 +162,6 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       {url: '/blog/planificacion-sucesoral-puerto-rico', title: 'Planificaci\u00f3n Sucesoral en Puerto Rico'},
       {url: '/blog/declaratoria-de-herederos-puerto-rico', title: 'Declaratoria de Herederos en Puerto Rico'},
       {url: '/blog/ley-60-guia-inversionistas-puerto-rico', title: 'Ley 60: Gu\u00eda para Inversionistas'},
-      {url: '/blog/banking-insurance-trust-disputes-puerto-rico-es', title: 'Disputas Bancarias y de Seguros'},
       {url: '/blog/trust-validity-challenges-puerto-rico-es', title: 'Impugnaciones de Validez de Fideicomisos'}
     ]
   };

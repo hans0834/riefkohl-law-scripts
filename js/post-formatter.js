@@ -120,7 +120,6 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
       {url: '/blog/banking-insurance-trust-disputes-puerto-rico', title: 'Banking & Insurance Trust Disputes in Puerto Rico'},
       {url: '/blog/breach-fiduciary-duty-trust-cases-puerto-rico', title: 'Breach of Fiduciary Duty Cases in Puerto Rico'},
       {url: '/blog/trust-validity-challenges-puerto-rico', title: 'Trust Validity Challenges in Puerto Rico'},
-      {url: '/blog/trust-property-disputes-puerto-rico', title: 'Trust Property Disputes in Puerto Rico'},
       {url: '/blog/family-law-trusts-trustee-removal-puerto-rico', title: 'Family Law Trusts & Trustee Removal'},
       {url: '/resources/what-is-puerto-rico-trust', title: 'What Is a Puerto Rico Trust? (Article Series)'}
     ],

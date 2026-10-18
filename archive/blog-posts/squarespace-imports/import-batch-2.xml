@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <item>
+    <title><![CDATA[Settlor Intent as the "Polar Star": Trust Language Controls Over Mechanically Inconsistent Transfer-on-Death Designations]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Settlor Intent as the "Polar Star": Trust Language Controls Over Mechanically Inconsistent Transfer-on-Death Designations</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Appeals of Kentucky</p>
+        <p><strong>Date:</strong> March 13, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Merica Martin and Estate of Renee Marie Jones v. James Jones, No. 2025-CA-0541-MR, 2026 WL 705665 (Ky. App. Mar. 13, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Renee Marie Jones created a revocable living trust in February 2018 naming three beneficiaries. For her Edward Jones Single Investment Accounts, the Trust unambiguously provided that daughter Merica Martin would receive one-half and son James Jones would receive one-half. Jones then executed Transfer-on-Death (TOD) beneficiary designation forms designating one-half of the accounts to pass directly to Martin and the remaining one-half to transfer to the Trust itself for distribution. In January 2020, the settlor amended the Trust to provide that James's share would pass directly rather than remaining in trust, but did not modify the TOD forms. Jones died in April 2021. The accounts were distributed per the TOD forms: one-half directly to Martin, one-half into the Trust. Martin, as successor trustee, claimed she was entitled to her initial half plus an additional half of the Trust assets (totaling 75%), leaving James only 25%.</p>
+
+    <h2>Procedural Background</h2>
+    <p>James Jones initiated suit in Laurel Circuit Court in November 2021. Both parties moved for summary judgment. The circuit court granted partial summary judgment for James, ordering distribution of remaining Trust funds to him. After the Estate closed, Martin appealed. The Court of Appeals affirmed on March 13, 2026.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether the court should interpret distribution of the Single Investment Accounts based on the explicit trust language (50-50 split) or based on the mechanically different distribution pathway created by the TOD beneficiary designations.</p>
+        <p><strong>2.</strong> How courts should resolve apparent inconsistencies between trust language and external documents (such as TOD forms) when they create conflicting distribution results.</p>
+        <p><strong>3.</strong> Whether the January 2020 Trust amendment, without corresponding modification of the TOD forms, reflected the settlor's intent to alter the distribution scheme.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>Martin argued that the TOD mechanism controlled the flow of assets, so only the one-half that actually entered the Trust should be subject to Trust distribution terms. Under her theory, she would receive 75% (half directly via TOD, plus half of the Trust's portion).</p>
+    <p>James Jones argued that the Trust language expressing a 50-50 split represented the settlor's true intent and should control regardless of the TOD mechanism.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court of Appeals affirmed, holding that the settlor intended for Martin and James each to receive one-half of the Single Investment Accounts. The Trust language controls the ultimate distribution regardless of the mechanical operation of the TOD forms.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>The Court anchored its analysis in the "polar star" doctrine: settlor intent is the paramount consideration in trust construction, and courts employ the same rules applicable to interpreting wills. Section 6.01 of the Trust was "subject to but one interpretation": a 50-50 split.</p>
+    <p>While the TOD documents "somewhat muddy the water," they serve an administrative function governing the mechanical pathway of distribution (one-half directly to Martin, one-half into the Trust), not an estate planning override of the Trust's distribution directives. The circuit court's interpretation allowed both documents to operate: the TOD mechanism governed the transfer pathway while the Trust language governed ultimate distribution.</p>
+    <p>The Court employed a mathematical demonstration: under Martin's interpretation, she would receive 75% and James 25%&mdash;a result that "cannot be reconciled with Ms. Jones' directive in the Trust that the Single Investment Accounts be distributed 50-50."</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision establishes that settlor intent prevails over mechanical document operation when trust language and TOD designations conflict. The case illustrates the significant risks of failing to coordinate trust language with TOD forms and other beneficiary designations. Estate planners must ensure all documents comprising an estate plan&mdash;trusts, TOD forms, and beneficiary designations&mdash;are aligned. The decision confirms that revocable living trusts serve as the primary dispositive instrument, with TOD designations functioning as transfer mechanisms subordinate to the trust's distribution scheme.</p>]]></content:encoded>
+    <wp:post_id>6</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-06-settlor-intent-polar-star-tod]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Trust Beneficiary Lacks Standing to Sue in Individual Capacity for Trust Property; Forged Trust Instrument Cannot Be Challenged by Improper Plaintiff]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Trust Beneficiary Lacks Standing to Sue in Individual Capacity for Trust Property; Forged Trust Instrument Cannot Be Challenged by Improper Plaintiff</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Appellate Court of Maryland</p>
+        <p><strong>Date:</strong> March 13, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Lucille S. White v. Britney R. Lee, et al., No. unreported, 2026 WL 709616 (Md. App. Mar. 13, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Lucille S. White purchased property in Upper Marlboro, Maryland in 1999 and created the White Family Revocable Trust in 2004, designating herself as grantor and trustee and conveying the property to herself as Trustee. In 2014, White was convicted of mail fraud, wire fraud, money laundering, and aggravated identity theft and incarcerated in federal prison until 2022.</p>
+    <p>On December 12, 2019, while White remained incarcerated, her daughter Britney Lee&mdash;purporting to act as successor trustee&mdash;conveyed the property to Abimbola Shadare for $427,611.00. Lee presented a trust instrument at settlement naming herself as successor trustee, which White alleges was forged. White discovered the sale in 2020 but did not file suit until November 2023, proceeding pro se in her individual capacity rather than as trustee.</p>
+
+    <h2>Procedural Background</h2>
+    <p>White filed an "Emergency Complaint to Set Aside Deed for Forgery and Intentional Fraud" in Prince George's County Circuit Court, naming multiple defendants including Lee, Shadare, the title company, the settlement attorney, and the mortgage holders. Through a series of motions, all defendants were dismissed. White attempted to cure the standing defect by amending the complaint to add herself as trustee, but the court dismissed the entire case with prejudice. The Appellate Court affirmed on March 13, 2026.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether a beneficiary of a revocable trust may sue in individual capacity to recover or quiet title to property held by the trust, when the property title is vested in the trust entity itself.</p>
+        <p><strong>2.</strong> Whether a procedurally defective complaint can be cured by amending to add the trust as plaintiff when no proper plaintiff existed from the outset, under the Washington Homes doctrine.</p>
+        <p><strong>3.</strong> Whether a bona fide purchaser for value who relied on a forged trust instrument at settlement bears any liability to beneficiaries absent specific allegations of fraud or knowledge of the forgery.</p>
+        <p><strong>4.</strong> Whether the statute of limitations barred the claim, given that White knew of the sale by June 2020 but did not file suit until November 2023.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>White argued that as grantor, trustee, and beneficiary she possessed sufficient interest to bring suit individually, and attempted to cure the defect by amending to add herself as trustee. She alleged the trust instrument was forged and that all parties who participated in or benefited from the transaction were liable.</p>
+    <p>Defendants argued that White, suing individually, lacked standing because title was vested in the Trust, not in her personally. Shadare argued she was a bona fide purchaser who properly relied on documents presented at settlement.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Appellate Court unanimously affirmed dismissal of all claims. White lacked standing in her individual capacity because property title was vested in the Trust, not in her personally. The amendment adding the Trust as plaintiff was procedurally barred under the Washington Homes doctrine. Shadare was properly dismissed because the complaint stated no legal theory imposing liability on a purchaser absent allegations of fraud or knowledge of the forgery.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>Under Maryland Real Property Article &sect; 14-108(a), only persons in "actual peaceable possession of property" or with an ownership interest may bring a quiet title action. White alleged the property was vested in herself as Trustee&mdash;a fiduciary capacity distinct from personal ownership. She never alleged the Trust's interest was conveyed to her individually.</p>
+    <p>The Washington Homes doctrine precludes amendment to add a proper plaintiff when no proper plaintiff existed from the outset. Rule 2-341(c)(5) requires that "one of the original plaintiffs" remain a party when correcting nonjoinder. Since White was not a proper plaintiff individually, she could not amend her way around the defect.</p>
+    <p>On Shadare's liability, the bare assertion that she "knew or should have known" of the forgery, without factual predicates, was legally insufficient. A purchaser in an arm's-length transaction may generally rely on documents presented as authoritative at settlement.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision reinforces standing as an absolute threshold requirement in property litigation. The critical distinction between holding property in a fiduciary capacity and holding it individually has significant implications for trust administration: beneficiaries cannot sue individually for trust property but must bring claims in a representative capacity or seek appointment as trustee. The Washington Homes doctrine's strict approach to amendment&mdash;prohibiting addition of a proper plaintiff when no proper plaintiff existed originally&mdash;imposes significant procedural consequences on litigants who fail to establish proper capacity at the outset. The holding regarding bona fide purchasers reinforces the finality of arms-length real estate transactions and the protection of the recording system.</p>]]></content:encoded>
+    <wp:post_id>7</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-07-trust-beneficiary-standing]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Private Operator Exemption from Government Procurement Law]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Private Operator Exemption from Government Procurement Law Shields Federally-Funded Public Housing Subcontract from Bidding Board Review</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 24, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Aeronet Wireless Broadband, LLC v. Junta de Subastas del Departamento de la Vivienda (Cost Control), 2026 WL 710268 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>The Administración de Vivienda Pública (AVP) entered into a Management Agent Services Agreement with Cost Control Company on October 30, 2020, under which Cost Control assumed responsibility for administering, operating, and maintaining designated public housing projects. Acting as AVP's managing agent, Cost Control published a public bidding notice on March 4, 2025, for community internet implementation work funded by federal funds. Cost Control issued a Formal Bidding Award Notification on June 16, 2025, adjudicating the contract to Neptuno Media Inc. Aeronet Wireless Broadband, LLC, which had submitted the lowest bid, challenged the adjudication on the grounds that: (1) it submitted the lowest offer; (2) the adjudication notice was defective in its description of remedies; and (3) the notice lacked complete information about selection criteria.</p>
+
+    <h2>Procedural Background</h2>
+    <p>On June 27, 2025, Aeronet filed an administrative review petition with the Junta Revisora de Subastas of the Administración de Servicios Generales (ASG). The Bidding Review Board issued a Resolution on August 21, 2025, dismissing Aeronet's petition for lack of jurisdiction, concluding that Law 73-2019 only applied to purchasing processes by governmental entities and exempt entities, not private entities conducting their own procurement. Aeronet sought judicial review.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the ASG's Bidding Review Board had jurisdiction to review bidding challenges from a private operator managing public housing under a government contract. The case raised the threshold question of how to interpret the "operation and maintenance contract" exemption in Article 3 of Law 73-2019 (the General Services Administration Law for Centralization of Government Purchases). Specifically, the court had to determine whether the Management Agent Services Agreement between AVP and Cost Control qualified as an "operation and maintenance contract" that would exempt Cost Control's own procurement activities from Law 73-2019's requirements and the Bidding Review Board's oversight.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Aeronet argued that as the lowest bidder, it was entitled to administrative review of the procurement award and that Cost Control, acting on behalf of a government entity and using federal funds, should be subject to Law 73-2019's procurement requirements. Cost Control and the Bidding Review Board argued that Law 73-2019 explicitly exempts private operators with operation and maintenance contracts from its scope, and that the Board accordingly lacked jurisdiction over such procurement challenges.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones affirmed the Bidding Review Board's dismissal for lack of jurisdiction. The court held that Law 73-2019 explicitly exempts "any private operator with an Operation and Maintenance Contract with a Governmental Entity" from its application, and that the Management Agent Services Agreement between AVP and Cost Control constituted such a contract.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied hermeneutic principles to interpret "operation and maintenance contract" according to the common and usual meaning of its essential components. The contractual obligations required Cost Control to administer, operate, and maintain public housing projects; provide decent, safe, and sanitary housing cost-effectively; manage ordinary maintenance and repairs; conduct inspections; and manage project utilities. These obligations placed the agreement squarely within the statutory definition. The court rejected the argument that Cost Control, as AVP's representative, should be treated as a governmental entity, finding instead that a private entity can hold an operation and maintenance contract for public facilities while remaining subject to the statutory exemption. This interpretation aligned with Law 73-2019's policy objectives of simplifying government purchasing while maintaining transparency. The decision raises significant questions about the accountability gap created when private operators managing public assets and spending federal funds are exempt from government procurement oversight.</p>]]></content:encoded>
+    <wp:post_id>8</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-01-private-operator-exemption]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Bankruptcy Court Related To Jurisdiction and Debtor Discharge]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Bankruptcy Court's "Related To" Jurisdiction Does Not Automatically Terminate Upon Debtor's Discharge: First Circuit Orders Case-Specific Inquiry</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> United States Court of Appeals for the First Circuit</p>
+        <p><strong>Date:</strong> March 4, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Guallini-Indij v. Banco Popular de Puerto Rico, 2026 WL 607314 (1st Cir. 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>In 2005, Juan J. Guallini-Indij and Raquel Medina-Rampolla obtained a mortgage loan from Banco Popular de Puerto Rico secured by their home in Dorado, Puerto Rico. Following financial hardship, the Guallinis sought loan modification in 2015, which Banco Popular denied, offering only a short sale option. Banco Popular initiated state court foreclosure proceedings in November 2015. After multiple rejected short sale offers, Banco Popular accepted a final offer on October 25, 2016, conditioned on closing before a November 2, 2016 public auction. The short sale did not close in time, and Banco Popular foreclosed, auctioning the home to the same purchaser the Guallinis had identified. Banco Popular claimed $185,527.73 remained owed after auction and obtained a state court order to confiscate $114,774.72 from the Guallinis. On December 27, 2017, the Guallinis filed a Chapter 13 bankruptcy petition.</p>
+
+    <h2>Procedural Background</h2>
+    <p>In February 2019, the Guallinis filed an adversary proceeding against Banco Popular seeking avoidance and subordination of the bank's claims and damages for alleged predatory collection practices. The bankruptcy plan was confirmed and the Guallinis received their discharge in August 2021. The bankruptcy court then sua sponte dismissed the adversary proceeding, assuming that its "related to" jurisdiction automatically dissipated following discharge. The Guallinis filed multiple motions for withdrawal of the reference to the district court, all of which were denied. The district court affirmed the bankruptcy court's dismissal and denied the second withdrawal motion, reasoning that it could not be timely if the first had been deemed untimely. The Guallinis appealed to the First Circuit.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the bankruptcy court erred in sua sponte dismissing the adversary proceeding by applying a blanket rule that "related to" jurisdiction automatically terminates following a debtor's discharge. A secondary controversy concerned whether the district court properly analyzed timeliness when denying the second motion for withdrawal of the reference, and whether the Guallinis' Seventh Amendment right to a jury trial was preserved.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>The Guallinis argued that their adversary proceeding maintained a sufficient nexus to the bankruptcy case to support continued "related to" jurisdiction, that the bankruptcy court applied an incorrect blanket rule, and that their jury trial right required withdrawal to the district court. Banco Popular argued that discharge terminated the bankruptcy court's jurisdiction over the adversary proceeding and that the withdrawal motions were untimely.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The First Circuit vacated and remanded with instructions to vacate the district court's decision. It held that a bankruptcy court's previously vested "related to" jurisdiction over an adversary proceeding does not automatically terminate following the debtor's discharge, and that the proper analysis requires a case-specific inquiry.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court analyzed 28 U.S.C. § 1334(b) and held that the general rule that "related to" adversary proceedings will be dismissed following termination of the underlying bankruptcy proceedings is not an inflexible command. Nothing in the Bankruptcy Code requires automatic dismissal of a related adversary proceeding following the underlying case's termination. Post-discharge retention of jurisdiction depends on case-specific circumstances, including whether the proceeding maintains a nexus to bankruptcy matters, whether judicial economy and convenience favor continued jurisdiction, and whether fairness principles support it. On the withdrawal motions, the court found the district court's reasoning was circular—relying on the first motion's untimeliness to conclude the second was also untimely without considering intervening developments. It held that there is no authority for the proposition that once a withdrawal motion is deemed untimely, a party is forever barred from filing another. On remand, the district court must address the Guallinis' jury trial request.</p>]]></content:encoded>
+    <wp:post_id>9</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-02-bankruptcy-related-to-jurisdiction]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Municipality Ordered to Recover Overpayment to Construction Inspector]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Puerto Rico Law Controversies]]></category>
+    <category domain="category"><![CDATA[Government Contracts]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Puerto Rico Law Controversies</div>
+    <h1>Municipality Ordered to Recover Overpayment to Construction Inspector Where Contract Amendments and Change Orders Created Conflicting Compensation Obligations</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Tribunal de Apelaciones de Puerto Rico</p>
+        <p><strong>Date:</strong> February 26, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Birriel Ramos v. Gobierno Municipal de Hatillo, 2026 WL 710302 (TCA)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Engineer Manuel L. Birriel Ramos entered into multiple contracts with the Municipality of Hatillo for resident inspection services on the Proyecto de Construcción del Sistema Sanitario del Barrio Palma Gorda (P-174-2015), a sanitary sewer construction project. Contract 2019 (effective January 22, 2019 to July 14, 2020) provided $87,354.00 in compensation. Contract 2021 (effective July 15, 2020 to May 14, 2021) originally provided $48,530.00, later reduced to $43,677.00 through Amendment A, and then extended through March 14, 2022, with additional compensation of $53,383.00 under Amendment B. During the project, Change Order No. 5 delayed the project 312 days and increased costs by $131,585.50. Birriel Ramos performed inspection work until October 29, 2021.</p>
+
+    <h2>Procedural Background</h2>
+    <p>On November 22, 2022, Birriel Ramos filed a demand for breach of contract and payment for work performed against the Municipality. The Municipality filed an Amended Answer denying the debt and asserting a counterclaim for the return of $9,706.00 in alleged overpayments. The trial court issued a Summary Partial Judgment on November 26, 2024, finding no debt owed by the Municipality and awarding Birriel Ramos $31,561.00 for work performed during Amendment B. The Municipality appealed.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p>The central controversy was whether the engineer was entitled to $31,561.00 in additional compensation for work performed during Amendment B of Contract 2021, or whether he had already been paid in excess of the contractual maximum. A secondary controversy involved whether Change Order No. 5, which substantially delayed the project and increased costs, justified additional compensation to the inspector beyond the amounts specified in the contract amendments.</p>
+    </blockquote>
+
+    <h2>Position of the Parties</h2>
+    <p>Birriel Ramos argued he was entitled to additional compensation for inspection work performed during the Amendment B period. The Municipality argued the engineer was already overpaid by $9,706.00 when total payments across all contracts were compared to the contractual maximums, and that no additional compensation was warranted.</p>
+
+    <h2>Holding or Decision</h2>
+    <p>The Tribunal de Apelaciones revoked the Summary Partial Judgment and remanded. The court ordered Birriel Ramos to reimburse the Municipality $9,706.00 paid in excess and remanded the Municipality's counterclaim for additional damages.</p>
+
+    <h2>Reasons for the Decision</h2>
+    <p>The court applied Puerto Rico's principles of contractual autonomy (autonomía de la voluntad) and pacta sunt servanda. It held that parties can establish whatever clauses they agree upon, and what is agreed has the force of law between them. The court emphasized that the State is constitutionally obligated to manage public funds with fiduciary and ethical principles, and that contracts with the government that fail to comply with statutory requirements are null and void. On the merits, the court found that total payments to Birriel Ramos ($97,060.00) exceeded the maximum amount owed under Contract 2019 ($87,354.00) by $9,706.00. The contract provisions limited the inspector's right to additional compensation to situations where Change Orders increasing project costs were approved by the Junta de Subastas (Bidding Board). Since Change Order No. 5 was the only such order, and its approval was tied to the specific extension period, the engineer could only claim payment within the contract scope.</p>]]></content:encoded>
+    <wp:post_id>10</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[prlaw-03-municipality-overpayment]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+</channel>
+</rss>

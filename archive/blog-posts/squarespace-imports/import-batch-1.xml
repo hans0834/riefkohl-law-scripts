@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+  <title>Riefkohl Law Blog</title>
+  <link>https://www.riefkohllaw.com</link>
+  <wp:wxr_version>1.2</wp:wxr_version>
+  <item>
+    <title><![CDATA[LLC Fiduciary Duties, Corporate Opportunity Doctrine, and Deadlock Dissolution in a Litigation Finance Joint Venture]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>LLC Fiduciary Duties, Corporate Opportunity Doctrine, and Deadlock Dissolution in a Litigation Finance Joint Venture</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Chancery of Delaware</p>
+        <p><strong>Date:</strong> March 10, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">In Re Priority Responsible Funding LLC, C.A. No. 2024-0651-NAC, 2026 WL 674490 (Del. Ch. Mar. 10, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Priority Responsible Funding LLC (PRF) is a Delaware limited liability company engaged in litigation finance, co-managed by Priority Pre-Settlement Funding LLC (PPSF, controlled by attorney Brett Findler) and Gard Family Office, LLC (GFO, controlled by hedge fund manager Casey Gard), each holding 50 percent. Formed in January 2019, PRF originated non-recourse pre-settlement litigation fundings. In 2019, the partners restructured the business into an origination-and-servicing (O&amp;S) model, transferring PRF's case portfolio to newly formed investment vehicles&mdash;Fund I, LP and Fund II, LP&mdash;managed by GFO Asset Management LLC (GFOAM). Brett signed all operative documents facilitating this transition and actively marketed the enterprise to investors. By late 2023, PRF's underwriting performance declined significantly, cases resolved unfavorably, and tension over Brett's compensation demands escalated. After Gard refused Brett's request to increase his salary from $750,000 to $1 million, Brett threatened dissolution proceedings. Since mid-2024, PRF has been substantially inoperative.</p>
+
+    <h2>Procedural Background</h2>
+    <p>GFO filed a consolidated action seeking PRF's statutory dissolution and winding up under Delaware LLC Act Section 18-803(a), along with appointment of a liquidation trustee. PPSF counterclaimed for breach of fiduciary duty (corporate opportunity doctrine), breach of the PRF LLC Agreement, tortious interference with business relationships, and imposition of a constructive trust. The Court bifurcated proceedings into liability and damages phases. A three-day trial was held in March 2025, with Vice Chancellor Saritza Rivera Vega issuing the opinion on March 10, 2026.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether GFO breached fiduciary duties by usurping corporate opportunities through the formation and management of the Funds, diverting origination opportunities that should have inured to PRF's benefit.</p>
+        <p><strong>2.</strong> Whether GFO breached the PRF LLC Agreement by failing to make distributions, unilaterally altering PRF's business purpose, misusing confidential information, and disparaging PRF.</p>
+        <p><strong>3.</strong> Whether GFO tortiously interfered with Brett's business relationships by disparaging him and PRF to prospective investors and business contacts.</p>
+        <p><strong>4.</strong> Whether PRF should be dissolved for deadlock under Delaware LLC law, given the 50/50 co-management structure and the parties' inability to communicate or operate the business.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>PPSF argued that GFO systematically usurped opportunities belonging to PRF by initiating the hedge fund structure without PRF's equal participation, failed to distribute profits from the O&amp;S arrangements, fundamentally altered PRF's business purpose without required written amendments, and manufactured the deadlock through bad faith conduct. Brett claimed he did not fully understand the business transformation documents he signed.</p>
+    <p>GFO contended that Brett consented to and participated in the O&amp;S restructuring by signing all relevant agreements and actively marketing the enterprise. GFO argued the LLC Agreement did not restrict Gard from forming and managing the Funds, that no distribution obligation arose because PRF made no direct "Investments" under the agreement's definitions, and that the deadlock was genuine and indisputable.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court entered judgment substantially in GFO's favor. All of PPSF's claims&mdash;fiduciary duty, breach of contract, tortious interference, and constructive trust&mdash;were rejected. The Court granted GFO's petition for dissolution, finding PRF's business was not reasonably practicable to carry on.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>On corporate opportunity, the Court applied the Broz test and found that Brett's detailed involvement in structuring the Funds&mdash;signing assignment and O&amp;S agreements, marketing the enterprise to investors&mdash;constituted informed consent, defeating the claim. The Court found Brett's assertion that he did not understand documents he signed not credible given his 35 years of legal practice.</p>
+    <p>On breach of contract, the Court interpreted Section 3.5's distribution requirements narrowly: distributions flowed from "Investments" (capital deployed directly by PRF), but once PRF transitioned to O&amp;S, it made no direct investments. The Funds deployed capital, and performance allocations accrued to GFOAM, not PRF. Section 1.3's broad purpose clause ("engage in any lawful business") permitted the O&amp;S transition without formal written amendment.</p>
+    <p>On tortious interference, Brett failed to identify any specific business relationship that GFO wrongfully disrupted. On constructive trust, the Court noted it is a remedy, not an independent cause of action, and without a proven underlying breach, no constructive trust could be imposed.</p>
+    <p>On dissolution, the Court found indisputable deadlock: the 50/50 Managing Members could not communicate, had ceased operations, and the LLC Agreement contained no deadlock-resolution mechanism. Carrying on PRF's business was not reasonably practicable.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision reinforces that Delaware courts enforce LLC agreements according to their plain language and will not impose fiduciary restrictions beyond those parties explicitly adopt. It establishes that informed consent and participation in a challenged opportunity defeats corporate opportunity claims. The Court's treatment of the business model pivot&mdash;finding it permissible under a broadly drafted purpose clause&mdash;is significant for entities undergoing operational transitions. The deadlock dissolution holding confirms that when equal-partner co-management fails and the operating agreement provides no resolution mechanism, dissolution is appropriate even if assets retain value.</p>]]></content:encoded>
+    <wp:post_id>1</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-01-llc-fiduciary-duties-deadlock-dissolution]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Fiduciary Duty Pleading Standards and Shareholder Agreement Interpretation in a Joint Venture Governance Dispute]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Fiduciary Duty Pleading Standards and Shareholder Agreement Interpretation in a Joint Venture Governance Dispute</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Chancery of Delaware</p>
+        <p><strong>Date:</strong> March 10, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Caerus Group, LLC v. Chemicar Europe NV, et al., C.A. No. 2025-0393-BWD, 2026 WL 668208 (Del. Ch. Mar. 10, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Caerus Group, LLC (a Texas LLC) and Chemicar Europe NV (a Belgian corporation) formed Finixia USA, Inc., a Delaware corporation, in April 2021 to import and distribute automotive refinishing products. Chemicar owned 60% and Caerus 40%. Mitch Penney, Caerus's principal and a Finixia USA board director, served as CEO. The four-person board had balanced representation: two directors nominated by each side. A Shareholders Agreement governed the venture's operations, including board approval requirements and information rights.</p>
+    <p>Chemicar alleged that Penney improperly focused sales on a single buying group with approximately 20 customers in a restricted geographic area, failed to provide required monthly reports to the Board, withheld financial and operational information, prioritized payments to UYL Color Supply (a supplier in which Penney held a financial interest) over Chemicar's invoices, and entered into an amended services agreement with National Coatings &amp; Supplies without Board approval.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Caerus initiated the action in April 2025. Chemicar filed counterclaims in June 2025, and a separate complaint in July 2025 (later consolidated). Caerus and Penney moved to dismiss the counterclaims and complaint, respectively. After full briefing, the Court heard oral argument in February 2026 and issued its Memorandum Opinion on March 10, 2026, granting both motions to dismiss with prejudice. Leave to amend was denied.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether Chemicar adequately pled breach of fiduciary duty against a CEO/director of a closely held joint venture corporation, meeting Delaware's requirement of alleging gross negligence (duty of care) or bad faith (duty of loyalty) with sufficient factual specificity.</p>
+        <p><strong>2.</strong> Whether the Shareholders Agreement's information provisions impose an affirmative obligation on one shareholder to provide access to books and records, or merely grant each shareholder a right to obtain such access through the corporation's normal channels.</p>
+        <p><strong>3.</strong> Whether agreements between the company and a supplier in which the CEO had a financial interest constituted "affiliate transactions" or "policy decisions" requiring specified Board approval under the Shareholders Agreement.</p>
+        <p><strong>4.</strong> Whether allegations that a company "prioritized" payments to a related entity, without facts regarding the company's financial condition or the fairness of the transaction, suffice to plead breach of contract or invoke entire fairness review.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>Caerus and Penney argued that Chemicar's allegations were conclusory and failed to plead facts&mdash;not mere conclusions&mdash;supporting an inference of gross negligence or bad faith. They contended that disagreement with a CEO's business judgment does not state a fiduciary duty claim, and that Chemicar's contract claims lacked specificity regarding harm, the company's financial condition, and the fairness of challenged transactions.</p>
+    <p>Chemicar contended that Penney owed fiduciary duties of care and loyalty as a director and officer, that its multiple theories of breach (information withholding, self-dealing, unauthorized agreements) collectively supported an inference of breach, and that the interested transaction standard applied because Penney and his brother-in-law held financial interests in UYL.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court granted both motions to dismiss with prejudice and denied leave to amend. All claims against Penney (breach of fiduciary duty and breach of contract) and all counterclaims against Caerus (breach of the Shareholders Agreement and aiding and abetting breach of fiduciary duty) were dismissed.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>On fiduciary duty, the Court held that each of Chemicar's allegations was too conclusory to support an inference of gross negligence or bad faith. Alleging that a CEO focused on a single buying group reflects a business judgment that, even if disagreed with, does not constitute reckless indifference. Allegations of information withholding identified no specific instance of a demand made, its timing, or Penney's response. The self-dealing allegation regarding UYL payments lacked facts about the company's financial condition or available funds.</p>
+    <p>On the Shareholders Agreement, the Court distinguished between affirmative obligations imposed on shareholders and rights granted to shareholders. Section 11's grant of "full and complete information" did not impose an obligation on Caerus to provide access; Section 4(B)(5)'s requirement that "the Shareholders shall cause the Board to require" monthly reports imposed a joint obligation on both shareholders, not on Caerus alone.</p>
+    <p>On aiding and abetting, the predicate breach of fiduciary duty was not adequately pled, and Chemicar's allegations of Caerus's participation were entirely conclusory.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision reinforces the principle that even under Delaware's forgiving notice pleading standard, fiduciary duty claims require facts&mdash;not conclusions&mdash;supporting an inference of breach. The distinction between affirmative information obligations and access rights in shareholders agreements has significant implications for joint venture governance. The holding regarding entire fairness review&mdash;requiring a plaintiff to plead facts demonstrating the absence of fairness, not merely the existence of a conflict&mdash;sets a meaningful pleading threshold for interested transaction claims.</p>]]></content:encoded>
+    <wp:post_id>2</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-02-fiduciary-duty-pleading-standards]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Post-Closing Fraud Claims in M&A Are Subject to Contractual Investigation Procedures Under the MIPA]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Post-Closing Fraud Claims in M&A Are Subject to Contractual Investigation Procedures Under the MIPA</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Chancery of Delaware</p>
+        <p><strong>Date:</strong> March 10, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">DRS Family Holdings, Inc. et al. v. Regal Buyer, LLC, C.A. No. 2025-1452-BWD, 2026 WL 668442 (Del. Ch. Mar. 10, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Resource Navigation LLC (ResNav) is a Delaware LLC that assists customers with managing payroll data during provider transitions. Daniel Shaughnessy founded ResNav and owned all equity through DRS Family Holdings, Inc. until April 4, 2024, when Plaintiffs and Regal Buyer, LLC entered into a Membership Interest Purchase Agreement (MIPA) for 61 percent of ResNav's membership interests. Over three-quarters of ResNav's annual revenue came from a single customer, "Client A."</p>
+    <p>Post-closing, Defendant asserted that Plaintiffs made fraudulent misrepresentations and omissions regarding ResNav's relationship with Client A. Defendant sent a demand letter with a draft fraud complaint, which Plaintiffs contended constituted a "Direct Claim" under Section 9.06(c) of the MIPA, triggering a 30-day investigation right allowing Plaintiffs to examine the claim's basis before litigation proceeded.</p>
+
+    <h2>Procedural Background</h2>
+    <p>On December 15, 2025, Plaintiffs initiated this action seeking specific performance of Defendant's obligations under Section 9.06(c) and a declaratory judgment that Defendant's demand letter constituted a Direct Claim notice. The parties cross-moved for summary judgment. The Court heard oral argument on February 25, 2026, and issued its opinion on March 10, 2026, granting Plaintiffs' motion and denying Defendant's motion.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether Defendant's fraud allegation qualifies as a "Direct Claim" under the MIPA's indemnification provisions, thereby subjecting it to the contractual investigation and notice procedures in Section 9.06(c).</p>
+        <p><strong>2.</strong> Whether the MIPA's carve-out of fraud claims from the "sole and exclusive remedy" provision in Section 9.08 exempts fraud claims from all procedural requirements in Article IX, or merely exempts them from deductible and cap limitations.</p>
+        <p><strong>3.</strong> Whether the investigation right in Section 9.06(c) serves any legitimate purpose in the fraud context, where knowledge of the allegedly fraudulent conduct rests with the accused party.</p>
+        <p><strong>4.</strong> Whether Plaintiffs waived their investigation right by simultaneously denying the fraud allegations and demanding to exercise the investigation right.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>Defendant argued that its fraud claim was separate from the indemnification provisions, exempt from the Direct Claim procedures, and that an investigation right served no rational purpose in a fraud context. Defendant contended that Section 9.08's carve-out for fraud demonstrated the parties contemplated fraud claims as existing outside the MIPA's framework.</p>
+    <p>Plaintiffs argued that fraud claims, while not limited to an indemnification remedy, arise "under" the MIPA and must comply with Article IX's procedures. They pointed to multiple MIPA provisions explicitly governing fraud (extended survival period, exception from deductible and cap, specific satisfaction rules) as evidence that fraud claims operate within the MIPA's framework with modified substantive consequences.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court granted Plaintiffs' motion for summary judgment and denied Defendant's motion. Fraud claims constitute "Direct Claims" under the MIPA and are subject to the investigation right established in Section 9.06(c). Defendant was ordered to comply with its obligations by providing Plaintiffs information and assistance to investigate the fraud claim.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>The Court relied on plain language interpretation: the MIPA defines "Direct Claim" as "any Claim by an Indemnified Party on account of a Loss that does not result from a Third-Party Claim," with no exception for fraud. The Court found "under" means "in accordance with" or "in compliance with," requiring procedural compliance.</p>
+    <p>The carve-out in Section 9.08 exempts fraud claims from the exclusive remedy limitation but does not establish that fraud claims are exempt from procedural requirements. If the parties intended to exempt fraud from procedures, they could have used explicit language. The existence of separate substantive rules for fraud within Article IX (extended survival, no deductible/cap) demonstrates the parties contemplated fraud operating within the framework.</p>
+    <p>The investigation right serves legitimate purposes even for fraud: determining whether representations were unknowingly inaccurate, understanding the claim's basis, and discovering whether alleged losses stem from the buyer's own post-closing conduct rather than misrepresentation. On waiver, simultaneously denying allegations while asserting the investigation right is not "unequivocal" relinquishment of a known right.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision establishes that parties asserting fraud claims in M&amp;A cannot simply bypass contractual investigation and notice procedures. Even where an agreement explicitly provides that fraud claims are not subject to deductible and cap limitations, those claims must still comply with investigation procedures. This provides sellers with contractual protections against premature fraud allegations and ensures losses can be vetted before litigation. The holding will likely influence how parties draft investigation and indemnification procedures in future MIPAs.</p>]]></content:encoded>
+    <wp:post_id>3</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-03-post-closing-fraud-claims-mipa]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Private Equity Fraud Allegations Fail After Five-Day Trial: No Scienter, No Justifiable Reliance in Leveraged Acquisition]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Private Equity Fraud Allegations Fail After Five-Day Trial: No Scienter, No Justifiable Reliance in Leveraged Acquisition</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Chancery of Delaware</p>
+        <p><strong>Date:</strong> March 11, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">MKE Holdings, Ltd. v. Kevin Schwartz, et al., C.A. No. 2018-0729-BWD, 2026 WL 686567 (Del. Ch. Mar. 11, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>This case arose from the July 2014 acquisition by Verdesian Life Sciences, LLC (a portfolio company of Paine Schwartz Partners) of Specialty Fertilizer Products (SFP) for $313.5 million. Plaintiffs MKE Holdings and David Bergevin were former portfolio company owners who held membership interests and preemptive rights in Verdesian. Bergevin invested $7 million, and MKE invested $5 million in the equity raise, which was two times oversubscribed.</p>
+    <p>SFP had implemented "Bulk and Early Fill Programs" offering customers discounts on products purchased before the spring planting season. These programs shifted sales from spring 2014 to fall 2013, artificially inflating late-2013 results. Post-acquisition, SFP's sales declined significantly. By 2016, commodity price declines and industry headwinds contributed to Verdesian's underperformance. Plaintiffs alleged Defendants intentionally or recklessly concealed the programs' impact to induce their investment.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Plaintiffs filed suit in October 2018, more than three years after the July 2014 closing. After partial dismissal of certain claims in 2019-2020 and denial of Defendants' summary judgment motion in August 2024, a five-day trial was held in September 2025. Post-trial briefing concluded in January 2026, with the Court issuing its memorandum opinion on March 11, 2026.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether Defendants made false statements or omitted material information about SFP's Bulk and Early Fill Programs to induce Plaintiffs to invest, and whether Plaintiffs could prove the essential element of scienter&mdash;that Defendants acted knowingly, intentionally, or with reckless indifference to the truth.</p>
+        <p><strong>2.</strong> Whether sophisticated co-investors with access to due diligence materials could establish justifiable reliance on specific alleged misrepresentations or omissions.</p>
+        <p><strong>3.</strong> Whether Plaintiffs' claims were time-barred under Delaware's three-year statute of limitations, given that materials provided before and after closing disclosed the programs' existence and impact.</p>
+        <p><strong>4.</strong> Whether Defendants breached the Operating Agreement's good faith obligation, which contractually replaced default fiduciary duties.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>Plaintiffs identified nine purported misrepresentations and omissions, including failure to disclose internal communications about the programs, allegedly false revenue projections, misleading characterizations of due diligence reports, and false oral statements. They argued Defendants' financial incentives (a $6 million transaction fee and increased service fees) provided motive to conceal negative information and maintain "deal momentum."</p>
+    <p>Defendants argued that extensive pre-closing diligence (including KPMG quality of earnings analysis and Dean &amp; Company commercial due diligence) was conducted, the programs were disclosed in various materials, and Defendants genuinely believed the SFP acquisition made good economic sense. They emphasized that Paine and its affiliates invested $45.4 million in new capital, making it irrational to pursue a deal they knew would fail.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court entered judgment for Defendants on all claims. Plaintiffs' fraud claims were time-barred and failed on the merits for lack of scienter. The breach of contract claim failed because the Operating Agreement excused Managers for conflicted, negligent, and other detrimental decisions so long as they acted in good faith. The aiding and abetting fraud claim failed without a predicate fraud.</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>On scienter, the Court found Plaintiffs' theory "fundamentally defied logic and common sense": Defendants asked the Court to find that several individuals intentionally or recklessly invested in a transaction they knew would fail. Paine invested $45.4 million in new capital and shared diligence materials with institutional investors (approximately $100 million in commitments). The equity raise was oversubscribed, making Plaintiffs' participation unnecessary.</p>
+    <p>The Court systematically rejected each of nine alleged misrepresentations. Disagreements with KPMG about characterizing the programs' impact reflected good faith business judgment, not fraud. Weather attribution for sales declines was reasonable given the sixth coldest winter in 120 years. The Court found Defendants viewed due diligence information as "overwhelmingly positive."</p>
+    <p>On limitations, Plaintiffs were on inquiry notice by April 2014, when they received materials disclosing the programs and EBITDA adjustments&mdash;more than three years before the October 2018 filing.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision reinforces the elevated burden for proving fraud in leveraged acquisitions. When equity sponsors have substantial skin in the game, courts are skeptical that those same sponsors would intentionally misrepresent information. The holding validates robust diligence practices as a powerful shield against fraud allegations. The contractual waiver of fiduciary duties, replaced by a good faith standard, was enforced as written. The decision has broad implications for M&amp;A litigation, demonstrating that post-closing investment underperformance does not itself evidence fraud.</p>]]></content:encoded>
+    <wp:post_id>4</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-04-private-equity-fraud-allegations]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+  <item>
+    <title><![CDATA[Restrictive Covenant Enforcement, Blue-Penciling, and Founder-Investor Disputes in a Private Equity Home Healthcare Acquisition]]></title>
+    <dc:creator><![CDATA[Hans Riefkohl]]></dc:creator>
+<category domain="category"><![CDATA[Business Law and Estate Planning Controversies]]></category>
+    <category domain="category"><![CDATA[Corporate Law]]></category>
+    <category domain="category"><![CDATA[Case Analysis]]></category>
+    <content:encoded><![CDATA[<div class="category">Business Law and Estate Planning Controversies</div>
+    <h1>Restrictive Covenant Enforcement, Blue-Penciling, and Founder-Investor Disputes in a Private Equity Home Healthcare Acquisition</h1>
+    <div class="date">Prepared March 15, 2026</div>
+
+    <div class="court-info">
+        <p><strong>Court:</strong> Court of Chancery of Delaware</p>
+        <p><strong>Date:</strong> March 10, 2026</p>
+        <p><strong>Citation:</strong> <span class="citation">Caring People Holdco, LLC, et al. v. Shalom (Steven) East &amp; Jennifer Devine, et al., No. CV 2024-0125-SEM, 2026 WL 678954 (Del. Ch. Mar. 10, 2026)</span></p>
+    </div>
+
+    <h2>Summary of Relevant Facts</h2>
+    <p>Shalom (Steven) East founded Caring People in 1998 as a small employment agency for nannies, growing it into a multi-state home healthcare provider generating over $30 million in revenue. In 2017, Silver Oak CP, LLC acquired a controlling interest for $30.25 million; East received $11.3 million in cash and retained approximately 40% ownership. The Purchase and Contribution Agreement (PCA) imposed non-compete, non-solicit, and confidentiality covenants on East for two years post-employment. An Avior/COD carve-out protected East's separate technology platform business.</p>
+    <p>Jennifer Devine, Caring People's top sales representative ($25 million in annual sales), signed a Business Protection Agreement (BPA) with a New York entity and later received incentive units under a separate Incentive Unit Agreement (IUA) with identical restrictive covenants.</p>
+    <p>After the relationship between East and Silver Oak deteriorated, East stepped down as CEO and established competing ventures (Polaris, Beacon) that obtained home healthcare licenses. He solicited Devine and another key employee, Feder, to join these ventures. Caring People's sales force declined from 57 to 18 representatives.</p>
+
+    <h2>Procedural Background</h2>
+    <p>Plaintiffs filed a nine-count verified complaint with motions to expedite and for a preliminary injunction. After reassignment, a four-day trial was held from January 20-23, 2026. The magistrate issued the memorandum opinion on March 10, 2026.</p>
+
+    <h2>Main Controversies</h2>
+    <blockquote>
+        <p><strong>1.</strong> Whether the PCA's non-compete clause, covering all of the United States, was enforceable when Caring People operated in only six states, and whether the Court should exercise its blue-penciling discretion to narrow the geographic scope.</p>
+        <p><strong>2.</strong> Whether the Devine BPA, governed by New York law, met New York's stricter enforceability standards for non-compete and non-solicit agreements, which require temporal and geographic limitations reasonably necessary to protect legitimate business interests.</p>
+        <p><strong>3.</strong> Whether East's activities with Polaris, Beacon, and COD fell within the Avior/COD carve-out or constituted direct competition with Caring People in violation of the restrictive covenants.</p>
+        <p><strong>4.</strong> Whether fiduciary duty claims were precluded by the Holdco Agreement's waiver of fiduciary duties where the underlying conduct was already addressed in related contractual agreements.</p>
+    </blockquote>
+
+    <h2>Positions of the Parties</h2>
+    <p>Plaintiffs argued that East systematically breached his non-compete, non-solicit, and confidentiality obligations by establishing competing ventures, soliciting key employees, and sharing confidential documents. They sought $12.4 million in lost profits based on their expert's analysis.</p>
+    <p>East argued the non-compete was facially overbroad (covering the entire U.S.), that his activities fell within the Avior/COD carve-out, that no direct solicitation occurred, and that Plaintiffs' damages theory improperly attributed all revenue decline to his and Devine's departure. Devine argued the BPA was unenforceable under New York's stricter standards.</p>
+
+    <h2>Court's Holding</h2>
+    <p>The Court largely ruled for Plaintiffs. East breached the PCA's non-compete (blue-penciled to six states), non-solicit, and confidentiality provisions, and the Holdco Agreement's confidentiality provision. Devine breached the IUA's non-solicit provision, but the BPA was unenforceable under New York law. The fiduciary duty claim was rejected as duplicative of contract claims. East tortiously interfered with Plaintiffs' contracts with Devine and Feder. Silver Oak breached the Holdco distribution obligation ($355,000). Total damages of $4.304 million were awarded (3/4 to East, 1/4 to Devine).</p>
+
+    <h2>Key Reasoning and Analysis</h2>
+    <p>On blue-penciling, the Court found equal bargaining power (East was represented by counsel, the covenant was specifically negotiated, and $30.25 million changed hands), satisfying Delaware's requirements for judicial modification. Narrowed to six states, the non-compete was reasonable. The Avior/COD carve-out did not protect East's Polaris and Beacon ventures, which directly provided home healthcare services rather than merely operating a technology platform.</p>
+    <p>On Devine's BPA, the Court applied New York's stricter standard and found the definition of prohibited conduct vague and the only consideration being continued employment, which New York disfavors. However, the Devine IUA&mdash;with explicit terms, valuable incentive unit consideration, and defined scope&mdash;was enforceable.</p>
+    <p>On fiduciary duties, the Holdco Agreement's Section 6.6(c) waived fiduciary duties except for fraud, intentional misconduct, or breach of Related Agreements. Since the alleged conduct was addressed contractually, no independent fiduciary duty claim was available.</p>
+    <p>On damages, the Court reduced the expert's $12.4 million figure to $4.304 million, limiting recovery to New York and New Jersey markets and awarding only half of identified lost profits to account for other factors contributing to revenue decline.</p>
+
+    <h2>Significance and Takeaways</h2>
+    <p>This decision exemplifies Delaware's balanced approach to restrictive covenants in PE acquisitions: blue-penciling is available where provisions were specifically negotiated at arm's length, but geographic scope must align with actual business operations. The contrast between the unenforceable New York BPA and the enforceable Delaware IUA highlights the importance of choice-of-law provisions. The rejection of fiduciary duty claims where conduct is addressed contractually confirms that LLC agreement waivers are enforced as written. The damages reduction underscores judicial skepticism of damages models that attribute all revenue decline to a single cause.</p>]]></content:encoded>
+    <wp:post_id>5</wp:post_id>
+    <wp:post_date>2026-03-16 18:44:04</wp:post_date>
+    <wp:post_date_gmt>2026-03-16 18:44:04</wp:post_date_gmt>
+    <wp:post_name><![CDATA[buslaw-05-restrictive-covenant-blue-penciling]]></wp:post_name>
+    <wp:status>draft</wp:status>
+    <wp:post_type>post</wp:post_type>
+  </item>
+</channel>
+</rss>

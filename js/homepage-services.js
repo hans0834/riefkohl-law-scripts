@@ -950,10 +950,28 @@ function collapseEmptySections() {
   });
 }
 
+/* Keep the Act 60 Resource Center banner below the homepage content.
+   The banner is created by the homepage's Page Header Code Injection, which
+   inserts it before sections[length-2]. Since the newsletter section was
+   removed (Oct 22 2026) the homepage has only two sections, so that put the
+   banner above the hero and pushed the main call to action off the first
+   mobile screen. Move it to just before the last section (contact footer),
+   where it sat before. */
+function placeAct60Banner() {
+  if (PATH !== '/') return;
+  var banner = qs('.rl-act60-banner');
+  if (!banner) return;
+  var secs = qsa('section.page-section');
+  var last = secs[secs.length - 1];
+  if (!last || banner.nextElementSibling === last) return;
+  last.parentNode.insertBefore(banner, last);
+}
+
 function run() {
   try {
     if (PATH === '/') {
       transformHomepage();
+      placeAct60Banner();
       collapseEmptySections();
     } else if (PATH === '/services' || PATH === '/pricing') {
       transformServices();

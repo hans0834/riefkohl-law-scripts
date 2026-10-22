@@ -75,12 +75,12 @@ var LEAD_MAGNETS = {
   },
   /* Default trust planning checklist */
   default: {
-    heading_en: 'Puerto Rico Legal Insights, Weekly',
-    heading_es: 'Estrategias Legales de Puerto Rico, Cada Semana',
-    desc_en: 'Estate planning, trusts, and Act 60 strategies — practical Puerto Rico legal insights each week. Prefer to talk? Your first strategy call is free.',
-    desc_es: 'Planificación patrimonial, fideicomisos y Ley 60 — estrategias prácticas cada semana. ¿Prefiere hablar? Su primera consulta es gratis.',
-    badge_en: 'Newsletter',
-    badge_es: 'Boletín',
+    heading_en: 'Puerto Rico Legal Insights',
+    heading_es: 'Estrategias Legales de Puerto Rico',
+    desc_en: 'Estate planning, trusts, and Act 60 strategies for Puerto Rico. Prefer to talk it through? Your first strategy call is free.',
+    desc_es: 'Planificación patrimonial, fideicomisos y Ley 60 en Puerto Rico. ¿Prefiere hablarlo? Su primera consulta es gratis.',
+    badge_en: 'Free Consultation',
+    badge_es: 'Consulta Gratis',
     btn_en: 'Book a Free Strategy Call',
     btn_es: 'Agendar Consulta Gratis'
   }

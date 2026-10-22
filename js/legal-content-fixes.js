@@ -34,6 +34,8 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
   (34. retired 2026-08-20: /espanol-servicios stale trust tiers + prices were re-typed at
       source in the Squarespace editor the same day the stopgap shipped, so the client-side
       refresh and that page's ES_PRICE_FIXES entries were deleted.)
+  35. Raw-HTML blog posts (read-only in the Squarespace editor): approved Oct 2026
+      Find/Replace corrections, and removal of two placeholder case entries
    ================================================ */
 
 var path = window.location.pathname.replace(/\/$/, '') || '/';
@@ -1720,6 +1722,102 @@ function fixEspanolCitaListNesting() {
   ol.parentNode.removeChild(ol);
 }
 
+/* ================================================
+   35. RAW-HTML BLOG POST CORRECTIONS
+   These imported posts store their bodies as raw HTML, which the
+   Squarespace editor shows read-only, so the approved Find/Replace
+   corrections are applied here. Approvals and sources:
+   riefkohllaw-leftover-corrections-for-approval-2026-10-18.md
+   (B12b, B12e, flag 4) and
+   riefkohllaw-blog-audit-for-approval-2026-10-18.md (Part C).
+   The Find strings are exact text from the live posts; if a post
+   is ever re-typed at source, its entries become no-ops.
+   ================================================ */
+var RAW_POST_TEXT_FIXES = {
+  '/blog/act60-divorce-family-law': [
+    ['You must be present in Puerto Rico for at least 183 days per year, among other requirements.',
+     'The usual way to meet it is to be present in Puerto Rico for at least 183 days per year (the regulations allow four alternatives), and other requirements apply.']
+  ],
+  '/blog/cpa-bridge-property-purchase': [
+    ['You still must meet the presence test (183 days),',
+     'You still must meet the presence test (usually 183 days),']
+  ],
+  '/blog/leaving-puerto-rico-exit-planning': [
+    ['The Franchise Tax Board (FTB) applies a "safe harbor" rule: if you return to California within two years, the FTB may argue that you never truly left.',
+     'California treats anyone domiciled in the state as a resident unless they are outside California for other than a temporary or transitory purpose, and the Franchise Tax Board examines short or ambiguous absences closely. The statutory "safe harbor" (Rev. & Tax. Code §17014(d)) protects only people absent for at least 546 consecutive days under an employment-related contract, and it does not apply if the principal purpose of the absence is to avoid tax, so it rarely helps a returning Act 60 holder.'],
+    ['Gains attributable to appreciation before you became a Puerto Rico resident were always subject to federal tax.',
+     'Gains attributable to appreciation before you became a Puerto Rico resident are treated as U.S.-source, and subject to federal tax, if the asset is sold within 10 years after you became a bona fide resident; only the portion of gain attributable to your Puerto Rico holding period can be treated as Puerto Rico-source.'],
+    ['The IRS looks at the totality of circumstances, not just the date you physically leave.',
+     'The answer turns on objective tests, not just the date you physically leave. Under IRC §933(2), a U.S. citizen who was a bona fide resident of Puerto Rico for at least two years before the change of residence can still exclude Puerto Rico-source income attributable to the part of the year before the move, and the regulations (Treas. Reg. §1.937-1(f)(2)) set the conditions for the year of departure. Form 8898 must be filed for the year residency ends if worldwide gross income exceeds $75,000.']
+  ],
+  '/blog/act60-vs-international-alternatives': [
+    ['The Foreign Earned Income Exclusion (FEIE) can shelter up to approximately $130,000 in earned income',
+     'The Foreign Earned Income Exclusion (FEIE) can shelter up to $132,900 (2026, indexed annually) in earned income'],
+    ['The penalties for non-compliance are severe — up to $100,000 or 50% of the account balance per violation for willful failures.',
+     'The penalties for non-compliance are severe — for willful FBAR failures, up to the greater of $100,000 (adjusted for inflation) or 50% of the account balance per violation.']
+  ]
+};
+
+function fixRawHtmlPosts() {
+  var fixes = RAW_POST_TEXT_FIXES[path];
+  if (!fixes) return;
+  var root = document.querySelector('.blog-item-content') || document.body;
+  var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+  while (walker.nextNode()) {
+    var node = walker.currentNode;
+    for (var i = 0; i < fixes.length; i++) {
+      if (node.nodeValue.indexOf(fixes[i][0]) >= 0) {
+        node.nodeValue = node.nodeValue.split(fixes[i][0]).join(fixes[i][1]);
+      }
+    }
+  }
+}
+
+/* Flag 4: two placeholder entries in the testamentary-succession case
+   roundups (no locatable decision behind them). Each entry is a heading
+   (H1 at source, H2 after post-formatter.js) followed by its H2/P
+   subsections up to the next <hr>. If the structure is not exactly that,
+   the entry is left alone. The roundup's table of contents link is removed
+   too. */
+var RAW_POST_ENTRY_REMOVALS = {
+  '/blog/testamentary-trust-succession-disputes-puerto-rico': ['Pesaresi Maurel v. Peñalosa Ortiz', 'KLAN202000591-30112020'],
+  '/blog/testamentary-succession-disputes-summaries-es': ['Pesaresi Maurel v. Peñalosa Ortiz', 'KLAN202000591-30112020']
+};
+
+function removeRawPostEntries() {
+  var titles = RAW_POST_ENTRY_REMOVALS[path];
+  if (!titles) return;
+  var root = document.querySelector('.blog-item-content');
+  if (!root) return;
+  titles.forEach(function(title) {
+    var heads = root.querySelectorAll('h1, h2');
+    for (var i = 0; i < heads.length; i++) {
+      var h = heads[i];
+      if (h.parentNode !== root || h.textContent.trim() !== title) continue;
+      var parts = [h];
+      var s = h.nextElementSibling;
+      var n = 0;
+      while (s && s.tagName !== 'HR' && s.tagName !== 'H1' && n < 40) {
+        parts.push(s);
+        s = s.nextElementSibling;
+        n++;
+      }
+      if (!s || s.tagName !== 'HR' || n >= 40) break;
+      var prev = h.previousElementSibling;
+      if (prev && prev.tagName === 'HR') parts.push(prev);
+      parts.forEach(function(e) { e.parentNode.removeChild(e); });
+      break;
+    }
+    var links = document.querySelectorAll('li > a[href^="#"]');
+    for (var j = 0; j < links.length; j++) {
+      if (links[j].textContent.trim() === title) {
+        var li = links[j].parentNode;
+        li.parentNode.removeChild(li);
+      }
+    }
+  });
+}
+
 function runLegalFixes() {
   fixULLCA();
   addAct60Disclaimer();
@@ -1778,6 +1876,9 @@ function runLegalFixes() {
   fixSpanishBookingCta();
   /* /espanol-cita: flatten the mangled numbered list */
   fixEspanolCitaListNesting();
+  /* 35. Raw-HTML blog posts: approved corrections + placeholder entries */
+  fixRawHtmlPosts();
+  removeRawPostEntries();
 }
 
 /* Run on DOMContentLoaded and again after a delay for dynamic content */

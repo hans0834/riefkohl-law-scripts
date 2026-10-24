@@ -72,10 +72,10 @@ function injectOrganizationSchema() {
     'description': 'Puerto Rico law firm specializing in trusts and estate planning, Act 60 tax incentives, corporate law, and bankruptcy. Bilingual attorney licensed in PR, DC, and federal courts.',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': '273 Ponce de León Ave.',
+      'streetAddress': '1250 Ave. Ponce de León, Ste. 300, Office 19',
       'addressLocality': 'San Juan',
       'addressRegion': 'PR',
-      'postalCode': '00917',
+      'postalCode': '00907',
       'addressCountry': 'US'
     },
     'geo': {

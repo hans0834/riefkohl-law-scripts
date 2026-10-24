@@ -61,7 +61,7 @@ var TEST_PATHS = [
         results.push(check(org.founder && org.founder.hasCredential, 'founder has bar credentials'));
         results.push(check(org.founder && org.founder.alumniOf, 'founder has education'));
         results.push(check(org.email === 'hans.riefkohl@riefkohllaw.com', 'email is correct'));
-        results.push(check(org.address && org.address.streetAddress.indexOf('273') > -1, 'address is 273 Ponce de León'));
+        results.push(check(org.address && org.address.streetAddress.indexOf('1250') > -1, 'address is 1250 Ponce de León'));
         results.push(check(org.hasOfferCatalog, 'hasOfferCatalog present'));
         results.push(check(org.areaServed && org.areaServed.length === 2, 'areaServed includes PR and US'));
         results.push(check(org.potentialAction, 'potentialAction (ReserveAction) present'));

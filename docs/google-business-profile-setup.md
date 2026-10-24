@@ -16,7 +16,7 @@ Go to: https://business.google.com/create
 - Corporate Lawyer
 - Trust Attorney
 
-**Address:** 273 Ponce de Leon Ave., San Juan, PR 00917
+**Address:** 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 **Phone:** (787) 236-1657
 **Website:** https://www.riefkohllaw.com
 **Email:** hans.riefkohl@riefkohllaw.com

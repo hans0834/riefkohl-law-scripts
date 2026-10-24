@@ -10,7 +10,7 @@ Downloadable PDF guide offered through CPA referral partnerships and the CPA-ref
 ### Cover Page
 
 **RIEFKOHL LAW**
-273 Ponce de Leon Ave., San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 (787) 236-1657 | riefkohllaw.com
 
 # What Your Act 60 CPA Can't Do For You (And Who Can)
@@ -234,8 +234,8 @@ riefkohllaw.com/calendly
 (787) 236-1657
 
 **Riefkohl Law**
-273 Ponce de Leon Ave.
-San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19
+San Juan, PR 00907
 
 ---
 

@@ -10,7 +10,7 @@ Downloadable PDF checklist for visitors researching Act 60 eligibility. Target a
 ### Cover Page
 
 **RIEFKOHL LAW**
-273 Ponce de Leon Ave., San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 (787) 236-1657 | riefkohllaw.com
 
 # Act 60 Eligibility Checklist
@@ -130,8 +130,8 @@ riefkohllaw.com/calendly
 (787) 236-1657
 
 **Riefkohl Law**
-273 Ponce de Leon Ave.
-San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19
+San Juan, PR 00907
 hans@riefkohllaw.com
 
 *This checklist is for informational purposes only and does not constitute legal advice. Eligibility for Act 60 depends on individual circumstances, and the federal residency rules under IRC §937 and Puerto Rico law are subject to change. Consult a qualified attorney before making decisions about Puerto Rico relocation or Act 60 applications.*

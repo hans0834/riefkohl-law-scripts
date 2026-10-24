@@ -133,10 +133,10 @@ function injectLocalBusinessSchema() {
     'email': 'hans@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': '273 Ponce de Leon Ave.',
+      'streetAddress': '1250 Ave. Ponce de León, Ste. 300, Office 19',
       'addressLocality': 'San Juan',
       'addressRegion': 'PR',
-      'postalCode': '00917',
+      'postalCode': '00907',
       'addressCountry': 'US'
     },
     'geo': {

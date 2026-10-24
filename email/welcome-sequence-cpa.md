@@ -184,7 +184,7 @@ I look forward to speaking with you.
 Best regards,
 Hans Riefkohl
 Riefkohl Law
-273 Ponce de Leon Ave., San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 (787) 236-1657
 riefkohllaw.com
 
@@ -215,5 +215,5 @@ Create a dedicated landing page or form for CPA referrals (e.g., riefkohllaw.com
 All emails must include an unsubscribe link (most providers add this automatically). Under CAN-SPAM, include your physical address in the footer. The address is:
 
 Riefkohl Law
-273 Ponce de Leon Ave.
-San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19
+San Juan, PR 00907

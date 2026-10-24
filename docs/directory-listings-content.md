@@ -4,7 +4,7 @@
 
 **Firm Name:** Riefkohl Law
 **Attorney Name:** Hans E. Riefkohl Hernandez
-**Address:** 273 Ponce de Leon Ave., San Juan, PR 00917
+**Address:** 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 **Phone:** (787) 236-1657
 **Website:** https://www.riefkohllaw.com
 **Email:** hans.riefkohl@riefkohllaw.com
@@ -117,11 +117,11 @@ After creating all listings, verify these match EXACTLY:
 
 | Directory | Name | Address | Phone | Website |
 |-----------|------|---------|-------|---------|
-| Google Business Profile | Riefkohl Law | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
-| Avvo | Hans E. Riefkohl Hernandez | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
-| Justia | Hans E. Riefkohl Hernandez | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
-| FindLaw | Riefkohl Law | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
-| Martindale | Hans E. Riefkohl Hernandez | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
-| Lawyers.com | Riefkohl Law | 273 Ponce de Leon Ave., San Juan, PR 00917 | (787) 236-1657 | riefkohllaw.com |
+| Google Business Profile | Riefkohl Law | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
+| Avvo | Hans E. Riefkohl Hernandez | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
+| Justia | Hans E. Riefkohl Hernandez | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
+| FindLaw | Riefkohl Law | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
+| Martindale | Hans E. Riefkohl Hernandez | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
+| Lawyers.com | Riefkohl Law | 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907 | (787) 236-1657 | riefkohllaw.com |
 
 **IMPORTANT:** Do NOT use "151 Calle de San Francisco" (old address) anywhere. If you find this old address on any existing listing, update it immediately.

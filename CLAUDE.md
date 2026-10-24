@@ -196,7 +196,7 @@ When creating new posts:
 
 ## Site Context
 
-- **Owner:** Hans Riefkohl, solo law firm at 273 Ponce de Leon Ave., San Juan, PR 00917
+- **Owner:** Hans Riefkohl, solo law firm at 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 - **Phone:** (787) 236-1657
 - **Email:** hans@riefkohllaw.com
 - **Practice areas (by revenue priority):**

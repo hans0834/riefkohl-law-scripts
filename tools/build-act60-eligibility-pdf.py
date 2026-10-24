@@ -131,7 +131,7 @@ def cover_page(canvas, doc):
     canvas.drawString(
         0.75 * inch,
         h - 1.05 * inch,
-        "273 Ponce de Leon Ave., San Juan, PR 00917  ·  (787) 236-1657  ·  riefkohllaw.com",
+        "1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907  ·  (787) 236-1657  ·  riefkohllaw.com",
     )
     # Title (large serif, centered vertically in band)
     canvas.setFillColor(colors.white)
@@ -380,8 +380,8 @@ def build():
                 "riefkohllaw.com/calendly",
                 "(787) 236-1657",
                 "Riefkohl Law",
-                "273 Ponce de Leon Ave.",
-                "San Juan, PR 00917",
+                "1250 Ave. Ponce de Leon, Ste. 300, Office 19",
+                "San Juan, PR 00907",
                 "hans@riefkohllaw.com",
             ):
                 story.append(Paragraph(md_inline_to_html(text), styles["contact"]))

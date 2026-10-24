@@ -3423,7 +3423,7 @@ function injectDisclaimer() {
   disc.innerHTML = '<p style="margin:0 0 6px;"><strong>Legal Disclaimer</strong></p>'
     + '<p style="margin:0 0 4px;">The information on this website is for general informational purposes only and does not constitute legal or tax advice. No attorney-client relationship is created by accessing this site, submitting a contact form, or scheduling a consultation. Confidential or time-sensitive information should not be sent through this website.</p>'
     + '<p style="margin:0 0 4px;">Tax results depend on individual circumstances including residency, income sourcing, and applicable law. Past results do not guarantee future outcomes.</p>'
-    + '<p style="margin:0;">Attorney Advertising. Riefkohl Law \u2014 273 Ponce de Le\u00f3n Ave., San Juan, PR 00917. Licensed in Puerto Rico.</p>';
+    + '<p style="margin:0;">Attorney Advertising. Riefkohl Law \u2014 1250 Ave. Ponce de Le\u00f3n, Ste. 300, Office 19, San Juan, PR 00907. Licensed in Puerto Rico.</p>';
 
   /* Insert at the bottom of the footer or before the footer */
   var sqFooter = document.querySelector('footer');
@@ -3457,10 +3457,10 @@ function injectAttorneySchema() {
     'email': 'hans@riefkohllaw.com',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': '273 Ponce de Le\u00f3n Ave.',
+      'streetAddress': '1250 Ave. Ponce de Le\u00f3n, Ste. 300, Office 19',
       'addressLocality': 'San Juan',
       'addressRegion': 'PR',
-      'postalCode': '00917',
+      'postalCode': '00907',
       'addressCountry': 'US'
     },
     'geo': {

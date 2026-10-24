@@ -160,7 +160,7 @@ All 6 publishable Spanish category summaries published to Squarespace via API on
 
 ### C1. Google Business Profile
 - [ ] Go to [business.google.com](https://business.google.com) and claim the listing
-- [ ] Set address: 273 Ponce de Leon Ave., San Juan, PR 00917
+- [ ] Set address: 1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 - [ ] Add business hours, photos, services, and description
 - [ ] Request verification (postcard or phone)
 - [ ] See `google-business-profile-setup.md` for detailed instructions

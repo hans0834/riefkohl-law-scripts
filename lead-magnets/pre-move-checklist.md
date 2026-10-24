@@ -7,7 +7,7 @@
 Puerto Rico Trust, Estate & Act 60 Law
 
 Hans E. Riefkohl, Esq.
-273 Ponce de Leon Ave., San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 (787) 236-1657 | hans@riefkohllaw.com | riefkohllaw.com
 
 ---
@@ -261,6 +261,6 @@ This checklist is a starting point — not a substitute for professional legal a
 
 **RIEFKOHL LAW**
 Puerto Rico Trust, Estate & Act 60 Law
-273 Ponce de Leon Ave., San Juan, PR 00917
+1250 Ave. Ponce de Leon, Ste. 300, Office 19, San Juan, PR 00907
 
 *This checklist is provided for informational purposes only and does not constitute legal advice. Consult a licensed attorney for guidance specific to your situation.*

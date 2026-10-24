@@ -10,7 +10,7 @@ Downloadable PDF checklist offered in exchange for email address. Target audienc
 ### Cover Page
 
 **RIEFKOHL LAW**
-273 Ponce de León Ave., San Juan, PR 00917
+1250 Ave. Ponce de León, Ste. 300, Office 19, San Juan, PR 00907
 (787) 236-1657 | riefkohllaw.com
 
 # Puerto Rico Estate Planning Checklist
@@ -131,8 +131,8 @@ riefkohllaw.com/calendly
 (787) 236-1657
 
 **Riefkohl Law**
-273 Ponce de León Ave.
-San Juan, PR 00917
+1250 Ave. Ponce de León, Ste. 300, Office 19
+San Juan, PR 00907
 
 ---
 

@@ -122,6 +122,14 @@
       'will-contest-dismissed-no-confidential-relationship-or-undue-influence-where-decedent-was-practicing-physician-who-independently-chose-to-disinherit-daughter', 'will-contest-dismissed-on-summary-judgment-no-confidential-relationship-or-undue-influence-1',
       'williams-as-successor-pr-of-estate-of-adams-shirer', 'wilson-v-cross',
       'wsj-big-bankruptcies-boost-economic-fears', 'wsj-small-business-bankruptcies-rise',
+      // added 2026-10-25 (audit A5): accurate but outside the Puerto Rico market
+      'restrictive-covenant-enforcement-blue-penciling-and-founder-investor-disputes-in-a-private-equity-home-healthcare-acquisition',
+      'post-closing-fraud-claims-in-ma-are-subject-to-contractual-investigation-procedures-under-the-mipa',
+      'delawares-supreme-court-clarifies-the-limits-of-earnout-protections-specific-milestone-language-controls-efforts-clauses-carry-real-obligations',
+      'trust-law-series-glenn-trust-v-walton-county-beach-rights', 'trust-law-series-haun-v-pagano-elder-abuse',
+      'trust-law-series-avigdor-v-avigdor-competing-creditors', 'first-circuit-choice-of-law-clause-requiring-agreement-to-be-construe',
+      'anvar-v-dwyer', 'first-circuit-absence-of-exception-to-maines-covid-19-vaccine-mandat',
+      'andersen-v-lasalle-bank-national-association',
     ];
 
     var m = location.pathname.match(/^\/blog\/([^\/?#]+)\/?$/);

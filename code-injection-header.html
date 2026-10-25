@@ -4,31 +4,80 @@
 <!-- IMPORTANT: This is the ONLY thing that goes in Squarespace Code Injection → Header -->
 
 <!-- Google Tag Manager + Conversion Tracking (must load first) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/gtm-tracking.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/gtm-tracking.js"></script>
 
 <!-- Combined CSS (all styles in one file for performance) -->
 <link rel="stylesheet" href="https://hans0834.github.io/riefkohl-law-scripts/css/all-styles.css" />
 
 <!-- Core Scripts (order matters) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/seo-fixes.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/homepage-services.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/images-injection.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/resources-fix.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/blog-dashboard.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/breadcrumb-schema.js"></script>
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/post-formatter.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/seo-fixes.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/homepage-services.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/images-injection.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/resources-fix.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/blog-dashboard.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/breadcrumb-schema.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/post-formatter.js"></script>
 
 <!-- Conversion Optimization (call banner, sticky CTA, LocalBusiness schema) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/conversion-booster.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/conversion-booster.js"></script>
 
 <!-- Email Signup (newsletter bar + lead magnets) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/email-signup.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/email-signup.js"></script>
 
 <!-- Service Page Cross-Links (related services at bottom of service pages) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/service-crosslinks.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/service-crosslinks.js"></script>
 
 <!-- Legal Content Fixes (statutory corrections, forced heirship update, OBBBA, witness requirement) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/legal-content-fixes.js"></script>
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/legal-content-fixes.js"></script>
 
-<!-- Schema Markup (enhanced Organization, practice-area LegalService, Article, dynamic FAQ) -->
-<script src="https://hans0834.github.io/riefkohl-law-scripts/js/schema-markup.js"></script>
+<!-- LocalBusiness + Attorney Schema Markup (added by CMO audit) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": ["LegalService", "Attorney"],
+"name": "Riefkohl Law",
+"alternateName": "Riefkohl Law Offices",
+"url": "https://www.riefkohllaw.com",
+"logo": "https://www.riefkohllaw.com/images/riefkohl-law-logo.png",
+"image": "https://www.riefkohllaw.com/images/riefkohl-law-logo.png",
+"description": "Riefkohl Law provides corporate, trust, estate planning, and Act 60 tax incentive legal services in Puerto Rico. Big-firm experience with transparent pricing.",
+"telephone": "+1-787-236-1657",
+"email": "hans@riefkohllaw.com",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "1250 Ave. Ponce de León, Ste. 300, Office 19",
+"addressLocality": "San Juan",
+"addressRegion": "PR",
+"postalCode": "00907",
+"addressCountry": "US"
+},
+"geo": {
+"@type": "GeoCoordinates",
+"latitude": 18.4488,
+"longitude": -66.0628
+},
+"openingHoursSpecification": [
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+"opens": "09:00",
+"closes": "17:00"
+}
+],
+"priceRange": "$$",
+"areaServed": {
+"@type": "Place",
+"name": "Puerto Rico"
+},
+"knowsAbout": ["Act 60 Tax Incentives","Puerto Rico Trusts","Estate Planning","Corporate Law","Bankruptcy"],
+"sameAs": [
+"https://www.linkedin.com/company/riefkohl-law"
+]
+}
+</script>
+
+<!-- Enhanced schema markup: Organization, practice-area LegalService, Article, FAQ (load last) -->
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/schema-markup.js"></script>
+
+<!-- Noindex 192 out-of-jurisdiction / off-topic blog posts (added 2026-08-11) -->
+<script defer src="https://hans0834.github.io/riefkohl-law-scripts/js/blog-noindex.js"></script>

@@ -497,6 +497,19 @@ try { if (window.self !== window.top && window.top.location.pathname.indexOf('/c
         }
       }
 
+      // --- 3. Default disclaimer for every other post (added 2026-10-25, audit A2) ---
+      // Lawyer-advertising compliance: every post carries an informational-only notice.
+      if (!disclaimerHtml) {
+        var esHits = (bodySnippet.match(/\s(el|la|los|las|que|del|para|una)\s/g) || []).length;
+        var enHits = (bodySnippet.match(/\s(the|and|that|with|for|this|was)\s/g) || []).length;
+        var isES = /^es/i.test(document.documentElement.lang || '') || esHits > enHits;
+        disclaimerHtml = '<div class="rl-disclaimer rl-disclaimer-default" style="background:#faf8f4;border-left:4px solid #bfa35d;padding:16px 20px;margin:32px 0 24px;border-radius:0 8px 8px 0;font-size:.85rem;line-height:1.6;color:#666;font-style:italic;">'
+          + (isES
+            ? '<p style="margin:0;">Aviso: Esta publicaci\u00f3n es solo para fines informativos generales y no constituye asesoramiento legal. La lectura de este contenido no crea una relaci\u00f3n abogado-cliente. El derecho cambia y la informaci\u00f3n refleja la ley a la fecha de publicaci\u00f3n. Consulte con un abogado sobre su situaci\u00f3n particular.</p>'
+            : '<p style="margin:0;">Disclaimer: This post is for general informational purposes only and does not constitute legal advice. No attorney-client relationship is created by reading this content. The law changes, and this post reflects the law as of its publication date. Consult an attorney about your specific situation.</p>')
+          + '</div>';
+      }
+
       if (disclaimerHtml) {
         var discDiv = document.createElement('div');
         discDiv.innerHTML = disclaimerHtml;

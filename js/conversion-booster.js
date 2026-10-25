@@ -578,19 +578,8 @@ function injectAct60Sections() {
       '</tbody>' +
     '</table>';
 
-  // --- TESTIMONIALS (#12) ---
-  container.innerHTML +=
-    '<h2 class="rl-act60-section-title">What Clients Say</h2>' +
-    '<div class="rl-act60-testimonials">' +
-      '<div class="rl-act60-testimonial">' +
-        '<blockquote>Hans made a complex relocation process feel manageable. He structured our income sourcing properly from day one, and we passed our first compliance review without a single issue. Having a lawyer who actually practices in Puerto Rico made all the difference.</blockquote>' +
-        '<cite>\u2014 Former California tech founder, relocated 2024</cite>' +
-      '</div>' +
-      '<div class="rl-act60-testimonial">' +
-        '<blockquote>We had been working with a mainland CPA on our Act 60 application and quickly realized we needed local counsel. Hans identified three compliance gaps our CPA missed and built an estate plan that protects our decree benefits for our children.</blockquote>' +
-        '<cite>\u2014 Individual Investor, Chapter 2 decree holder</cite>' +
-      '</div>' +
-    '</div>';
+  // --- TESTIMONIALS (#12) --- removed 2026-10-25: unverified client quotes (lawyer-advertising compliance).
+  // Restore only with real, consented quotes in the client's own words.
 
   // --- ATTORNEY BIO (#13) ---
   container.innerHTML +=
@@ -674,7 +663,7 @@ function injectExitPopup() {
     '<div class="rl-exit-popup">' +
       '<button class="rl-exit-close" aria-label="Close">\u00D7</button>' +
       '<h3>Before You Go\u2014</h3>' +
-      '<p>The 0% capital gains rate expires December 31, 2026. A 30-minute call is all it takes to find out if you qualify and start the process.</p>' +
+      '<p>The 0% capital gains rate is available only to Act 60 applications filed by December 31, 2026. A 30-minute call is all it takes to find out if you qualify and start the process.</p>' +
       '<a href="' + bookUrl + '" class="rl-exit-cta">Book Your Free Strategy Call</a>' +
       '<span class="rl-exit-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> New decrees from 2027 receive 4% rate</span>' +
     '</div>';

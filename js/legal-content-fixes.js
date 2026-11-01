@@ -1818,11 +1818,22 @@ function removeRawPostEntries() {
   });
 }
 
+/* 36. /act-60-tax-incentives was rewritten natively in Squarespace (content
+   current as of Oct 30 2026). Its body now carries the Act 38-2026 deadline,
+   donation split, $5,000 fees, pre-move gains, three §937 tests and the
+   compliance calendar, so the April stopgap injections below (#2, #10, #12,
+   #14, #15, #18, #19, #20) duplicate or contradict it there. They keep
+   running on every other page they target (/business-formation, the
+   compliance article, /resources/ley-60-guia-inversionistas). */
+var ACT60_NATIVE_REWRITE = (path === '/act-60-tax-incentives');
+
 function runLegalFixes() {
   fixULLCA();
-  addAct60Disclaimer();
-  updateAct60Disclaimer();
-  qualifyAct60Claims();
+  if (!ACT60_NATIVE_REWRITE) {
+    addAct60Disclaimer();
+    updateAct60Disclaimer();
+    qualifyAct60Claims();
+  }
   addTrustRegistryDisclosure();
   fixZeroHourlyBilling();
   fixConsultationDuration();
@@ -1831,19 +1842,21 @@ function runLegalFixes() {
   fixThreePortionSystem();
   fixWillsSection();
   fixNRNCArticle();
-  fixComplianceCharitableDonation();
+  if (!ACT60_NATIVE_REWRITE) fixComplianceCharitableDonation();
   fixJudgeGelpiReference();
   fixAct60ExemptionPercentages();
-  clarify183DayPresenceTest();
+  if (!ACT60_NATIVE_REWRITE) clarify183DayPresenceTest();
   /* Clean up any double-word artifacts from prior replacements */
   cleanupDoubleWords();
   /* CPA Legal Claims Check — new fixes */
-  addSmallBusinessExemptionNote();
+  if (!ACT60_NATIVE_REWRITE) addSmallBusinessExemptionNote();
   fixConflictingAct38Dates();
   fixFourPercentAllResidentsClaim();
-  updateCharitableDonationHB505();
-  addPreMoveCapitalGainsNote();
-  addFeeDisclosure();
+  if (!ACT60_NATIVE_REWRITE) {
+    updateCharitableDonationHB505();
+    addPreMoveCapitalGainsNote();
+    addFeeDisclosure();
+  }
   fixCryptoOversimplification();
   fixEmploymentRequirements();
   fixDecreeDuration();

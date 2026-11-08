@@ -330,12 +330,12 @@ function injectUrgencyBanner() {
   var es = IS_ES || esSlug;
 
   var copyEN =
-    '<span><strong>Two deadlines:</strong> file for Act 60 by <strong>Dec 31, 2026</strong> to lock the legacy 0% rate ' +
+    '<span><strong>Two deadlines:</strong> file for Act 60 by <strong>Dec 31, 2026</strong> to keep the legacy 0% rate ' +
     '(<a href="/resources/act-60-filing-date-vs-move-date-deadline">details</a>) \u00b7 ' +
     'Puerto Rico\u2019s new trust law takes effect <strong>Jan 30, 2027</strong> ' +
     '(<a href="/resources/revocable-trusts-puerto-rico">what changes</a>)</span>';
   var copyES =
-    '<span><strong>Dos fechas clave:</strong> radique su solicitud de Ley 60 antes del <strong>31 de diciembre de 2026</strong> para asegurar la tasa de 0% ' +
+    '<span><strong>Dos fechas clave:</strong> radique su solicitud de Ley 60 antes del <strong>31 de diciembre de 2026</strong> para conservar la tasa de 0% ' +
     '(<a href="/resources/ley-60-fecha-limite-2026">detalles</a>) \u00b7 ' +
     'La nueva ley de fideicomisos entra en vigor el <strong>30 de enero de 2027</strong> ' +
     '(<a href="/resources/fideicomisos-revocables-puerto-rico">qu\u00e9 cambia</a>)</span>';
@@ -413,7 +413,7 @@ function injectAct60Hero() {
       '</div>' +
       '<a href="' + bookUrl + '" class="rl-act60-hero-cta">Book Your Free Act 60 Strategy Call</a>' +
       '<p class="rl-act60-hero-secondary">Or call <a href="' + PHONE_TEL + '">' + PHONE + '</a></p>' +
-      '<div class="rl-act60-hero-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> 0% IRI capital gains rate ends Dec 31, 2026 \u2014 4% rate applies to new decrees from 2027. Act now.</div>' +
+      '<div class="rl-act60-hero-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> 0% IRI capital gains rate: applications must be filed by Dec 31, 2026 \u2014 applications filed from 2027 get 4%. Act now.</div>' +
     '</div>';
 
   // Insert after the call banner, before page content
@@ -538,16 +538,15 @@ function injectAct60Sections() {
     '</div>' +
     '<p class="rl-act60-price-disclaimer" style="max-width:560px;margin:16px auto 0;text-align:center;font-size:.82rem;color:var(--rl-warm-600,#5b5647);line-height:1.55;">The prices shown are representative examples that reflect what many engagements look like. The fee for each matter is determined based on your specific circumstances.</p>';
 
-  // --- COUNTDOWN TIMER (#18) + RATE COMPARISON (#19) ---
+  // --- RATE COMPARISON (#19). Countdown timer (#18) removed 2026-11-08: lawyer-advertising rules (no countdown timers). ---
   container.innerHTML +=
-    '<h2 class="rl-act60-section-title">The 0% Capital Gains Window Is Closing</h2>' +
-    '<div class="rl-act60-countdown" id="rl-countdown"></div>' +
-    '<p class="rl-act60-section-subtitle">Days remaining to apply under the 0% IRI capital gains rate. Decrees granted from 2027 will receive 4%.</p>' +
+    '<h2 class="rl-act60-section-title">Your Filing Date Sets Your Rate</h2>' +
+    '<p class="rl-act60-section-subtitle">Under DDEC Informative Bulletin 2026-004, a Resident Individual Investor application filed on the Incentives Portal by 11:59 p.m. on December 31, 2026 keeps 0% through 2035; the proof is the filing-fee payment timestamp. Applications filed from January 1, 2027 receive 4% through 2055. The approval date does not change the rate.</p>' +
     '<table class="rl-act60-compare">' +
       '<thead><tr>' +
         '<th>Tax Benefit</th>' +
-        '<th>Apply by Dec 31, 2026</th>' +
-        '<th>Apply 2027+</th>' +
+        '<th>Filed by Dec 31, 2026</th>' +
+        '<th>Filed 2027+</th>' +
       '</tr></thead>' +
       '<tbody>' +
         '<tr>' +
@@ -623,30 +622,6 @@ function injectAct60Sections() {
     footer.parentNode.insertBefore(container, footer);
   }
 
-  // --- COUNTDOWN TIMER LOGIC (#18) ---
-  var countdownEl = document.getElementById('rl-countdown');
-  if (countdownEl) {
-    var deadline = new Date('2026-12-31T23:59:59-04:00').getTime();
-    function updateCountdown() {
-      var now = Date.now();
-      var diff = deadline - now;
-      if (diff <= 0) {
-        countdownEl.innerHTML = '<p style="color:#bfa35d;font-weight:700;">The 0% rate deadline has passed.</p>';
-        return;
-      }
-      var days = Math.floor(diff / 86400000);
-      var hours = Math.floor((diff % 86400000) / 3600000);
-      var mins = Math.floor((diff % 3600000) / 60000);
-      var secs = Math.floor((diff % 60000) / 1000);
-      countdownEl.innerHTML =
-        '<div class="rl-act60-countdown-unit"><div class="rl-act60-countdown-num">' + days + '</div><div class="rl-act60-countdown-label">Days</div></div>' +
-        '<div class="rl-act60-countdown-unit"><div class="rl-act60-countdown-num">' + hours + '</div><div class="rl-act60-countdown-label">Hours</div></div>' +
-        '<div class="rl-act60-countdown-unit"><div class="rl-act60-countdown-num">' + mins + '</div><div class="rl-act60-countdown-label">Minutes</div></div>' +
-        '<div class="rl-act60-countdown-unit"><div class="rl-act60-countdown-num">' + secs + '</div><div class="rl-act60-countdown-label">Seconds</div></div>';
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  }
 }
 
 /* ===== 8. REWORKED MID-PAGE CTA — both audiences (#11) ===== */

@@ -96,8 +96,8 @@ function addAct60Disclaimer() {
   notice.id = 'rl-act60-sunset-notice';
   notice.style.cssText = 'margin:20px 0 28px;padding:18px 22px;background:#fef9e7;border:1px solid #f0c040;border-left:4px solid #d4a017;border-radius:4px;font-size:.88rem;color:#5a4a00;line-height:1.6;';
   notice.innerHTML = '<p style="margin:0 0 8px;font-weight:700;font-size:.95rem;">Important: 2026 Act 60 Legislative Changes</p>'
-    + '<p style="margin:0 0 6px;">Under House Bill 505, approved by the Puerto Rico Legislature in February 2026, the <strong>0% tax rate on capital gains, interest, and dividends</strong> for Individual Resident Investors is available only for applications submitted <strong>on or before December 31, 2026</strong>.</p>'
-    + '<p style="margin:0 0 6px;">Applications filed on or after January 1, 2027 will be subject to a <strong>4% preferential tax rate</strong> on passive income. Existing decree holders are grandfathered under their current terms. The program has been extended through 2055.</p>'
+    + '<p style="margin:0 0 6px;">Under Act 38-2026 (House Bill 505, signed March 10, 2026), the <strong>0% tax rate on capital gains, interest, and dividends</strong> for Individual Resident Investors is available only for applications submitted <strong>on or before December 31, 2026</strong>.</p>'
+    + '<p style="margin:0 0 6px;">Applications filed on or after January 1, 2027 will be subject to a <strong>4% preferential tax rate</strong> on passive income. Existing decree holders keep their current terms (0% through December 31, 2035) and may elect to extend to December 31, 2055 at the 4% rate. Benefits for new filers run through 2055.</p>'
     + '<p style="margin:0;"><strong>If you are considering relocating to Puerto Rico, contact us immediately</strong> to begin your application before the December 31, 2026 deadline. <a href="/calendly" style="color:#8b6914;text-decoration:underline;">Schedule a strategy call</a>.</p>';
 
   /* Insert after the first real paragraph (skip spacer paragraphs) */
@@ -491,7 +491,7 @@ function fixComplianceCharitableDonation() {
     if (p.textContent.indexOf('$5,000 directed to a qualifying Puerto Rico nonprofit organization') >= 0) {
       p.innerHTML = p.innerHTML.replace(
         'at least $5,000 directed to a qualifying Puerto Rico nonprofit organization',
-        'at least $5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico'
+        '$5,000 directed to an organization approved by the <em>Comisi\u00f3n Especial Conjunta de Fondos Legislativos para Impacto Comunitario</em> (CECFL) that works to <strong>eradicate child poverty</strong> in Puerto Rico, $2,500 to another qualifying Puerto Rico nonprofit and $2,500 to the Fondo Especial para la Igualdad Social'
       );
     }
   }
@@ -572,7 +572,7 @@ function updateAct60Disclaimer() {
     /* Insert new paragraph before the CTA */
     var newP = document.createElement('p');
     newP.style.cssText = 'margin:0 0 6px;';
-    newP.innerHTML = 'New applicants filing after 2026 must also demonstrate they were <strong>not a Puerto Rico resident for at least 6 years</strong> prior to their application.';
+    newP.innerHTML = 'Applicants filing on or after January 1, 2027 must also show they were <strong>not a Puerto Rico resident during the 6 years before their move</strong> to Puerto Rico. Applications filed by December 31, 2026 are tested only on the 2006\u20132012 window.';
     notice.insertBefore(newP, lastP[lastP.length - 1]);
   }
 }
@@ -779,7 +779,7 @@ function updateCharitableDonationHB505() {
       var note = document.createElement('p');
       note.id = 'rl-donation-restrictions-note';
       note.style.cssText = 'margin:6px 0 14px;padding:10px 14px;background:#fdf6ec;border-left:3px solid #e67e22;border-radius:0 4px 4px 0;font-size:.82rem;color:#7d4e00;line-height:1.5;';
-      note.innerHTML = '<strong>Donation restrictions:</strong> At least half of the $10,000 annual donation must go to CECFL-approved organizations dedicated to <strong>eradicating child poverty</strong> in Puerto Rico. Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity. In addition to the donation, decree holders pay a <strong>$5,000 annual report fee</strong>.';
+      note.innerHTML = '<strong>Donation restrictions:</strong> The $10,000 annual donation is split: $5,000 to CECFL-listed organizations dedicated to <strong>eradicating child poverty</strong> in Puerto Rico, $2,500 to another qualifying Puerto Rico nonprofit and $2,500 to the Fondo Especial para la Igualdad Social. Donations <strong>cannot</strong> be made to entities controlled by relatives within the fourth degree of consanguinity or second degree of affinity. In addition to the donation, decree holders pay a <strong>$5,000 annual report fee</strong>.';
       el.parentNode.insertBefore(note, el.nextSibling);
       return;
     }
@@ -863,9 +863,9 @@ function addFeeDisclosure() {
     + '<table style="width:100%;border-collapse:collapse;font-size:.84rem;">'
     + '<thead><tr style="border-bottom:2px solid #bfa35d;text-align:left;"><th style="padding:6px 10px;">Fee Type</th><th style="padding:6px 10px;">Individual Investor (Ch. 2)</th><th style="padding:6px 10px;">Export Services (Ch. 3)</th></tr></thead>'
     + '<tbody>'
-    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Application fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$1,000</strong></td></tr>'
-    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Entity registration</td><td style="padding:6px 10px;">$250</td><td style="padding:6px 10px;">$150</td></tr>'
-    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Annual report fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;"><strong>$500</strong></td></tr>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Application fee</td><td style="padding:6px 10px;"><strong>$5,005</strong> (paid at filing)</td><td style="padding:6px 10px;">Contact us</td></tr>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Acceptance fee (on approval)</td><td style="padding:6px 10px;">$105</td><td style="padding:6px 10px;">Contact us</td></tr>'
+    + '<tr style="border-bottom:1px solid #e9ecef;"><td style="padding:6px 10px;">Annual report fee</td><td style="padding:6px 10px;"><strong>$5,000</strong></td><td style="padding:6px 10px;">Contact us</td></tr>'
     + '<tr><td style="padding:6px 10px;">Annual charitable donation</td><td style="padding:6px 10px;">$10,000</td><td style="padding:6px 10px;">N/A</td></tr>'
     + '</tbody></table>'
     + '<p style="margin:8px 0 0;font-size:.8rem;color:#6c757d;"><em>Fees are subject to change. Contact our office for current fee schedules and a complete cost analysis.</em></p>';
@@ -928,7 +928,7 @@ function fixEmploymentRequirements() {
     if (text.indexOf('at least one full-time employee in addition to the owner') >= 0) {
       node.nodeValue = text.replace(
         'at least one full-time employee in addition to the owner within the first two years',
-        'at least one full-time Puerto Rico\u2013resident employee, who may be the business owner; businesses with annual gross income over $3 million face higher employment thresholds, and industrial incentive grantees must maintain at least three'
+        'for export services businesses with annual volume over $3 million, at least one full-time direct employee; below that threshold, and for Individual Resident Investors, the law sets no employee requirement'
       );
     }
 
@@ -937,7 +937,7 @@ function fixEmploymentRequirements() {
     if (text.indexOf('typically at least one full-time employee') >= 0 && text.indexOf('in addition to the owner') >= 0) {
       node.nodeValue = text.replace(
         /typically at least one full-time employee in addition to the owner[^).]*/,
-        'at least one full-time Puerto Rico\u2013resident employee (the owner may count). Businesses exceeding $3M gross income have higher thresholds'
+        'for export services businesses with annual volume over $3 million, at least one full-time direct employee; no employee requirement below that threshold or for Individual Resident Investors'
       );
     }
   }
@@ -959,7 +959,7 @@ function fixDecreeDuration() {
     if (text.indexOf('15 years with the option to extend') >= 0 || text.indexOf('15 years with an option to extend') >= 0) {
       node.nodeValue = text.replace(
         /15 years with (?:the |an )?option to extend/,
-        '15 years, with an extension of 15 additional years for a total of up to 30 years (Export Services, Ch. 3). For Individual Resident Investors (Ch. 2), benefits are available through December 31, 2055 under Act 38-2026'
+        '15 years, with an extension of 15 additional years for a total of up to 30 years (Export Services, Ch. 3). For Individual Resident Investors (Ch. 2), benefits run through December 31, 2035 for applications filed by December 31, 2026 (extendable to 2055 by election, at 4%), and through December 31, 2055 for applications filed from 2027'
       );
     }
   }

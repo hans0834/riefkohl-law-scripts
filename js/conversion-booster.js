@@ -491,7 +491,7 @@ function injectAct60Sections() {
         '<ul>' +
           '<li>Capital gains, crypto, and investment income</li>' +
           '<li>Bona fide residency &amp; presence test compliance</li>' +
-          '<li>State departure audit preparation</li>' +
+          '<li>Residency file coordinated with your state tax advisor</li>' +
           '<li>Estate planning coordination with Act 60 benefits</li>' +
         '</ul>' +
         '<a href="' + bookUrl + '" class="rl-act60-persona-cta">Book Investor Relocation Call</a>' +

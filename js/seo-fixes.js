@@ -2273,7 +2273,7 @@ var SEO = {
   },
   '/resources/leaving-new-york-for-puerto-rico': {
     h1: 'Leaving New York for Puerto Rico: The 183-Day Statutory-Residency Trap',
-    meta: 'Moving from New York to Puerto Rico for Act 60? NY’s 183-day statutory-residency test and the 548-day safe harbor can still tax you. How to sever NY domicile.',
+    meta: 'Moving from New York to Puerto Rico for Act 60? NY’s 183-day statutory-residency test and the 548-day safe harbor can still tax you. What to raise with your New York tax advisor.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',

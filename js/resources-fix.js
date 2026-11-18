@@ -1256,16 +1256,28 @@ function injectSubpage() {
     el.style.display = 'none';
   });
 
-  /* Bind FAQ accordions if present */
-  wrapper.querySelectorAll('.rl-faq-q').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-      var answer = btn.nextElementSibling;
-      if (answer) answer.setAttribute('data-open', expanded ? 'false' : 'true');
-    });
+  /* FAQ accordions: handled by the delegated listener below (bindFaqAccordions),
+     which covers both injected content and native code-block pages. */
+}
+
+/* FAQ accordions (.rl-faq-q buttons) on any page: injected subpages and pages
+   migrated to native Squarespace code blocks. One delegated listener, so
+   buttons added later are covered and no button is bound twice. */
+function bindFaqAccordions() {
+  if (window.__rlFaqBound) return;
+  window.__rlFaqBound = true;
+  document.addEventListener('click', function(e) {
+    var btn = e.target && e.target.closest ? e.target.closest('.rl-faq-q') : null;
+    if (!btn) return;
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    var answer = btn.nextElementSibling;
+    if (answer && answer.classList.contains('rl-faq-a')) {
+      answer.setAttribute('data-open', expanded ? 'false' : 'true');
+    }
   });
 }
+bindFaqAccordions();
 
 /* Run with delay to ensure Squarespace has finished rendering sections */
 /* Clear header overlap: Squarespace header is position:absolute, so injected

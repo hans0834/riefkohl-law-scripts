@@ -626,7 +626,7 @@ var PAGES = {
   +'<h2>8. The General Source-of-Income Rules</h2>'
   +'<p>Once residency is established, the next question is which income is <strong>territory-source</strong> (eligible for the exclusion or the Act 60 rate) and which remains <strong>U.S.-source</strong> (still federally taxable). IRC \xa7937(b) and Treas. Reg. \xa71.937-2 apply the ordinary U.S. source rules of \xa7\xa7861\u2013865 to Puerto Rico, generally by substituting the territory for \u201cthe United States.\u201d Two overlays are critical: (i) the <strong>U.S.-income rule</strong> \u2014 income that is U.S.-source or U.S.-effectively-connected under \xa7\xa7861\u2013865 can never be territory-source (\xa7937(b)(2); Treas. Reg. \xa71.937-2(c)); and (ii) an <strong>anti-conduit rule</strong> plus a cap that prevents a resident from generating more territory-source income than a similarly situated nonresident would have U.S.-source income.</p>'
   +'<p>The principal categories:</p>'
-  +'<ul><li><strong>Capital gains \u2014 residence of the seller.</strong> Gain on the sale of personal property, including securities, is sourced to the seller\u2019s residence (\xa7865(a)). A bona fide Puerto Rico resident\u2019s gains are therefore generally territory-source. <em>Caveat:</em> appreciation that built up <em>before</em> the move, on assets held before the move, is generally treated as U.S.-source even if sold afterward, unless a special mark-to-market election is made (Treas. Reg. \xa71.937-2(f) \u2014 the \u201c10-year lookback\u201d).</li>'
+  +'<ul><li><strong>Capital gains \u2014 residence of the seller.</strong> Gain on the sale of personal property, including securities, is sourced to the seller\u2019s residence (\xa7865(a)). A bona fide Puerto Rico resident\u2019s gains are therefore generally territory-source. <em>Caveat:</em> appreciation that built up <em>before</em> the move, on assets held before the move, is generally treated as U.S.-source if sold within 10 years of the move, unless you elect under Treas. Reg. \xa71.937-2(f)(1) to treat only the pre-move portion that way (Treas. Reg. \xa71.937-2(f) \u2014 the \u201c10-year lookback\u201d).</li>'
   +'<li><strong>Interest \u2014 residence of the payor.</strong> Interest is sourced to the residence of the obligor that pays it, not the recipient (\xa7861(a)(1)). Interest paid by a U.S. person or U.S. corporation is generally U.S.-source regardless of where the recipient lives.</li>'
   +'<li><strong>Dividends \u2014 where the paying entity is organized.</strong> Dividends are sourced to the place of incorporation of the paying corporation (\xa7861(a)(2)). A dividend from a U.S. (e.g., Delaware) corporation is U.S.-source no matter where the shareholder resides; relocating does not convert U.S. corporate dividends into territory income. <strong>This is the single most common point of client confusion.</strong></li>'
   +'<li><strong>Real property \u2014 where it is located.</strong> Income from real property \u2014 both rents and gain on sale \u2014 is sourced to where the property is located (\xa7861(a)(4)\u2013(5)). Puerto Rico real estate produces territory income; mainland real estate produces U.S. income.</li>'
@@ -647,13 +647,13 @@ var PAGES = {
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">Does Act 60 make my U.S. dividends and interest tax-free?</button>'
   +'<div class="rl-faq-a"><p>Generally no. Dividends are sourced to where the paying corporation is incorporated, so a dividend from a U.S. (e.g., Delaware) corporation stays U.S.-source and federally taxable no matter where you live. Interest is sourced to the residence of the payor, so interest from a U.S. issuer also stays U.S.-source. The exclusion and the Act 60 rate apply mainly to Puerto Rico-source capital gains on post-move assets, Puerto Rico-source services, and Puerto Rico-source business income.</p></div></div>'
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What happens to capital gains on assets I owned before moving to Puerto Rico?</button>'
-  +'<div class="rl-faq-a"><p>Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and remains subject to federal capital gains tax even if you sell after the move \u2014 the \u201c10-year lookback\u201d under Treas. Reg. \xa71.937-2(f). Only post-move appreciation is generally territory-source. A special mark-to-market election may change the result; this should be planned before you sell.</p></div></div>'
+  +'<div class="rl-faq-a"><p>Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and remains subject to federal capital gains tax even if you sell after the move \u2014 the \u201c10-year lookback\u201d under Treas. Reg. \xa71.937-2(f). Only post-move appreciation is generally territory-source. An election under Treas. Reg. \xa71.937-2(f)(1) can limit U.S. tax to the pre-move portion; plan it before you sell.</p></div></div>'
   +'<div class="rl-faq"><button class="rl-faq-q" aria-expanded="false">What records do I need to prove bona fide residency?</button>'
   +'<div class="rl-faq-a"><p>Keep a contemporaneous travel log and day count, plus boarding passes, calendars, and travel records. Move the indicia of your life to Puerto Rico \u2014 driver\u2019s license, voter registration, family, vehicles, bank and professional affiliations, and mailing address. File Form 8898 when you begin or end residency. If you rely on medical or disaster days, keep the physician certification and supporting records the regulation requires.</p></div></div>'
 
   +'<h2>Related Resources</h2>'
   +'<ul><li><a href="/resources/act-38-2026-hb-505">Act 38-2026 (HB 505): What Changed for Act 60 Investors</a> \u2014 the new 4% rate, grandfathering, and the federal 10-year lookback.</li>'
-  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement &amp; Campaign 685</a> \u2014 how residency and sourcing claims are audited and prosecuted.</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement of Act 60</a> \u2014 how residency and sourcing claims are audited and prosecuted.</li>'
   +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA &amp; Form 8898</a> \u2014 the filings that survive your move.</li>'
   +'<li><a href="/resources-act60">Estate Planning for Act 60 Decree Holders</a> \u2014 coordinating residency with your estate plan.</li></ul>'
 
@@ -696,7 +696,7 @@ var PAGES = {
   +'<p>New applicants with annual revenue exceeding $3 million must create or maintain at least <strong>one full-time employee</strong> (other than the owner) in Puerto Rico within two years. Businesses below this threshold are not subject to the employee requirement. This reinforces the program\u2019s economic development purpose.</p>'
 
   +'<h3>Six-Year Non-Residency Requirement</h3>'
-  +'<p>Under Act 38-2026, new applicants must demonstrate that they have <strong>not been bona fide residents of Puerto Rico</strong> for at least six years prior to their application. This requirement is designed to ensure the program attracts new residents rather than benefiting individuals already living on the island.</p>'
+  +'<p>Under Act 38-2026, new applicants must demonstrate that they have <strong>not been bona fide residents of Puerto Rico</strong> during the six years before the date they move to Puerto Rico (applications filed on or after January 1, 2027); every applicant must also not have been a Puerto Rico resident between January 17, 2006 and January 17, 2012.</p>'
 
   +'<h2>What This Means for Current Decree Holders</h2>'
   +'<ul><li><strong>No change to your 0% rate</strong>\u2014existing decrees are grandfathered</li>'
@@ -729,7 +729,7 @@ var PAGES = {
   +'<h2>Related Resources</h2>'
   +'<ul><li><a href="/resources/act-60-decree-comparison">Decree Comparison Table</a> \u2014 side-by-side comparison of pre-2020, 2020\u20132025, and post-2026 decree requirements</li>'
   +'<li><a href="/resources/annual-compliance-calendar">Annual Compliance Calendar & Deadlines</a> \u2014 DDEC fees, filing deadlines, and donation requirements</li>'
-  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement & Campaign 685</a> \u2014 criminal prosecutions and why attorney privilege matters</li>'
+  +'<li><a href="/resources/irs-enforcement-act-60">IRS Enforcement of Act 60</a> \u2014 criminal prosecutions and why attorney privilege matters</li>'
   +'<li><a href="/resources/federal-reporting-act-60">Federal Reporting: FBAR, FATCA, CFC/PFIC</a> \u2014 your federal obligations as a decree holder</li></ul>'
 
   +'<div class="rl-sub-cta"><p><strong>Need help understanding how Act 38-2026 affects your situation?</strong></p><p>We help both existing decree holders and prospective applicants navigate the new landscape.</p><a href="/calendly">Book a Free Strategy Call</a></div>'
@@ -737,7 +737,7 @@ var PAGES = {
 },
 
 '/resources/irs-enforcement-act-60': {
-  title: 'IRS Enforcement of Act 60: Campaign 685 & Criminal Prosecutions',
+  title: 'IRS Enforcement of Act 60: Audits, Prosecutions and Recent Developments',
   subtitle: 'What decree holders must know about federal enforcement in Puerto Rico.',
   content: function(){return ''
   +'<a href="/resources" class="rl-back">&larr; Back to Resources</a>'
@@ -748,8 +748,8 @@ var PAGES = {
   +'<p>A common misconception among Act 60 decree holders is that relocating to Puerto Rico means "freedom from the IRS." This is legally wrong and dangerously misleading. The IRS has <strong>full enforcement jurisdiction</strong> in Puerto Rico. The operative federal exclusion is provided by <strong>IRC \u00a7933</strong>, which excludes Puerto Rico-source income from federal gross income for bona fide Puerto Rico residents. The BFR test under IRC \u00a7937 must be satisfied for the entire taxable year, with a limited exception under the year-of-move safe harbor (Treas. Reg. \u00a71.937-1(f)). IRC \u00a7933 does not exclude U.S.-source income, does not eliminate the federal filing requirement, and does not limit IRS authority in any way.</p>'
   +'<p>Act 60 decree holders must file <strong>Form 1040</strong> annually with the IRS, comply with <strong>FBAR</strong> (FinCEN Form 114) and <strong>FATCA</strong> (Form 8938) requirements, and accurately report worldwide income with proper sourcing.</p>'
 
-  +'<h2>Compliance Campaign 685</h2>'
-  +'<p>In 2021, the IRS Large Business & International Division launched <strong>Compliance Campaign 685</strong>, a dedicated enforcement initiative targeting Act 60/22 decree holders. The campaign has <strong>12 staff members</strong> focused specifically on auditing:</p>'
+  +'<h2>The IRS Act 22/Act 60 Campaign</h2>'
+  +'<p>In 2021, the IRS Large Business & International Division launched its Puerto Rico Act 22 compliance campaign, aimed at individuals claiming Act 22 and Act 60 benefits. Its examinations focus on:</p>'
   +'<ul><li><strong>Bona fide residency compliance</strong>\u2014whether the taxpayer actually meets the IRC \u00a7937 three-part test</li>'
   +'<li><strong>Income sourcing</strong>\u2014whether income claimed as PR-source was properly allocated under IRC \u00a7\u00a7861\u2013865</li>'
   +'<li><strong>Pre-move capital gains</strong>\u2014whether appreciation accrued before establishing PR residency is properly taxed at federal rates</li>'
@@ -801,8 +801,8 @@ var PAGES = {
   +'<p>Many Act 60 applicants approach the process as a tax matter and hire only a CPA. While CPAs play an important role in tax compliance, Act 60 planning involves <strong>legal decisions</strong> that require attorney expertise\u2014and attorney-client privilege.</p>'
 
   +'<h2>Attorney-Client Privilege</h2>'
-  +'<p>This is the single most important reason to involve a law firm. When the IRS audits your Act 60 compliance\u2014and <a href="/resources/irs-enforcement-act-60">Campaign 685 makes this increasingly likely</a>\u2014there is a critical difference:</p>'
-  +'<ul><li><strong>CPA communications are not privileged.</strong> The IRS can subpoena your accountant\u2019s workpapers, emails, notes, and internal memos.</li>'
+  +'<p>This is the single most important reason to involve a law firm. When the IRS audits your Act 60 compliance\u2014and <a href="/resources/irs-enforcement-act-60">the IRS campaign aimed at decree holders makes this increasingly likely</a>\u2014there is a critical difference:</p>'
+  +'<ul><li><strong>CPA communications have only limited protection.</strong> The federal tax practitioner privilege (IRC \u00a77525) does not apply in criminal matters. The IRS can subpoena your accountant\u2019s workpapers, emails, notes, and internal memos.</li>'
   +'<li><strong>Attorney communications are privileged.</strong> Legal advice about residency compliance, income sourcing, and entity structuring is protected from disclosure.</li></ul>'
   +'<p>For decisions that carry potential criminal exposure\u2014like whether a particular income stream is properly sourced to Puerto Rico\u2014the privilege distinction is not academic. It is the difference between protected counsel and discoverable evidence.</p>'
 
@@ -862,7 +862,7 @@ var PAGES = {
   +'<li><strong>Tax filing compliance</strong>\u2014timely filing of Puerto Rico and federal returns</li>'
   +'<li><strong>Donation requirements</strong>\u2014proof of qualifying donations to Puerto Rico nonprofits, properly allocated between CECFL-listed organizations and other qualifying nonprofits (see <a href="/resources/annual-compliance-calendar">Annual Compliance Calendar</a> for amounts by decree era)</li>'
   +'<li><strong>Employment requirements</strong>\u2014for applicable decrees, proof of job creation or maintenance</li>'
-  +'<li><strong>Annual report filing</strong>\u2014confirmation of timely annual report submission to DDEC</li></ul>'
+  +'<li><strong>Annual report filing</strong>\u2014confirmation of timely annual report submission (to DDEC through tax year 2025; to Hacienda with the income tax return from tax year 2026)</li></ul>'
 
   +'<h2>Timeline & Deadlines</h2>'
   +'<ul><li>Compliance certificates are due <strong>every two years</strong> from the date specified in your decree or as established by DDEC</li>'
@@ -920,11 +920,11 @@ var PAGES = {
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Capital Gains Rate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">0%</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">4%</td></tr>'
   +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Annual Charitable Donation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$5,000</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $5K qualifying nonprofits through 2025; from 2026, $5K CECFL + $2.5K qualifying nonprofit + $2.5K Fondo Especial para la Igualdad Social)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">$10,000 ($5K CECFL + $2.5K qualifying nonprofit + $2.5K Fondo Especial para la Igualdad Social)</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Property Purchase</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years of decree</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Within 2 years; must register in PR Property Registry</td></tr>'
-  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">1 FTE if revenue >$3M</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Employment Requirement</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">None (Act 60 §1030.01(b)(3))</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Biennial Compliance Certificate</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required (Act 52-2022 applies retroactively)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required under Act 52-2022</td></tr>'
   +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">CPA/Compliance Professional</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Required for AUP certification</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Prior Non-Residency</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Not required</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">6 years of non-PR residency required</td></tr>'
-  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Decree Duration</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2035)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">15 years (renewable, program through 2055)</td></tr>'
+  +'<tr style="background:#f8f6f0;"><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">Decree Duration</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Through Dec. 31, 2035 (election to extend to 2055 at 4%)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Through Dec. 31, 2035 (election to extend to 2055 at 4%)</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Through Dec. 31, 2055</td></tr>'
   +'<tr><td style="padding:10px 16px;border:1px solid #e8e9ee;font-weight:600;">DDEC Circular Letters</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable for eligible activities and rate definitions</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; governs granular implementation</td><td style="padding:10px 16px;border:1px solid #e8e9ee;">Applicable; new Circular Letters expected</td></tr>'
   +'</tbody></table></div>'
 
@@ -1040,7 +1040,7 @@ var PAGES = {
 
   +'<h2>Tax Reversion After Revocation</h2>'
   +'<p>When a decree is revoked, the tax benefits are <strong>retroactively eliminated</strong>. This means:</p>'
-  +'<ul><li><strong>Puerto Rico taxes at standard rates</strong> apply for the entire period the decree was in effect\u2014including the standard corporate tax structure (20% normal tax plus graduated surtax, combined maximum 37.5%) for Chapter 3 holders</li>'
+  +'<ul><li><strong>Puerto Rico taxes at standard rates</strong> apply for the entire period the decree was in effect\u2014including the standard corporate tax structure (18.5% normal tax plus graduated surtax, combined maximum 37.5%) for Chapter 3 holders</li>'
   +'<li><strong>Interest and penalties</strong> accrue on the unpaid tax differential</li>'
   +'<li><strong>Federal reassessment</strong>\u2014the IRS may also reexamine your federal returns if your decree status changes</li></ul>'
 
@@ -1113,7 +1113,7 @@ function injectResourceCards() {
         { title: 'Act 60 Eligibility Quiz', desc: 'A 2-minute self-check on whether Puerto Rico’s tax decree fits your move and income. Educational only — not an eligibility determination.', url: '/resources/act-60-eligibility-quiz', featured: true },
         { title: 'Who Should NOT Move to PR for Act 60', desc: 'Seven red flags that mean Act 60 may be expensive, audit-prone, and disappointing — and how to tell before you relocate.', url: '/resources/act-60-who-should-not-apply' },
         { title: 'What Act 60 Really Costs — Is It Worth It?', desc: 'The all-in budget (roughly a $15K/year floor) and the break-even math: how much you need to make for the decree to pay off.', url: '/resources/act-60-true-cost-is-it-worth-it' },
-        { title: 'IRS Enforcement & Campaign 685', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
+        { title: 'IRS Enforcement of Act 60', desc: 'Criminal prosecutions, GAO reports, and why "Freedom from the IRS" is legally wrong. What decree holders must know.', url: '/resources/irs-enforcement-act-60' },
         { title: 'Why Hire a Law Firm for Act 60', desc: 'Attorney-client privilege, entity structuring, decree negotiation, and Tax Court representation \u2014 what CPAs cannot provide.', url: '/resources/why-law-firm-act-60' },
         { title: 'Compliance Certificates & AUP', desc: 'Act 52-2022 biennial compliance certification, agreed-upon procedures, and what happens if you don\u2019t renew.', url: '/resources/compliance-certificate-act-52' },
         { title: 'Decree Comparison: Pre-2020 vs. 2020\u20132025 vs. Post-2026', desc: 'Rates, donations, employment, and compliance differ by decree era. Side-by-side comparison table.', url: '/resources/act-60-decree-comparison', featured: true },

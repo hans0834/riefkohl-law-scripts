@@ -250,7 +250,7 @@ var SEO = {
           'name': 'What is Act 60 in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Act 60 (the Puerto Rico Incentives Code of 2019) consolidates former Acts 20 and 22, providing tax incentives for businesses and individuals who relocate to Puerto Rico. Export service businesses can receive a 4% fixed corporate income tax rate under Chapter 3. For individual investors under Chapter 2, applications filed by December 31, 2026 may still qualify for 0% on capital gains; starting January 1, 2027, new decrees will carry a 4% preferential tax rate on passive income. The program has been extended through 2055. Consult an attorney to verify current eligibility and terms.'
+            'text': 'Act 60 (the Puerto Rico Incentives Code of 2019) consolidates former Acts 20 and 22, providing tax incentives for businesses and individuals who relocate to Puerto Rico. Export service businesses can receive a 4% fixed corporate income tax rate under Chapter 3. For individual investors under Chapter 2, applications filed by December 31, 2026 may still qualify for 0% on capital gains; applications filed from January 1, 2027 carry a 4% preferential tax rate on passive income. The program has been extended through 2055. Consult an attorney to verify current eligibility and terms.'
           }
         },
         {
@@ -290,7 +290,7 @@ var SEO = {
           'name': 'How long does the Act 60 application process take?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'The Act 60 decree application is filed with Puerto Rico\'s Department of Economic Development and Commerce (DDEC). While DDEC\'s administrative target is 60\u2013120 days, actual processing times frequently range from several months to over a year from application submission to final decree issuance. The application submission date\u2014not the decree issuance date\u2014is the relevant date for grandfathering under Act 38-2026. An attorney who regularly files Act 60 applications can help avoid common delays by ensuring all documentation is complete and properly formatted from the start.'
+            'text': 'The Act 60 decree application is filed with Puerto Rico\'s Department of Economic Development and Commerce (DDEC). DDEC\'s processing commonly takes 60 to 120 days, though it can take considerably longer depending on DDEC\'s workload and how complete the application is. The application submission date\u2014not the decree issuance date\u2014is the relevant date for grandfathering under Act 38-2026. An attorney who regularly files Act 60 applications can help avoid common delays by ensuring all documentation is complete and properly formatted from the start.'
           }
         },
         {
@@ -338,7 +338,7 @@ var SEO = {
           'name': 'Does Act 60 apply to cryptocurrency and digital assets?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes. Capital gains from cryptocurrency, NFTs, and other digital assets can qualify for Act 60 Chapter 2 benefits, but only gains that accrue after you become a bona fide Puerto Rico resident. Pre-move appreciation remains subject to federal capital gains tax under the 10-year lookback rule (Treas. Reg. \u00a71.937-2(f))\u2014gains on assets owned before establishing PR residency are not treated as Puerto Rico-source income for federal purposes. Taxpayers may elect to split-source gains using the possession holding period method. See IRS AM 2024-005 (Dec. 2024). The IRS pays close attention to crypto holders claiming Act 60 benefits, making proper cost basis tracking and residency documentation critical.'
+            'text': 'Yes. Capital gains from cryptocurrency, NFTs, and other digital assets can qualify for Act 60 Chapter 2 benefits, generally only gains that accrue after you become a bona fide Puerto Rico resident, and digital assets are not named in the statute (they are generally treated as "other assets"). If you sell a digital asset you held before the move within 10 years of becoming a resident, the entire gain is by default not Puerto Rico-source for federal purposes (Treas. Reg. \u00a71.937-2(f)); an election can limit that to the pre-move portion. After 10 years, Puerto Rico taxes long-term pre-move gain at 5% before 2036. Moving assets into an S corporation or partnership does not avoid the rule (IRS AM 2024-005; CCA 202538025). The IRS pays close attention to crypto holders claiming Act 60 benefits, making proper cost basis tracking and residency documentation critical.'
           }
         },
         {
@@ -392,23 +392,6 @@ var SEO = {
             'text': 'Riefkohl Law offers flat-fee pricing for Act 60 Chapter 3 export-services decrees. Decree application and advisory work starts at a flat $1,700, excluding U.S. residency and income-sourcing tax advice, which are scoped and quoted separately. This is a representative example of what many engagements look like; the fee for each matter is determined by your specific circumstances. All fees are quoted upfront before work begins. Government filing fees, annual reports, and ongoing compliance are billed separately.'
           }
         }
-      ]
-    }
-  },
-  '/act-60-individual-investor': {
-    h1: 'Act 60 Individual Investor — Capital Gains Tax Benefits in Puerto Rico',
-    title: 'Act 60 Investor Decree — 0% Capital Gains | Riefkohl Law',
-    meta: 'Act 60 Chapter 2 for individual investors: 0% capital gains, file your decree before the Dec 31, 2026 deadline, residency compliance & IRS defense. Free call.',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      'mainEntity': [
-        { '@type': 'Question', 'name': 'What tax benefits does the Act 60 Individual Investor decree provide?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As a bona fide Puerto Rico resident holding an Act 60 Chapter 2 (Individual Resident Investor) decree, you can receive a 0% Puerto Rico tax rate on capital gains, interest, and dividends that accrue after you establish residency. Decrees granted from 2027 onward carry a 4% rate on capital gains instead of 0%. The benefits apply only to gains that accrue after your move — not to appreciation built up before you relocated.' } },
-        { '@type': 'Question', 'name': 'Is there a deadline to apply for the Act 60 investor decree?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Act 38-2026 extended the Act 60 program through 2055, so the incentive is not expiring. But the headline 0% capital-gains rate applies to decrees issued through December 31, 2026; decrees granted in 2027 and later carry a 4% rate. If locking in the 0% rate matters to your plan, the decree should be applied for and issued before year-end 2026.' } },
-        { '@type': 'Question', 'name': 'How do I qualify as a bona fide Puerto Rico resident?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'You must satisfy three tests under IRC Section 937: the presence test (most commonly at least 183 days in Puerto Rico during the year), the tax-home test (your main place of business is in Puerto Rico), and the closer-connection test (stronger ties to Puerto Rico than to the U.S. mainland or any foreign country). Your decree benefits depend on maintaining bona fide residency every year.' } },
-        { '@type': 'Question', 'name': 'Do my existing pre-move capital gains qualify for the 0% rate?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Generally no. The Puerto Rico exemption applies to gains that accrue after you become a bona fide resident. Appreciation built up before your move remains subject to U.S. federal tax, and gains realized within 10 years of becoming a resident are subject to federal tax under the source rules (Treas. Reg. Section 1.937-2(f)). Timing the sale and documenting your basis at the move date are critical.' } },
-        { '@type': 'Question', 'name': 'What are the ongoing obligations of an Act 60 investor decree?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Investor decree holders must make an annual charitable donation ($10,000 per year to approved Puerto Rico nonprofits), pay a separate annual filing/report fee ($5,000), purchase a primary residence in Puerto Rico within two years of the decree, file an annual compliance report with the DDEC, and maintain bona fide residency. Missing these obligations can put the decree at risk of revocation.' } },
-        { '@type': 'Question', 'name': 'Do Act 60 investors also need a Puerto Rico estate plan?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Puerto Rico is a civil-law jurisdiction with forced heirship (the legítima) that can override a mainland will, and your mainland trust may not be recognized once you change your domicile. Your Act 60 decree is also personal and does not pass to your heirs. Pairing your decree with a Puerto Rico–compliant estate plan protects both your wealth and your tax benefits.' } }
       ]
     }
   },
@@ -737,7 +720,7 @@ var SEO = {
           'name': 'What are the annual compliance requirements for Act 60?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Act 60 decree holders must file an annual report with DDEC, make a required charitable donation to approved Puerto Rico nonprofits (typically $10,000/year for individual investors), purchase a primary residence within two years of the decree effective date, and file Puerto Rico and federal tax returns. Failure to comply can result in decree revocation and retroactive loss of benefits.'
+            'text': 'Act 60 decree holders must file an annual report (with DDEC for tax year 2025; with the Puerto Rico Treasury, together with the income tax return, from tax year 2026), make a required charitable donation to approved Puerto Rico nonprofits (typically $10,000/year for individual investors), purchase a primary residence within two years of the decree effective date, and file Puerto Rico and federal tax returns. Failure to comply can result in decree revocation and retroactive loss of benefits.'
           }
         },
         {
@@ -745,7 +728,7 @@ var SEO = {
           'name': 'What triggers an IRS audit of Act 60 decree holders?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Common audit triggers include: large capital gains reported as exempt on Form 8898, maintaining a home in a former state, spending significant time on the mainland, inconsistent travel records, high-value cryptocurrency dispositions, income sourcing positions that shift income to PR, and failure to file Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession). The IRS has a dedicated compliance campaign (Campaign 685) targeting Act 60 holders.'
+            'text': 'Common audit triggers include: large capital gains reported as exempt on Form 8898, maintaining a home in a former state, spending significant time on the mainland, inconsistent travel records, high-value cryptocurrency dispositions, income sourcing positions that shift income to PR, and failure to file Form 8898 (Statement for Individuals Who Begin or End Bona Fide Residence in a U.S. Possession). The IRS Large Business & International division runs a compliance campaign aimed at Act 22/Act 60 decree holders, and in December 2025 it agreed to expand its Act 60 enforcement (GAO-26-107225).'
           }
         },
         {
@@ -2069,7 +2052,7 @@ var SEO = {
           'name': 'What happens to capital gains on assets I owned before moving to Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and stays subject to federal capital gains tax even if you sell after the move (the 10-year lookback under Treas. Reg. \xa71.937-2(f)). A special mark-to-market election may change the result and should be planned before any sale.'
+            'text': 'Appreciation that accrued before you became a bona fide resident is generally treated as U.S.-source and stays subject to federal capital gains tax if you sell within 10 years of the move (Treas. Reg. \xa71.937-2(f)). An election under that regulation can limit U.S. tax to the pre-move portion, and it should be planned before any sale.'
           }
         }
       ]
@@ -2490,7 +2473,7 @@ var SEO = {
           'name': 'What are the main requirements to qualify for Act 60?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'For the Individual Resident Investor decree: become and remain a bona fide Puerto Rico resident under IRC Section 937 (the presence, tax-home, and closer-connection tests), buy a Puerto Rico principal residence within two years, make a $10,000 annual charitable donation beginning in the second year, file an annual report with a $5,000 fee, and obtain a biennial compliance certificate. The Export Services decree adds business-substance and export requirements, and your U.S. federal filing obligations continue throughout.'
+            'text': 'For the Individual Resident Investor decree: become and remain a bona fide Puerto Rico resident under IRC Section 937 (the presence, tax-home, and closer-connection tests), buy a Puerto Rico principal residence within two years, make a $10,000 annual charitable donation beginning in the second year, file an annual report with a $5,000 fee, and, unless Ley 188-2024 excuses them, obtain a biennial compliance certificate. The Export Services decree adds business-substance and export requirements, and your U.S. federal filing obligations continue throughout.'
           }
         },
         {
@@ -2506,7 +2489,7 @@ var SEO = {
           'name': 'Do I have to buy a house in Puerto Rico?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'For the Individual Resident Investor decree, yes — you must purchase a Puerto Rico principal residence within two years of obtaining the decree, from an unrelated seller, held personally or in a qualifying trust (not through an LLC). It must be your actual principal residence. The Export Services business decree does not carry this personal-residence requirement.'
+            'text': 'For the Individual Resident Investor decree, yes — you must purchase a Puerto Rico principal residence within two years of obtaining the decree, from an unrelated seller, held personally or in a qualifying trust (for applications filed from 2027; earlier applicants may also hold it through an eligible Puerto Rico entity). It must be your actual principal residence. The Export Services business decree does not carry this personal-residence requirement.'
           }
         }
       ]
@@ -2525,7 +2508,7 @@ var SEO = {
           'name': '¿Cuáles son los requisitos principales para cualificar bajo la Ley 60?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Para el decreto de Inversionista Residente Individual: convertirse y mantenerse como residente bona fide de Puerto Rico bajo el IRC Sección 937 (las pruebas de presencia, hogar contributivo y conexión más estrecha), comprar una residencia principal en Puerto Rico dentro de dos años, hacer una donación caritativa anual de $10,000 a partir del segundo año, radicar un informe anual con un cargo de $5,000 y obtener un certificado de cumplimiento bienal. El decreto de Servicios de Exportación añade requisitos de sustancia y exportación.'
+            'text': 'Para el decreto de Inversionista Residente Individual: convertirse y mantenerse como residente bona fide de Puerto Rico bajo el IRC Sección 937 (las pruebas de presencia, hogar contributivo y conexión más estrecha), comprar una residencia principal en Puerto Rico dentro de dos años, hacer una donación caritativa anual de $10,000 a partir del segundo año, radicar un informe anual con un cargo de $5,000 y, salvo que la Ley 188-2024 lo exima, obtener un certificado de cumplimiento bienal. El decreto de Servicios de Exportación añade requisitos de sustancia y exportación.'
           }
         },
         {
@@ -2593,7 +2576,7 @@ var SEO = {
           'name': 'How much does Act 60 cost per year?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Once past the first year, the recurring government floor is roughly $15,000 a year — a $5,000 annual report fee plus a $10,000 charitable contribution (at least $5,000 to nonprofits on the official child-poverty list, $2,500 to another qualifying Puerto Rico nonprofit and $2,500 to the Fondo Especial para la Igualdad Social) — plus a biennial compliance certificate and your legal and CPA fees. On top of that are the one-time application fee, the required Puerto Rico home purchase within two years, and your cost of living. Figures are set by regulation and confirmed at filing.'
+            'text': 'Once past the first year, the recurring government floor is roughly $15,000 a year — a $5,000 annual report fee plus a $10,000 charitable contribution (at least $5,000 to nonprofits on the official child-poverty list, $2,500 to another qualifying Puerto Rico nonprofit and $2,500 to the Fondo Especial para la Igualdad Social) — plus, unless Ley 188-2024 excuses you, a biennial compliance certificate and your legal and CPA fees. On top of that are the one-time application fee, the required Puerto Rico home purchase within two years, and your cost of living. Figures are set by regulation and confirmed at filing.'
           }
         },
         {
@@ -2642,8 +2625,8 @@ var SEO = {
     }
   },
   '/resources/irs-enforcement-act-60': {
-    h1: 'IRS Enforcement of Act 60: Campaign 685, Criminal Prosecutions & Compliance Risks',
-    meta: 'IRS Compliance Campaign 685 targets Act 60 decree holders. Learn about criminal prosecutions, GAO reports, and why you need attorney-client privilege.',
+    h1: 'IRS Enforcement of Act 60: Audits, Prosecutions and Recent Developments',
+    meta: 'How the IRS enforces Act 60: its Act 22/Act 60 compliance campaign, the 2025 GAO report, recent court decisions and prosecutions, and why attorney-client privilege matters.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -2658,10 +2641,10 @@ var SEO = {
         },
         {
           '@type': 'Question',
-          'name': 'What is IRS Compliance Campaign 685?',
+          'name': 'Is there an IRS campaign aimed at Act 60 decree holders?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Campaign 685 is a dedicated IRS enforcement initiative targeting Act 60/22 decree holders, with 12 staff members focused on auditing bona fide residency compliance, income sourcing, and pre-move capital gains treatment.'
+            'text': 'Yes. Since 2021 the IRS Large Business & International division has run a Puerto Rico Act 22 compliance campaign aimed at individuals claiming Act 22 and Act 60 benefits. Its examinations focus on bona fide residency, income sourcing and the treatment of pre-move capital gains. In December 2025 the IRS agreed to expand its Act 60 enforcement (GAO-26-107225).'
           }
         }
       ]
@@ -3756,7 +3739,7 @@ function fixCorporateTaxRate() {
     if (text.indexOf('18.5%') >= 0 && text.indexOf('37.5%') >= 0) {
       node.nodeValue = text.replace(
         /18\.5%\s*to\s*37\.5%/,
-        '20% normal tax plus graduated surtax (combined maximum 37.5%)'
+        '18.5% normal tax plus graduated surtax (combined maximum 37.5%)'
       );
     }
   }

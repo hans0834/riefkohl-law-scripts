@@ -516,7 +516,7 @@ function injectAct60Sections() {
       '<div class="rl-act60-mistake">' +
         '<div class="rl-act60-mistake-icon">\u26A0</div>' +
         '<h4>Missing Annual Reporting Deadlines</h4>' +
-        '<p>Act 60 requires annual compliance reports, charitable donations, and employment commitments. Missing any can trigger revocation proceedings.</p>' +
+        '<p>Act 60 requires annual compliance reports, charitable donations and, for larger export-services businesses, employment commitments. Missing any can trigger revocation proceedings.</p>' +
       '</div>' +
       '<div class="rl-act60-mistake">' +
         '<div class="rl-act60-mistake-icon">\u26A0</div>' +
@@ -640,7 +640,7 @@ function injectExitPopup() {
       '<h3>Before You Go\u2014</h3>' +
       '<p>The 0% capital gains rate is available only to Act 60 applications filed by December 31, 2026. A 30-minute call is all it takes to find out if you qualify and start the process.</p>' +
       '<a href="' + bookUrl + '" class="rl-exit-cta">Book Your Free Strategy Call</a>' +
-      '<span class="rl-exit-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> New decrees from 2027 receive 4% rate</span>' +
+      '<span class="rl-exit-urgency"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true" style="vertical-align:-2px;margin-right:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5v5l3 2"></path></svg> Applications filed from 2027 receive 4%</span>' +
     '</div>';
 
   document.body.appendChild(overlay);

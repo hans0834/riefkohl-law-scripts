@@ -603,7 +603,7 @@ function injectAct60Sections() {
     '<div class="rl-act60-local">' +
       '<div class="rl-act60-local-icon">\uD83C\uDFDD</div>' +
       '<h3>Based in San Juan. Not Advising from the Mainland.</h3>' +
-      '<p>We practice Puerto Rico law from Puerto Rico. We file with DDEC in person. We know the local tax office, the courts, and the compliance landscape because we work in it every day\u2014not from a satellite office 1,500 miles away.</p>' +
+      '<p>We practice Puerto Rico law from Puerto Rico. We file with DDEC online, through its Incentives Portal. We know the local tax office, the courts, and the compliance landscape because we work in it every day\u2014not from a satellite office 1,500 miles away.</p>' +
     '</div>';
 
   // --- LEAD MAGNET (#15) ---
